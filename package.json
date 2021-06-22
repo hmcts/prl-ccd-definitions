@@ -45,7 +45,7 @@
     "test:smoke": "echo smoke",
     "test:functional": "codeceptjs run --steps -c test/functional/codecept.conf.js",
     "start": "node index.js",
-    "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
+    "sonar-scan": "echo 'this will be enabled later node_modules/sonar-scanner/bin/sonar-scanner'",
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/family-private/json -i ../definitions/family-private/xlsx/ccd-config-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
     "generate-excel-local": "TARGET_ENV=local CCD_DEF_COS_URL=$npm_package_config_local_cosUrl CCD_DEF_CCD_URL=$npm_package_config_local_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-demo": "TARGET_ENV=demo CCD_DEF_COS_URL=$npm_package_config_demo_cosUrl CCD_DEF_CCD_URL=$npm_package_config_demo_ccdUrl yarn run generate-excel -e *-prod.json",
