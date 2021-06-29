@@ -67,7 +67,7 @@ withPipeline("nodejs", product, component) {
   before('functionalTest:aat') {
     yarnBuilder.yarn('setup')
 
-    stageWithAgent('Generate Financial Remedy Consented Case config', product) {
+    stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
 
@@ -83,4 +83,3 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 }
-
