@@ -16,5 +16,67 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "LabelApplicants",
+    "DisplayContext": "READONLY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "LabelMiamAttendance",
+    "DisplayContext": "READONLY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "ClientAttendedMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "MediatorConfirmedThatYouDoNotNeedToAttendMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "ApplicantHasValidReasonForNotAttendingMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "MediatorConfirmedThatYouDoNotNeedToAttendMiam=\"No\""
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "ReasonForNotAttendingMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": "peopleInTheCase-1",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "FieldShowCondition": "ApplicantHasValidReasonForNotAttendingMiam=\"Yes\""
   }
 ]
