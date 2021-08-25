@@ -91,56 +91,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "LabelApplicants",
-    "Label": "The Applicant(s)",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "LabelMiamAttendance",
-    "Label": "MIAM Attendance",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "ClientAttendedMiam",
-    "Label": "Has the client attended a MIAM?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "MediatorConfirmedThatYouDoNotNeedToAttendMiam",
-    "Label": "Has a mediator confirmed that you do not need to attend a MIAM?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "ApplicantHasValidReasonForNotAttendingMiam",
-    "Label": "Has the applicant have a valid reason for not attending a MIAM?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "ReasonForNotAttendingMiam",
-    "Label": "MIAM exemptions:",
-    "Hint": "Providing evidence of domestic violence or abuse concerns",
-    "FieldType": "MultiSelectList",
-    "FieldTypeParameter" : "MiamExemptionsEnum",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "C100",
     "ID": "LabelSpecialMeasuresRequired",
@@ -769,6 +719,243 @@
     "ID": "OtherSafetyOrWelfareConcernsDetails",
     "Label": "Other safety or welfare concerns details",
     "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicantAttendedMIAMLabel",
+    "Label": "## Has the applicant attended a Mediation information & Assessment Meeting (MIAM) in the past 4 months?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicantAttendedMIAM",
+    "Label": "        ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ClaimingExemptionMIAMLabel",
+    "Label": "## Is the applicant claiming exemption from the requirement to attend a MIAM ?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ClaimingExemptionMIAM",
+    "Label": "        ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMExemptionsLabel",
+    "Label": "## MIAM Exemptions : what is the reason(s) for the applicant not attending a MIAM?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "FamilyMediatorMIAMLabel",
+    "Label": "## Has a family mediator informed the applicant that a mediator’s exemption applies, and they do not need to attend a MIAM ?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "FamilyMediatorMIAM",
+    "Label": "        ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMExemptionsSelectAll",
+    "Label": "Select all that apply",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMExemptionsChecklist",
+    "Label": "       ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MIAMExemptionsChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMDomesticViolenceLabel",
+    "Label": "## MIAM Evidence : What evidence of domestic violence or abuse does the applicant have ?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMDomesticViolenceSelectAll",
+    "Label": "Select all that apply",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMDomesticViolenceChecklist",
+    "Label": "        ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MIAMDomesticViolenceChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMUrgencyReasonLabel",
+    "Label": "## MIAM Evidence: what reason does the applicant have for the application to be made urgently?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMUrgencyReasonSelectAll",
+    "Label": "Select all that apply",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMUrgencyReasonChecklist",
+    "Label": "        ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MIAMUrgencyReasonChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMPreviousAttendanceLabel",
+    "Label": "## MIAM Evidence : Previous MIAM attendance or MIAM exemption",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMPreviousAttendanceChecklist",
+    "Label": "Select one",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "MIAMPreviousAttendanceChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMOtherGroundsLabel",
+    "Label": "## MIAM Evidence : What other grounds of exemption apply?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMOtherGroundsChecklist",
+    "Label": "Select one",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "MIAMOtherGroundsChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMCertificationPageLabel",
+    "Label": "## Enter details of MIAM certification",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MediatorRegistrationNumber",
+    "Label": "Mediator Registration Number (URN)",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "FamilyMediatorServiceName",
+    "Label": "Family Mediation Service Name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "SoleTraderName",
+    "Label": "Sole Trader Name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMCertificationPageMessage",
+    "Label": "**You should have a document signed by the mediator confirming this (which you should bring to your first hearing)**",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMCertificationPageLabel1",
+    "Label": "## Enter details of MIAM certification",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MediatorRegistrationNumber1",
+    "Label": "Mediator Registration Number (URN)",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "FamilyMediatorServiceName1",
+    "Label": "Family Mediation Service Name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "SoleTraderName1",
+    "Label": "Sole Trader Name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "MIAMCertificationPageMessage1",
+    "Label": "**You should have a document signed by the mediator confirming this (which you should bring to your first hearing)**",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   }
 ]
