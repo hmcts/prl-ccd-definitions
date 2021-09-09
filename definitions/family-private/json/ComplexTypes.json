@@ -4,7 +4,7 @@
     "ID": "WelshNeed",
     "ListElementCode": "WhoNeedsWelsh",
     "FieldType": "Text",
-    "ElementLabel": "Please give the names of the parties/witnesses/children involved who need to use written or spoken Welsh?",
+    "ElementLabel": "Provide the names of the people involved in the case who need to speak Welsh or read and write in Welsh.",
     "SecurityClassification": "Public"
   },
   {
@@ -12,7 +12,7 @@
     "ID": "WelshNeed",
     "ListElementCode": "SpokenOrWritten",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "SpokenOrWrittenEnum",
+    "FieldTypeParameter": "SpokenOrWrittenWelshEnum",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
@@ -22,7 +22,15 @@
     "ListElementCode": "Party",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "PartyEnum",
-    "ElementLabel": " ",
+    "ElementLabel": "Who will require the interpreter?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "InterpreterNeed",
+    "ListElementCode": "NameLabel",
+    "FieldType": "Label",
+    "ElementLabel": "Describe their relationship to the case.\n\nFor example - grandmother of the applicant.",
     "SecurityClassification": "Public"
   },
   {
@@ -30,7 +38,7 @@
     "ID": "InterpreterNeed",
     "ListElementCode": "Name",
     "FieldType": "Text",
-    "ElementLabel": "Please state",
+    "ElementLabel": "  ",
     "SecurityClassification": "Public"
   },
   {
@@ -38,7 +46,7 @@
     "ID": "InterpreterNeed",
     "ListElementCode": "Language",
     "FieldType": "Text",
-    "ElementLabel": "Language and dialect required",
+    "ElementLabel": "Enter details of the language or dialect required.",
     "SecurityClassification": "Public"
   },
   {
