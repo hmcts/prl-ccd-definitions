@@ -3,13 +3,22 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
+      // headless mode
+      show: true,
       url: 'http://localhost:3000',
       waitForNavigation: ['domcontentloaded'],
-      chrome: { ignoreHTTPSErrors: true }
+      ignoreHTTPSErrors: true,
+      chrome: {
+        ignoreHTTPSErrors: true,
+        args: [
+          '--no-sandbox',
+          '--start-fullscreen'
+        ]
+      }
     }
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
   mocha: {},
-  name: 'div-ccd-definitions'
+  name: 'fprl-ccd-definitions'
 };
