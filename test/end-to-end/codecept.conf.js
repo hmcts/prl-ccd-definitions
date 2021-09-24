@@ -1,12 +1,13 @@
 exports.config = {
-  tests: './*_test.js',
+  tests: './tests/*.js',
   output: './output',
   helpers: {
     Puppeteer: {
       // headless mode
       show: true,
       url: 'http://localhost:3000',
-      waitForNavigation: ['domcontentloaded'],
+      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
+      waitForTimeout: 90000,
       ignoreHTTPSErrors: true,
       chrome: {
         ignoreHTTPSErrors: true,
@@ -15,7 +16,8 @@ exports.config = {
           '--start-fullscreen'
         ]
       }
-    }
+    },
+    GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
