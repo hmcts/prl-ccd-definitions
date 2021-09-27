@@ -3,6 +3,7 @@ const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
 
+const { goingToCourtSelectNoForAll, goingToCourtSelectYesForAll } = require('./pages/going-to-court/goint-to-court');
 const generalHelper = require('./helpers/generalHelper');
 
 module.exports = () => {
@@ -13,6 +14,9 @@ module.exports = () => {
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
+    goingToCourtSelectNoForAll,
+    goingToCourtSelectYesForAll,
+
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
     },
