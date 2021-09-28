@@ -3,35 +3,34 @@ const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
 const typeOfApplicationEvent = require('./pages/TypeOfApplication');
-
 const { goingToCourtSelectNoForAll, goingToCourtSelectYesForAll } = require('./pages/going-to-court/goint-to-court');
 const generalHelper = require('./helpers/generalHelper');
+const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
 
 module.exports = () => {
   return actor({
-    createCase() {
-      return CreateCasePage.createNewCase();
-    },
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
     goingToCourtSelectNoForAll,
     goingToCourtSelectYesForAll,
-
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
     },
     triggerEvent(eventName) {
       return generalHelper.triggerEvent(eventName);
     },
+    createCase() {
+      return CreateCasePage.createNewCase();
+    },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
     },
+    safeguardingAndRiskOfHarm() {
+      return safeguardAndRiskOfHarmPage.safeguardAndRiskOfHarmEvent();
+    },
     typeOfApplicationEvent() {
       return typeOfApplicationEvent.typeOfApplicationEvent();
-    },
-    async safeguardingAndRiskOfHarm() {
-      await this.click('#next-step').selectByVisibleText('Safeguarding and risk of harm');
     }
   });
 };
