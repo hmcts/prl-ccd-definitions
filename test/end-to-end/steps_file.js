@@ -2,18 +2,19 @@ const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
-const typeOfApplicationEvent = require('./pages/TypeOfApplication');
-const { goingToCourtSelectNoForAll, goingToCourtSelectYesForAll } = require('./pages/going-to-court/goint-to-court');
-const generalHelper = require('./helpers/generalHelper');
+const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
+const GoingToCourt = require('./pages/GoingToCourt');
 const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
+const generalHelper = require('./helpers/generalHelper');
 
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
-    goingToCourtSelectNoForAll,
-    goingToCourtSelectYesForAll,
+    runGoingToCourtEvent() {
+      return GoingToCourt.runEventHappyPath();
+    },
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
     },
@@ -30,7 +31,7 @@ module.exports = () => {
       return safeguardAndRiskOfHarmPage.safeguardAndRiskOfHarmEvent();
     },
     typeOfApplicationEvent() {
-      return typeOfApplicationEvent.typeOfApplicationEvent();
+      return TypeOfApplicationEvent.typeOfApplicationEvent();
     }
   });
 };
