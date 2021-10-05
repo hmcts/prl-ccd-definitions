@@ -11,6 +11,9 @@ module.exports = {
 
   async clickCreateCase() {
     await I.waitForText('Create case');
+    I.wait('5');
+    await I.click('Accept analytics cookies');
+    I.wait('5');
     await I.click('Create case');
   },
 
