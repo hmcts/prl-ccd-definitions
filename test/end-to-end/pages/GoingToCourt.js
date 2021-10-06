@@ -2,23 +2,23 @@ const I = actor();
 
 module.exports = {
   fields: {
-    isWelshNeeded: 'input[id="IsWelshNeeded_Yes"]',
-    isInterpreterNeeded: 'input[id="IsInterpreterNeeded_Yes"]',
-    isDisabilityPresent: 'input[id="IsDisabilityPresent_Yes"]',
-    isSpecialArrangementsRequired: 'input[id="IsSpecialArrangementsRequired"]',
-    isIntermediaryNeeded: 'input[id="IsIntermediaryNeeded"]',
-    whoNeedsWelsh: 'input[id="WelshNeeds_0_WhoNeedsWelsh"]',
-    welshSpoken: 'input[id="WelshNeeds_0_SpokenOrWritten-Spoken"]',
-    welshWritten: 'input[id="WelshNeeds_0_SpokenOrWritten-Written"]',
-    welshSpokenAndWritten: 'input[id="WelshNeeds_0_SpokenOrWritten-Both"]',
-    interpreterNeedsApplicant: 'input[id="InterpreterNeeds_0_Party-Applicant"]',
-    interpreterNeedsRespondent: 'input[id="InterpreterNeeds_0_Party-Respondent"]',
-    interpreterNeedsOther: 'input[id="InterpreterNeeds_0_Party-Other"]',
-    interpreterNeedsName: 'input[id="InterpreterNeeds_0_Name"]',
-    interpreterNeedsLanguage: 'input[id="InterpreterNeeds_0_Language"]',
+    isWelshNeeded: '#IsWelshNeeded_Yes',
+    isInterpreterNeeded: '#IsInterpreterNeeded_Yes',
+    isDisabilityPresent: '#IsDisabilityPresent_Yes',
+    isSpecialArrangementsRequired: '#IsSpecialArrangementsRequired_Yes',
+    isIntermediaryNeeded: '#IsIntermediaryNeeded_Yes',
+    whoNeedsWelsh: '#WelshNeeds_0_WhoNeedsWelsh',
+    welshSpoken: '#WelshNeeds_0_SpokenOrWritten-Spoken',
+    welshWritten: '#WelshNeeds_0_SpokenOrWritten-Written',
+    welshSpokenAndWritten: '#WelshNeeds_0_SpokenOrWritten-Both',
+    interpreterNeedsApplicant: '#InterpreterNeeds_0_Party-Applicant',
+    interpreterNeedsRespondent: '#InterpreterNeeds_0_Party-Respondent',
+    interpreterNeedsOther: '#InterpreterNeeds_0_Party-Other',
+    interpreterNeedsName: '#InterpreterNeeds_0_Name',
+    interpreterNeedsLanguage: '#InterpreterNeeds_0_Language',
     adjustmentsRequired: 'textarea[id="AdjustmentsRequired"]',
     specialArrangementsRequired: 'textarea[id="SpecialArrangementsRequired"]',
-    reasonsForIntermediary: 'textarea[id="ReasonsForIntermediary"]',
+    reasonsForIntermediary: '#ReasonsForIntermediary',
     submit: 'button[type="submit"]'
   },
 
@@ -29,43 +29,46 @@ module.exports = {
   async goingToCourt() {
     await I.waitForPage('h1', 'Going to court');
 
-    I.click(this.fields.isWelshNeeded);
-    I.see('Welsh needs');
-    this.fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
-    I.click(this.fields.welshSpoken);
-    I.click(this.fields.welshWritten);
-    I.click(this.fields.welshSpokenAndWritten);
-
-    I.click(this.fields.isInterpreterNeeded);
-    I.see('Interpreter needs');
-    I.click(this.fields.interpreterNeedsApplicant);
-    I.click(this.fields.interpreterNeedsRespondent);
-    I.click(this.fields.interpreterNeedsOther);
-    this.fillField(this.fields.interpreterNeedsName, 'Person One');
-    this.fillField(this.fields.interpreterNeedsLanguage, 'Polish');
-
-    I.click(this.fields.isDisabilityPresent);
-    I.see('Describe the adjustments that the court needs to make.');
-    this.fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
-
-    I.click(this.fields.isSpecialArrangementsRequired);
+    await I.click(this.fields.isWelshNeeded);
+    await I.see('Welsh needs');
+    await I.click('#WelshNeeds > div > button');
     I.wait('1');
-    I.see('Give details of the special arrangements that are required.');
-    this.fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
+    await I.fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
+    await I.click(this.fields.welshSpoken);
+    await I.click(this.fields.welshWritten);
+    await I.click(this.fields.welshSpokenAndWritten);
 
-    I.click(this.fields.isIntermediaryNeeded);
+    await I.click(this.fields.isInterpreterNeeded);
+    await I.see('Interpreter needs');
+    await I.click('#InterpreterNeeds > div > button');
+    await I.click(this.fields.interpreterNeedsApplicant);
+    await I.click(this.fields.interpreterNeedsRespondent);
+    await I.click(this.fields.interpreterNeedsOther);
+    await I.fillField(this.fields.interpreterNeedsName, 'Person One');
+    await I.fillField(this.fields.interpreterNeedsLanguage, 'Polish');
+
+    await I.click(this.fields.isDisabilityPresent);
+    await I.see('Describe the adjustments that the court needs to make.');
+    await I.fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
+
+    await I.click(this.fields.isSpecialArrangementsRequired);
     I.wait('1');
-    I.see('Set out the reasons that an intermediary is required.');
-    this.fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
+    await I.see('Give details of the special arrangements that are required.');
+    await I.fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
 
-    I.wait('5');
-    I.click('Continue');
+    await I.click(this.fields.isIntermediaryNeeded);
+    I.wait('1');
+    await I.see('Set out the reasons that an intermediary is required.');
+    await I.fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
+
+    I.wait('2');
+    await I.click('Continue');
 
     I.waitForText('Submit', '30');
-    I.click('Submit');
+    await I.click('Submit');
   },
 
-  async runEventHappyPath() {
+  async runEventHappyPathGoingToCourt() {
     await this.triggerEvent();
     await this.goingToCourt();
 

@@ -13,7 +13,7 @@ module.exports = () => {
       return LoginPage.loginAsSolicitor();
     },
     runGoingToCourtEvent() {
-      return GoingToCourt.runEventHappyPath();
+      return GoingToCourt.runEventHappyPathGoingToCourt();
     },
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
