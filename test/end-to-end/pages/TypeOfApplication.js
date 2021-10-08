@@ -11,7 +11,6 @@ module.exports = {
     prohibitedStepsOrder: 'input[id="OrdersApplyingFor-prohibitedStepsOrder"]',
     specificIssueOrder: 'input[id="OrdersApplyingFor-specificIssueOrder"]',
     textareaText: 'Testing text area',
-    consentOrder: 'input[id="OrdersApplyingFor-consentOrder"]',
     natureOfOrderTextArea: 'textarea[id="NatureOfOrder"]',
     noPermissionRequiredRadioButton: 'input[id="ApplicationPermissionRequired-noNotRequired"]',
     appDetailsTextArea: 'textarea[id="ApplicationDetails"]',
@@ -41,7 +40,6 @@ module.exports = {
     await I.click(this.fields.childArrangementsOrder);
     await I.click(this.fields.prohibitedStepsOrder);
     await I.click(this.fields.specificIssueOrder);
-    await I.click(this.fields.consentOrder);
     await I.waitForEnabled(this.fields.natureOfOrderTextArea);
     await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
