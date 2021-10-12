@@ -49,7 +49,7 @@ withPipeline("nodejs", product, component) {
     }
   }
 
-  before('functionalTest:preview') {
+  before('test:preview') {
     yarnBuilder.yarn('setup')
 
     stageWithAgent('Generate Family Private Law Case config', product) {
