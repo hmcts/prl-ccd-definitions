@@ -61,6 +61,7 @@ withPipeline("nodejs", product, component) {
     env.CCD_DATA_API_URL="http://ccd-data-store-api-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_WEB_URL="https://case-management-web-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
+    env.URL = "http://xui-fprl-case-service-pr-${CHANGE_ID}.service.core-compute-preview.internal"
   }
 
   after('functionalTest:preview') {
