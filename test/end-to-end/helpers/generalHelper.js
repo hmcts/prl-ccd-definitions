@@ -1,4 +1,3 @@
-const config = require('../config');
 // eslint-disable-next-line no-undef
 const { Helper } = codeceptjs;
 
