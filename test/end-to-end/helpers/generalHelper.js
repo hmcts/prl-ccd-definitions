@@ -1,3 +1,4 @@
+const config = require('../config');
 // eslint-disable-next-line no-undef
 const { Helper } = codeceptjs;
 
@@ -11,6 +12,12 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     await Puppeteer.click('Add new', { css: `#${field}>div>button` });
     await Puppeteer.attachFile(`input[id="${field}_value"]`, '../resource/dummy.pdf');
+  }
+
+  async attachDocument(field) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.attachFile(`input[id="${field}"]`, '../resource/dummy.pdf');
+
   }
 
   async amOnHistoryPageWithSuccessNotification() {
@@ -59,6 +66,12 @@ class GeneralHelper extends Helper {
     } catch (error) {
       throw error;
     }
+  }
+  async seeDocuments(title,documentName) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.see(title);
+    await Puppeteer.see(documentName);
+
   }
 }
 
