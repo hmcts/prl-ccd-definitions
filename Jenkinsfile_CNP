@@ -59,12 +59,14 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_DATA_API_URL="http://ccd-data-store-api-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_WEB_URL="https://case-management-web-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.XUI_WEB_URL="https://xui-fprl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
   }
 
   after('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+
+    yarnBuilder.yarn('test:fullfunctional')
   }
 
   before('functionalTest:aat') {
@@ -77,7 +79,7 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
     env.CCD_DATA_API_URL="http://ccd-data-store-api-aat.service.core-compute-aat.internal"
-    env.CCD_WEB_URL="https://manage-case.aat.platform.hmcts.net"
+    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
     env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
   }

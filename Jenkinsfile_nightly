@@ -1,0 +1,53 @@
+#!groovy
+
+properties([
+        pipelineTriggers([cron('00 20 * * *')]),
+        parameters([
+                string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
+                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net/', description: 'The URL you want to run solicitor tests against'),
+        ])
+])
+
+@Library("Infrastructure")
+
+String product = "fprl"
+String component = "ccd-definitions"
+
+def secrets = [
+        's2s-${env}'      : [
+                secret('microservicekey-ccd-data', 'DATA_STORE_S2S_KEY'),
+                secret('microservicekey-ccd-definition', 'DEFINITION_STORE_S2S_KEY'),
+                secret('microservicekey-ccd-gw', 'API_GATEWAY_S2S_KEY'),
+                secret('microservicekey-ccd-ps', 'PRINT_S2S_KEY'),
+                secret('microservicekey-ccd-admin', 'ADMIN_S2S_KEY')
+        ],
+        'ccd-${env}'      : [
+                secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
+                secret('ccd-api-gateway-oauth2-client-secret', 'API_GATEWAY_IDAM_SECRET'),
+                secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
+                secret('idam-data-store-client-secret','IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
+                secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
+                secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD')
+        ]
+]
+
+static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+  [ $class: 'AzureKeyVaultSecret',
+    secretType: 'Secret',
+    name: secretName,
+    version: '',
+    envVariable: envVar
+  ]
+}
+
+withNightlyPipeline("nodejs", product, component) {
+    env.CCD_DATA_API_URL="http://ccd-data-store-api-aat.service.core-compute-aat.internal"
+    env.NODE_ENV = 'ci'
+
+    loadVaultSecrets(secrets)
+    enableFullFunctionalTest()
+
+    after('fullFunctionalTest') {
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
+    }
+}
