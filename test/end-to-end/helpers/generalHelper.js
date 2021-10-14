@@ -13,6 +13,12 @@ class GeneralHelper extends Helper {
     await Puppeteer.attachFile(`input[id="${field}_value"]`, '../resource/dummy.pdf');
   }
 
+  async attachDocument(field) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.attachFile(`input[id="${field}"]`, '../resource/dummy.pdf');
+
+  }
+
   async amOnHistoryPageWithSuccessNotification() {
     const { Puppeteer } = this.helpers;
     await Puppeteer.waitForText('History');
@@ -59,6 +65,12 @@ class GeneralHelper extends Helper {
     } catch (error) {
       throw error;
     }
+  }
+  async seeDocuments(title,documentName) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.see(title);
+    await Puppeteer.see(documentName);
+
   }
 }
 

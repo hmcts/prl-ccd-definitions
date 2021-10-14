@@ -25,7 +25,8 @@ module.exports = {
     appWithoutNoticeNotPossible: 'input[id="IsHearingWithoutNoticeRequiredNotPossible_Yes"]',
     appWithoutNoticeNotPossibleReason: 'textarea[id="ApplicationWithoutNoticeNotPossibleReasons"]',
     appWithoutNoticeRespondentWllFrustrate: 'input[id="IsHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
-    appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]'
+    appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]',
+    consentOrderYes: '#ConsentOrder_Yes',
   },
 
   async actionTypeOfApplicationEvent() {
@@ -43,6 +44,14 @@ module.exports = {
     await I.waitForEnabled(this.fields.natureOfOrderTextArea);
     await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
+  },
+
+  async draftConsentOrder() {
+    await I.waitForText('Do you have a draft consent order?');
+    await I.click(this.fields.consentOrderYes);
+    await I.attachDocument('DraftConsentOrderFile');
+    await I.wait('5');
+    await I.click('Continue');
   },
 
   async permissionsPage() {
@@ -81,12 +90,15 @@ module.exports = {
   async checkYourAnswersPage() {
     await I.waitForText('Check your answers');
     await I.waitForText(this.fields.textareaText);
+    await I.seeDocuments('Draft Consent Order','dummy.pdf')
     await I.click(this.fields.submit);
+
   },
 
   async typeOfApplicationEvent() {
     await this.actionTypeOfApplicationEvent();
     await this.whatOrdersPage();
+    await this.draftConsentOrder();
     await this.permissionsPage();
     await this.briefDetailsPage();
     await this.urgentAndNoticePage();
