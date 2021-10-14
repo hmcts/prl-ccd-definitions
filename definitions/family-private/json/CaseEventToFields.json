@@ -937,13 +937,36 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
+    "LiveFrom": "05/10/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "selectApplicationType",
+    "CaseFieldID": "ConsentOrder",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "05/10/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "selectApplicationType",
+    "CaseFieldID": "DraftConsentOrderFile",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "ConsentOrder=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "ParaWhyMakingApplication",
     "DisplayContext": "READONLY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1
   },
   {
@@ -952,8 +975,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "ApplicationPermissionRequired",
     "DisplayContext": "MANDATORY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -964,8 +987,8 @@
     "CaseFieldID": "ApplicationPermissionRequiredReason",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "ApplicationPermissionRequired=\"yes\" OR ApplicationPermissionRequired=\"noNowSought\"",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -975,8 +998,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "ParaWhyMakingApplication2",
     "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -986,8 +1009,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "ParaApplicationDetails",
     "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2
   },
   {
@@ -996,8 +1019,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "ApplicationDetails",
     "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1008,8 +1031,8 @@
     "CaseFieldID": "ParaApplicationUrgent",
     "DisplayContext": "READONLY",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/validate-application-consideration-timetable",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1
   },
   {
@@ -1018,8 +1041,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "IsApplicationUrgent",
     "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1030,8 +1053,8 @@
     "CaseFieldID": "ApplicationUrgencyOrders",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "IsApplicationUrgent=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1042,8 +1065,8 @@
     "CaseFieldID": "ApplicationReasonsForUrgency",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "IsApplicationUrgent=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1054,8 +1077,8 @@
     "CaseFieldID": "ParaReasonsForUrgencyTimetable",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "IsApplicationUrgent=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 5
   },
   {
@@ -1065,8 +1088,8 @@
     "CaseFieldID": "ApplicationConsideredInDaysAndHours",
     "DisplayContext": "COMPLEX",
     "FieldShowCondition": "IsApplicationUrgent=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1077,8 +1100,8 @@
     "CaseFieldID": "ApplicationNoticeEfforts",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "IsApplicationUrgent=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 7,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1088,8 +1111,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "IsApplicationConsideredWithoutNotice",
     "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 8,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1100,8 +1123,8 @@
     "CaseFieldID": "ApplicationWithoutNoticeReasons",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "IsApplicationConsideredWithoutNotice=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 9,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1111,8 +1134,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "IsHearingWithoutNoticeRequiredNotPossible",
     "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 10,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1123,8 +1146,8 @@
     "CaseFieldID": "ApplicationWithoutNoticeNotPossibleReasons",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "IsHearingWithoutNoticeRequiredNotPossible=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 11,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1134,8 +1157,8 @@
     "CaseEventID": "selectApplicationType",
     "CaseFieldID": "IsHearingWithoutNoticeRequiredRespondentWillFrustrate",
     "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 12,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1146,8 +1169,8 @@
     "CaseFieldID": "ApplicationWithoutNoticeRespondentWillFrustrateReasons",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "IsHearingWithoutNoticeRequiredRespondentWillFrustrate=\"Yes\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 13,
     "ShowSummaryChangeOption": "Yes"
   },
