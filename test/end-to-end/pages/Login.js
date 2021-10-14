@@ -1,6 +1,9 @@
 const I = actor();
 const config = require('../config');
+
+// eslint-disable-next-line no-unused-vars
 const baseUrl = config.baseUrl;
+
 module.exports = {
 
   fields: {
@@ -16,5 +19,5 @@ module.exports = {
     await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
     await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
     await I.click(this.fields.submit);
-   }
+  }
 };
