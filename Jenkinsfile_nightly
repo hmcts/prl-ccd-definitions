@@ -41,8 +41,9 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
+    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
     env.CCD_DATA_API_URL="http://ccd-data-store-api-aat.service.core-compute-aat.internal"
-    env.NODE_ENV = 'ci'
+    env.NODE_ENV='ci'
 
     loadVaultSecrets(secrets)
     enableFullFunctionalTest()
