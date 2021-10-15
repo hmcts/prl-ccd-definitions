@@ -4,7 +4,7 @@ properties([
         pipelineTriggers([cron('00 20 * * *')]),
         parameters([
                 string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
-                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net/', description: 'The URL you want to run solicitor tests against'),
+                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
         ])
 ])
 
@@ -41,8 +41,6 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
-    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
-    env.CCD_DATA_API_URL="http://ccd-data-store-api-aat.service.core-compute-aat.internal"
     env.NODE_ENV='ci'
 
     loadVaultSecrets(secrets)
