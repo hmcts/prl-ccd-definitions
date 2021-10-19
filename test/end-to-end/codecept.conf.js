@@ -12,8 +12,7 @@ exports.config = {
       chrome: {
         ignoreHTTPSErrors: true,
         args: [
-          '--no-sandbox',
-          '--start-fullscreen'
+          '--no-sandbox'
         ]
       }
     },
