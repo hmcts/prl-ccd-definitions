@@ -75,9 +75,11 @@ module.exports = {
 
   async fillApplicantsPage() {
     const retryCount = 3;
+    I.wait('2');
     await I.waitForElement('#Applicants');
     await I.click('Add new');
     await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
+    I.wait('2');
     await I.fillField('//input[@id="Applicants_0_LastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '10');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '10');
@@ -112,9 +114,11 @@ module.exports = {
 
   async fillRespondentsPage() {
     const retryCount = 3;
+    I.wait('2');
     await I.waitForElement('#Respondents');
     await I.click('Add new');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
+    I.wait('2');
     await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '10');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '11');
@@ -134,6 +138,7 @@ module.exports = {
     await I.waitForElement('#OthersToNotify');
     await I.click('Add new');
     await I.fillField('//input[@id="OthersToNotify_0_FirstName"]', 'Other Firstname');
+    I.wait('2');
     await I.fillField('//input[@id="OthersToNotify_0_LastName"]', 'Other Lastname');
     await I.retry(retryCount).checkOption('//input[@id="OthersToNotify_0_IsDateOfBirthUnknown-dontKnow"]');
     await I.retry(retryCount).checkOption('//input[@id="OthersToNotify_0_Gender-male"]');

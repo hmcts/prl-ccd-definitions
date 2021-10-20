@@ -47,7 +47,7 @@ module.exports = {
 
   async safeguardingAndRiskOfHarm() {
     await I.waitForText('Safeguarding and risk of harm');
-    I.wait('3');
+    I.wait('2');
     await I.click(this.fields.domesticAbuse);
     await I.click(this.fields.childAbduction);
     await I.click(this.fields.childAbuse);
@@ -58,7 +58,7 @@ module.exports = {
 
   async childAbduction() {
     await I.waitForText('Child abduction');
-    I.wait('3');
+    I.wait('2');
     await I.click(this.fields.childAtRisk);
     await I.click(this.fields.policeInformed);
     await I.click(this.fields.childHasPassport);
@@ -75,7 +75,7 @@ module.exports = {
   },
 
   async childAbuse() {
-    I.wait('3');
+    I.wait('2');
     await I.click(this.fields.sexuallyAbused);
     await I.click(this.fields.physicallyAbused);
     I.wait('1');
@@ -93,6 +93,7 @@ module.exports = {
   },
 
   async submitEvent() {
+    I.wait('2');
     await I.waitForElement('h2');
     await I.see('Check your answers');
     await I.click('Submit');
@@ -103,6 +104,6 @@ module.exports = {
     await this.safeguardingAndRiskOfHarm();
     await this.childAbduction();
     await this.childAbuse();
-    await this.submitEvent;
+    await this.submitEvent();
   }
 };

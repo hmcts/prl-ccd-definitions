@@ -47,7 +47,9 @@ module.exports = {
     await I.fillField(this.fields.interpreterNeedsName, 'Person One');
     await I.fillField(this.fields.interpreterNeedsLanguage, 'Polish');
 
+    I.wait('1');
     await I.click(this.fields.isDisabilityPresent);
+    I.wait('1');
     await I.see('Describe the adjustments that the court needs to make.');
     await I.fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
 
