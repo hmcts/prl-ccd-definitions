@@ -35,6 +35,7 @@ module.exports = {
   },
 
   async fillChildrenAdditionalQuestionsPage() {
+    I.wait('2');
     await I.waitForElement('//input[@id="IsChildrenKnownToAuthority-yes"]');
     await I.checkOption('//input[@id="IsChildrenKnownToAuthority-yes"]');
     await I.waitForElement('//textarea[@id="ChildAndLocalAuthority"]');
@@ -76,7 +77,7 @@ module.exports = {
   async fillApplicantsPage() {
     const retryCount = 3;
     I.wait('3');
-    await I.click('Add new');
+    await I.click('#Applicants > div > button');
     await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Applicants_0_LastName"]', 'Applicant Lastname');
@@ -114,7 +115,7 @@ module.exports = {
   async fillRespondentsPage() {
     const retryCount = 3;
     I.wait('3');
-    await I.click('Add new');
+    await I.click('#Respondents > div > button');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
