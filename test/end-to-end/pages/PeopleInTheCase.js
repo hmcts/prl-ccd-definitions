@@ -75,6 +75,7 @@ module.exports = {
 
   async fillApplicantsPage() {
     const retryCount = 3;
+    I.wait('2');
     await I.waitForElement('#Applicants');
     await I.click('Add new');
     await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
@@ -113,6 +114,7 @@ module.exports = {
 
   async fillRespondentsPage() {
     const retryCount = 3;
+    I.wait('2');
     await I.waitForElement('#Respondents');
     await I.click('Add new');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
