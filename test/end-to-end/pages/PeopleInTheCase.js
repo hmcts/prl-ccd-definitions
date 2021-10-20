@@ -117,7 +117,7 @@ module.exports = {
   async fillRespondentsPage() {
     const retryCount = 3;
     I.wait('3');
-    await I.click('#Respondents > div > button');
+    await I.retry(retryCount).click('#Respondents > div > button');
     I.wait('2');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
     I.wait('2');
