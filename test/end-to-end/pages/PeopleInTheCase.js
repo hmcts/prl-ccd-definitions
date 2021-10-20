@@ -114,8 +114,7 @@ module.exports = {
 
   async fillRespondentsPage() {
     const retryCount = 3;
-    I.wait('2');
-    await I.waitForElement('#Respondents');
+    I.wait('3');
     await I.click('Add new');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
     I.wait('2');
