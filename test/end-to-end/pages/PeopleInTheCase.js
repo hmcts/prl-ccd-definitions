@@ -57,6 +57,7 @@ module.exports = {
     await I.waitForElement('//input[@id="IsExistingProceedings_Yes"]');
     await I.checkOption('//input[@id="IsExistingProceedings_Yes"]');
     await I.fillField('//input[@id="ChildrenInProceeding"]', 'Child 1, Child 2');
+    I.wait('1');
     await I.click('Add new');
     await I.fillField('//input[@id="ExistingProceedings_0_CourtName"]', 'Court name');
     await I.fillField('//input[@id="ExistingProceedings_0_CaseNumber"]', 'TEST001');
@@ -78,6 +79,7 @@ module.exports = {
     const retryCount = 3;
     I.wait('3');
     await I.click('#Applicants > div > button');
+    I.wait('1');
     await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Applicants_0_LastName"]', 'Applicant Lastname');
@@ -116,6 +118,7 @@ module.exports = {
     const retryCount = 3;
     I.wait('3');
     await I.click('#Respondents > div > button');
+    I.wait('2');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
@@ -136,6 +139,7 @@ module.exports = {
     const retryCount = 3;
     await I.waitForElement('#OthersToNotify');
     await I.click('Add new');
+    I.wait('1');
     await I.fillField('//input[@id="OthersToNotify_0_FirstName"]', 'Other Firstname');
     I.wait('2');
     await I.fillField('//input[@id="OthersToNotify_0_LastName"]', 'Other Lastname');
