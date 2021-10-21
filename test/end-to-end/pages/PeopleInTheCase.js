@@ -77,9 +77,8 @@ module.exports = {
 
   async fillApplicantsPage() {
     const retryCount = 3;
-    I.wait('3');
-    await I.click('#Applicants > div > button');
-    I.wait('1');
+    I.wait('2');
+    await I.click('Add new');
     await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Applicants_0_LastName"]', 'Applicant Lastname');
@@ -107,18 +106,20 @@ module.exports = {
   },
 
   async fillMIAMCertificationPage() {
+    const uploadTime = 5;
     await I.waitForElement('//input[@id="MediatorRegistrationNumber1"]');
     await I.fillField('//input[@id="MediatorRegistrationNumber1"]', 'URN12345');
     await I.fillField('//input[@id="FamilyMediatorServiceName1"]', 'Test service name');
     await I.fillField('//input[@id="SoleTraderName1"]', 'Test sole trader');
+    await I.attachFile('//input[@id="MIAMCertificationDocumentUpload1"]', '../resource/dummy.pdf');
+    await I.wait(uploadTime);
     await I.click(this.fields.submit);
   },
 
   async fillRespondentsPage() {
     const retryCount = 3;
-    I.wait('3');
-    await I.retry(retryCount).click('#Respondents > div > button');
     I.wait('2');
+    await I.click('Add new');
     await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
     I.wait('2');
     await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
