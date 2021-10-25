@@ -1,6 +1,6 @@
-# fprl-ccd-definitions
+# prl-ccd-definitions
 
-Project creating Family Private Law (FPRL) CCD config files.
+Project creating Family Private Law (PRL) CCD config files.
 
 ## Usage
 
@@ -30,14 +30,14 @@ node:internal/modules/cjs/loader:927
 
 Error: Cannot find module 'matcher'
 Require stack:
-- [...]/fprl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js
-- [...]/fprl-ccd-definitions/ccd-definition-processor/src/main/json2xlsx.js
-- [...]/fprl-ccd-definitions/ccd-definition-processor/bin/json2xlsx.js
+- [...]/prl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js
+- [...]/prl-ccd-definitions/ccd-definition-processor/src/main/json2xlsx.js
+- [...]/prl-ccd-definitions/ccd-definition-processor/bin/json2xlsx.js
     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:924:15)
     at Function.Module._load (node:internal/modules/cjs/loader:769:27)
     at Module.require (node:internal/modules/cjs/loader:996:19)
     at require (node:internal/modules/cjs/helpers:92:18)
-    at Object.<anonymous> ([...]/fprl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js:4:17)
+    at Object.<anonymous> ([...]/prl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js:4:17)
     at Module._compile (node:internal/modules/cjs/loader:1092:14)
     at Object.Module._extensions..js (node:internal/modules/cjs/loader:1121:10)
     at Module.load (node:internal/modules/cjs/loader:972:32)
@@ -45,9 +45,9 @@ Require stack:
     at Module.require (node:internal/modules/cjs/loader:996:19) {
   code: 'MODULE_NOT_FOUND',
   requireStack: [
-    '[...]/fprl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js',
-    '[...]/fprl-ccd-definitions/ccd-definition-processor/src/main/json2xlsx.js',
-    '[...]/fprl-ccd-definitions/ccd-definition-processor/bin/json2xlsx.js'
+    '[...]/prl-ccd-definitions/ccd-definition-processor/src/main/lib/file-utils.js',
+    '[...]/prl-ccd-definitions/ccd-definition-processor/src/main/json2xlsx.js',
+    '[...]/prl-ccd-definitions/ccd-definition-processor/bin/json2xlsx.js'
   ]
 }
 ```

@@ -21,5 +21,5 @@ exports.config = {
   include: { I: './steps_file.js' },
   bootstrap: null,
   mocha: {},
-  name: 'fprl-ccd-definitions'
+  name: 'prl-ccd-definitions'
 };
