@@ -1,7 +1,7 @@
 const load = require;
 
 const loadFile = file => {
-  return Object.assign(load(`../../../definitions/family-private/json/${file}.json`), []);
+  return Object.assign(load(`../../../definitions/private-law/json/${file}.json`), []);
 };
 
 module.exports = {
