@@ -1,6 +1,6 @@
-Feature('Going to court');
+Feature('Attending the hearing');
 
-Scenario('Going to court event - basic journey', async I => {
+Scenario('Attending the hearing - basic journey', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.runAttendingTheHearingEvent();
