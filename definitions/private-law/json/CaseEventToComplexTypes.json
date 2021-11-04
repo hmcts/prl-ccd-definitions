@@ -862,7 +862,7 @@
     "ListElementCode": "otherGender",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "FieldShowCondition": "Gender=\"other\"",
+    "FieldShowCondition": "PartyDetails.Gender=\"other\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -981,7 +981,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Email",
+    "ListElementCode": "IsAddressConfidential",
     "EventElementLabel": "",
     "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY"
@@ -992,7 +992,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Landline",
+    "ListElementCode": "CanYouProvideEmailAddress",
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY"
@@ -1003,9 +1003,31 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "PhoneNumber",
+    "ListElementCode": "Email",
     "EventElementLabel": "",
     "FieldDisplayOrder": "18",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "Landline",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "19",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "PhoneNumber",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "20",
     "DisplayContext": "MANDATORY"
   }
 ]
