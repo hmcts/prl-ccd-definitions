@@ -859,9 +859,10 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "PlaceOfBirth",
+    "ListElementCode": "otherGender",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
+    "FieldShowCondition": "Gender=\"other\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -870,7 +871,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Address",
+    "ListElementCode": "PlaceOfBirth",
     "EventElementLabel": "",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
@@ -881,7 +882,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Address.AddressLine1",
+    "ListElementCode": "Address",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
     "DisplayContext": "MANDATORY"
@@ -892,9 +893,20 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Address.AddressLine2",
+    "ListElementCode": "Address.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "9",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "Address.AddressLine2",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
