@@ -256,7 +256,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "ApplicantAttendedMIAMLabel",
+    "CaseFieldID": "LabelTheRespondents",
     "TabFieldDisplayOrder": 20
   },
   {
@@ -266,7 +266,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "ApplicantAttendedMIAM",
+    "CaseFieldID": "Respondents",
     "TabFieldDisplayOrder": 21
   },
   {
@@ -276,8 +276,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "ClaimingExemptionMIAMLabel",
-    "FieldShowCondition": "ApplicantAttendedMIAM=\"No\"",
+    "CaseFieldID": "LabelOthersToNotify",
     "TabFieldDisplayOrder": 22
   },
   {
@@ -287,7 +286,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "ClaimingExemptionMIAM",
+    "CaseFieldID": "OthersToNotify",
     "TabFieldDisplayOrder": 23
   },
   {
@@ -297,8 +296,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "FamilyMediatorMIAMLabel",
-    "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\"",
+    "CaseFieldID": "LabelOtherChildren",
     "TabFieldDisplayOrder": 24
   },
   {
@@ -308,276 +306,278 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 4,
-    "CaseFieldID": "FamilyMediatorMIAM",
+    "CaseFieldID": "OtherChildren",
     "TabFieldDisplayOrder": 25
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "ApplicantAttendedMIAMLabel",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "ApplicantAttendedMIAM",
+    "TabFieldDisplayOrder": 2
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "ClaimingExemptionMIAMLabel",
+    "FieldShowCondition": "ApplicantAttendedMIAM=\"No\"",
+    "TabFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "ClaimingExemptionMIAM",
+    "TabFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "FamilyMediatorMIAMLabel",
+    "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\"",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "FamilyMediatorMIAM",
+    "TabFieldDisplayOrder": 6
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMExemptionsLabel",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\"",
-    "TabFieldDisplayOrder": 26
+    "TabFieldDisplayOrder": 7
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMExemptionsChecklist",
-    "TabFieldDisplayOrder": 28
+    "TabFieldDisplayOrder": 8
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMDomesticViolenceLabel",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND  MIAMExemptionsChecklist  CONTAINS \"domesticViolence\"",
-    "TabFieldDisplayOrder": 29
+    "TabFieldDisplayOrder": 9
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMDomesticViolenceChecklist",
-    "TabFieldDisplayOrder": 31
+    "TabFieldDisplayOrder": 10
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMUrgencyReasonLabel",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"urgency\"",
-    "TabFieldDisplayOrder": 32
+    "TabFieldDisplayOrder": 11
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMUrgencyReasonChecklist",
-    "TabFieldDisplayOrder": 34
+    "TabFieldDisplayOrder": 12
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMPreviousAttendanceLabel",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"previousMIAMattendance\"",
-    "TabFieldDisplayOrder": 35
+    "TabFieldDisplayOrder": 13
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMPreviousAttendanceChecklist",
-    "TabFieldDisplayOrder": 36
+    "TabFieldDisplayOrder": 14
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMOtherGroundsLabel",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"other\"",
-    "TabFieldDisplayOrder": 37
+    "TabFieldDisplayOrder": 15
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMOtherGroundsChecklist",
-    "TabFieldDisplayOrder": 38
+    "TabFieldDisplayOrder": 16
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMCertificationPageLabel",
     "FieldShowCondition": "ApplicantAttendedMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 39
+    "TabFieldDisplayOrder": 17
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MediatorRegistrationNumber",
-    "TabFieldDisplayOrder": 40
+    "TabFieldDisplayOrder": 18
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "FamilyMediatorServiceName",
-    "TabFieldDisplayOrder": 41
+    "TabFieldDisplayOrder": 19
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "SoleTraderName",
-    "TabFieldDisplayOrder": 42
+    "TabFieldDisplayOrder": 20
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMCertificationPageMessage",
     "FieldShowCondition": "ApplicantAttendedMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 43
+    "TabFieldDisplayOrder": 21
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMCertificationPageLabel1",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 44
+    "TabFieldDisplayOrder": 22
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MediatorRegistrationNumber1",
-    "TabFieldDisplayOrder": 45
+    "TabFieldDisplayOrder": 23
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "FamilyMediatorServiceName1",
-    "TabFieldDisplayOrder": 46
+    "TabFieldDisplayOrder": 24
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "SoleTraderName1",
-    "TabFieldDisplayOrder": 47
+    "TabFieldDisplayOrder": 25
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabID": "miam",
+    "TabLabel": "MIAM",
+    "TabDisplayOrder": 5,
     "CaseFieldID": "MIAMCertificationPageMessage1",
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 48
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "LabelTheRespondents",
-    "TabFieldDisplayOrder": 49
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "Respondents",
-    "TabFieldDisplayOrder": 50
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "LabelOthersToNotify",
-    "TabFieldDisplayOrder": 51
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "OthersToNotify",
-    "TabFieldDisplayOrder": 52
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "LabelOtherChildren",
-    "TabFieldDisplayOrder": 53
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "Channel": "CaseWorker",
-    "TabID": "peopleInCase",
-    "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "OtherChildren",
-    "TabFieldDisplayOrder": 54
+    "TabFieldDisplayOrder": 26
   }
 ]
