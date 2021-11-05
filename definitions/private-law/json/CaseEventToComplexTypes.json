@@ -854,7 +854,7 @@
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
@@ -917,7 +917,7 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "Address.AddressLine3",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -928,7 +928,7 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "Address.PostTown",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -939,7 +939,7 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "Address.County",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -950,7 +950,7 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "Address.PostCode",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "13",
+    "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -961,22 +961,11 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "Address.Country",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "14",
+    "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "ID": "PartyDetails",
-    "CaseEventID": "applicantsDetails",
-    "CaseFieldID": "Applicants",
-    "ListElementCode": "IsAtAddressLessThan5Years",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "15",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
@@ -992,31 +981,56 @@
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "CanYouProvideEmailAddress",
+    "ListElementCode": "IsAtAddressLessThan5Years",
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "AddressLivedLessThan5YearsDetails",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "18",
+    "FieldShowCondition": "Applicants.IsAtAddressLessThan5Years=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "CanYouProvideEmailAddress",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "19",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
     "ListElementCode": "Email",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "20",
+    "FieldShowCondition": "Applicants.CanYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "PartyDetails",
     "CaseEventID": "applicantsDetails",
     "CaseFieldID": "Applicants",
-    "ListElementCode": "Landline",
+    "ListElementCode": "IsEmailAddressConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "21",
+    "FieldShowCondition": "Applicants.CanYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -1027,7 +1041,18 @@
     "CaseFieldID": "Applicants",
     "ListElementCode": "PhoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "22",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "IsPhoneNumberConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "MANDATORY"
   }
 ]

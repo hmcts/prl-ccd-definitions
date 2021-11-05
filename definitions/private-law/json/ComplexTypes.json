@@ -300,7 +300,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "ID": "PartyDetails",
     "ListElementCode": "otherGender",
     "FieldType": "Text",
@@ -333,15 +333,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "IsAtAddressLessThan5Years",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Has applicant lived at this address for less than 5 years?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "ID": "PartyDetails",
     "ListElementCode": "IsAddressConfidential",
     "FieldType": "YesOrNo",
@@ -351,17 +343,41 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "PartyDetails",
+    "ListElementCode": "IsAtAddressLessThan5Years",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Has applicant lived at this address for less than 5 years?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "AddressLivedLessThan5YearsDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Provide details of all previous addresses for the last 5 years below(if known, including the dates and starting with most recent)",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
     "ListElementCode": "CanYouProvideEmailAddress",
     "FieldType": "YesOrNo",
     "ElementLabel": "Can you provide email address?",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "ID": "PartyDetails",
     "ListElementCode": "Email",
     "FieldType": "Email",
     "ElementLabel": "Email address",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "IsEmailAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the email address confidential?",
     "SecurityClassification": "Public"
   },
   {
@@ -379,7 +395,15 @@
     "ListElementCode": "PhoneNumber",
     "FieldType": "Text",
     "RegularExpression": "^[0-9 +().-]{9,}$",
-    "ElementLabel": "Mobile telephone number",
+    "ElementLabel": "Contact Number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "IsPhoneNumberConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the contact number confidential?",
     "SecurityClassification": "Public"
   },
   {
