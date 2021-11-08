@@ -3,7 +3,7 @@ const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
-const GoingToCourt = require('./pages/GoingToCourt');
+const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
 const generalHelper = require('./helpers/generalHelper');
 
@@ -12,8 +12,8 @@ module.exports = () => {
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
-    runGoingToCourtEvent() {
-      return GoingToCourt.runEventHappyPathGoingToCourt();
+    runAttendingTheHearingEvent() {
+      return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
     },
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
