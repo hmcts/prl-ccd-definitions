@@ -127,7 +127,7 @@
     "ID": "Child",
     "ListElementCode": "ApplicantsRelationshipToChild",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "Relationships",
+    "FieldTypeParameter": "RelationshipsEnum",
     "ElementLabel": "What is the applicant's relationship to child?",
     "SecurityClassification": "Public"
   },
@@ -137,8 +137,26 @@
     "ID": "Child",
     "ListElementCode": "RespondentsRelationshipToChild",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "Relationships",
+    "FieldTypeParameter": "RelationshipsEnum",
     "ElementLabel": "What is the respondent's relationship to child?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "ChildLiveWith",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "LiveWithEnum",
+    "ElementLabel": "Who does the child live with?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Child",
+    "ListElementCode": "AddNewChildLabel",
+    "FieldType": "Label",
+    "ElementLabel": "Add new child",
     "SecurityClassification": "Public"
   },
   {
