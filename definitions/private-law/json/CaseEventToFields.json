@@ -322,7 +322,7 @@
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/validate-miam-application-or-exemption",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
   },
@@ -333,7 +333,7 @@
     "CaseFieldID": "ApplicantAttendedMIAM",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
   },
@@ -344,7 +344,7 @@
     "CaseFieldID": "ClaimingExemptionMIAMLabel",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 1,
     "FieldShowCondition": "ApplicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
@@ -356,7 +356,7 @@
     "CaseFieldID": "ClaimingExemptionMIAM",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 1,
     "FieldShowCondition": "ApplicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
@@ -368,7 +368,7 @@
     "CaseFieldID": "FamilyMediatorMIAMLabel",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 1,
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
@@ -380,7 +380,7 @@
     "CaseFieldID": "FamilyMediatorMIAM",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-1",
+    "PageID": 1,
     "PageDisplayOrder": 7,
     "FieldShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
@@ -392,7 +392,7 @@
     "CaseFieldID": "MIAMExemptionsLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-2",
+    "PageID": 2,
     "PageDisplayOrder": 2,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
@@ -404,7 +404,7 @@
     "CaseFieldID": "MIAMExemptionsSelectAll",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": "miam-2",
+    "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y"
   },
@@ -415,7 +415,7 @@
     "CaseFieldID": "MIAMExemptionsChecklist",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-2",
+    "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y"
   },
@@ -426,7 +426,7 @@
     "CaseFieldID": "MIAMDomesticViolenceLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-3",
+    "PageID": 3,
     "PageDisplayOrder": 3,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND  MIAMExemptionsChecklist  CONTAINS \"domesticViolence\"",
     "ShowSummaryChangeOption": "Y"
@@ -438,7 +438,7 @@
     "CaseFieldID": "MIAMDomesticViolenceSelectAll",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": "miam-3",
+    "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
   },
@@ -449,7 +449,7 @@
     "CaseFieldID": "MIAMDomesticViolenceChecklist",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-3",
+    "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
   },
@@ -460,7 +460,7 @@
     "CaseFieldID": "MIAMUrgencyReasonLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-4",
+    "PageID": 4,
     "PageDisplayOrder": 4,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"urgency\"",
     "ShowSummaryChangeOption": "Y"
@@ -472,7 +472,7 @@
     "CaseFieldID": "MIAMUrgencyReasonSelectAll",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": "miam-4",
+    "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
   },
@@ -483,7 +483,7 @@
     "CaseFieldID": "MIAMUrgencyReasonChecklist",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-4",
+    "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
   },
@@ -494,7 +494,7 @@
     "CaseFieldID": "MIAMPreviousAttendanceLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-5",
+    "PageID": 5,
     "PageDisplayOrder": 5,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"previousMIAMattendance\"",
     "ShowSummaryChangeOption": "Y"
@@ -506,7 +506,7 @@
     "CaseFieldID": "MIAMPreviousAttendanceChecklist",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-5",
+    "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
   },
@@ -517,7 +517,7 @@
     "CaseFieldID": "MIAMOtherGroundsLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-6",
+    "PageID": 6,
     "PageDisplayOrder": 6,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"No\" AND MIAMExemptionsChecklist  CONTAINS \"other\"",
     "ShowSummaryChangeOption": "Y"
@@ -529,7 +529,7 @@
     "CaseFieldID": "MIAMOtherGroundsChecklist",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-6",
+    "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
   },
@@ -540,7 +540,7 @@
     "CaseFieldID": "MIAMCertificationPageLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "PageShowCondition": "ApplicantAttendedMIAM=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
@@ -552,7 +552,7 @@
     "CaseFieldID": "MediatorRegistrationNumber",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
@@ -563,7 +563,7 @@
     "CaseFieldID": "FamilyMediatorServiceName",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
@@ -574,7 +574,7 @@
     "CaseFieldID": "SoleTraderName",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
@@ -585,7 +585,7 @@
     "CaseFieldID": "MIAMCertificationPageMessage",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
@@ -596,7 +596,7 @@
     "CaseFieldID": "MIAMCertificationDocumentUpload",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-7",
+    "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
@@ -607,7 +607,7 @@
     "CaseFieldID": "MIAMCertificationPageLabel1",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "PageShowCondition": "ClaimingExemptionMIAM=\"Yes\" AND ApplicantAttendedMIAM=\"No\" AND FamilyMediatorMIAM=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
@@ -619,7 +619,7 @@
     "CaseFieldID": "MediatorRegistrationNumber1",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
@@ -630,7 +630,7 @@
     "CaseFieldID": "FamilyMediatorServiceName1",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
@@ -641,7 +641,7 @@
     "CaseFieldID": "SoleTraderName1",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
@@ -652,7 +652,7 @@
     "CaseFieldID": "MIAMCertificationPageMessage1",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
@@ -663,7 +663,7 @@
     "CaseFieldID": "MIAMCertificationDocumentUpload1",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
-    "PageID": "miam-8",
+    "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
