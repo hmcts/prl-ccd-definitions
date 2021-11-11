@@ -26,7 +26,8 @@ module.exports = {
     appWithoutNoticeNotPossibleReason: 'textarea[id="ApplicationWithoutNoticeNotPossibleReasons"]',
     appWithoutNoticeRespondentWllFrustrate: 'input[id="IsHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
     appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]',
-    consentOrderYes: '#ConsentOrder_Yes'
+    consentOrderYes: '#ConsentOrder_Yes',
+    typeOfChildArrangementsOrder: '#TypeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder',
   },
 
   async actionTypeOfApplicationEvent() {
@@ -41,6 +42,7 @@ module.exports = {
     await I.click(this.fields.childArrangementsOrder);
     await I.click(this.fields.prohibitedStepsOrder);
     await I.click(this.fields.specificIssueOrder);
+    await I.click(this.fields.typeOfChildArrangementsOrder);
     await I.waitForEnabled(this.fields.natureOfOrderTextArea);
     await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
