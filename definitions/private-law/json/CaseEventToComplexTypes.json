@@ -293,15 +293,16 @@
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "Respondents",
-    "ListElementCode": "PlaceOfBirth",
+    "CaseFieldID": "Applicants",
+    "DisplayContext": "MANDATORY",
+    "ListElementCode": "otherGender",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY"
+    "FieldShowCondition": "Applicants.Gender=\"other\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -309,7 +310,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address",
+    "ListElementCode": "PlaceOfBirth",
     "EventElementLabel": "",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
@@ -320,7 +321,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.AddressLine1",
+    "ListElementCode": "Address",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
     "DisplayContext": "MANDATORY"
@@ -331,10 +332,10 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.AddressLine2",
+    "ListElementCode": "Address.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "9",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -342,7 +343,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.AddressLine3",
+    "ListElementCode": "Address.AddressLine2",
     "EventElementLabel": "",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
@@ -353,7 +354,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.PostTown",
+    "ListElementCode": "Address.AddressLine3",
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL"
@@ -364,7 +365,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.County",
+    "ListElementCode": "Address.PostTown",
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
@@ -375,7 +376,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.PostCode",
+    "ListElementCode": "Address.County",
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
@@ -386,7 +387,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Address.Country",
+    "ListElementCode": "Address.PostCode",
     "EventElementLabel": "",
     "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL"
@@ -397,10 +398,10 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "IsAtAddressLessThan5Years",
+    "ListElementCode": "Address.Country",
     "EventElementLabel": "",
     "FieldDisplayOrder": "15",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -408,7 +409,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Email",
+    "ListElementCode": "IsAtAddressLessThan5Years",
     "EventElementLabel": "",
     "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY"
@@ -419,7 +420,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "Landline",
+    "ListElementCode": "Email",
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY"
@@ -430,9 +431,20 @@
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "Respondents",
-    "ListElementCode": "PhoneNumber",
+    "ListElementCode": "Landline",
     "EventElementLabel": "",
     "FieldDisplayOrder": "18",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "peopleInTheCase",
+    "CaseFieldID": "Respondents",
+    "ListElementCode": "PhoneNumber",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY"
   },
   {
