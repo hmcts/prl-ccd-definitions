@@ -937,15 +937,27 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "01/08/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "selectApplicationType",
-    "CaseFieldID": "ParaConsentOrderNotification",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "OrdersApplyingFor CONTAINS \"consentOrder\"",
+    "CaseFieldID": "TypeOfChildArrangementsOrder",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "OrdersApplyingFor CONTAINS \"childArrangementsOrder\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "selectApplicationType",
+    "CaseFieldID": "NatureOfOrderLabel",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "OrdersApplyingFor!=\"\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3
   },
   {
     "LiveFrom": "01/08/2021",
@@ -956,7 +968,7 @@
     "FieldShowCondition": "OrdersApplyingFor!=\"\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes"
   },
   {
