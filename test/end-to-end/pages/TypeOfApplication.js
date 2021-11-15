@@ -27,7 +27,7 @@ module.exports = {
     appWithoutNoticeRespondentWllFrustrate: 'input[id="IsHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
     appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]',
     consentOrderYes: '#ConsentOrder_Yes',
-    typeOfChildArrangementsOrder: '#TypeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder',
+    typeOfChildArrangementsOrder: '#TypeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder'
   },
 
   async actionTypeOfApplicationEvent() {
