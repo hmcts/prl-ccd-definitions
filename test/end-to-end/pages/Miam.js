@@ -2,15 +2,13 @@ const I = actor();
 
 module.exports = {
 
-  fields: {
-    submit: 'button[type="submit"]'
-  },
+  fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
     await I.triggerEvent('MIAM');
   },
 
-   async fillHasAttendedMIAMPage() {
+  async fillHasAttendedMIAMPage() {
     await I.waitForElement('//input[@id="ApplicantAttendedMIAM_No"]');
     await I.checkOption('//input[@id="ApplicantAttendedMIAM_No"]');
     await I.waitForElement('//input[@id="ClaimingExemptionMIAM_Yes"]');

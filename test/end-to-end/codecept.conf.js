@@ -11,9 +11,7 @@ exports.config = {
       ignoreHTTPSErrors: true,
       chrome: {
         ignoreHTTPSErrors: true,
-        args: [
-          '--no-sandbox'
-        ]
+        args: ['--no-sandbox']
       }
     },
     GeneralHelper: { require: './helpers/generalHelper.js' }
