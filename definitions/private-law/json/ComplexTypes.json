@@ -424,176 +424,77 @@
   },
   ===============,
   {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
+    "LiveFrom": "10/11/2021",
+    "ID": "PartyDetils",
     "ListElementCode": "SolicitorDetails",
     "FieldType": "Label",
-    "ElementLabel": "Solicitor",
+    "ElementLabel": "Solicitor's Details",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "LastName",
+    "ListElementCode": "RepresentativeFirstName",
     "FieldType": "Text",
-    "ElementLabel": "Last name",
+    "ElementLabel": "Representative's first name",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/1/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "PreviousName",
+    "ListElementCode": "RepresentativeLastName",
     "FieldType": "Text",
-    "ElementLabel": "Previous name (if any)",
+    "ElementLabel": "Representative's last name",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "DateOfBirth",
-    "FieldType": "Date",
-    "ElementLabel": "Date of birth",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "IsDateOfBirthUnknown",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "DontKnow",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "Gender",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "Gender",
-    "ElementLabel": "Gender",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "otherGender",
-    "FieldType": "Text",
-    "ElementLabel": "Applicant gender",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "PlaceOfBirth",
-    "FieldType": "Text",
-    "ElementLabel": "Place of birth (town)",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "Address",
-    "FieldType": "AddressUK",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "IsAddressUnknown",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "DontKnow",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "IsAddressConfidential",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Do you need to keep the address confidential?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "IsAtAddressLessThan5Years",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Has applicant lived at this address for less than 5 years?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "AddressLivedLessThan5YearsDetails",
-    "FieldType": "TextArea",
-    "ElementLabel": "Provide details of all previous addresses for the last 5 years below(if known, including the dates and starting with most recent)",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "CanYouProvideEmailAddress",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Can you provide email address?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
     "ListElementCode": "Email",
-    "FieldType": "Email",
+    "FieldType": "Text",
     "ElementLabel": "Email address",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "IsEmailAddressConfidential",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Do you need to keep the email address confidential?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "Landline",
+    "ListElementCode": "SolicitorReference",
     "FieldType": "Text",
-    "RegularExpression": "^[0-9 +().-]{9,}$",
-    "ElementLabel": "Home telephone number",
+    "FieldTypeParameter": "Solicitor reference",
+    "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "PhoneNumber",
+    "ListElementCode": "SearchOrganisation",
     "FieldType": "Text",
-    "RegularExpression": "^[0-9 +().-]{9,}$",
-    "ElementLabel": "Contact Number",
+    "FieldTypeParameter": "Search for an organisation",
+    "HintText": "You can only search for organisations already registered with \nMyHMCTS. For example, you can search by organisation name\n or address. ",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "IsPhoneNumberConfidential",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Do you need to keep the contact number confidential?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "ID": "PartyDetails",
-    "ListElementCode": "AddNewApplicantLabel",
+    "ListElementCode": "OrgNameAddress",
     "FieldType": "Label",
-    "ElementLabel": "Add new applicant",
+    "ElementLabel": "Organisation name and address",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/11/2021",
     "ID": "PartyDetails",
-    "ListElementCode": "RelationshipToChildren",
-    "FieldType": "TextArea",
-    "ElementLabel": "Please state their relationship to the child(ren) listed",
+    "ListElementCode": "DXNumber",
+    "FieldType": "Text",
+    "ElementLabel": "DX Number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "PartyDetail",
+    "ListElementCode": "Address",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
     "SecurityClassification": "Public"
   }
 ]
