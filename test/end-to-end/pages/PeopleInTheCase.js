@@ -95,27 +95,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async fillHasAttendedMIAMPage() {
-    await I.waitForElement('//input[@id="ApplicantAttendedMIAM_No"]');
-    await I.checkOption('//input[@id="ApplicantAttendedMIAM_No"]');
-    await I.waitForElement('//input[@id="ClaimingExemptionMIAM_Yes"]');
-    await I.checkOption('//input[@id="ClaimingExemptionMIAM_Yes"]');
-    await I.waitForElement('//input[@id="FamilyMediatorMIAM_Yes"]');
-    await I.checkOption('//input[@id="FamilyMediatorMIAM_Yes"]');
-    await I.click(this.fields.submit);
-  },
-
-  async fillMIAMCertificationPage() {
-    const uploadTime = 5;
-    await I.waitForElement('//input[@id="MediatorRegistrationNumber1"]');
-    await I.fillField('//input[@id="MediatorRegistrationNumber1"]', 'URN12345');
-    await I.fillField('//input[@id="FamilyMediatorServiceName1"]', 'Test service name');
-    await I.fillField('//input[@id="SoleTraderName1"]', 'Test sole trader');
-    await I.attachFile('//input[@id="MIAMCertificationDocumentUpload1"]', '../resource/dummy.pdf');
-    await I.wait(uploadTime);
-    await I.click(this.fields.submit);
-  },
-
   async fillRespondentsPage() {
     const retryCount = 3;
     I.wait('2');
@@ -174,8 +153,6 @@ module.exports = {
     await this.fillChildrenAdditionalQuestionsPage();
     await this.fillOtherCourtCasesPage();
     await this.fillApplicantsPage();
-    await this.fillHasAttendedMIAMPage();
-    await this.fillMIAMCertificationPage();
     await this.fillRespondentsPage();
     await this.fillOtherPeople();
     await this.fillOtherChildren();
