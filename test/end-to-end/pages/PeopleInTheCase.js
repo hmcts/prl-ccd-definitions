@@ -18,22 +18,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async fillChildrenPage() {
-    const retryCount = 3;
-    await I.waitForElement('#Children');
-    await I.click('Add new');
-    await I.fillField('//input[@id="Children_0_FirstName"]', 'Test Firstname');
-    await I.fillField('//input[@id="Children_0_LastName"]', 'Test Lastname');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '11');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '11');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-year"]', '2005');
-    await I.retry(retryCount).checkOption('//input[@id="Children_0_Gender-male"]');
-    await I.retry(retryCount).checkOption('//input[@id="Children_0_OrderAppliedFor-childArrangementsOrder"]');
-    await I.fillField('//input[@id="Children_0_RelationshipToApplicant"]', 'Mother');
-    await I.fillField('//input[@id="Children_0_RelationshipToRespondent"]', 'Father');
-    await I.click(this.fields.submit);
-  },
-
   async fillChildrenAdditionalQuestionsPage() {
     I.wait('2');
     await I.waitForElement('//input[@id="IsChildrenKnownToAuthority-yes"]');
@@ -72,26 +56,6 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ChildArrangementsOrder_Yes"]');
     await I.attachFile('//input[@id="ExistingProceedings_0_ProceedingOrder"]', '../resource/dummy.pdf');
     await I.wait(uploadTime);
-    await I.click(this.fields.submit);
-  },
-
-  async fillApplicantsPage() {
-    const retryCount = 3;
-    I.wait('2');
-    await I.click('Add new');
-    await I.fillField('//input[@id="Applicants_0_FirstName"]', 'Applicant Firstname');
-    I.wait('2');
-    await I.fillField('//input[@id="Applicants_0_LastName"]', 'Applicant Lastname');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '10');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '10');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-year"]', '1990');
-    await I.retry(retryCount).checkOption('//input[@id="Applicants_0_Gender-male"]');
-    await I.fillField('//input[@id="Applicants_0_PlaceOfBirth"]', 'London');
-    await I.selectPostCodeLookupAddress(this.fields.applicantAddress, 'B11LS');
-    await I.retry(retryCount).checkOption('//input[@id="Applicants_0_IsAtAddressLessThan5Years_Yes"]');
-    await I.fillField('//input[@id="Applicants_0_Email"]', 'applicant@email.com');
-    await I.fillField('//input[@id="Applicants_0_Landline"]', '02112344567');
-    await I.fillField('//input[@id="Applicants_0_PhoneNumber"]', '07112344567');
     await I.click(this.fields.submit);
   },
 
@@ -149,10 +113,8 @@ module.exports = {
   async runEventHappyPath() {
     await this.triggerEvent();
     await this.fillWhereChildrenLivePage();
-    await this.fillChildrenPage();
     await this.fillChildrenAdditionalQuestionsPage();
     await this.fillOtherCourtCasesPage();
-    await this.fillApplicantsPage();
     await this.fillRespondentsPage();
     await this.fillOtherPeople();
     await this.fillOtherChildren();
