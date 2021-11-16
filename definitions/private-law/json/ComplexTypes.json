@@ -90,6 +90,7 @@
     "ListElementCode": "DateOfBirth",
     "FieldType": "Date",
     "ElementLabel": "Date of birth",
+    "HintText": "For example, 12 11 2007",
     "SecurityClassification": "Public"
   },
   {
@@ -112,13 +113,109 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "ID": "Child",
+    "ListElementCode": "otherGender",
+    "FieldType": "Text",
+    "ElementLabel": "Child's gender",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "OrderAppliedFor",
-    "FieldType": "FixedRadioList",
+    "FieldType": "MultiSelectList",
     "FieldTypeParameter": "OrderAppliedFor",
     "ElementLabel": "Order applied for",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "ApplicantsRelationshipToChild",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "RelationshipsEnum",
+    "ElementLabel": "What is the applicant's relationship to child?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "OtherApplicantsRelationshipToChild",
+    "FieldType": "TextArea",
+    "ElementLabel": "Describe the applicant relationship to the child",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "RespondentsRelationshipToChild",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "RelationshipsEnum",
+    "ElementLabel": "What is the respondent's relationship to child?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "OtherRespondentsRelationshipToChild",
+    "FieldType": "TextArea",
+    "ElementLabel": "Describe the respondent relationship to the child",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "ListElementCode": "ChildLiveWith",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "LiveWithEnum",
+    "ElementLabel": "Who does the child live with?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Child",
+    "ListElementCode": "OtherPersonWhoLivesWithChild",
+    "FieldType": "TextArea",
+    "ElementLabel": "Give the names of any adults living with the children and details of their relationship to (or involvement with) the child.",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "IsChildCurrentAddressKnown",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is current address known?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "Address",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Enter UK Postcode",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "IsChildAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the address confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Child",
+    "ListElementCode": "AddNewChildLabel",
+    "FieldType": "Label",
+    "ElementLabel": "Add new child",
     "SecurityClassification": "Public"
   },
   {
@@ -279,6 +376,7 @@
     "ListElementCode": "DateOfBirth",
     "FieldType": "Date",
     "ElementLabel": "Date of birth",
+    "HintText": "For example, 12 11 2007",
     "SecurityClassification": "Public"
   },
   {
@@ -333,6 +431,14 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "IsAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the address confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "PartyDetails",
     "ListElementCode": "IsAtAddressLessThan5Years",
@@ -341,11 +447,35 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "AddressLivedLessThan5YearsDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Provide details of all previous addresses for the last 5 years below(if known, including the dates and starting with most recent)",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "CanYouProvideEmailAddress",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Can you provide email address?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
     "ID": "PartyDetails",
     "ListElementCode": "Email",
     "FieldType": "Email",
     "ElementLabel": "Email address",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "IsEmailAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the email address confidential?",
     "SecurityClassification": "Public"
   },
   {
@@ -363,7 +493,23 @@
     "ListElementCode": "PhoneNumber",
     "FieldType": "Text",
     "RegularExpression": "^[0-9 +().-]{9,}$",
-    "ElementLabel": "Mobile telephone number",
+    "ElementLabel": "Contact Number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "IsPhoneNumberConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the contact number confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "PartyDetails",
+    "ListElementCode": "AddNewApplicantLabel",
+    "FieldType": "Label",
+    "ElementLabel": "Add new applicant",
     "SecurityClassification": "Public"
   },
   {
