@@ -6,6 +6,7 @@ const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
 const Miam = require('./pages/Miam.js');
+const CaseName = require('./pages/CaseName');
 const generalHelper = require('./helpers/generalHelper');
 
 module.exports = () => {
@@ -36,6 +37,9 @@ module.exports = () => {
     },
     runMIAMEventHappyPath() {
       return Miam.runMIAMEventHappyPath();
+    },
+    caseNameChange() {
+      return CaseName.changeCaseName();
     }
   });
 };

@@ -72,6 +72,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ChildArrangementsOrder_Yes"]');
     await I.attachFile('//input[@id="ExistingProceedings_0_ProceedingOrder"]', '../resource/dummy.pdf');
     await I.wait(uploadTime);
+    I.wait('2');
     await I.click(this.fields.submit);
   },
 
