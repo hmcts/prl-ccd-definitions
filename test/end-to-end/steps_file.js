@@ -47,7 +47,7 @@ module.exports = () => {
       return ApplicantDetails.runApplicantDetailsEventHappyPath();
      },
     caseNameChange() {
-      return CaseName.changeCaseName();
+      return CaseName.runEventCaseName();
     }
   });
 };
