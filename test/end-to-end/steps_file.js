@@ -6,6 +6,8 @@ const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
 const Miam = require('./pages/Miam.js');
+const ChildDetails = require('./pages/ChildDetails');
+const ApplicantDetails = require('./pages/ApplicantDetails');
 const generalHelper = require('./helpers/generalHelper');
 
 module.exports = () => {
@@ -36,6 +38,12 @@ module.exports = () => {
     },
     runMIAMEventHappyPath() {
       return Miam.runMIAMEventHappyPath();
+    },
+    childDetails() {
+      return ChildDetails.runChildDetailsEventHappyPath();
+    },
+    applicantDetails() {
+      return ApplicantDetails.runApplicantDetailsEventHappyPath();
     }
   });
 };
