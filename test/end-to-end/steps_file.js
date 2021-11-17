@@ -10,6 +10,7 @@ const ChildDetails = require('./pages/ChildDetails');
 const ApplicantDetails = require('./pages/ApplicantDetails');
 const CaseName = require('./pages/CaseName');
 const generalHelper = require('./helpers/generalHelper');
+const HearingUrgency = require('./pages/HearingUrgency');
 
 module.exports = () => {
   return actor({
@@ -48,6 +49,9 @@ module.exports = () => {
     },
     caseNameChange() {
       return CaseName.runEventCaseName();
+    },
+    hearingUrgency() {
+      return HearingUrgency.hearingUrgency();
     }
   });
 };
