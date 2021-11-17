@@ -28,7 +28,7 @@ module.exports = {
     appWithoutNoticeRespondentWllFrustrate: 'input[id="IsHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
     appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]',
     consentOrderYes: '#ConsentOrder_Yes',
-    typeOfChildArrangementsOrder: '#TypeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder',
+    typeOfChildArrangementsOrder: '#TypeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder'
   },
 
   async actionTypeOfApplicationEvent() {
@@ -94,9 +94,8 @@ module.exports = {
   async checkYourAnswersPage() {
     await I.waitForText('Check your answers');
     await I.waitForText(this.fields.textareaText);
-    await I.seeDocuments('Draft Consent Order','dummy.pdf')
+    await I.seeDocuments('Draft Consent Order', 'dummy.pdf');
     await I.click(this.fields.submit);
-
   },
 
   async typeOfApplicationEvent() {
