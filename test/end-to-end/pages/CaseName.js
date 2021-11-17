@@ -5,19 +5,20 @@ module.exports = {
   fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
-    I.wait('3');
     await I.triggerEvent('Case name');
   },
 
   async changeCaseName() {
-    await I.fillField('//textarea[@id="ApplicantCaseName"]', 'Updated Case Name');
+    await I.waitForText('Case Name');
+    await I.fillField('//input[@id="ApplicantCaseName"]', 'Updated Case Name');
     await I.click('Continue');
   },
 
   async runEventCaseName() {
     await this.triggerEvent();
     await this.changeCaseName();
-    await I.submitEvent();
+    I.wait('2');
+    await I.click('Submit');
     await I.amOnHistoryPageWithSuccessNotification();
   }
 };

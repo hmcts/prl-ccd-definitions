@@ -12,7 +12,8 @@ module.exports = {
     specificIssueOrder: 'input[id="OrdersApplyingFor-specificIssueOrder"]',
     textareaText: 'Testing text area',
     natureOfOrderTextArea: 'textarea[id="NatureOfOrder"]',
-    noPermissionRequiredRadioButton: 'input[id="ApplicationPermissionRequired-noNotRequired"]',
+    permissionRequiredRadioButton: 'input[id="ApplicationPermissionRequired-yes"]',
+    appPermissionRequiredReason: 'textarea[id="ApplicationPermissionRequiredReason"]',
     appDetailsTextArea: 'textarea[id="ApplicationDetails"]',
     appUrgentInput: 'input[id="IsApplicationUrgent_Yes"]',
     appUrgencyOrdersSoughtTextArea: 'textarea[id="ApplicationUrgencyOrders"]',
@@ -58,12 +59,13 @@ module.exports = {
 
   async permissionsPage() {
     await I.waitForText('Have you applied to the court for permission to make this application?');
-    await I.click(this.fields.noPermissionRequiredRadioButton);
+    await I.click(this.fields.permissionRequiredRadioButton);
+    await I.fillField(this.fields.appPermissionRequiredReason, this.fields.textareaText);
     await I.click(this.fields.submit);
   },
 
   async briefDetailsPage() {
-    await I.waitForText('Please give brief details:');
+    await I.waitForText('Provide brief details of:');
     await I.fillField(this.fields.appDetailsTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
   },
