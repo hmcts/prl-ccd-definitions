@@ -324,6 +324,110 @@
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
+    "ID": "ParaApplicationUrgent",
+    "Label": "### Is this an urgent or without notice application?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "IsApplicationUrgent",
+    "Label": "Is this application urgent?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "IsApplicationConsideredWithoutNotice",
+    "Label": "Is this application to be considered without notice?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "IsHearingWithoutNoticeRequiredNotPossible",
+    "Label": "Do you require a without notice hearing because it is not possible to give notice?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "IsHearingWithoutNoticeRequiredRespondentWillFrustrate",
+    "Label": "Do you require a without notice hearing because notice to a respondent will frustrate the order that is being applied for?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationUrgencyOrders",
+    "Label": "Set out the order(s) / directions sought",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationReasonsForUrgency",
+    "Label": "Set out the reasons for urgency",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ParaReasonsForUrgencyTimetable",
+    "Label": "### Proposed timetable",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationConsideredInDaysAndHours",
+    "Label": "The application should be considered within",
+    "FieldType": "DaysAndHours",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationNoticeEfforts",
+    "Label": "If less than 48 hours, what efforts have you made to put each respondent on notice of the application?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationWithoutNoticeReasons",
+    "Label": "Set out the reasons for the application to be considered without notice. This information is a requirement, a without notice hearing will not be directed without reason",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationWithoutNoticeNotPossibleReasons",
+    "Label": "Set out the reasons below",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "ApplicationWithoutNoticeRespondentWillFrustrateReasons",
+    "Label": "Set out the reasons below",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
     "ID": "DomesticAbuse",
     "Label": "Any form of domestic abuse?",
     "FieldType": "YesOrNo",
@@ -1176,70 +1280,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "IsCaseUrgent",
-    "Label": "Is this case urgent?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "CaseUrgencyTimeAndReason",
-    "Label": "Set out how soon the case needs to be heard in days and hours, and give the reason for the urgency.",
-    "FieldType": "TextArea",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "EffortsMadeWithRespondents",
-    "Label": "What efforts have you made to notify each respondent of the application?",
-    "FieldType": "TextArea",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "DoYouNeedAWithoutNoticeHearing",
-    "Label": "Do you need a without notice hearing?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "ReasonsForApplicationWithoutNotice",
-    "Label": "Set out the reasons for the application to be considered without notice. This\ninformation must be provided - if reasons are not given, the case will not be\nheard without notice.",
-    "FieldType": "TextArea",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "DoYouRequireAHearingWithReducedNotice",
-    "Label": "Do you require a hearing with reduced notice?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "SetOutReasonsBelow",
-    "Label": "Set out the reasons below",
-    "FieldType": "TextArea",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "AreRespondentsAwareOfProceedings",
-    "Label": "Are respondents aware of proceedings?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "ApplicantCaseName",
@@ -1279,6 +1319,37 @@
     "ID": "welshLanguageRequirementApplicationNeedEnglish",
     "Label": "Does this application need to be translated into English?",
     "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },{
+  "LiveFrom": "17/11/2021",
+  "CaseTypeID": "C100",
+  "ID": "litigationCapacityFactors",
+  "Label": "Give details of any factors affecting litigation capacity",
+  "FieldType": "Text",
+  "SecurityClassification": "Public"
+},
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "litigationCapacityReferrals",
+    "Label": "Provide details of any referral to or assessment by the Adult Learning Disability team, and/or any adult health service, where known, together with the outcome",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "litigationCapacityOtherFactors",
+    "Label": "Are you aware of any other factors which may affect the ability of the person concerned to take part in the proceedings?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "litigationCapacityOtherFactorsDetails",
+    "Label": "Give Details",
+    "FieldType": "Text",
     "SecurityClassification": "Public"
   }
 ]
