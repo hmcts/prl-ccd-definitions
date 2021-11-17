@@ -43,6 +43,7 @@ module.exports = {
     await I.click(this.fields.childArrangementsOrder);
     await I.click(this.fields.prohibitedStepsOrder);
     await I.click(this.fields.specificIssueOrder);
+    await I.wait('5');
     await I.click(this.fields.typeOfChildArrangementsOrder);
     await I.waitForEnabled(this.fields.natureOfOrderTextArea);
     await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
@@ -70,27 +71,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async urgentAndNoticePage() {
-    await I.waitForText('Is this an urgent or without notice application?');
-    await I.click(this.fields.appUrgentInput);
-    await I.waitForEnabled(this.fields.appUrgencyOrdersSoughtTextArea);
-    await I.fillField(this.fields.appUrgencyOrdersSoughtTextArea, this.fields.textareaText);
-    await I.fillField(this.fields.appReasonsForUrgencyTextArea, this.fields.textareaText);
-    await I.fillField(this.fields.appConsideredDay, '5');
-    await I.fillField(this.fields.appConsideredHour, '5');
-    await I.fillField(this.fields.appNoticeEffortsTextArea, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNotice);
-    await I.waitForEnabled(this.fields.appWithoutNoticeReasons);
-    await I.fillField(this.fields.appWithoutNoticeReasons, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNoticeNotPossible);
-    await I.waitForEnabled(this.fields.appWithoutNoticeNotPossibleReason);
-    await I.fillField(this.fields.appWithoutNoticeNotPossibleReason, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNoticeRespondentWllFrustrate);
-    await I.waitForEnabled(this.fields.appWithoutNoticeRespondentWllFrustrateTextArea);
-    await I.fillField(this.fields.appWithoutNoticeRespondentWllFrustrateTextArea, this.fields.textareaText);
-    await I.click(this.fields.submit);
-  },
-
   async checkYourAnswersPage() {
     await I.waitForText('Check your answers');
     await I.waitForText(this.fields.textareaText);
@@ -104,7 +84,6 @@ module.exports = {
     await this.draftConsentOrder();
     await this.permissionsPage();
     await this.briefDetailsPage();
-    await this.urgentAndNoticePage();
     await this.checkYourAnswersPage();
   }
 
