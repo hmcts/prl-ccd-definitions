@@ -8,6 +8,7 @@ const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/sa
 const Miam = require('./pages/Miam.js');
 const ChildDetails = require('./pages/ChildDetails');
 const ApplicantDetails = require('./pages/ApplicantDetails');
+const CaseName = require('./pages/CaseName');
 const generalHelper = require('./helpers/generalHelper');
 
 module.exports = () => {
@@ -44,6 +45,9 @@ module.exports = () => {
     },
     applicantDetails() {
       return ApplicantDetails.runApplicantDetailsEventHappyPath();
+     },
+    caseNameChange() {
+      return CaseName.runEventCaseName();
     }
   });
 };

@@ -28,9 +28,8 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPage() {
-    await I.waitForElement('#ApplicantName');
-    await I.fillField('//input[@id="ApplicantName"]', 'Test Parent');
-    await I.fillField('//input[@id="ChildName"]', 'Test Child');
+    await I.waitForElement('#ApplicantCaseName');
+    await I.fillField('//input[@id="ApplicantCaseName"]', 'Test Child');
     await I.click('Continue');
   },
 
