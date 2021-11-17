@@ -6,5 +6,5 @@ module.exports = {
     password: defaultPassword
   },
 
-  baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
-}
+  baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases'
+};
