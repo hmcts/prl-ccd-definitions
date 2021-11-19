@@ -12,7 +12,7 @@ module.exports = {
     appWithoutNoticeReasons: 'textarea[id="ReasonsForApplicationWithoutNotice"]',
     hearingWithReducedNotice: 'input[id="DoYouRequireAHearingWithReducedNotice_Yes"]',
     hearingWithReducedNoticeReason: 'textarea[id="SetOutReasonsBelow"]',
-    respondentsAwareOfProceedings: 'input[id="AreRespondentsAwareOfProceedings_Yes"]',
+    respondentsAwareOfProceedings: 'input[id="AreRespondentsAwareOfProceedings_Yes"]'
   },
 
   async  hearingUrgency() {
