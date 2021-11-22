@@ -12,7 +12,8 @@ exports.config = {
       chrome: {
         ignoreHTTPSErrors: true,
         args: ['--no-sandbox']
-      }
+      },
+      windowSize: '1280x960'
     },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
