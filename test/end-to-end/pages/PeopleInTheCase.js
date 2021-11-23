@@ -80,24 +80,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async fillOtherPeople() {
-    const retryCount = 3;
-    await I.waitForElement('#OthersToNotify');
-    await I.click('Add new');
-    I.wait('1');
-    await I.fillField('//input[@id="OthersToNotify_0_FirstName"]', 'Other Firstname');
-    I.wait('2');
-    await I.fillField('//input[@id="OthersToNotify_0_LastName"]', 'Other Lastname');
-    await I.retry(retryCount).checkOption('//input[@id="OthersToNotify_0_IsDateOfBirthUnknown-dontKnow"]');
-    await I.retry(retryCount).checkOption('//input[@id="OthersToNotify_0_Gender-male"]');
-    await I.retry(retryCount).checkOption('//input[@id="OthersToNotify_0_IsAddressUnknown-dontKnow"]');
-    await I.fillField('//input[@id="OthersToNotify_0_Email"]', 'otherstonotify@email.com');
-    await I.fillField('//input[@id="OthersToNotify_0_Landline"]', '02112233589');
-    await I.fillField('//input[@id="OthersToNotify_0_PhoneNumber"]', '07122884667');
-    await I.fillField('//textarea[@id="OthersToNotify_0_RelationshipToChildren"]', 'Uncle');
-    await I.click(this.fields.submit);
-  },
-
   async fillOtherChildren() {
     const retryCount = 3;
     await I.waitForElement('#OtherChildren');
@@ -117,7 +99,6 @@ module.exports = {
     await this.fillChildrenAdditionalQuestionsPage();
     await this.fillOtherCourtCasesPage();
     await this.fillRespondentsPage();
-    await this.fillOtherPeople();
     await this.fillOtherChildren();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
