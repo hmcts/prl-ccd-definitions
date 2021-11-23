@@ -648,6 +648,7 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD
     "ID": "PartyDetails",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "othersToNotify",
@@ -857,6 +858,8 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
+=======
+>>>>>>> master
     "ID": "Child",
     "CaseEventID": "peopleInTheCase",
     "CaseFieldID": "children",
@@ -1535,5 +1538,241 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
     "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "FirstName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "LastName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "PreviousName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "IsDateOfBirthKnown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "DateOfBirth",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "OthersToNotify.IsDateOfBirthKnown=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Gender",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "DisplayContext": "OPTIONAL",
+    "ListElementCode": "otherGender",
+    "EventElementLabel": "Gender",
+    "FieldDisplayOrder": "7",
+    "FieldShowCondition": "OthersToNotify.Gender=\"other\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "IsCurrentAddressKnown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "8",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "9",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "OthersToNotify.IsCurrentAddressKnown=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.AddressLine1",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "10",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.AddressLine2",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "11",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.AddressLine3",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.PostTown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.County",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "14",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.PostCode",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "15",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Address.Country",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "16",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "CanYouProvideEmailAddress",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "17",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "Email",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "18",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "OthersToNotify.CanYouProvideEmailAddress=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "CanYouProvidePhoneNumber",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "19",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "PhoneNumber",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "20",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "OthersToNotify.CanYouProvidePhoneNumber=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "OtherPeopleInTheCase",
+    "CaseFieldID": "OthersToNotify",
+    "ListElementCode": "AddNewApplicantLabel",
+    "EventElementLabel": "Add new person",
+    "FieldDisplayOrder": "21",
+    "DisplayContext": "OPTIONAL"
   }
 ]
