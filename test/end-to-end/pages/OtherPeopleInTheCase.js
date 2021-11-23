@@ -12,7 +12,6 @@ module.exports = {
     const retryCount = 3;
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
-    await I.waitForElement('#OthersToNotify');
     await I.click('Add new');
     I.wait('1');
     await I.fillField('//input[@id="OthersToNotify_0_FirstName"]', 'Other Firstname');
