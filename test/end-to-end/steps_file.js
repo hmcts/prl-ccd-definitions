@@ -12,6 +12,7 @@ const CaseName = require('./pages/CaseName');
 const generalHelper = require('./helpers/generalHelper');
 const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
+const InternationalElement = require('./pages/InternationalElement');
 
 module.exports = () => {
   return actor({
@@ -56,6 +57,10 @@ module.exports = () => {
     },
     litigationCapacity() {
       return LitigationCapacity.litigationCapacity();
-    }
+    },
+    internationalElement() {
+      return InternationalElement.internationalElement();
+    },
+    InternationalElement
   });
 };
