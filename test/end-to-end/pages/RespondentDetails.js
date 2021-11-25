@@ -12,6 +12,7 @@ module.exports = {
         I.waitForEnabled('#search-org-text');
         I.wait('2');
         I.fillField('#search-org-text', this.fields.organisation);
+        I.wait('2');
         I.click(locate('a').withText('Select').inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
     },
     async respondentDetails() {
@@ -46,9 +47,7 @@ module.exports = {
         await I.fillField('//input[@id="Respondents_0_SolicitorEmail"]', 'test@example.com');
         await this.searchAndSelectGivenRegisteredOrganisation(),
         I.wait('2');
-        await I.click('Continue');
-        await I.waitForText('Submit', '30');
-        await I.click('Submit');
+        await I.click(this.fields.submit);
     }
 
 };
