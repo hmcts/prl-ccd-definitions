@@ -14,7 +14,7 @@ const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
 const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
-
+const RespondentDetails = require('./pages/RespondentDetails');
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
@@ -64,6 +64,9 @@ module.exports = () => {
     },
     internationalElement() {
       return InternationalElement.internationalElement();
+    },
+    respondentDetails() {
+      return RespondentDetails.respondentDetails();
     }
   });
 };

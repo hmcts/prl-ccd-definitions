@@ -5,7 +5,6 @@ module.exports = {
   fields: {
     applicantAddress: 'Applicants_0_Address_Address',
     childrenAddress: 'ChildrenAddress_ChildrenAddress',
-    respondentAddress: 'Respondents_0_Address_Address',
     submit: 'button[type="submit"]'
   },
 
@@ -60,25 +59,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async fillRespondentsPage() {
-    const retryCount = 3;
-    I.wait('2');
-    await I.click('Add new');
-    await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
-    I.wait('2');
-    await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '10');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '11');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-year"]', '1995');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_Gender-male"]');
-    await I.fillField('//input[@id="Respondents_0_PlaceOfBirth"]', 'Birmingham');
-    await I.selectPostCodeLookupAddress(this.fields.respondentAddress, 'B11LS');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_IsAtAddressLessThan5Years_Yes"]');
-    await I.fillField('//input[@id="Respondents_0_Email"]', 'respondent@email.com');
-    await I.fillField('//input[@id="Respondents_0_Landline"]', '02112236569');
-    await I.fillField('//input[@id="Respondents_0_PhoneNumber"]', '07122334667');
-    await I.click(this.fields.submit);
-  },
 
   async fillOtherChildren() {
     const retryCount = 3;
@@ -98,7 +78,6 @@ module.exports = {
     await this.fillWhereChildrenLivePage();
     await this.fillChildrenAdditionalQuestionsPage();
     await this.fillOtherCourtCasesPage();
-    await this.fillRespondentsPage();
     await this.fillOtherChildren();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
