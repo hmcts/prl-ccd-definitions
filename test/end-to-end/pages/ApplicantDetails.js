@@ -12,11 +12,11 @@ module.exports = {
     await I.triggerEvent('Applicant details');
   },
   async searchAndSelectGivenRegisteredOrganisation() {
-    I.waitForEnabled('#search-org-text');
-    I.wait('2');
-    I.fillField('#search-org-text', this.fields.organisation);
-    I.wait('2');
-    I.click(locate('a').withText('Select').inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
+    await I.waitForEnabled('#search-org-text');
+    await I.wait('2');
+    await I.fillField('#search-org-text', this.fields.organisation);
+    await I.wait('2');
+    await I.click(locate('a').withText('Select').inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
   },
   async fillApplicantsPage() {
     const retryCount = 3;
