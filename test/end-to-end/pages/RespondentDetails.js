@@ -45,7 +45,7 @@ module.exports = {
         await I.fillField('//input[@id="Respondents_0_RepresentativeFirstName"]', 'Ted');
         await I.fillField('//input[@id="Respondents_0_RepresentativeLastName"]', 'Robinson');
         await I.fillField('//input[@id="Respondents_0_SolicitorEmail"]', 'test@example.com');
-        await this.searchAndSelectGivenRegisteredOrganisation(),
+        await this.searchAndSelectGivenRegisteredOrganisation();
         I.wait('2');
         await I.click(this.fields.submit);
     }
