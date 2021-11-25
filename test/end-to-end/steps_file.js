@@ -12,6 +12,8 @@ const CaseName = require('./pages/CaseName');
 const generalHelper = require('./helpers/generalHelper');
 const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
+const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
+const InternationalElement = require('./pages/InternationalElement');
 
 module.exports = () => {
   return actor({
@@ -56,6 +58,12 @@ module.exports = () => {
     },
     litigationCapacity() {
       return LitigationCapacity.litigationCapacity();
+    },
+    otherPeopleInTheCase() {
+      return OtherPeopleInTheCase.otherPeopleInTheCase();
+    },
+    internationalElement() {
+      return InternationalElement.internationalElement();
     }
   });
 };
