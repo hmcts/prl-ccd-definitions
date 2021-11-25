@@ -33,7 +33,8 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="Applicants_0_IsEmailAddressConfidential_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="Applicants_0_PhoneNumber"]', '4334646456456');
     await I.retry(retryCount).checkOption('//input[@id="Applicants_0_IsPhoneNumberConfidential_Yes"]');
-    await I.click(this.fields.submit);
+    await I.wait('1');
+    await I.click('Continue');
   },
 
   async runApplicantDetailsEventHappyPath() {
