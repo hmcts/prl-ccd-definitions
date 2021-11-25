@@ -62,13 +62,14 @@ module.exports = {
     await I.waitForText('Have you applied to the court for permission to make this application?');
     await I.click(this.fields.permissionRequiredRadioButton);
     await I.fillField(this.fields.appPermissionRequiredReason, this.fields.textareaText);
-    await I.click(this.fields.submit);
+    await I.click('Continue');
   },
 
   async briefDetailsPage() {
+    await I.wait('2');
     await I.waitForText('Provide brief details of:');
     await I.fillField(this.fields.appDetailsTextArea, this.fields.textareaText);
-    await I.click(this.fields.submit);
+    await I.click('Continue');
   },
 
   async checkYourAnswersPage() {
