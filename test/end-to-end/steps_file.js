@@ -69,6 +69,7 @@ module.exports = () => {
     },
     respondentDetails() {
       return RespondentDetails.respondentDetails();
+    },
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
     }
