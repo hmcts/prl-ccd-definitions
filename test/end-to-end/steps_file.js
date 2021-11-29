@@ -15,6 +15,8 @@ const LitigationCapacity = require('./pages/LitigationCapacity');
 const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
 const RespondentDetails = require('./pages/RespondentDetails');
+const WelshLanguage = require('./pages/WelshLanguage');
+
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
@@ -67,6 +69,8 @@ module.exports = () => {
     },
     respondentDetails() {
       return RespondentDetails.respondentDetails();
+    welshLanguageRequirement() {
+      return WelshLanguage.welshLanguageRequirement();
     }
   });
 };
