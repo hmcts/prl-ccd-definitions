@@ -4,13 +4,20 @@ module.exports = {
 
   fields: {
     submit: 'button[type="submit"]',
-    applicantAddress: 'Applicants_0_Address_Address'
+    applicantAddress: 'Applicants_0_Address_Address',
+    organisation:  'AAT'
   },
 
   async triggerEvent() {
     await I.triggerEvent('Applicant details');
   },
-
+  async searchAndSelectGivenRegisteredOrganisation() {
+    await I.waitForEnabled('#search-org-text');
+    await I.wait('2');
+    await I.fillField('#search-org-text', this.fields.organisation);
+    await I.wait('2');
+    await I.click(locate('a').withText('Select').inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
+  },
   async fillApplicantsPage() {
     const retryCount = 3;
     I.wait('2');
@@ -34,6 +41,11 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="Applicants_0_PhoneNumber"]', '4334646456456');
     await I.retry(retryCount).checkOption('//input[@id="Applicants_0_IsPhoneNumberConfidential_Yes"]');
     await I.wait('1');
+    await I.fillField('//input[@id="Applicants_0_RepresentativeFirstName"]', 'James');
+    await I.fillField('//input[@id="Applicants_0_RepresentativeLastName"]', 'Bond');
+    await I.fillField('//input[@id="Applicants_0_SolicitorEmail"]', 'test@example.com');
+    await this.searchAndSelectGivenRegisteredOrganisation();
+    I.wait('2');
     await I.click('Continue');
   },
 
