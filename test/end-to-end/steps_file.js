@@ -14,6 +14,8 @@ const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
 const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
+const RespondentDetails = require('./pages/RespondentDetails');
+const WelshLanguage = require('./pages/WelshLanguage');
 
 module.exports = () => {
   return actor({
@@ -64,6 +66,12 @@ module.exports = () => {
     },
     internationalElement() {
       return InternationalElement.internationalElement();
+    },
+    respondentDetails() {
+      return RespondentDetails.respondentDetails();
+    },
+    welshLanguageRequirement() {
+      return WelshLanguage.welshLanguageRequirement();
     }
   });
 };
