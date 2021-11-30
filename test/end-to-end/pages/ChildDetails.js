@@ -2,7 +2,10 @@ const I = actor();
 
 module.exports = {
 
-  fields: { submit: 'button[type="submit"]' },
+  fields: {
+    submit: 'button[type="submit"]' ,
+    textareaText: 'Testing text area'
+  },
 
   async triggerEvent() {
     await I.triggerEvent('Child details');
@@ -16,7 +19,7 @@ module.exports = {
     await I.fillField('//input[@id="Children_0_LastName"]', 'Test Lastname');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '11');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '11');
-     await I.wait('1');
+    await I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="DateOfBirth-year"]', '2005');
     await I.retry(retryCount).checkOption('//input[@id="Children_0_Gender-male"]');
     await I.retry(retryCount).checkOption('//input[@id="Children_0_OrderAppliedFor-childArrangementsOrder"]');
@@ -25,6 +28,12 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="Children_0_ChildLiveWith-Applicant"]');
     await I.retry(retryCount).checkOption('//input[@id="Children_0_ChildUnsupervisedTime_Yes"]');
     await I.retry(retryCount).checkOption('//input[@id="Children_0_ChildContactFromOtherRecipients_Yes"]');
+    await I.click(this.fields.submit);
+    await I.retry(retryCount).checkOption('//input[@id="ChildrenKnownToLocalAuthority-yes"]');
+    await I.wait('1');
+    await I.retry(retryCount).fillField('//textarea[@id="ChildrenKnownToLocalAuthorityTextArea"]', this.fields.textareaText);
+    await I.retry(retryCount).checkOption('//input[@id="ChildrenSubjectOfChildProtectionPlan-yes"]');
+    await I.wait('1');
     await I.click(this.fields.submit);
   },
 
