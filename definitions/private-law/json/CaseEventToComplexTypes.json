@@ -880,6 +880,107 @@
     "DisplayContext": "MANDATORY"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "CanYouProvideEmailAddress",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "19",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "Email",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "20",
+    "FieldShowCondition": "Applicants.CanYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "IsEmailAddressConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "21",
+    "FieldShowCondition": "Applicants.CanYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "PhoneNumber",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "22",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "IsPhoneNumberConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "Applicants",
+    "ListElementCode": "AddNewApplicantLabel",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "Children",
+    "ListElementCode": "FirstName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "Children",
+    "ListElementCode": "LastName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "Children",
+    "ListElementCode": "DateOfBirth",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
@@ -888,7 +989,7 @@
     "ListElementCode": "Gender",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -896,7 +997,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "Children",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "ListElementCode": "otherGender",
     "EventElementLabel": "",
     "FieldDisplayOrder": "5",
@@ -911,7 +1012,7 @@
     "ListElementCode": "OrderAppliedFor",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -922,7 +1023,7 @@
     "ListElementCode": "ApplicantsRelationshipToChild",
     "EventElementLabel": "",
     "FieldDisplayOrder": "7",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -933,7 +1034,7 @@
     "ListElementCode": "OtherApplicantsRelationshipToChild",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "Children.ApplicantsRelationshipToChild=\"Other\""
   },
   {
@@ -945,7 +1046,7 @@
     "ListElementCode": "RespondentsRelationshipToChild",
     "EventElementLabel": "",
     "FieldDisplayOrder": "9",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -956,7 +1057,7 @@
     "ListElementCode": "OtherRespondentsRelationshipToChild",
     "EventElementLabel": "",
     "FieldDisplayOrder": "10",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "Children.RespondentsRelationshipToChild=\"Other\""
   },
   {
@@ -968,7 +1069,7 @@
     "ListElementCode": "ChildLiveWith",
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -980,7 +1081,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "FieldShowCondition": "Children.ChildLiveWith CONTAINS \"AnotherPerson\"",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -991,7 +1092,7 @@
     "ListElementCode": "IsChildCurrentAddressKnown",
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "Children.ChildLiveWith CONTAINS \"AnotherPerson\""
   },
   {
@@ -1003,7 +1104,7 @@
     "ListElementCode": "Address",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "14",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "Children.IsChildCurrentAddressKnown=\"Yes\" AND Children.ChildLiveWith CONTAINS \"AnotherPerson\""
   },
   {
@@ -1015,7 +1116,7 @@
     "ListElementCode": "Address.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "15",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1093,7 +1194,29 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
     "FieldShowCondition": "Children.IsChildCurrentAddressKnown=\"Yes\" AND Children.ChildLiveWith CONTAINS \"AnotherPerson\"",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "Children",
+    "ListElementCode": "ChildUnsupervisedTime",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "Children",
+    "ListElementCode": "ChildContactFromOtherRecipients",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1103,7 +1226,7 @@
     "CaseFieldID": "Children",
     "ListElementCode": "AddNewChildLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "MANDATORY"
   },
   {
