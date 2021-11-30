@@ -10,7 +10,7 @@ module.exports = {
 
   async changeCaseName() {
     await I.waitForText('Case Name');
-    await I.fillField('//input[@id="ApplicantCaseName"]', 'Updated Case Name');
+    await I.fillField('//input[@id="applicantCaseName"]', 'Updated Case Name');
     await I.click('Continue');
   },
 
