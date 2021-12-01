@@ -2,7 +2,10 @@ const I = actor();
 
 module.exports = {
 
-  fields: { submit: 'button[type="submit"]' },
+    fields: {
+      submit: 'button[type="submit"]' ,
+      textareaText: 'Testing text area'
+    },
 
   async triggerEvent() {
     await I.triggerEvent('Child details');
