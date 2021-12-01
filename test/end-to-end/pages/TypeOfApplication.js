@@ -66,6 +66,7 @@ module.exports = {
   },
 
   async briefDetailsPage() {
+    await I.wait('2');
     await I.waitForText('Provide brief details of:');
     await I.fillField(this.fields.appDetailsTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);

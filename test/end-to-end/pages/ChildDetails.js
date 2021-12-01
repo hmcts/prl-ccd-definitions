@@ -23,6 +23,12 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
     await I.click(this.fields.submit);
+    await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
+    await I.wait('1');
+    await I.retry(retryCount).fillField('//textarea[@id="childrenKnownToLocalAuthorityTextArea"]', this.fields.textareaText);
+    await I.retry(retryCount).checkOption('//input[@id="childrenSubjectOfChildProtectionPlan-yes"]');
+    await I.wait('1');
+    await I.click(this.fields.submit);
   },
 
   async runChildDetailsEventHappyPath() {

@@ -60,26 +60,6 @@ module.exports = {
     await I.click(this.fields.submit);
   },
 
-  async fillRespondentsPage() {
-    const retryCount = 3;
-    I.wait('2');
-    await I.click('Add new');
-    await I.fillField('//input[@id="respondents_0_firstName"]', 'Respondent Firstname');
-    I.wait('2');
-    await I.fillField('//input[@id="respondents_0_lastName"]', 'Respondent Lastname');
-    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
-    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '11');
-    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '1995');
-    await I.retry(retryCount).checkOption('//input[@id="respondents_0_gender-male"]');
-    await I.fillField('//input[@id="respondents_0_placeOfBirth"]', 'Birmingham');
-    await I.selectPostCodeLookupAddress(this.fields.respondentAddress, 'B11LS');
-    await I.retry(retryCount).checkOption('//input[@id="respondents_0_isAtAddressLessThan5Years_Yes"]');
-    await I.fillField('//input[@id="respondents_0_email"]', 'respondent@email.com');
-    await I.fillField('//input[@id="respondents_0_landline"]', '02112236569');
-    await I.fillField('//input[@id="respondents_0_phoneNumber"]', '07122334667');
-    await I.click(this.fields.submit);
-  },
-
   async fillOtherChildren() {
     const retryCount = 3;
     await I.waitForElement('#OtherChildren');
@@ -98,7 +78,6 @@ module.exports = {
     await this.fillWhereChildrenLivePage();
     await this.fillChildrenAdditionalQuestionsPage();
     await this.fillOtherCourtCasesPage();
-    await this.fillRespondentsPage();
     await this.fillOtherChildren();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
