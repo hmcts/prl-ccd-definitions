@@ -5,7 +5,7 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     applicantAddress: 'Applicants_0_Address_Address',
-    organisation:  'AAT'
+    organisation: 'AAT'
   },
 
   async triggerEvent() {
@@ -16,7 +16,8 @@ module.exports = {
     await I.wait('2');
     await I.fillField('#search-org-text', this.fields.organisation);
     await I.wait('2');
-    await I.click(locate('a').withText('Select').inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
+    await I.click(locate('a').withText('Select')
+      .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
   },
   async fillApplicantsPage() {
     const retryCount = 3;

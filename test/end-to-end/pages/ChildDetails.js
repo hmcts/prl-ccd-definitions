@@ -3,7 +3,7 @@ const I = actor();
 module.exports = {
 
   fields: {
-    submit: 'button[type="submit"]' ,
+    submit: 'button[type="submit"]',
     textareaText: 'Testing text area'
   },
 
