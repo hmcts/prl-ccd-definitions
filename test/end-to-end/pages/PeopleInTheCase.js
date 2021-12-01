@@ -31,7 +31,7 @@ module.exports = {
     await I.fillField('//textarea[@id="parentalResponsibilities"]', 'Responsibility: Parent 1');
     await I.checkOption('//input[@id="whoChildrenLiveWith-other"]');
     await I.waitForElement('//textarea[@id="childAddressAndAdultsLivingWith"]');
-    await I.fillField('//textarea[@id="=childAddressAndAdultsLivingWith"]', '3 address of child, England');
+    await I.fillField('//textarea[@id="childAddressAndAdultsLivingWith"]', '3 address of child, England');
     await I.click(this.fields.submit);
   },
 
