@@ -53,7 +53,7 @@ module.exports = {
   async draftConsentOrder() {
     await I.waitForText('Do you have a draft consent order?');
     await I.click(this.fields.consentOrderYes);
-    await I.attachDocument('DraftConsentOrderFile');
+    await I.attachDocument('draftConsentOrderFile');
     await I.wait('5');
     await I.click('Continue');
   },
