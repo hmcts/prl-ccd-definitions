@@ -4,7 +4,7 @@ const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
-const allegationsOfHarmPage = require('./pages/allegationsOfHarm.js');
+const safeguardAndRiskOfHarmPage = require('./pages/safeguardingAndRiskOfHarm/safeguardingAndRiskOfHarm.js');
 const Miam = require('./pages/Miam.js');
 const ChildDetails = require('./pages/ChildDetails');
 const ApplicantDetails = require('./pages/ApplicantDetails');
@@ -16,7 +16,6 @@ const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
 const RespondentDetails = require('./pages/RespondentDetails');
 const WelshLanguage = require('./pages/WelshLanguage');
-const otherProceedings = require('./pages/otherProceedings');
 
 module.exports = () => {
   return actor({
@@ -38,8 +37,8 @@ module.exports = () => {
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
     },
-    allegationsOfHarmEvent() {
-      return allegationsOfHarmPage.allegationsOfHarmEvent();
+    safeguardingAndRiskOfHarm() {
+      return safeguardAndRiskOfHarmPage.safeguardAndRiskOfHarmEvent();
     },
     typeOfApplicationEvent() {
       return TypeOfApplicationEvent.typeOfApplicationEvent();
@@ -73,9 +72,6 @@ module.exports = () => {
     },
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
-    },
-    otherProceedingsEvent() {
-      return otherProceedings.otherProceedingsEvent();
     }
   });
 };
