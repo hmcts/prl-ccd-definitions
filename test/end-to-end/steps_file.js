@@ -16,6 +16,7 @@ const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
 const RespondentDetails = require('./pages/RespondentDetails');
 const WelshLanguage = require('./pages/WelshLanguage');
+const otherProceedings = require('./pages/otherProceedings');
 
 module.exports = () => {
   return actor({
@@ -72,6 +73,9 @@ module.exports = () => {
     },
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
+    },
+    otherProceedingsEvent() {
+      return otherProceedings.otherProceedingsEvent();
     }
   });
 };
