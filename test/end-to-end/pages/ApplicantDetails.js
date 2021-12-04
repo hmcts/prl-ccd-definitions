@@ -5,12 +5,20 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     applicantAddress: 'applicants_0_address_address'
+    organisation: 'AAT'
   },
 
   async triggerEvent() {
     await I.triggerEvent('Applicant details');
   },
-
+  async searchAndSelectGivenRegisteredOrganisation() {
+    await I.waitForEnabled('#search-org-text');
+    await I.wait('2');
+    await I.fillField('#search-org-text', this.fields.organisation);
+    await I.wait('2');
+    await I.click(locate('a').withText('Select')
+      .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
+  },
   async fillApplicantsPage() {
     const retryCount = 3;
     I.wait('2');
