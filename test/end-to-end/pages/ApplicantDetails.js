@@ -4,7 +4,7 @@ module.exports = {
 
   fields: {
     submit: 'button[type="submit"]',
-    applicantAddress: 'applicants_0_address_address'
+    applicantAddress: 'applicants_0_address_address',
     organisation: 'AAT'
   },
 
