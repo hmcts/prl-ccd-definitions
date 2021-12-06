@@ -844,8 +844,7 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "existingProceedings",
-    "Label": "Proceeding",
-    "Min": "1",
+    "Label": "Other proceedings",
     "FieldType": "Collection",
     "FieldTypeParameter": "ProceedingDetails",
     "SecurityClassification": "Public"
@@ -1296,7 +1295,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "habitualResidentInOtherState",
     "Label": "Do you have any reason to believe that any child, parent or potentially significant\n adult in the child's life may be habitually resident in another state?",
@@ -1304,7 +1303,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "jurisdictionIssue",
     "Label": "Do you have any reason to believe that there may be an issue as to jurisdiction in\n this case?",
@@ -1312,7 +1311,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "requestToForeignAuthority",
     "Label": "Has a request been made or should a request be made to a Central Authority or other competent authority in a foreign state or a consular authority in England and Wales?",
@@ -1369,7 +1368,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
     "ID": "welshLanguageRequirementApplicationNeedEnglish",
     "Label": "Does this application need to be translated into English?",
@@ -1406,6 +1405,549 @@
     "CaseTypeID": "C100",
     "ID": "childrenSubjectOfChildProtectionPlan",
     "Label": "Are any of the children the subject of a child protection plan?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoDontKnow",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmYesNo",
+    "Label": "Are there allegations of harm?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmLabel",
+    "Label": "Are there allegations that the child(ren) have experienced, or are at risk of experiencing, harm from any of the following by any person who has had contact with the child?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmDomesticAbuseYesNo",
+    "Label": "Any form of domestic abuse",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmChildAbductionYesNo",
+    "Label": "Child abduction",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmChildAbuseYesNo",
+    "Label": "Child abuse",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmSubstanceAbuseYesNo",
+    "Label": "Drugs, alcohol or substance abuse",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmOtherConcernsYesNo",
+    "Label": "Other safety or welfare concerns",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "physicalAbuseVictim",
+    "Label": "Physical abuse",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "applicantOrChildren",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "emotionalAbuseVictim",
+    "Label": "Emotional abuse",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "applicantOrChildren",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "psychologicalAbuseVictim",
+    "Label": "Psychological abuse",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "applicantOrChildren",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "sexualAbuseVictim",
+    "Label": "Sexual abuse",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "applicantOrChildren",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "financialAbuseVictim",
+    "Label": "Financial abuse",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "applicantOrChildren",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "childAbductionReasons",
+    "Label": "Why do you believe the child(ren) may be abducted?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "previousAbductionThreats",
+    "Label": "Have there been any previous threats, attempts to abduct or actual abduction of the child(ren)?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "previousAbductionThreatsDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "childrenLocationNow",
+    "Label": "Where is/are the child(ren) now?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionPassportOfficeNotified",
+    "Label": "Has the passport office been notified?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionPreviousPoliceInvolvement",
+    "Label": "Were the police or any other organisation/agency involved in any previous incident of attempted abduction or abduction?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionPreviousPoliceInvolvementDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionOtherSafetyConcerns",
+    "Label": "Do you have any other concerns about your child(ren)'s safety and wellbeing? ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionOtherSafetyConcernsDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "abductionCourtStepsRequested",
+    "Label": "What steps or orders do you want the court to take or make to protect the safety of the child(ren) and/or yourself?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "behaviours",
+    "Label": "Behaviour",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Behaviours",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationOfHarmOrdersLabel",
+    "Label": "### Orders",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationOfHarmOrdersLabelDetail",
+    "Label": "Has the applicant had or does the applicant currently have any of the following orders?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestation",
+    "Label": "Non-molestation order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupation",
+    "Label": "Occupation order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtection",
+    "Label": "Forced marriage protection order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestraining",
+    "Label": "Restraining order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctive",
+    "Label": "Other injunctive order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlace",
+    "Label": "Undertaking in place order",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestationDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestationEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestationCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestationCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersNonMolestationDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupationDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupationEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupationCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupationCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOccupationDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtectionDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtectionEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtectionCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtectionCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersForcedMarriageProtectionDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestrainingDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestrainingEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestrainingCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestrainingCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersRestrainingDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctiveDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctiveEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctiveCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctiveCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersOtherInjunctiveDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlaceDateIssued",
+    "Label": "Date issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlaceEndDate",
+    "Label": "End date",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlaceCurrent",
+    "Label": "Is the order current?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlaceCourtName",
+    "Label": "Name of court",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "ordersUndertakingInPlaceDocument",
+    "Label": "Upload relevant order(s)",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmOtherConcernsLabel",
+    "Label": "### Other concerns",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmOtherConcerns",
+    "Label": "Are there other concerns about the child(ren)'s safety and wellbeing?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmOtherConcernsDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "allegationsOfHarmOtherConcernsCourtActions",
+    "Label": "What steps or orders does the applicant want the court to take or make to protect the safety of the child(ren) and/or yourself?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "otherProceedingsLabel",
+    "Label": "Other court cases which concern the children listed",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "previousOrOngoingProceedingsForChildren",
+    "Label": "Select type of child arrangements order",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
     "SecurityClassification": "Public"
