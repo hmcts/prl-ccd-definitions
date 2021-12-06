@@ -62,7 +62,7 @@ module.exports = {
 
   async fillOtherChildren() {
     const retryCount = 3;
-    await I.waitForElement('#OtherChildren');
+    await I.waitForElement('#otherChildren');
     await I.click('Add new');
     await I.fillField('//input[@id="otherChildren_0_firstName"]', 'Test Firstname');
     await I.fillField('//input[@id="otherChildren_0_lastName"]', 'Test Lastname');
