@@ -66,4 +66,3 @@ module.exports = {
     await I.amOnHistoryPageWithSuccessNotification();
   }
 };
-
