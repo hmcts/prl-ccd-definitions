@@ -35,26 +35,9 @@ module.exports = {
   },
 
   async fillOtherCourtCasesPage() {
-    const retryCount = 3;
-    const uploadTime = 5;
     await I.waitForElement('//input[@id="IsExistingProceedings_Yes"]');
     await I.checkOption('//input[@id="IsExistingProceedings_Yes"]');
     await I.fillField('//input[@id="ChildrenInProceeding"]', 'Child 1, Child 2');
-    I.wait('1');
-    await I.click('Add new');
-    await I.fillField('//input[@id="ExistingProceedings_0_CourtName"]', 'Court name');
-    await I.fillField('//input[@id="ExistingProceedings_0_CaseNumber"]', 'TEST001');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_EmergencyProtectionOrder_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_SupervisionOrder_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_CaseOrder_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ChildAbduction_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_FamilyLawAct_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ContactOrderWithinProceedings_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ContactOrderWithinAdoptionOrder_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ChildMaintenanceOrder_Yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="ExistingProceedings_0_ChildArrangementsOrder_Yes"]');
-    await I.attachFile('//input[@id="ExistingProceedings_0_ProceedingOrder"]', '../resource/dummy.pdf');
-    await I.wait(uploadTime);
     I.wait('2');
     await I.click(this.fields.submit);
   },
