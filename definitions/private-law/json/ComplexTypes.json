@@ -252,118 +252,6 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "CourtName",
-    "FieldType": "Text",
-    "ElementLabel": "Name of the court where proceedings heard",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "CaseNumber",
-    "FieldType": "Text",
-    "ElementLabel": "Case number",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "Date",
-    "FieldType": "Date",
-    "ElementLabel": "Date/year (if known)",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "CafcassOfficer",
-    "FieldType": "Text",
-    "ElementLabel": "Name and office (if known) of Cafcass/CAFCASS CYMRU officer",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "EmergencyProtectionOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Emergency Protection Order",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "SupervisionOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Supervision Order",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "CaseOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Case Order",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ChildAbduction",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Child abduction",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "FamilyLawAct",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Family Law Act 1996 Part 4",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ContactOrderWithinProceedings",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "A contact or residence order made within proceedings for a divorce or dissolution of a civil partnership",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ContactOrderWithinAdoptionOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "A contact or residence order made in connection with an Adoption Order",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ChildMaintenanceOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "An order relating to child maintenance",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ChildArrangementsOrder",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "A child arrangements order",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ProceedingDetails",
-    "ListElementCode": "ProceedingOrder",
-    "FieldType": "Document",
-    "ElementLabel": "Upload a document",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
     "ID": "PartyDetails",
     "ListElementCode": "FirstName",
     "FieldType": "Text",
@@ -744,6 +632,104 @@
     "ListElementCode": "behavioursApplicantHelpAction",
     "FieldType": "TextArea",
     "ElementLabel": "Did they do anything? If yes, what did they do?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "PreviousOrOngoingProceedings",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ProceedingsEnum",
+    "ElementLabel": "Are these previous or ongoing proceedings?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "CaseNumber",
+    "FieldType": "Text",
+    "ElementLabel": "Case number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "DateStarted",
+    "FieldType": "Date",
+    "ElementLabel": "Date started",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "DateEnded",
+    "FieldType": "Date",
+    "ElementLabel": "Date ended",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "TypeOfOrder",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "TypeOfOrderEnum",
+    "ElementLabel": "Which orders were made?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "OtherTypeOfOrder",
+    "FieldType": "Text",
+    "ElementLabel": "Type of orders",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "NameOfJudge",
+    "FieldType": "Text",
+    "ElementLabel": "Name of judge ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "NameOfCourt",
+    "FieldType": "Text",
+    "ElementLabel": "Name of the court where proceedings heard",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "NameOfChildrenInvolved",
+    "FieldType": "TextArea",
+    "ElementLabel": "Names of children involved",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "NameOfGuardian",
+    "FieldType": "Text",
+    "ElementLabel": "Name of Guardian",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "NameAndOffice",
+    "FieldType": "Text",
+    "ElementLabel": "Name and office (if known) of Cafcass/CAFCASS CYMRU officer",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "ProceedingDetails",
+    "ListElementCode": "UploadRelevantOrder",
+    "FieldType": "Document",
+    "ElementLabel": "Upload relevant order(s)",
     "SecurityClassification": "Public"
   }
 ]

@@ -258,18 +258,6 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "ExistingProceedings",
-    "DisplayContext": "COMPLEX",
-    "PageID": "peopleInTheCase-5",
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 4,
-    "FieldShowCondition": "IsExistingProceedings=\"Yes\"",
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "miam",
@@ -2612,5 +2600,38 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "otherProceedings",
+    "CaseFieldID": "OtherProceedingsLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "otherProceedings",
+    "CaseFieldID": "PreviousOrOngoingProceedingsForChildren",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "otherProceedings",
+    "CaseFieldID": "ExistingProceedings",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "PreviousOrOngoingProceedingsForChildren=\"yes\""
   }
 ]
