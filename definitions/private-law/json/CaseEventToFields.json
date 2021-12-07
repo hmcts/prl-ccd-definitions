@@ -1868,8 +1868,7 @@
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "PageDisplayOrder": 1
   },
   {
     "LiveFrom": "02/12/2021",
@@ -1879,8 +1878,7 @@
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "PageDisplayOrder": 1
   },
   {
     "LiveFrom": "02/12/2021",
@@ -1888,7 +1886,7 @@
     "CaseEventID": "submitAndPay",
     "CaseFieldID": "payAgreeStatement",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
@@ -1902,19 +1900,61 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "FieldShowCondition": "payAgreeStatement=\"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "submitAndPay",
-    "CaseFieldID": "submitAndPayNextPage",
-    "PageFieldDisplayOrder": 5,
+    "CaseFieldID": "submitAndPayNextPageDesc",
+    "PageFieldDisplayOrder": 6,
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "FieldShowCondition": "payAgreeStatement=\"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayFee",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayFeeAmount",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplication",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationLinkLabel",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
   }
 ]
