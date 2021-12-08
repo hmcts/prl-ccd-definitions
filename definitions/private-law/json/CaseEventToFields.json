@@ -1848,5 +1848,125 @@
     "PageDisplayOrder": 1,
     "FieldShowCondition": "welshLanguageRequirement=\"Yes\" AND welshLanguageRequirementApplication=\"welsh\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDeclaration",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/service-request-update",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayAgreeStmtLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayAgreeSignStmtLabel",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "payAgreeStatement",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayNextPage",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayNextPageDesc",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayFee",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayFeeAmount",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplication",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationLinkLabel",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "paymentServiceRequestReferenceNumber",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"NEVER_SHOW\""
   }
 ]
