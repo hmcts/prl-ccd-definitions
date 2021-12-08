@@ -4,7 +4,7 @@ module.exports = {
   fields: {
     headerText: 'Other proceedings',
     previousOrOngoingProceedingsForChildren: '#previousOrOngoingProceedingsForChildren-yes',
-    existingProceedings_0_PreviousOrOngoingProceedings: '#existingProceedings_0_previousOrOngoingProceedings-Ongoing',
+    existingProceedings_0_PreviousOrOngoingProceedings: '#existingProceedings_0_previousOrOngoingProceedings-ongoing',
     existingProceedings_0_CaseNumber: '#existingProceedings_0_caseNumber',
     dateStartedDay: '#dateStarted-day',
     dateStartedMonth: '#dateStarted-month',
