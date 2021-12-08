@@ -84,7 +84,5 @@ withPipeline("nodejs", product, component) {
 
   after('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-    
-    yarnBuilder.yarn('test:fullfunctional')
   }
 }
