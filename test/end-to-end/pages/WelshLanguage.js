@@ -17,8 +17,8 @@ module.exports = {
     await I.see('Does this application need to be translated into Welsh? (Optional)');
     await I.click(this.fields.languageRequirementApplicationNeedWelsh);
     await I.click('Continue');
-    await I.waitForText('Submit', '30');
-    await I.click('Submit');
+    await I.waitForText('Save and continue', '30');
+    await I.click('Save and continue');
   }
 
 };
