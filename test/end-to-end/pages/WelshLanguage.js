@@ -4,7 +4,7 @@ module.exports = {
   fields: {
     headerText: 'Welsh language requirements',
     welshLanguageRequirement_Y: '#welshLanguageRequirement_Yes',
-    welshLanguageRequirementApplication: '#WelshLanguageRequirementApplication-ENGLISH',
+    welshLanguageRequirementApplication: '#welshLanguageRequirementApplication-english',
     languageRequirementApplicationNeedWelsh: '#languageRequirementApplicationNeedWelsh_Yes'
   },
   async  welshLanguageRequirement() {

@@ -4,9 +4,9 @@ async function uploadDocuments() {
   await I.triggerEvent('Upload documents');
   await I.waitForPage('h1', 'Upload documents');
 
-  await I.addNewDocument('ContactOrderDocumentsUploaded');
-  await I.addNewDocument('C8FormDocumentsUploaded');
-  await I.addNewDocument('OtherDocumentsUploaded');
+  await I.addNewDocument('contactOrderDocumentsUploaded');
+  await I.addNewDocument('c8FormDocumentsUploaded');
+  await I.addNewDocument('otherDocumentsUploaded');
 
   await I.wait('5');
   await I.click('Continue');
