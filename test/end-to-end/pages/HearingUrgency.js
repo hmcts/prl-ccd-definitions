@@ -4,15 +4,15 @@ module.exports = {
   fields: {
     headerText: 'Hearing urgency',
     textareaText: 'Testing text area',
-    appUrgentInput: 'input[id="IsCaseUrgent_Yes"]',
-    caseUrgencyTimeAndReason: 'textarea[id="CaseUrgencyTimeAndReason"]',
-    effortsMadeWithRespondents: 'textarea[id="EffortsMadeWithRespondents"]',
-    applicationNoticeEfforts: 'textarea[id="ApplicationNoticeEfforts"]',
-    appWithoutNotice: 'input[id="DoYouNeedAWithoutNoticeHearing_Yes"]',
-    appWithoutNoticeReasons: 'textarea[id="ReasonsForApplicationWithoutNotice"]',
-    hearingWithReducedNotice: 'input[id="DoYouRequireAHearingWithReducedNotice_Yes"]',
-    hearingWithReducedNoticeReason: 'textarea[id="SetOutReasonsBelow"]',
-    respondentsAwareOfProceedings: 'input[id="AreRespondentsAwareOfProceedings_Yes"]'
+    appUrgentInput: 'input[id="isCaseUrgent_Yes"]',
+    caseUrgencyTimeAndReason: 'textarea[id="caseUrgencyTimeAndReason"]',
+    effortsMadeWithRespondents: 'textarea[id="effortsMadeWithRespondents"]',
+    applicationNoticeEfforts: 'textarea[id="applicationNoticeEfforts"]',
+    appWithoutNotice: 'input[id="doYouNeedAWithoutNoticeHearing_Yes"]',
+    appWithoutNoticeReasons: 'textarea[id="reasonsForApplicationWithoutNotice"]',
+    hearingWithReducedNotice: 'input[id="doYouRequireAHearingWithReducedNotice_Yes"]',
+    hearingWithReducedNoticeReason: 'textarea[id="setOutReasonsBelow"]',
+    respondentsAwareOfProceedings: 'input[id="areRespondentsAwareOfProceedings_Yes"]'
   },
 
   async  hearingUrgency() {
