@@ -2,23 +2,23 @@ const I = actor();
 
 module.exports = {
   fields: {
-    isWelshNeeded: '#IsWelshNeeded_Yes',
-    isInterpreterNeeded: '#IsInterpreterNeeded_Yes',
-    isDisabilityPresent: '#IsDisabilityPresent_Yes',
-    isSpecialArrangementsRequired: '#IsSpecialArrangementsRequired_Yes',
-    isIntermediaryNeeded: '#IsIntermediaryNeeded_Yes',
-    whoNeedsWelsh: '#WelshNeeds_0_WhoNeedsWelsh',
-    welshSpoken: '#WelshNeeds_0_SpokenOrWritten-Spoken',
-    welshWritten: '#WelshNeeds_0_SpokenOrWritten-Written',
-    welshSpokenAndWritten: '#WelshNeeds_0_SpokenOrWritten-Both',
-    interpreterNeedsApplicant: '#InterpreterNeeds_0_Party-Applicant',
-    interpreterNeedsRespondent: '#InterpreterNeeds_0_Party-Respondent',
-    interpreterNeedsOther: '#InterpreterNeeds_0_Party-Other',
-    interpreterNeedsName: '#InterpreterNeeds_0_Name',
-    interpreterNeedsLanguage: '#InterpreterNeeds_0_Language',
-    adjustmentsRequired: 'textarea[id="AdjustmentsRequired"]',
-    specialArrangementsRequired: 'textarea[id="SpecialArrangementsRequired"]',
-    reasonsForIntermediary: '#ReasonsForIntermediary',
+    isWelshNeeded: '#isWelshNeeded_Yes',
+    isInterpreterNeeded: '#isInterpreterNeeded_Yes',
+    isDisabilityPresent: '#isDisabilityPresent_Yes',
+    isSpecialArrangementsRequired: '#isSpecialArrangementsRequired_Yes',
+    isIntermediaryNeeded: '#isIntermediaryNeeded_Yes',
+    whoNeedsWelsh: '#welshNeeds_0_whoNeedsWelsh',
+    welshSpoken: '#welshNeeds_0_spokenOrWritten-spoken',
+    welshWritten: '#welshNeeds_0_spokenOrWritten-written',
+    welshSpokenAndWritten: '#welshNeeds_0_spokenOrWritten-both',
+    interpreterNeedsApplicant: '#interpreterNeeds_0_party-applicant',
+    interpreterNeedsRespondent: '#interpreterNeeds_0_party-respondent',
+    interpreterNeedsOther: '#interpreterNeeds_0_party-other',
+    interpreterNeedsName: '#interpreterNeeds_0_name',
+    interpreterNeedsLanguage: '#interpreterNeeds_0_language',
+    adjustmentsRequired: 'textarea[id="adjustmentsRequired"]',
+    specialArrangementsRequired: 'textarea[id="specialArrangementsRequired"]',
+    reasonsForIntermediary: '#reasonsForIntermediary',
     submit: 'button[type="submit"]'
   },
 
@@ -31,8 +31,8 @@ module.exports = {
 
     await I.click(this.fields.isWelshNeeded);
     await I.see('Welsh needs');
-    await I.click('#WelshNeeds > div > button');
-    await I.wait('1');
+    await I.click('#welshNeeds > div > button');
+    I.wait('1');
     await I.fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
     await I.click(this.fields.welshSpoken);
     await I.click(this.fields.welshWritten);
@@ -40,7 +40,7 @@ module.exports = {
 
     await I.click(this.fields.isInterpreterNeeded);
     await I.see('Interpreter needs');
-    await I.click('#InterpreterNeeds > div > button');
+    await I.click('#interpreterNeeds > div > button');
     await I.click(this.fields.interpreterNeedsApplicant);
     await I.click(this.fields.interpreterNeedsRespondent);
     await I.click(this.fields.interpreterNeedsOther);

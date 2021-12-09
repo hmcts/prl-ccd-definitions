@@ -4,12 +4,12 @@ module.exports = {
   fields: {
     headerText: 'International element',
     textareaText: 'Testing text area',
-    habitualResidentInOtherState: 'input[id="HabitualResidentInOtherState_Yes"]',
-    habitualResidentInOtherStateGiveReason: 'textarea[id="HabitualResidentInOtherStateGiveReason"]',
-    jurisdictionIssue: 'input[id="JurisdictionIssue_Yes"]',
-    jurisdictionIssueGiveReason: 'textarea[id="JurisdictionIssueGiveReason"]',
-    requestToForeignAuthority: 'input[id="RequestToForeignAuthority_Yes"]',
-    requestToForeignAuthorityGiveReason: 'textarea[id="RequestToForeignAuthorityGiveReason"]'
+    habitualResidentInOtherState: 'input[id="habitualResidentInOtherState_Yes"]',
+    habitualResidentInOtherStateGiveReason: 'textarea[id="habitualResidentInOtherStateGiveReason"]',
+    jurisdictionIssue: 'input[id="jurisdictionIssue_Yes"]',
+    jurisdictionIssueGiveReason: 'textarea[id="jurisdictionIssueGiveReason"]',
+    requestToForeignAuthority: 'input[id="requestToForeignAuthority_Yes"]',
+    requestToForeignAuthorityGiveReason: 'textarea[id="requestToForeignAuthorityGiveReason"]'
   },
   async internationalElement() {
     await I.triggerEvent(this.fields.headerText);

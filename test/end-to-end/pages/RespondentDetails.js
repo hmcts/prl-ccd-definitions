@@ -4,7 +4,7 @@ module.exports = {
   fields: {
     headerText: 'Respondent details',
     textareaText: 'Respondent details',
-    respondentAddress: 'Respondents_0_Address_Address',
+    respondentAddress: 'respondents_0_address_address',
     submit: 'button[type="submit"]',
     organisation: 'AAT'
   },
@@ -22,30 +22,30 @@ module.exports = {
     await I.waitForPage('h1', this.fields.headerText);
     I.wait('2');
     await I.click('Add new');
-    await I.fillField('//input[@id="Respondents_0_FirstName"]', 'Respondent Firstname');
+    await I.fillField('//input[@id="respondents_0_firstName"]', 'Respondent Firstname');
     I.wait('2');
-    await I.fillField('//input[@id="Respondents_0_LastName"]', 'Respondent Lastname');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_IsDateOfBirthKnown_Yes"]');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-day"]', '10');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-month"]', '11');
+    await I.fillField('//input[@id="respondents_0_lastName"]', 'Respondent Lastname');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_isDateOfBirthKnown_Yes"]');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '11');
     I.wait('2');
-    await I.retry(retryCount).fillField('//input[@id="DateOfBirth-year"]', '1995');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_Gender-male"]');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_IsPlaceOfBirthKnown_Yes"]');
-    await I.fillField('//input[@id="Respondents_0_PlaceOfBirth"]', 'Birmingham');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_IsCurrentAddressKnown_Yes"]');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '1995');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_gender-male"]');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_isPlaceOfBirthKnown_Yes"]');
+    await I.fillField('//input[@id="respondents_0_placeOfBirth"]', 'Birmingham');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_isCurrentAddressKnown_Yes"]');
     await I.selectPostCodeLookupAddress(this.fields.respondentAddress, 'B11LS');
     I.wait('2');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_IsAtAddressLessThan5YearsWithDontKnow-yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_CanYouProvideEmailAddress_Yes"]');
-    await I.fillField('//input[@id="Respondents_0_Email"]', 'respondent@email.com');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_CanYouProvidePhoneNumber_Yes"]');
-    await I.fillField('//input[@id="Respondents_0_PhoneNumber"]', '07122334667');
-    await I.retry(retryCount).checkOption('//input[@id="Respondents_0_DoTheyHaveLegalRepresentation-yes"]');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_isAtAddressLessThan5YearsWithDontKnow-yes"]');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_canYouProvideEmailAddress_Yes"]');
+    await I.fillField('//input[@id="respondents_0_email"]', 'respondent@email.com');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_canYouProvidePhoneNumber_Yes"]');
+    await I.fillField('//input[@id="respondents_0_phoneNumber"]', '07122334667');
+    await I.retry(retryCount).checkOption('//input[@id="respondents_0_doTheyHaveLegalRepresentation-yes"]');
     I.wait('2');
-    await I.fillField('//input[@id="Respondents_0_RepresentativeFirstName"]', 'Ted');
-    await I.fillField('//input[@id="Respondents_0_RepresentativeLastName"]', 'Robinson');
-    await I.fillField('//input[@id="Respondents_0_SolicitorEmail"]', 'test@example.com');
+    await I.fillField('//input[@id="respondents_0_representativeFirstName"]', 'Ted');
+    await I.fillField('//input[@id="respondents_0_representativeLastName"]', 'Robinson');
+    await I.fillField('//input[@id="respondents_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
     await I.click(this.fields.submit);
