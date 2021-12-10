@@ -1413,8 +1413,16 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
+    "ID": "submitAndPaySolicitorName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
     "ID": "submitAndPayAgreeSignStmtLabel",
-    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true. [Solicitor Name] is authorised by the applicant to sign this statement. ",
+    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true.  ### ${submitAndPaySolicitorName}  is authorised by the applicant to sign this statement. ",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -1456,8 +1464,8 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "ID": "submitAndPayFeeAmount",
-    "Label": "£232.00",
-    "FieldType": "Label",
+    "Label": " ",
+    "FieldType": "Text",
     "SecurityClassification": "Public"
   },
   {
@@ -1483,6 +1491,13 @@
     "Label": "Service Request",
     "FieldType": "Label",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "ID": "id",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
   }
-
 ]

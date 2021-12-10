@@ -213,11 +213,12 @@
     "Name": "Submit and pay",
     "Description": "Submit and pay",
     "DisplayOrder": 122,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Continue to payment"
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/getSolicitorAndFeeDetails",
+    "EndButtonLabel": "Pay now"
   }
 ]
