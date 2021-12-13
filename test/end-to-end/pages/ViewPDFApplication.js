@@ -4,7 +4,7 @@ module.exports = {
 
     fields: {
         submit: 'button[type="submit"]',
-        },
+    },
 
     async triggerEvent() {
         await I.triggerEvent('View PDF application');
@@ -18,7 +18,7 @@ module.exports = {
     async runViewPDFApplicationEvent() {
         await this.triggerEvent();
         await this.downloadApplication();
-        await I.submitEvent();
+        await I.click('Save and continue');
         await I.amOnHistoryPageWithSuccessNotification();
     }
 };
