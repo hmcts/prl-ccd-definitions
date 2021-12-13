@@ -2643,7 +2643,7 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/create-payment-service-request"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2659,9 +2659,9 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "submitAndPay",
-    "CaseFieldID": "submitAndPaySolicitorName",
+    "CaseFieldID": "solicitorName",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "FieldShowCondition": "submitAndPayAgreeStmtLabel=\"never_show\""
@@ -2685,8 +2685,7 @@
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
     "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "PageDisplayOrder": 1
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2725,7 +2724,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "CaseEventID": "submitAndPay",
-    "CaseFieldID": "submitAndPayFeeAmount",
+    "CaseFieldID": "feeAmount",
     "PageFieldDisplayOrder": 9,
     "DisplayContext": "READONLY",
     "PageID": 1,
@@ -2752,6 +2751,17 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "paymentServiceRequestReferenceNumber",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "FieldShowCondition": "payAgreeStatement=\"agree\""
   }
 ]

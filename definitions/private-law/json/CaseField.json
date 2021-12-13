@@ -1955,7 +1955,7 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
-    "ID": "submitAndPaySolicitorName",
+    "ID": "solicitorName",
     "Label": " ",
     "FieldType": "Text",
     "SecurityClassification": "Public"
@@ -1964,7 +1964,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "ID": "submitAndPayAgreeSignStmtLabel",
-    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true.  ### ${submitAndPaySolicitorName}  is authorised by the applicant to sign this statement. ",
+    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true.  ### ${solicitorName}  is authorised by the applicant to sign this statement. ",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -1999,14 +1999,16 @@
     "CaseTypeID": "C100",
     "ID": "submitAndPayFee",
     "Label": "### Application fee to pay",
+    "HintText": "${feeAmount}",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
-    "ID": "submitAndPayFeeAmount",
+    "ID": "feeAmount",
     "Label": " ",
+    "HintText": "${feeAmount}",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   },
@@ -2048,6 +2050,14 @@
     "ID": "paymentCallbackServiceRequestUpdate",
     "Label": " ",
     "FieldType": "PaymentCallbackServiceRequestUpdate",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "paymentServiceRequestReferenceNumber",
+    "Label": " ",
+    "FieldType": "Text",
     "SecurityClassification": "Public"
   }
 ]
