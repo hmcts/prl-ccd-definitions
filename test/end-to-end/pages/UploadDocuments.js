@@ -11,8 +11,8 @@ async function uploadDocuments() {
   await I.wait('5');
   await I.click('Continue');
 
-  await I.waitForText('Submit', '30');
-  await I.click('Submit');
+  await I.waitForText('Save and continue', '30');
+  await I.click('Save and continue');
   await I.amOnHistoryPageWithSuccessNotification();
 }
 

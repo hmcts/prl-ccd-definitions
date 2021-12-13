@@ -95,7 +95,7 @@ module.exports = {
     I.wait('2');
     await I.waitForElement('h2');
     await I.see('Check your answers');
-    await I.click('Submit');
+    await I.click('Save and continue');
   },
 
   async allegationsOfHarmEvent() {
