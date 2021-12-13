@@ -18,7 +18,7 @@ module.exports = {
     await this.triggerEvent();
     await this.changeCaseName();
     I.wait('2');
-    await I.click('Submit');
+    await I.click('Save and continue');
     await I.amOnHistoryPageWithSuccessNotification();
   }
 };

@@ -4,7 +4,7 @@ module.exports = {
   fields: {
     headerText: 'Other proceedings',
     previousOrOngoingProceedingsForChildren: '#previousOrOngoingProceedingsForChildren-yes',
-    existingProceedings_0_PreviousOrOngoingProceedings: '#existingProceedings_0_previousOrOngoingProceedings-ongoing',
+    existingProceedings_0_PreviousOrOngoingProceedings: '#existingProceedings_0_previousOrOngoingProceedings-previous',
     existingProceedings_0_CaseNumber: '#existingProceedings_0_caseNumber',
     dateStartedDay: '#dateStarted-day',
     dateStartedMonth: '#dateStarted-month',
@@ -25,7 +25,8 @@ module.exports = {
     await I.click(this.fields.previousOrOngoingProceedingsForChildren);
     await I.wait('2');
     await I.click('Add new');
-    await I.wait('2');
+    await I.see('Are these previous or ongoing proceedings? (Optional)');
+    await I.wait('3');
     await I.click(this.fields.existingProceedings_0_PreviousOrOngoingProceedings);
     await I.fillField(this.fields.existingProceedings_0_CaseNumber, '123456789');
     await I.fillField(this.fields.dateStartedDay, '12');
@@ -44,8 +45,8 @@ module.exports = {
     await I.fillField(this.fields.existingProceedings_0_NameAndOffice, 'Grace');
     await I.click('Continue');
     await I.waitForText('Check your answers');
-    await I.waitForText('Submit', '30');
-    await I.click('Submit');
+    await I.waitForText('Save and continue', '30');
+    await I.click('Save and continue');
   }
 
 };
