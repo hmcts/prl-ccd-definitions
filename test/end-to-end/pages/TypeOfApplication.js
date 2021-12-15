@@ -76,7 +76,7 @@ module.exports = {
     await I.waitForText('Check your answers');
     await I.waitForText(this.fields.textareaText);
     await I.seeDocuments('Draft Consent Order', 'dummy.pdf');
-    await I.click(this.fields.submit);
+    await I.click('Save and continue');
   },
 
   async typeOfApplicationEvent() {

@@ -30,8 +30,8 @@ module.exports = {
     await I.fillField(this.fields.hearingWithReducedNoticeReason, this.fields.textareaText);
     await I.click(this.fields.respondentsAwareOfProceedings);
     await I.click('Continue');
-    await I.waitForText('Submit', '30');
-    await I.click('Submit');
+    await I.waitForText('Save and continue', '30');
+    await I.click('Save and continue');
   }
 
 };
