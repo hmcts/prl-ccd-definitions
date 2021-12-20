@@ -17,6 +17,7 @@ const RespondentDetails = require('./pages/RespondentDetails');
 const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/otherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
+const viewPDFApplication = require('./pages/ViewPDFApplication');
 
 module.exports = () => {
   return actor({
@@ -76,6 +77,9 @@ module.exports = () => {
     },
     allegationsOfHarmEvent() {
       return allegationsOfHarm.allegationsOfHarmEvent();
+    },
+    viewPDFApplicationEvent() {
+      return viewPDFApplication.runViewPDFApplicationEvent();
     }
   });
 };
