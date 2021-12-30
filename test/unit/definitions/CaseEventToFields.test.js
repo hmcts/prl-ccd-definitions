@@ -1,3 +1,4 @@
+/*
 const { expect, assert } = require('chai');
 const { find } = require('lodash');
 const { isPositiveNumber, whenPopulated } = require('../utils/utils');
@@ -86,7 +87,8 @@ function assertPageColumnNumber(row) {
   assertOrderField(row, 'PageColumnNumber');
 }
 
-/*describe('CaseEventToFields ', () => {
+*/
+/* describe('CaseEventToFields ', () => {
   let caseEventToFieldsNonProd = [];
   let caseEventNonProd = [];
   let caseFieldNonProd = [];
