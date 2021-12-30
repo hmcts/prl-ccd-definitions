@@ -86,7 +86,7 @@ function assertPageColumnNumber(row) {
   assertOrderField(row, 'PageColumnNumber');
 }
 
-describe('CaseEventToFields ', () => {
+/*describe('CaseEventToFields ', () => {
   let caseEventToFieldsNonProd = [];
   let caseEventNonProd = [];
   let caseFieldNonProd = [];
@@ -97,7 +97,7 @@ describe('CaseEventToFields ', () => {
     caseFieldNonProd = ccdData.CaseField;
   });
 
-  /*it('should contain valid event IDs', () => {
+  it('should contain valid event IDs', () => {
     assertHasOnlyValidEventIds(caseEventToFieldsNonProd, caseEventNonProd);
   });
 
@@ -121,5 +121,5 @@ describe('CaseEventToFields ', () => {
     it('RetriesTimeoutURLMidEvent is never defined', () => {
       assertRetriesTimeoutURLMidEventIsAddedForAllCallbacks(caseEventToFieldsNonProd);
     });
-  });*/
-});
+  });
+});*/
