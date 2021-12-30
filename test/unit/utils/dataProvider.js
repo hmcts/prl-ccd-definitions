@@ -6,12 +6,12 @@ const loadFile = file => {
 
 module.exports = {
   ccdData: {
-    AuthorisationCaseEvent: loadFile('AuthorisationCaseEvent'),
+  //  AuthorisationCaseEvent: loadFile('AuthorisationCaseEvent'),
     AuthorisationCaseField: loadFile('AuthorisationCaseField'),
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
     CaseEvent: loadFile('CaseEvent'),
-    CaseEventToFields: loadFile('CaseEventToFields'),
+   // CaseEventToFields: loadFile('CaseEventToFields'),
     CaseField: loadFile('CaseField'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
