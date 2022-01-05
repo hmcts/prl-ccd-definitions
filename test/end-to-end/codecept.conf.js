@@ -11,12 +11,18 @@ exports.config = {
       ignoreHTTPSErrors: true,
       chrome: {
         ignoreHTTPSErrors: true,
-        args: [
-          '--no-sandbox'
-        ]
-      }
+        args: ['--no-sandbox']
+      },
+      windowSize: '1280x960'
     },
     GeneralHelper: { require: './helpers/generalHelper.js' }
+  },
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+      retries: 2,
+      minTimeout: 2000
+    }
   },
   include: { I: './steps_file.js' },
   bootstrap: null,

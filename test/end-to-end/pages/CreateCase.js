@@ -10,7 +10,7 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('1');
+    I.wait('5');
     await I.waitForText('Create case');
     I.wait('5');
     await I.click('Accept analytics cookies');
@@ -28,9 +28,8 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPage() {
-    await I.waitForElement('#ApplicantName');
-    await I.fillField('//input[@id="ApplicantName"]', 'Test Parent');
-    await I.fillField('//input[@id="ChildName"]', 'Test Child');
+    await I.waitForElement('#applicantCaseName');
+    await I.fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.click('Continue');
   },
 

@@ -7,26 +7,28 @@ module.exports = {
     eventSelectField: 'select[id="next-step"]',
     eventName: 'Type of application',
     submit: 'button[type="submit"]',
-    childArrangementsOrder: 'input[id="OrdersApplyingFor-childArrangementsOrder"]',
-    prohibitedStepsOrder: 'input[id="OrdersApplyingFor-prohibitedStepsOrder"]',
-    specificIssueOrder: 'input[id="OrdersApplyingFor-specificIssueOrder"]',
+    childArrangementsOrder: 'input[id="ordersApplyingFor-childArrangementsOrder"]',
+    prohibitedStepsOrder: 'input[id="ordersApplyingFor-prohibitedStepsOrder"]',
+    specificIssueOrder: 'input[id="ordersApplyingFor-specificIssueOrder"]',
     textareaText: 'Testing text area',
-    natureOfOrderTextArea: 'textarea[id="NatureOfOrder"]',
-    noPermissionRequiredRadioButton: 'input[id="ApplicationPermissionRequired-noNotRequired"]',
-    appDetailsTextArea: 'textarea[id="ApplicationDetails"]',
-    appUrgentInput: 'input[id="IsApplicationUrgent_Yes"]',
-    appUrgencyOrdersSoughtTextArea: 'textarea[id="ApplicationUrgencyOrders"]',
-    appReasonsForUrgencyTextArea: 'textarea[id="ApplicationReasonsForUrgency"]',
-    appConsideredDay: 'input[id="ApplicationConsideredInDaysAndHours_days"]',
-    appConsideredHour: 'input[id="ApplicationConsideredInDaysAndHours_hours"]',
-    appNoticeEffortsTextArea: 'textarea[id="ApplicationNoticeEfforts"]',
-    appWithoutNotice: 'input[id="IsApplicationConsideredWithoutNotice_Yes"]',
-    appWithoutNoticeReasons: 'textarea[id="ApplicationWithoutNoticeReasons"]',
-    appWithoutNoticeNotPossible: 'input[id="IsHearingWithoutNoticeRequiredNotPossible_Yes"]',
-    appWithoutNoticeNotPossibleReason: 'textarea[id="ApplicationWithoutNoticeNotPossibleReasons"]',
-    appWithoutNoticeRespondentWllFrustrate: 'input[id="IsHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
-    appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="ApplicationWithoutNoticeRespondentWillFrustrateReasons"]',
-    consentOrderYes: '#ConsentOrder_Yes',
+    natureOfOrderTextArea: 'textarea[id="natureOfOrder"]',
+    permissionRequiredRadioButton: 'input[id="applicationPermissionRequired-yes"]',
+    appPermissionRequiredReason: 'textarea[id="applicationPermissionRequiredReason"]',
+    appDetailsTextArea: 'textarea[id="applicationDetails"]',
+    appUrgentInput: 'input[id="isApplicationUrgent_Yes"]',
+    appUrgencyOrdersSoughtTextArea: 'textarea[id="applicationUrgencyOrders"]',
+    appReasonsForUrgencyTextArea: 'textarea[id="applicationReasonsForUrgency"]',
+    appConsideredDay: 'input[id="applicationConsideredInDaysAndHours_days"]',
+    appConsideredHour: 'input[id="applicationConsideredInDaysAndHours_hours"]',
+    appNoticeEffortsTextArea: 'textarea[id="applicationNoticeEfforts"]',
+    appWithoutNotice: 'input[id="isApplicationConsideredWithoutNotice_Yes"]',
+    appWithoutNoticeReasons: 'textarea[id="applicationWithoutNoticeReasons"]',
+    appWithoutNoticeNotPossible: 'input[id="isHearingWithoutNoticeRequiredNotPossible_Yes"]',
+    appWithoutNoticeNotPossibleReason: 'textarea[id="applicationWithoutNoticeNotPossibleReasons"]',
+    appWithoutNoticeRespondentWllFrustrate: 'input[id="isHearingWithoutNoticeRequiredRespondentWillFrustrate_Yes"]',
+    appWithoutNoticeRespondentWllFrustrateTextArea: 'textarea[id="applicationWithoutNoticeRespondentWillFrustrateReasons"]',
+    consentOrderYes: '#consentOrder_Yes',
+    typeOfChildArrangementsOrder: '#typeOfChildArrangementsOrder-bothLiveWithAndSpendTimeWithOrder'
   },
 
   async actionTypeOfApplicationEvent() {
@@ -41,6 +43,8 @@ module.exports = {
     await I.click(this.fields.childArrangementsOrder);
     await I.click(this.fields.prohibitedStepsOrder);
     await I.click(this.fields.specificIssueOrder);
+    await I.wait('5');
+    await I.click(this.fields.typeOfChildArrangementsOrder);
     await I.waitForEnabled(this.fields.natureOfOrderTextArea);
     await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
@@ -49,50 +53,30 @@ module.exports = {
   async draftConsentOrder() {
     await I.waitForText('Do you have a draft consent order?');
     await I.click(this.fields.consentOrderYes);
-    await I.attachDocument('DraftConsentOrderFile');
+    await I.attachDocument('draftConsentOrderFile');
     await I.wait('5');
     await I.click('Continue');
   },
 
   async permissionsPage() {
     await I.waitForText('Have you applied to the court for permission to make this application?');
-    await I.click(this.fields.noPermissionRequiredRadioButton);
+    await I.click(this.fields.permissionRequiredRadioButton);
+    await I.fillField(this.fields.appPermissionRequiredReason, this.fields.textareaText);
     await I.click(this.fields.submit);
   },
 
   async briefDetailsPage() {
-    await I.waitForText('Please give brief details:');
+    await I.wait('2');
+    await I.waitForText('Provide brief details of:');
     await I.fillField(this.fields.appDetailsTextArea, this.fields.textareaText);
-    await I.click(this.fields.submit);
-  },
-
-  async urgentAndNoticePage() {
-    await I.waitForText('Is this an urgent or without notice application?');
-    await I.click(this.fields.appUrgentInput);
-    await I.waitForEnabled(this.fields.appUrgencyOrdersSoughtTextArea);
-    await I.fillField(this.fields.appUrgencyOrdersSoughtTextArea, this.fields.textareaText);
-    await I.fillField(this.fields.appReasonsForUrgencyTextArea, this.fields.textareaText);
-    await I.fillField(this.fields.appConsideredDay, '5');
-    await I.fillField(this.fields.appConsideredHour, '5');
-    await I.fillField(this.fields.appNoticeEffortsTextArea, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNotice);
-    await I.waitForEnabled(this.fields.appWithoutNoticeReasons);
-    await I.fillField(this.fields.appWithoutNoticeReasons, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNoticeNotPossible);
-    await I.waitForEnabled(this.fields.appWithoutNoticeNotPossibleReason);
-    await I.fillField(this.fields.appWithoutNoticeNotPossibleReason, this.fields.textareaText);
-    await I.click(this.fields.appWithoutNoticeRespondentWllFrustrate);
-    await I.waitForEnabled(this.fields.appWithoutNoticeRespondentWllFrustrateTextArea);
-    await I.fillField(this.fields.appWithoutNoticeRespondentWllFrustrateTextArea, this.fields.textareaText);
     await I.click(this.fields.submit);
   },
 
   async checkYourAnswersPage() {
     await I.waitForText('Check your answers');
     await I.waitForText(this.fields.textareaText);
-    await I.seeDocuments('Draft Consent Order','dummy.pdf')
-    await I.click(this.fields.submit);
-
+    await I.seeDocuments('Draft Consent Order', 'dummy.pdf');
+    await I.click('Save and continue');
   },
 
   async typeOfApplicationEvent() {
@@ -101,7 +85,6 @@ module.exports = {
     await this.draftConsentOrder();
     await this.permissionsPage();
     await this.briefDetailsPage();
-    await this.urgentAndNoticePage();
     await this.checkYourAnswersPage();
   }
 

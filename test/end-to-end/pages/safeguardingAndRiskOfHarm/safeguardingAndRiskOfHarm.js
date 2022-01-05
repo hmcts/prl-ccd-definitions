@@ -5,38 +5,38 @@ module.exports = {
   fields: {
     eventList: 'select[id="next-step"]',
     submit: 'button[type="submit"]',
-    domesticAbuse: '//*[@id="DomesticAbuse_Yes"]',
-    childAbduction: '//*[@id="ChildAbduction_Yes"]',
-    childAbuse: '//*[@id="ChildAbuse_Yes"]',
-    drugsAndAlcohol: '//*[@id="DrugsAlcoholSubstanceAbuse_No"]',
-    otherSafety: '//*[@id="SafetyWelfareConcerns_No"]',
+    domesticAbuse: '//*[@id="domesticAbuse_Yes"]',
+    childAbduction: '//*[@id="childAbduction_Yes"]',
+    childAbuse: '//*[@id="childAbuse_Yes"]',
+    drugsAndAlcohol: '//*[@id="drugsAlcoholSubstanceAbuse_No"]',
+    otherSafety: '//*[@id="safetyWelfareConcerns_No"]',
     continueButton: 'div > button:nth-child(2)',
 
-    childAtRisk: '//*[@id="ChildAtRiskOfAbduction_Yes"]',
-    policeInformed: '//*[@id="PoliceNotified_No"]',
-    childHasPassport: '//*[@id="ChildHasPassport_Yes"]',
-    childMultiplePassport: '//*[@id="ChildHasMultiplePassports_Yes"]',
-    childPassportPossession: '//*[@id="ChildPassportPossession-other-person"]',
-    childPassportPossessionOtherDetails: '//*[@id="ChildPassportPossessionOtherDetails"]',
-    childAbductedDetails: '//*[@id="ChildAbductedBefore_Yes"]',
-    abductionDetails: '//*[@id="ChildAbductionDetails"]',
-    policeInformedOnAbduction: '//*[@id="AbductionPoliceInvolved_Yes"]',
-    moreDetails: '//*[@id="AbductionPoliceInvolvedDetails"]',
-    reasonForAbduction: '//*[@id="ChildAtRiskOfAbductionReason"]',
-    childWhereAbouts: '//*[@id="ChildWhereabouts"]',
+    childAtRisk: '//*[@id="childAtRiskOfAbduction_Yes"]',
+    policeInformed: '//*[@id="policeNotified_No"]',
+    childHasPassport: '//*[@id="childHasPassport_Yes"]',
+    childMultiplePassport: '//*[@id="childHasMultiplePassports_Yes"]',
+    childPassportPossession: '//*[@id="childPassportPossession-other-person"]',
+    childPassportPossessionOtherDetails: '//*[@id="childPassportPossessionOtherDetails"]',
+    childAbductedDetails: '//*[@id="childAbductedBefore_Yes"]',
+    abductionDetails: '//*[@id="childAbductionDetails"]',
+    policeInformedOnAbduction: '//*[@id="abductionPoliceInvolved_Yes"]',
+    moreDetails: '//*[@id="abductionPoliceInvolvedDetails"]',
+    reasonForAbduction: '//*[@id="childAtRiskOfAbductionReason"]',
+    childWhereAbouts: '//*[@id="childWhereabouts"]',
 
-    sexuallyAbused: '//*[@id="ChildAbuseSexually_No"]',
-    physicallyAbused: '//*[@id="ChildAbusePhysically_Yes"]',
-    natureOfBehaviour: '//*[@id="ChildAbusePhysicallyDetails"]',
-    behaviourStartDay: '//*[@id="ChildAbusePhysicallyStartDate-day"]',
-    behaviourStartMonth: '//*[@id="ChildAbusePhysicallyStartDate-month"]',
-    behaviourStartYear: '//*[@id="ChildAbusePhysicallyStartDate-year"]',
-    behaviourStillGoingOn: '//*[@id="ChildAbusePhysicallyOngoing_Yes"]',
-    whoHelped: '//*[@id="ChildAbusePhysicallyHelpSought"]',
-    financialAbuse: '//*[@id="ChildAbuseFinancially_No"]',
-    domesticAbuseChildAbuse: '//*[@id="ChildAbuseDomestic_No"]',
-    substanceAbuse: '//*[@id="ChildDrugsAlcoholSubstanceAbuse_No"]',
-    welfareConcerns: '//*[@id="OtherSafetyOrWelfareConcerns_No"]'
+    sexuallyAbused: '//*[@id="childAbuseSexually_No"]',
+    physicallyAbused: '//*[@id="childAbusePhysically_Yes"]',
+    natureOfBehaviour: '//*[@id="childAbusePhysicallyDetails"]',
+    behaviourStartDay: '//*[@id="childAbusePhysicallyStartDate-day"]',
+    behaviourStartMonth: '//*[@id="childAbusePhysicallyStartDate-month"]',
+    behaviourStartYear: '//*[@id="childAbusePhysicallyStartDate-year"]',
+    behaviourStillGoingOn: '//*[@id="childAbusePhysicallyOngoing_Yes"]',
+    whoHelped: '//*[@id="childAbusePhysicallyHelpSought"]',
+    financialAbuse: '//*[@id="childAbuseFinancially_No"]',
+    domesticAbuseChildAbuse: '//*[@id="childAbuseDomestic_No"]',
+    substanceAbuse: '//*[@id="childDrugsAlcoholSubstanceAbuse_No"]',
+    welfareConcerns: '//*[@id="otherSafetyOrWelfareConcerns_No"]'
   },
 
   async triggerEvent(eventName) {
@@ -96,7 +96,7 @@ module.exports = {
     I.wait('2');
     await I.waitForElement('h2');
     await I.see('Check your answers');
-    await I.click('Submit');
+    await I.click('Save and continue');
   },
 
   async safeguardAndRiskOfHarmEvent() {

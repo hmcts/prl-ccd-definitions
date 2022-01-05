@@ -16,7 +16,6 @@ class GeneralHelper extends Helper {
   async attachDocument(field) {
     const { Puppeteer } = this.helpers;
     await Puppeteer.attachFile(`input[id="${field}"]`, '../resource/dummy.pdf');
-
   }
 
   async amOnHistoryPageWithSuccessNotification() {
@@ -41,8 +40,8 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Puppeteer } = this.helpers;
-    await Puppeteer.waitForText('Check your answers');
-    await Puppeteer.click('Submit');
+    await Puppeteer.waitForText('Check your answers', '30');
+    await Puppeteer.click('Save and continue');
   }
 
   async triggerEvent(eventName) {
@@ -66,11 +65,10 @@ class GeneralHelper extends Helper {
       throw error;
     }
   }
-  async seeDocuments(title,documentName) {
+  async seeDocuments(title, documentName) {
     const { Puppeteer } = this.helpers;
     await Puppeteer.see(title);
     await Puppeteer.see(documentName);
-
   }
 }
 
