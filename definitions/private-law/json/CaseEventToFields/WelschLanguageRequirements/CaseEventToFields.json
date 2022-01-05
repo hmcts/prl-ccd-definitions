@@ -1,0 +1,49 @@
+[
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "welshLanguageRequirements",
+    "CaseFieldID": "welshLanguageRequirement",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "welshLanguageRequirements",
+    "CaseFieldID": "welshLanguageRequirementApplication",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "welshLanguageRequirement=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "welshLanguageRequirements",
+    "CaseFieldID": "languageRequirementApplicationNeedWelsh",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "welshLanguageRequirement=\"Yes\" AND welshLanguageRequirementApplication=\"english\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "welshLanguageRequirements",
+    "CaseFieldID": "welshLanguageRequirementApplicationNeedEnglish",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "welshLanguageRequirement=\"Yes\" AND welshLanguageRequirementApplication=\"welsh\"",
+    "ShowSummaryChangeOption": "Y"
+  }
+]

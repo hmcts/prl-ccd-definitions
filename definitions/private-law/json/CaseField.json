@@ -1,5 +1,21 @@
 [
   {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "C100",
+    "ID": "taskList",
+    "Label": "Case name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "C100",
+    "ID": "taskListLabel",
+    "Label": "${taskList}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "C100",
     "ID": "caseHistory",
@@ -913,7 +929,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "C100",
-    "ID": "applicantAttendedMIAM",
+    "ID": "applicantAttendedMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
@@ -929,7 +945,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "C100",
-    "ID": "claimingExemptionMIAM",
+    "ID": "claimingExemptionMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
@@ -953,7 +969,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "C100",
-    "ID": "familyMediatorMIAM",
+    "ID": "familyMediatorMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
@@ -1952,6 +1968,20 @@
     "Label": "Use this link to download and check the application.",
     "FieldType": "Label",
     "FieldTypeParameter": "",
+    "SecurityClassification": "Public"
+  },
+  {
+    "CaseTypeID": "C100",
+    "ID": "draftOrderDoc",
+    "Label": "Draft Order",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "CaseTypeID": "C100",
+    "ID": "id",
+    "Label": " ",
+    "FieldType": "Number",
     "SecurityClassification": "Public"
   }
 ]
