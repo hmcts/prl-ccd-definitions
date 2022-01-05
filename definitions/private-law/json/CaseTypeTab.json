@@ -1,11 +1,33 @@
 [
   {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "Tasks",
+    "TabLabel": "Tasks",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "taskListLabel",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "Tasks",
+    "TabLabel": "Tasks",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "taskList",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "taskList = \"DO_NOT_SHOW\"",
+    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "C100",
     "Channel": "CaseWorker",
     "TabID": "History",
     "TabLabel": "History",
-    "TabDisplayOrder": 1,
+    "TabDisplayOrder": 2,
     "CaseFieldID": "caseHistory",
     "TabFieldDisplayOrder": 1
   },
@@ -15,7 +37,7 @@
     "Channel": "CaseWorker",
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
-    "TabDisplayOrder": 2,
+    "TabDisplayOrder": 3,
     "CaseFieldID": "applicantCaseName",
     "TabFieldDisplayOrder": 1
   },
@@ -25,7 +47,7 @@
     "Channel": "CaseWorker",
     "TabID": "documents",
     "TabLabel": "Documents",
-    "TabDisplayOrder": 3,
+    "TabDisplayOrder": 4,
     "CaseFieldID": "contactOrderDocumentsUploaded",
     "TabFieldDisplayOrder": 1
   },
@@ -35,7 +57,7 @@
     "Channel": "CaseWorker",
     "TabID": "documents",
     "TabLabel": "Documents",
-    "TabDisplayOrder": 3,
+    "TabDisplayOrder": 4,
     "CaseFieldID": "c8FormDocumentsUploaded",
     "TabFieldDisplayOrder": 2
   },
@@ -45,7 +67,7 @@
     "Channel": "CaseWorker",
     "TabID": "documents",
     "TabLabel": "Documents",
-    "TabDisplayOrder": 3,
+    "TabDisplayOrder": 4,
     "CaseFieldID": "otherDocumentsUploaded",
     "TabFieldDisplayOrder": 3
   },
@@ -55,7 +77,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelWhereChildrenLive",
     "TabFieldDisplayOrder": 1
   },
@@ -65,7 +87,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "childrenAddress",
     "TabFieldDisplayOrder": 2
   },
@@ -75,7 +97,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelChildren",
     "TabFieldDisplayOrder": 3
   },
@@ -85,7 +107,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "children",
     "TabFieldDisplayOrder": 4
   },
@@ -95,7 +117,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelChildrenAdditionalQuestions",
     "TabFieldDisplayOrder": 5
   },
@@ -105,7 +127,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "isChildrenKnownToAuthority",
     "TabFieldDisplayOrder": 6
   },
@@ -115,7 +137,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "childAndLocalAuthority",
     "TabFieldDisplayOrder": 7
   },
@@ -125,7 +147,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "isChildrenUnderChildProtection",
     "TabFieldDisplayOrder": 8
   },
@@ -135,7 +157,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "isChildrenWithSameParents",
     "TabFieldDisplayOrder": 9
   },
@@ -145,7 +167,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "parentsAndTheirChildren",
     "TabFieldDisplayOrder": 10
   },
@@ -155,7 +177,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "parentalResponsibilities",
     "TabFieldDisplayOrder": 11
   },
@@ -165,7 +187,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "whoChildrenLiveWith",
     "TabFieldDisplayOrder": 12
   },
@@ -175,7 +197,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "childAddressAndAdultsLivingWith",
     "TabFieldDisplayOrder": 13
   },
@@ -185,7 +207,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelOtherCourtCases",
     "TabFieldDisplayOrder": 14
   },
@@ -195,7 +217,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "isExistingProceedings",
     "TabFieldDisplayOrder": 15
   },
@@ -205,7 +227,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "childrenInProceeding",
     "TabFieldDisplayOrder": 16
   },
@@ -215,7 +237,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "existingProceedings",
     "TabFieldDisplayOrder": 17
   },
@@ -225,7 +247,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelTheApplicants",
     "TabFieldDisplayOrder": 18
   },
@@ -235,7 +257,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "applicants",
     "TabFieldDisplayOrder": 19
   },
@@ -245,7 +267,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "applicantAttendedMIAMLabel",
     "TabFieldDisplayOrder": 20
   },
@@ -255,8 +277,8 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "applicantAttendedMIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "applicantAttendedMiam",
     "TabFieldDisplayOrder": 21
   },
   {
@@ -265,9 +287,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "claimingExemptionMIAMLabel",
-    "FieldShowCondition": "applicantAttendedMIAM=\"No\"",
+    "FieldShowCondition": "applicantAttendedMiam=\"No\"",
     "TabFieldDisplayOrder": 22
   },
   {
@@ -276,8 +298,8 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "claimingExemptionMIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "claimingExemptionMiam",
     "TabFieldDisplayOrder": 23
   },
   {
@@ -286,9 +308,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "familyMediatorMIAMLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\"",
     "TabFieldDisplayOrder": 24
   },
   {
@@ -297,8 +319,8 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
-    "CaseFieldID": "familyMediatorMIAM",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "familyMediatorMiam",
     "TabFieldDisplayOrder": 25
   },
   {
@@ -307,9 +329,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamExemptionsLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"No\"",
     "TabFieldDisplayOrder": 26
   },
   {
@@ -318,7 +340,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamExemptionsChecklist",
     "TabFieldDisplayOrder": 28
   },
@@ -328,9 +350,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamDomesticViolenceLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND  miamExemptionsChecklist  CONTAINS \"domesticViolence\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"No\" AND  miamExemptionsChecklist  CONTAINS \"domesticViolence\"",
     "TabFieldDisplayOrder": 29
   },
   {
@@ -339,7 +361,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamDomesticViolenceChecklist",
     "TabFieldDisplayOrder": 31
   },
@@ -349,9 +371,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamUrgencyReasonLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"urgency\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"No\" AND miamExemptionsChecklist  CONTAINS \"urgency\"",
     "TabFieldDisplayOrder": 32
   },
   {
@@ -360,7 +382,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamUrgencyReasonChecklist",
     "TabFieldDisplayOrder": 34
   },
@@ -370,9 +392,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamPreviousAttendanceLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"previousMIAMattendance\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"No\" AND miamExemptionsChecklist  CONTAINS \"previousMIAMattendance\"",
     "TabFieldDisplayOrder": 35
   },
   {
@@ -381,7 +403,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamPreviousAttendanceChecklist",
     "TabFieldDisplayOrder": 36
   },
@@ -391,9 +413,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamOtherGroundsLabel",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"other\"",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"No\" AND miamExemptionsChecklist  CONTAINS \"other\"",
     "TabFieldDisplayOrder": 37
   },
   {
@@ -402,7 +424,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamOtherGroundsChecklist",
     "TabFieldDisplayOrder": 38
   },
@@ -412,9 +434,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamCertificationPageLabel",
-    "FieldShowCondition": "applicantAttendedMIAM=\"Yes\"",
+    "FieldShowCondition": "applicantAttendedMiam=\"Yes\"",
     "TabFieldDisplayOrder": 39
   },
   {
@@ -423,9 +445,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "mediatorRegistrationNumber",
-    "TabFieldDisplayOrder": 40
+    "TabFieldDisplayOrder": 50
   },
   {
     "LiveFrom": "20/08/2021",
@@ -433,9 +455,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "familyMediatorServiceName",
-    "TabFieldDisplayOrder": 41
+    "TabFieldDisplayOrder": 51
   },
   {
     "LiveFrom": "20/08/2021",
@@ -443,9 +465,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "soleTraderName",
-    "TabFieldDisplayOrder": 42
+    "TabFieldDisplayOrder": 52
   },
   {
     "LiveFrom": "20/08/2021",
@@ -453,10 +475,10 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamCertificationPageMessage",
-    "FieldShowCondition": "applicantAttendedMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 43
+    "FieldShowCondition": "applicantAttendedMiam=\"Yes\"",
+    "TabFieldDisplayOrder": 53
   },
   {
     "LiveFrom": "20/08/2021",
@@ -464,10 +486,10 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamCertificationPageLabel1",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 44
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"Yes\"",
+    "TabFieldDisplayOrder": 54
   },
   {
     "LiveFrom": "20/08/2021",
@@ -475,9 +497,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "mediatorRegistrationNumber1",
-    "TabFieldDisplayOrder": 45
+    "TabFieldDisplayOrder": 55
   },
   {
     "LiveFrom": "20/08/2021",
@@ -485,9 +507,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "familyMediatorServiceName1",
-    "TabFieldDisplayOrder": 46
+    "TabFieldDisplayOrder": 56
   },
   {
     "LiveFrom": "20/08/2021",
@@ -495,9 +517,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "soleTraderName1",
-    "TabFieldDisplayOrder": 47
+    "TabFieldDisplayOrder": 57
   },
   {
     "LiveFrom": "20/08/2021",
@@ -505,10 +527,10 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "miamCertificationPageMessage1",
-    "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"Yes\"",
-    "TabFieldDisplayOrder": 48
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND familyMediatorMiam=\"Yes\"",
+    "TabFieldDisplayOrder": 58
   },
   {
     "LiveFrom": "20/08/2021",
@@ -516,9 +538,9 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelTheRespondents",
-    "TabFieldDisplayOrder": 49
+    "TabFieldDisplayOrder": 59
   },
   {
     "LiveFrom": "20/08/2021",
@@ -526,7 +548,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "respondents",
     "TabFieldDisplayOrder": 50
   },
@@ -536,7 +558,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelOthersToNotify",
     "TabFieldDisplayOrder": 51
   },
@@ -546,7 +568,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "othersToNotify",
     "TabFieldDisplayOrder": 52
   },
@@ -556,7 +578,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "labelOtherChildren",
     "TabFieldDisplayOrder": 53
   },
@@ -566,7 +588,7 @@
     "Channel": "CaseWorker",
     "TabID": "peopleInCase",
     "TabLabel": "People",
-    "TabDisplayOrder": 4,
+    "TabDisplayOrder": 5,
     "CaseFieldID": "otherChildren",
     "TabFieldDisplayOrder": 54
   }
