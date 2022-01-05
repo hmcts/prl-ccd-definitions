@@ -11,7 +11,7 @@ module.exports = {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
     CaseEvent: loadFile('CaseEvent'),
-   // CaseEventToFields: loadFile('CaseEventToFields'),
+    // CaseEventToFields: loadFile('CaseEventToFields'),
     CaseField: loadFile('CaseField'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
