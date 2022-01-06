@@ -15,7 +15,7 @@ be generated with `yarn generate-excel-aat`
 
 ### Error: Cannot find module
 
-When trying to create a XLS file ends with error message mentioning a module cannot be found
+When trying to create a XLS file ends with error message mentioning a module cannot be found.
 
 <details>
   <summary>Example error output</summary>
