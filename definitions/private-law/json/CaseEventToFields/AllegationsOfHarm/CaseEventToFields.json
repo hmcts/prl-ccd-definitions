@@ -1,287 +1,285 @@
 [
   {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "applicantCaseName",
-    "DisplayContext": "MANDATORY",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmYesNo",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "08/11/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "caseName",
-    "CaseFieldID": "applicantCaseName",
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "labelPleaseUploadDocuments",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmLabel",
+    "PageShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1
   },
   {
-    "LiveFrom": "10/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "labelDocumentsRequired",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "labelContactOrResidenceOrder",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "contactOrderDocumentsUploaded",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuseYesNo",
     "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "labelC8FormForConfidentiality",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "c8FormDocumentsUploaded",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "labelUploadOtherDocuments",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "uploadDocuments",
-    "CaseFieldID": "otherDocumentsUploaded",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "labelWhereChildrenLive",
-    "DisplayContext": "READONLY",
-    "PageID": "peopleInTheCase-1",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "childrenAddress",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-1",
-    "PageDisplayOrder": 1,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "labelChildrenAdditionalQuestions",
-    "DisplayContext": "READONLY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "isChildrenKnownToAuthority",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "childAndLocalAuthority",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "physicalAbuseVictim",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
-    "FieldShowCondition": "isChildrenKnownToAuthority=\"yes\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "isChildrenUnderChildProtection",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "emotionalAbuseVictim",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "isChildrenWithSameParents",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "psychologicalAbuseVictim",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "parentsAndTheirChildren",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "sexualAbuseVictim",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 6,
-    "FieldShowCondition": "isChildrenWithSameParents=\"no\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "parentalResponsibilities",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "financialAbuseVictim",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 7,
-    "FieldShowCondition": "isChildrenWithSameParents=\"no\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "whoChildrenLiveWith",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmChildAbductionYesNo",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 8,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "childAddressAndAdultsLivingWith",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-4",
-    "PageDisplayOrder": 4,
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childAbductionReasons",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 9,
-    "FieldShowCondition": "whoChildrenLiveWith=\"other\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "17/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "labelOtherCourtCases",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "previousAbductionThreats",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 10,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "previousAbductionThreatsDetails",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\" AND previousAbductionThreats=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 11,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childrenLocationNow",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 12,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionPassportOfficeNotified",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionPreviousPoliceInvolvement",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 14,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionPreviousPoliceInvolvementDetails",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\" AND abductionPreviousPoliceInvolvement=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 15,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionOtherSafetyConcerns",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 16,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionOtherSafetyConcernsDetails",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\" AND abductionOtherSafetyConcerns=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 17,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "abductionCourtStepsRequested",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 18,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmChildAbuseYesNo",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmSubstanceAbuseYesNo",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsYesNo",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationOfHarmOrdersLabel",
     "DisplayContext": "READONLY",
-    "PageID": "peopleInTheCase-5",
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 22
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "isExistingProceedings",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-5",
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "childrenInProceeding",
-    "DisplayContext": "MANDATORY",
-    "PageID": "peopleInTheCase-5",
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 3,
-    "FieldShowCondition": "isExistingProceedings=\"Yes\"",
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "labelOtherChildren",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationOfHarmOrdersLabelDetail",
     "DisplayContext": "READONLY",
-    "PageID": "peopleInTheCase-9",
-    "PageDisplayOrder": 9,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 23
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "peopleInTheCase",
-    "CaseFieldID": "otherChildren",
-    "DisplayContext": "COMPLEX",
-    "PageID": "peopleInTheCase-9",
-    "PageDisplayOrder": 9,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo1",
     "PageFieldDisplayOrder": 1,
@@ -301,10 +299,20 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestation",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 24,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "applicantAttendedMIAM",
     "PageFieldDisplayOrder": 3,
@@ -312,10 +320,21 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestationDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersNonMolestation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 25,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "claimingExemptionMIAMLabel",
     "PageFieldDisplayOrder": 4,
@@ -324,10 +343,21 @@
     "PageDisplayOrder": 1,
     "FieldShowCondition": "applicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestationEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersNonMolestation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "claimingExemptionMIAM",
     "PageFieldDisplayOrder": 5,
@@ -336,10 +366,21 @@
     "PageDisplayOrder": 1,
     "FieldShowCondition": "applicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestationCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersNonMolestation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 27,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "02/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "familyMediatorMIAMLabel",
     "PageFieldDisplayOrder": 6,
@@ -348,10 +389,21 @@
     "PageDisplayOrder": 1,
     "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestationCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersNonMolestation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 28,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "02/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "familyMediatorMIAM",
     "PageFieldDisplayOrder": 7,
@@ -360,10 +412,21 @@
     "PageDisplayOrder": 7,
     "FieldShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersNonMolestationDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersNonMolestation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 29,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo2",
     "PageFieldDisplayOrder": 1,
@@ -383,32 +446,58 @@
     "PageDisplayOrder": 2,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupation",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 30,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamExemptionsSelectAll",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupationDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersOccupation=\"Yes\"",
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "PageFieldDisplayOrder": 31,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamExemptionsChecklist",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupationEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOccupation=\"Yes\"",
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "PageFieldDisplayOrder": 32,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo3",
     "PageFieldDisplayOrder": 1,
@@ -428,10 +517,21 @@
     "PageDisplayOrder": 3,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND  miamExemptionsChecklist  CONTAINS \"domesticViolence\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupationCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOccupation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 33,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamDomesticViolenceSelectAll",
     "PageFieldDisplayOrder": 3,
@@ -439,10 +539,21 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupationCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOccupation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 34,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamDomesticViolenceChecklist",
     "PageFieldDisplayOrder": 4,
@@ -450,10 +561,21 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOccupationDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOccupation=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 35,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo4",
     "PageFieldDisplayOrder": 1,
@@ -473,10 +595,21 @@
     "PageDisplayOrder": 4,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"urgency\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtection",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 36,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamUrgencyReasonSelectAll",
     "PageFieldDisplayOrder": 3,
@@ -484,10 +617,21 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtectionDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersForcedMarriageProtection=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 37,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamUrgencyReasonChecklist",
     "PageFieldDisplayOrder": 4,
@@ -495,10 +639,21 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtectionEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersForcedMarriageProtection=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 38,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo5",
     "PageFieldDisplayOrder": 1,
@@ -518,10 +673,21 @@
     "PageDisplayOrder": 5,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"previousMIAMattendance\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtectionCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersForcedMarriageProtection=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 39,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamPreviousAttendanceChecklist",
     "PageFieldDisplayOrder": 3,
@@ -529,10 +695,21 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtectionCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersForcedMarriageProtection=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 40,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo6",
     "PageFieldDisplayOrder": 1,
@@ -552,10 +729,21 @@
     "PageDisplayOrder": 6,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"No\" AND miamExemptionsChecklist  CONTAINS \"other\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersForcedMarriageProtectionDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersForcedMarriageProtection=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 41,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamOtherGroundsChecklist",
     "PageFieldDisplayOrder": 3,
@@ -563,10 +751,21 @@
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestraining",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 42,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo7",
     "PageFieldDisplayOrder": 1,
@@ -586,10 +785,21 @@
     "PageDisplayOrder": 7,
     "PageShowCondition": "applicantAttendedMIAM=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestrainingDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersRestraining=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 43,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "mediatorRegistrationNumber",
     "PageFieldDisplayOrder": 3,
@@ -597,10 +807,21 @@
     "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestrainingEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersRestraining=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 44,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "familyMediatorServiceName",
     "PageFieldDisplayOrder": 4,
@@ -630,10 +851,33 @@
     "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestrainingCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersRestraining=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 45,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestrainingCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersRestraining=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 46,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamCertificationDocumentUpload",
     "PageFieldDisplayOrder": 7,
@@ -641,10 +885,21 @@
     "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersRestrainingDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersRestraining=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 47,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "submissionRequiredFieldsInfo8",
     "PageFieldDisplayOrder": 1,
@@ -664,10 +919,21 @@
     "PageDisplayOrder": 8,
     "PageShowCondition": "claimingExemptionMIAM=\"Yes\" AND applicantAttendedMIAM=\"No\" AND familyMediatorMIAM=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctive",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 48,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "mediatorRegistrationNumber1",
     "PageFieldDisplayOrder": 3,
@@ -675,10 +941,21 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctiveDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOtherInjunctive=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 49,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "familyMediatorServiceName1",
     "PageFieldDisplayOrder": 4,
@@ -686,10 +963,21 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctiveEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOtherInjunctive=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 50,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "soleTraderName1",
     "PageFieldDisplayOrder": 5,
@@ -697,10 +985,21 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctiveCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOtherInjunctive=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 51,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamCertificationPageMessage1",
     "PageFieldDisplayOrder": 6,
@@ -708,10 +1007,21 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctiveCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOtherInjunctive=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 52,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "03/11/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "miam",
     "CaseFieldID": "miamCertificationDocumentUpload1",
     "PageFieldDisplayOrder": 7,
@@ -719,10 +1029,21 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersOtherInjunctiveDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersOtherInjunctive=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 53,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "submissionRequiredFieldsInfo1",
     "DisplayContext": "READONLY",
@@ -739,22 +1060,42 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlace",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 54,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isWelshNeeded",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlaceDateIssued",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersUndertakingInPlace=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 55,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "welshNeeds",
     "DisplayContext": "COMPLEX",
@@ -762,22 +1103,42 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "FieldShowCondition": "isWelshNeeded=\"Yes\"",
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlaceEndDate",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersUndertakingInPlace=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 56,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isInterpreterNeeded",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlaceCurrent",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersUndertakingInPlace=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 57,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "interpreterNeeds",
     "DisplayContext": "COMPLEX",
@@ -785,45 +1146,82 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
     "FieldShowCondition": "isInterpreterNeeded=\"Yes\"",
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlaceCourtName",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersUndertakingInPlace=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 58,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelAccessibility",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "ordersUndertakingInPlaceDocument",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND ordersUndertakingInPlace=\"Yes\"",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 59,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isDisabilityPresent",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 8,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "behaviours",
+    "DisplayContext": "COMPLEX",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageFieldDisplayOrder": 1,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "labelAdjustmentsRequired",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsLabel",
     "DisplayContext": "READONLY",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 9,
     "FieldShowCondition": "isDisabilityPresent=\"Yes\"",
     "ShowSummaryChangeOption": "Yes"
+=======
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageFieldDisplayOrder": 1
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "adjustmentsRequired",
     "DisplayContext": "MANDATORY",
@@ -831,60 +1229,97 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 10,
     "FieldShowCondition": "isDisabilityPresent=\"Yes\"",
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmOtherConcerns",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelSpecialArrangements",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsDetails",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmOtherConcerns=\"Yes\"",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 3,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "18/11/2021",
     "CaseTypeID": "C100",
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelSpecialArrangementsDescription",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 12
+=======
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsCourtActions",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "isSpecialArrangementsRequired",
+    "CaseEventID": "safeguardingAndRiskOfHarm",
+    "CaseFieldID": "domesticAbuse",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "PageFieldDisplayOrder": 13,
+=======
+    "PageFieldDisplayOrder": 1,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "labelSpecialArrangementsRequired",
-    "DisplayContext": "READONLY",
+    "CaseEventID": "safeguardingAndRiskOfHarm",
+    "CaseFieldID": "childAbduction",
+    "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "PageFieldDisplayOrder": 14,
     "FieldShowCondition": "isSpecialArrangementsRequired=\"Yes\"",
+=======
+    "PageFieldDisplayOrder": 2,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "specialArrangementsRequired",
+    "CaseEventID": "safeguardingAndRiskOfHarm",
+    "CaseFieldID": "childAbuse",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "PageFieldDisplayOrder": 15,
     "FieldShowCondition": "isSpecialArrangementsRequired=\"Yes\"",
     "ShowSummaryChangeOption": "Yes"
@@ -901,23 +1336,35 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "isIntermediaryNeeded",
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 17,
+=======
+    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "01/08/2021",
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "reasonsForIntermediary",
+    "CaseEventID": "safeguardingAndRiskOfHarm",
+    "CaseFieldID": "drugsAlcoholSubstanceAbuse",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
+    "PageFieldDisplayOrder": 17,
+=======
+    "PageFieldDisplayOrder": 4,
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "safeguardingAndRiskOfHarm",
+    "CaseFieldID": "safetyWelfareConcerns",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
     "PageFieldDisplayOrder": 18,
     "FieldShowCondition": "isIntermediaryNeeded=\"Yes\"",
     "ShowSummaryChangeOption": "Yes"
@@ -1152,6 +1599,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+=======
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -1636,6 +2085,7 @@
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 28,
     "ShowSummaryChangeOption": "Yes"
+<<<<<<< HEAD:definitions/private-law/json/CaseEventToFields.json
   },
   {
     "LiveFrom": "03/11/2021",
@@ -2935,6 +3385,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N"
+=======
+>>>>>>> master:definitions/private-law/json/CaseEventToFields/AllegationsOfHarm/CaseEventToFields.json
   }
-
 ]

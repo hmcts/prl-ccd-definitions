@@ -9,12 +9,12 @@ module.exports = {
   },
 
   async fillHasAttendedMIAMPage() {
-    await I.waitForElement('//input[@id="applicantAttendedMIAM_No"]');
-    await I.checkOption('//input[@id="applicantAttendedMIAM_No"]');
-    await I.waitForElement('//input[@id="claimingExemptionMIAM_Yes"]');
-    await I.checkOption('//input[@id="claimingExemptionMIAM_Yes"]');
-    await I.waitForElement('//input[@id="familyMediatorMIAM_Yes"]');
-    await I.checkOption('//input[@id="familyMediatorMIAM_Yes"]');
+    await I.waitForElement('//input[@id="applicantAttendedMiam_No"]');
+    await I.checkOption('//input[@id="applicantAttendedMiam_No"]');
+    await I.waitForElement('//input[@id="claimingExemptionMiam_Yes"]');
+    await I.checkOption('//input[@id="claimingExemptionMiam_Yes"]');
+    await I.waitForElement('//input[@id="familyMediatorMiam_Yes"]');
+    await I.checkOption('//input[@id="familyMediatorMiam_Yes"]');
     await I.click(this.fields.submit);
   },
 
@@ -30,12 +30,12 @@ module.exports = {
   },
 
   async fillHasAttendedMIAMPageDifferentFlow() {
-    await I.waitForElement('//input[@id="applicantAttendedMIAM_No"]');
-    await I.checkOption('//input[@id="applicantAttendedMIAM_No"]');
-    await I.waitForElement('//input[@id="claimingExemptionMIAM_Yes"]');
-    await I.checkOption('//input[@id="claimingExemptionMIAM_Yes"]');
-    await I.waitForElement('//input[@id="familyMediatorMIAM_No"]');
-    await I.checkOption('//input[@id="familyMediatorMIAM_No"]');
+    await I.waitForElement('//input[@id="applicantAttendedMiam_No"]');
+    await I.checkOption('//input[@id="applicantAttendedMiam_No"]');
+    await I.waitForElement('//input[@id="claimingExemptionMiam_Yes"]');
+    await I.checkOption('//input[@id="claimingExemptionMiam_Yes"]');
+    await I.waitForElement('//input[@id="familyMediatorMiam_No"]');
+    await I.checkOption('//input[@id="familyMediatorMiam_No"]');
     await I.click(this.fields.submit);
   },
 
