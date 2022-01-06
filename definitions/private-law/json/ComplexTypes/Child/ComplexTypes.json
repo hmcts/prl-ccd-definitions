@@ -1,45 +1,5 @@
 [
   {
-    "LiveFrom": "01/01/2022",
-    "ID": "OtherPersonWhoLivesWithChild",
-    "ListElementCode": "firstName",
-    "FieldType": "Text",
-    "ElementLabel": "First name(s) of the adult living with the child",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2022",
-    "ID": "OtherPersonWhoLivesWithChild",
-    "ListElementCode": "lastName",
-    "FieldType": "Text",
-    "ElementLabel": "Last name",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2022",
-    "ID": "OtherPersonWhoLivesWithChild",
-    "ListElementCode": "relationshipToChildDetails",
-    "FieldType": "TextArea",
-    "ElementLabel": "Give details of their relationship to (or involvement with) the child",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2022",
-    "ID": "OtherPersonWhoLivesWithChild",
-    "ListElementCode": "address",
-    "FieldType": "AddressUK",
-    "ElementLabel": "Enter UK Postcode",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2022",
-    "ID": "OtherPersonWhoLivesWithChild",
-    "ListElementCode": "isPersonIdentityConfidential",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Do you need to keep the identity of the person that the child lives with confidential? ",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "20/08/2021",
     "ID": "Child",
     "ListElementCode": "firstName",
@@ -75,7 +35,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "gender",
     "FieldType": "FixedRadioList",
@@ -93,7 +53,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "orderAppliedFor",
     "FieldType": "MultiSelectList",
@@ -103,7 +63,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "applicantsRelationshipToChild",
     "FieldType": "FixedRadioList",
@@ -113,7 +73,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "otherApplicantsRelationshipToChild",
     "FieldType": "TextArea",
@@ -122,7 +82,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "respondentsRelationshipToChild",
     "FieldType": "FixedRadioList",
@@ -132,7 +92,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "otherRespondentsRelationshipToChild",
     "FieldType": "TextArea",
@@ -141,7 +101,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "CaseTypeID": "C100",
     "ID": "Child",
     "ListElementCode": "childLiveWith",
     "FieldType": "MultiSelectList",
@@ -150,29 +110,51 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
+    "LiveFrom": "05/11/2021",
     "ID": "Child",
-    "ListElementCode": "personWhoLivesWithChild",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "OtherPersonWhoLivesWithChild",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "Child",
-    "ListElementCode": "parentalResponsibility",
-    "FieldType": "Label",
-    "ElementLabel": "**Parental responsibility**",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "Child",
-    "ListElementCode": "parentalResponsibilityDetails",
+    "ListElementCode": "otherPersonWhoLivesWithChild",
     "FieldType": "TextArea",
-    "ElementLabel": "State who has parental responsibility for the child and how they have parental responsibility (e.g., 'child's mother', 'child's father and was married to the mother when child was born')",
+    "ElementLabel": "Give the names of any adults living with the children and details of their relationship to (or involvement with) the child.",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "isChildCurrentAddressKnown",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is current address known?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "address",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Enter UK Postcode",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "isChildAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the address confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "childUnsupervisedTime",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you agree to the child(ren) spending unsupervised time with other person(s) in receipt of this form?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Child",
+    "ListElementCode": "childContactFromOtherRecipients",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you agree to the child(ren) having other contact with other person(s) in receipt of this form? (by phone, text, email, social media)",
     "SecurityClassification": "Public"
   },
   {
@@ -180,7 +162,7 @@
     "ID": "Child",
     "ListElementCode": "addNewChildLabel",
     "FieldType": "Label",
-    "ElementLabel": "### Add new child",
+    "ElementLabel": "Add new child",
     "SecurityClassification": "Public"
   },
   {
