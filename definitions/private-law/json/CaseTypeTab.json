@@ -7,6 +7,7 @@
     "TabLabel": "Tasks",
     "TabDisplayOrder": 0,
     "CaseFieldID": "taskListLabel",
+
     "TabFieldDisplayOrder": 1
   },
   {
@@ -19,6 +20,7 @@
     "CaseFieldID": "taskList",
     "TabFieldDisplayOrder": 2,
     "FieldShowCondition": "taskList = \"DO_NOT_SHOW\"",
+    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\" AND taskList !=\"\"",
     "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
   },
   {
