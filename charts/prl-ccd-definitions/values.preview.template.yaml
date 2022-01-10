@@ -88,6 +88,111 @@ ccd:
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOSTS: ${SERVICE_NAME}-es-master:9200
         ELASTIC_SEARCH_DATA_NODES_HOSTS:  http://${SERVICE_NAME}-es-master:9200
+        DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api
+      keyVaults: []
+      ingressHost: ccd-data-store-api-${SERVICE_FQDN}
+
+  am-role-assignment-service:
+    java:
+      keyVaults:
+        am:
+          secrets:
+            - role-assignment-service-LD-SDK-KEY
+
+  ccd-definition-store-api:
+    java:
+      imagePullPolicy: Always
+      keyVaults: []
+      environment:
+        DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
+        DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
+        DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw
+        IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
+        IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
+        OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
+        ELASTIC_SEARCH_ENABLED: true
+        ELASTIC_SEARCH_HOST: ${SERVICE_NAME}-es-master
+      ingressHost: ccd-definition-store-${SERVICE_FQDN}
+
+  ccd-admin-web:
+    nodejs:
+      image: hmctspublic.azurecr.io/ccd/admin-web:latest
+      ingressHost: admin-web-${SERVICE_FQDN}
+      keyVaults: []
+      environment:
+        USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
+        IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
+        IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
+    idam-pr:
+      enabled: true
+
+  ccd-case-management-web:
+    nodejs:
+      environment:
+        CCD_ACTIVITY_URL: null
+        DM_URL: https://gateway-${SERVICE_FQDN}/documents
+        DM_URL_REMOTE: https?://(gateway-${SERVICE_FQDN}:443|dm-store-aat.service.core-compute-aat.internal)/documents
+        NODE_TLS_REJECT_UNAUTHORIZED: 0
+        APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}
+        APPINSIGHTS_ENABLED: false
+      ingressHost: case-management-web-${SERVICE_FQDN}
+      ingressIP: ${INGRESS_IP}
+    idam-pr:
+      enabled: true
+
+  ccd-api-gateway-web:
+    nodejs:
+      keyVaults: []
+      environment:
+        IDAM_SERVICE_KEY: ${API_GATEWAY_S2S_KEY}
+        IDAM_OAUTH2_CLIENT_SECRET: ${API_GATEWAY_IDAM_SECRET}
+        PROXY_DOCUMENT_MANAGEMENT: http://dm-store-aat.service.core-compute-aat.internal
+        PROXY_PRINT_SERVICE: http://ccd-case-print-service-${SERVICE_FQDN}
+        ADDRESS_LOOKUP_TOKEN: ${ADDRESS_LOOKUP_TOKEN}
+      ingressHost: gateway-${SERVICE_FQDN}
+      ingressIP: ${INGRESS_IP}
+
+  ccd-case-print-service:
+    nodejs:
+      keyVaults: []
+      environment:
+        IDAM_PRINT_SERVICE_KEY: ${PRINT_S2S_KEY}
+      ingressHost: ccd-case-print-service-${SERVICE_FQDN}
+
+  importer:
+    userprofile:
+      enabled: true
+      jurisdictions:
+        - PRIVATELAW
+      users:
+        - fprl_caseworker_solicitor@mailinator.com|PRIVATELAW|C100|Created
+      userProfileDatabaseHost: ${SERVICE_NAME}-ccd-postgres
+      userProfileDatabasePort: 5432
+      userProfileDatabaseUser: hmcts
+      userProfileDatabasePassword: hmcts
+      userProfileDatabaseName: user-profile
+
+  postgresql:
+    persistence:
+      enabled: false
+
+  elasticsearch:
+    clusterName: "es"
+    imageTag: "6.4.2"
+    replicas: 1
+    minimumMasterNodes: 1
+    antiAffinity: "soft"
+    esJavaOpts: "-Xmx512m -Xms512m"
+    persistence:
+      enabled: false
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: traefik
+      path: /
+      hosts:
+        - es-${SERVICE_FQDN}
+
       keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
