@@ -167,7 +167,7 @@
     "Name": "Litigation capacity",
     "Description": "Litigation capacity",
      "DisplayOrder": 93,
-    "SecurityClassification": "Public",
+    "SecurityClassification": "Public",`
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
@@ -299,6 +299,7 @@
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/getSolicitorAndFeeDetails",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/email/send-solicitor-email",
     "EndButtonLabel": "Pay now",
     "ShowSummary": "N",
