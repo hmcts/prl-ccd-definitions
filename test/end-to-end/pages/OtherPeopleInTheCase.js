@@ -29,7 +29,7 @@ module.exports = {
     await I.fillField('//input[@id="othersToNotify_0_email"]', 'otherstonotify@email.com');
     await I.retry(retryCount).checkOption('//input[@id="othersToNotify_0_canYouProvidePhoneNumber_Yes"]');
     await I.fillField('//input[@id="othersToNotify_0_phoneNumber"]', '07122884667');
-    await I.click('Add new');
+    await I.click(document.querySelector("#othersToNotify_0_otherPersonRelationshipToChildren > div > button"));
     await I.fillField('//input[@id="othersToNotify_0_otherPersonRelationshipToChildren_0_personRelationshipToChild"]', this.fields.textareaText);
     await I.click('Continue');
     await I.waitForText('Save and continue', '30');
