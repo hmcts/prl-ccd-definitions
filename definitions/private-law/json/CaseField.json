@@ -1983,5 +1983,32 @@
     "Label": " ",
     "FieldType": "Number",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "C100",
+    "ID": "documentCategoryChecklist",
+    "Label": "Choose a document category",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "documentCategoryChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+  "LiveFrom": "14/01/2022",
+  "CaseTypeID": "C100",
+  "ID": "caseNameManageDocuments",
+  "Label": "##${applicantCaseName}",
+  "FieldType": "Label",
+  "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "mainApplicationDocument",
+    "Label": "Main Application Document",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Child",
+    "SecurityClassification": "Public"
   }
 ]
