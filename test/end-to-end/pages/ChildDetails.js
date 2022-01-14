@@ -29,6 +29,7 @@ module.exports = {
   },
   
   async fillAdditionalDetailsChildrenPage() {
+    const retryCount = 3;
     await I.click(this.fields.submit);
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.wait('1');
