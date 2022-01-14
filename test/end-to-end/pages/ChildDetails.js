@@ -11,7 +11,7 @@ module.exports = {
     await I.triggerEvent('Child details');
   },
 
-  async fillChildrenDetailsPage() {
+  async fillChildrenPage() {
     const retryCount = 3;
     await I.waitForElement('#children');
     await I.click('Add new');
@@ -26,10 +26,6 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
     await I.fillField('//textarea[@id="children_0_parentalResponsibilityDetails"]', 'Text area field Test');
-  },
-  
-  async fillAdditionalDetailsChildrenPage() {
-    const retryCount = 3;
     await I.click(this.fields.submit);
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.wait('1');
@@ -41,10 +37,7 @@ module.exports = {
 
   async runChildDetailsEventHappyPath() {
     await this.triggerEvent();
-    await this.fillChildrenDetailsPage();
-    //PRL-686 Adding two children to test Other people in the case event
-    await this.fillChildrenDetailsPage();
-    await this.fillAdditionalDetailsChildrenPage();
+    await this.fillChildrenPage();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
