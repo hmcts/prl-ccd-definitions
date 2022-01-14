@@ -38,6 +38,8 @@ module.exports = {
   async runChildDetailsEventHappyPath() {
     await this.triggerEvent();
     await this.fillChildrenPage();
+    //PRL-686 Adding two children to test Other people in the case event
+    await this.fillChildrenPage();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
