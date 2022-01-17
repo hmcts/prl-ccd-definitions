@@ -7,9 +7,6 @@ module.exports = () => {
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
-    triggerEvent(eventName) {
-      return generalHelper.triggerEvent(eventName);
-    },
     createCase() {
       return CreateCasePage.createNewCase();
     },
