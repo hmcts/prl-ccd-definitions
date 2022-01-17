@@ -25,8 +25,8 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_applicantsRelationshipToChild-stepFather"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
-    await I.retry(retryCount).checkOption('//input[@id="childUnsupervisedTime-yes"]');
-    await I.retry(retryCount).checkOption('//input[@id="childContactFromOtherRecipients-yes"]');
+    await I.retry(retryCount).checkOption('//input[@id="children_0_childUnsupervisedTime-yes"]');
+    await I.retry(retryCount).checkOption('//input[@id="children_0_childContactFromOtherRecipients-yes"]');
     await I.click(this.fields.submit);
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.wait('1');
