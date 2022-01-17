@@ -288,5 +288,40 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "C100",
+    "ID": "submitAndPay",
+    "Name": "Submit and pay",
+    "Description": "Submit and pay",
+    "DisplayOrder": 122,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/getSolicitorAndFeeDetails",
+    "EndButtonLabel": "Pay now",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "ID": "paymentSuccessCallback",
+    "Name": "Payment confirmation",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "ID": "paymentFailureCallback",
+    "Name": "Payment failure",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
   }
 ]
