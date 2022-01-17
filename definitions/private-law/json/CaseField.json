@@ -1997,18 +1997,70 @@
   "LiveFrom": "14/01/2022",
   "CaseTypeID": "C100",
   "ID": "caseNameManageDocuments",
-  "Label": "##${applicantCaseName}",
+  "Label": "## ${applicantCaseName}",
   "FieldType": "Label",
   "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
+    "ID": "furtherEvidenceLabel",
+    "Label": "## Further evidence - further application document",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
     "ID": "mainApplicationDocument",
-    "Label": "Main Application Document",
+    "Label": " ",
     "Min": "1",
     "FieldType": "Collection",
-    "FieldTypeParameter": "Child",
+    "FieldTypeParameter": "FurtherEvidence",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "giveDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "correspondenceLabel",
+    "Label": "## Correspondence",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "correspondence",
+    "Label": " ",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Correspondence",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "otherDocumentsLabel",
+    "Label": "## Other documents",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "otherDocuments",
+    "Label": " ",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherDocuments",
     "SecurityClassification": "Public"
   }
 ]
