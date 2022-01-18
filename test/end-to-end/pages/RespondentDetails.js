@@ -37,6 +37,7 @@ module.exports = {
     await I.selectPostCodeLookupAddress(this.fields.respondentAddress, 'B11LS');
     I.wait('2');
     await I.retry(retryCount).checkOption('//input[@id="respondents_0_isAtAddressLessThan5YearsWithDontKnow-yes"]');
+    await I.fillField('#respondents_0_addressLivedLessThan5YearsDetails', 'Text area');
     await I.retry(retryCount).checkOption('//input[@id="respondents_0_canYouProvideEmailAddress_Yes"]');
     await I.fillField('//input[@id="respondents_0_email"]', 'respondent@email.com');
     await I.retry(retryCount).checkOption('//input[@id="respondents_0_canYouProvidePhoneNumber_Yes"]');
