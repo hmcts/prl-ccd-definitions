@@ -31,7 +31,8 @@ module.exports = {
     await I.waitForElement('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.wait('1');
-    await I.retry(retryCount).fillField('//textarea[@id="childrenKnownToLocalAuthorityTextArea"]', this.fields.textareaText);
+    await I.retry(retryCount).fillField('//input[@id="childrenKnownToLocalAuthorityTextArea"]','Text area field Test');
+    await I.wait('1');
     await I.retry(retryCount).checkOption('//input[@id="childrenSubjectOfChildProtectionPlan-yes"]');
     await I.wait('1');
     await I.click(this.fields.submit);
