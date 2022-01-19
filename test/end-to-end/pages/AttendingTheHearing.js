@@ -16,6 +16,7 @@ module.exports = {
     interpreterNeedsOther: '#interpreterNeeds_0_party-other',
     interpreterNeedsName: '#interpreterNeeds_0_name',
     interpreterNeedsLanguage: '#interpreterNeeds_0_language',
+    otherAssistance: '#interpreterNeeds_0_otherAssistance',
     adjustmentsRequired: 'textarea[id="adjustmentsRequired"]',
     specialArrangementsRequired: 'textarea[id="specialArrangementsRequired"]',
     reasonsForIntermediary: '#reasonsForIntermediary',
@@ -46,6 +47,7 @@ module.exports = {
     await I.click(this.fields.interpreterNeedsOther);
     await I.fillField(this.fields.interpreterNeedsName, 'Person One');
     await I.fillField(this.fields.interpreterNeedsLanguage, 'Polish');
+    await I.fillField(this.fields.otherAssistance, 'None');
 
     await I.wait('1');
     await I.click(this.fields.isDisabilityPresent);
