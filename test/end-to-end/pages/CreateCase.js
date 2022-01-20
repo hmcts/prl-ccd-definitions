@@ -21,7 +21,7 @@ module.exports = {
   async fillFormAndSubmit() {
     await I.waitForElement(this.fields.jurisdiction);
     await I.selectOption(this.fields.jurisdiction, 'Family Private Law');
-    await I.selectOption(this.fields.caseType, 'C100 Application');
+    await I.selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.selectOption(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.click(this.fields.submit);
