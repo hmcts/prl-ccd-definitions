@@ -26,8 +26,9 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
     await I.click(this.fields.submit);
+    I.wait('2');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-no"]');
-    await I.wait('1');
+    await I.wait('2');
     await I.retry(retryCount).checkOption('//input[@id="childrenSubjectOfChildProtectionPlan-yes"]');
     await I.wait('1');
     await I.click(this.fields.submit);
