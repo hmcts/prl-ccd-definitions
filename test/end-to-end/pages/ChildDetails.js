@@ -25,6 +25,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_applicantsRelationshipToChild-stepFather"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
+    await I.fillField('//textarea[@id="children_0_parentalResponsibilityDetails"]', 'Text area field Test');
     await I.click(this.fields.submit);
     await I.wait('5');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-no"]');
