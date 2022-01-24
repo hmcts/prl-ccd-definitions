@@ -16,7 +16,7 @@ function assertEventDefinitionIsValid(row) {
   expect(row.ID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
   expect(row.Name).to.be.a('string').and.satisfy(isNotLongerThan(SHORT_STRING));
   expect(row.SecurityClassification).to.eq('Public');
-  expect(row.PostConditionState).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
+  expect(row.PostConditionState).to.be.a('string').and.satisfy(isNotLongerThan(LONG_STRING));
   whenPopulated(row['PreConditionState(s)']).expect(isNotEmpty());
   whenPopulated(row.Description).expect(isNotLongerThan(LONG_STRING));
   whenPopulated(row.ShowSummary).expect(v => {
