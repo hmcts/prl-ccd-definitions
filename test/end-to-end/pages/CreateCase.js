@@ -26,7 +26,11 @@ module.exports = {
     await I.waitForClickable(this.fields.submit);
     await I.click(this.fields.submit);
   },
-
+  async fillCaseTypeOfApplication() {
+      const retryCount = 3;
+      await I.retry(retryCount).checkOption('//input[@id="caseTypeOfApplication-C100"]');
+      await I.click('Continue');
+  },
   async fillSolicitorApplicationPage() {
     await I.waitForElement('#applicantCaseName');
     await I.fillField('//input[@id="applicantCaseName"]', 'Test Child');
@@ -36,6 +40,7 @@ module.exports = {
   async createNewCase() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
+    await this.fillCaseTypeOfApplication();
     await this.fillSolicitorApplicationPage();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
