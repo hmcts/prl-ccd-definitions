@@ -1,6 +1,6 @@
-Feature('Manage Documents');
+Feature('MIAM');
 
-Scenario('Create an event and Submit the Supporting Documents', async I => {
+Scenario('MIAM - basic journey', async I => {
     await I.loginAsSolicitor();
     await I.createCase();
     await I.runManageDocuments();
