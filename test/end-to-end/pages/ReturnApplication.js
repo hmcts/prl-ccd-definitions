@@ -39,7 +39,7 @@ module.exports = {
         if(error) {
             throw error;
         }
-        const dataString = data.toString());
+        const dataString = data.toString();
     });
 
     await expect(text).toBe(dataString)
