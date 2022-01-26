@@ -18,6 +18,7 @@ const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/otherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
+const manageDocuments = require('./pages/ManageDocuments');
 
 module.exports = () => {
   return actor({
@@ -80,6 +81,9 @@ module.exports = () => {
     },
     viewPDFApplicationEvent() {
       return viewPDFApplication.runViewPDFApplicationEvent();
+    },
+    runManageDocuments() {
+      return manageDocuments.runManageDocumentsHappyPath();
     }
   });
 };

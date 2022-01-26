@@ -129,7 +129,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "otherPersonWhoLivesWithChild",
+    "ListElementCode": "personWhoLivesWithChild",
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "FieldShowCondition": "children.childLiveWith CONTAINS \"anotherPerson\"",
@@ -141,42 +141,40 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "isChildCurrentAddressKnown",
+    "ListElementCode": "personWhoLivesWithChild.firstName",
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "children.childLiveWith CONTAINS \"anotherPerson\""
+    "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address",
-    "EventElementLabel": " ",
+    "ListElementCode": "personWhoLivesWithChild.lastName",
+    "EventElementLabel": "",
     "FieldDisplayOrder": "14",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "children.isChildCurrentAddressKnown=\"Yes\" AND children.childLiveWith CONTAINS \"anotherPerson\""
+    "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.AddressLine1",
+    "ListElementCode": "personWhoLivesWithChild.relationshipToChildDetails",
     "EventElementLabel": "",
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.AddressLine2",
+    "ListElementCode": "personWhoLivesWithChild.address",
     "EventElementLabel": "",
     "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
@@ -187,7 +185,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.AddressLine3",
+    "ListElementCode": "personWhoLivesWithChild.address.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
     "DisplayContext": "OPTIONAL"
@@ -198,7 +196,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.PostTown",
+    "ListElementCode": "personWhoLivesWithChild.address.AddressLine2",
     "EventElementLabel": "",
     "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
@@ -209,7 +207,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.County",
+    "ListElementCode": "personWhoLivesWithChild.address.AddressLine3",
     "EventElementLabel": "",
     "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL"
@@ -220,7 +218,7 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.PostCode",
+    "ListElementCode": "personWhoLivesWithChild.address.PostTown",
     "EventElementLabel": "",
     "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL"
@@ -231,43 +229,64 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "address.Country",
+    "ListElementCode": "personWhoLivesWithChild.address.County",
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "isChildAddressConfidential",
+    "ListElementCode": "personWhoLivesWithChild.address.PostCode",
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
-    "FieldShowCondition": "children.isChildCurrentAddressKnown=\"Yes\" AND children.childLiveWith CONTAINS \"anotherPerson\"",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "05/11/2021",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "childUnsupervisedTime",
+    "ListElementCode": "personWhoLivesWithChild.address.Country",
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL"
   },
   {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "children",
+    "ListElementCode": "personWhoLivesWithChild.isPersonIdentityConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "C100",
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "childContactFromOtherRecipients",
+    "ListElementCode": "parentalResponsibility",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "25",
+    "DisplayContext": "READONLY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "C100",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "children",
+    "ListElementCode": "parentalResponsibilityDetails",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -278,7 +297,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "addNewChildLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "27",
     "DisplayContext": "MANDATORY"
   }
 ]
