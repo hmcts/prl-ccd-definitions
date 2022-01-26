@@ -202,7 +202,7 @@
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -285,6 +285,16 @@
     "CaseTypeID": "C100",
     "ID": "internal-update-task-list",
     "Name": "Update task list",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "ID": "internal-update-application-tab",
+    "Name": "Update application tab",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
