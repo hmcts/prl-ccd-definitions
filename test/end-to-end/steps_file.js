@@ -35,7 +35,10 @@ module.exports = () => {
       return generalHelper.triggerEvent(eventName);
     },
     createCase() {
-      return CreateCasePage.createNewCase();
+      return CreateCasePage.createNewCaseC100();
+    },
+    createCaseFL401() {
+      return CreateCasePage.createNewCaseFL401();
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
