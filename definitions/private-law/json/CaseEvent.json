@@ -346,5 +346,19 @@
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "27/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentRelationship",
+    "Name": "Relationship to respondent",
+    "DisplayOrder": 190,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
   }
 ]
