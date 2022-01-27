@@ -18,6 +18,7 @@ const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/otherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
+const manageDocuments = require('./pages/ManageDocuments');
 
 module.exports = () => {
   return actor({
@@ -34,7 +35,10 @@ module.exports = () => {
       return generalHelper.triggerEvent(eventName);
     },
     createCase() {
-      return CreateCasePage.createNewCase();
+      return CreateCasePage.createNewCaseC100();
+    },
+    createCaseFL401() {
+      return CreateCasePage.createNewCaseFL401();
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
@@ -80,6 +84,9 @@ module.exports = () => {
     },
     viewPDFApplicationEvent() {
       return viewPDFApplication.runViewPDFApplicationEvent();
+    },
+    runManageDocuments() {
+      return manageDocuments.runManageDocumentsHappyPath();
     }
   });
 };
