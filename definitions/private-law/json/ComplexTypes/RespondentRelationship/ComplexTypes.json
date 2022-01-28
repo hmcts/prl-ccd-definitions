@@ -3,9 +3,18 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "RespondentRelationObjectType",
+    "ListElementCode": "relationLabel",
+    "FieldType": "Label",
+    "ElementLabel": "### Select the applicant's relationship with the respondent:",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RespondentRelationObjectType",
     "ListElementCode": "applicantRelationship",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "applicantRelationshipEnum",
+    "FieldTypeParameter": "ApplicantRelationshipEnum",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
@@ -15,7 +24,7 @@
     "ID": "RespondentRelationDateInfo",
     "ListElementCode": "relationStartAndEndLabel",
     "FieldType": "Label",
-    "ElementLabel": "### When did their relationship start and when did it end? If unknown, \n ### please give an approximate date",
+    "ElementLabel": "### When did their relationship start and when did it end? If unknown,<br /> please give an approximate date",
     "SecurityClassification": "Public"
   },
   {
@@ -24,7 +33,8 @@
     "ID": "RespondentRelationDateInfo",
     "ListElementCode": "applicantRelationshipDateStart",
     "FieldType": "Date",
-    "ElementLabel": "Start",
+    "ElementLabel": " ",
+    "HintText": "Start",
     "SecurityClassification": "Public"
   },
   {
@@ -33,7 +43,8 @@
     "ID": "RespondentRelationDateInfo",
     "ListElementCode": "applicantRelationshipDateEnd",
     "FieldType": "Date",
-    "ElementLabel": "End (if applicable)",
+    "ElementLabel": " ",
+    "HintText": "End (if applicable)",
     "SecurityClassification": "Public"
   },
   {
@@ -42,7 +53,7 @@
     "ID": "RespondentRelationDateInfo",
     "ListElementCode": "weddingOrCeremonyLabel",
     "FieldType": "Label",
-    "ElementLabel": "### If the applicant is or was married or in a civil partnership with the \n ### respondent, what date was the wedding or civil ceremony? (optional)**",
+    "ElementLabel": "### If the applicant is or was married or in a civil partnership with the <br /> respondent, what date was the wedding or civil ceremony? (optional)",
     "SecurityClassification": "Public"
   },
   {
@@ -58,9 +69,18 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "RespondentRelationOptionsInfo",
+    "ListElementCode": "relationOptionsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "### What is the respondent’s relationship with the applicant (if not answered in the first question)?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RespondentRelationOptionsInfo",
     "ListElementCode": "applicantRelationshipOptions",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "applicantRelationshipOptionsEnum",
+    "FieldTypeParameter": "ApplicantRelationshipOptionsEnum",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   }

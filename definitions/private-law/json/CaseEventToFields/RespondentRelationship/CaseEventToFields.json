@@ -4,7 +4,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "respondentRelationship",
     "CaseFieldID": "respondentRelationObject",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -15,10 +15,23 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "respondentRelationship",
     "CaseFieldID": "respondentRelationDateInfoObject",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "respondentRelationObject.applicantRelationship != \"noneOfTheAbove\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "27/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "respondentRelationship",
+    "CaseFieldID": "respondentRelationOptions",
+    "DisplayContext": "COMPLEX",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "respondentRelationObject.applicantRelationship = \"noneOfTheAbove\"",
     "ShowSummaryChangeOption": "Yes"
   }
 ]
