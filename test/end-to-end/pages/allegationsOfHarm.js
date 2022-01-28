@@ -112,7 +112,7 @@ module.exports = {
     await I.fillField(this.fields.allegationsOfHarmOtherConcernsDetails, this.fields.textareaText);
     await I.fillField(this.fields.allegationsOfHarmOtherConcernsCourtActions, this.fields.textareaText);
 
-    //Child Contact
+    // Child Contact
     await I.checkOption('//*[@id="agreeChildUnsupervisedTime_Yes"]');
     await I.checkOption('//*[@id="agreeChildSupervisedTime_Yes"]');
     await I.checkOption('//*[@id="agreeChildOtherContact_Yes"]');
