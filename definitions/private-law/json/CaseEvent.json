@@ -16,6 +16,21 @@
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "C100",
+    "ID": "attendingTheHearing",
+    "Name": "Attending the hearing",
+    "Description": "Attending the hearing",
+    "DisplayOrder": 12,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "C100",
     "ID": "caseName",
     "Name": "Case name",
     "Description": "Case name",
@@ -110,8 +125,8 @@
     "Name": "MIAM",
     "Description": "MIAM",
     "DisplayOrder": 8,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -151,10 +166,10 @@
   {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "C100",
-    "ID": "otherProceedings",
-    "Name": "Other proceedings",
-    "Description": "Details of other preceedings",
-    "DisplayOrder": 11,
+    "ID": "internationalElement",
+    "Name": "International element",
+    "Description": "Details of the international element of the case",
+    "DisplayOrder": 13,
     "SecurityClassification": "Public",
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
@@ -164,27 +179,12 @@
     "EndButtonLabel": "Save and continue"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "21/11/2021",
     "CaseTypeID": "C100",
-    "ID": "attendingTheHearing",
-    "Name": "Attending the hearing",
-    "Description": "Attending the hearing",
-    "DisplayOrder": 12,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "EndButtonLabel": "Save and continue"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "C100",
-    "ID": "internationalElement",
-    "Name": "International element",
-    "Description": "Details of the international element of the case",
-    "DisplayOrder": 13,
+    "ID": "otherProceedings",
+    "Name": "Other proceedings",
+    "Description": "Details of other preceedings",
+    "DisplayOrder": 11,
     "SecurityClassification": "Public",
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
@@ -239,6 +239,31 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "ID": "internal-update-task-list",
+    "Name": "Update task list",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "C100",
+    "ID": "manageDocuments",
+    "Name": "Manage Documents",
+    "Description": "Manage Documents",
+    "DisplayOrder": 18,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "C100",
     "ID": "submitAndPay",
@@ -270,16 +295,6 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "C100",
-    "ID": "internal-update-task-list",
-    "Name": "Update task list",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "C100",
     "ID": "paymentSuccessCallback",
     "Name": "Payment confirmation",
     "PreConditionState(s)": "*",
@@ -296,6 +311,30 @@
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "27/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "attachScannedDocs",
+    "Name": "Attach scanned docs",
+    "Description": "Attach scanned docs",
+    "DisplayOrder": 17,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N"
+  },
+  {
+    "LiveFrom": "27/08/2021",
+    "CaseTypeID": "C100",
+    "ID": "handleEvidence",
+    "Name": "Handle supplementary evidence",
+    "Description": "Handle supplementary evidence",
+    "DisplayOrder": 18,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -318,8 +357,8 @@
     "Name": "People in the case",
     "Description": "People in the case",
     "DisplayOrder": 50,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -351,5 +390,20 @@
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/find-child-arrangements-court",
     "ShowSummary": "Y"
+   },
+   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "ID": "returnApplication",
+    "Name": "Return application",
+    "Description": "Return application",
+    "DisplayOrder": 103,
+    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PostConditionState": "AWAITING_RESUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
+
   }
 ]
