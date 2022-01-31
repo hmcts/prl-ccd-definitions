@@ -1,0 +1,80 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "doesApplicantHaveChildren",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "2",
+    "FieldShowCondition": "applicantFamilyDetails.doesApplicantHaveChildren = \"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild.fullName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild.dateOfBirth",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild.applicantChildRelationship",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild.applicantRespondentShareParental",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantFamilyDetailsObject",
+    "CaseEventID": "fl401ApplicantFamilyDetails",
+    "CaseFieldID": "applicantFamilyDetails",
+    "ListElementCode": "applicantChild.respondentChildRelationship",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "OPTIONAL"
+  }
+]
