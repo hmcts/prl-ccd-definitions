@@ -2,6 +2,24 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "RelationshipDateComplex",
+    "ListElementCode": "RelationshipDateComplexStartDate",
+    "FieldType": "Date",
+    "ElementLabel": "Start",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RelationshipDateComplex",
+    "ListElementCode": "RelationshipDateComplexEndDate",
+    "FieldType": "Date",
+    "ElementLabel": "End(if applicable)",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "RespondentRelationObjectType",
     "ListElementCode": "relationLabel",
     "FieldType": "Label",
@@ -31,20 +49,9 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "RespondentRelationDateInfo",
-    "ListElementCode": "applicantRelationshipDateStart",
-    "FieldType": "Date",
+    "ListElementCode": "relationStartAndEndComplexType",
+    "FieldType": "RelationshipDateComplex",
     "ElementLabel": "When did their relationship start and when did it end? If unknown, please give an approximate date",
-    "HintText": "Start",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespondentRelationDateInfo",
-    "ListElementCode": "applicantRelationshipDateEnd",
-    "FieldType": "Date",
-    "ElementLabel": "End (if applicable)",
-    "HintText": "End (if applicable)",
     "SecurityClassification": "Public"
   },
   {
@@ -82,6 +89,15 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ApplicantRelationshipOptionsEnum",
     "ElementLabel": "What is the respondent’s relationship with the applicant (if not answered in the first question)?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RespondentRelationOptionsInfo",
+    "ListElementCode": "relationOptionsOther",
+    "FieldType": "Text",
+    "ElementLabel": " ",
     "SecurityClassification": "Public"
   }
 ]

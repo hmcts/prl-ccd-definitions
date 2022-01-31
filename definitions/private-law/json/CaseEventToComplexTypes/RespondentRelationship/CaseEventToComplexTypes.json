@@ -30,7 +30,7 @@
     "ListElementCode": "relationStartAndEndLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "READONLY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -38,7 +38,18 @@
     "ID": "RespondentRelationDateInfo",
     "CaseEventID": "respondentRelationship",
     "CaseFieldID": "respondentRelationDateInfoObject",
-    "ListElementCode": "applicantRelationshipDateStart",
+    "ListElementCode": "relationStartAndEndComplexType",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RespondentRelationDateInfo",
+    "CaseEventID": "respondentRelationship",
+    "CaseFieldID": "respondentRelationDateInfoObject",
+    "ListElementCode": "relationStartAndEndComplexType.RelationshipDateComplexStartDate",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
@@ -49,7 +60,7 @@
     "ID": "RespondentRelationDateInfo",
     "CaseEventID": "respondentRelationship",
     "CaseFieldID": "respondentRelationDateInfoObject",
-    "ListElementCode": "applicantRelationshipDateEnd",
+    "ListElementCode": "relationStartAndEndComplexType.RelationshipDateComplexEndDate",
     "EventElementLabel": "",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -87,7 +98,6 @@
     "FieldDisplayOrder": "1",
     "DisplayContext": "READONLY"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -97,6 +107,18 @@
     "ListElementCode": "applicantRelationshipOptions",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "RespondentRelationOptionsInfo",
+    "CaseEventID": "respondentRelationship",
+    "CaseFieldID": "respondentRelationOptions",
+    "ListElementCode": "relationOptionsOther",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
+    "FieldShowCondition": "respondentRelationOptions.applicantRelationshipOptions = \"other\"",
     "DisplayContext": "MANDATORY"
   }
 ]
