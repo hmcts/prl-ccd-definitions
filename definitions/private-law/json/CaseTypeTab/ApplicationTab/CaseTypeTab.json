@@ -16,8 +16,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabHearingUrgencyLabel",
-    "TabFieldDisplayOrder": 2
+    "FieldShowCondition": "isCaseUrgent!=\"\"",
+    "CaseFieldID": "applicationTabHearingUrgencyLabel"
   },
   {
     "LiveFrom": "08/11/2021",
@@ -26,6 +26,7 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
+    "FieldShowCondition": "isCaseUrgent!=\"\"",
     "CaseFieldID": "hearingUrgencyTable",
     "TabFieldDisplayOrder": 3
   },
@@ -37,6 +38,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "applicationTabApplicantDetailsLabel",
+    "FieldShowCondition": "applicants!=\"\"",
     "TabFieldDisplayOrder": 4
   },
   {
@@ -47,6 +49,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "applicantTable",
+    "FieldShowCondition": "applicants!=\"\"",
     "TabFieldDisplayOrder": 5
   },
   {
@@ -57,6 +60,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "applicationTabRespondentDetailsLabel",
+    "FieldShowCondition": "respondents!=\"\"",
     "TabFieldDisplayOrder": 6
   },
   {
@@ -67,6 +71,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "respondentTable",
+    "FieldShowCondition": "respondents!=\"\"",
     "TabFieldDisplayOrder": 6
   },
   {
@@ -77,6 +82,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "applicationTabDeclarationLabel",
+    "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
     "TabFieldDisplayOrder": 6
   },
   {
@@ -86,6 +92,7 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
+    "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
     "CaseFieldID": "declarationTable",
     "TabFieldDisplayOrder": 6
   },
@@ -97,6 +104,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "applicationTabChildLabel",
+    "FieldShowCondition": "children!=\"\"",
     "TabFieldDisplayOrder": 7
   },
   {
@@ -107,6 +115,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
     "CaseFieldID": "children",
+    "FieldShowCondition": "children!=\"\"",
     "TabFieldDisplayOrder": 8
   },
   {
@@ -116,7 +125,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabTypeOfApplicationLabel",
+    "CaseFieldID": "childDetailsExtraTable",
+    "FieldShowCondition": "children!=\"\"",
     "TabFieldDisplayOrder": 9
   },
   {
@@ -126,7 +136,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "typeOfApplicationTable",
+    "CaseFieldID": "applicationTabTypeOfApplicationLabel",
+    "FieldShowCondition": "ordersApplyingFor!=\"\"",
     "TabFieldDisplayOrder": 10
   },
   {
@@ -136,7 +147,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabAllegationsOfHarmLabel",
+    "CaseFieldID": "typeOfApplicationTable",
+    "FieldShowCondition": "ordersApplyingFor!=\"\"",
     "TabFieldDisplayOrder": 11
   },
   {
@@ -146,7 +158,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "allegationsOfHarmOverviewTable",
+    "CaseFieldID": "applicationTabAllegationsOfHarmLabel",
+    "FieldShowCondition": "allegationsOfHarmYesNo!=\"\"",
     "TabFieldDisplayOrder": 12
   },
   {
@@ -156,7 +169,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabMiamLabel",
+    "CaseFieldID": "allegationsOfHarmOverviewTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo!=\"\"",
     "TabFieldDisplayOrder": 13
   },
   {
@@ -166,7 +180,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "miamTable",
+    "CaseFieldID": "applicationTabMiamLabel",
+    "FieldShowCondition": "applicantAttendedMiam!=\"\"",
     "TabFieldDisplayOrder": 14
   },
   {
@@ -176,7 +191,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "miamExemptionsTable",
+    "CaseFieldID": "miamTable",
+    "FieldShowCondition": "applicantAttendedMiam!=\"\"",
     "TabFieldDisplayOrder": 15
   },
   {
@@ -186,7 +202,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabOtherProceedingsLabel",
+    "CaseFieldID": "miamExemptionsTable",
+    "FieldShowCondition": "claimingExemptionMiam=\"Yes\"",
     "TabFieldDisplayOrder": 16
   },
   {
@@ -196,7 +213,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "otherProceedingsTable",
+    "CaseFieldID": "applicationTabOtherProceedingsLabel",
+    "FieldShowCondition": "existingProceedings!=\"\"",
     "TabFieldDisplayOrder": 17
   },
   {
@@ -206,7 +224,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "otherProceedingsDetailsTable",
+    "CaseFieldID": "otherProceedingsTable",
+    "FieldShowCondition": "existingProceedings!=\"\"",
     "TabFieldDisplayOrder": 18
   },
   {
@@ -216,7 +235,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabInternationalElementLabel",
+    "CaseFieldID": "otherProceedingsDetailsTable",
+    "FieldShowCondition": "existingProceedings!=\"\"",
     "TabFieldDisplayOrder": 19
   },
   {
@@ -226,7 +246,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "internationalElementTable",
+    "CaseFieldID": "applicationTabInternationalElementLabel",
+    "FieldShowCondition": "habitualResidentInOtherState=\"\"",
     "TabFieldDisplayOrder": 20
   },
   {
@@ -236,7 +257,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabAttendingTheHearingLabel",
+    "CaseFieldID": "internationalElementTable",
+    "FieldShowCondition": "habitualResidentInOtherState!=\"\"",
     "TabFieldDisplayOrder": 21
   },
   {
@@ -246,7 +268,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "attendingTheHearingTable",
+    "CaseFieldID": "applicationTabAttendingTheHearingLabel",
+    "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 22
   },
   {
@@ -256,7 +279,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "welshNeeds",
+    "CaseFieldID": "attendingTheHearingTable",
+    "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 23
   },
   {
@@ -266,7 +290,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "interpreterNeeds",
+    "CaseFieldID": "welshNeeds",
+    "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 24
   },
   {
@@ -276,7 +301,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabLitigationCapacityLabel",
+    "CaseFieldID": "interpreterNeeds",
+    "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 25
   },
   {
@@ -286,7 +312,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "litigationCapacityTable",
+    "CaseFieldID": "applicationTabLitigationCapacityLabel",
+    "FieldShowCondition": "litigationCapacityFactors!=\"\"",
     "TabFieldDisplayOrder": 26
   },
   {
@@ -296,7 +323,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabWelshLanguageRequirementsLabel",
+    "CaseFieldID": "litigationCapacityTable",
+    "FieldShowCondition": "litigationCapacityFactors!=\"\"",
     "TabFieldDisplayOrder": 27
   },
   {
@@ -306,7 +334,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "welshLanguageRequirementsTable",
+    "CaseFieldID": "applicationTabWelshLanguageRequirementsLabel",
+    "FieldShowCondition": "welshLanguageRequirement!=\"\"",
     "TabFieldDisplayOrder": 28
   },
   {
@@ -316,7 +345,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabOtherPeopleInTheCaseLabel",
+    "CaseFieldID": "welshLanguageRequirementsTable",
+    "FieldShowCondition": "welshLanguageRequirement!=\"\"",
     "TabFieldDisplayOrder": 29
   },
   {
@@ -326,7 +356,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "otherPeopleInTheCaseTable",
+    "CaseFieldID": "applicationTabOtherPeopleInTheCaseLabel",
+    "FieldShowCondition": "othersToNotify!=\"\"",
     "TabFieldDisplayOrder": 30
   },
   {
@@ -336,7 +367,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "applicationTabAllegationsOfHarmDetailsLabel",
+    "CaseFieldID": "otherPeopleInTheCaseTable",
+    "FieldShowCondition": "othersToNotify!=\"\"",
     "TabFieldDisplayOrder": 31
   },
   {
@@ -346,7 +378,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "allegationsOfHarmOrdersTable",
+    "CaseFieldID": "applicationTabAllegationsOfHarmDetailsLabel",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 32
   },
   {
@@ -356,7 +389,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "allegationsOfHarmDomesticAbuseTable",
+    "CaseFieldID": "allegationsOfHarmOrdersTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 33
   },
   {
@@ -366,7 +400,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "allegationsOfHarmChildAbductionTable",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuseTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 34
   },
   {
@@ -376,7 +411,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "behaviours",
+    "CaseFieldID": "allegationsOfHarmChildAbductionTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 35
   },
   {
@@ -386,7 +422,117 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "allegationsOfHarmOtherConcernsTable",
+    "CaseFieldID": "behaviours",
     "TabFieldDisplayOrder": 36
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "allegationsOfHarmOtherConcernsTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 37
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "allegationsOfHarmYesNo",
+    "FieldShowCondition": "allegationsOfHarmYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 38
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimingExemptionMiam",
+    "FieldShowCondition": "claimingExemptionMiam = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 39
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "applicantAttendedMiam",
+    "FieldShowCondition": "applicantAttendedMiam = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 40
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "habitualResidentInOtherState",
+    "FieldShowCondition": "habitualResidentInOtherState = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 41
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "isWelshNeeded",
+    "FieldShowCondition": "isWelshNeeded = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 42
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "ordersApplyingFor",
+    "FieldShowCondition": "ordersApplyingFor = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 43
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "litigationCapacityFactors",
+    "FieldShowCondition": "litigationCapacityFactors = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 44
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "welshLanguageRequirement",
+    "FieldShowCondition": "welshLanguageRequirement = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 45
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "isCaseUrgent",
+    "FieldShowCondition": "isCaseUrgent = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 46
   }
 ]
