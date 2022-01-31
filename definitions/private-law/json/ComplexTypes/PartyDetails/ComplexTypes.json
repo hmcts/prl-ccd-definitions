@@ -1,5 +1,13 @@
 [
   {
+    "LiveFrom": "05/01/2022",
+    "ID": "OtherPersonRelationshipToChild",
+    "ListElementCode": "personRelationshipToChild",
+    "FieldType": "Text",
+    "ElementLabel": "What is this person’s relationship to Child?",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "PartyDetails",
     "ListElementCode": "firstName",
@@ -170,7 +178,7 @@
     "ID": "PartyDetails",
     "ListElementCode": "addNewApplicantLabel",
     "FieldType": "Label",
-    "ElementLabel": "Add new applicant",
+    "ElementLabel": "## Add new applicant",
     "SecurityClassification": "Public"
   },
   {
@@ -324,7 +332,7 @@
     "ID": "PartyDetails",
     "ListElementCode": "addNewRespondentLabel",
     "FieldType": "Label",
-    "ElementLabel": "Add new respondent",
+    "ElementLabel": "## Add new respondent",
     "SecurityClassification": "Public"
   },
   {
@@ -333,6 +341,15 @@
     "ListElementCode": "addressOptionalLabel",
     "FieldType": "Label",
     "ElementLabel": "## Address (Optional)",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/01/2022",
+    "ID": "PartyDetails",
+    "ListElementCode": "otherPersonRelationshipToChildren",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherPersonRelationshipToChild",
+    "ElementLabel": " ",
     "SecurityClassification": "Public"
   }
 ]
