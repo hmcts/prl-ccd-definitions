@@ -8,7 +8,7 @@
     "ListElementCode": "orderType",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -16,7 +16,7 @@
     "ID": "LinkToCA",
     "CaseEventID": "fl401TypeOfApplication",
     "CaseFieldID": "typeOfApplicationLinkToCA",
-    "ListElementCode": "linkToCAApplication",
+    "ListElementCode": "linkToCaApplication",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
@@ -27,11 +27,11 @@
     "ID": "LinkToCA",
     "CaseEventID": "fl401TypeOfApplication",
     "CaseFieldID": "typeOfApplicationLinkToCA",
-    "ListElementCode": "linkToCAYes",
+    "ListElementCode": "linkToCaYes",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "READONLY",
-    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCAApplication=\"Yes\""
+    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCaApplication=\"Yes\""
   },
   {
     "LiveFrom": "26/01/2022",
@@ -43,6 +43,6 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCAApplication=\"Yes\""
+    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCaApplication=\"Yes\""
   }
 ]
