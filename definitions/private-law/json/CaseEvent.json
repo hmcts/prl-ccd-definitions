@@ -304,6 +304,17 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "C100",
+    "ID": "issueAndSendToLocalCourtCallback",
+    "Name": "Issue and send to local court",
+    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PostConditionState": "CASE_ISSUE",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-c8-document",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "C100",
     "ID": "paymentFailureCallback",
