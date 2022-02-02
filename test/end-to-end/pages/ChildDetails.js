@@ -29,9 +29,9 @@ module.exports = {
     await I.click(this.fields.submit);
     await I.wait('20');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-no"]');
-    await I.wait('1');
+    await I.wait('20');
     await I.retry(retryCount).checkOption('//input[@id="childrenSubjectOfChildProtectionPlan-yes"]');
-    await I.wait('1');
+    await I.wait('20');
     await I.click(this.fields.submit);
   },
 
