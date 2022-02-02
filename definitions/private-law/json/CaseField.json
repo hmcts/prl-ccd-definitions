@@ -1292,7 +1292,7 @@
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401ConfidentialityDisclaimerLabel1",
-    "Label": "## Confidentiality Statement\n\nWhen completing this form, you have the option to mark information as  \nconfidential.\n\nYou should do this if you wish to keep certain information private\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n- the Children and Family Court Advisory\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
+    "Label": "## Confidentiality Statement\n\n**When completing this form, you have the option to mark information as  \nconfidential and you do not need to complete a C8 form.**\n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2122,7 +2122,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayAgreeSignStmtLabel",
-    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true.  ### ${solicitorName}  is authorised by the applicant to sign this statement. ",
+    "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true. ${solicitorName}  is authorised by the applicant to sign this statement. ",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2189,6 +2189,14 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "submitAndPayDownloadApplicationLink",
+    "Label": " ",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "serviceRequest",
     "Label": "Service Request",
     "FieldType": "Label",
@@ -2207,6 +2215,47 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "paymentServiceRequestReferenceNumber",
     "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "rejectReasonLabel",
+    "Label": "### Reason for rejection",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "rejectReason",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "rejectReasonEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "returnMessageLabel",
+    "Label": "### Return message",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "returnMessage",
+    "Label": "Return message will be this",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "familymanCaseNumber",
+    "Label": "FamilyMan case number",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   },
