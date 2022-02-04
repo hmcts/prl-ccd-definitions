@@ -3,6 +3,7 @@ const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
+const TypeOfApplicationEventFL401 = require('./pages/TypeOfApplicationEventFL401');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const Miam = require('./pages/Miam.js');
 const ChildDetails = require('./pages/ChildDetails');
@@ -45,6 +46,9 @@ module.exports = () => {
     },
     typeOfApplicationEvent() {
       return TypeOfApplicationEvent.typeOfApplicationEvent();
+    },
+    typeOfApplicationEventFL401() {
+      return TypeOfApplicationEventFL401.typeOfApplicationEventFL401();
     },
     runMIAMEventHappyPath() {
       return Miam.runMIAMEventHappyPath();
