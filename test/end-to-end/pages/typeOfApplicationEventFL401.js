@@ -15,8 +15,8 @@ module.exports = {
     childArrangementOrderInstructionText: 'If you have also completed a Child Arrangements Order application enter the case number below.',
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
     childArrangementsCaseNumberField: '#typeOfApplicationLinkToCA_childArrangementsApplicationNumber',
-    //Case Number text format to be changed once Regex validation is introduced
-    childArrangementsCaseNumberText: 'Test Case Number',
+    //Case Number Regex validation error message to be introduced
+    childArrangementsCaseNumberText: '1234-1234-1234-1234',
     checkYourAnswersPageHeader: 'Check your answers'
   },
 
