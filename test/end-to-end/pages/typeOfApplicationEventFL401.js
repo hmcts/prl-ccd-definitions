@@ -8,13 +8,13 @@ module.exports = {
     submit: 'button[type="submit"]',
     nonMolestationOrder: '#typeOfApplicationOrders_orderType-nonMolestationOrder',
     occupationOrder: '#typeOfApplicationOrders_orderType-occupationOrder',
-    ordersApplyingForPageHeader: 'What order(s) are you applying for?',
+    ordersApplyingForPageHeader: 'Which order(s) are you applying for?',
     ordersApplyingForPageMandatoryText: 'Which order(s) are you applying for? is required',
     linkToChildArrangementsApplicationHeader: 'Is this linked to Child Arrangements application? (Optional)',
     linkedChildArrangementsApplicationYes: '#typeOfApplicationLinkToCA_linkToCaApplication_Yes',
     childArrangementOrderInstructionText: 'If you have also completed a Child Arrangements Order application enter the case number below.',
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
-    childArrangementsCaseNumberField: '#typeOfApplicationLinkToCA_childArrangementsApplicationNumber',
+    childArrangementsCaseNumberField: '#typeOfApplicationLinkToCA_caApplicationNumber',
     //Case Number Regex validation error message to be introduced
     childArrangementsCaseNumberText: '1234-1234-1234-1234',
     checkYourAnswersPageHeader: 'Check your answers'
@@ -39,8 +39,8 @@ module.exports = {
 
   async linkToChildArrangementsApplication() {
     await I.waitForText(this.fields.linkToChildArrangementsApplicationHeader);
-    await I.click(this.fields.consentOrderYes);
-    await I.wait('5');
+    await I.click(this.fields.linkedChildArrangementsApplicationYes);
+    //await I.wait('5');
     await I.waitForText(this.fields.childArrangementOrderInstructionText);
     await I.waitForText(this.fields.childArrangementCaseNumberLabel);
     await I.fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);   
