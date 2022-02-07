@@ -383,6 +383,22 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "28/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentBehaviour",
+    "Name": "Respondent's Behaviour",
+    "Description": "Respondent's Behaviour",
+    "DisplayOrder": 103,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401TypeOfApplication",

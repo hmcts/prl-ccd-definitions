@@ -20,6 +20,7 @@ const otherProceedings = require('./pages/otherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
+const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 
 module.exports = () => {
   return actor({
@@ -91,6 +92,9 @@ module.exports = () => {
     },
     runManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
+    },
+    runRespondentBehaviour() {
+      return respondentBehaviour.runEventRespondentBehaviour();
     }
   });
 };
