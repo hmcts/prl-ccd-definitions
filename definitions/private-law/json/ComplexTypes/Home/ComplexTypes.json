@@ -4,7 +4,7 @@
     "ID": "RentedProperty",
     "ListElementCode": "rentalNamedAfter",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "mortgageNamedAfterEnum",
+    "FieldTypeParameter": "MortgageNamedAfterEnum",
     "ElementLabel": "Who is named on the rental agreement? Please specify all that apply",
     "SecurityClassification": "Public"
   },
@@ -38,7 +38,7 @@
     "ID": "Mortgage",
     "ListElementCode": "mortgageNamedAfter",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "mortgageNamedAfterEnum",
+    "FieldTypeParameter": "MortgageNamedAfterEnum",
     "ElementLabel": "Who is named on the mortgage (please select all that apply)?",
     "SecurityClassification": "Public"
   },
@@ -95,8 +95,9 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildrenLiveAtAddress",
-    "ListElementCode": "childAge",
-    "FieldType": "Text",
+    "ListElementCode": "childsAge",
+    "FieldType": "Number",
+    "Min": 1,
     "ElementLabel": "Child’s age",
     "SecurityClassification": "Public"
   },
@@ -129,7 +130,7 @@
     "ID": "Home",
     "ListElementCode": "peopleLivingAtThisAddress",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "peopleLivingAtThisAddressEnum",
+    "FieldTypeParameter": "PeopleLivingAtThisAddressEnum",
     "ElementLabel": "Who currently lives at the above address (please select all that apply)?",
     "SecurityClassification": "Public"
   },
@@ -159,7 +160,7 @@
     "ListElementCode": "everLivedAtTheAddressNo",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoBothEnum",
-    "FieldShowCondition": "everLivedAtTheAddress=\"no\"",
+    "FieldShowCondition": "everLivedAtTheAddress=\"No\"",
     "ElementLabel": "Did the applicant or the respondent ever intend to live in the address?",
     "SecurityClassification": "Public"
   },
@@ -177,7 +178,7 @@
     "ListElementCode": "doAnyChildrenLiveAtAddressYes",
     "FieldType": "Collection",
     "FieldTypeParameter": "ChildrenLiveAtAddress",
-    "ElementLabel": " ",
+    "ElementLabel": "Child",
     "FieldShowCondition": "doAnyChildrenLiveAtAddress=\"Yes\"",
     "SecurityClassification": "Public"
   },
@@ -213,7 +214,7 @@
     "ListElementCode": "mortgageOnPropertyYesOrNoIsYes",
     "FieldType": "Collection",
     "FieldTypeParameter": "Mortgage",
-    "ElementLabel": " ",
+    "ElementLabel": "Mortgage",
     "FieldShowCondition": "mortgageOnPropertyYesOrNo=\"Yes\"",
     "SecurityClassification": "Public"
   },
@@ -232,7 +233,7 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "RentedProperty",
     "FieldShowCondition": "isPropertyRentedYesNo=\"Yes\"",
-    "ElementLabel": " ",
+    "ElementLabel": "Landlord",
     "SecurityClassification": "Public"
   },
   {
@@ -248,7 +249,7 @@
     "ID": "Home",
     "ListElementCode": "livingSituation",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "livingSituationEnum",
+    "FieldTypeParameter": "LivingSituationEnum",
     "ElementLabel": "What exactly does the applicant want to happen with their living situation?",
     "SecurityClassification": "Public"
   },
@@ -257,7 +258,7 @@
     "ID": "Home",
     "ListElementCode": "familyHome",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "familyHomeEnum",
+    "FieldTypeParameter": "FamilyHomeEnum",
     "ElementLabel": "Is there anything else the applicant wants to happen with their family home?",
     "SecurityClassification": "Public"
   },
