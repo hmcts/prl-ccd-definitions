@@ -20,6 +20,7 @@ const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
+const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 
 module.exports = () => {
   return actor({
@@ -91,6 +92,9 @@ module.exports = () => {
     },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
+    },
+    runWithoutNoticeOrderHappyPath() {
+      return withOutNoticeOrder.fillDetailsWithoutNoticeOrderHappyPath();
     }
   });
 };
