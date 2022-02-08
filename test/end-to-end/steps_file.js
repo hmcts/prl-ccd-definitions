@@ -20,6 +20,7 @@ const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
+const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
 
 module.exports = () => {
   return actor({
@@ -91,6 +92,9 @@ module.exports = () => {
     },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
+    },
+    runRelationshipToRespondent() {
+      return relationshipToRespondent.runEventrelationshipToRespondent();
     }
   });
 };
