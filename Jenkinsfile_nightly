@@ -1,11 +1,11 @@
 #!groovy
 
 properties([
-        pipelineTriggers([cron('00 20 * * *')]),
-        parameters([
-                string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
-                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
-        ])
+    pipelineTriggers([cron('00 20 * * *')]),
+    parameters([
+        string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
+        string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
+    ])
 ])
 
 @Library("Infrastructure")
@@ -42,8 +42,8 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
-    env.TEST_URL = "https://manage-case.aat.platform.hmcts.net"
-    env.test_environment = "aat"
+    env.TEST_URL = params.XUI_WEB_URL
+    env.test_environment = params.RUNNING_ENV
 
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
