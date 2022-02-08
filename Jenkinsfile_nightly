@@ -12,6 +12,7 @@ properties([
 
 String product = "prl"
 String component = "ccd-definitions"
+def channel = '#prl-tech-notifications'
 
 def secrets = [
         's2s-${env}'      : [
@@ -41,10 +42,12 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
-    env.NODE_ENV='ci'
+    env.TEST_URL = params.XUI_WEB_URL
+    env.test_environment = params.RUNNING_ENV
 
     loadVaultSecrets(secrets)
-    enableFullFunctionalTest()
+    enableSlackNotifications(channel)
+    enableFullFunctionalTest(200)
 
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
