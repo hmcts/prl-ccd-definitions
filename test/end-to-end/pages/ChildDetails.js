@@ -31,7 +31,7 @@ module.exports = {
     await I.waitForText('Are any of the children known to the local authority children\'s services? (Optional)');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');
     await I.wait('1');
-    await I.fillField('//input[@id="childrenKnownToLocalAuthorityTextArea"]', 'Text Area');
+    await I.fillField('#childrenKnownToLocalAuthorityTextArea', 'Text Area');
     await I.wait('1');
     await I.retry(retryCount).checkOption('//input[@id="childrenSubjectOfChildProtectionPlan-yes"]');
     await I.wait('1');
