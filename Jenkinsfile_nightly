@@ -42,8 +42,8 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
-    env.TEST_URL = params.XUI_WEB_URL
-    env.test_environment = params.RUNNING_ENV
+    env.TEST_URL = "https://manage-case.aat.platform.hmcts.net"
+    env.test_environment = "aat"
 
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
