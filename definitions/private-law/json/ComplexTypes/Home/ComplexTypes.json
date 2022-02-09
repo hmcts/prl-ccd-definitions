@@ -1,8 +1,8 @@
 [
   {
     "LiveFrom": "20/08/2021",
-    "ID": "RentedProperty",
-    "ListElementCode": "rentalNamedAfter",
+    "ID": "Landlord",
+    "ListElementCode": "mortgageNamedAfterList",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MortgageNamedAfterEnum",
     "ElementLabel": "Who is named on the rental agreement? Please specify all that apply",
@@ -10,16 +10,16 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "RentedProperty",
+    "ID": "Landlord",
     "ListElementCode": "textAreaSomethingElse",
     "FieldType": "TextArea",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "rentalNamedAfter CONTAINS \"someoneElse\""
+    "FieldShowCondition": "mortgageNamedAfterList CONTAINS \"someoneElse\""
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "RentedProperty",
+    "ID": "Landlord",
     "ListElementCode": "landlordName",
     "FieldType": "Text",
     "ElementLabel": "What is the name of the landlord of the rented property?",
@@ -27,7 +27,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "RentedProperty",
+    "ID": "Landlord",
     "ListElementCode": "address",
     "FieldType": "AddressUK",
     "ElementLabel": " ",
@@ -104,7 +104,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildrenLiveAtAddress",
-    "ListElementCode": "isRespondentResponsisbleYesNo",
+    "ListElementCode": "isRespondentResponsisbleForChild",
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the respondent also responsible for the child?",
     "SecurityClassification": "Public"
@@ -157,7 +157,7 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "Home",
-    "ListElementCode": "everLivedAtTheAddressNo",
+    "ListElementCode": "intendToLiveAtTheAddress",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoBothEnum",
     "FieldShowCondition": "everLivedAtTheAddress=\"No\"",
@@ -175,7 +175,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "doAnyChildrenLiveAtAddressYes",
+    "ListElementCode": "children",
     "FieldType": "Collection",
     "FieldTypeParameter": "ChildrenLiveAtAddress",
     "ElementLabel": "Child",
@@ -185,7 +185,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "propertyAdaptedYesOrNo",
+    "ListElementCode": "isPropertyAdapted",
     "FieldType": "YesOrNo",
     "ElementLabel": "Does the property have any features or adaptations that make it more accessible for the applicant, their children or anyone else living there?",
     "SecurityClassification": "Public"
@@ -193,17 +193,17 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "propertyAdaptedYesOrNoYes",
+    "ListElementCode": "howIsThePropertyAdapted",
     "FieldType": "TextArea",
     "ElementLabel": " ",
     "HintText": "Please provide details of how the property is specially adapted",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "propertyAdaptedYesOrNo = \"Yes\""
+    "FieldShowCondition": "isPropertyAdapted = \"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "mortgageOnPropertyYesOrNo",
+    "ListElementCode": "isThereMortgageOnProperty",
     "FieldType": "YesOrNo",
     "ElementLabel": "Is there a mortgage on the property?",
     "SecurityClassification": "Public"
@@ -211,17 +211,17 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "mortgageOnPropertyYesOrNoIsYes",
+    "ListElementCode": "mortgages",
     "FieldType": "Collection",
     "FieldTypeParameter": "Mortgage",
     "ElementLabel": "Mortgage",
-    "FieldShowCondition": "mortgageOnPropertyYesOrNo=\"Yes\"",
+    "FieldShowCondition": "isThereMortgageOnProperty=\"Yes\"",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "isPropertyRentedYesNo",
+    "ListElementCode": "isPropertyRented",
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the property rented?",
     "SecurityClassification": "Public"
@@ -229,17 +229,17 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "isPropertyRentedYesNoIsYes",
+    "ListElementCode": "landlords",
     "FieldType": "Collection",
-    "FieldTypeParameter": "RentedProperty",
-    "FieldShowCondition": "isPropertyRentedYesNo=\"Yes\"",
+    "FieldTypeParameter": "Landlord",
+    "FieldShowCondition": "isPropertyRented=\"Yes\"",
     "ElementLabel": "Landlord",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Home",
-    "ListElementCode": "applicantHomeRightYesOrNo",
+    "ListElementCode": "doesApplicantHaveHomeRights",
     "FieldType": "YesOrNo",
     "ElementLabel": "Does the applicant have any home rights?",
     "SecurityClassification": "Public"
