@@ -117,7 +117,7 @@ module.exports = {
     await I.click('Save and continue');
   },
 
-  async typeOfApplicationEvent() {
+  async typeOfApplicationEventC100() {
     await this.actionTypeOfApplicationEvent();
     await this.whatOrdersPageC100();
     await this.draftConsentOrderC100();
