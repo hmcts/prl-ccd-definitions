@@ -16,7 +16,7 @@ module.exports = {
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
     childArrangementsCaseNumberField: '#typeOfApplicationLinkToCA_caApplicationNumber',
     //Case Number Regex validation error message to be introduced
-    childArrangementsCaseNumberText: '1234-1234-1234-1234',
+    childArrangementsCaseNumberText: '1234123412341234',
     checkYourAnswersPageHeader: 'Check your answers'
   },
 
