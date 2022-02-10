@@ -8,7 +8,19 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No"
+    "ShowSummaryChangeOption": "No",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/mid-event"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "C100",
+    "CaseEventID": "sendAndReplyToMessages",
+    "CaseFieldID": "replyMessageDynamicList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "PageID": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "03/02/2022",
@@ -16,7 +28,7 @@
     "CaseEventID": "sendAndReplyToMessages",
     "CaseFieldID": "messageObject",
     "DisplayContext": "COMPLEX",
-    "PageShowCondition": "chooseSendOrReply=\"sendMessage\"",
+    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
@@ -28,9 +40,21 @@
     "CaseEventID": "sendAndReplyToMessages",
     "CaseFieldID": "messageContent",
     "DisplayContext": "MANDATORY",
-    "PageShowCondition": "chooseSendOrReply=\"sendMessage\"",
+    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 3,
     "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "C100",
+    "CaseEventID": "sendAndReplyToMessages",
+    "CaseFieldID": "messageReply",
+    "DisplayContext": "COMPLEX",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes"
   }

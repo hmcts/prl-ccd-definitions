@@ -13,7 +13,7 @@
     "CaseTypeID": "C100",
     "ID": "messageObject",
     "Label": " ",
-    "FieldType": "Message",
+    "FieldType": "MessageMetaData",
     "SecurityClassification": "Public"
   },
   {
@@ -22,6 +22,32 @@
     "ID": "messageContent",
     "Label": "Message",
     "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "C100",
+    "ID": "messages",
+    "Label": "Message",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Message",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "C100",
+    "ID": "replyMessageDynamicList",
+    "Label": "Your messages",
+    "HintText": "Message subject comprises application type and urgency, if relevant , and date requested.",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "C100",
+    "ID": "messageReply",
+    "Label": " ",
+    "FieldType": "Message",
     "SecurityClassification": "Public"
   }
 ]
