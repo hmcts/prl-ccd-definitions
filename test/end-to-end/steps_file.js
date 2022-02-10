@@ -71,8 +71,11 @@ module.exports = () => {
     internationalElement() {
       return InternationalElement.internationalElement();
     },
-    respondentDetails() {
-      return RespondentDetails.respondentDetails();
+    respondentDetailsC100() {
+      return RespondentDetails.respondentDetailsC100();
+    },
+    respondentDetailsFL401() {
+      return RespondentDetails.respondentDetailsFL401();
     },
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
