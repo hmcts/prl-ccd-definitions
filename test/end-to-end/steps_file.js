@@ -45,8 +45,11 @@ module.exports = () => {
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
     },
-    typeOfApplicationEvent() {
-      return TypeOfApplicationEvent.typeOfApplicationEvent();
+    typeOfApplicationEventC100() {
+      return TypeOfApplicationEvent.typeOfApplicationEventC100();
+    },
+    typeOfApplicationEventFL401() {
+      return TypeOfApplicationEvent.typeOfApplicationEventFL401();
     },
     runMIAMEventHappyPath() {
       return Miam.runMIAMEventHappyPath();
