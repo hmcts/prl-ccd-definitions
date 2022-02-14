@@ -52,8 +52,8 @@
     "Name": "Type of application",
     "Description": "Type of application",
     "DisplayOrder": 3,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -138,6 +138,21 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401ApplicantFamilyDetails",
+    "Name": "Applicant’s family",
+    "Description": "Details of the Applicant’s family",
+    "DisplayOrder": 8,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "11/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "miam",
@@ -210,11 +225,12 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -409,6 +425,22 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401TypeOfApplication",
+    "Name": "Type of application",
+    "Description": "Type of application",
+    "DisplayOrder": 100,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
