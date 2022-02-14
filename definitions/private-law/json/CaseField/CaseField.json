@@ -2,6 +2,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
+    "ID": "courtName",
+    "Label": "Court name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
     "ID": "taskList",
     "Label": "Case name",
     "FieldType": "Text",
@@ -1051,6 +1059,23 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "05/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamChildProtectionConcernLabel",
+    "Label": "## MIAM Evidence: What reason does the applicant have for child protection concerns?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamChildProtectionConcernList",
+    "Label": "The applicant confirms that a child who would be the subject of the\napplication or another child of the family who is living\nwith that child is currently",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MiamChildProtectionConcernChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "miamUrgencyReasonLabel",
@@ -1153,7 +1178,7 @@
     "LiveFrom": "13/10/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "miamCertificationDocumentUpload",
-    "Label": "Upload a file",
+    "Label": "MIAM certificate",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1201,7 +1226,7 @@
     "LiveFrom": "13/10/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "miamCertificationDocumentUpload1",
-    "Label": "Upload a file",
+    "Label": "MIAM certificate",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1217,7 +1242,7 @@
     "LiveFrom": "05/10/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "draftConsentOrderFile",
-    "Label": "Draft Consent Order",
+    "Label": "Draft consent order",
     "FieldType": "Document",
     "HintText": "Upload a scanned PDF or DOCX of the draft consent order, signed by both parties. Wherever possible, documents should be scanned in greyscale.",
     "RegularExpression": ".pdf,.docx",
@@ -1809,7 +1834,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersNonMolestationDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Non-molestation order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1849,7 +1874,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersOccupationDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Occupation order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1889,7 +1914,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersForcedMarriageProtectionDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Forced marriage protection order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1929,7 +1954,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersRestrainingDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Restraining order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -1969,7 +1994,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersOtherInjunctiveDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Other injunctive order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2009,7 +2034,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ordersUndertakingInPlaceDocument",
-    "Label": "Upload relevant order(s)",
+    "Label": "Undertaking in place order document",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2116,7 +2141,7 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "draftOrderDoc",
-    "Label": "Draft Order",
+    "Label": "C100 draft order",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2126,6 +2151,31 @@
     "ID": "id",
     "Label": " ",
     "FieldType": "Number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "documentCategoryChecklist",
+    "Label": "Choose a document category",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "documentCategoryChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameManageDocuments",
+    "Label": "## ${applicantCaseName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "furtherEvidenceLabel",
+    "Label": "## Further evidence - further application document",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
@@ -2157,6 +2207,32 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayAgreeSignStmtLabel",
     "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true. ${solicitorName}  is authorised by the applicant to sign this statement. ",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "mainApplicationDocument",
+    "Label": "Documents",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "FurtherEvidence",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "giveDetails",
+    "Label": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "correspondenceLabel",
+    "Label": "## Correspondence",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2196,6 +2272,24 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "correspondence",
+    "Label": "Supporting documents",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Correspondence",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherDocumentsLabel",
+    "Label": "## Other documents",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "feeAmount",
@@ -2213,6 +2307,16 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherDocuments",
+    "Label": "Supporting documents",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherDocuments",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLinkLabel",
@@ -2224,7 +2328,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": " ",
+    "Label": "C100 draft order",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2250,6 +2354,23 @@
     "ID": "paymentServiceRequestReferenceNumber",
     "Label": " ",
     "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "27/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "scannedDocuments",
+    "Label": "Scanned Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ScannedDocument",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "27/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "evidenceHandled",
+    "Label": "Supplementary evidence handled",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
   {
@@ -2313,6 +2434,81 @@
     "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "familymanCaseNumber",
+    "Label": "FamilyMan case number",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameManageDocuments1",
+    "Label": "## ${applicantCaseName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameManageDocuments2",
+    "Label": "## ${applicantCaseName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameManageDocuments3",
+    "Label": "## ${applicantCaseName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "localCourtHint",
+    "Label": "Let the local court admin know there’s a new case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "localCourtAdmin",
+    "Label": "Local Court Admin",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "localCourtAdminEmail",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c8Document",
+    "Label": "C8 Document",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "userInfo",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "UserInfo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseworkerEmailAddress",
+    "Label": "FamilyMan case number",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantSolicitorEmailAddress",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
     "SecurityClassification": "Public"
