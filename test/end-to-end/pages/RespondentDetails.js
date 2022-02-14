@@ -5,7 +5,7 @@ module.exports = {
     headerText: 'Respondent details',
     textareaText: 'Respondent details',
     respondentAddress: 'respondents_0_address_address',
-    respondentAddressFL401: 'respondentsFL401_address_address', 
+    respondentAddressFL401: 'respondentsFL401_address_address',
     submit: 'button[type="submit"]',
     organisation: 'AAT'
   },
@@ -18,7 +18,7 @@ module.exports = {
     await I.click(locate('a').withText('Select')
       .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
   },
-  
+
   async respondentDetailsC100() {
     const retryCount = 3;
     await I.triggerEvent(this.fields.headerText);
@@ -61,11 +61,11 @@ module.exports = {
     const retryCount = 3;
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
-    I.wait('2');   
+    I.wait('2');
     await I.fillField('//input[@id="respondentsFL401_firstName"]', 'Respondent Firstname');
     I.wait('2');
     await I.fillField('//input[@id="respondentsFL401_lastName"]', 'Respondent Lastname');
-    await I.retry(retryCount).checkOption('//input[@id="respondentsFL401_isDateOfBirthKnown_Yes"]'); 
+    await I.retry(retryCount).checkOption('//input[@id="respondentsFL401_isDateOfBirthKnown_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '11');
     I.wait('2');
@@ -86,5 +86,3 @@ module.exports = {
     await I.click('Save and continue');
   }
 };
-
-
