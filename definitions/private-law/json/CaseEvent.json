@@ -164,7 +164,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -180,7 +180,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -196,7 +196,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -242,7 +242,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -334,16 +334,6 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "internal-update-task-list",
-    "Name": "Update task list",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
     "ID": "paymentSuccessCallback",
     "Name": "Payment confirmation",
     "PreConditionState(s)": "*",
@@ -386,7 +376,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -520,12 +509,11 @@
     "Description": "Home situation",
     "DisplayOrder": 8,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+    "EndButtonLabel": "Save and continue"
   }
 ]
