@@ -87,7 +87,7 @@ module.exports = {
   async checkYourAnswersPageC100() {
     await I.waitForText(this.fields.checkYourAnswersPageHeader);
     await I.waitForText(this.fields.textareaText);
-    await I.seeDocuments('Draft Consent Order', 'dummy.pdf');
+    await I.seeDocuments('Draft consent order', 'dummy.pdf');
     await I.click('Save and continue');
   },
 
