@@ -20,6 +20,7 @@ const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
+const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
 const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
 const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
 
@@ -99,6 +100,9 @@ module.exports = () => {
     },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
+    },
+    runRelationshipToRespondent() {
+      return relationshipToRespondent.runEventrelationshipToRespondent();
     },
     runDOAttendingTheHearingEvent() {
       return DOAttendingTheHearing.runEventHappyPathAttendingTheHearingDO();
