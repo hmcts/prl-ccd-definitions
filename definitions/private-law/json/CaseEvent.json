@@ -424,5 +424,20 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "3/02/2022",
+    "CaseTypeID": "C100",
+    "ID": "WithdrawApplication_Event",
+    "Name": "Withdraw application",
+    "Description": "Withdraw application",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PostConditionState":  "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;SUBMITTED_PAID",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
   }
 ]
