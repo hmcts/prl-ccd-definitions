@@ -1,0 +1,36 @@
+[
+  {
+    "LiveFrom": "26/01/2022",
+    "ID": "TypeOfApplicationOrders",
+    "ListElementCode": "orderType",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FL401OrderTypeEnum",
+    "ElementLabel": "Which order(s) are you applying for?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "ID": "LinkToCA",
+    "ListElementCode": "linkToCaApplication",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is this linked to Child Arrangements application?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "ID": "LinkToCA",
+    "ListElementCode": "linkToCaYes",
+    "FieldType": "Label",
+    "ElementLabel": "If you have also completed a Child Arrangements Order application enter the case number below.",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "ID": "LinkToCA",
+    "ListElementCode": "caApplicationNumber",
+    "FieldType": "Text",
+    "RegularExpression": "^[0-9]{9,}$",
+    "ElementLabel": "Child Arrangements Case Number (FamilyMan cases not supported)",
+    "SecurityClassification": "Public"
+  }
+]
