@@ -38,7 +38,7 @@ module.exports = {
     childArrangementOrderInstructionText: 'If you have also completed a Child Arrangements Order application enter the case number below.',
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
     childArrangementsCaseNumberField: '#typeOfApplicationLinkToCA_caApplicationNumber',
-    //Case Number Regex validation error message to be introduced
+    // Case Number Regex validation error message to be introduced
     childArrangementsCaseNumberText: '1234123412341234',
     checkYourAnswersPageHeader: 'Check your answers'
   },
@@ -93,24 +93,24 @@ module.exports = {
 
   async ordersApplyingForPageFL401() {
     await I.waitForText(this.fields.ordersApplyingForPageHeader);
-    //Checking mandatory field validation
+    // Checking mandatory field validation
     await I.click(this.fields.submit);
     await I.waitForText(this.fields.ordersApplyingForPageMandatoryText);
     await I.click(this.fields.nonMolestationOrder);
     await I.click(this.fields.occupationOrder);
     await I.click('Continue');
   },
-  
+
   async linkToChildArrangementsApplicationFL401() {
     await I.waitForText(this.fields.linkToChildArrangementsApplicationHeader);
     await I.click(this.fields.linkedChildArrangementsApplicationYes);
-    //await I.wait('5');
+    // await I.wait('5');
     await I.waitForText(this.fields.childArrangementOrderInstructionText);
     await I.waitForText(this.fields.childArrangementCaseNumberLabel);
-    await I.fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);   
+    await I.fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
     await I.click('Continue');
   },
-  
+
   async checkYourAnswersPageFL401() {
     await I.waitForText(this.fields.checkYourAnswersPageHeader);
     await I.waitForText(this.fields.childArrangementsCaseNumberText);
@@ -125,7 +125,7 @@ module.exports = {
     await this.briefDetailsPageC100();
     await this.checkYourAnswersPageC100();
   },
-  
+
   async typeOfApplicationEventFL401() {
     await this.actionTypeOfApplicationEvent();
     await this.ordersApplyingForPageFL401();
