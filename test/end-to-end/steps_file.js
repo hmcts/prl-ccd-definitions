@@ -23,6 +23,8 @@ const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
 const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
 const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
+const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
+
 
 module.exports = () => {
   return actor({
@@ -109,6 +111,9 @@ module.exports = () => {
     },
     runApplicantsFamilyEvent() {
       return applicantsFamily.runEventApplicantsFamily();
+    },
+    runWithoutNoticeOrderHappyPath() {
+      return withOutNoticeOrder.fillDetailsWithoutNoticeOrderHappyPath();
     }
   });
 };
