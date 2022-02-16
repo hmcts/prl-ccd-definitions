@@ -106,7 +106,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "organisationIdentifier",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -114,7 +114,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "name",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -122,7 +122,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "companyNumber",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -130,7 +130,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "companyUrl",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -138,7 +138,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "sraId",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -146,7 +146,7 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "sraRegulated",
     "FieldType": "Text",
     "ElementLabel": " ",
@@ -154,31 +154,32 @@
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
     "ListElementCode": "status",
     "FieldType": "Text",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
-  private List<ContactInformation> contactInformation;
-  private String name;
-  private String organisationIdentifier;
-  private List<String> paymentAccount;
-  private String sraId;
-  private boolean sraRegulated;
-  private String status;
-  private SuperUser superUser;
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
-    "ListElementCode": "contactInformation",
-    "FieldType": "ContactInformation",
+    "ID": "Organisations",
+    "ListElementCode": "statusMessage",
+    "FieldType": "Text",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "15/02/2022",
-    "ID": "OrganisationDetails",
+    "ID": "Organisations",
+    "ListElementCode": "contactInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ContactInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "Organisations",
     "ListElementCode": "superUser",
     "FieldType": "SuperUser",
     "ElementLabel": " ",
