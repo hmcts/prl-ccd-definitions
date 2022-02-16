@@ -82,6 +82,30 @@
   },
   {
     "LiveFrom": "15/02/2022",
+    "ID": "SuperUser",
+    "ListElementCode": "email",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "SuperUser",
+    "ListElementCode": "firstName",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "SuperUser",
+    "ListElementCode": "lastName",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
     "ID": "OrganisationDetails",
     "ListElementCode": "organisationIdentifier",
     "FieldType": "Text",
@@ -99,9 +123,64 @@
   {
     "LiveFrom": "15/02/2022",
     "ID": "OrganisationDetails",
+    "ListElementCode": "companyNumber",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
+    "ListElementCode": "companyUrl",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
+    "ListElementCode": "sraId",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
+    "ListElementCode": "sraRegulated",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
+    "ListElementCode": "status",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  private List<ContactInformation> contactInformation;
+  private String name;
+  private String organisationIdentifier;
+  private List<String> paymentAccount;
+  private String sraId;
+  private boolean sraRegulated;
+  private String status;
+  private SuperUser superUser;
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
     "ListElementCode": "contactInformation",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "ContactInformation",
+    "FieldType": "ContactInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "15/02/2022",
+    "ID": "OrganisationDetails",
+    "ListElementCode": "superUser",
+    "FieldType": "SuperUser",
     "ElementLabel": " ",
     "SecurityClassification": "Public"
   }
