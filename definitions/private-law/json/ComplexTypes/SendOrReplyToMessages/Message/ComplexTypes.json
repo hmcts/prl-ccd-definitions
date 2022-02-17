@@ -4,7 +4,7 @@
     "ID": "Message",
     "ListElementCode": "senderEmail",
     "FieldType": "Email",
-    "ElementLabel": "Message from",
+    "ElementLabel": "From",
     "SecurityClassification": "Public"
   },
   {
@@ -12,23 +12,7 @@
     "ID": "Message",
     "ListElementCode": "recipientEmail",
     "FieldType": "Email",
-    "ElementLabel": "Recipient’s email address",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "10/11/2021",
-    "ID": "Message",
-    "ListElementCode": "messageSubject",
-    "FieldType": "Text",
-    "ElementLabel": "Message subject",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "10/11/2021",
-    "ID": "Message",
-    "ListElementCode": "messageUrgency",
-    "FieldType": "Text",
-    "ElementLabel": "Urgency",
+    "ElementLabel": "Sent to",
     "SecurityClassification": "Public"
   },
   {
@@ -42,9 +26,26 @@
   {
     "LiveFrom": "10/11/2021",
     "ID": "Message",
-    "ListElementCode": "updatedTime",
-    "FieldType": "DateTime",
-    "ElementLabel": " ",
+    "ListElementCode": "messageUrgency",
+    "FieldType": "Text",
+    "ElementLabel": "Urgency",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "messageSubject",
+    "FieldType": "Text",
+    "ElementLabel": "Message subject",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "latestMessage",
+    "FieldType": "TextArea",
+    "ElementLabel": "Latest message",
+    "FieldShowCondition": "status!=\"CLOSED\"",
     "SecurityClassification": "Public"
   },
   {
@@ -53,7 +54,16 @@
     "ListElementCode": "status",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "MessageStatus",
+    "ElementLabel": "Status",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "updatedTime",
+    "FieldType": "DateTime",
     "ElementLabel": " ",
+    "FieldShowCondition": "updatedTime=\"DO_NOT_SHOW\"",
     "SecurityClassification": "Public"
   },
   {
@@ -99,17 +109,10 @@
   {
     "LiveFrom": "10/11/2021",
     "ID": "Message",
-    "ListElementCode": "latestMessage",
-    "FieldType": "TextArea",
-    "ElementLabel": "Message",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "10/11/2021",
-    "ID": "Message",
     "ListElementCode": "closeMessageLabel",
     "FieldType": "Label",
     "ElementLabel": "This message will now be marked as closed",
+    "FieldShowCondition": "closeMessageLabel=\"DO_NOT_SHOW\"",
     "SecurityClassification": "Public"
   }
 ]
