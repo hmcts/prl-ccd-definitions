@@ -10,7 +10,7 @@
 //
 //function assertFieldDefinitionIsValid(row) {
 //  expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
-//    return v.startsWith('C100');
+//    return v.startsWith('PRLAPPS');
 //  });
 //  expect(row.ID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
 //  expect(row.Label).to.be.a('string').and.satisfy(isNotEmpty());
