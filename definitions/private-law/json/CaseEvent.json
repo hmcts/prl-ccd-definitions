@@ -20,8 +20,8 @@
     "Name": "Attending the hearing",
     "Description": "Attending the hearing",
     "DisplayOrder": 12,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -292,6 +292,16 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "internal-update-task-list",
+    "Name": "Update task list",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
     "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageDocuments",
@@ -365,7 +375,7 @@
     "Name": "Issue and send to local court",
     "PreConditionState(s)": "SUBMITTED_PAID",
     "PostConditionState": "CASE_ISSUE",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-c8-document",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-c8-c1a-document",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -425,8 +435,8 @@
     "Name": "Upload documents",
     "Description": "Upload documents",
     "DisplayOrder": 49,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -473,6 +483,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -516,5 +527,30 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "internal-update-all-tabs",
+    "Name": "Update All tabs",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "3/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "WithdrawApplication_Event",
+    "Name": "Withdraw application",
+    "Description": "Withdraw application",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PostConditionState":  "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;SUBMITTED_PAID",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
   }
 ]
