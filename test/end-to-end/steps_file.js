@@ -20,6 +20,11 @@ const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
+const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
+const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
+const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
+const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
+
 
 module.exports = () => {
   return actor({
@@ -44,8 +49,11 @@ module.exports = () => {
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
     },
-    typeOfApplicationEvent() {
-      return TypeOfApplicationEvent.typeOfApplicationEvent();
+    typeOfApplicationEventC100() {
+      return TypeOfApplicationEvent.typeOfApplicationEventC100();
+    },
+    typeOfApplicationEventFL401() {
+      return TypeOfApplicationEvent.typeOfApplicationEventFL401();
     },
     runMIAMEventHappyPath() {
       return Miam.runMIAMEventHappyPath();
@@ -71,8 +79,11 @@ module.exports = () => {
     internationalElement() {
       return InternationalElement.internationalElement();
     },
-    respondentDetails() {
-      return RespondentDetails.respondentDetails();
+    respondentDetailsC100() {
+      return RespondentDetails.respondentDetailsC100();
+    },
+    respondentDetailsFL401() {
+      return RespondentDetails.respondentDetailsFL401();
     },
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
@@ -91,6 +102,18 @@ module.exports = () => {
     },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
+    },
+    runRelationshipToRespondent() {
+      return relationshipToRespondent.runEventrelationshipToRespondent();
+    },
+    runDOAttendingTheHearingEvent() {
+      return DOAttendingTheHearing.runEventHappyPathAttendingTheHearingDO();
+    },
+    runApplicantsFamilyEvent() {
+      return applicantsFamily.runEventApplicantsFamily();
+    },
+    runWithoutNoticeOrderHappyPath() {
+      return withOutNoticeOrder.fillDetailsWithoutNoticeOrderHappyPath();
     }
   });
 };
