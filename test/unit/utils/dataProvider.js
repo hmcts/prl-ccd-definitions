@@ -7,15 +7,15 @@ const loadFile = file => {
 module.exports = {
   ccdData: {
   //  AuthorisationCaseEvent: loadFile('AuthorisationCaseEvent'),
-    AuthorisationCaseField: loadFile('AuthorisationCaseField'),
+//    AuthorisationCaseField: loadFile('AuthorisationCaseField'),
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
     CaseEvent: loadFile('CaseEvent'),
     // CaseEventToFields: loadFile('CaseEventToFields'),
-    CaseField: loadFile('CaseField'),
+//    CaseField: loadFile('CaseField'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
-    CaseTypeTab: loadFile('CaseTypeTab'),
+//    CaseTypeTab: loadFile('CaseTypeTab'),
     FixedLists: loadFile('FixedLists'),
     Jurisdiction: loadFile('Jurisdiction'),
     SearchInputFields: loadFile('SearchInputFields'),
