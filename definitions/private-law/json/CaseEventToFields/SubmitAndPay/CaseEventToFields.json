@@ -7,8 +7,7 @@
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 1,
-    "PageDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/create-payment-service-request"
+    "PageDisplayOrder": 1
   },
   {
     "LiveFrom": "02/12/2021",
@@ -112,6 +111,17 @@
     "CaseEventID": "submitAndPay",
     "CaseFieldID": "submitAndPayDownloadApplicationLinkLabel",
     "PageFieldDisplayOrder": 11,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationLink",
+    "PageFieldDisplayOrder": 12,
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
