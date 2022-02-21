@@ -536,6 +536,21 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401Home",
+    "Name": "The home",
+    "Description": "Home situation",
+    "DisplayOrder": 8,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "internal-update-all-tabs",
