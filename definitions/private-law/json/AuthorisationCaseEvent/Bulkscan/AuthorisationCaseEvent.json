@@ -1,0 +1,29 @@
+[
+  {
+    "LiveFrom": "27/08/2021",
+    "CaseTypeID": "C100",
+    "CaseEventID": "attachScannedDocs",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "C100",
+    "CaseEventID": "attachScannedDocs",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-bulkscansystemupdate",
+          "caseworker-privatelaw-bulkscan"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+]
