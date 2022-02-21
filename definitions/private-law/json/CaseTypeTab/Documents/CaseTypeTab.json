@@ -7,8 +7,7 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "submitAndPayDownloadApplicationLink",
-    "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "[STATE]=\"SUBMITTED\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\""
+    "TabFieldDisplayOrder": 1
   },
   {
     "LiveFrom": "10/08/2021",
@@ -140,5 +139,15 @@
     "CaseFieldID": "existingProceedings",
     "TabFieldDisplayOrder": 14,
     "DisplayContextParameter": "#TABLE(uploadRelevantOrder)"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "C100",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "scannedDocuments",
+    "TabFieldDisplayOrder": 15
   }
 ]
