@@ -14,6 +14,7 @@
     "ListElementCode": "textAreaSomethingElse",
     "FieldType": "TextArea",
     "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
     "SecurityClassification": "Public",
     "FieldShowCondition": "mortgageNamedAfterList CONTAINS \"someoneElse\""
   },
@@ -48,6 +49,7 @@
     "ListElementCode": "textAreaSomethingElse",
     "FieldType": "TextArea",
     "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
     "SecurityClassification": "Public",
     "FieldShowCondition": "mortgageNamedAfter CONTAINS \"someoneElse\""
   },
@@ -140,6 +142,7 @@
     "ListElementCode": "textAreaSomethingElse",
     "FieldType": "TextArea",
     "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
     "SecurityClassification": "Public",
     "FieldShowCondition": "peopleLivingAtThisAddress CONTAINS \"someoneElse\""
   },
@@ -212,9 +215,8 @@
     "LiveFrom": "20/08/2021",
     "ID": "Home",
     "ListElementCode": "mortgages",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "Mortgage",
-    "ElementLabel": "Mortgage",
+    "FieldType": "Mortgage",
+    "ElementLabel": " ",
     "FieldShowCondition": "isThereMortgageOnProperty=\"Yes\"",
     "SecurityClassification": "Public"
   },
@@ -230,10 +232,9 @@
     "LiveFrom": "20/08/2021",
     "ID": "Home",
     "ListElementCode": "landlords",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "Landlord",
+    "FieldType": "Landlord",
     "FieldShowCondition": "isPropertyRented=\"Yes\"",
-    "ElementLabel": "Landlord",
+    "ElementLabel": " ",
     "SecurityClassification": "Public"
   },
   {
