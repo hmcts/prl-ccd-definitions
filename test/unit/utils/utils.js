@@ -4,7 +4,7 @@ const { expect } = require('chai');
 
 const SHORT_STRING = 30;
 const MEDIUM_STRING = 70;
-const LONG_STRING = 100;
+const LONG_STRING = 150;
 
 function isFieldDuplicated(field) {
   return function isDuplicated(field1, field2) {
