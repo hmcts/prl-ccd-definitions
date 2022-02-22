@@ -16,7 +16,7 @@
     "TabID": "Messages",
     "TabLabel": "Messages",
     "TabDisplayOrder": 10,
-    "CaseFieldID": "openMessageLabel",
+    "CaseFieldID": "sendAndReplyEventLink",
     "TabFieldDisplayOrder": 2
   },
   {
@@ -26,7 +26,8 @@
     "TabID": "Messages",
     "TabLabel": "Messages",
     "TabDisplayOrder": 10,
-    "CaseFieldID": "openMessages",
+    "CaseFieldID": "openMessageLabel",
+    "FieldShowCondition": "openMessages!=\"\"",
     "TabFieldDisplayOrder": 3
   },
   {
@@ -36,7 +37,7 @@
     "TabID": "Messages",
     "TabLabel": "Messages",
     "TabDisplayOrder": 10,
-    "CaseFieldID": "closedMessageLabel",
+    "CaseFieldID": "openMessages",
     "TabFieldDisplayOrder": 4
   },
   {
@@ -46,7 +47,18 @@
     "TabID": "Messages",
     "TabLabel": "Messages",
     "TabDisplayOrder": 10,
-    "CaseFieldID": "closedMessages",
+    "CaseFieldID": "closedMessageLabel",
+    "FieldShowCondition": "closedMessages!=\"\"",
     "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Messages",
+    "TabLabel": "Messages",
+    "TabDisplayOrder": 10,
+    "CaseFieldID": "closedMessages",
+    "TabFieldDisplayOrder": 6
   }
 ]
