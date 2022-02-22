@@ -5,6 +5,8 @@
 String product = "prl"
 String component = "ccd-definitions"
 
+def channel = '#prl-tech-notifications'
+
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 def secrets = [
@@ -37,6 +39,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withPipeline("nodejs", product, component) {
 
   loadVaultSecrets(secrets)
+  enableSlackNotifications(channel)
 
   after('test') {
     // enable yarn audit and send message on master branch only
