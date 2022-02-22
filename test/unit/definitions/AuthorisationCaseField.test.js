@@ -1,12 +1,12 @@
-//const { expect } = require('chai');
-//const { uniqWith } = require('lodash');
-//const { isFieldDuplicated } = require('../utils/utils');
-//const { createAssertExists } = require('../utils/assertBuilders');
-//const { ccdData } = require('../utils/dataProvider');
+// const { expect } = require('chai');
+// const { uniqWith } = require('lodash');
+// const { isFieldDuplicated } = require('../utils/utils');
+// const { createAssertExists } = require('../utils/assertBuilders');
+// const { ccdData } = require('../utils/dataProvider');
 //
-//const assertFieldExists = createAssertExists('Field');
+// const assertFieldExists = createAssertExists('Field');
 //
-//describe('AuthorisationCaseField', () => {
+// describe('AuthorisationCaseField', () => {
 //  describe('should :', () => {
 //    let nonProdAuthorisationCaseField = [];
 //    let allFieldsForNonProd = [];
@@ -26,4 +26,4 @@
 //      assertFieldExists(nonProdAuthorisationCaseField, allFieldsForNonProd);
 //    });
 //  });
-//});
+// });
