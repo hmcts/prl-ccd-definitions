@@ -24,7 +24,7 @@ const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespon
 const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
 const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
 const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
-
+const theHome = require('./pages/DOScreens/TheHome');
 
 module.exports = () => {
   return actor({
@@ -114,6 +114,9 @@ module.exports = () => {
     },
     runWithoutNoticeOrderHappyPath() {
       return withOutNoticeOrder.fillDetailsWithoutNoticeOrderHappyPath();
+    },
+    runTheHomeHappyPath() {
+      return theHome.runTheHomeEventHappyPath();
     }
   });
 };

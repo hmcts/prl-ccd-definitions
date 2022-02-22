@@ -14,7 +14,7 @@ module.exports = {
     await I.waitForText('Create case');
     I.wait('5');
     await I.click('Accept analytics cookies');
-    I.wait('5');
+    I.wait('7');
     await I.click('Create case');
   },
 
