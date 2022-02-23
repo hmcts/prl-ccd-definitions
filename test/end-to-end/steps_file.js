@@ -61,8 +61,11 @@ module.exports = () => {
     childDetails() {
       return ChildDetails.runChildDetailsEventHappyPath();
     },
-    applicantDetails() {
+    applicantDetailsC100() {
       return ApplicantDetails.runApplicantDetailsEventHappyPath();
+    },
+    applicantDetailsFL401() {
+      return ApplicantDetails.runApplicantDetailsFL401EventHappyPath();
     },
     caseNameChange() {
       return CaseName.runEventCaseName();
