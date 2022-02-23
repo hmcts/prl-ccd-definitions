@@ -54,11 +54,13 @@ module.exports = {
   },
   
   async fillApplicantsPageFL401() {
+    const retryCount = 3;
+    I.wait('2');
     await I.fillField('//input[@id="applicantsFL401_firstName"]', 'Applicant Firstname');
     I.wait('2');
     await I.fillField('//input[@id="applicantsFL401_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '21');   
-    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '21');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '12');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '2000');
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_gender-male"]'); 
     await I.selectPostCodeLookupAddress(this.fields.applicantAddressFL401, 'B11LS');  
@@ -70,7 +72,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_isPhoneNumberConfidential_Yes"]'); 
     await I.fillField('//input[@id="applicantsFL401_representativeFirstName"]', 'Ted');
     await I.fillField('//input[@id="applicantsFL401_representativeLastName"]', 'Robinson'); 
-    await I.fillField('//input[@id="#applicantsFL401_solicitorEmail"]', 'test@example.com');
+    await I.fillField('//input[@id="applicantsFL401_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
     await I.click(this.fields.submit);
