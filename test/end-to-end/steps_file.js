@@ -25,7 +25,6 @@ const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
 const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
 const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 
-
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
@@ -88,8 +87,11 @@ module.exports = () => {
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
     },
-    otherProceedingsEvent() {
-      return otherProceedings.otherProceedingsEvent();
+    otherProceedingsEventC100() {
+      return otherProceedings.otherProceedingsEventC100();
+    },
+    otherProceedingsEventFL401() {
+      return otherProceedings.otherProceedingsEventFL401();
     },
     allegationsOfHarmEvent() {
       return allegationsOfHarm.allegationsOfHarmEvent();
