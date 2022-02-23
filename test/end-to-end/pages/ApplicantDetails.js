@@ -5,12 +5,14 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     applicantAddress: 'applicants_0_address_address',
+    applicantAddressFL401: 'applicantsFL401_address_address',
     organisation: 'AAT'
   },
 
   async triggerEvent() {
     await I.triggerEvent('Applicant details');
   },
+  
   async searchAndSelectGivenRegisteredOrganisation() {
     await I.waitForEnabled('#search-org-text');
     await I.wait('2');
@@ -19,6 +21,7 @@ module.exports = {
     await I.click(locate('a').withText('Select')
       .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
   },
+  
   async fillApplicantsPage() {
     const retryCount = 3;
     I.wait('2');
@@ -49,10 +52,40 @@ module.exports = {
     I.wait('2');
     await I.click(this.fields.submit);
   },
+  
+  async fillApplicantsPageFL401() {
+    await I.fillField('//input[@id="applicantsFL401_firstName"]', 'Applicant Firstname');
+    I.wait('2');
+    await I.fillField('//input[@id="applicantsFL401_lastName"]', 'Applicant Lastname');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '21');   
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '21');
+    await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '2000');
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_gender-male"]'); 
+    await I.selectPostCodeLookupAddress(this.fields.applicantAddressFL401, 'B11LS');  
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_isAddressConfidential_Yes"]'); 
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_canYouProvideEmailAddress_Yes"]');
+    await I.retry(retryCount).fillField('//input[@id="applicantsFL401_email"]', 'applicant401@gmail.com');
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_isEmailAddressConfidential_Yes"]');
+    await I.retry(retryCount).fillField('//input[@id="applicantsFL401_phoneNumber"]', '4334646456456'); 
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_isPhoneNumberConfidential_Yes"]'); 
+    await I.fillField('//input[@id="applicantsFL401_representativeFirstName"]', 'Ted');
+    await I.fillField('//input[@id="applicantsFL401_representativeLastName"]', 'Robinson'); 
+    await I.fillField('//input[@id="#applicantsFL401_solicitorEmail"]', 'test@example.com');
+    await this.searchAndSelectGivenRegisteredOrganisation();
+    I.wait('2');
+    await I.click(this.fields.submit);
+  },
 
   async runApplicantDetailsEventHappyPath() {
     await this.triggerEvent();
     await this.fillApplicantsPage();
+    await I.submitEvent();
+    await I.amOnHistoryPageWithSuccessNotification();
+  },
+  
+  async runApplicantDetailsFL401EventHappyPath() {
+    await this.triggerEvent();
+    await this.fillApplicantsPageFL401();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
