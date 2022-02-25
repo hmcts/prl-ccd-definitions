@@ -6,7 +6,7 @@
     "Name": "Solicitor application",
     "Description": "Apply for a court order to make arrangements for a child or resolve a dispute about their upbringing",
     "DisplayOrder": 1,
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -41,7 +41,24 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401CaseName",
+    "Name": "Case name",
+    "Description": "Case name",
+    "DisplayOrder": 2,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -56,7 +73,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -65,13 +83,29 @@
     "Name": "Hearing urgency",
     "Description": "Hearing urgency",
     "DisplayOrder": 4,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "withoutNoticeOrderDetails",
+    "Name": "Without notice order",
+    "Description": "Without Notice Order",
+    "DisplayOrder": 4,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -81,8 +115,8 @@
     "Description": "Details of the applicants in the case",
     "DisplayOrder": 5,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
@@ -96,8 +130,8 @@
     "Description": "Details of the children in the case",
     "DisplayOrder": 6,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
@@ -111,8 +145,23 @@
     "Description": "Details of the respondents in the case",
     "DisplayOrder": 7,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401ApplicantFamilyDetails",
+    "Name": "Applicant’s family",
+    "Description": "Details of the Applicant’s family",
+    "DisplayOrder": 8,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
@@ -131,7 +180,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -141,12 +191,13 @@
     "Description": "Allegations of harm",
     "DisplayOrder": 9,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -156,12 +207,13 @@
     "Description": "Other people in the case",
     "DisplayOrder": 10,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "21/11/2021",
@@ -171,11 +223,11 @@
     "Description": "Details of the international element of the case",
     "DisplayOrder": 13,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -186,8 +238,8 @@
     "Description": "Details of other preceedings",
     "DisplayOrder": 11,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
@@ -201,12 +253,13 @@
     "Description": "Litigation capacity",
     "DisplayOrder": 14,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -215,8 +268,8 @@
     "Name": "Welsh language requirements",
     "Description": "Welsh language requirements",
     "DisplayOrder": 15,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -230,8 +283,8 @@
     "Name": "View PDF application",
     "Description": "View pdf document of the application submitted by solicitor",
     "DisplayOrder": 16,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -277,7 +330,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/bypass-fee-pay",
     "EndButtonLabel": "Pay now",
     "ShowSummary": "N",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -286,8 +340,8 @@
     "Name": "Safeguarding and risk of harm",
     "Description": "Safeguarding and risk of harm",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -301,7 +355,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "19/01/2022",
@@ -322,7 +377,22 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "27/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentRelationship",
+    "Name": "Relationship to respondent",
+    "DisplayOrder": 19,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "27/08/2021",
@@ -389,7 +459,8 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/01/2017",
@@ -407,10 +478,52 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "28/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentBehaviour",
+    "Name": "Respondent's Behaviour",
+    "Description": "Respondent's Behaviour",
+    "DisplayOrder": 103,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401TypeOfApplication",
+    "Name": "Type of application",
+    "Description": "Type of application",
+    "DisplayOrder": 100,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "internal-update-application-tab",
     "Name": "Update application tab",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "internal-update-confidential-tab",
+    "Name": "Update confidential tab",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",

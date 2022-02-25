@@ -2,7 +2,7 @@ const defaultPassword = 'Nagoya0102';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'fprl_caseworker_solicitor@mailinator.com',
+    email: 'prl-e2etestsolicitor@mailinator.com',
     password: defaultPassword
   },
 
