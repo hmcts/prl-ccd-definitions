@@ -584,5 +584,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "21/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401StatementOfTruthAndSubmit",
+    "Name": "Statement of Truth and submit",
+    "Description": "Statement of Truth and submit",
+    "DisplayOrder": 106,
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState":  "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-generate-document-submit-application",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
 ]
