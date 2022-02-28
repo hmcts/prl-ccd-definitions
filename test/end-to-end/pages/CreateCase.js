@@ -40,6 +40,10 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPageC100() {
+    await I.waitForText('Confidentiality Statement');
+    await I.click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.click('Continue');
+    
     await I.waitForElement('#applicantCaseName');
     await I.fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.click('Continue');
