@@ -1,19 +1,21 @@
-[{
-  "LiveFrom": "13/08/2021",
-  "CaseTypeID": "C100",
-  "CaseEventID": "attendingTheHearing",
-  "CaseFieldID": "submissionRequiredFieldsInfo1",
-  "DisplayContext": "READONLY",
-  "PageID": 1,
-  "PageDisplayOrder": 1,
-  "PageFieldDisplayOrder": 1
-},
+[
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelLanguageRequirements",
     "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attendingTheHearing",
+    "CaseFieldID": "isWelshNeeded",
+    "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -21,30 +23,31 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
-    "CaseEventID": "attendingTheHearing",
-    "CaseFieldID": "isWelshNeeded",
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "welshNeeds",
     "DisplayContext": "COMPLEX",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "FieldShowCondition": "isWelshNeeded=\"Yes\"",
-    "ShowSummaryChangeOption": "Yes"
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition" : "caseTypeOfApplication=\"C100\" AND isWelshNeeded=\"Yes\""
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attendingTheHearing",
+    "CaseFieldID": "fl401WelshNeeds",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition" : "caseTypeOfApplication=\"FL401\" AND isWelshNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isInterpreterNeeded",
     "DisplayContext": "MANDATORY",
@@ -55,7 +58,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "interpreterNeeds",
     "DisplayContext": "COMPLEX",
@@ -67,7 +70,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelAccessibility",
     "DisplayContext": "READONLY",
@@ -78,7 +81,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isDisabilityPresent",
     "DisplayContext": "MANDATORY",
@@ -89,7 +92,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelAdjustmentsRequired",
     "DisplayContext": "READONLY",
@@ -101,7 +104,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "adjustmentsRequired",
     "DisplayContext": "MANDATORY",
@@ -113,7 +116,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelSpecialArrangements",
     "DisplayContext": "READONLY",
@@ -124,7 +127,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelSpecialArrangementsDescription",
     "DisplayContext": "READONLY",
@@ -134,7 +137,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isSpecialArrangementsRequired",
     "DisplayContext": "MANDATORY",
@@ -145,7 +148,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelSpecialArrangementsRequired",
     "DisplayContext": "READONLY",
@@ -157,7 +160,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "specialArrangementsRequired",
     "DisplayContext": "MANDATORY",
@@ -169,7 +172,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "labelIntermediaryDescription",
     "DisplayContext": "READONLY",
@@ -179,7 +182,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "isIntermediaryNeeded",
     "DisplayContext": "MANDATORY",
@@ -190,7 +193,7 @@
   },
   {
     "LiveFrom": "13/08/2021",
-    "CaseTypeID": "C100",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "attendingTheHearing",
     "CaseFieldID": "reasonsForIntermediary",
     "DisplayContext": "MANDATORY",
@@ -199,5 +202,17 @@
     "PageFieldDisplayOrder": 18,
     "FieldShowCondition": "isIntermediaryNeeded=\"Yes\"",
     "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attendingTheHearing",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 19,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "labelLanguageRequirements=\"DO_NOT_SHOW\""
   }
 ]
