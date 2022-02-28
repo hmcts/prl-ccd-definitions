@@ -39,6 +39,7 @@
     "TabID": "peopleInCase",
     "TabLabel": "People",
     "TabDisplayOrder": 5,
+    "TabShowCondition": "caseTypeOfApplication=\"C100\"",
     "CaseFieldID": "labelWhereChildrenLive",
     "TabFieldDisplayOrder": 1
   },
@@ -563,5 +564,16 @@
     "CaseFieldID": "paymentServiceRequestReferenceNumber",
     "TabFieldDisplayOrder": 1,
     "Comment": "Added for payment related details"
+  },
+  {
+    "LiveFrom": "25/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "peopleInCase",
+    "TabLabel": "People",
+    "TabDisplayOrder": 5,
+    "CaseFieldID": "caseTypeOfApplication",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 55
   }
 ]
