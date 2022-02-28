@@ -15,7 +15,7 @@ const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
 const InternationalElement = require('./pages/InternationalElement');
 const RespondentDetails = require('./pages/RespondentDetails');
 const WelshLanguage = require('./pages/WelshLanguage');
-const otherProceedings = require('./pages/otherProceedings');
+const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
@@ -88,8 +88,11 @@ module.exports = () => {
     welshLanguageRequirement() {
       return WelshLanguage.welshLanguageRequirement();
     },
-    otherProceedingsEvent() {
-      return otherProceedings.otherProceedingsEvent();
+    otherProceedingsEventC100() {
+      return otherProceedings.otherProceedingsEventC100();
+    },
+    otherProceedingsEventFL401() {
+      return otherProceedings.otherProceedingsEventFL401();
     },
     allegationsOfHarmEvent() {
       return allegationsOfHarm.allegationsOfHarmEvent();
