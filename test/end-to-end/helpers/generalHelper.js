@@ -51,7 +51,7 @@ class GeneralHelper extends Helper {
     await Puppeteer.click(fields.submit);
   }
   
-  async getCurrentUrl() {
+  async getCurrentPageUrl() {
     const { Puppeteer } = this.helpers;
     return await Puppeteer.page.url();
   }
@@ -70,6 +70,7 @@ class GeneralHelper extends Helper {
       throw error;
     }
   }
+  
   async seeDocuments(title, documentName) {
     const { Puppeteer } = this.helpers;
     await Puppeteer.see(title);
