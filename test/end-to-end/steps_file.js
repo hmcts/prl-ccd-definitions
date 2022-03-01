@@ -31,6 +31,12 @@ module.exports = () => {
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
+    loginAsCourtAdminUserOne() {
+      return LoginPage.loginAsCourtAdminUserOne();
+    },
+    loginAsCourtAdminUserTwo() {
+      return LoginPage.loginAsCourtAdminUserTwo();
+    },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
     },
