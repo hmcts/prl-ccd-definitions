@@ -17,9 +17,15 @@ module.exports = {
     existingProceedings_0_NameOfCourt: '#existingProceedings_0_nameOfCourt',
     existingProceedings_0_NameOfChildrenInvolved: '#existingProceedings_0_nameOfChildrenInvolved',
     existingProceedings_0_NameOfGuardian: '#existingProceedings_0_nameOfGuardian',
-    existingProceedings_0_NameAndOffice: '#existingProceedings_0_nameAndOffice'
+    existingProceedings_0_NameAndOffice: '#existingProceedings_0_nameAndOffice',
+    previousOrOngoingProceedingsFL401: '//input[@id="fl401OtherProceedingDetails_hasPrevOrOngoingOtherProceeding-yes"]',
+    nameOfTheCourt: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_nameOfCourt',
+    caseNumber: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_caseNumber',
+    typeOfCase: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_typeOfCase',
+    anyOtherDetails: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_anyOtherDetails'
   },
-  async  otherProceedingsEvent() {
+  
+  async  otherProceedingsEventC100() {
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
     await I.click(this.fields.previousOrOngoingProceedingsForChildren);
@@ -47,6 +53,22 @@ module.exports = {
     await I.waitForText('Check your answers');
     await I.waitForText('Save and continue', '30');
     await I.click('Save and continue');
+  },
+  
+  async  otherProceedingsEventFL401() {
+    await I.triggerEvent(this.fields.headerText);
+    await I.waitForPage('h1', this.fields.headerText);
+    await I.click(this.fields.previousOrOngoingProceedingsFL401);
+    await I.wait('2');
+    await I.click('Add new');
+    await I.fillField(this.fields.nameOfTheCourt, 'Westminister');
+    await I.fillField(this.fields.caseNumber, '123456');
+    await I.fillField(this.fields.typeOfCase, 'Respondent');
+    await I.fillField(this.fields.anyOtherDetails, 'Testing');
+    await I.click('Continue');
+    await I.waitForText('Check your answers');
+    await I.waitForText('Save and continue', '30');
+    await I.click('Save and continue');  
   }
 
 };
