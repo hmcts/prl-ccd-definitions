@@ -7,7 +7,7 @@
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
     "CaseFieldID": "partiesTabLabel",
-    "TabShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE] != \"AWAITING_RESUBMISSION_TO_HMCTS\"",
+    "TabShowCondition": "[STATE] = \"SUBMITTED_PAID\" OR [STATE] = \"SUBMITTED_NOT_PAID\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE] = \"CASE_ISSUE\"",
     "TabFieldDisplayOrder": 1
   },
   {
