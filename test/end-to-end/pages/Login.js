@@ -20,5 +20,26 @@ module.exports = {
     await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
     await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
     await I.click(this.fields.submit);
-  }
+  },
+  
+  async loginAsCourtAdminUserOne() {
+    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.click('#cookie-accept-submit');
+    await I.click('#cookie-accept-all-success-banner-hide');
+    await I.seeElement('#authorizeCommand');
+    await I.fillField(this.fields.email, config.testCourtAdminUserOne.email);
+    await I.fillField(this.fields.password, config.testCourtAdminUserOne.password);
+    await I.click(this.fields.submit);
+  },
+  
+  async loginAsCourtAdminUserTwo() {
+    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.click('#cookie-accept-submit');
+    await I.click('#cookie-accept-all-success-banner-hide');
+    await I.seeElement('#authorizeCommand');
+    await I.fillField(this.fields.email, config.testCourtAdminUserTwo.email);
+    await I.fillField(this.fields.password, config.testCourtAdminUserTwo.password);
+    await I.click(this.fields.submit);
+  },
+  
 };
