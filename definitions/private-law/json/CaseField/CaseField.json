@@ -2336,7 +2336,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": "C100 draft order",
+    "Label": "C100 draft",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2489,6 +2489,22 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c8Document",
+    "Label": "C8 Document",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c1ADocument",
+    "Label": "C1A Document",
+    "FieldType": "Document",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "userInfo",
@@ -2510,22 +2526,6 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "applicantSolicitorEmailAddress",
     "Label": "FamilyMan case number",
-    "FieldType": "Text",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "12/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "finalDocument",
-    "Label": "Final Document",
-    "FieldType": "Document",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "issueDate",
-    "Label": " ",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   },
@@ -2647,6 +2647,24 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "localGateKeeperHint",
+    "Label": "### Let the gatekeeper know there’s a new case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "gatekeeper",
+    "Label": "Gatekeeper",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "GatekeeperEmail",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "22/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401StmtOfTruth",
@@ -2665,11 +2683,20 @@
     "Searchable": "N"
   },
   { "LiveFrom": "20/08/2021",
-  "CaseTypeID": "PRLAPPS",
-  "ID": "fl401OtherProceedingDetails",
-  "Label": " ",
-  "FieldType": "Fl401ProceedingDetails",
-  "SecurityClassification": "Public"
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401OtherProceedingDetails",
+    "Label": " ",
+    "FieldType": "Fl401ProceedingDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "confidentialityDisclaimer",
+    "Label": " ",
+    "FieldType": "confidentialityDisclaimerObject",
+    "SecurityClassification": "Public"
   }
 
 ]
+
