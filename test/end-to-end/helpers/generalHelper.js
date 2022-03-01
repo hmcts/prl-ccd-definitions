@@ -52,8 +52,8 @@ class GeneralHelper extends Helper {
   }
   
   async getCurrentUrl() {
-    const helper = this.helpers['Puppeteer'];
-    return helper.page.url();
+    const { Puppeteer } = this.helpers;
+    return await Puppeteer.page.url();
   }
 
   async waitForPage(header, headerText) {
