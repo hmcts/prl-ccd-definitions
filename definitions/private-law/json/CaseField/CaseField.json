@@ -1365,6 +1365,23 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ConfidentialityDisclaimerLabel1",
+    "Label": "## Confidentiality Statement\n\nWhen completing this form, you have the option to mark information as confidential. \n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n- the Children and Family Court Advisory and Support Service (CAFCASS)\n- CAFCASS Cymru\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ConfidentialityStatementDisclaimer",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "ConfidentialityStatementDisclaimerEnum",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "litigationCapacityFactors",
@@ -1664,7 +1681,7 @@
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "abductionChildHasPassport",
-    "Label": "Do(es) the child(ren) have more than one passport?",
+    "Label": "*Do(es) the child(ren) have more than one passport?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -1672,7 +1689,7 @@
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "abductionChildPassportPosession",
-    "Label": "Who is in posession of the child(ren)'s passport(s)?",
+    "Label": "*Who is in posession of the child(ren)'s passport(s)?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "abductionChildPassportPossessionEnum",
     "SecurityClassification": "Public"
@@ -2082,7 +2099,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "agreeChildUnsupervisedTime",
-    "Label": "Do you agree to the child(ren) spending unsupervised time with the other person(s) in receipt of this form?",
+    "Label": "*Do you agree to the child(ren) spending unsupervised time with the other person(s) in receipt of this form?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -2090,7 +2107,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "agreeChildSupervisedTime",
-    "Label": "Do you agree to the child(ren) spending supervised time with the other person(s) in receipt of this form?",
+    "Label": "*Do you agree to the child(ren) spending supervised time with the other person(s) in receipt of this form?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -2098,7 +2115,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "agreeChildOtherContact",
-    "Label": "Do you agree to the child having other forms of contact with the other person in receipt of this form? (by telephone, text, email, social media)",
+    "Label": "*Do you agree to the child having other forms of contact with the other person in receipt of this form? (by telephone, text, email, social media)",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -2623,6 +2640,14 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "home",
+    "Label": " ",
+    "FieldType": "Home",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "dateSubmitted",
@@ -2633,7 +2658,6 @@
   {
     "LiveFrom": "17/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "submissionRequiredFieldsInfo",
     "ID": "submissionRequiredFieldsInfo1",
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
@@ -2702,5 +2726,40 @@
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "localGateKeeperHint",
+    "Label": "### Let the gatekeeper know there’s a new case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "gatekeeper",
+    "Label": "Gatekeeper",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "GatekeeperEmail",
+    "SecurityClassification": "Public"
+  },
+  { "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401OtherProceedingDetails",
+    "Label": " ",
+    "FieldType": "Fl401ProceedingDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "confidentialityDisclaimer",
+    "Label": " ",
+    "FieldType": "confidentialityDisclaimerObject",
+    "SecurityClassification": "Public"
   }
 ]
+
+
