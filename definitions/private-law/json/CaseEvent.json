@@ -20,8 +20,8 @@
     "Name": "Attending the hearing",
     "Description": "Attending the hearing",
     "DisplayOrder": 12,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -585,6 +585,22 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendToGateKeeper",
+    "Name": "Send to gate keeper",
+    "Description": "Send to gate keeper",
+    "DisplayOrder": 25,
+    "PreConditionState(s)": "CASE_ISSUE",
+    "PostConditionState": "GATE_KEEPING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
     "EndButtonLabel": "Save and continue"
   },
   {
