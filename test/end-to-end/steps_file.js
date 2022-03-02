@@ -19,6 +19,7 @@ const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const manageDocuments = require('./pages/ManageDocuments');
+const SendAndReplyMessages = require('./pages/SendAndReplyMessages');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
 const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
@@ -129,6 +130,9 @@ module.exports = () => {
     },
     runTheHomeHappyPath() {
       return theHome.runTheHomeEventHappyPath();
+    },
+    sendMessage() {
+      return SendAndReplyMessages.sendMessage();
     }
   });
 };
