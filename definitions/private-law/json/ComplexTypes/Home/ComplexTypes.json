@@ -1,0 +1,274 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Landlord",
+    "ListElementCode": "mortgageNamedAfterList",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MortgageNamedAfterEnum",
+    "ElementLabel": "Who is named on the rental agreement? Please specify all that apply",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Landlord",
+    "ListElementCode": "textAreaSomethingElse",
+    "FieldType": "TextArea",
+    "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "mortgageNamedAfterList CONTAINS \"someoneElse\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Landlord",
+    "ListElementCode": "landlordName",
+    "FieldType": "Text",
+    "ElementLabel": "What is the name of the landlord of the rented property?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Landlord",
+    "ListElementCode": "address",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Mortgage",
+    "ListElementCode": "mortgageNamedAfter",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MortgageNamedAfterEnum",
+    "ElementLabel": "Who is named on the mortgage (please select all that apply)?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Mortgage",
+    "ListElementCode": "textAreaSomethingElse",
+    "FieldType": "TextArea",
+    "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "mortgageNamedAfter CONTAINS \"someoneElse\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Mortgage",
+    "ListElementCode": "mortgageNumber",
+    "FieldType": "Text",
+    "ElementLabel": "Mortgage number (if known)",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Mortgage",
+    "ListElementCode": "mortgageLenderName",
+    "FieldType": "Text",
+    "ElementLabel": "Mortgage lender’s name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Mortgage",
+    "ListElementCode": "address",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "HintText": "Mortgage lender’s postcode",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ChildrenLiveAtAddress",
+    "ListElementCode": "keepChildrenInfoConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep this information confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ChildrenLiveAtAddress",
+    "ListElementCode": "childFullName",
+    "FieldType": "Text",
+    "ElementLabel": "Child’s full name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ChildrenLiveAtAddress",
+    "ListElementCode": "childsAge",
+    "FieldType": "Number",
+    "Min": 1,
+    "ElementLabel": "Child’s age",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ChildrenLiveAtAddress",
+    "ListElementCode": "isRespondentResponsibleForChild",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the respondent also responsible for the child?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "addressLabel",
+    "FieldType": "Label",
+    "ElementLabel": "To what address do you want the occupation order to apply?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "address",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "peopleLivingAtThisAddress",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "PeopleLivingAtThisAddressEnum",
+    "ElementLabel": "Who currently lives at the above address (please select all that apply)?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "textAreaSomethingElse",
+    "FieldType": "TextArea",
+    "ElementLabel": " ",
+    "HintText": "Provide the details in the box below",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "peopleLivingAtThisAddress CONTAINS \"someoneElse\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Home",
+    "ListElementCode": "everLivedAtTheAddress",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoBothEnum",
+    "ElementLabel": "Has the applicant or the respondent ever lived at the above address but don’t live there currently?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Home",
+    "ListElementCode": "intendToLiveAtTheAddress",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoBothEnum",
+    "FieldShowCondition": "everLivedAtTheAddress=\"No\"",
+    "ElementLabel": "Did the applicant or the respondent ever intend to live in the address?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "doAnyChildrenLiveAtAddress",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do any children live at the above address that the applicant is responsible for?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "children",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ChildrenLiveAtAddress",
+    "ElementLabel": "Child",
+    "FieldShowCondition": "doAnyChildrenLiveAtAddress=\"Yes\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "isPropertyAdapted",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Does the property have any features or adaptations that make it more accessible for the applicant, their children or anyone else living there?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "howIsThePropertyAdapted",
+    "FieldType": "TextArea",
+    "ElementLabel": " ",
+    "HintText": "Please provide details of how the property is specially adapted",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isPropertyAdapted = \"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "isThereMortgageOnProperty",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is there a mortgage on the property?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "mortgages",
+    "FieldType": "Mortgage",
+    "ElementLabel": " ",
+    "FieldShowCondition": "isThereMortgageOnProperty=\"Yes\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "isPropertyRented",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the property rented?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "landlords",
+    "FieldType": "Landlord",
+    "FieldShowCondition": "isPropertyRented=\"Yes\"",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "doesApplicantHaveHomeRights",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Does the applicant have any home rights?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "livingSituation",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "LivingSituationEnum",
+    "ElementLabel": "What exactly does the applicant want to happen with their living situation?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "familyHome",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FamilyHomeEnum",
+    "ElementLabel": "Is there anything else the applicant wants to happen with their family home?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Home",
+    "ListElementCode": "furtherInformation",
+    "FieldType": "TextArea",
+    "ElementLabel": "Is there anything else the applicant would want to be considered by the court?",
+    "SecurityClassification": "Public"
+  }
+]
