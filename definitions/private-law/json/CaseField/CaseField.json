@@ -310,7 +310,7 @@
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "natureOfOrder",
-    "Label": "For example-does the order detail who the child will live with, or how often they will spend type with a parent.",
+    "Label": "For example-does the order detail who the child will live with, or how often they will spend time with a parent.",
     "FieldType": "TextArea",
     "SecurityClassification": "Public"
   },
@@ -1373,6 +1373,23 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ConfidentialityDisclaimerLabel1",
+    "Label": "## Confidentiality Statement\n\nWhen completing this form, you have the option to mark information as confidential. \n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n- the Children and Family Court Advisory and Support Service (CAFCASS)\n- CAFCASS Cymru\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ConfidentialityStatementDisclaimer",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "ConfidentialityStatementDisclaimerEnum",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "litigationCapacityFactors",
@@ -2336,7 +2353,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": "C100 draft order",
+    "Label": "C100 draft",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2660,6 +2677,32 @@
     "ID": "dateSubmitted",
     "Label": " ",
     "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "localGateKeeperHint",
+    "Label": "### Let the gatekeeper know there’s a new case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "gatekeeper",
+    "Label": "Gatekeeper",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "GatekeeperEmail",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "confidentialityDisclaimer",
+    "Label": " ",
+    "FieldType": "confidentialityDisclaimerObject",
     "SecurityClassification": "Public"
   },
   {
