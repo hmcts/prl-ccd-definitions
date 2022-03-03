@@ -238,12 +238,29 @@
     "Description": "Details of other preceedings",
     "DisplayOrder": 11,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401OtherProceedings",
+    "Name": "Other proceedings",
+    "Description": "Details of other preceedings",
+    "DisplayOrder": 11,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -364,7 +381,7 @@
     "Name": "Issue and send to local court",
     "PreConditionState(s)": "SUBMITTED_PAID",
     "PostConditionState": "CASE_ISSUE",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-c8-c1a-document",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/issue-and-send-to-local-court",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -385,13 +402,14 @@
     "ID": "respondentRelationship",
     "Name": "Relationship to respondent",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_FL401_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_FL401_SUBMISSION_TO_HMCTS(caseTypeOfApplication=\"FL401\"):1;AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "27/08/2021",
@@ -518,6 +536,22 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401Home",
+    "Name": "The home",
+    "Description": "Home situation",
+    "DisplayOrder": 8,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_FL401_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "internal-update-confidential-tab",
@@ -550,6 +584,21 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendToGateKeeper",
+    "Name": "Send to gate keeper",
+    "Description": "Send to gate keeper",
+    "DisplayOrder": 107,
+    "PreConditionState(s)": "CASE_ISSUE",
+    "PostConditionState": "GATE_KEEPING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
     "EndButtonLabel": "Save and continue"
   }
 ]
