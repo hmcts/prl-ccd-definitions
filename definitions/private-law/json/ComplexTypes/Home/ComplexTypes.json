@@ -5,7 +5,7 @@
     "ListElementCode": "mortgageNamedAfterList",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MortgageNamedAfterEnum",
-    "ElementLabel": "Who is named on the rental agreement? Please specify all that apply",
+    "ElementLabel": "*Who is named on the rental agreement? Please specify all that apply",
     "SecurityClassification": "Public"
   },
   {
@@ -23,7 +23,7 @@
     "ID": "Landlord",
     "ListElementCode": "landlordName",
     "FieldType": "Text",
-    "ElementLabel": "What is the name of the landlord of the rented property?",
+    "ElementLabel": "*What is the name of the landlord of the rented property?",
     "SecurityClassification": "Public"
   },
   {
@@ -40,7 +40,7 @@
     "ListElementCode": "mortgageNamedAfter",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MortgageNamedAfterEnum",
-    "ElementLabel": "Who is named on the mortgage (please select all that apply)?",
+    "ElementLabel": "*Who is named on the mortgage (please select all that apply)?",
     "SecurityClassification": "Public"
   },
   {
@@ -83,7 +83,7 @@
     "ID": "ChildrenLiveAtAddress",
     "ListElementCode": "keepChildrenInfoConfidential",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Do you need to keep this information confidential?",
+    "ElementLabel": "*Do you need to keep this information confidential?",
     "SecurityClassification": "Public"
   },
   {
@@ -91,7 +91,7 @@
     "ID": "ChildrenLiveAtAddress",
     "ListElementCode": "childFullName",
     "FieldType": "Text",
-    "ElementLabel": "Child’s full name",
+    "ElementLabel": "*Child’s full name",
     "SecurityClassification": "Public"
   },
   {
@@ -108,7 +108,7 @@
     "ID": "ChildrenLiveAtAddress",
     "ListElementCode": "isRespondentResponsibleForChild",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Is the respondent also responsible for the child?",
+    "ElementLabel": "*Is the respondent also responsible for the child?",
     "SecurityClassification": "Public"
   },
   {
@@ -116,7 +116,7 @@
     "ID": "Home",
     "ListElementCode": "addressLabel",
     "FieldType": "Label",
-    "ElementLabel": "To what address do you want the occupation order to apply?",
+    "ElementLabel": "*To what address do you want the occupation order to apply?",
     "SecurityClassification": "Public"
   },
   {
@@ -133,7 +133,7 @@
     "ListElementCode": "peopleLivingAtThisAddress",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "PeopleLivingAtThisAddressEnum",
-    "ElementLabel": "Who currently lives at the above address (please select all that apply)?",
+    "ElementLabel": "*Who currently lives at the above address (please select all that apply)?",
     "SecurityClassification": "Public"
   },
   {
@@ -153,7 +153,7 @@
     "ListElementCode": "everLivedAtTheAddress",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoBothEnum",
-    "ElementLabel": "Has the applicant or the respondent ever lived at the above address but don’t live there currently?",
+    "ElementLabel": "*Has the applicant or the respondent ever lived at the above address but don’t live there currently?",
     "SecurityClassification": "Public"
   },
   {
@@ -164,7 +164,7 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoBothEnum",
     "FieldShowCondition": "everLivedAtTheAddress=\"No\"",
-    "ElementLabel": "Did the applicant or the respondent ever intend to live in the address?",
+    "ElementLabel": "*Did the applicant or the respondent ever intend to live in the address?",
     "SecurityClassification": "Public"
   },
   {
@@ -172,7 +172,7 @@
     "ID": "Home",
     "ListElementCode": "doAnyChildrenLiveAtAddress",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Do any children live at the above address that the applicant is responsible for?",
+    "ElementLabel": "*Do any children live at the above address that the applicant is responsible for?",
     "SecurityClassification": "Public"
   },
   {
@@ -190,7 +190,7 @@
     "ID": "Home",
     "ListElementCode": "isPropertyAdapted",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Does the property have any features or adaptations that make it more accessible for the applicant, their children or anyone else living there?",
+    "ElementLabel": "*Does the property have any features or adaptations that make it more accessible for the applicant, their children or anyone else living there?",
     "SecurityClassification": "Public"
   },
   {
@@ -199,7 +199,7 @@
     "ListElementCode": "howIsThePropertyAdapted",
     "FieldType": "TextArea",
     "ElementLabel": " ",
-    "HintText": "Please provide details of how the property is specially adapted",
+    "HintText": "*Please provide details of how the property is specially adapted",
     "SecurityClassification": "Public",
     "FieldShowCondition": "isPropertyAdapted = \"Yes\""
   },
@@ -208,7 +208,7 @@
     "ID": "Home",
     "ListElementCode": "isThereMortgageOnProperty",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Is there a mortgage on the property?",
+    "ElementLabel": "*Is there a mortgage on the property?",
     "SecurityClassification": "Public"
   },
   {
@@ -225,7 +225,7 @@
     "ID": "Home",
     "ListElementCode": "isPropertyRented",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Is the property rented?",
+    "ElementLabel": "*Is the property rented?",
     "SecurityClassification": "Public"
   },
   {
@@ -242,7 +242,7 @@
     "ID": "Home",
     "ListElementCode": "doesApplicantHaveHomeRights",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Does the applicant have any home rights?",
+    "ElementLabel": "*Does the applicant have any home rights?",
     "SecurityClassification": "Public"
   },
   {
@@ -251,7 +251,7 @@
     "ListElementCode": "livingSituation",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "LivingSituationEnum",
-    "ElementLabel": "What exactly does the applicant want to happen with their living situation?",
+    "ElementLabel": "*What exactly does the applicant want to happen with their living situation?",
     "SecurityClassification": "Public"
   },
   {
@@ -260,7 +260,7 @@
     "ListElementCode": "familyHome",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "FamilyHomeEnum",
-    "ElementLabel": "Is there anything else the applicant wants to happen with their family home?",
+    "ElementLabel": "*Is there anything else the applicant wants to happen with their family home?",
     "SecurityClassification": "Public"
   },
   {
