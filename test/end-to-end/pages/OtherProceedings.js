@@ -24,7 +24,7 @@ module.exports = {
     typeOfCase: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_typeOfCase',
     anyOtherDetails: '#fl401OtherProceedingDetails_fl401OtherProceedings_0_anyOtherDetails'
   },
-  
+
   async  otherProceedingsEventC100() {
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
@@ -54,7 +54,7 @@ module.exports = {
     await I.waitForText('Save and continue', '30');
     await I.click('Save and continue');
   },
-  
+
   async  otherProceedingsEventFL401() {
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
@@ -68,7 +68,7 @@ module.exports = {
     await I.click('Continue');
     await I.waitForText('Check your answers');
     await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');  
+    await I.click('Save and continue');
   }
 
 };
