@@ -14,7 +14,7 @@ module.exports = {
     await I.waitForText('Create case');
     I.wait('5');
     await I.click('Accept analytics cookies');
-    I.wait('5');
+    I.wait('7');
     await I.click('Create case');
   },
 
@@ -40,6 +40,10 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPageC100() {
+    await I.waitForText('Confidentiality Statement');
+    await I.click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.click('Continue');
+
     await I.waitForElement('#applicantCaseName');
     await I.fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.click('Continue');
