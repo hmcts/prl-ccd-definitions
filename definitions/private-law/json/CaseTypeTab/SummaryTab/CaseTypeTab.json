@@ -1,14 +1,14 @@
 [
   {
-    "LiveFrom": "08/11/2021",
+    "LiveFrom": "25/02/2022",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
-    "CaseFieldID": "summaryLabel",
-    "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "[STATE]=\"SUBMITTED\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"GATE_KEEPING\""
+    "CaseFieldID": "caseTypeOfApplication",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 20
   },
   {
     "LiveFrom": "08/11/2021",
@@ -19,6 +19,17 @@
     "TabDisplayOrder": 1,
     "CaseFieldID": "allocatedJudgeLabel",
     "TabFieldDisplayOrder": 2
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "summaryLabel",
+    "TabFieldDisplayOrder": 1,
+    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND ([STATE]=\"SUBMITTED\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"GATE_KEEPING\")"
   },
   {
     "LiveFrom": "08/11/2021",
