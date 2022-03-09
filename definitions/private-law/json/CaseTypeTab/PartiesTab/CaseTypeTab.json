@@ -1,5 +1,16 @@
 [
   {
+    "LiveFrom": "25/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "caseTypeOfApplication",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 10
+  },
+  {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
@@ -7,7 +18,7 @@
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
     "CaseFieldID": "partiesTabLabel",
-    "TabShowCondition": "[STATE] = \"SUBMITTED_PAID\" OR [STATE] = \"SUBMITTED_NOT_PAID\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE] = \"CASE_ISSUE\" OR [STATE] = \"CASE_WITHDRAWN\"",
+    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND ([STATE] = \"SUBMITTED_PAID\" OR [STATE] = \"SUBMITTED_NOT_PAID\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE] = \"CASE_ISSUE\" OR [STATE] = \"CASE_WITHDRAWN\")",
     "TabFieldDisplayOrder": 1
   },
   {
