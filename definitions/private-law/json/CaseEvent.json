@@ -612,6 +612,19 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "04/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "resendRpa",
+    "Name": "Resend RPA",
+    "PreConditionState(s)": "CASE_ISSUE",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resend-rpa",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sendAndReplyToMessages",
