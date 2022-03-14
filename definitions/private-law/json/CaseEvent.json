@@ -10,7 +10,6 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/copy-FL401-case-name-to-C100",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "EndButtonLabel": "Save and continue"
   },
@@ -58,7 +57,6 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/copy-FL401-case-name-to-C100",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
@@ -661,6 +659,22 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/fl401-submit-application-validation",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-generate-document-submit-application",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/fl401-submit-application-send-notification",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401UploadDocuments",
+    "Name": "Upload documents",
+    "Description": "Upload documents",
+    "DisplayOrder": 16,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
 ]
