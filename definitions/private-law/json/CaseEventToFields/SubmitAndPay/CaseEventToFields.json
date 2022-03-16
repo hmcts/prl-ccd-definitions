@@ -7,6 +7,7 @@
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "COMPLEX",
     "PageID": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/create-payment-service-request",
     "PageDisplayOrder": 1
   },
   {
@@ -130,7 +131,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "submitAndPay",
-    "CaseFieldID": "submitAndPayDownloadApplicationLink",
+    "CaseFieldID": "c100submitAndPayDownloadApplicationLinkLabel",
     "PageFieldDisplayOrder": 12,
     "DisplayContext": "READONLY",
     "PageID": 2,
@@ -171,6 +172,17 @@
     "PageFieldDisplayOrder": 15,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "submitAndPayDownloadApplicationLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationLink",
+    "PageFieldDisplayOrder": 14,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "payAgreeStatement=\"agree\""
   },
   {
     "LiveFrom": "02/12/2021",
