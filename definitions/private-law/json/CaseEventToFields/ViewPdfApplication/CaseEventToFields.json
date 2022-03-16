@@ -25,8 +25,19 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "viewPdfDocument",
-    "CaseFieldID": "viewPDFlinkLabel",
+    "CaseFieldID": "isEngDocGen",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "DisplayContext": "READONLY",
     "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "linkToDownloadApplicationLabel=\"DO NOT SHOW\""
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "viewPdfDocument",
+    "CaseFieldID": "viewPDFlinkLabel",
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
@@ -40,12 +51,10 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageFieldDisplayOrder": 4
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "isEngDocGen=\"Yes\""
   },
   {
-    "LiveFrom": "03/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "viewPdfDocument",
     "CaseFieldID": "viewPDFlinkLabelText",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
@@ -53,5 +62,24 @@
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "linkToDownloadApplicationLabel = \"DO_NOT_SHOW\""
+  },
+  {
+    "CaseFieldID": "isWelshDocGen",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageFieldDisplayOrder": 6,
+    "FieldShowCondition": "linkToDownloadApplicationLabel=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "viewPdfDocument",
+    "CaseFieldID": "draftOrderDocWelsh",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageFieldDisplayOrder": 7,
+    "FieldShowCondition": "isWelshDocGen=\"Yes\""
   }
 ]

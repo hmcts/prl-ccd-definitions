@@ -17,7 +17,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "draftConsentOrderFile",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
     "TabFieldDisplayOrder": 2
   },
   {
@@ -27,8 +27,18 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
+    "CaseFieldID": "draftConsentOrderFile",
+    "TabFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
     "CaseFieldID": "contactOrderDocumentsUploaded",
-    "TabFieldDisplayOrder":3
+    "TabFieldDisplayOrder":4
   },
   {
     "LiveFrom": "10/08/2021",
@@ -38,16 +48,6 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "c8FormDocumentsUploaded",
-    "TabFieldDisplayOrder": 4
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
-    "CaseFieldID": "otherDocumentsUploaded",
     "TabFieldDisplayOrder": 5
   },
   {
@@ -57,7 +57,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "miamCertificationDocumentUpload",
+    "CaseFieldID": "otherDocumentsUploaded",
     "TabFieldDisplayOrder": 6
   },
   {
@@ -67,7 +67,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "miamCertificationDocumentUpload1",
+    "CaseFieldID": "miamCertificationDocumentUpload",
     "TabFieldDisplayOrder": 7
   },
   {
@@ -77,8 +77,8 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersNonMolestationDocument",
-    "TabFieldDisplayOrder":8
+    "CaseFieldID": "miamCertificationDocumentUpload1",
+    "TabFieldDisplayOrder": 8
   },
   {
     "LiveFrom": "10/08/2021",
@@ -87,7 +87,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersOccupationDocument",
+    "CaseFieldID": "ordersNonMolestationDocument",
     "TabFieldDisplayOrder":9
   },
   {
@@ -97,8 +97,8 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersForcedMarriageProtectionDocument",
-    "TabFieldDisplayOrder": 10
+    "CaseFieldID": "ordersOccupationDocument",
+    "TabFieldDisplayOrder":10
   },
   {
     "LiveFrom": "10/08/2021",
@@ -107,7 +107,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersRestrainingDocument",
+    "CaseFieldID": "ordersForcedMarriageProtectionDocument",
     "TabFieldDisplayOrder": 11
   },
   {
@@ -117,7 +117,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersOtherInjunctiveDocument",
+    "CaseFieldID": "ordersRestrainingDocument",
     "TabFieldDisplayOrder": 12
   },
   {
@@ -127,8 +127,8 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "ordersUndertakingInPlaceDocument",
-    "TabFieldDisplayOrder":13
+    "CaseFieldID": "ordersOtherInjunctiveDocument",
+    "TabFieldDisplayOrder": 13
   },
   {
     "LiveFrom": "10/08/2021",
@@ -137,7 +137,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "c8Document",
+    "CaseFieldID": "ordersUndertakingInPlaceDocument",
     "TabFieldDisplayOrder":14
   },
   {
@@ -147,7 +147,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "c1ADocument",
+    "CaseFieldID": "c8Document",
     "TabFieldDisplayOrder":15
   },
   {
@@ -157,8 +157,38 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
+    "CaseFieldID": "c8WelshDocument",
+    "TabFieldDisplayOrder":16
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "c1ADocument",
+    "TabFieldDisplayOrder":17
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "c1AWelshDocument",
+    "TabFieldDisplayOrder":18
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
     "CaseFieldID": "existingProceedings",
-    "TabFieldDisplayOrder": 16,
+    "TabFieldDisplayOrder": 19,
     "DisplayContextParameter": "#TABLE(uploadRelevantOrder)"
   },
   {
@@ -169,6 +199,26 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "scannedDocuments",
-    "TabFieldDisplayOrder": 15
+    "TabFieldDisplayOrder": 20
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "finalDocument",
+    "TabFieldDisplayOrder":21
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "finalWelshDocument",
+    "TabFieldDisplayOrder":22
   }
 ]
