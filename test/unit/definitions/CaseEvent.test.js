@@ -22,13 +22,13 @@ function assertEventDefinitionIsValid(row) {
   whenPopulated(row.ShowSummary).expect(v => {
     return ['Y', 'N'].includes(v);
   });
-  if(row.CallBackURLSubmittedEvent) {
+  if (row.CallBackURLSubmittedEvent) {
     expect(row.CallBackURLSubmittedEvent).to.be.a('string').and.satisfy(isNotEmpty());
- }
- if(row.EventEnablingCondition) {
-  expect(row.EventEnablingCondition).to.be.a('string').and.satisfy(isNotEmpty());
-}
- 
+  }
+  if (row.EventEnablingCondition) {
+    expect(row.EventEnablingCondition).to.be.a('string').and.satisfy(isNotEmpty());
+  }
+
   whenPopulated(row.EndButtonLabel).expect(isNotLongerThan(MEDIUM_STRING));
 }
 

@@ -1,14 +1,14 @@
- const { expect } = require('chai');
- const { uniqWith } = require('lodash');
- const {
+const { expect } = require('chai');
+const { uniqWith } = require('lodash');
+const {
   MEDIUM_STRING,
   isNotEmpty,
   isNotLongerThan,
   noDuplicateFound
- } = require('../utils/utils');
- const { caseFieldata } = require('../utils/dataProvider');
+} = require('../utils/utils');
+const { caseFieldata } = require('../utils/dataProvider');
 
- function assertFieldDefinitionIsValid(row) {
+function assertFieldDefinitionIsValid(row) {
   expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
     return v.startsWith('PRLAPPS');
   });
@@ -20,9 +20,9 @@
     row.FieldType === 'FixedRadioList' || row.FieldType === 'MultiSelectList') {
     expect(row.FieldTypeParameter).to.be.a('string').and.satisfy(isNotEmpty());
   }
- }
+}
 
- describe('CaseField', () => {
+describe('CaseField', () => {
   context('should :', () => {
     let uniqResult = [];
 
@@ -38,4 +38,4 @@
       uniqResult.forEach(assertFieldDefinitionIsValid);
     });
   });
- });
+});

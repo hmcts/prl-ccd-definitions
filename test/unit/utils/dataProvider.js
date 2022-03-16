@@ -1,35 +1,36 @@
 const load = require;
 const fs = require('fs');
 const path = require('path');
-const { setEnvironmentData } = require('worker_threads');
 
 const loadFile = file => {
   return Object.assign(load(`../../../definitions/private-law/json/${file}.json`), []);
 };
 
+let getFieldata = [];
+let processDir = [];
 
 let fieldsArray = [];
 getFieldata = (filePath, fileType) => {
   fieldsArray = [];
   processDir(filePath, fileType);
   return fieldsArray;
-}
+};
 
 processDir = (filePath, fileType) => {
   const fileNames = fs.readdirSync(path.resolve(__dirname, filePath));
-  fileNames.forEach((filename) => {
-    var current_object = path.resolve(__dirname, filePath + '/' + filename); 
-    let stat = fs.statSync(current_object);
+  fileNames.forEach(filename => {
+    const currentObject = path.resolve(__dirname, `${filePath}/${filename}`);
+    const stat = fs.statSync(currentObject);
     if (stat.isFile()) {
       if (filename === fileType) {
-        let content = Object.assign(load(current_object), []);
+        const content = Object.assign(load(currentObject), []);
         fieldsArray = [...fieldsArray, ...content];
       }
     } else if (stat.isDirectory()) {
-      processDir(current_object, fileType);
+      processDir(currentObject, fileType);
     }
   });
-}
+};
 
 module.exports = {
   ccdData: {

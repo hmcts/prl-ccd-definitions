@@ -49,7 +49,7 @@ module.exports = {
   },
 
   async fillAdditionalQuestionsPage() {
-    //Commenting test on this page until the issue is resolved
+    // Commenting test on this page until the issue is resolved
     /* const retryCount = 3;
     await I.waitForText('Are any of the children known to the local authority children\'s services? (Optional)');
     await I.retry(retryCount).checkOption('//input[@id="childrenKnownToLocalAuthority-yes"]');

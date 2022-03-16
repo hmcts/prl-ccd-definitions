@@ -1,7 +1,7 @@
 const { expect, assert } = require('chai');
 const { find } = require('lodash');
 const { isPositiveNumber, whenPopulated } = require('../utils/utils');
-const { CaseEventToFieldData, ccdData, caseFieldata  } = require('../utils/dataProvider');
+const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataProvider');
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
   const errors = [];
@@ -52,7 +52,7 @@ function assertHasOnlyValidFieldIds(caseEventToFieldsFile, caseFieldFile) {
 //   const errors = [];
 //   caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
 //     try {
-     
+
 //       expect(caseEventToFieldsEntry.RetriesTimeoutURLMidEvent).not.to.be.an('string');
 //     } catch (error) {
 //       errors.push(`Field ID ${caseEventToFieldsEntry.CaseFieldID} defines callback without RetriesTimeoutURLMidEvent\n`);
@@ -88,7 +88,6 @@ function assertPageColumnNumber(row) {
 
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
-  let caseFieldNonProd = [];
 
   before(() => {
     caseEventNonProd = ccdData.CaseEvent;

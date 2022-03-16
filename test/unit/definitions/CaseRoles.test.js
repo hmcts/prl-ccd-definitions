@@ -1,38 +1,38 @@
 const { expect } = require('chai');
 const { uniqWith } = require('lodash');
 const {
- MEDIUM_STRING,
- isNotEmpty,
- isNotLongerThan,
- noDuplicateFound
+  MEDIUM_STRING,
+  isNotEmpty,
+  isNotLongerThan,
+  noDuplicateFound
 } = require('../utils/utils');
 const { ccdData } = require('../utils/dataProvider');
 
 function assertFieldDefinitionIsValid(row) {
-expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
-        return v.startsWith('PRLAPPS');
-});
- expect(row.ID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
- if(row.Name) {
+  expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
+    return v.startsWith('PRLAPPS');
+  });
+  expect(row.ID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
+  if (row.Name) {
     expect(row.Name).to.be.a('string').and.satisfy(isNotEmpty());
- }
- expect(row.Description).to.be.a('string').and.satisfy(isNotEmpty());
+  }
+  expect(row.Description).to.be.a('string').and.satisfy(isNotEmpty());
 }
 
 describe('CaseRoles', () => {
- context('should :', () => {
-   let uniqResult = [];
+  context('should :', () => {
+    let uniqResult = [];
 
-   before(() => {
-     uniqResult = uniqWith(ccdData.CaseRoles, noDuplicateFound);
-   });
+    before(() => {
+      uniqResult = uniqWith(ccdData.CaseRoles, noDuplicateFound);
+    });
 
-   it('not contain duplicated definitions of the same field', () => {
-     expect(uniqResult).to.equal(uniqResult);
-   });
+    it('not contain duplicated definitions of the same field', () => {
+      expect(uniqResult).to.equal(uniqResult);
+    });
 
-   it('should have only valid definitions', () => {
-     uniqResult.forEach(assertFieldDefinitionIsValid);
-   });
- });
+    it('should have only valid definitions', () => {
+      uniqResult.forEach(assertFieldDefinitionIsValid);
+    });
+  });
 });

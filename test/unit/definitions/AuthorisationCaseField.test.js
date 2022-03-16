@@ -7,15 +7,14 @@ const { AuthorisationCaseFieldData, caseFieldata } = require('../utils/dataProvi
 const assertFieldExists = createAssertExists('Field');
 
 describe('AuthorisationCaseField', () => {
- describe('should :', () => {
-  
-   it('contain a unique case field ID, case type ID and role (no duplicates)', () => {
-     const uniqResult = uniqWith(AuthorisationCaseFieldData, isFieldDuplicated('CaseFieldID'));
-     expect(uniqResult).to.eql(AuthorisationCaseFieldData);
-   });
+  describe('should :', () => {
+    it('contain a unique case field ID, case type ID and role (no duplicates)', () => {
+      const uniqResult = uniqWith(AuthorisationCaseFieldData, isFieldDuplicated('CaseFieldID'));
+      expect(uniqResult).to.eql(AuthorisationCaseFieldData);
+    });
 
-   it('use existing fields', () => {
-     assertFieldExists(AuthorisationCaseFieldData, caseFieldata);
-   });
- });
+    it('use existing fields', () => {
+      assertFieldExists(AuthorisationCaseFieldData, caseFieldata);
+    });
+  });
 });
