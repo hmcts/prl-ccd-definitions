@@ -47,13 +47,18 @@ function noDuplicateFound(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID;
 }
 
+function noDuplicateFoundWB(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseFieldID === b.CaseFieldID;
+}
+
+
 function loadAllFiles(location) {
   return function loadFeatureFiles(featureFiles) {
     let definitions = [];
 
     featureFiles.forEach(featureFile => {
       definitions = definitions
-        .concat(load(`definitions/divorce/json/${location}/${featureFile}.json`));
+        .concat(load(`definitions/private-law/json/${location}/${featureFile}.json`));
     });
 
     return definitions;
@@ -105,6 +110,7 @@ module.exports = {
   loadAllFiles,
   sortCaseTypeTabs,
   noDuplicateFound,
+  noDuplicateFoundWB,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,

@@ -18,34 +18,33 @@ getFieldata = (filePath, fileType) => {
 
 processDir = (filePath, fileType) => {
   const fileNames = fs.readdirSync(path.resolve(__dirname, filePath));
-  if(!Object.prototype.toString.call(fileNames) === '[object Array]') {
-     const currentObject = path.resolve(__dirname, `${filePath}/${fileNames}`);
-            const stat = fs.statSync(currentObject);
-            if (stat.isFile()) {
-              if (fileNames === fileType) {
-                const content = Object.assign(load(currentObject), []);
-                fieldsArray = [...fieldsArray, ...content];
-              }
-            } else if (stat.isDirectory()) {
-              processDir(currentObject, fileType);
-            }
+  if (!Object.prototype.toString.call(fileNames) === '[object Array]') {
+    const currentObject = path.resolve(__dirname, `${filePath}/${fileNames}`);
+    const stat = fs.statSync(currentObject);
+    if (stat.isFile()) {
+      if (fileNames === fileType) {
+        const content = Object.assign(load(currentObject), []);
+        fieldsArray = [...fieldsArray, ...content];
+      }
+    } else if (stat.isDirectory()) {
+      processDir(currentObject, fileType);
+    }
   } else {
-     fileNames.forEach(filename => {
-        const currentObject = path.resolve(__dirname, `${filePath}/${filename}`);
-        const stat = fs.statSync(currentObject);
-        if (stat.isFile()) {
-          if (filename === fileType) {
-            let content = Object.assign(load(currentObject), []);
-            if(Object.prototype.toString.call(content) === '[object Array]') {
-               fieldsArray = [...fieldsArray, ...content];
-            }
+    fileNames.forEach(filename => {
+      const currentObject = path.resolve(__dirname, `${filePath}/${filename}`);
+      const stat = fs.statSync(currentObject);
+      if (stat.isFile()) {
+        if (filename === fileType) {
+          const content = Object.assign(load(currentObject), []);
+          if (Object.prototype.toString.call(content) === '[object Array]') {
+            fieldsArray = [...fieldsArray, ...content];
           }
-        } else if (stat.isDirectory()) {
-          processDir(currentObject, fileType);
         }
-     });
+      } else if (stat.isDirectory()) {
+        processDir(currentObject, fileType);
+      }
+    });
   }
-
 };
 
 module.exports = {
