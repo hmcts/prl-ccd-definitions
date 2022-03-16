@@ -36,7 +36,7 @@
     "CaseEventID": "respondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "isDateOfBirthKnown",
-    "EventElementLabel": "Is date of birth known?",
+    "EventElementLabel": "*Is date of birth known?",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
@@ -152,14 +152,14 @@
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
+
   {
     "LiveFrom": "16/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "respondentsDetails",
     "CaseFieldID": "respondentsFL401",
-    "ListElementCode": "isAtAddressLessThan5YearsWithDontKnow",
-    "EventElementLabel": "Has respondent lived at this address for less than  5 years?",
+    "ListElementCode": "canYouProvideEmailAddress",
     "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
   },
@@ -169,29 +169,8 @@
     "ID": "PartyDetails",
     "CaseEventID": "respondentsDetails",
     "CaseFieldID": "respondentsFL401",
-    "ListElementCode": "addressLivedLessThan5YearsDetails",
-    "FieldDisplayOrder": "17",
-    "FieldShowCondition": "respondentsFL401.isAtAddressLessThan5YearsWithDontKnow=\"yes\"",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "16/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "respondentsDetails",
-    "CaseFieldID": "respondentsFL401",
-    "ListElementCode": "canYouProvideEmailAddress",
-    "FieldDisplayOrder": "18",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "16/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "respondentsDetails",
-    "CaseFieldID": "respondentsFL401",
     "ListElementCode": "email",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "17",
     "FieldShowCondition": "respondentsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "OPTIONAL"
   },
@@ -202,7 +181,7 @@
     "CaseEventID": "respondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "canYouProvidePhoneNumber",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -212,7 +191,7 @@
     "CaseEventID": "respondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "phoneNumber",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "19",
     "FieldShowCondition": "respondentsFL401.canYouProvidePhoneNumber=\"Yes\"",
     "DisplayContext": "OPTIONAL"
   }

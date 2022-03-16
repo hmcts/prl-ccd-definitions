@@ -7,6 +7,7 @@
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "COMPLEX",
     "PageID": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/create-payment-service-request",
     "PageDisplayOrder": 1
   },
   {
@@ -79,7 +80,7 @@
     "PageFieldDisplayOrder": 7,
     "DisplayContext": "READONLY",
     "PageID": 2,
-    "PageDisplayOrder": 1,
+    "PageDisplayOrder": 2,
     "FieldShowCondition": "payAgreeStatement=\"agree\""
   },
   {
@@ -130,8 +131,54 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "submitAndPay",
-    "CaseFieldID": "submitAndPayDownloadApplicationLink",
+    "CaseFieldID": "c100submitAndPayDownloadApplicationLinkLabel",
     "PageFieldDisplayOrder": 12,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "payAgreeStatement=\"agree\" AND isEngDocGen=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "isEngDocGen",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "submitAndPayDownloadApplicationLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "PageFieldDisplayOrder": 14,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "payAgreeStatement=\"agree\" AND isWelshDocGen=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "isWelshDocGen",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 15,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "submitAndPayDownloadApplicationLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "submitAndPayDownloadApplicationLink",
+    "PageFieldDisplayOrder": 14,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,

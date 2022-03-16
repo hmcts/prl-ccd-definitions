@@ -29,7 +29,7 @@
     "TabDisplayOrder": 1,
     "CaseFieldID": "summaryLabel",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND ([STATE]=\"SUBMITTED\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"GATE_KEEPING\")"
+    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]!=\"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE]!=\"AWAITING_RESUBMISSION_TO_HMCTS\""
   },
   {
     "LiveFrom": "08/11/2021",
