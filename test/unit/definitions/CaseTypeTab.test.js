@@ -25,7 +25,7 @@ describe('CaseTypeTab', () => {
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(CaseTypeTab);
+      expect(uniqResult).to.eql(CaseTypeTab);
     });
 
     it('should have only valid definitions', () => {

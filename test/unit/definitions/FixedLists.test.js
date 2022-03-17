@@ -18,7 +18,7 @@ describe('FixedLists', () => {
     let nonProd = [];
     before(() => {
       nonProd = ccdData.FixedLists;
-      uniqResult = uniqWith(nonProd, noDuplicateFoundWB);
+      uniqResult = uniqWith(nonProd, noDuplicateFoundFL);
     });
 
     it('not contain duplicated definitions of the same field', () => {
