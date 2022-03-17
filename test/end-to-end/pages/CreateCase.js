@@ -10,7 +10,7 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('5');
+    I.wait('7');
     await I.waitForText('Create case');
     I.wait('5');
     await I.click('Accept analytics cookies');
