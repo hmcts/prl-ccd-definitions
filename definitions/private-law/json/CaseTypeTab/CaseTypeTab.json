@@ -6,8 +6,8 @@
     "TabID": "Tasks",
     "TabLabel": "Tasks",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListLabel",
-    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\"",
+    "CaseFieldID": "taskListReturnLabel",
+    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\" OR \"AWAITING_RESUBMISSION_TO_HMCTS\"",
     "TabFieldDisplayOrder": 1
   },
   {
@@ -19,6 +19,28 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "taskList",
     "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "taskListReturn = \"DO_NOT_SHOW\"",
+    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Tasks",
+    "TabLabel": "Tasks",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "taskListLabel",
+    "TabFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Tasks",
+    "TabLabel": "Tasks",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "taskList",
+    "TabFieldDisplayOrder": 4,
     "FieldShowCondition": "taskList = \"DO_NOT_SHOW\"",
     "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
   },
