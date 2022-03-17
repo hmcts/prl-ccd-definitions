@@ -22,13 +22,14 @@ function assertFieldDefinitionIsValid(row) {
 describe('CaseRoles', () => {
   context('should :', () => {
     let uniqResult = [];
-
+    let nonProd = [];
     before(() => {
-      uniqResult = uniqWith(ccdData.CaseRoles, noDuplicateFound);
+      nonProd = ccdData.CaseRoles;
+      uniqResult = uniqWith(nonProd, noDuplicateFound);
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
+      expect(uniqResult).to.eql(nonProd);
     });
 
     it('should have only valid definitions', () => {
