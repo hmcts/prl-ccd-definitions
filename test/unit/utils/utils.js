@@ -52,7 +52,7 @@ function noDuplicateFoundWB(a, b) {
 }
 
 function noDuplicateFoundFL(a, b) {
-  return  a.ID === b.ID && a.ListElementCode === b.ListElementCode;
+  return a.ID === b.ID && a.ListElementCode === b.ListElementCode;
 }
 
 function noDuplicateFoundCT(a, b) {
