@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { uniqWith } = require('lodash');
 const {
   isNotEmpty,
-  noDuplicateFound
+  noDuplicateFoundACT
 } = require('../utils/utils');
 const { ccdData } = require('../utils/dataProvider');
 
@@ -19,11 +19,11 @@ describe('AuthorisationCaseType', () => {
     let uniqResult = [];
 
     before(() => {
-      uniqResult = uniqWith(ccdData.AuthorisationCaseType, noDuplicateFound);
+      uniqResult = uniqWith(ccdData.AuthorisationCaseType, noDuplicateFoundACT);
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
+      expect(uniqResult).to.eql(ccdData.AuthorisationCaseType);
     });
 
     it('should have only valid definitions', () => {

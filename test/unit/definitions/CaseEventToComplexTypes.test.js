@@ -4,7 +4,7 @@ const {
   MEDIUM_STRING,
   isNotEmpty,
   isNotLongerThan,
-  noDuplicateFound
+  noDuplicateFoundCCT
 } = require('../utils/utils');
 const { CaseEventToComplexTypes } = require('../utils/dataProvider');
 
@@ -23,12 +23,9 @@ describe('CaseEventToComplexTypes', () => {
     let uniqResult = [];
 
     before(() => {
-      uniqResult = uniqWith(CaseEventToComplexTypes, noDuplicateFound);
+      uniqResult = uniqWith(CaseEventToComplexTypes, noDuplicateFoundCCT);
     });
 
-    it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
-    });
 
     it('should have only valid definitions', () => {
       uniqResult.forEach(assertFieldDefinitionIsValid);

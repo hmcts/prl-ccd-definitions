@@ -52,7 +52,7 @@ function noDuplicateFoundWB(a, b) {
 }
 
 function noDuplicateFoundFL(a, b) {
-  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.ListElementCode === b.ListElementCode;
+  return  a.ID === b.ID && a.ListElementCode === b.ListElementCode;
 }
 
 function noDuplicateFoundCT(a, b) {
@@ -61,6 +61,14 @@ function noDuplicateFoundCT(a, b) {
 
 function noDuplicateFoundEvent(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
+}
+
+function noDuplicateFoundACT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.UserRole === b.UserRole;
+}
+
+function noDuplicateFoundCCT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseEventID === b.CaseEventID && a.CaseFieldID === b.CaseFieldID && a.ListElementCode === b.ListElementCode;
 }
 
 function loadAllFiles(location) {
@@ -124,6 +132,8 @@ module.exports = {
   noDuplicateFoundWB,
   noDuplicateFoundFL,
   noDuplicateFoundCT,
+  noDuplicateFoundCCT,
+  noDuplicateFoundACT,
   noDuplicateFoundEvent,
   isNotEmpty,
   isNotLongerThan,
