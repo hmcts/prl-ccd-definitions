@@ -51,6 +51,10 @@ function noDuplicateFoundWB(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseFieldID === b.CaseFieldID;
 }
 
+function noDuplicateFoundEvent(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
+}
+
 
 function loadAllFiles(location) {
   return function loadFeatureFiles(featureFiles) {
@@ -111,6 +115,7 @@ module.exports = {
   sortCaseTypeTabs,
   noDuplicateFound,
   noDuplicateFoundWB,
+  noDuplicateFoundEvent,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,
