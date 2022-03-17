@@ -51,6 +51,13 @@ function noDuplicateFoundWB(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseFieldID === b.CaseFieldID;
 }
 
+function noDuplicateFoundFL(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.ListElementCode === b.ListElementCode;
+}
+
+function noDuplicateFoundCT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.TabID === b.TabID && a.CaseFieldID === b.CaseFieldID;
+}
 
 function loadAllFiles(location) {
   return function loadFeatureFiles(featureFiles) {
@@ -111,6 +118,8 @@ module.exports = {
   sortCaseTypeTabs,
   noDuplicateFound,
   noDuplicateFoundWB,
+  noDuplicateFoundFL,
+  noDuplicateFoundCT,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,

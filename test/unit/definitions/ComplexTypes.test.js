@@ -4,7 +4,7 @@ const {
   MEDIUM_STRING,
   isNotEmpty,
   isNotLongerThan,
-  noDuplicateFound
+  noDuplicateFoundFL
 } = require('../utils/utils');
 const { ComplexTypes } = require('../utils/dataProvider');
 
@@ -26,11 +26,11 @@ describe('ComplexTypes', () => {
     let uniqResult = [];
 
     before(() => {
-      uniqResult = uniqWith(ComplexTypes, noDuplicateFound);
+      uniqResult = uniqWith(ComplexTypes, noDuplicateFoundFL);
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
+      expect(uniqResult).to.equal(ComplexTypes);
     });
 
     it('should have only valid definitions', () => {

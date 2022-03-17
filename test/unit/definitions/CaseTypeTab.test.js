@@ -4,7 +4,7 @@ const {
   MEDIUM_STRING,
   isNotEmpty,
   isNotLongerThan,
-  noDuplicateFound
+  noDuplicateFoundCT
 } = require('../utils/utils');
 const { CaseTypeTab } = require('../utils/dataProvider');
 
@@ -21,11 +21,11 @@ describe('CaseTypeTab', () => {
     let uniqResult = [];
 
     before(() => {
-      uniqResult = uniqWith(CaseTypeTab, noDuplicateFound);
+      uniqResult = uniqWith(CaseTypeTab, noDuplicateFoundCT);
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
+      expect(uniqResult).to.equal(CaseTypeTab);
     });
 
     it('should have only valid definitions', () => {
