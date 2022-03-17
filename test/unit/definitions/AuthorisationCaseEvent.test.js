@@ -2,9 +2,8 @@ const { expect } = require('chai');
 const { uniqWith } = require('lodash');
 const {
   MEDIUM_STRING,
-  isNotEmpty,
   isNotLongerThan,
-  noDuplicateFound
+  noDuplicateFoundEvent
 } = require('../utils/utils');
 const { AuthorisationCaseEvent } = require('../utils/dataProvider');
 
@@ -13,20 +12,24 @@ function assertFieldDefinitionIsValid(row) {
     return v.startsWith('PRLAPPS');
   });
   expect(row.CaseEventID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
-  expect(row.UserRole).to.be.a('string').and.satisfy(isNotEmpty());
-  expect(('CRUD').includes(row.CRUD)).to.eql(true);
+  // expect(row.UserRole).to.be.a('string').and.satisfy(isNotEmpty());
+  // expect(('CRUD').includes(row.CRUD)).to.eql(true);
 }
 
 describe('AuthorisationCaseEvent', () => {
   context('should :', () => {
+    let nonProd = [];
     let uniqResult = [];
 
     before(() => {
-      uniqResult = uniqWith(AuthorisationCaseEvent, noDuplicateFound);
+      nonProd = AuthorisationCaseEvent;
+      console.log('nonProd', nonProd.length);
+      uniqResult = uniqWith(nonProd, noDuplicateFoundEvent);
     });
 
     it('not contain duplicated definitions of the same field', () => {
-      expect(uniqResult).to.equal(uniqResult);
+      console.log('uniqResult', uniqResult.length);
+      expect(uniqResult).to.eql(nonProd);
     });
 
     it('should have only valid definitions', () => {

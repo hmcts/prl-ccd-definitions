@@ -59,6 +59,10 @@ function noDuplicateFoundCT(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.TabID === b.TabID && a.CaseFieldID === b.CaseFieldID;
 }
 
+function noDuplicateFoundEvent(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
+}
+
 function loadAllFiles(location) {
   return function loadFeatureFiles(featureFiles) {
     let definitions = [];
@@ -120,6 +124,7 @@ module.exports = {
   noDuplicateFoundWB,
   noDuplicateFoundFL,
   noDuplicateFoundCT,
+  noDuplicateFoundEvent,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,
