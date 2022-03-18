@@ -42,10 +42,11 @@
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
+    "test:pa11y": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.a11y.config.js --maxWorkers 1",
     "test:smoke": "echo smoke",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
     "test:functional": "codeceptjs run --steps -c test/functional/codecept.conf.js",
-    "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
+    "test:fullfunctional": "run-p test:functional test:pa11y",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
@@ -87,7 +88,8 @@
     "pretty-quick": "^1.10.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
-    "sonar-scanner": "^3.1.0"
+    "sonar-scanner": "^3.1.0",
+    "pa11y": "^6.1.1"
   },
   "resolutions": {
     "ansi-regex": "5.0.1",
