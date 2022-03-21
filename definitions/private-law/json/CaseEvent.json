@@ -668,7 +668,7 @@
     "Description": "Statement of Truth and submit",
     "DisplayOrder": 106,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState":  "SUBMITTED_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
@@ -693,5 +693,19 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submit",
+    "Name": "Submit",
+    "Description": "Submit",
+    "DisplayOrder": 21,
+    "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
