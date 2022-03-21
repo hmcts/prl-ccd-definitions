@@ -13,10 +13,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('Jurisdiction', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(ccdData.Jurisdiction, noDuplicateFound);
     });
 

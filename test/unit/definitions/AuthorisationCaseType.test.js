@@ -15,10 +15,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('AuthorisationCaseType', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(ccdData.AuthorisationCaseType, noDuplicateFoundACT);
     });
 

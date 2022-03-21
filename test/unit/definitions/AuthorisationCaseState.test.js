@@ -11,7 +11,7 @@ describe('AuthorisationCaseState', () => {
     let nonProd = [];
     let nonProdStates = [];
 
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.AuthorisationCaseState;
       nonProdStates = ccdData.State;
     });
@@ -25,7 +25,7 @@ describe('AuthorisationCaseState', () => {
       assertStateExists(nonProd, nonProdStates);
     });
 
-    context('Solicitor has valid permissions', () => {
+    describe('Solicitor has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
           if (authState.UserRole === 'caseworker-privatelaw-solicitor') {
@@ -39,7 +39,7 @@ describe('AuthorisationCaseState', () => {
       });
     });
 
-    context('caseworker-privatelaw-judge has valid permissions', () => {
+    describe('caseworker-privatelaw-judge has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
           if (authState.UserRole === 'caseworker-privatelaw-judge') {
@@ -53,7 +53,7 @@ describe('AuthorisationCaseState', () => {
       });
     });
 
-    context('caseworker-privatelaw-courtadmin has valid permissions', () => {
+    describe('caseworker-privatelaw-courtadmin has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
           if (authState.UserRole === 'caseworker-privatelaw-courtadmin') {
@@ -67,7 +67,7 @@ describe('AuthorisationCaseState', () => {
       });
     });
 
-    context('caseworker-privatelaw-systemupdate has valid permissions', () => {
+    describe('caseworker-privatelaw-systemupdate has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
           if (authState.UserRole === 'caseworker-privatelaw-systemupdate') {

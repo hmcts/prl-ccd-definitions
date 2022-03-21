@@ -17,10 +17,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('CaseTypeTab', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(CaseTypeTab, noDuplicateFoundCT);
     });
 

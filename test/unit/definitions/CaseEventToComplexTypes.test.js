@@ -19,10 +19,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('CaseEventToComplexTypes', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(CaseEventToComplexTypes, noDuplicateFoundCCT);
     });
 

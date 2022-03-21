@@ -22,10 +22,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('ComplexTypes', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(ComplexTypes, noDuplicateFoundFL);
     });
 

@@ -17,10 +17,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('CaseType', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       uniqResult = uniqWith(ccdData.CaseType, noDuplicateFound);
     });
 

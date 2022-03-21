@@ -17,11 +17,11 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('AuthorisationCaseEvent', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let nonProd = [];
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       nonProd = AuthorisationCaseEvent;
       console.log('nonProd', nonProd.length);
       uniqResult = uniqWith(nonProd, noDuplicateFoundEvent);

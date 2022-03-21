@@ -37,7 +37,7 @@ describe('CaseEvent', () => {
     let nonProd = [];
     let uniqResult = [];
 
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.CaseEvent;
       uniqResult = uniqWith(nonProd, noDuplicateFound);
     });

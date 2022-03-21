@@ -20,10 +20,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('CaseRoles', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
     let nonProd = [];
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.CaseRoles;
       uniqResult = uniqWith(nonProd, noDuplicateFound);
     });

@@ -23,10 +23,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('CaseField', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
     let nonProd = [];
-    before(() => {
+    beforeEach(() => {
       nonProd = caseFieldata;
       uniqResult = uniqWith(nonProd, noDuplicateFound);
     });

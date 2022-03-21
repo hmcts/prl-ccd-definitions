@@ -15,10 +15,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('WorkBasketInputFields', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
     let nonProd = [];
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.WorkBasketInputFields;
       uniqResult = uniqWith(nonProd, noDuplicateFoundWB);
     });

@@ -13,10 +13,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('FixedLists', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
     let nonProd = [];
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.FixedLists;
       uniqResult = uniqWith(nonProd, noDuplicateFoundFL);
     });

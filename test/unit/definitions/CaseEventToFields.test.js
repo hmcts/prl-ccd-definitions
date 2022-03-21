@@ -89,7 +89,7 @@ function assertPageColumnNumber(row) {
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
 
-  before(() => {
+  beforeEach(() => {
     caseEventNonProd = ccdData.CaseEvent;
   });
 

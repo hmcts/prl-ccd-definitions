@@ -15,10 +15,10 @@ function assertFieldDefinitionIsValid(row) {
 }
 
 describe('SearchInputFields', () => {
-  context('should :', () => {
+  describe('should :', () => {
     let uniqResult = [];
     let nonProd = [];
-    before(() => {
+    beforeEach(() => {
       nonProd = ccdData.SearchInputFields;
       uniqResult = uniqWith(ccdData.SearchInputFields, noDuplicateFoundWB);
     });
