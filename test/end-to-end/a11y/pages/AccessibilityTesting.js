@@ -1,12 +1,12 @@
-//const I = actor();
-//const puppeteer = require('puppeteer');
-//const config = require('../../config');
-//const MyCustomHelper = require('../helpers/a11yHelper');
+// const I = actor();
+// const puppeteer = require('puppeteer');
+// const config = require('../../config');
+// const MyCustomHelper = require('../helpers/a11yHelper');
 //
-//const page = null;
-//const helperClass = new MyCustomHelper();
+// const page = null;
+// const helperClass = new MyCustomHelper();
 //
-//module.exports = {
+// module.exports = {
 //  fields: {
 //    email: '#username',
 //    password: '#password',
@@ -65,4 +65,4 @@
 //    await page.waitFor(5000);
 //    await page.close();
 //  }
-//};
+// };
