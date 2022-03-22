@@ -4,7 +4,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       // headless mode
-      show: process.env.SHOW_BROWSER_WINDOW || true,
+      show: process.env.SHOW_BROWSER_WINDOW || false,
       url: 'http://localhost:3333',
       waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
       waitForTimeout: 180000,

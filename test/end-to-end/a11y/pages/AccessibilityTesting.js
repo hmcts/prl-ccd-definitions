@@ -1,8 +1,10 @@
+//const I = actor();
 //const puppeteer = require('puppeteer');
 //const config = require('../../config');
-//const browser = require('protractor');
+//const MyCustomHelper = require('../helpers/a11yHelper');
 //
 //const page = null;
+//const helperClass = new MyCustomHelper();
 //
 //module.exports = {
 //  fields: {
@@ -11,6 +13,17 @@
 //    submit: 'input[type="submit"]'
 //  },
 //  async goToSignInPage() {
+//    I.amOnPage('https://manage-case.aat.platform.hmcts.net/cases');
+//
+//    // I.waitFor(1000);
+//    // I.click('codecept_training_material');
+//    // await helperClass.getCurrentUrl();
+//
+//    console.log(`cool ${await helperClass.getCurrentUrl()}`);
+//
+//    // I.getCurrentUrl().then(function (result) {
+//    // console.log(result);
+//    // });
 //    // await browser.get(serviceConfig.CcdWebUrl + '/');
 //
 //    //  const browser = await puppeteer.launch({headless: true});
