@@ -105,8 +105,8 @@ module.exports = {
   },
 
   async runMIAMEventHappyPath() {
-    //Commenting these tests until the issue is resolved
-   /* await this.triggerEvent();
+    // Commenting these tests until the issue is resolved
+    /* await this.triggerEvent();
     await this.fillHasAttendedMIAMPage();
     await this.fillMIAMCertificationPage();
     await I.submitEvent();
