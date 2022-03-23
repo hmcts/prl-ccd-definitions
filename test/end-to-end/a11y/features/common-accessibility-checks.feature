@@ -1,4 +1,3 @@
-@a11y
 Feature: Common accessibility checks
 
     Scenario: Go to Sign in page
