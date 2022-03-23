@@ -331,14 +331,14 @@
     "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" OR caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "02/12/2021",
@@ -634,7 +634,7 @@
     "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 17,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -642,7 +642,8 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/about-to-submit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/submitted"
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/submitted",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" OR caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "03/02/2022",
@@ -651,14 +652,14 @@
     "Name": "Amend court details",
     "Description": "Amend court details",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" OR caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "21/02/2022",
