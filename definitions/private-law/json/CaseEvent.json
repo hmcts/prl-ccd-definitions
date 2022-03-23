@@ -702,10 +702,11 @@
     "Description": "Submit",
     "DisplayOrder": 21,
     "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "SUBMITTED_PAID",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application"
   }
 ]

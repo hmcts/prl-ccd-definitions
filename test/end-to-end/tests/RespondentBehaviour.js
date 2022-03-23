@@ -1,6 +1,6 @@
-Feature('Respondent\'s Behaviour');
+Feature('Respondent\'s behaviour');
 
-Scenario('Respondent Behaviour - basic journey', async I => {
+Scenario('Respondent behaviour - basic journey', async I => {
   await I.loginAsSolicitor();
   await I.createCaseFL401();
   await I.runRespondentBehaviour();

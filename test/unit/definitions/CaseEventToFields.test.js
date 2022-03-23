@@ -1,8 +1,7 @@
-/*
 const { expect, assert } = require('chai');
 const { find } = require('lodash');
 const { isPositiveNumber, whenPopulated } = require('../utils/utils');
-const { ccdData } = require('../utils/dataProvider');
+const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataProvider');
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
   const errors = [];
@@ -32,38 +31,38 @@ function assertHasOnlyValidFieldIds(caseEventToFieldsFile, caseFieldFile) {
   }
 }
 
-function assertEventCallBacksDefinedInTheFirstField(caseEventToFieldsFile) {
-  const errors = [];
-  caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
-    try {
-      if (caseEventToFieldsEntry.CallBackURLMidEvent) {
-        expect(caseEventToFieldsEntry.PageFieldDisplayOrder).to.eq(1);
-      }
-    } catch (error) {
-      errors.push(`Field ID ${caseEventToFieldsEntry.CaseFieldID} defines callback, but is not the first field`);
-    }
-  });
+// function assertEventCallBacksDefinedInTheFirstField(caseEventToFieldsFile) {
+//   const errors = [];
+//   caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
+//     try {
+//       if (caseEventToFieldsEntry.CallBackURLMidEvent) {
+//         expect(caseEventToFieldsEntry.PageFieldDisplayOrder).to.eq(1);
+//       }
+//     } catch (error) {
+//       errors.push(`Field ID ${caseEventToFieldsEntry.CaseFieldID} defines callback, but is not the first field`);
+//     }
+//   });
 
-  if (errors.length) {
-    assert.fail(`Found invalid field IDs - ${errors}`);
-  }
-}
+//   if (errors.length) {
+//     assert.fail(`Found invalid field IDs - ${errors}`);
+//   }
+// }
 
-function assertRetriesTimeoutURLMidEventIsAddedForAllCallbacks(caseEventToFieldsFile) {
-  const errors = [];
-  caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
-    try {
-      // this field is ignored by CCD
-      expect(caseEventToFieldsEntry.RetriesTimeoutURLMidEvent).not.to.be.an('string');
-    } catch (error) {
-      errors.push(`Field ID ${caseEventToFieldsEntry.CaseFieldID} defines callback without RetriesTimeoutURLMidEvent\n`);
-    }
-  });
+// function assertRetriesTimeoutURLMidEventIsAddedForAllCallbacks(caseEventToFieldsFile) {
+//   const errors = [];
+//   caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
+//     try {
 
-  if (errors.length) {
-    assert.fail(`Found invalid field IDs - ${errors}`);
-  }
-}
+//       expect(caseEventToFieldsEntry.RetriesTimeoutURLMidEvent).not.to.be.an('string');
+//     } catch (error) {
+//       errors.push(`Field ID ${caseEventToFieldsEntry.CaseFieldID} defines callback without RetriesTimeoutURLMidEvent\n`);
+//     }
+//   });
+
+//   if (errors.length) {
+//     assert.fail(`Found invalid field IDs - ${errors}`);
+//   }
+// }
 
 function assertOrderField(row, field) {
   try {
@@ -87,41 +86,36 @@ function assertPageColumnNumber(row) {
   assertOrderField(row, 'PageColumnNumber');
 }
 
-*/
-/* describe('CaseEventToFields ', () => {
-  let caseEventToFieldsNonProd = [];
+describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
-  let caseFieldNonProd = [];
 
   before(() => {
-    caseEventToFieldsNonProd = ccdData.CaseEventToFields;
     caseEventNonProd = ccdData.CaseEvent;
-    caseFieldNonProd = ccdData.CaseField;
   });
 
   it('should contain valid event IDs', () => {
-    assertHasOnlyValidEventIds(caseEventToFieldsNonProd, caseEventNonProd);
+    assertHasOnlyValidEventIds(CaseEventToFieldData, caseEventNonProd);
   });
 
   it('should contain valid field IDs', () => {
-    assertHasOnlyValidFieldIds(caseEventToFieldsNonProd, caseFieldNonProd);
+    assertHasOnlyValidFieldIds(CaseEventToFieldData, caseFieldata);
   });
 
   it('should contain valid order fields', () => {
-    caseEventToFieldsNonProd.forEach(row => {
+    CaseEventToFieldData.forEach(row => {
       assertPageFieldDisplayOrder(row);
       assertPageDisplayOrder(row);
       assertPageColumnNumber(row);
     });
   });
 
-  describe('CallBackURLMidEvent', () => {
-    it('(if defined) is added to the first field on page', () => {
-      assertEventCallBacksDefinedInTheFirstField(caseEventToFieldsNonProd);
-    });
+  // describe('CallBackURLMidEvent', () => {
+  //   it('(if defined) is added to the first field on page', () => {
+  //     assertEventCallBacksDefinedInTheFirstField(caseEventToFieldsNonProd);
+  //   });
 
-    it('RetriesTimeoutURLMidEvent is never defined', () => {
-      assertRetriesTimeoutURLMidEventIsAddedForAllCallbacks(caseEventToFieldsNonProd);
-    });
-  });
-});*/
+  //   it('RetriesTimeoutURLMidEvent is never defined', () => {
+  //     assertRetriesTimeoutURLMidEventIsAddedForAllCallbacks(caseEventToFieldsNonProd);
+  //   });
+  // });
+});

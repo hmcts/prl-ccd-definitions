@@ -25,14 +25,56 @@ describe('AuthorisationCaseState', () => {
       assertStateExists(nonProd, nonProdStates);
     });
 
-    context('CCA has valid permissions', () => {
+    context('Solicitor has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
-          if (authState.UserRole === 'caseworker-caa') {
+          if (authState.UserRole === 'caseworker-privatelaw-solicitor') {
             try {
-              expect(authState.CRUD.startsWith('CRU')).to.eql(true);
+              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
             } catch (error) {
-              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for CAA`);
+              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-solicitor`);
+            }
+          }
+        });
+      });
+    });
+
+    context('caseworker-privatelaw-judge has valid permissions', () => {
+      it('CRU permissions for all states', () => {
+        nonProd.forEach(authState => {
+          if (authState.UserRole === 'caseworker-privatelaw-judge') {
+            try {
+              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
+            } catch (error) {
+              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-judge`);
+            }
+          }
+        });
+      });
+    });
+
+    context('caseworker-privatelaw-courtadmin has valid permissions', () => {
+      it('CRU permissions for all states', () => {
+        nonProd.forEach(authState => {
+          if (authState.UserRole === 'caseworker-privatelaw-courtadmin') {
+            try {
+              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
+            } catch (error) {
+              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-courtadmin`);
+            }
+          }
+        });
+      });
+    });
+
+    context('caseworker-privatelaw-systemupdate has valid permissions', () => {
+      it('CRU permissions for all states', () => {
+        nonProd.forEach(authState => {
+          if (authState.UserRole === 'caseworker-privatelaw-systemupdate') {
+            try {
+              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
+            } catch (error) {
+              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-systemupdate`);
             }
           }
         });
