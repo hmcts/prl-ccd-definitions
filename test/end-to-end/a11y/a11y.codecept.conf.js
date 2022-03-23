@@ -14,8 +14,8 @@ exports.config = {
         args: ['--no-sandbox']
       },
       windowSize: '1280x960'
-    },
-    //GeneralHelper: { require: './helpers/generalHelper.js' }
+    }
+    // GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {
     retryFailedStep: {
@@ -26,9 +26,7 @@ exports.config = {
   },
   gherkin: {
     features: './features/*.feature',
-    steps: [
-      './features/step_definitions/common-accessibility-checks.steps.js'
-    ]
+    steps: ['./features/step_definitions/common-accessibility-checks.steps.js']
   },
   include: { I: './pages/common.page.js' },
   bootstrap: null,
