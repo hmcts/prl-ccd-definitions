@@ -8,7 +8,7 @@ module.exports = {
   },
 
   async triggerEvent() {
-    await I.triggerEvent('Manage Documents');
+    await I.triggerEvent('Manage documents');
   },
 
   async mainApplicationDocuments() {

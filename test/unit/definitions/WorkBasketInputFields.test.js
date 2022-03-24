@@ -1,34 +1,26 @@
 const { expect } = require('chai');
 const { uniqWith } = require('lodash');
 const {
-  MEDIUM_STRING,
   isNotEmpty,
-  isNotLongerThan,
-  noDuplicateFound
+  noDuplicateFoundWB
 } = require('../utils/utils');
-const { caseFieldata } = require('../utils/dataProvider');
+const { ccdData } = require('../utils/dataProvider');
 
 function assertFieldDefinitionIsValid(row) {
   expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
     return v.startsWith('PRLAPPS');
   });
-  expect(row.ID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
+  expect(row.CaseFieldID).to.be.a('string').and.satisfy(isNotEmpty());
   expect(row.Label).to.be.a('string').and.satisfy(isNotEmpty());
-  expect(row.SecurityClassification).to.eq('Public');
-  expect(row.FieldType).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
-  if (row.FieldType === 'Collection' || row.FieldType === 'FixedList' ||
-    row.FieldType === 'FixedRadioList' || row.FieldType === 'MultiSelectList') {
-    expect(row.FieldTypeParameter).to.be.a('string').and.satisfy(isNotEmpty());
-  }
 }
 
-describe('CaseField', () => {
+describe('WorkBasketInputFields', () => {
   context('should :', () => {
     let uniqResult = [];
     let nonProd = [];
     before(() => {
-      nonProd = caseFieldata;
-      uniqResult = uniqWith(nonProd, noDuplicateFound);
+      nonProd = ccdData.WorkBasketInputFields;
+      uniqResult = uniqWith(nonProd, noDuplicateFoundWB);
     });
 
     it('not contain duplicated definitions of the same field', () => {
