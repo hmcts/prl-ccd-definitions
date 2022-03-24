@@ -1,8 +1,7 @@
 const I = actor();
 
 module.exports = {
-  fields: {
-    submit: 'button[type="submit"]'},
+  fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
     await I.triggerEvent('Submit and pay');
