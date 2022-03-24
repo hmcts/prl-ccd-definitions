@@ -25,6 +25,7 @@ const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
 const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
 const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
+const submitAndPay = require('./pages/SubmitAndPay');
 
 module.exports = () => {
   return actor({
@@ -123,6 +124,9 @@ module.exports = () => {
     },
     runTheHomeHappyPath() {
       return theHome.runTheHomeEventHappyPath();
+    },
+    runSubmitAndPayHappyPath() {
+      return submitAndPay.submitAndPay();
     }
   });
 };
