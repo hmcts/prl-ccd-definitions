@@ -8,17 +8,17 @@ module.exports = {
     languageRequirementApplicationNeedWelsh: '#languageRequirementApplicationNeedWelsh_Yes'
   },
   async  welshLanguageRequirement() {
-    await I.triggerEvent(this.fields.headerText);
-    await I.waitForPage('h1', this.fields.headerText);
-    await I.click(this.fields.welshLanguageRequirement_Y);
-    await I.wait('2');
-    await I.click(this.fields.welshLanguageRequirementApplication);
-    await I.wait('2');
-    await I.see('Does this application need to be translated into Welsh? (Optional)');
-    await I.click(this.fields.languageRequirementApplicationNeedWelsh);
-    await I.click('Continue');
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(3).triggerEvent(this.fields.headerText);
+    await I.retry(3).waitForPage('h1', this.fields.headerText);
+    await I.retry(3).click(this.fields.welshLanguageRequirement_Y);
+    await I.retry(3).wait('2');
+    await I.retry(3).click(this.fields.welshLanguageRequirementApplication);
+    await I.retry(3).wait('2');
+    await I.retry(3).see('Does this application need to be translated into Welsh? (Optional)');
+    await I.retry(3).click(this.fields.languageRequirementApplicationNeedWelsh);
+    await I.retry(3).click('Continue');
+    await I.retry(3).waitForText('Save and continue', '30');
+    await I.retry(3).click('Save and continue');
   }
 
 };

@@ -5,30 +5,30 @@ module.exports = {
     submit: 'button[type="submit"]'},
 
   async triggerEvent() {
-    await I.triggerEvent('Submit and pay');
+    await I.retry(3).triggerEvent('Submit and pay');
   },
 
   async confidentialityStatement() {
     I.wait('5');
-    await I.waitForText('Confidentiality Statement');
+    await I.retry(3).waitForText('Confidentiality Statement');
     I.wait('1');
-    await I.click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
-    await I.click('Continue');
+    await I.retry(3).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
+    await I.retry(3).click('Continue');
   },
 
   async declaration() {
-    await I.waitForText('Declaration');
-    await I.wait('1');
-    await I.click('#payAgreeStatement-agree');
+    await I.retry(3).waitForText('Declaration');
+    await I.retry(3).wait('1');
+    await I.retry(3).click('#payAgreeStatement-agree');
     I.wait('1');
-    await I.click('Continue');
+    await I.retry(3).click('Continue');
   },
 
   async payNow() {
     I.wait('2');
-    await I.click('Continue');
+    await I.retry(3).click('Continue');
     I.wait('2');
-    await I.click('Pay now');
+    await I.retry(3).click('Pay now');
   },
 
   async submitAndPay() {
@@ -36,6 +36,6 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(3).amOnHistoryPageWithSuccessNotification();
   }
 };

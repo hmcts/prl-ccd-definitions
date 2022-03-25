@@ -10,16 +10,16 @@ module.exports = {
     litigationCapacityOtherFactorsDetails: 'textarea[id="litigationCapacityOtherFactorsDetails"]'
   },
   async  litigationCapacity() {
-    await I.triggerEvent(this.fields.headerText);
-    await I.waitForPage('h1', this.fields.headerText);
-    await I.fillField(this.fields.litigationCapacityFactors, this.fields.textareaText);
-    await I.fillField(this.fields.litigationCapacityReferrals, this.fields.textareaText);
-    await I.click(this.fields.litigationCapacityOtherFactors);
-    await I.wait('2');
-    await I.fillField(this.fields.litigationCapacityOtherFactorsDetails, this.fields.textareaText);
-    await I.click('Continue');
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(3).triggerEvent(this.fields.headerText);
+    await I.retry(3).waitForPage('h1', this.fields.headerText);
+    await I.retry(3).fillField(this.fields.litigationCapacityFactors, this.fields.textareaText);
+    await I.retry(3).fillField(this.fields.litigationCapacityReferrals, this.fields.textareaText);
+    await I.retry(3).click(this.fields.litigationCapacityOtherFactors);
+    await I.retry(3).wait('2');
+    await I.retry(3).fillField(this.fields.litigationCapacityOtherFactorsDetails, this.fields.textareaText);
+    await I.retry(3).click('Continue');
+    await I.retry(3).waitForText('Save and continue', '30');
+    await I.retry(3).click('Save and continue');
   }
 
 };

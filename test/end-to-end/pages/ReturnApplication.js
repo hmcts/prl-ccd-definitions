@@ -12,37 +12,37 @@ module.exports = {
   },
 
   async triggerEvent() {
-    await I.triggerEvent('Return application ');
+    await I.retry(3).triggerEvent('Return application ');
   },
 
   async returnApplication() {
-    await I.waitForPage('h1', 'Return application');
+    await I.retry(3).waitForPage('h1', 'Return application');
 
-    await I.click(this.fields.consentOrderNotProvided);
-    await I.click(this.fields.miamCertificateNotProvided);
-    await I.click(this.fields.incompleteEvidenceOfMiamExamption);
-    await I.click(this.fields.confidentalDetailListed);
-    await I.click(this.fields.clarificationNeeded);
-    await I.click(this.fields.otherReason);
-    await I.click('Continue');
-    await I.wait('2');
+    await I.retry(3).click(this.fields.consentOrderNotProvided);
+    await I.retry(3).click(this.fields.miamCertificateNotProvided);
+    await I.retry(3).click(this.fields.incompleteEvidenceOfMiamExamption);
+    await I.retry(3).click(this.fields.confidentalDetailListed);
+    await I.retry(3).click(this.fields.clarificationNeeded);
+    await I.retry(3).click(this.fields.otherReason);
+    await I.retry(3).click('Continue');
+    await I.retry(3).wait('2');
 
-    await I.see('Return message');
-    await I.seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="3" id="returnMessage"></textarea>');
+    await I.retry(3).see('Return message');
+    await I.retry(3).seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="3" id="returnMessage"></textarea>');
 
-    await I.click('Continue');
-    await I.wait('2');
+    await I.retry(3).click('Continue');
+    await I.retry(3).wait('2');
 
 
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(3).waitForText('Save and continue', '30');
+    await I.retry(3).click('Save and continue');
   },
 
   async runEventHappyPathReturnApplication() {
     await this.triggerEvent();
     await this.returnApplication();
 
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(3).submitEvent();
+    await I.retry(3).amOnHistoryPageWithSuccessNotification();
   }
 };

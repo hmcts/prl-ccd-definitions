@@ -12,18 +12,18 @@ module.exports = {
     requestToForeignAuthorityGiveReason: 'textarea[id="requestToForeignAuthorityGiveReason"]'
   },
   async internationalElement() {
-    await I.triggerEvent(this.fields.headerText);
-    await I.waitForPage('h1', this.fields.headerText);
-    await I.click(this.fields.habitualResidentInOtherState);
-    await I.fillField(this.fields.habitualResidentInOtherStateGiveReason, this.fields.textareaText);
-    await I.click(this.fields.jurisdictionIssue);
-    await I.fillField(this.fields.jurisdictionIssueGiveReason, this.fields.textareaText);
-    await I.click(this.fields.requestToForeignAuthority);
-    await I.fillField(this.fields.requestToForeignAuthorityGiveReason, this.fields.textareaText);
-    await I.wait('2');
-    await I.click('Continue');
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(3).triggerEvent(this.fields.headerText);
+    await I.retry(3).waitForPage('h1', this.fields.headerText);
+    await I.retry(3).click(this.fields.habitualResidentInOtherState);
+    await I.retry(3).fillField(this.fields.habitualResidentInOtherStateGiveReason, this.fields.textareaText);
+    await I.retry(3).click(this.fields.jurisdictionIssue);
+    await I.retry(3).fillField(this.fields.jurisdictionIssueGiveReason, this.fields.textareaText);
+    await I.retry(3).click(this.fields.requestToForeignAuthority);
+    await I.retry(3).fillField(this.fields.requestToForeignAuthorityGiveReason, this.fields.textareaText);
+    await I.retry(3).wait('2');
+    await I.retry(3).click('Continue');
+    await I.retry(3).waitForText('Save and continue', '30');
+    await I.retry(3).click('Save and continue');
   }
 
 };

@@ -1,19 +1,19 @@
 const I = actor();
 
 async function uploadDocuments() {
-  await I.triggerEvent('Upload documents');
-  await I.waitForPage('h1', 'Upload documents');
+  await I.retry(3).triggerEvent('Upload documents');
+  await I.retry(3).waitForPage('h1', 'Upload documents');
 
-  await I.addNewDocument('contactOrderDocumentsUploaded');
-  await I.addNewDocument('c8FormDocumentsUploaded');
-  await I.addNewDocument('otherDocumentsUploaded');
+  await I.retry(3).addNewDocument('contactOrderDocumentsUploaded');
+  await I.retry(3).addNewDocument('c8FormDocumentsUploaded');
+  await I.retry(3).addNewDocument('otherDocumentsUploaded');
 
-  await I.wait('5');
-  await I.click('Continue');
+  await I.retry(3).wait('5');
+  await I.retry(3).click('Continue');
 
-  await I.waitForText('Save and continue', '30');
-  await I.click('Save and continue');
-  await I.amOnHistoryPageWithSuccessNotification();
+  await I.retry(3).waitForText('Save and continue', '30');
+  await I.retry(3).click('Save and continue');
+  await I.retry(3).amOnHistoryPageWithSuccessNotification();
 }
 
 module.exports = { uploadDocuments };

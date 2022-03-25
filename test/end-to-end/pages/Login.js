@@ -13,12 +13,12 @@ module.exports = {
   },
 
   async loginAsSolicitor() {
-    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
-    await I.seeElement('#authorizeCommand');
-    await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
-    await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
-    await I.click(this.fields.submit);
+    await I.retry(3).amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.retry(3).click('#cookie-accept-submit');
+    await I.retry(3).click('#cookie-accept-all-success-banner-hide');
+    await I.retry(3).seeElement('#authorizeCommand');
+    await I.retry(3).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+    await I.retry(3).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    await I.retry(3).click(this.fields.submit);
   }
 };
