@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -44,74 +45,73 @@ module.exports = {
   },
 
   async actionTypeOfApplicationEvent() {
-    await I.retry(3).waitForText(this.fields.eventName);
-    await I.retry(3).selectOption(this.fields.eventSelectField, this.fields.eventName);
-    await I.retry(3).waitForEnabled(this.fields.submit);
-    await I.retry(3).click(this.fields.submit);
+    await I.retry(retryCount).waitForText(this.fields.eventName);
+    await I.retry(retryCount).selectOption(this.fields.eventSelectField, this.fields.eventName);
+    await I.retry(retryCount).waitForEnabled(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async whatOrdersPageC100() {
-    await I.retry(3).waitForText('What order(s) are you applying for?');
-    await I.retry(3).click(this.fields.childArrangementsOrder);
-    await I.retry(3).click(this.fields.prohibitedStepsOrder);
-    await I.retry(3).click(this.fields.specificIssueOrder);
-    await I.retry(3).wait('5');
-    await I.retry(3).click(this.fields.typeOfChildArrangementsOrder);
-    await I.retry(3).fillField('#natureOfOrder', 'Test text');
-    await I.retry(3).click(this.fields.submit);
+    await I.retry(retryCount).waitForText('What order(s) are you applying for?');
+    await I.retry(retryCount).click(this.fields.childArrangementsOrder);
+    await I.retry(retryCount).click(this.fields.prohibitedStepsOrder);
+    await I.retry(retryCount).click(this.fields.specificIssueOrder);
+    await I.retry(retryCount).wait('5');
+    await I.retry(retryCount).click(this.fields.typeOfChildArrangementsOrder);
+    await I.retry(retryCount).fillField('#natureOfOrder', 'Test text');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async draftConsentOrderC100() {
-    await I.retry(3).waitForText('Do you have a draft consent order?');
-    await I.retry(3).click(this.fields.consentOrderYes);
-    await I.retry(3).attachDocument('draftConsentOrderFile');
-    await I.retry(3).wait('5');
-    await I.retry(3).click('Continue');
+    await I.retry(retryCount).waitForText('Do you have a draft consent order?');
+    await I.retry(retryCount).click(this.fields.consentOrderYes);
+    await I.retry(retryCount).attachDocument('draftConsentOrderFile');
+    await I.retry(retryCount).wait('5');
+    await I.retry(retryCount).click('Continue');
   },
 
   async permissionsPageC100() {
-    await I.retry(3).waitForText('Have you applied to the court for permission to make this application?');
-    await I.retry(3).click(this.fields.permissionRequiredRadioButton);
-    await I.retry(3).fillField(this.fields.appPermissionRequiredReason, 'Test Text');
-    await I.retry(3).click(this.fields.submit);
+    await I.retry(retryCount).waitForText('Have you applied to the court for permission to make this application?');
+    await I.retry(retryCount).click(this.fields.permissionRequiredRadioButton);
+    await I.retry(retryCount).fillField(this.fields.appPermissionRequiredReason, 'Test Text');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async briefDetailsPageC100() {
-    await I.retry(3).wait('2');
-    await I.retry(3).waitForText('Provide brief details of:');
-    await I.retry(3).fillField(this.fields.appDetailsTextArea, 'Test Text');
-    await I.retry(3).click(this.fields.submit);
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).waitForText('Provide brief details of:');
+    await I.retry(retryCount).fillField(this.fields.appDetailsTextArea, 'Test Text');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async checkYourAnswersPageC100() {
-    await I.retry(3).waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.retry(3).click('Save and continue');
+    await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    await I.retry(retryCount).click('Save and continue');
   },
 
   async ordersApplyingForPageFL401() {
-    await I.retry(3).waitForText(this.fields.ordersApplyingForPageHeader);
+    await I.retry(retryCount).waitForText(this.fields.ordersApplyingForPageHeader);
     // Checking mandatory field validation
-    await I.retry(3).click(this.fields.submit);
-    await I.retry(3).waitForText(this.fields.ordersApplyingForPageMandatoryText);
-    await I.retry(3).click(this.fields.nonMolestationOrder);
-    await I.retry(3).click(this.fields.occupationOrder);
-    await I.retry(3).click('Continue');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.retry(retryCount).waitForText(this.fields.ordersApplyingForPageMandatoryText);
+    await I.retry(retryCount).click(this.fields.nonMolestationOrder);
+    await I.retry(retryCount).click(this.fields.occupationOrder);
+    await I.retry(retryCount).click('Continue');
   },
 
   async linkToChildArrangementsApplicationFL401() {
-    await I.retry(3).waitForText(this.fields.linkToChildArrangementsApplicationHeader);
-    await I.retry(3).click(this.fields.linkedChildArrangementsApplicationYes);
-    // await I.retry(3).wait('5');
-    await I.retry(3).waitForText(this.fields.childArrangementOrderInstructionText);
-    await I.retry(3).waitForText(this.fields.childArrangementCaseNumberLabel);
-    await I.retry(3).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
-    await I.retry(3).click('Continue');
+    await I.retry(retryCount).waitForText(this.fields.linkToChildArrangementsApplicationHeader);
+    await I.retry(retryCount).click(this.fields.linkedChildArrangementsApplicationYes);
+    await I.retry(retryCount).waitForText(this.fields.childArrangementOrderInstructionText);
+    await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
+    await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
+    await I.retry(retryCount).click('Continue');
   },
 
   async checkYourAnswersPageFL401() {
-    await I.retry(3).waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.retry(3).waitForText(this.fields.childArrangementsCaseNumberText);
-    await I.retry(3).click('Save and continue');
+    await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
+    await I.retry(retryCount).click('Save and continue');
   },
 
   async typeOfApplicationEventC100() {

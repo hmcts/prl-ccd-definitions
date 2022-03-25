@@ -1,6 +1,6 @@
-Feature('MIAM');
+Feature('Manage Documents');
 
-Scenario('MIAM - basic journey', async I => {
+Scenario('Manage Documents - basic journey', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.runManageDocuments();

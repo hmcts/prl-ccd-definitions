@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
   fields: {
@@ -12,18 +13,18 @@ module.exports = {
     requestToForeignAuthorityGiveReason: 'textarea[id="requestToForeignAuthorityGiveReason"]'
   },
   async internationalElement() {
-    await I.retry(3).triggerEvent(this.fields.headerText);
-    await I.retry(3).waitForPage('h1', this.fields.headerText);
-    await I.retry(3).click(this.fields.habitualResidentInOtherState);
-    await I.retry(3).fillField(this.fields.habitualResidentInOtherStateGiveReason, this.fields.textareaText);
-    await I.retry(3).click(this.fields.jurisdictionIssue);
-    await I.retry(3).fillField(this.fields.jurisdictionIssueGiveReason, this.fields.textareaText);
-    await I.retry(3).click(this.fields.requestToForeignAuthority);
-    await I.retry(3).fillField(this.fields.requestToForeignAuthorityGiveReason, this.fields.textareaText);
-    await I.retry(3).wait('2');
-    await I.retry(3).click('Continue');
-    await I.retry(3).waitForText('Save and continue', '30');
-    await I.retry(3).click('Save and continue');
+    await I.retry(retryCount).triggerEvent(this.fields.headerText);
+    await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
+    await I.retry(retryCount).click(this.fields.habitualResidentInOtherState);
+    await I.retry(retryCount).fillField(this.fields.habitualResidentInOtherStateGiveReason, this.fields.textareaText);
+    await I.retry(retryCount).click(this.fields.jurisdictionIssue);
+    await I.retry(retryCount).fillField(this.fields.jurisdictionIssueGiveReason, this.fields.textareaText);
+    await I.retry(retryCount).click(this.fields.requestToForeignAuthority);
+    await I.retry(retryCount).fillField(this.fields.requestToForeignAuthorityGiveReason, this.fields.textareaText);
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).waitForText('Save and continue', '10');
+    await I.retry(retryCount).click('Save and continue');
   }
 
 };
