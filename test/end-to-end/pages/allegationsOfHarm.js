@@ -99,6 +99,7 @@ module.exports = {
     await I.retry(retryCount).click('Add new');
     I.wait('2');
     await I.retry(retryCount).fillField(this.fields.behaviours_0_abuseNatureDescription, this.fields.textareaText);
+    // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.behaviours_0_behavioursStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviours_0_behavioursApplicantSoughtHelp);
     await I.retry(retryCount).fillField(this.fields.behaviours_0_behavioursNature, this.fields.textareaText);
@@ -111,6 +112,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.allegationsOfHarmOtherConcerns);
     I.wait('2');
     await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsDetails, this.fields.textareaText);
+    // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsCourtActions, this.fields.textareaText);
 
     // Child Contact

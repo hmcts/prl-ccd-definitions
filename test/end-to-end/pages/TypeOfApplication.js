@@ -104,6 +104,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.linkedChildArrangementsApplicationYes);
     await I.retry(retryCount).waitForText(this.fields.childArrangementOrderInstructionText);
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
+    // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Continue');
   },
