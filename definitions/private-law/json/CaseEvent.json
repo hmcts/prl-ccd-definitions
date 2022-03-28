@@ -708,5 +708,20 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401resubmit",
+    "Name": "Statement of Truth and submit",
+    "Description": "Statement of Truth and submit",
+    "DisplayOrder": 22,
+    "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application"
   }
 ]
