@@ -6,7 +6,7 @@ module.exports = {
     password: defaultPassword
   },
 
-  baseUrl: process.env.URL || 'https://xui-prl-ccd-definitions-pr-274.service.core-compute-preview.internal/',
+  baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
   TestOutputDir: process.env.E2E_OUTPUT_DIR || './output',
   TestForAccessibility: process.env.TEST_ACCESSIBILITY || true
 };
