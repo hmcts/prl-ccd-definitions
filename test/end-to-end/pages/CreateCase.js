@@ -20,6 +20,7 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
+    I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
