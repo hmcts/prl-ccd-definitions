@@ -20,7 +20,20 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "returnApplication",
+    "CaseFieldID": "fl401rejectReason",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "08/11/2021",
@@ -43,5 +56,17 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "returnApplication",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 20,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "rejectReasonLabel=\"DO_NOT_SHOW\""
   }
 ]
