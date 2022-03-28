@@ -25,6 +25,7 @@ module.exports = {
     await I.fillField('//*[@id="applicantRelationshipDate-day"]', '1');
     await I.fillField('//*[@id="applicantRelationshipDate-month"]', '1');
     await I.fillField('//*[@id="applicantRelationshipDate-year"]', '2015');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -36,6 +37,7 @@ module.exports = {
     await I.waitForText('What is the respondent’s relationship with the applicant?');
     await I.click('#respondentRelationOptions_applicantRelationshipOptions-other');
     await I.fillField('#respondentRelationOptions_relationOptionsOther', 'Other text area');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 

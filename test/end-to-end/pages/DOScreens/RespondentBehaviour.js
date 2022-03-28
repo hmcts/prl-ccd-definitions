@@ -29,6 +29,7 @@ module.exports = {
 
     await I.fillField('#respondentBehaviourData_otherReasonApplicantWantToStopFromRespondentDoing', 'Text Area');
     I.wait('2');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 

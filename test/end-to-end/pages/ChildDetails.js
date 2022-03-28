@@ -44,6 +44,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
     await I.retry(retryCount).fillField('//textarea[@id="children_0_parentalResponsibilityDetails"]', 'Text area field Test');
     await this.addNewChild2();
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

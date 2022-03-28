@@ -47,6 +47,7 @@ module.exports = {
     I.wait('3');
     await I.fillField(this.fields.otherDetails, 'Other Details');
     I.wait('3');
+    await I.runAccessibilityTest();
     await I.click(this.fields.submit);
   },
 

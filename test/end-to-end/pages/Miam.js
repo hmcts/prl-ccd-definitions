@@ -73,6 +73,7 @@ module.exports = {
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_3');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_2');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_1');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

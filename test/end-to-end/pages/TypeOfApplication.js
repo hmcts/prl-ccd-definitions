@@ -96,6 +96,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.ordersApplyingForPageMandatoryText);
     await I.retry(retryCount).click(this.fields.nonMolestationOrder);
     await I.retry(retryCount).click(this.fields.occupationOrder);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
@@ -106,6 +107,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 

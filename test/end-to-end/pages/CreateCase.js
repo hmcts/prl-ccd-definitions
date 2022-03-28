@@ -49,6 +49,7 @@ module.exports = {
 
     await I.waitForElement('#applicantCaseName');
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
@@ -59,6 +60,7 @@ module.exports = {
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 

@@ -30,7 +30,7 @@ module.exports = {
 
     await I.retry(retryCount).see('Return message');
     await I.retry(retryCount).seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="retryCount" id="returnMessage"></textarea>');
-
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).wait('2');
 

@@ -33,6 +33,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="whoChildrenLiveWith-other"]');
     await I.retry(retryCount).waitForElement('//textarea[@id="childAddressAndAdultsLivingWith"]');
     await I.retry(retryCount).fillField('//textarea[@id="childAddressAndAdultsLivingWith"]', '3 address of child, England');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -53,6 +54,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="otherChildren_0_gender-female"]');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_relationshipToApplicant"]', 'Son');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_relationshipToRespondent"]', 'Nephew');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

@@ -49,6 +49,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.domesticAbuse);
@@ -91,6 +92,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.ordersRestraining);
     await I.retry(retryCount).click(this.fields.ordersOtherInjunctive);
     await I.retry(retryCount).click('//*[@id="ordersUndertakingInPlace_No"]');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
