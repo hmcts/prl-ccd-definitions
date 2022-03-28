@@ -22,7 +22,7 @@ module.exports = {
   async fillFormAndSubmit() {
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('retryCount');
+    I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
