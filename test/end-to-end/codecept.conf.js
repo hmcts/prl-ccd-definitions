@@ -1,10 +1,11 @@
 exports.config = {
-  tests: './tests/*.js',
+  tests: './tests/SubmitAndPayCA.js',
   output: './output',
   helpers: {
     Puppeteer: {
       // headless mode
       show: process.env.SHOW_BROWSER_WINDOW || false,
+     // show: true,
       url: 'http://localhost:3000',
       waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
       waitForTimeout: 180000,

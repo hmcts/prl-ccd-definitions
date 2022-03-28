@@ -10,7 +10,7 @@ module.exports = {
   },
 
   async confidentialityStatement() {
-    I.wait('5');
+    I.wait('10');
     await I.retry(retryCount).waitForText('Confidentiality Statement');
     I.wait('1');
     await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
@@ -18,6 +18,7 @@ module.exports = {
   },
 
   async declaration() {
+    I.wait('2');
     await I.retry(retryCount).waitForText('Declaration');
     await I.retry(retryCount).wait('1');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
