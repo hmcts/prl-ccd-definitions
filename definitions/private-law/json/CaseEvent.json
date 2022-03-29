@@ -605,7 +605,7 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
