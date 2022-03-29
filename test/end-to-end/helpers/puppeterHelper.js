@@ -96,8 +96,9 @@ module.exports = class PuppeteerHelpers extends Helper {
       return;
     }
     const url = await this.helpers.Puppeteer.grabCurrentUrl();
+    console.log(`accessibility URL ${url}`);
     const { page } = await this.helpers.Puppeteer;
-
+    console.log(`starting accessibility ${url}`);
     runAccessibility(url, page);
   }
 };

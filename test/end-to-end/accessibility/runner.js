@@ -22,6 +22,7 @@ async function runAccessibility(url, page) {
   const screenshotName = `${Date.now()}.png`;
   const screenshotReportRef = `assets/${screenshotName}`;
 
+  console.log(`analyzing the page URL ${url}`);
   const accessibilityErrorsOnThePage = await page.evaluate(() => {
     const processIssue = function(issue) {
       return {
