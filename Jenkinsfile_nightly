@@ -49,6 +49,11 @@ withNightlyPipeline("nodejs", product, component) {
     enableSlackNotifications(channel)
     enableFullFunctionalTest(200)
 
+    after('smokeTest') {
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/smoke/mochawesome.html'
+        yarnBuilder.yarn('test:smoke')
+    }
+
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
     }
