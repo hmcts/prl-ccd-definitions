@@ -15,7 +15,7 @@ module.exports = {
   },
 
   async loginAsSolicitor() {
-    await I.retry(retryCount).amOnPage('https://xui-prl-ccd-definitions-pr-299.service.core-compute-preview.internal/');
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     await I.retry(retryCount).click('#cookie-accept-submit');
     await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
     await I.retry(retryCount).seeElement('#authorizeCommand');
