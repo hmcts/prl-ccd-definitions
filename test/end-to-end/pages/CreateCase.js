@@ -1,5 +1,8 @@
 const I = actor();
 const retryCount = 3;
+const normalizeCaseId = caseId => {
+  return caseId.toString().replace(/\D/g, '');
+};
 
 module.exports = {
 
@@ -78,5 +81,16 @@ module.exports = {
     await this.fillSolicitorApplicationPageFL401();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createNewCaseC100andReturnID() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit();
+    await this.selectTypeOfApplicationC100();
+    await this.fillSolicitorApplicationPageC100();
+    await I.submitEvent();
+    await I.amOnHistoryPageWithSuccessNotification();
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    return caseId;
   }
 };
