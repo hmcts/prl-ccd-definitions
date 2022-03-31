@@ -693,5 +693,20 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "18/03/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "deleteApplication",
+    "Name": "Delete application",
+    "Description": "Delete application",
+    "DisplayOrder": 110,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "DELETED",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/callback/case-deletion/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Delete"
   }
 ]
