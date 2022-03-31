@@ -45,7 +45,8 @@ module.exports = {
 
   setInitialSearchFields(state = 'Any') {
     // wait for initial filters to load
-    I.wait('30');
+    // eslint-disable-next-line no-magic-numbers
+    I.waitForVisible(this.fields.jurisdiction, 30);
     I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     I.selectOption(this.fields.caseState, state);
