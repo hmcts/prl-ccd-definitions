@@ -12,5 +12,5 @@ module.exports = {
     caseTypeFullDesc: 'C100 & FL401 Applications'
   },
 
-  baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases'
+  baseUrl: process.env.XUI_WEB_URL || 'https://manage-case.aat.platform.hmcts.net/cases'
 };
