@@ -10,7 +10,7 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('5');
+    I.wait('7');
     await I.waitForText('Create case');
     I.wait('5');
     await I.click('Accept analytics cookies');
@@ -19,10 +19,12 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
+    const retryCount = 3;
     await I.waitForElement(this.fields.jurisdiction);
-    await I.selectOption(this.fields.jurisdiction, 'Family Private Law');
-    await I.selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    await I.selectOption(this.fields.event, 'Solicitor application');
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('3');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.click(this.fields.submit);
   },
