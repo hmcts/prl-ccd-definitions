@@ -57,8 +57,7 @@ module.exports = {
     await I.click(this.fields.specificIssueOrder);
     await I.wait('5');
     await I.click(this.fields.typeOfChildArrangementsOrder);
-    await I.waitForEnabled(this.fields.natureOfOrderTextArea);
-    await I.fillField(this.fields.natureOfOrderTextArea, this.fields.textareaText);
+    await I.fillField('#natureOfOrder', 'Test text');
     await I.click(this.fields.submit);
   },
 
@@ -73,21 +72,19 @@ module.exports = {
   async permissionsPageC100() {
     await I.waitForText('Have you applied to the court for permission to make this application?');
     await I.click(this.fields.permissionRequiredRadioButton);
-    await I.fillField(this.fields.appPermissionRequiredReason, this.fields.textareaText);
+    await I.fillField(this.fields.appPermissionRequiredReason, 'Test Text');
     await I.click(this.fields.submit);
   },
 
   async briefDetailsPageC100() {
     await I.wait('2');
     await I.waitForText('Provide brief details of:');
-    await I.fillField(this.fields.appDetailsTextArea, this.fields.textareaText);
+    await I.fillField(this.fields.appDetailsTextArea, 'Test Text');
     await I.click(this.fields.submit);
   },
 
   async checkYourAnswersPageC100() {
     await I.waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.waitForText(this.fields.textareaText);
-    await I.seeDocuments('Draft consent order', 'dummy.pdf');
     await I.click('Save and continue');
   },
 
