@@ -22,6 +22,7 @@ module.exports = {
   async fillChildrenAdditionalQuestionsPage() {
     I.wait('2');
     await I.retry(retryCount).waitForElement('//input[@id="isChildrenKnownToAuthority-yes"]');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).checkOption('//input[@id="isChildrenKnownToAuthority-yes"]');
     await I.retry(retryCount).waitForElement('//textarea[@id="childAndLocalAuthority"]');
     await I.retry(retryCount).fillField('//textarea[@id="childAndLocalAuthority"]', 'Test local authority');
@@ -33,7 +34,6 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="whoChildrenLiveWith-other"]');
     await I.retry(retryCount).waitForElement('//textarea[@id="childAddressAndAdultsLivingWith"]');
     await I.retry(retryCount).fillField('//textarea[@id="childAddressAndAdultsLivingWith"]', '3 address of child, England');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -48,13 +48,13 @@ module.exports = {
   async fillOtherChildren() {
     await I.retry(retryCount).waitForElement('#otherChildren');
     await I.retry(retryCount).click('Add new');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_firstName"]', 'Test Firstname');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_lastName"]', 'Test Lastname');
     await I.retry(retryCount).checkOption('//input[@id="otherChildren_0_isDateOfBirthUnknown-dontKnow"]');
     await I.retry(retryCount).checkOption('//input[@id="otherChildren_0_gender-female"]');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_relationshipToApplicant"]', 'Son');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_relationshipToRespondent"]', 'Nephew');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

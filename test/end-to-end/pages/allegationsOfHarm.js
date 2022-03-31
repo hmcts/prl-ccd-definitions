@@ -49,7 +49,6 @@ module.exports = {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.domesticAbuse);
@@ -86,13 +85,13 @@ module.exports = {
     await I.retry(retryCount).checkOption('//*[@id="ordersNonMolestationCurrent_Yes"]');
     await I.retry(retryCount).fillField('//*[@id="ordersNonMolestationCourtName"]', 'Court Name');
     await I.retry(retryCount).attachFile('//*[@id="ordersNonMolestationDocument"]', '../resource/dummy.pdf');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).wait(uploadTime);
     await I.retry(retryCount).click(this.fields.ordersOccupationNo);
     await I.retry(retryCount).click(this.fields.ordersForcedMarriageProtection);
     await I.retry(retryCount).click(this.fields.ordersRestraining);
     await I.retry(retryCount).click(this.fields.ordersOtherInjunctive);
     await I.retry(retryCount).click('//*[@id="ordersUndertakingInPlace_No"]');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 

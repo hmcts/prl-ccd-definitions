@@ -4,13 +4,12 @@ const retryCount = 3;
 async function uploadDocuments() {
   await I.retry(retryCount).triggerEvent('Upload documents');
   await I.retry(retryCount).waitForPage('h1', 'Upload documents');
-
+  await I.runAccessibilityTest();
   await I.retry(retryCount).addNewDocument('contactOrderDocumentsUploaded');
   await I.retry(retryCount).addNewDocument('c8FormDocumentsUploaded');
   await I.retry(retryCount).addNewDocument('otherDocumentsUploaded');
 
   await I.retry(retryCount).wait('5');
-  await I.runAccessibilityTest();
   await I.retry(retryCount).click('Continue');
 
   await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');

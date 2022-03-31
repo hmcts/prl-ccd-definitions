@@ -31,6 +31,7 @@ module.exports = {
   async fillChildrenPage() {
     await I.waitForElement('#children');
     await I.retry(retryCount).click('Add new');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="children_0_firstName"]', 'Test Firstname');
     await I.retry(retryCount).fillField('//input[@id="children_0_lastName"]', 'Test Lastname');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-day"])[1]', '11');
@@ -43,7 +44,6 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="children_0_respondentsRelationshipToChild-mother"]');
     await I.retry(retryCount).checkOption('//input[@id="children_0_childLiveWith-applicant"]');
     await I.retry(retryCount).fillField('//textarea[@id="children_0_parentalResponsibilityDetails"]', 'Text area field Test');
-    // await I.runAccessibilityTest();
     await this.addNewChild2();
     await I.retry(retryCount).click(this.fields.submit);
   },

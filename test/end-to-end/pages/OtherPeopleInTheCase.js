@@ -15,6 +15,7 @@ module.exports = {
     await I.retry(retryCount).click('Add new');
     I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_firstName"]', 'Other Firstname');
+    await I.runAccessibilityTest();
     I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_lastName"]', 'Other Lastname');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_previousName"]', 'Other PreviousName');
@@ -34,7 +35,6 @@ module.exports = {
     await I.retry(retryCount).click('#othersToNotify_0_otherPersonRelationshipToChildren > div > button');
     I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_otherPersonRelationshipToChildren_0_personRelationshipToChild"]', this.fields.textareaText);
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');

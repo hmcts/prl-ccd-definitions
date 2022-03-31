@@ -91,14 +91,26 @@ module.exports = class PuppeteerHelpers extends Helper {
     }
   }
 
+  getHelper() {
+    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
+  }
+
+  isPuppeteer(){
+    return this.helpers['Puppeteer'];
+  }
+
   async runAccessibilityTest() {
     if (!testConfig.TestForAccessibility) {
       return;
     }
-    const url = await this.helpers.Puppeteer.grabCurrentUrl();
-    console.log(`accessibility URL ${url}`);
-    const { page } = await this.helpers.Puppeteer;
-    console.log(`starting accessibility ${url}`);
-    runAccessibility(url, page);
+
+    let helper = this.getHelper();
+    if (helper === this.helpers['WebDriver']) {
+      await Promise.resolve();
+    } else {
+      const url = await helper.grabCurrentUrl();
+      const {page} = await helper;
+      await runAccessibility(url, page);
+    }
   }
 };

@@ -28,6 +28,7 @@ module.exports = {
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
     I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).checkOption(this.fields.orderWithoutNoticeSelectYes);
     await I.click(this.fields.submit);
     await I.retry(retryCount).checkOption(this.fields.harmToApplicantOrChild);
@@ -47,7 +48,6 @@ module.exports = {
     I.wait('3');
     await I.fillField(this.fields.otherDetails, 'Other Details');
     I.wait('3');
-    await I.runAccessibilityTest();
     await I.click(this.fields.submit);
   },
 

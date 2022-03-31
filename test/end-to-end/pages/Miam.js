@@ -52,6 +52,7 @@ module.exports = {
 
   async fillMIAMEvidenceDomesticViolence() {
     await I.retry(retryCount).waitForText('MIAM Evidence : What evidence of domestic violence or abuse does the applicant have ?');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_22');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_21');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_20');
@@ -73,7 +74,6 @@ module.exports = {
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_3');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_2');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_1');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

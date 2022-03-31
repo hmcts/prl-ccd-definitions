@@ -30,6 +30,7 @@ module.exports = {
 
   async attendingTheHearing() {
     await I.retry(retryCount).waitForPage('h1', 'Attending the hearing');
+    await I.runAccessibilityTest();
 
     await I.retry(retryCount).click(this.fields.isWelshNeeded);
     await I.retry(retryCount).see('Welsh needs');
@@ -67,7 +68,6 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
 
     await I.retry(retryCount).wait('2');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
 
     await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');

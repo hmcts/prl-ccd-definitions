@@ -21,6 +21,7 @@ module.exports = {
     await I.click('#respondentBehaviourData_applicantWantToStopFromRespondentDoing-applicantStopFromRespondentEnum_Value_9');
 
     await I.waitForText('What does the applicant want to stop the respondent from doing to their child or children (if applicable)? (Optional)');
+    await I.runAccessibilityTest();
     await I.click('#respondentBehaviourData_applicantWantToStopFromRespondentDoingToChild-applicantStopFromRespondentDoingToChildEnum_Value_1');
     await I.click('#respondentBehaviourData_applicantWantToStopFromRespondentDoingToChild-applicantStopFromRespondentDoingToChildEnum_Value_2');
     await I.click('#respondentBehaviourData_applicantWantToStopFromRespondentDoingToChild-applicantStopFromRespondentDoingToChildEnum_Value_3');
@@ -29,7 +30,6 @@ module.exports = {
 
     await I.fillField('#respondentBehaviourData_otherReasonApplicantWantToStopFromRespondentDoing', 'Text Area');
     I.wait('2');
-    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 

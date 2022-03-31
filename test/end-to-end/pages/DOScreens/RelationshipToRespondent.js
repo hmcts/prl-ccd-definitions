@@ -14,6 +14,7 @@ module.exports = {
     await I.click('Continue');
 
     await I.waitForText('When did their relationship start and when did it end? If unknown, please give an approximate date (Optional)');
+    await I.runAccessibilityTest();
     await I.fillField('//*[@id="relationshipDateComplexStartDate-day"]', '10');
     await I.fillField('//*[@id="relationshipDateComplexStartDate-month"]', '10');
     await I.fillField('//*[@id="relationshipDateComplexStartDate-year"]', '2010');
@@ -25,7 +26,6 @@ module.exports = {
     await I.fillField('//*[@id="applicantRelationshipDate-day"]', '1');
     await I.fillField('//*[@id="applicantRelationshipDate-month"]', '1');
     await I.fillField('//*[@id="applicantRelationshipDate-year"]', '2015');
-    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -35,9 +35,9 @@ module.exports = {
     await I.click('Continue');
 
     await I.waitForText('What is the respondent’s relationship with the applicant?');
+    await I.runAccessibilityTest();
     await I.click('#respondentRelationOptions_applicantRelationshipOptions-other');
     await I.fillField('#respondentRelationOptions_relationOptionsOther', 'Other text area');
-    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
