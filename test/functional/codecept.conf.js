@@ -3,7 +3,6 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:3000',
       waitForNavigation: ['domcontentloaded'],
       chrome: { ignoreHTTPSErrors: true }
     }
