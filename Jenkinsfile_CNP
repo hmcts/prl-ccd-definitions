@@ -41,6 +41,13 @@ withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableSlackNotifications(channel)
 
+  environment {
+    // The MY_KUBECONFIG environment variable will be assigned
+    // the value of a temporary file.  For example:
+    //   /home/user/.jenkins/workspace/cred_test@tmp/secretFiles/546a5cf3-9b56-4165-a0fd-19e2afe6b31f/kubeconfig.txt
+    MY_KUBECONFIG = credentials('my-kubeconfig')
+  }
+
   after('test') {
     // enable yarn audit and send message on master branch only
     try {
@@ -70,25 +77,7 @@ withPipeline("nodejs", product, component) {
   after('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
 
-    yarnBuilder.yarn('test:fullfunctional')
-  }
-
-  before('smokeTest:preview') {
-    yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
-  }
-
-  after('smokeTest:preview') {
     yarnBuilder.yarn('test:smoke')
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/output/mochawesome.html'
   }
 
   before('functionalTest:aat') {
