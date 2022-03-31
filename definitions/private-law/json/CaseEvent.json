@@ -331,14 +331,13 @@
     "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -512,7 +511,7 @@
     "Name": "Return application",
     "Description": "Return application",
     "DisplayOrder": 20,
-    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE",
     "PostConditionState": "AWAITING_RESUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -605,14 +604,13 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING",
     "PostConditionState": "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -650,7 +648,7 @@
     "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 17,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -667,14 +665,13 @@
     "Name": "Amend court details",
     "Description": "Amend court details",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "21/02/2022",
@@ -709,5 +706,20 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "18/03/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "deleteApplication",
+    "Name": "Delete application",
+    "Description": "Delete application",
+    "DisplayOrder": 110,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "DELETED",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/callback/case-deletion/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Delete"
   }
 ]
