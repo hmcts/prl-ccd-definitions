@@ -5,7 +5,7 @@ module.exports = {
   fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
-    await I.triggerEvent('Respondent\'s Behaviour');
+    await I.triggerEvent('Respondent\'s behaviour');
   },
 
   async respondentBehaviour() {

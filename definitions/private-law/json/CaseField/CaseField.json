@@ -24,6 +24,22 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturn",
+    "Label": "Case name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturnLabel",
+    "Label": "${taskListReturn}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseHistory",
@@ -752,7 +768,7 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "children",
-    "Label": "Child",
+    "Label": "*Child",
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
@@ -2174,7 +2190,7 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "draftOrderDoc",
-    "Label": " ",
+    "Label": "Draft application",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2265,6 +2281,16 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "payAgreeStatement",
+    "Label": " ",
+    "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "Consent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitAgreeStatement",
     "Label": " ",
     "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
     "FieldType": "MultiSelectList",
@@ -2377,7 +2403,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": " ",
+    "Label": "Draft application",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2645,6 +2671,15 @@
     "Label": " ",
     "FieldType": "Date",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dateAndTimeSubmitted",
+    "Label": "Date submitted",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "17/12/2021",

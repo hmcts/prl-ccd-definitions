@@ -47,13 +47,37 @@ function noDuplicateFound(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID;
 }
 
+function noDuplicateFoundWB(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseFieldID === b.CaseFieldID;
+}
+
+function noDuplicateFoundFL(a, b) {
+  return a.ID === b.ID && a.ListElementCode === b.ListElementCode;
+}
+
+function noDuplicateFoundCT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.TabID === b.TabID && a.CaseFieldID === b.CaseFieldID;
+}
+
+function noDuplicateFoundEvent(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
+}
+
+function noDuplicateFoundACT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.UserRole === b.UserRole;
+}
+
+function noDuplicateFoundCCT(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID && a.CaseEventID === b.CaseEventID && a.CaseFieldID === b.CaseFieldID && a.ListElementCode === b.ListElementCode;
+}
+
 function loadAllFiles(location) {
   return function loadFeatureFiles(featureFiles) {
     let definitions = [];
 
     featureFiles.forEach(featureFile => {
       definitions = definitions
-        .concat(load(`definitions/divorce/json/${location}/${featureFile}.json`));
+        .concat(load(`definitions/private-law/json/${location}/${featureFile}.json`));
     });
 
     return definitions;
@@ -105,6 +129,12 @@ module.exports = {
   loadAllFiles,
   sortCaseTypeTabs,
   noDuplicateFound,
+  noDuplicateFoundWB,
+  noDuplicateFoundFL,
+  noDuplicateFoundCT,
+  noDuplicateFoundCCT,
+  noDuplicateFoundACT,
+  noDuplicateFoundEvent,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,
