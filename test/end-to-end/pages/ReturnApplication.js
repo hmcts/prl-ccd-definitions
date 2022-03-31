@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
   fields: {
@@ -12,37 +13,37 @@ module.exports = {
   },
 
   async triggerEvent() {
-    await I.triggerEvent('Return application ');
+    await I.retry(retryCount).triggerEvent('Return application ');
   },
 
   async returnApplication() {
-    await I.waitForPage('h1', 'Return application');
+    await I.retry(retryCount).waitForPage('h1', 'Return application');
 
-    await I.click(this.fields.consentOrderNotProvided);
-    await I.click(this.fields.miamCertificateNotProvided);
-    await I.click(this.fields.incompleteEvidenceOfMiamExamption);
-    await I.click(this.fields.confidentalDetailListed);
-    await I.click(this.fields.clarificationNeeded);
-    await I.click(this.fields.otherReason);
-    await I.click('Continue');
-    await I.wait('2');
+    await I.retry(retryCount).click(this.fields.consentOrderNotProvided);
+    await I.retry(retryCount).click(this.fields.miamCertificateNotProvided);
+    await I.retry(retryCount).click(this.fields.incompleteEvidenceOfMiamExamption);
+    await I.retry(retryCount).click(this.fields.confidentalDetailListed);
+    await I.retry(retryCount).click(this.fields.clarificationNeeded);
+    await I.retry(retryCount).click(this.fields.otherReason);
+    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).wait('2');
 
-    await I.see('Return message');
-    await I.seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="3" id="returnMessage"></textarea>');
+    await I.retry(retryCount).see('Return message');
+    await I.retry(retryCount).seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="retryCount" id="returnMessage"></textarea>');
 
-    await I.click('Continue');
-    await I.wait('2');
+    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).wait('2');
 
 
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(retryCount).waitForText('Save and continue', '30');
+    await I.retry(retryCount).click('Save and continue');
   },
 
   async runEventHappyPathReturnApplication() {
     await this.triggerEvent();
     await this.returnApplication();
 
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(retryCount).submitEvent();
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };

@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
   fields: {
@@ -8,17 +9,17 @@ module.exports = {
     languageRequirementApplicationNeedWelsh: '#languageRequirementApplicationNeedWelsh_Yes'
   },
   async  welshLanguageRequirement() {
-    await I.triggerEvent(this.fields.headerText);
-    await I.waitForPage('h1', this.fields.headerText);
-    await I.click(this.fields.welshLanguageRequirement_Y);
-    await I.wait('2');
-    await I.click(this.fields.welshLanguageRequirementApplication);
-    await I.wait('2');
-    await I.see('Does this application need to be translated into Welsh? (Optional)');
-    await I.click(this.fields.languageRequirementApplicationNeedWelsh);
-    await I.click('Continue');
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(retryCount).triggerEvent(this.fields.headerText);
+    await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
+    await I.retry(retryCount).click(this.fields.welshLanguageRequirement_Y);
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).click(this.fields.welshLanguageRequirementApplication);
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).see('Does this application need to be translated into Welsh? (Optional)');
+    await I.retry(retryCount).click(this.fields.languageRequirementApplicationNeedWelsh);
+    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).waitForText('Save and continue', '30');
+    await I.retry(retryCount).click('Save and continue');
   }
 
 };
