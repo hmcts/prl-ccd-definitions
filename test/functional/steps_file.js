@@ -1,6 +1,7 @@
 
 // in this file you can append custom step methods to 'I' object
 const config = require('./config');
+
 module.exports = () => {
   return actor({
 
