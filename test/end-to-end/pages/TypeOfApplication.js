@@ -34,7 +34,7 @@ module.exports = {
     occupationOrder: '#typeOfApplicationOrders_orderType-occupationOrder',
     ordersApplyingForPageHeader: 'Which order(s) are you applying for?',
     ordersApplyingForPageMandatoryText: 'Which order(s) are you applying for? is required',
-    linkToChildArrangementsApplicationHeader: 'Is this linked to Child Arrangements application? (Optional)',
+    linkToChildArrangementsApplicationHeader: 'Is this linked to a C100 application? (Optional)',
     linkedChildArrangementsApplicationYes: '#typeOfApplicationLinkToCA_linkToCaApplication_Yes',
     childArrangementOrderInstructionText: 'If you have also completed a Child Arrangements Order application enter the case number below.',
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
