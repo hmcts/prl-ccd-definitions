@@ -82,6 +82,8 @@ function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityEr
     screenshot: screenshotReportRef,
     a11yIssues: accessibilityErrorsOnThePage
   });
+
+  console.log(`Page analysis completed====> is page accessible ? --> ${uisPageAccessiblerl}`);
 }
 
 function getAccessibilityTestResult() {
