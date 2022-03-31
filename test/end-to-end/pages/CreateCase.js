@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -10,53 +11,55 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('5');
+    I.wait('7');
     await I.waitForText('Create case');
     I.wait('5');
-    await I.click('Accept analytics cookies');
+    await I.retry(retryCount).click('Accept analytics cookies');
     I.wait('7');
-    await I.click('Create case');
+    await I.retry(retryCount).click('Create case');
   },
 
   async fillFormAndSubmit() {
+    I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
-    await I.selectOption(this.fields.jurisdiction, 'Family Private Law');
-    await I.selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    await I.selectOption(this.fields.event, 'Solicitor application');
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
-    await I.click(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async selectTypeOfApplicationC100() {
     await I.waitForText('Type of application');
-    await I.click('#caseTypeOfApplication-C100');
-    await I.click('Continue');
+    await I.retry(retryCount).click('#caseTypeOfApplication-C100');
+    await I.retry(retryCount).click('Continue');
   },
 
   async selectTypeOfApplicationFL401() {
     await I.waitForText('Type of application');
-    await I.click('#caseTypeOfApplication-FL401');
-    await I.click('Continue');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
   },
 
   async fillSolicitorApplicationPageC100() {
     await I.waitForText('Confidentiality Statement');
-    await I.click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
-    await I.click('Continue');
+    await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantCaseName');
-    await I.fillField('//input[@id="applicantCaseName"]', 'Test Child');
-    await I.click('Continue');
+    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
+    await I.retry(retryCount).click('Continue');
   },
 
   async fillSolicitorApplicationPageFL401() {
     await I.waitForText('Confidentiality Statement');
-    await I.click('#confidentialityStatementDisclaimer-confidentialityStatementUnderstood');
-    await I.click('Continue');
+    await I.retry(retryCount).click('#confidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantOrRespondentCaseName');
-    await I.fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
-    await I.click('Continue');
+    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
+    await I.retry(retryCount).click('Continue');
   },
 
   async createNewCaseC100() {
