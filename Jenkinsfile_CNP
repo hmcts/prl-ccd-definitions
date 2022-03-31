@@ -65,6 +65,12 @@ withPipeline("nodejs", product, component) {
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
   }
 
+  after('smokeTest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/output/mochawesome.html'
+
+    yarnBuilder.yarn('test:smoke')
+  }
+
   before('functionalTest:preview') {
     yarnBuilder.yarn('setup')
 
@@ -78,34 +84,10 @@ withPipeline("nodejs", product, component) {
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
   }
 
-  after('smokeTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/mochawesome.html'
-
-    yarnBuilder.yarn('test:smoke')
-  }
   after('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
 
     yarnBuilder.yarn('test:fullfunctional')
-  }
-
-  before('smokeTest:aat') {
-    yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
-    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
-    env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
-  }
-
-  after('smokeTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/mochawesome.html'
-    yarnBuilder.yarn('test:smoke')
   }
 
   before('functionalTest:aat') {
