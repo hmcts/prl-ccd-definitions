@@ -2,8 +2,7 @@ const I = actor();
 const retryCount = 3;
 
 module.exports = {
-  fields: {
-    submit: 'button[type="submit"]'},
+  fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Submit and pay');
