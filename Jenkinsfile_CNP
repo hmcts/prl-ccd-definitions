@@ -79,7 +79,7 @@ withPipeline("nodejs", product, component) {
   }
 
   after('smokeTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/output/mochawesome.html'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/mochawesome.html'
 
     yarnBuilder.yarn('test:smoke')
   }
@@ -104,7 +104,7 @@ withPipeline("nodejs", product, component) {
   }
 
   after('smokeTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/smoke/mochawesome.html'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/mochawesome.html'
     yarnBuilder.yarn('test:smoke')
   }
 

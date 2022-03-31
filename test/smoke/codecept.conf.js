@@ -16,7 +16,7 @@ exports.config = {
       },
       windowSize: '1280x960'
     },
-    GeneralHelper: { require: '../end-to-end/helpers/generalHelper.js' }
+    GeneralHelper: { require: '../smoke/helpers/generalHelper.js' }
   },
   plugins: {
     retryFailedStep: {
@@ -25,7 +25,7 @@ exports.config = {
       minTimeout: 2000
     }
   },
-  include: { I: '../end-to-end/steps_file.js' },
+  include: { I: './steps_file.js' },
   bootstrap: null,
   mocha: {},
   name: 'prl-ccd-definitions'
