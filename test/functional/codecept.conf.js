@@ -3,8 +3,7 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost:3000',
-      waitForNavigation: ['domcontentloaded'],
+      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
       chrome: { ignoreHTTPSErrors: true }
     }
   },
@@ -22,7 +21,7 @@ exports.config = {
         mochawesome: {
           stdout: './functional-output/console.log',
           options: {
-            reportDir: './smoke-output',
+            reportDir: './functional-output',
             reportFilename: 'report'
           }
         },
@@ -35,5 +34,5 @@ exports.config = {
         }
       }
   },
-  name: 'div-ccd-definitions'
+  name: 'prl-ccd-definitions'
 };
