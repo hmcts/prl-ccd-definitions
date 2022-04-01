@@ -37,16 +37,16 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: './test/smoke/output/console.log',
+        stdout: './smoke-output/console.log',
         options: {
-          reportDir: './test/smoke/output',
+          reportDir: './smoke-output',
           reportFilename: 'report'
         }
       },
       'mocha-junit-reporter': {
-        stdout: './test/smoke/output/console.log',
+        stdout: './smoke-output/console.log',
         options: {
-          mochaFile: './test/smoke/output/result.xml',
+          mochaFile: './smoke-output/result.xml',
           attachments: 'true //add screenshot for a failed test'
         }
       }
