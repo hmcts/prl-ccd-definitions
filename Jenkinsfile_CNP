@@ -68,13 +68,27 @@ withPipeline("nodejs", product, component) {
   }
 
   after('functionalTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/output/mochawesome.html'
-    yarnBuilder.yarn('test:smoke')
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+
+    yarnBuilder.yarn('test:fullfunctional')
   }
 
-  after('smokeTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-    yarnBuilder.yarn('test:fullfunctional')
+  before('smoketest:preview') {
+    yarnBuilder.yarn('setup')
+
+    stageWithAgent('Generate Family Private Law Case config', product) {
+      yarnBuilder.yarn('generate-excel-all')
+    }
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
+    yarnBuilder.yarn('test:functional')
+  }
+
+  after('smoketest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/smoke/output/mochawesome.html'
+    yarnBuilder.yarn('test:smoke')
   }
 
   before('functionalTest:aat') {
