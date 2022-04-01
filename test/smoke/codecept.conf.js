@@ -27,6 +27,30 @@ exports.config = {
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
-  mocha: {},
+  mocha: {
+    reporterOptions: {
+      'codeceptjs-cli-reporter': {
+        stdout: '-',
+        options: {
+          verbose: true,
+          steps: true
+        }
+      },
+      mochawesome: {
+        stdout: './test/smoke/output/console.log',
+        options: {
+          reportDir: './test/smoke/output',
+          reportFilename: 'report'
+        }
+      },
+      'mocha-junit-reporter': {
+        stdout: './test/smoke/output/console.log',
+        options: {
+          mochaFile: './test/smoke/output/result.xml',
+          attachments: 'true //add screenshot for a failed test'
+        }
+      }
+    }
+  },
   name: 'prl-ccd-definitions'
 };
