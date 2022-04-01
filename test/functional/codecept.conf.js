@@ -10,6 +10,30 @@ exports.config = {
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
-  mocha: {},
+  mocha: {
+      reporterOptions: {
+        'codeceptjs-cli-reporter': {
+          stdout: '-',
+          options: {
+            verbose: true,
+            steps: true
+          }
+        },
+        mochawesome: {
+          stdout: './functional-output/console.log',
+          options: {
+            reportDir: './smoke-output',
+            reportFilename: 'report'
+          }
+        },
+        'mocha-junit-reporter': {
+          stdout: './functional-output/console.log',
+          options: {
+            mochaFile: './functional-output/result.xml',
+            attachments: 'true'
+          }
+        }
+      }
+  },
   name: 'div-ccd-definitions'
 };

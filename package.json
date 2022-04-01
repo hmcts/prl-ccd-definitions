@@ -43,7 +43,7 @@
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
-    "test:functional": "codeceptjs run --steps -c test/functional/codecept.conf.js",
+    "test:functional": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
     "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
     "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
