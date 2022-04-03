@@ -3,8 +3,9 @@
 const testConfig = require('./test/end-to-end/config');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
 const testUserConfig = require('./test/config.js').config;
-
+// eslint-disable-next-line no-magic-numbers
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 30000;
+// eslint-disable-next-line no-magic-numbers
 const smartWait = parseInt(process.env.SMART_WAIT) || 30000;
 const browser = process.env.SAUCELABS_BROWSER || 'chrome';
 const defaultSauceOptions = {
@@ -12,7 +13,7 @@ const defaultSauceOptions = {
   accessKey: process.env.SAUCE_ACCESS_KEY,
   tunnelIdentifier: process.env.TUNNEL_IDENTIFIER || 'reformtunnel',
   acceptSslCerts: true,
-  tags: ['Private-Law'],
+  tags: ['Private Law'],
   maxDuration: 3000,
 };
 
@@ -112,9 +113,6 @@ const setupConfig = {
     },
     safari: {
       browsers: getBrowserConfig('safari'),
-    },
-    safari: {
-      browsers: getBrowserConfig('webkit'),
     },
   },
   name: 'PRL Cross-Browser Tests',
