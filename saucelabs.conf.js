@@ -38,7 +38,7 @@ function getBrowserConfig(browserGroup) {
 }
 
 const setupConfig = {
-  tests: './src/test/e2e/tests/*_test.js',
+  tests: './test/end-to-end/tests/*.js',
   teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
