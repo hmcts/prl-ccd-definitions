@@ -2,7 +2,7 @@
 
 const testConfig = require('./test/end-to-end/config');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
-const testUserConfig = require('./test/config.js').config;
+const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 30000;
 // eslint-disable-next-line no-magic-numbers
