@@ -291,7 +291,7 @@
     "Name": "Welsh language requirements",
     "Description": "Welsh language requirements",
     "DisplayOrder": 15,
-    "PreConditionState(s)": "CASE_WITHDRAWN;AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -671,7 +671,8 @@
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "21/02/2022",
