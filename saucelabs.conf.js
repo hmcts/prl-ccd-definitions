@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-const testConfig = require('./test/end-to-end/config');
+const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
 const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
@@ -40,7 +40,7 @@ function getBrowserConfig(browserGroup) {
 
 const setupConfig = {
   tests: './test/end-to-end/tests/*.js',
-  teardown: testUserConfig.teardown,
+  //teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     WebDriver: {
@@ -63,7 +63,7 @@ const setupConfig = {
     },
   },
   plugins: {
-    autoLogin: testUserConfig.AutoLogin,
+    //autoLogin: testUserConfig.AutoLogin,
     retryFailedStep: {
       enabled: true,
       retries: 2,
