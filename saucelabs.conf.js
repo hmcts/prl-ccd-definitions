@@ -79,6 +79,7 @@ const setupConfig = {
   },
   include: {
     config: './test/end-to-end/config.js',
+    loginPage: './test/end-to-end/pages/Login.js',
   },
   mocha: {
     reporterOptions: {
