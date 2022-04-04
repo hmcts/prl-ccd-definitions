@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-const testConfig = require('./test/end-to-end/config');
+const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
 //const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
