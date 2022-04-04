@@ -19,8 +19,21 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "[STATE] != \"CASE_ISSUE\" OR [STATE] != \"GATE_KEEPING\"",
     "ShowSummaryChangeOption": "No",
     "PageShowCondition": "withDrawApplicationData.withDrawApplication=\"Yes\""
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "WithdrawApplication_Event",
+    "CaseFieldID": "applicationWithdrawnRequestLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "[STATE] = \"CASE_ISSUE\" OR [STATE] = \"GATE_KEEPING\"",
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "03/02/2022",
@@ -42,6 +55,19 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "[STATE] != \"CASE_ISSUE\" OR [STATE] != \"GATE_KEEPING\"",
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "WithdrawApplication_Event",
+    "CaseFieldID": "applicationWithdrawnRequestStatusLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "[STATE] = \"CASE_ISSUE\" OR [STATE] = \"GATE_KEEPING\"",
     "ShowSummaryChangeOption": "No"
   }
 ]
