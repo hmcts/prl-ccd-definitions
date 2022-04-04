@@ -2189,8 +2189,17 @@
   {
     "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments",
-    "Label": "## ${applicantCaseName}",
+    "ID": "documentCategoryChecklist",
+    "Label": "Choose a document category",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "documentCategoryChecklistEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "furtherEvidenceLabel",
+    "Label": "## Further evidence - further application document",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2386,6 +2395,15 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "fl401RejectReason",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FL401RejectReasonEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "returnMessageLabel",
     "Label": "### Return message",
     "FieldType": "Label",
@@ -2405,30 +2423,6 @@
     "ID": "familymanCaseNumber",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments1",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments2",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments3",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
@@ -2745,7 +2739,15 @@
     "Label": "The court will review the application and make a decision on the urgency of the application based on the details you provide",
     "FieldType": "Label",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401FamilymanCaseNumber",
+    "Label": "FamilyMan case number",
+    "FieldType": "Text",
+    "RegularExpression": "^[0-9]{9,}$",
+    "SecurityClassification": "Public"
   }
-
 ]
 
