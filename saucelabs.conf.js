@@ -44,7 +44,7 @@ const setupConfig = {
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     WebDriver: {
-      url: testConfig.baseUrl,
+      url: `${process.env.XUI_WEB_URL}`,
       keepCookies: true,
       browser,
       smartWait,
