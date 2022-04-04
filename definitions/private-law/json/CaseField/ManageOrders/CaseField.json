@@ -11,10 +11,223 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "SelectOrderOptions",
+    "ID": "selectOrderOptions",
     "Label": "Select order",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "SelectOrderOptionsEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectTypeOfOrder",
+    "Label": "What type of order is this?",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "SelectTypeOfOrderEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "doesOrderClosesCase",
+    "Label": "Does this order close the case?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "closeCaseDoableActions",
+    "Label": "In a closed case you can still:\n* add a case not\n* upload a document\n* vacate a hearing",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isTheOrderByConsent",
+    "Label": "Is the order by consent?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "wasTheOrderApprovedAtHearing",
+    "Label": "Was the order approved at a hearing?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hearingType",
+    "Label": "Which hearing?",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "HearingTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeOrMagistrateTitle",
+    "Label": "Select or amend title of judge or magistrate",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderMadeByLabel",
+    "Label": "**Order made by Judge or Magistrates title**",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeOrMagistratesLastName",
+    "Label": "Last name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "justiceLegalAdviserFullName",
+    "Label": "Justice's Legal Adviser's full name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dateOrderMade",
+    "Label": "date order made",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isTheOrderAboutAllChildren",
+    "Label": "Is the order about all children?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoNotRequiredEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "recitalsOrPreamble",
+    "Label": "Add recitals or preamble",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderDirections",
+    "Label": "Add order directions",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "furtherDirectionsIfRequired",
+    "Label": "Add further directions if required",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "checkYourOrder",
+    "Label": "## Check your order",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "checkYourOrderLabel",
+    "Label": "Preview your order to check the details are correct. You can correct any orders in the next screen",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "previewOrderDoc",
+    "Label": "This is the order document, when docmosis template is ready",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "checkOrderRestrictionsLabel",
+    "Label": "Check if there are restrictions on who should receive the order",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderRecipients",
+    "Label": "** Confirm recipients",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OrderRecipientsEnum",
+    "HintText": "If applicant or respondent are represented by a solicitor the order is sent to slicitor directly",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherOrderRecipients",
+    "Label": "**Which other people in the case should the order be sent to?**",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OtherOrderRecipientsEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassRecipient",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "CafcassEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherRecipient",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OtherEnum",
+    "HintText": "For example, DWP or local authority",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassEmailAddress",
+    "Label": "Email address",
+    "HintText": "Add the cafcass email address",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Email",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherEmailAddress",
+    "Label": "Email address",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Email",
     "SecurityClassification": "Public"
   }
 ]
