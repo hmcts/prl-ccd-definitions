@@ -44,7 +44,7 @@ const setupConfig = {
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     WebDriver: {
-      url: process.env.TEST_URL || 'https://manage-case.aat.platform.hmcts.net/cases',
+      url: testConfig.baseUrl,
       keepCookies: true,
       browser,
       smartWait,
