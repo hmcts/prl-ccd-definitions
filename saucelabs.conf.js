@@ -61,7 +61,7 @@ const setupConfig = {
     Mochawesome: {
       uniqueScreenshotNames: true,
     },
-    GeneralHelper: { require: './helpers/generalHelper.js' }
+    GeneralHelper: { require: './test/end-to-end/helpers/generalHelper.js' }
   },
   plugins: {
     //autoLogin: testUserConfig.AutoLogin,
@@ -79,7 +79,7 @@ const setupConfig = {
     },
   },
   include: {
-    I: './steps_file.js',
+    I: './test/end-to-end/steps_file.js',
     config: './test/end-to-end/config.js',
     loginPage: './test/end-to-end/pages/Login.js',
   },
