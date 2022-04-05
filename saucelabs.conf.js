@@ -4,9 +4,9 @@ const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
 //const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
-const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 30000;
+const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 50000;
 // eslint-disable-next-line no-magic-numbers
-const smartWait = parseInt(process.env.SMART_WAIT) || 30000;
+const smartWait = parseInt(process.env.SMART_WAIT) || 50000;
 const browser = process.env.SAUCELABS_BROWSER || 'chrome';
 const defaultSauceOptions = {
   username: process.env.SAUCE_USERNAME,
@@ -14,7 +14,7 @@ const defaultSauceOptions = {
   tunnelIdentifier: process.env.TUNNEL_IDENTIFIER || 'reformtunnel',
   acceptSslCerts: true,
   tags: ['Private Law'],
-  maxDuration: 3000,
+  maxDuration: 5000,
 };
 
 function merge(intoObject, fromObject) {
