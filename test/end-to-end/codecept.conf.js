@@ -29,30 +29,6 @@ exports.config = {
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
-  mocha: {
-    reporterOptions: {
-          'codeceptjs-cli-reporter': {
-            stdout: '-',
-            options: {
-              verbose: true,
-              steps: true
-            }
-          },
-          mochawesome: {
-            stdout: './full-functional-output/console.log',
-            options: {
-              reportDir: './full-functional-output',
-              reportFilename: 'report'
-            }
-          },
-          'mocha-junit-reporter': {
-            stdout: './full-functional-output/console.log',
-            options: {
-              mochaFile: './ffull-functional-output/result.xml',
-              attachments: 'true'
-            }
-          }
-    }
-  },
+  mocha: {},
   name: 'prl-ccd-definitions'
 };
