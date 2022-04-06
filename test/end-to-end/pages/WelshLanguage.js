@@ -11,6 +11,7 @@ module.exports = {
   async  welshLanguageRequirement() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.welshLanguageRequirement_Y);
     await I.retry(retryCount).wait('2');
     await I.retry(retryCount).click(this.fields.welshLanguageRequirementApplication);
