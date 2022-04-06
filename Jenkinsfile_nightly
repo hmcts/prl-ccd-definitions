@@ -44,6 +44,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withNightlyPipeline("nodejs", product, component) {
     env.TEST_URL = params.XUI_WEB_URL
     env.test_environment = params.RUNNING_ENV
+    env.TESTS_FOR_ACCESSIBILITY = true
 
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
@@ -52,5 +53,6 @@ withNightlyPipeline("nodejs", product, component) {
 
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 }

@@ -4,7 +4,7 @@ const retryCount = 3;
 async function uploadDocuments() {
   await I.retry(retryCount).triggerEvent('Upload documents');
   await I.retry(retryCount).waitForPage('h1', 'Upload documents');
-
+  await I.runAccessibilityTest();
   await I.retry(retryCount).addNewDocument('contactOrderDocumentsUploaded');
   await I.retry(retryCount).addNewDocument('c8FormDocumentsUploaded');
   await I.retry(retryCount).addNewDocument('otherDocumentsUploaded');

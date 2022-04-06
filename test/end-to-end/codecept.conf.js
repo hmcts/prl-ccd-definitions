@@ -5,7 +5,7 @@ exports.config = {
     Puppeteer: {
       // headless mode
       show: process.env.SHOW_BROWSER_WINDOW || false,
-     // show: true,
+      // show: true,
       url: 'http://localhost:3000',
       waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
       waitForTimeout: 180000,
@@ -16,6 +16,8 @@ exports.config = {
       },
       windowSize: '1280x960'
     },
+    PuppeteerHelpers: { require: './helpers/puppeterHelper.js' },
+    GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {
