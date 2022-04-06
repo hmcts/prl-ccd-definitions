@@ -43,6 +43,8 @@
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
+    "test:crossbrowser-e2e": "MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
+    "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test:functional": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi && yarn test:fullfunctional",
     "test:fullfunctional": "MOCHAWESOME_REPORTFILENAME=fullFunctional codeceptjs run --steps -c test/end-to-end/codecept.conf.js --reporter mocha-multi",
     "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
@@ -92,6 +94,9 @@
     "pretty-quick": "^1.10.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi": "^1.1.6",
+    "mochawesome": "^7.1.2",
     "sonar-scanner": "^3.1.0"
   },
   "resolutions": {
