@@ -18,7 +18,7 @@ module.exports = {
 
   async returnApplication() {
     await I.retry(retryCount).waitForPage('h1', 'Return application');
-
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.consentOrderNotProvided);
     await I.retry(retryCount).click(this.fields.miamCertificateNotProvided);
     await I.retry(retryCount).click(this.fields.incompleteEvidenceOfMiamExamption);
@@ -30,7 +30,6 @@ module.exports = {
 
     await I.retry(retryCount).see('Return message');
     await I.retry(retryCount).seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="retryCount" id="returnMessage"></textarea>');
-
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).wait('2');
 

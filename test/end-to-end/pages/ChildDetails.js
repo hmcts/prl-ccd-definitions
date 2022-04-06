@@ -31,6 +31,7 @@ module.exports = {
   async fillChildrenPage() {
     await I.waitForElement('#children');
     await I.retry(retryCount).click('Add new');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="children_0_firstName"]', 'Test Firstname');
     await I.retry(retryCount).fillField('//input[@id="children_0_lastName"]', 'Test Lastname');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-day"])[1]', '11');
