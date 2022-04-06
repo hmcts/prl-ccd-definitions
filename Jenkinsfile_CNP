@@ -63,7 +63,6 @@ withPipeline("nodejs", product, component) {
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
-    yarnBuilder.yarn('test:fullfunctional')
   }
 
   after('functionalTest:preview') {
@@ -82,7 +81,6 @@ withPipeline("nodejs", product, component) {
     env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
     env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
-    yarnBuilder.yarn('test:fullfunctional')
   }
 
   after('functionalTest:aat') {
