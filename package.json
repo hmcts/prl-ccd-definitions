@@ -42,10 +42,12 @@
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
-    "test:smoke": "echo smoke",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
-    "test:functional": "codeceptjs run --steps -c test/functional/codecept.conf.js",
+    "test:crossbrowser-e2e": "MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
+    "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
+    "test:functional": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
     "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
+    "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
@@ -72,7 +74,8 @@
     "left-pad": "^1.0.0",
     "minimist": "^1.2.3",
     "puppeteer": "^5.1.1",
-    "ws": "^7.4.6"
+    "ws": "^7.4.6",
+    "html_codesniffer": "^2.5.1"
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
@@ -82,12 +85,18 @@
     "husky": "^2.2.0",
     "lodash": "^4.17.21",
     "mocha": "^9.2.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi": "^1.1.3",
+    "mochawesome": "^6.2.2",
     "otp": "^0.1.3",
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi": "^1.1.6",
+    "mochawesome": "^7.1.2",
     "sonar-scanner": "^3.1.0"
   },
   "resolutions": {
@@ -95,6 +104,7 @@
     "axios": "^0.25.0",
     "eslint-utils": "^1.4.1",
     "ini": "^1.3.6",
-    "minimist": "^1.2.3"
+    "minimist": "^1.2.6",
+    "json-schema": "^0.4.0"
   }
 }
