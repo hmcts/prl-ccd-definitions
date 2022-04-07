@@ -1,6 +1,10 @@
 // eslint-disable-next-line no-undef
 const { Helper } = codeceptjs;
 
+ getHelper() {
+    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
+  }
+
 const fields = {
   eventList: 'select[id="next-step"]',
   submit: 'button[type="submit"]'
@@ -39,9 +43,9 @@ class GeneralHelper extends Helper {
   }
 
   async submitEvent() {
-    const { Puppeteer } = this.helpers;
-    await Puppeteer.waitForText('Check your answers', '30');
-    await Puppeteer.click('Save and continue');
+    const helper = this.getHelper();
+    await helper.waitForText('Check your answers', '30');
+    await helper.click('Save and continue');
   }
 
   async triggerEvent(eventName) {
