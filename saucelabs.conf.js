@@ -61,7 +61,9 @@ const setupConfig = {
     Mochawesome: {
       uniqueScreenshotNames: true,
     },
-    GeneralHelper: { require: './test/end-to-end/helpers/generalHelper.js' }
+    GeneralHelper: { require: './test/end-to-end/helpers/generalHelper.js' },
+    PuppeteerHelpers: { require: './test/end-to-end/helpers/puppeterHelper.js' },
+    GenerateReportHelper: { require: './test/end-to-end/helpers/generateReportHelper.js' }
   },
   plugins: {
     //autoLogin: testUserConfig.AutoLogin,
