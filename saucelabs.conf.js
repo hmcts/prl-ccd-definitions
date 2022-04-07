@@ -43,6 +43,20 @@ const setupConfig = {
   //teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
+    Puppeteer: {
+      // headless mode
+      show: process.env.SHOW_BROWSER_WINDOW || false,
+      // show: true,
+      url: 'http://localhost:3000',
+      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
+      waitForTimeout: 180000,
+      ignoreHTTPSErrors: true,
+      chrome: {
+        ignoreHTTPSErrors: true,
+        args: ['--no-sandbox']
+      },
+      windowSize: '1280x960'
+    },
     WebDriver: {
       url: process.env.TEST_URL,
       keepCookies: true,
@@ -70,6 +84,7 @@ const setupConfig = {
     retryFailedStep: {
       enabled: true,
       retries: 2,
+      minTimeout: 2000
     },
     autoDelay: {
       enabled: true,
