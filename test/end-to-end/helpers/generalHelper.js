@@ -1,16 +1,17 @@
 // eslint-disable-next-line no-undef
 const { Helper } = codeceptjs;
 
- getHelper() {
-    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
-  }
-
 const fields = {
   eventList: 'select[id="next-step"]',
   submit: 'button[type="submit"]'
 };
 
 class GeneralHelper extends Helper {
+ 
+  getHelper() {
+    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
+  }
+
   async addNewDocument(field) {
     const { Puppeteer } = this.helpers;
     await Puppeteer.click('Add new', { css: `#${field}>div>button` });
