@@ -44,7 +44,7 @@ class GeneralHelper extends Helper {
   }
 
   async submitEvent() {
-    const helper = this.getHelper();
+    const { helper } = this.getHelper();
     await helper.waitForText('Check your answers', '30');
     await helper.click('Save and continue');
   }
