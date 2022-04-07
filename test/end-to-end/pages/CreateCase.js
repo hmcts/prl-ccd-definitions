@@ -72,6 +72,7 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
+    I.wait('7');
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   },
@@ -81,6 +82,7 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
+    I.wait('7');
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   },
@@ -90,6 +92,7 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
+    I.wait('7');
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
