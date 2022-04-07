@@ -16,8 +16,6 @@ module.exports = {
   async clickCreateCase() {
     I.wait('7');
     await I.waitForText('Create case');
-    I.wait('5');
-    await I.retry(retryCount).click('Accept analytics cookies');
     I.wait('7');
     await I.retry(retryCount).click('Create case');
   },
