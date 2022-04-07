@@ -40,7 +40,6 @@ withPipeline("nodejs", product, component) {
 
   loadVaultSecrets(secrets)
   enableSlackNotifications(channel)
-  enableSmokeTest();
 
   after('test') {
     // enable yarn audit and send message on master branch only
