@@ -52,6 +52,23 @@ withPipeline("nodejs", product, component) {
     }
   }
 
+  before('smoketest:preview') {
+    yarnBuilder.yarn('setup')
+
+    stageWithAgent('Generate Family Private Law Case config', product) {
+      yarnBuilder.yarn('generate-excel-all')
+    }
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
+    yarnBuilder.yarn('test:functional')
+  }
+
+  after('smoketest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+  }
+
   before('functionalTest:preview') {
     yarnBuilder.yarn('setup')
 
@@ -69,22 +86,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:fullfunctional')
   }
 
-  before('smokeTest:preview') {
-    yarnBuilder.yarn('setup')
 
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
-    yarnBuilder.yarn('test:functional')
-  }
-
-  after('smokeTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
-  }
 
   before('functionalTest:aat') {
     yarnBuilder.yarn('setup')
@@ -105,7 +107,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:fullfunctional')
   }
 
-  before('smokeTest:aat') {
+  before('smoketest:aat') {
     yarnBuilder.yarn('setup')
 
     stageWithAgent('Generate Family Private Law Case config', product) {
@@ -121,7 +123,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:functional')
   }
 
-  after('smokeTest:aat') {
+  after('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
