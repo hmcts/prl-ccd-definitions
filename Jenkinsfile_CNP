@@ -52,7 +52,7 @@ withPipeline("nodejs", product, component) {
     }
   }
 
-  before('smokeTest:preview') {
+  before('smoketest:preview') {
     yarnBuilder.yarn('setup')
 
     stageWithAgent('Generate Family Private Law Case config', product) {
@@ -65,7 +65,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:functional')
   }
 
-  after('smokeTest:preview') {
+  after('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
