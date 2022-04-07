@@ -55,9 +55,6 @@ withNightlyPipeline("nodejs", product, component) {
     enableSlackNotifications(channel)
     enableFullFunctionalTest(200)
     enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
-    enableFortifyScan()
-    enableSecurityScan()
-
 
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
@@ -68,11 +65,6 @@ withNightlyPipeline("nodejs", product, component) {
 
     after('crossBrowserTest') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
-    }
-
-    after('fortify-scan') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'zap/**/*'
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/Fortify Scan/**/*'
     }
 }
 
