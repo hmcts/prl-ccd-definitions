@@ -40,14 +40,8 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Puppeteer } = this.helpers;
-    try {
-      await Puppeteer.waitForText('Check your answers', '30');
-      await Puppeteer.click('Save and continue');
-    } catch {
-      await Puppeteer.click('Continue');
-      await Puppeteer.waitForText('Check your answers', '30');
-      await Puppeteer.click('Save and continue');
-    }
+    await Puppeteer.waitForText('Check your answers', '30');
+    await Puppeteer.click('Save and continue');
   }
 
   async triggerEvent(eventName) {
