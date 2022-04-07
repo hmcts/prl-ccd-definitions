@@ -7,10 +7,6 @@ const fields = {
 };
 
 class GeneralHelper extends Helper {
- 
-  getHelper() {
-    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
-  }
 
   async addNewDocument(field) {
     const { Puppeteer } = this.helpers;
@@ -44,7 +40,7 @@ class GeneralHelper extends Helper {
   }
 
   async submitEvent() {
-    const { helper } = this.getHelper();
+    const { helper } = this.helpers['Puppeteer'] || this.helpers['WebDriver'];
     await helper.waitForText('Check your answers', '30');
     await helper.click('Save and continue');
   }
