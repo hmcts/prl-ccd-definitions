@@ -2,7 +2,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildToBeProtected",
-    "ListElementCode": "firstName",
+    "ListElementCode": "fullName",
     "FieldType": "Text",
     "ElementLabel": "Child’s full name",
     "SecurityClassification": "Public"
@@ -10,7 +10,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildToBeProtected",
-    "ListElementCode": "doesApplicantHaveChildren1",
+    "ListElementCode": "dateOfBirth",
     "FieldType": "Date",
     "ElementLabel": "Child’s date of birth",
     "SecurityClassification": "Public"
@@ -18,7 +18,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildToBeProtected",
-    "ListElementCode": "firstName1",
+    "ListElementCode": "applicantChildRelationship",
     "FieldType": "Text",
     "ElementLabel": "Applicant’s relationship to child",
     "SecurityClassification": "Public"
@@ -26,7 +26,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildToBeProtected",
-    "ListElementCode": "doesApplicantHaveChildren",
+    "ListElementCode": "applicantRespondentShareParental",
     "FieldType": "YesOrNo",
     "ElementLabel": "Do the applicant and the respondent have shared parental responsibility?",
     "SecurityClassification": "Public"
@@ -34,7 +34,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ChildToBeProtected",
-    "ListElementCode": "firstName2",
+    "ListElementCode": "respondentChildRelationship",
     "FieldType": "TextArea",
     "ElementLabel": "Respondent’s relationship to the child",
     "SecurityClassification": "Public"
@@ -42,15 +42,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ApplicantFamily",
-    "ListElementCode": "firstName3",
-    "FieldType": "Text",
-    "ElementLabel": "Who is the application for?",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ApplicantFamily",
-    "ListElementCode": "doesApplicantHaveChildren2",
+    "ListElementCode": "doesApplicantHaveChildren",
     "FieldType": "YesOrNo",
     "ElementLabel": "Does the applicant have any children (or parental responsibility over any children) who need to be protected as part of this application?",
     "SecurityClassification": "Public"
@@ -59,7 +51,7 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "ApplicantFamily",
-    "ListElementCode": "personWhoLivesWithChild",
+    "ListElementCode": "applicantChild",
     "FieldType": "Collection",
     "FieldTypeParameter": "ChildToBeProtected",
     "ElementLabel": "Child",
