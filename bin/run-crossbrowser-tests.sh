@@ -1,6 +1,12 @@
 #!/bin/bash
 set -ex
 
+export TESTS_FOR_CROSS_BROWSER='true'
+export RETRY_SCENARIOS=2
+export SMART_WAIT=60000
+export WAIT_FOR_TIMEOUT=60000
+export LD_ENABLED=false
+
 if [[ "$BROWSER_GROUP" == "" ]]
 then
     EXIT_STATUS=0
