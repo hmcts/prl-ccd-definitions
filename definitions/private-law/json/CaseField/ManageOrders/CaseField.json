@@ -11,6 +11,14 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "createAnOrderLabel",
+    "Label": "## Create an order",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "createSelectOrderOptions",
     "Label": "Select order",
     "FieldType": "FixedRadioList",
@@ -176,18 +184,25 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "orderRecipientsLabel",
+    "Label": "## Confirm recipients",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "orderRecipients",
-    "Label": "** Confirm recipients",
+    "Label": "If applicant or respondent are represented by a solicitor the order is sent to slicitor directly",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "OrderRecipientsEnum",
-    "HintText": "If applicant or respondent are represented by a solicitor the order is sent to slicitor directly",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "otherOrderRecipients",
-    "Label": "**Which other people in the case should the order be sent to?**",
+    "Label": "Which other people in the case should the order be sent to?",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "OtherOrderRecipientsEnum",
     "SecurityClassification": "Public"
