@@ -702,7 +702,7 @@
     "Description": "Manage orders",
     "DisplayOrder": 161,
     "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
-    "PostConditionState": "*",
+    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
