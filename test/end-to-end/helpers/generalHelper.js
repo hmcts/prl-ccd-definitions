@@ -42,7 +42,7 @@ class GeneralHelper extends Helper {
   async submitEvent() {
     //const { helper } = this.helpers['Puppeteer'] || this.helpers['WebDriver'];
     const { Puppeteer } = this.helpers;
-    await Puppeteer.waitForText('Check your answers', '30');
+    //await Puppeteer.waitForText('Check your answers', '30');
     await Puppeteer.click('Save and continue');
   }
 
