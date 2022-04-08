@@ -22,12 +22,12 @@ module.exports = {
     await I.retry(retryCount).waitForText('Declaration');
     await I.retry(retryCount).wait('1');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
-    I.wait('1');
+    I.wait('5');
     await I.retry(retryCount).click('Continue');
   },
 
   async payNow() {
-    I.wait('2');
+    I.wait('3');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
     await I.retry(retryCount).click('Pay now');

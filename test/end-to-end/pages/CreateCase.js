@@ -11,7 +11,7 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('7');
+    I.wait('10');
     await I.waitForText('Create case');
     I.wait('5');
     await I.retry(retryCount).click('Accept analytics cookies');
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
-    I.wait('5');
+    I.wait('10');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
@@ -59,6 +59,7 @@ module.exports = {
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
+    I.wait('3');
     await I.retry(retryCount).click('Continue');
   },
 
