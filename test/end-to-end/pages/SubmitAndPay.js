@@ -29,7 +29,7 @@ module.exports = {
   async payNow() {
     I.wait('3');
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    I.wait('3');
     await I.retry(retryCount).click('Pay now');
   },
 
