@@ -39,7 +39,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "applicationTabTypeOfApplicationLabel",
-    "FieldShowCondition": "ordersApplyingFor!=\"\" AND caseTypeOfApplication=\"FL401\"",
+    "FieldShowCondition": "fl401TypeOfApplicationTable.ordersApplyingFor!=\"\" AND caseTypeOfApplication=\"FL401\"",
     "TabFieldDisplayOrder": 4
   },
   {
@@ -61,7 +61,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "withoutNoticeOrderTableLabel",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "FieldShowCondition": "withoutNoticeOrderTable.orderWithoutGivingNotice!=\"\" AND caseTypeOfApplication=\"FL401\"",
     "TabFieldDisplayOrder": 6
   },
   {
@@ -82,6 +82,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "FieldShowCondition": "fl401ApplicantTable.firstName!=\"\" AND caseTypeOfApplication=\"FL401\"",
     "CaseFieldID": "applicationTabApplicantDetailsLabel",
     "TabFieldDisplayOrder": 8
   },
@@ -103,6 +104,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "fl401SolicitorLabel",
+    "FieldShowCondition": "fl401ApplicantTable.firstName!=\"\" AND caseTypeOfApplication=\"FL401\"",
     "TabFieldDisplayOrder": 10
   },
   {
@@ -123,6 +125,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "applicationTabRespondentDetailsLabel",
+    "FieldShowCondition": "fl401RespondentTable.firstName!=\"\"",
     "TabFieldDisplayOrder": 12
   },
   {
@@ -139,9 +142,10 @@
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
+    "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "FieldShowCondition": "relationshipToRespondentTable.applicantRelationship!=\"\"",
     "CaseFieldID": "relationshipToRespondentTableLabel",
     "TabFieldDisplayOrder": 14
   },
@@ -149,7 +153,7 @@
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
+    "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "relationshipToRespondentTable",
@@ -162,6 +166,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "FieldShowCondition": "applicantFamilyTable.doesApplicantHaveChildren!=\"\"",
     "CaseFieldID": "applicantFamilyTableLabel",
     "TabFieldDisplayOrder": 16
   },
@@ -183,6 +188,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "respondentBehaviourTableLabel",
+    "FieldShowCondition": "respondentBehaviourTable.applicantWantToStopFromRespondentDoing!=\"\"",
     "TabFieldDisplayOrder": 18
   },
   {
@@ -202,6 +208,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "FieldShowCondition": "isHomeEntered=\"true\"",
     "CaseFieldID": "homeDetailsTableLabel",
     "TabFieldDisplayOrder": 20
   },
@@ -223,7 +230,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "applicationTabOtherProceedingsLabel",
-    "FieldShowCondition": "existingProceedings!=\"\"",
+    "FieldShowCondition": "otherProceedingsTable.previousOrOngoingProceedings!=\"\"",
     "TabFieldDisplayOrder": 22
   },
   {
@@ -234,7 +241,6 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "otherProceedingsTable",
-    "FieldShowCondition": "existingProceedings!=\"\"",
     "TabFieldDisplayOrder": 23
   },
   {
@@ -244,8 +250,8 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "FieldShowCondition": "otherProceedingsTable.previousOrOngoingProceedings!=\"\"",
     "CaseFieldID": "fl401OtherProceedingsDetailsTable",
-    "FieldShowCondition": "existingProceedings!=\"\"",
     "TabFieldDisplayOrder": 24
   },
   {
@@ -266,7 +272,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "welshNeeds",
+    "CaseFieldID": "fl401WelshNeeds",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 26
   },
@@ -355,6 +361,17 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "caseTypeOfApplication",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 34
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "FL401ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "isHomeEntered",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "TabFieldDisplayOrder": 34
   }
