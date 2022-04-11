@@ -54,10 +54,7 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:preview') {
     yarnBuilder.yarn('setup')
-
-    stage('Generate Family Private Law Case config') {
-      yarnBuilder.yarn('generate-excel-all')
-    }
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
@@ -82,11 +79,7 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:aat') {
     yarnBuilder.yarn('setup')
-
-    stage('Generate Family Private Law Case config') {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
     env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
