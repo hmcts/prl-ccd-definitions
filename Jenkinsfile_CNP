@@ -55,7 +55,7 @@ withPipeline("nodejs", product, component) {
   before('smoketest:preview') {
     yarnBuilder.yarn('setup')
 
-    stage('Generate Family Private Law Case config', product) {
+    stage('Generate Family Private Law Case config') {
       yarnBuilder.yarn('generate-excel-all')
     }
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
@@ -83,7 +83,7 @@ withPipeline("nodejs", product, component) {
   before('smoketest:aat') {
     yarnBuilder.yarn('setup')
 
-    stage('Generate Family Private Law Case config', product) {
+    stage('Generate Family Private Law Case config') {
       yarnBuilder.yarn('generate-excel-all')
     }
 
