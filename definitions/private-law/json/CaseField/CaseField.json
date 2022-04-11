@@ -2449,6 +2449,15 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "fl401RejectReason",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FL401RejectReasonEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "returnMessageLabel",
     "Label": "### Return message",
     "FieldType": "Label",
@@ -2785,21 +2794,13 @@
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
-
   {
-    "LiveFrom": "02/12/2021",
+    "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "caseSolicitorName",
-    "Label": " ",
+    "ID": "fl401FamilymanCaseNumber",
+    "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseSolicitorOrgName",
-    "Label": " ",
-    "FieldType": "Text",
+    "RegularExpression": "^[0-9]{9,}$",
     "SecurityClassification": "Public"
   }
 ]
