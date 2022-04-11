@@ -71,8 +71,8 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     I.wait('7');
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    //await I.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -81,8 +81,8 @@ module.exports = {
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
     I.wait('7');
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    //await I.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseC100andReturnID() {
@@ -95,5 +95,12 @@ module.exports = {
     await I.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     return caseId;
+  },
+  
+  async submitEvent() {
+    I.wait('2');
+    await I.retry(retryCount).waitForElement('h2');
+    await I.retry(retryCount).see('Check your answers');
+    await I.retry(retryCount).click('Save and continue');
   }
 };
