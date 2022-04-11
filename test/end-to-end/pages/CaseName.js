@@ -30,8 +30,8 @@ module.exports = {
   },
   
   async triggerEvent(eventName) {
-    await I.retry(retryCount).waitForElement(fields.eventList);
-    await I.retry(retryCount).selectOption(fields.eventList, eventName);
-    await I.retry(retryCount).click(fields.submit);
+    await I.retry(retryCount).waitForElement(this.fields.eventList);
+    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
+    await I.retry(retryCount).click(this.fields.submit);
   }
 };
