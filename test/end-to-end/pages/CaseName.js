@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const I = actor();
 const retryCount = 3;
 
@@ -25,9 +26,9 @@ module.exports = {
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   
-    async triggerEvent(eventName) {
-    await I.waitForElement(fields.eventList);
-    await I.selectOption(fields.eventList, eventName);
-    await I.click(fields.submit);
+  async triggerEvent(eventName) {
+    await I.retry(retryCount).waitForElement(fields.eventList);
+    await I.retry(retryCount).selectOption(fields.eventList, eventName);
+    await I.retry(retryCount).click(fields.submit);
   }
 };
