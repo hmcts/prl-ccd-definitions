@@ -4,7 +4,10 @@ const retryCount = 3;
 
 module.exports = {
 
-  fields: { submit: 'button[type="submit"]' },
+  fields: { 
+    submit: 'button[type="submit"]',
+    eventList: 'select[id="next-step"]',
+  },
 
 // Clean the code below once cross browser Helper issue is resolved
 //   async triggerEvent() {
