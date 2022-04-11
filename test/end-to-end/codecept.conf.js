@@ -16,6 +16,8 @@ exports.config = {
       },
       windowSize: '1280x960'
     },
+    PuppeteerHelpers: { require: './helpers/puppeterHelper.js' },
+    GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {

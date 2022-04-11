@@ -12,6 +12,7 @@ module.exports = {
     await I.selectPostCodeLookupAddress('home_address_address', 'B11LS');
     I.wait('2');
     await I.waitForText('Who currently lives at the above address (please select all that apply)? (Optional)');
+    await I.runAccessibilityTest();
     await I.click('#home_peopleLivingAtThisAddress-applicant');
     await I.click('#home_peopleLivingAtThisAddress-respondent');
     await I.click('#home_peopleLivingAtThisAddress-applicantChildren');
