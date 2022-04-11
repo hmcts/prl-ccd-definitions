@@ -27,6 +27,7 @@ module.exports = {
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField('//input[@id="respondents_0_firstName"]', 'Respondent Firstname');
     I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="respondents_0_lastName"]', 'Respondent Lastname');
     await I.retry(retryCount).checkOption('//input[@id="respondents_0_isDateOfBirthKnown_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
@@ -52,6 +53,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="respondents_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
+    await I.retry(retryCount).waitForText('Continue', '30');
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
