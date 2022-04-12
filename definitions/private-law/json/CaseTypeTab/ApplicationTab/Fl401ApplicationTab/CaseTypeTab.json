@@ -261,7 +261,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "attendingTheHearingTable",
+    "CaseFieldID": "applicationTabAttendingTheHearingLabel",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 25
   },
@@ -272,7 +272,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "fl401WelshNeeds",
+    "CaseFieldID": "attendingTheHearingTable",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 26
   },
@@ -283,7 +283,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "interpreterNeeds",
+    "CaseFieldID": "fl401WelshNeeds",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 27
   },
@@ -294,8 +294,8 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "applicationTabWelshLanguageRequirementsLabel",
-    "FieldShowCondition": "welshLanguageRequirement!=\"\"",
+    "CaseFieldID": "interpreterNeeds",
+    "FieldShowCondition": "isWelshNeeded!=\"\"",
     "TabFieldDisplayOrder": 28
   },
   {
@@ -305,7 +305,7 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
-    "CaseFieldID": "welshLanguageRequirementsTable",
+    "CaseFieldID": "applicationTabWelshLanguageRequirementsLabel",
     "FieldShowCondition": "welshLanguageRequirement!=\"\"",
     "TabFieldDisplayOrder": 29
   },
@@ -316,9 +316,20 @@
     "TabID": "FL401ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "CaseFieldID": "welshLanguageRequirementsTable",
+    "FieldShowCondition": "welshLanguageRequirement!=\"\"",
+    "TabFieldDisplayOrder": 30
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "FL401ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 2,
     "CaseFieldID": "applicationTabDeclarationLabel",
     "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
-    "TabFieldDisplayOrder": 30
+    "TabFieldDisplayOrder": 31
   },
   {
     "LiveFrom": "08/11/2021",
@@ -329,7 +340,7 @@
     "TabDisplayOrder": 2,
     "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
     "CaseFieldID": "declarationTable",
-    "TabFieldDisplayOrder": 31
+    "TabFieldDisplayOrder": 32
   },
   {
     "LiveFrom": "08/11/2021",
@@ -340,7 +351,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "isWelshNeeded",
     "FieldShowCondition": "isWelshNeeded = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 32
+    "TabFieldDisplayOrder": 33
   },
   {
     "LiveFrom": "08/11/2021",
@@ -351,7 +362,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "welshLanguageRequirement",
     "FieldShowCondition": "welshLanguageRequirement = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 33
+    "TabFieldDisplayOrder": 34
   },
   {
     "LiveFrom": "08/11/2021",
@@ -362,7 +373,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "caseTypeOfApplication",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 34
+    "TabFieldDisplayOrder": 35
   },
   {
     "LiveFrom": "08/11/2021",
@@ -373,6 +384,6 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "isHomeEntered",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 34
+    "TabFieldDisplayOrder": 36
   }
 ]
