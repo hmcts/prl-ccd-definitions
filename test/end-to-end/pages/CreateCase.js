@@ -1,5 +1,8 @@
 const I = actor();
 const retryCount = 3;
+const normalizeCaseId = caseId => {
+  return caseId.toString().replace(/\D/g, '');
+};
 
 module.exports = {
 
@@ -13,8 +16,6 @@ module.exports = {
   async clickCreateCase() {
     I.wait('7');
     await I.waitForText('Create case');
-    I.wait('5');
-    await I.retry(retryCount).click('Accept analytics cookies');
     I.wait('7');
     await I.retry(retryCount).click('Create case');
   },
@@ -48,6 +49,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantCaseName');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.retry(retryCount).click('Continue');
   },
@@ -58,6 +60,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantOrRespondentCaseName');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
     await I.retry(retryCount).click('Continue');
   },
@@ -78,5 +81,16 @@ module.exports = {
     await this.fillSolicitorApplicationPageFL401();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createNewCaseC100andReturnID() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit();
+    await this.selectTypeOfApplicationC100();
+    await this.fillSolicitorApplicationPageC100();
+    await I.submitEvent();
+    await I.amOnHistoryPageWithSuccessNotification();
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    return caseId;
   }
 };
