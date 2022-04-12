@@ -2,9 +2,6 @@
 
 Project creating Family Private Law (PRL) CCD config files.
 
-Updated with Release 1
-
-----
 
 ## Usage
 
