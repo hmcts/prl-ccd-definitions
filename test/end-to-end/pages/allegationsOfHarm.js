@@ -85,6 +85,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//*[@id="ordersNonMolestationCurrent_Yes"]');
     await I.retry(retryCount).fillField('//*[@id="ordersNonMolestationCourtName"]', 'Court Name');
     await I.retry(retryCount).attachFile('//*[@id="ordersNonMolestationDocument"]', '../resource/dummy.pdf');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).wait(uploadTime);
     await I.retry(retryCount).click(this.fields.ordersOccupationNo);
     await I.retry(retryCount).click(this.fields.ordersForcedMarriageProtection);
