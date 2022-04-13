@@ -83,7 +83,7 @@ function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityEr
     a11yIssues: accessibilityErrorsOnThePage
   });
 
-  console.log(`Page analysis completed`);
+  console.log('Page analysis completed');
 }
 
 function getAccessibilityTestResult() {

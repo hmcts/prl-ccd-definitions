@@ -2,7 +2,8 @@
 
 const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
-//const testUserConfig = require('./test/end-to-end/config.js').config;
+
+// const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 50000;
 // eslint-disable-next-line no-magic-numbers
@@ -14,7 +15,7 @@ const defaultSauceOptions = {
   tunnelIdentifier: process.env.TUNNEL_IDENTIFIER || 'reformtunnel',
   acceptSslCerts: true,
   tags: ['Private Law'],
-  maxDuration: 5000,
+  maxDuration: 5000
 };
 
 function merge(intoObject, fromObject) {
@@ -29,7 +30,7 @@ function getBrowserConfig(browserGroup) {
       candidateCapabilities['sauce:options'] = merge(defaultSauceOptions, candidateCapabilities['sauce:options']);
       browserConfig.push({
         browser: candidateCapabilities.browserName,
-        capabilities: candidateCapabilities,
+        capabilities: candidateCapabilities
       });
     } else {
       console.error('ERROR: supportedBrowsers.js is empty or incorrectly defined');
@@ -40,7 +41,7 @@ function getBrowserConfig(browserGroup) {
 
 const setupConfig = {
   tests: './test/end-to-end/tests/*.js',
-  //teardown: testUserConfig.teardown,
+  // teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     WebDriver: {
@@ -53,74 +54,62 @@ const setupConfig = {
       host: 'ondemand.eu-central-1.saucelabs.com',
       port: 80,
       region: 'eu',
-      capabilities: {},
+      capabilities: {}
     },
-    SauceLabsReportingHelper: {
-      require: './test/end-to-end/helpers/SauceLabsReportingHelper.js',
-    },
-    Mochawesome: {
-      uniqueScreenshotNames: true,
-    },
+    SauceLabsReportingHelper: { require: './test/end-to-end/helpers/SauceLabsReportingHelper.js' },
+    Mochawesome: { uniqueScreenshotNames: true },
     GeneralHelper: { require: './test/end-to-end/helpers/generalHelper.js' },
     PuppeteerHelpers: { require: './test/end-to-end/helpers/puppeterHelper.js' },
     GenerateReportHelper: { require: './test/end-to-end/helpers/generateReportHelper.js' }
   },
   plugins: {
-    //autoLogin: testUserConfig.AutoLogin,
+    // autoLogin: testUserConfig.AutoLogin,
     retryFailedStep: {
       enabled: true,
-      retries: 2,
+      retries: 2
     },
     autoDelay: {
       enabled: true,
-      delayAfter: 1000,
+      delayAfter: 1000
     },
     screenshotOnFail: {
       enabled: true,
-      fullPageScreenshots: true,
-    },
+      fullPageScreenshots: true
+    }
   },
   include: {
     I: './test/end-to-end/steps_file.js',
     config: './test/end-to-end/config.js',
-    loginPage: './test/end-to-end/pages/Login.js',
+    loginPage: './test/end-to-end/pages/Login.js'
   },
   mocha: {
     reporterOptions: {
       'codeceptjs-cli-reporter': {
         stdout: '-',
-        options: { steps: true },
+        options: { steps: true }
       },
       'mocha-junit-reporter': {
         stdout: '-',
-        options: { mochaFile: `${testConfig.TestOutputDir}/result.xml` },
+        options: { mochaFile: `${testConfig.TestOutputDir}/result.xml` }
       },
       mochawesome: {
-        stdout: testConfig.TestOutputDir + '/console.log',
+        stdout: `${testConfig.TestOutputDir}/console.log`,
         options: {
           reportDir: testConfig.TestOutputDir,
           reportName: 'index',
           reportTitle: 'Crossbrowser results',
-          inlineAssets: true,
-        },
-      },
-    },
+          inlineAssets: true
+        }
+      }
+    }
   },
   multiple: {
-    microsoft: {
-      browsers: getBrowserConfig('microsoft'),
-    },
-    chrome: {
-      browsers: getBrowserConfig('chrome'),
-    },
-    firefox: {
-      browsers: getBrowserConfig('firefox'),
-    },
-    safari: {
-      browsers: getBrowserConfig('safari'),
-    },
+    microsoft: { browsers: getBrowserConfig('microsoft') },
+    chrome: { browsers: getBrowserConfig('chrome') },
+    firefox: { browsers: getBrowserConfig('firefox') },
+    safari: { browsers: getBrowserConfig('safari') }
   },
-  name: 'PRL Cross-Browser Tests',
+  name: 'PRL Cross-Browser Tests'
 };
 
 exports.config = setupConfig;
