@@ -13,18 +13,19 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
 
     private static final Logger logger = LoggerFactory.getLogger(HighLevelDataSetupApp.class);
 
-    private static final CcdRoleConfig[] CCD_ROLES_NEEDED_FOR_NFD = {
-            new CcdRoleConfig("caseworker-privatelaw", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-bulkscan", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-bulkscansystemupdate", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-courtadmin", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-judge", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-la", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-solicitor", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-superuser", "PUBLIC"),
-            new CcdRoleConfig("caseworker-privatelaw-systemupdate", "PUBLIC"),
-            new CcdRoleConfig("payments", "PUBLIC"),
-            new CcdRoleConfig("pui-case-manager", "PUBLIC")
+    public static final String PUBLIC = "PUBLIC";
+    private static final CcdRoleConfig[] CCD_ROLES_NEEDED_FOR_PRL = {
+            new CcdRoleConfig("caseworker-privatelaw", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-bulkscan", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-bulkscansystemupdate", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-courtadmin", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-judge", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-la", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-solicitor", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-superuser", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-systemupdate", PUBLIC),
+            new CcdRoleConfig("payments", PUBLIC),
+            new CcdRoleConfig("pui-case-manager", PUBLIC)
     };
 
     private final CcdEnvironment environment;
@@ -39,8 +40,13 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
     }
 
     @Override
+    protected boolean shouldTolerateDataSetupFailure() {
+        return true;
+    }
+
+    @Override
     public void addCcdRoles() {
-        for (CcdRoleConfig roleConfig : CCD_ROLES_NEEDED_FOR_NFD) {
+        for (CcdRoleConfig roleConfig : CCD_ROLES_NEEDED_FOR_PRL) {
             try {
                 logger.info("\n\nAdding CCD Role {}.", roleConfig);
                 addCcdRole(roleConfig);
@@ -57,6 +63,10 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
     @Override
     protected List<String> getAllDefinitionFilesToLoadAt(String definitionsPath) {
         String environmentName = environment.name().toLowerCase(Locale.UK);
-        return List.of(String.format("build/ccd-development-config/ccd-prl-%s.xlsx", environmentName));
+        if (CcdEnvironment.PREVIEW.name().equalsIgnoreCase(environmentName)) {
+            return List.of(String.format("definitions/private-law/xlsx/ccd-config-%s.xlsx", CcdEnvironment.AAT.name()));
+        } else {
+            return List.of(String.format("definitions/private-law/xlsx/ccd-config-%s.xlsx", environmentName));
+        }
     }
 }
