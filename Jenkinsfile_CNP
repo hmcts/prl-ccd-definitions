@@ -63,73 +63,39 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:preview') {
     yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
-    yarnBuilder.yarn('test:functional')
+    yarnBuilder.yarn('test:uploadFile')
   }
 
   after('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
-  before('functionalTest:preview') {
-    yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
-  }
 
   after('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-    yarnBuilder.yarn('test:fullfunctional')
   }
 
 
-
-  before('functionalTest:aat') {
-    yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
-    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
-    env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
-  }
 
   after('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-    yarnBuilder.yarn('test:fullfunctional')
   }
 
   before('smoketest:aat') {
     yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
     env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
     env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
 
-    yarnBuilder.yarn('test:functional')
+    yarnBuilder.yarn('test:uploadFile')
   }
 
   after('smoketest:aat') {
