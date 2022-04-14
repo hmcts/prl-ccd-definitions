@@ -22,6 +22,7 @@ module.exports = {
   async fillChildrenAdditionalQuestionsPage() {
     I.wait('2');
     await I.retry(retryCount).waitForElement('//input[@id="isChildrenKnownToAuthority-yes"]');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).checkOption('//input[@id="isChildrenKnownToAuthority-yes"]');
     await I.retry(retryCount).waitForElement('//textarea[@id="childAndLocalAuthority"]');
     await I.retry(retryCount).fillField('//textarea[@id="childAndLocalAuthority"]', 'Test local authority');
@@ -47,6 +48,7 @@ module.exports = {
   async fillOtherChildren() {
     await I.retry(retryCount).waitForElement('#otherChildren');
     await I.retry(retryCount).click('Add new');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_firstName"]', 'Test Firstname');
     await I.retry(retryCount).fillField('//input[@id="otherChildren_0_lastName"]', 'Test Lastname');
     await I.retry(retryCount).checkOption('//input[@id="otherChildren_0_isDateOfBirthUnknown-dontKnow"]');
