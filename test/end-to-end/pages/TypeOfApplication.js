@@ -96,12 +96,14 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.ordersApplyingForPageMandatoryText);
     await I.retry(retryCount).click(this.fields.nonMolestationOrder);
     await I.retry(retryCount).click(this.fields.occupationOrder);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
   async linkToChildArrangementsApplicationFL401() {
     await I.retry(retryCount).waitForText(this.fields.linkToChildArrangementsApplicationHeader);
     await I.retry(retryCount).click(this.fields.linkedChildArrangementsApplicationYes);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).waitForText(this.fields.childArrangementOrderInstructionText);
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
     // eslint-disable-next-line max-len
@@ -111,7 +113,7 @@ module.exports = {
 
   async checkYourAnswersPageFL401() {
     await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
+    // await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Save and continue');
   },
 
