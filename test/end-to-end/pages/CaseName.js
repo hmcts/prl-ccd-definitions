@@ -37,6 +37,7 @@ module.exports = {
     await this.changeCaseName();
     I.wait('2');
     await I.retry(retryCount).click('Save and continue');
+    I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };
