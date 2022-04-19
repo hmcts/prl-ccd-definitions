@@ -80,6 +80,7 @@ const setupConfig = {
       fullPageScreenshots: true,
     },
   },
+  /*eslint-disable */
   include: {
     I: './test/end-to-end/steps_file.js',
     config: './test/end-to-end/config.js',
