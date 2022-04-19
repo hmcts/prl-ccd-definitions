@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable */
 
 const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
