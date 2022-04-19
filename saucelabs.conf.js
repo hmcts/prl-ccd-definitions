@@ -84,6 +84,19 @@ const setupConfig = {
     I: './test/end-to-end/steps_file.js',
     config: './test/end-to-end/config.js',
     loginPage: './test/end-to-end/pages/Login.js',
+    createCasePage = './test/end-to-end/pages/CreateCase.js',
+    peopleInTheCasePage = './test/end-to-end/pages/PeopleInTheCase.js',
+    uploadDocuments = './test/end-to-end/pages/UploadDocuments.js',
+    typeOfApplicationEvent = './test/end-to-end/pages/TypeOfApplication.js',
+    attendingTheHearing = './test/end-to-end/pages/AttendingTheHearing.js',
+    miam = './test/end-to-end/pages/Miam.js'
+    childDetails = './test/end-to-end/pages/ChildDetails.js',
+    applicantDetails = './test/end-to-end/pages/ApplicantDetails.js',
+    caseName = './test/end-to-end/pages/CaseName.js',
+    generalHelper = './test/end-to-end/helpers/generalHelper.js',
+    hearingUrgency = './test/end-to-end/pages/HearingUrgency.js',
+    litigationCapacity = './test/end-to-end/pages/LitigationCapacity.js',
+    otherPeopleInTheCase = './test/end-to-end/pages/OtherPeopleInTheCase.js',
   },
   mocha: {
     reporterOptions: {
