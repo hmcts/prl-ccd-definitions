@@ -113,7 +113,7 @@ module.exports = {
 
   async checkYourAnswersPageFL401() {
     await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
+    // await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Save and continue');
   },
 
