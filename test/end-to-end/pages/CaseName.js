@@ -20,6 +20,17 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Updated Case Name');
     await I.retry(retryCount).click('Continue');
   },
+  
+  async triggerEvent(eventName) {
+    await I.retry(retryCount).waitForElement(this.fields.eventList);
+    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+  
+  async amOnHistoryPageWithSuccessNotification() {
+    await I.retry(retryCount).waitForText('History');
+    await I.retry(retryCount).('i.icon-tick');
+  },
 
   async runEventCaseName() {
     await this.triggerEvent('Case name');
@@ -27,11 +38,5 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
-  },
-  
-  async triggerEvent(eventName) {
-    await I.retry(retryCount).waitForElement(this.fields.eventList);
-    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
-    await I.retry(retryCount).click(this.fields.submit);
   }
 };
