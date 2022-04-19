@@ -29,7 +29,7 @@ module.exports = {
   
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
-    await I.retry(retryCount).('i.icon-tick');
+    await I.retry(retryCount).waitForElement('i.icon-tick');
   },
 
   async runEventCaseName() {
