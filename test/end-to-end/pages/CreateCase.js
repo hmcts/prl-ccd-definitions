@@ -70,8 +70,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(retryCount).submitEvent();
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -79,8 +79,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(retryCount).submitEvent();
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseC100andReturnID() {
