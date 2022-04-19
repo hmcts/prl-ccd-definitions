@@ -8,7 +8,7 @@ const Miam = require('./pages/Miam.js');
 const ChildDetails = require('./pages/ChildDetails');
 const ApplicantDetails = require('./pages/ApplicantDetails');
 const CaseName = require('./pages/CaseName');
-const generalHelper = require('./helpers/generalHelper');
+const GeneralHelper = require('./helpers/generalHelper');
 const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
 const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
@@ -39,8 +39,11 @@ module.exports = () => {
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
     },
+    submitEvent() {
+      return GeneralHelper.submitEvent();
+    },
     triggerEvent(eventName) {
-      return generalHelper.triggerEvent(eventName);
+      return GeneralHelper.triggerEvent(eventName);
     },
     createCase() {
       return CreateCasePage.createNewCaseC100();
