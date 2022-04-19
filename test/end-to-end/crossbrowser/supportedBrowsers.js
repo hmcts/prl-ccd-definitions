@@ -36,7 +36,7 @@ const supportedBrowsers = {
 //       },
 //     },
 //   },
-//   chrome: {
+    chrome: {
 //     chrome_win_latest: {
 //       browserName: 'chrome',
 //       platformName: LATEST_WINDOWS,
@@ -55,7 +55,7 @@ const supportedBrowsers = {
         screenResolution: '1600x1200',
       },
     },
-// },
+},
 //   firefox: {
 //     firefox_win_latest: {
 //       browserName: 'firefox',
