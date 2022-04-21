@@ -136,7 +136,6 @@
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
   },
-
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
@@ -378,11 +377,47 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "checkYourOrder",
+    "CaseFieldID": "addOrderdetailsLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "createSelectOrderOptions=\"Child arrangements, specific issue or prohibited steps order(C43)\""
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersApplyingFor",
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": ""
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "typeOfChildArrangementsOrder",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "ordersApplyingFor CONTAINS \"childArrangementsOrder\"",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "checkYourOrder",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -392,8 +427,8 @@
     "CaseFieldID": "checkYourOrderLabel",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "PageID": 6,
+    "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -403,8 +438,8 @@
     "CaseFieldID": "previewOrderDoc",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "PageID": 6,
+    "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -414,8 +449,8 @@
     "CaseFieldID": "checkOrderRestrictionsLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -425,8 +460,8 @@
     "CaseFieldID": "orderRecipientsLabel",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -436,8 +471,8 @@
   "CaseFieldID": "orderRecipients",
   "PageFieldDisplayOrder": 3,
   "DisplayContext": "MANDATORY",
-  "PageID": 6,
-  "PageDisplayOrder": 6,
+  "PageID": 7,
+  "PageDisplayOrder": 7,
   "ShowSummaryChangeOption": "Y"
   },
   {
@@ -447,8 +482,8 @@
     "CaseFieldID": "otherOrderRecipients",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -458,8 +493,8 @@
     "CaseFieldID": "cafcassRecipient",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -469,8 +504,8 @@
     "CaseFieldID": "otherRecipient",
     "PageFieldDisplayOrder": 7,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -480,8 +515,8 @@
     "CaseFieldID": "cafcassEmailAddress",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "cafcassRecipient=\"cafcass\""
   },
@@ -492,8 +527,8 @@
     "CaseFieldID": "otherEmailAddress",
     "PageFieldDisplayOrder": 8,
     "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "otherRecipient=\"other\""
   }
