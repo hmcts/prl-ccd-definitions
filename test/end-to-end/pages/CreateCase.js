@@ -70,8 +70,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -79,8 +79,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseC100andReturnID() {
@@ -88,9 +88,21 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     return caseId;
+  },
+  
+  async submitEvent() {
+    I.wait('2');
+    await I.retry(retryCount).waitForElement('h2');
+    await I.retry(retryCount).see('Check your answers');
+    await I.retry(retryCount).click('Save and continue');
+  },
+  
+  async amOnHistoryPageWithSuccessNotification() {
+    await I.retry(retryCount).waitForText('History');
+    await I.retry(retryCount).waitForElement('i.icon-tick');
   }
 };
