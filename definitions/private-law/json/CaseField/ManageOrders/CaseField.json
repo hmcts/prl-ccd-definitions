@@ -264,6 +264,14 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrder1",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeader1",
     "Label": " ",
     "FieldType": "TextArea",
@@ -320,10 +328,44 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel7",
+    "Label": "${manageOrderHeader1}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "orderCollection",
     "Label": "Orders",
     "FieldType": "Collection",
     "FieldTypeParameter": "OrderDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addOrderdetailsLabel",
+    "Label": "## Add order details",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childArrangementsOrdersToIssue",
+    "Label": "Select orders to issue",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OrderTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectChildArrangementsOrder",
+    "Label": "Select type of child arrangements order",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "childArrangementOrderTypeEnum",
     "SecurityClassification": "Public"
   }
 ]
