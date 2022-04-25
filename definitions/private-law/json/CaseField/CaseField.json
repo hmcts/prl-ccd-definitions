@@ -902,18 +902,51 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addCaseNoteHeader1Text",
+    "Label": " ",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "caseNoteDetails",
-    "Label": "CaseNote",
-    "FieldType": "addCaseNoteType",
+    "ID": "addCaseNoteHeader1",
+    "Label": "${addCaseNoteHeader1Text}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "subject",
+    "Label": "Subject",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNote",
+    "Label": "case note",
+    "HintText": "Add note detail, including relevant dates and people involved",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addCaseNoteLink",
+    "Label": "[Add case note](/cases/case-details/${[CASE_REFERENCE]}/trigger/addCaseNote)",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseNotes",
-    "Label": "caseNotes",
+    "Label": "Case notes",
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "addCaseNoteType",
