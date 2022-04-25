@@ -405,7 +405,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "createSelectOrderOptions=\"Child arrangements, specific issue or prohibited steps order(C43)\""
+    "PageShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -416,7 +416,9 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\""
+
   },
   {
     "LiveFrom": "31/03/2022",
@@ -427,31 +429,33 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\""
   },
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersApplyingFor",
+    "CaseFieldID": "childArrangementsOrdersToIssue",
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
+    "FieldShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\""
   },
   {
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "typeOfChildArrangementsOrder",
+    "CaseFieldID": "selectChildArrangementsOrder",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersApplyingFor CONTAINS \"childArrangementsOrder\"",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" AND childArrangementsOrdersToIssue CONTAINS \"childArrangementsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
