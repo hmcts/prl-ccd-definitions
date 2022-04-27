@@ -74,6 +74,13 @@ const setupConfig = {
       require: './test/end-to-end/helpers/puppeterHelper.js',
     },
     GenerateReportHelper: {
+    GeneralHelper: { 
+      require: './test/end-to-end/helpers/generalHelper.js',
+    },
+    PuppeteerHelpers: { 
+      require: './test/end-to-end/helpers/puppeterHelper.js',
+    },
+    GenerateReportHelper: { 
       require: './test/end-to-end/helpers/generateReportHelper.js'
     },
     Mochawesome: {
