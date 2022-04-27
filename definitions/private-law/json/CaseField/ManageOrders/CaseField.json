@@ -170,6 +170,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "previewOrderDoc",
     "FieldType": "Document",
+    "Label": " ",
     "SecurityClassification": "Public"
   },
   {
@@ -344,17 +345,19 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "AppointedGuardianLabel",
+    "ID": "appointedGuardianLabel",
     "Label": "## Who is the appointed guardian?",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "31/03/2022",
+    "LiveFrom": "19/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "appointedGuardianFullName",
-    "Label": "Full name",
-    "FieldType": "Text",
+    "ID": "appointedGuardianName",
+    "Label": "Guardian Full Name",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "appointedGuardianFullName",
     "SecurityClassification": "Public"
   }
 ]
