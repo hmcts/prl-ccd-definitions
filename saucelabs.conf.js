@@ -1,5 +1,10 @@
 const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
+
+
+// const testUserConfig = require('./test/end-to-end/config.js').config;
+// eslint-disable-next-line no-magic-numbers
+
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 50000;
 const smartWait = parseInt(process.env.SMART_WAIT) || 50000;
 const browser = process.env.SAUCELABS_BROWSER || 'chrome';
@@ -10,7 +15,7 @@ const defaultSauceOptions = {
   acceptSslCerts: true,
   tags: ['Private Law'],
   maxDuration: 5000,
-  commandTimeout: 600,
+  commandTimeout: 600
 };
 
 function merge(intoObject, fromObject) {
@@ -36,6 +41,7 @@ function getBrowserConfig(browserGroup) {
 
 const setupConfig = {
   tests: './test/end-to-end/tests/*.js',
+  // teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     Puppeteer: {
@@ -62,19 +68,18 @@ const setupConfig = {
       host: 'ondemand.eu-central-1.saucelabs.com',
       port: 80,
       region: 'eu',
-
       capabilities: {},
     },
     SauceLabsReportingHelper: {
       require: './test/end-to-end/helpers/SauceLabsReportingHelper.js',
     },
-    GeneralHelper: { 
+    GeneralHelper: {
       require: './test/end-to-end/helpers/generalHelper.js',
     },
-    PuppeteerHelpers: { 
+    PuppeteerHelpers: {
       require: './test/end-to-end/helpers/puppeterHelper.js',
     },
-    GenerateReportHelper: { 
+    GenerateReportHelper: {
       require: './test/end-to-end/helpers/generateReportHelper.js'
     },
     Mochawesome: {
