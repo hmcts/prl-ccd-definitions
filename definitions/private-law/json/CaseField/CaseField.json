@@ -24,6 +24,22 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturn",
+    "Label": "Case name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturnLabel",
+    "Label": "${taskListReturn}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseHistory",
@@ -2274,6 +2290,16 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "submitAgreeStatement",
+    "Label": " ",
+    "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "Consent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayNextPage",
     "Label": "### Next step - payment",
     "FieldType": "Label",
@@ -2647,6 +2673,15 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dateAndTimeSubmitted",
+    "Label": "Date submitted",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
+  },
+  {
     "LiveFrom": "17/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submissionRequiredFieldsInfo1",
@@ -2800,6 +2835,23 @@
     "ID": "caseSolicitorOrgName",
     "Label": " ",
     "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitCountyCourtSelectionLabel",
+    "Label": "# Select the family court",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitCountyCourtSelection",
+    "Label": "Select the email address of the family court you want this application to go to",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "CountyCourtEmails",
     "SecurityClassification": "Public"
   }
 ]
