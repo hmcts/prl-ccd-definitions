@@ -1,7 +1,7 @@
 #!groovy
 
 properties([
-    pipelineTriggers([cron('00 23 * * *')]),
+    pipelineTriggers([cron('0 2 * * 1-5')]),
     parameters([
         string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
         string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
@@ -13,6 +13,11 @@ properties([
 String product = "prl"
 String component = "ccd-definitions"
 def channel = '#prl-tech-notifications'
+
+// SAUCELABS config - configured on Jenkins
+env.SAUCE_USERNAME = 'username'
+env.SAUCE_ACCESS_KEY = 'privatekey'
+env.SAUCE_TUNNEL_IDENTIFIER = 'reformtunnel'
 
 def secrets = [
         's2s-${env}'      : [
@@ -44,12 +49,22 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withNightlyPipeline("nodejs", product, component) {
     env.TEST_URL = params.XUI_WEB_URL
     env.test_environment = params.RUNNING_ENV
+    env.TESTS_FOR_ACCESSIBILITY = true
 
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
     enableFullFunctionalTest(200)
+    enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
 
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
+    }
+
+    before('crossBrowserTest') {}
+
+    after('crossBrowserTest') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 }
+

@@ -1,6 +1,8 @@
 const I = actor();
 const config = require('../config');
 
+const retryCount = 3;
+
 // eslint-disable-next-line no-unused-vars
 const baseUrl = config.baseUrl;
 
@@ -13,12 +15,19 @@ module.exports = {
   },
 
   async loginAsSolicitor() {
-    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
-    await I.seeElement('#authorizeCommand');
-    await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
-    await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
-    await I.click(this.fields.submit);
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+    try {
+      await I.retry(retryCount).click('#cookie-accept-submit');
+      await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
+      await I.runAccessibilityTest();
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    } 
+    catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
   }
 };

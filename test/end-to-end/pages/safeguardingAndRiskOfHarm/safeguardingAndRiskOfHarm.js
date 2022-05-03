@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -40,63 +41,63 @@ module.exports = {
   },
 
   async triggerEvent(eventName) {
-    await I.waitForElement(this.fields.eventList);
-    await I.selectOption(this.fields.eventList, eventName);
-    await I.click(this.fields.submit);
+    await I.retry(retryCount).waitForElement(this.fields.eventList);
+    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async safeguardingAndRiskOfHarm() {
-    await I.waitForText('Safeguarding and risk of harm');
+    await I.retry(retryCount).waitForText('Safeguarding and risk of harm');
     I.wait('2');
-    await I.click(this.fields.domesticAbuse);
-    await I.click(this.fields.childAbduction);
-    await I.click(this.fields.childAbuse);
-    await I.click(this.fields.drugsAndAlcohol);
-    await I.click(this.fields.otherSafety);
-    await I.click(this.fields.continueButton);
+    await I.retry(retryCount).click(this.fields.domesticAbuse);
+    await I.retry(retryCount).click(this.fields.childAbduction);
+    await I.retry(retryCount).click(this.fields.childAbuse);
+    await I.retry(retryCount).click(this.fields.drugsAndAlcohol);
+    await I.retry(retryCount).click(this.fields.otherSafety);
+    await I.retry(retryCount).click(this.fields.continueButton);
   },
 
   async childAbduction() {
-    await I.waitForText('Child abduction');
+    await I.retry(retryCount).waitForText('Child abduction');
     I.wait('2');
-    await I.click(this.fields.childAtRisk);
-    await I.click(this.fields.policeInformed);
-    await I.click(this.fields.childHasPassport);
-    await I.click(this.fields.childMultiplePassport);
-    await I.click(this.fields.childPassportPossession);
-    await I.fillField(this.fields.childPassportPossessionOtherDetails, 'Grandma');
-    await I.click(this.fields.childAbductedDetails);
-    await I.fillField(this.fields.abductionDetails, 'Abduction Details');
-    await I.click(this.fields.policeInformedOnAbduction);
-    await I.fillField(this.fields.moreDetails, 'Abduction details elaborated');
-    await I.fillField(this.fields.reasonForAbduction, 'Reason for Abduction');
-    await I.fillField(this.fields.childWhereAbouts, 'Took out of country');
-    await I.click(this.fields.continueButton);
+    await I.retry(retryCount).click(this.fields.childAtRisk);
+    await I.retry(retryCount).click(this.fields.policeInformed);
+    await I.retry(retryCount).click(this.fields.childHasPassport);
+    await I.retry(retryCount).click(this.fields.childMultiplePassport);
+    await I.retry(retryCount).click(this.fields.childPassportPossession);
+    await I.retry(retryCount).fillField(this.fields.childPassportPossessionOtherDetails, 'Grandma');
+    await I.retry(retryCount).click(this.fields.childAbductedDetails);
+    await I.retry(retryCount).fillField(this.fields.abductionDetails, 'Abduction Details');
+    await I.retry(retryCount).click(this.fields.policeInformedOnAbduction);
+    await I.retry(retryCount).fillField(this.fields.moreDetails, 'Abduction details elaborated');
+    await I.retry(retryCount).fillField(this.fields.reasonForAbduction, 'Reason for Abduction');
+    await I.retry(retryCount).fillField(this.fields.childWhereAbouts, 'Took out of country');
+    await I.retry(retryCount).click(this.fields.continueButton);
   },
 
   async childAbuse() {
     I.wait('2');
-    await I.click(this.fields.sexuallyAbused);
-    await I.click(this.fields.physicallyAbused);
+    await I.retry(retryCount).click(this.fields.sexuallyAbused);
+    await I.retry(retryCount).click(this.fields.physicallyAbused);
     I.wait('1');
-    await I.fillField(this.fields.natureOfBehaviour, 'Physically Abused');
-    await I.fillField(this.fields.behaviourStartDay, '10');
-    await I.fillField(this.fields.behaviourStartMonth, '10');
-    await I.fillField(this.fields.behaviourStartYear, '2020');
-    await I.click(this.fields.behaviourStillGoingOn);
-    await I.fillField(this.fields.whoHelped, 'Who Helped');
-    await I.click(this.fields.financialAbuse);
-    await I.click(this.fields.domesticAbuseChildAbuse);
-    await I.click(this.fields.substanceAbuse);
-    await I.click(this.fields.welfareConcerns);
-    await I.click(this.fields.continueButton);
+    await I.retry(retryCount).fillField(this.fields.natureOfBehaviour, 'Physically Abused');
+    await I.retry(retryCount).fillField(this.fields.behaviourStartDay, '10');
+    await I.retry(retryCount).fillField(this.fields.behaviourStartMonth, '10');
+    await I.retry(retryCount).fillField(this.fields.behaviourStartYear, '2020');
+    await I.retry(retryCount).click(this.fields.behaviourStillGoingOn);
+    await I.retry(retryCount).fillField(this.fields.whoHelped, 'Who Helped');
+    await I.retry(retryCount).click(this.fields.financialAbuse);
+    await I.retry(retryCount).click(this.fields.domesticAbuseChildAbuse);
+    await I.retry(retryCount).click(this.fields.substanceAbuse);
+    await I.retry(retryCount).click(this.fields.welfareConcerns);
+    await I.retry(retryCount).click(this.fields.continueButton);
   },
 
   async submitEvent() {
     I.wait('2');
-    await I.waitForElement('h2');
-    await I.see('Check your answers');
-    await I.click('Save and continue');
+    await I.retry(retryCount).waitForElement('h2');
+    await I.retry(retryCount).see('Check your answers');
+    await I.retry(retryCount).click('Save and continue');
   },
 
   async safeguardAndRiskOfHarmEvent() {

@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
   fields: {
@@ -10,16 +11,17 @@ module.exports = {
     litigationCapacityOtherFactorsDetails: 'textarea[id="litigationCapacityOtherFactorsDetails"]'
   },
   async  litigationCapacity() {
-    await I.triggerEvent(this.fields.headerText);
-    await I.waitForPage('h1', this.fields.headerText);
-    await I.fillField(this.fields.litigationCapacityFactors, this.fields.textareaText);
-    await I.fillField(this.fields.litigationCapacityReferrals, this.fields.textareaText);
-    await I.click(this.fields.litigationCapacityOtherFactors);
-    await I.wait('2');
-    await I.fillField(this.fields.litigationCapacityOtherFactorsDetails, this.fields.textareaText);
-    await I.click('Continue');
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(retryCount).triggerEvent(this.fields.headerText);
+    await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).fillField(this.fields.litigationCapacityFactors, this.fields.textareaText);
+    await I.retry(retryCount).fillField(this.fields.litigationCapacityReferrals, this.fields.textareaText);
+    await I.retry(retryCount).click(this.fields.litigationCapacityOtherFactors);
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).fillField(this.fields.litigationCapacityOtherFactorsDetails, this.fields.textareaText);
+    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).waitForText('Save and continue', '10');
+    await I.retry(retryCount).click('Save and continue');
   }
 
 };

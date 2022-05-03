@@ -22,6 +22,13 @@ function assertEventDefinitionIsValid(row) {
   whenPopulated(row.ShowSummary).expect(v => {
     return ['Y', 'N'].includes(v);
   });
+  if (row.CallBackURLSubmittedEvent) {
+    expect(row.CallBackURLSubmittedEvent).to.be.a('string').and.satisfy(isNotEmpty());
+  }
+  if (row.EventEnablingCondition) {
+    expect(row.EventEnablingCondition).to.be.a('string').and.satisfy(isNotEmpty());
+  }
+
   whenPopulated(row.EndButtonLabel).expect(isNotLongerThan(MEDIUM_STRING));
 }
 
@@ -36,7 +43,7 @@ describe('CaseEvent', () => {
     });
 
     it('not contain duplicated definitions of the same event', () => {
-      expect(uniqResult).to.eql(nonProd);
+      expect(uniqResult.length).to.equal(nonProd.length);
     });
 
     it('have only valid definitions', () => {

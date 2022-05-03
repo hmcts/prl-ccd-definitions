@@ -752,7 +752,7 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "children",
-    "Label": "Child",
+    "Label": "*Child",
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
@@ -2174,7 +2174,7 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "draftOrderDoc",
-    "Label": " ",
+    "Label": "Draft application",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2193,14 +2193,6 @@
     "Label": "Choose a document category",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "documentCategoryChecklistEnum",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
@@ -2385,7 +2377,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": " ",
+    "Label": "Draft application",
     "FieldType": "Document",
     "SecurityClassification": "Public"
   },
@@ -2476,30 +2468,6 @@
     "ID": "familymanCaseNumber",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments1",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments2",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "caseNameManageDocuments3",
-    "Label": "## ${applicantCaseName}",
-    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
@@ -2816,7 +2784,23 @@
     "Label": "The court will review the application and make a decision on the urgency of the application based on the details you provide",
     "FieldType": "Label",
     "SecurityClassification": "Public"
-  }
+  },
 
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseSolicitorName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseSolicitorOrgName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  }
 ]
 

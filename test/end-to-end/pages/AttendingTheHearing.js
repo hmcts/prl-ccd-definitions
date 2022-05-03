@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
   fields: {
@@ -24,59 +25,60 @@ module.exports = {
   },
 
   async triggerEvent() {
-    await I.triggerEvent('Attending the hearing');
+    await I.retry(retryCount).triggerEvent('Attending the hearing');
   },
 
   async attendingTheHearing() {
-    await I.waitForPage('h1', 'Attending the hearing');
+    await I.retry(retryCount).waitForPage('h1', 'Attending the hearing');
+    await I.runAccessibilityTest();
 
-    await I.click(this.fields.isWelshNeeded);
-    await I.see('Welsh needs');
-    await I.click('#welshNeeds > div > button');
+    await I.retry(retryCount).click(this.fields.isWelshNeeded);
+    await I.retry(retryCount).see('Welsh needs');
+    await I.retry(retryCount).click('#welshNeeds > div > button');
     I.wait('1');
-    await I.fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
-    await I.click(this.fields.welshSpoken);
-    await I.click(this.fields.welshWritten);
-    await I.click(this.fields.welshSpokenAndWritten);
+    await I.retry(retryCount).fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
+    await I.retry(retryCount).click(this.fields.welshSpoken);
+    await I.retry(retryCount).click(this.fields.welshWritten);
+    await I.retry(retryCount).click(this.fields.welshSpokenAndWritten);
 
-    await I.click(this.fields.isInterpreterNeeded);
-    await I.see('Interpreter needs');
-    await I.click('#interpreterNeeds > div > button');
-    await I.click(this.fields.interpreterNeedsApplicant);
-    await I.click(this.fields.interpreterNeedsRespondent);
-    await I.click(this.fields.interpreterNeedsOther);
-    await I.fillField(this.fields.interpreterNeedsName, 'Person One');
-    await I.fillField(this.fields.interpreterNeedsLanguage, 'Polish');
-    await I.fillField(this.fields.otherAssistance, 'None');
+    await I.retry(retryCount).click(this.fields.isInterpreterNeeded);
+    await I.retry(retryCount).see('Interpreter needs');
+    await I.retry(retryCount).click('#interpreterNeeds > div > button');
+    await I.retry(retryCount).click(this.fields.interpreterNeedsApplicant);
+    await I.retry(retryCount).click(this.fields.interpreterNeedsRespondent);
+    await I.retry(retryCount).click(this.fields.interpreterNeedsOther);
+    await I.retry(retryCount).fillField(this.fields.interpreterNeedsName, 'Person One');
+    await I.retry(retryCount).fillField(this.fields.interpreterNeedsLanguage, 'Polish');
+    await I.retry(retryCount).fillField(this.fields.otherAssistance, 'None');
 
-    await I.wait('1');
-    await I.click(this.fields.isDisabilityPresent);
-    await I.wait('1');
-    await I.see('Describe the adjustments that the court needs to make.');
-    await I.fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
+    await I.retry(retryCount).wait('1');
+    await I.retry(retryCount).click(this.fields.isDisabilityPresent);
+    await I.retry(retryCount).wait('1');
+    await I.retry(retryCount).see('Describe the adjustments that the court needs to make.');
+    await I.retry(retryCount).fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
 
-    await I.click(this.fields.isSpecialArrangementsRequired);
-    await I.wait('1');
-    await I.see('Give details of the special arrangements that are required.');
-    await I.fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
+    await I.retry(retryCount).click(this.fields.isSpecialArrangementsRequired);
+    await I.retry(retryCount).wait('1');
+    await I.retry(retryCount).see('Give details of the special arrangements that are required.');
+    await I.retry(retryCount).fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
 
-    await I.click(this.fields.isIntermediaryNeeded);
-    await I.wait('1');
-    await I.see('Set out the reasons that an intermediary is required.');
-    await I.fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
+    await I.retry(retryCount).click(this.fields.isIntermediaryNeeded);
+    await I.retry(retryCount).wait('1');
+    await I.retry(retryCount).see('Set out the reasons that an intermediary is required.');
+    await I.retry(retryCount).fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
 
-    await I.wait('2');
-    await I.click('Continue');
+    await I.retry(retryCount).wait('2');
+    await I.retry(retryCount).click('Continue');
 
-    await I.waitForText('Save and continue', '30');
-    await I.click('Save and continue');
+    await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');
+    await I.retry(retryCount).click('Save and continue');
   },
 
   async runEventHappyPathAttendingTheHearing() {
     await this.triggerEvent();
     await this.attendingTheHearing();
 
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(retryCount).submitEvent();
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };

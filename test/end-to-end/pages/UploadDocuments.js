@@ -1,19 +1,20 @@
 const I = actor();
+const retryCount = 3;
 
 async function uploadDocuments() {
-  await I.triggerEvent('Upload documents');
-  await I.waitForPage('h1', 'Upload documents');
+  await I.retry(retryCount).triggerEvent('Upload documents');
+  await I.retry(retryCount).waitForPage('h1', 'Upload documents');
+  await I.runAccessibilityTest();
+  await I.retry(retryCount).addNewDocument('contactOrderDocumentsUploaded');
+  await I.retry(retryCount).addNewDocument('c8FormDocumentsUploaded');
+  await I.retry(retryCount).addNewDocument('otherDocumentsUploaded');
 
-  await I.addNewDocument('contactOrderDocumentsUploaded');
-  await I.addNewDocument('c8FormDocumentsUploaded');
-  await I.addNewDocument('otherDocumentsUploaded');
+  await I.retry(retryCount).wait('5');
+  await I.retry(retryCount).click('Continue');
 
-  await I.wait('5');
-  await I.click('Continue');
-
-  await I.waitForText('Save and continue', '30');
-  await I.click('Save and continue');
-  await I.amOnHistoryPageWithSuccessNotification();
+  await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');
+  await I.retry(retryCount).click('Save and continue');
+  await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
 }
 
 module.exports = { uploadDocuments };
