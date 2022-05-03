@@ -1,7 +1,6 @@
 const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
 
-
 // const testUserConfig = require('./test/end-to-end/config.js').config;
 // eslint-disable-next-line no-magic-numbers
 
@@ -15,7 +14,7 @@ const defaultSauceOptions = {
   acceptSslCerts: true,
   tags: ['Private Law'],
   maxDuration: 5000,
-  commandTimeout: 600
+  commandTimeout: 600,
 };
 
 function merge(intoObject, fromObject) {
@@ -42,6 +41,7 @@ function getBrowserConfig(browserGroup) {
 const setupConfig = {
   tests: './test/end-to-end/tests/*.js',
   // teardown: testUserConfig.teardown,
+
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     Puppeteer: {
@@ -68,6 +68,7 @@ const setupConfig = {
       host: 'ondemand.eu-central-1.saucelabs.com',
       port: 80,
       region: 'eu',
+
       capabilities: {},
     },
     SauceLabsReportingHelper: {
