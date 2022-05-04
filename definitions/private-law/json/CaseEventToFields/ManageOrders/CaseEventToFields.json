@@ -448,8 +448,8 @@
     "CaseFieldID": "manageOrderHeaderLabel6",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 8,
+    "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -459,8 +459,8 @@
     "CaseFieldID": "checkYourOrder",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 8,
+    "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -470,8 +470,8 @@
     "CaseFieldID": "checkYourOrderLabel",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 8,
+    "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -481,8 +481,8 @@
     "CaseFieldID": "previewOrderDoc",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 8,
+    "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -492,8 +492,8 @@
     "CaseFieldID": "manageOrderHeaderLabel7",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -503,8 +503,8 @@
     "CaseFieldID": "checkOrderRestrictionsLabel",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -514,8 +514,8 @@
     "CaseFieldID": "orderRecipientsLabel",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -525,8 +525,8 @@
   "CaseFieldID": "orderRecipients",
   "PageFieldDisplayOrder": 4,
   "DisplayContext": "MANDATORY",
-  "PageID": 7,
-  "PageDisplayOrder": 7,
+  "PageID": 9,
+  "PageDisplayOrder": 9,
   "ShowSummaryChangeOption": "Y"
   },
   {
@@ -536,8 +536,8 @@
     "CaseFieldID": "otherOrderRecipients",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "OPTIONAL",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -547,8 +547,8 @@
     "CaseFieldID": "cafcassRecipient",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "OPTIONAL",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -558,8 +558,8 @@
     "CaseFieldID": "cafcassEmailAddress",
     "PageFieldDisplayOrder": 7,
     "DisplayContext": "MANDATORY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "cafcassRecipient=\"cafcass\""
   },
@@ -570,8 +570,8 @@
     "CaseFieldID": "otherRecipient",
     "PageFieldDisplayOrder": 8,
     "DisplayContext": "OPTIONAL",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -581,8 +581,8 @@
     "CaseFieldID": "otherEmailAddress",
     "PageFieldDisplayOrder": 9,
     "DisplayContext": "MANDATORY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "otherRecipient=\"other\""
   },
@@ -591,11 +591,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "parentalResponsibility",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "createSelectOrderOptions=\"parentalResponsibility\""
+
   },
   {
     "LiveFrom": "01/08/2021",
@@ -603,9 +605,9 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "parentName",
     "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Yes"
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
   }
 ]
