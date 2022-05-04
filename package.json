@@ -19,8 +19,8 @@
       "ccdUrl": "http://ccd-data-store-api-demo.service.core-compute-demo.internal"
     },
     "aat": {
-      "cosUrl": "http://prl-cos-pr-324.service.core-compute-preview.internal/",
-      "ccdUrl": "http://ccd-data-store-api-prl-ccd-definitions-pr-352.service.core-compute-preview.internal"
+      "cosUrl": "http://prl-cos-pr-348.service.core-compute-preview.internal/",
+      "ccdUrl": "http://ccd-data-store-api-prl-ccd-definitions-pr-376.service.core-compute-preview.internal"
     },
     "perftest": {
       "cosUrl": "http://prl-cos-perftest.service.core-compute-perftest.internal",
@@ -45,19 +45,21 @@
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
     "test:crossbrowser-e2e": "MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
-    "test:functional": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
+    "test:uploadFile": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
+    "test:functional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
     "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
     "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
+    "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
+    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
     "generate-excel-local": "TARGET_ENV=local CCD_DEF_COS_URL=$npm_package_config_local_cosUrl CCD_DEF_CCD_URL=$npm_package_config_local_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-demo": "TARGET_ENV=demo CCD_DEF_COS_URL=$npm_package_config_demo_cosUrl CCD_DEF_CCD_URL=$npm_package_config_demo_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-aat": "TARGET_ENV=aat CCD_DEF_COS_URL=$npm_package_config_aat_cosUrl CCD_DEF_CCD_URL=$npm_package_config_aat_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-perftest": "TARGET_ENV=perftest CCD_DEF_COS_URL=$npm_package_config_perftest_cosUrl CCD_DEF_CCD_URL=$npm_package_config_perftest_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-ithc": "TARGET_ENV=ithc CCD_DEF_COS_URL=$npm_package_config_ithc_cosUrl CCD_DEF_CCD_URL=$npm_package_config_ithc_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-prod": "TARGET_ENV=prod CCD_DEF_COS_URL=$npm_package_config_prod_cosUrl CCD_DEF_CCD_URL=$npm_package_config_prod_ccdUrl yarn run generate-excel -e *-nonprod.json",
-    "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-${TARGET_ENV:-base}-${GIT_COMMIT:-locally-generated}.xlsx",
+    "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
     "generate-excel-all": "yarn generate-excel-local && yarn generate-excel-aat && yarn generate-excel-demo && yarn generate-excel-ithc && yarn generate-excel-perftest && yarn generate-excel-prod"
   },
   "pre-commit": [
