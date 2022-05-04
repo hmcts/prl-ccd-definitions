@@ -591,7 +591,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "parentalResponsibility",
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 7,
     "PageDisplayOrder": 7,
@@ -607,7 +607,31 @@
     "DisplayContext": "MANDATORY",
     "PageID": 7,
     "PageDisplayOrder": 7,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel5",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "createSelectOrderOptions=\"parentalResponsibility\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectedOrder1",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
   }
 ]
