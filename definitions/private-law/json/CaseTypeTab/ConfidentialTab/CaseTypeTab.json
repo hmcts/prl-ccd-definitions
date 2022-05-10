@@ -8,7 +8,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicantsConfidentialDetails",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "applicantsConfidentialDetails!=\"\" OR childrenConfidentialDetails!=\"\""
+    "TabShowCondition": "applicantsConfidentialDetails!=\"\" OR childrenConfidentialDetails!=\"\" OR mainAppDocForTabDisplay!=\"\" OR correspondenceForTabDisplay!=\"\" OR otherDocumentsForTabDisplay!=\"\""
   },
   {
     "LiveFrom": "08/11/2021",
@@ -39,5 +39,25 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "c8WelshDocument",
     "TabFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "confidentialDetails",
+    "TabLabel": "Confidential details",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "correspondenceForTabDisplay",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "confidentialDetails",
+    "TabLabel": "Confidential details",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "otherDocumentsForTabDisplay",
+    "TabFieldDisplayOrder": 6
   }
 ]
