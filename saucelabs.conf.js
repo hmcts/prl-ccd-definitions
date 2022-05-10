@@ -16,6 +16,8 @@ const defaultSauceOptions = {
   tags: ['Private Law'],
   maxDuration: 5000,
   commandTimeout: 600
+  maxDuration: 5000
+  commandTimeout: 600,
 };
 
 function merge(intoObject, fromObject) {

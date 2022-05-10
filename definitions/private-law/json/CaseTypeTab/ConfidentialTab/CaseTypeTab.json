@@ -8,7 +8,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicantsConfidentialDetails",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "applicantsConfidentialDetails!=\"\" OR childrenConfidentialDetails!=\"\" OR mainAppDocForTabDisplay!=\"\" OR correspondenceForTabDisplay!=\"\" OR otherDocumentsForTabDisplay!=\"\""
+    "TabShowCondition": "applicantsConfidentialDetails!=\"\" OR childrenConfidentialDetails!=\"\" OR mainAppDocForTabDisplay!=\"\" OR correspondenceForTabDisplay!=\"\" OR otherDocumentsForTabDisplay!=\"\" AND [STATE]=\"SUBMITTED\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\""
   },
   {
     "LiveFrom": "08/11/2021",
