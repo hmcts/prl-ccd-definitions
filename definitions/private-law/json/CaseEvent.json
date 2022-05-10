@@ -714,6 +714,21 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
+
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrders",
+    "Name": "Manage orders",
+    "Description": "Manage orders",
+    "DisplayOrder": 161,
+    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
+    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
     "LiveFrom": "18/03/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "deleteApplication",
