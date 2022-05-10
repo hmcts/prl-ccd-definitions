@@ -1,5 +1,6 @@
 
 // in this file you can append custom step methods to 'I' object
+const config = require('./config');
 
 module.exports = () => {
   return actor({
@@ -9,8 +10,8 @@ module.exports = () => {
     loginToAdminConsole() {
       this.amOnPage(`${process.env.CCD_ADMIN_URL}`);
       this.see('Sign in');
-      this.fillField('username', 'ccd-importer@server.net');
-      this.fillField('password', 'Password12');
+      this.fillField('username', config.legalProfessionalUserOne.email);
+      this.fillField('password', config.legalProfessionalUserOne.password);
       this.click('Sign in');
       this.see('Welcome to CCD Admin Web');
     },

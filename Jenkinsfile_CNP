@@ -39,6 +39,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withPipeline("nodejs", product, component) {
 
   loadVaultSecrets(secrets)
+  enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
   after('test') {
@@ -52,41 +53,52 @@ withPipeline("nodejs", product, component) {
     }
   }
 
-  before('functionalTest:preview') {
+  before('highleveldatasetup') {
     yarnBuilder.yarn('setup')
 
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
+  }
 
+  before('smoketest:preview') {
+    yarnBuilder.yarn('setup')
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
+    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+    yarnBuilder.yarn('test:uploadFile')
   }
+
+  after('smoketest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+  }
+
 
   after('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-
-    yarnBuilder.yarn('test:fullfunctional')
   }
 
-  before('functionalTest:aat') {
+
+
+  after('functionalTest:aat') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+  }
+
+  before('smoketest:aat') {
     yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
-    }
-
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
     env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
     env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-aat-${GIT_COMMIT}.xlsx"
+    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+
+    yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('functionalTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-    yarnBuilder.yarn('test:fullfunctional')
+  after('smoketest:aat') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
