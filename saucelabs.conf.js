@@ -1,12 +1,6 @@
-/* eslint-disable no-console */
-
 const testConfig = require('./test/end-to-end/config.js');
 const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrowsers.js');
-
-// const testUserConfig = require('./test/end-to-end/config.js').config;
-// eslint-disable-next-line no-magic-numbers
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 50000;
-// eslint-disable-next-line no-magic-numbers
 const smartWait = parseInt(process.env.SMART_WAIT) || 50000;
 const browser = process.env.SAUCELABS_BROWSER || 'chrome';
 const defaultSauceOptions = {
@@ -16,6 +10,7 @@ const defaultSauceOptions = {
   acceptSslCerts: true,
   tags: ['Private Law'],
   maxDuration: 5000
+  commandTimeout: 600,
 };
 
 function merge(intoObject, fromObject) {
@@ -41,9 +36,22 @@ function getBrowserConfig(browserGroup) {
 
 const setupConfig = {
   tests: './test/end-to-end/tests/*.js',
-  // teardown: testUserConfig.teardown,
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
+    Puppeteer: {
+      // headless mode
+      show: process.env.SHOW_BROWSER_WINDOW || false,
+      // show: true,
+      url: 'http://localhost:3000',
+      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
+      waitForTimeout: 180000,
+      ignoreHTTPSErrors: true,
+      chrome: {
+        ignoreHTTPSErrors: true,
+        args: ['--no-sandbox']
+      },
+      windowSize: '1280x960'
+    },
     WebDriver: {
       url: process.env.TEST_URL,
       keepCookies: true,
@@ -67,6 +75,29 @@ const setupConfig = {
     retryFailedStep: {
       enabled: true,
       retries: 2
+      capabilities: {},
+    },
+    SauceLabsReportingHelper: {
+      require: './test/end-to-end/helpers/SauceLabsReportingHelper.js',
+    },
+    GeneralHelper: { 
+      require: './test/end-to-end/helpers/generalHelper.js',
+    },
+    PuppeteerHelpers: { 
+      require: './test/end-to-end/helpers/puppeterHelper.js',
+    },
+    GenerateReportHelper: { 
+      require: './test/end-to-end/helpers/generateReportHelper.js'
+    },
+    Mochawesome: {
+      uniqueScreenshotNames: true,
+    },
+  },
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+      retries: 2,
+      minTimeout: 2000
     },
     autoDelay: {
       enabled: true,
