@@ -26,6 +26,7 @@ const applicantsFamily = require('./pages/DOScreens/ApplicantsFamily');
 const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
+const caseList = require('./pages/CaseList');
 
 module.exports = () => {
   return actor({
@@ -46,6 +47,9 @@ module.exports = () => {
     },
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
+    },
+    createCaseAndReturnID() {
+      return CreateCasePage.createNewCaseC100andReturnID();
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
@@ -127,6 +131,18 @@ module.exports = () => {
     },
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
+    },
+    searchForCasesWithName(caseName) {
+      return caseList.searchForCasesWithName(caseName, 'Open');
+    },
+    navigateToCaseList() {
+      return caseList.navigate();
+    },
+    seeCaseInSearchResult(caseID) {
+      return caseList.seeCaseInSearchResult(caseID);
+    },
+    amOnHistoryPageWithSuccessNotification() {
+      return generalHelper.amOnHistoryPageWithSuccessNotification();
     }
   });
 };

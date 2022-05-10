@@ -34,7 +34,7 @@ module.exports = {
     occupationOrder: '#typeOfApplicationOrders_orderType-occupationOrder',
     ordersApplyingForPageHeader: 'Which order(s) are you applying for?',
     ordersApplyingForPageMandatoryText: 'Which order(s) are you applying for? is required',
-    linkToChildArrangementsApplicationHeader: 'Is this linked to Child Arrangements application? (Optional)',
+    linkToChildArrangementsApplicationHeader: 'Is this linked to a C100 application? (Optional)',
     linkedChildArrangementsApplicationYes: '#typeOfApplicationLinkToCA_linkToCaApplication_Yes',
     childArrangementOrderInstructionText: 'If you have also completed a Child Arrangements Order application enter the case number below.',
     childArrangementCaseNumberLabel: 'Child Arrangements Case Number (FamilyMan cases not supported) (Optional)',
@@ -96,12 +96,14 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.ordersApplyingForPageMandatoryText);
     await I.retry(retryCount).click(this.fields.nonMolestationOrder);
     await I.retry(retryCount).click(this.fields.occupationOrder);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
   async linkToChildArrangementsApplicationFL401() {
     await I.retry(retryCount).waitForText(this.fields.linkToChildArrangementsApplicationHeader);
     await I.retry(retryCount).click(this.fields.linkedChildArrangementsApplicationYes);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).waitForText(this.fields.childArrangementOrderInstructionText);
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
     // eslint-disable-next-line max-len
@@ -111,7 +113,7 @@ module.exports = {
 
   async checkYourAnswersPageFL401() {
     await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
-    await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
+    // await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Save and continue');
   },
 
