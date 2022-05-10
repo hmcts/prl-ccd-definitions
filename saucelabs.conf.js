@@ -9,7 +9,7 @@ const defaultSauceOptions = {
   tunnelIdentifier: process.env.TUNNEL_IDENTIFIER || 'reformtunnel',
   acceptSslCerts: true,
   tags: ['Private Law'],
-  maxDuration: 5000,
+  maxDuration: 5000
   commandTimeout: 600,
 };
 
