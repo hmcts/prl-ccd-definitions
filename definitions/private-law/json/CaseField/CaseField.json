@@ -24,6 +24,22 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturn",
+    "Label": "Case name",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskListReturnLabel",
+    "Label": "${taskListReturn}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseHistory",
@@ -2187,23 +2203,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "documentCategoryChecklist",
-    "Label": "Choose a document category",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "documentCategoryChecklistEnum",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "furtherEvidenceLabel",
-    "Label": "## Further evidence - further application document",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDeclaration",
@@ -2236,35 +2235,19 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "mainApplicationDocument",
-    "Label": "Documents",
-    "Min": "1",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "FurtherEvidence",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "17/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "giveDetails",
-    "Label": "*Give details",
-    "FieldType": "TextArea",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "correspondenceLabel",
-    "Label": "## Correspondence",
-    "FieldType": "Label",
+    "ID": "payAgreeStatement",
+    "Label": " ",
+    "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "Consent",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "payAgreeStatement",
+    "ID": "submitAgreeStatement",
     "Label": " ",
     "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
     "FieldType": "MultiSelectList",
@@ -2297,24 +2280,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "correspondence",
-    "Label": "Supporting documents",
-    "Min": "1",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "Correspondence",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "otherDocumentsLabel",
-    "Label": "## Other documents",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "feeAmount",
@@ -2329,16 +2294,6 @@
     "ID": "submitAndPayDownloadApplication",
     "Label": "### Download Application",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "otherDocuments",
-    "Label": "Supporting documents",
-    "Min": "1",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "OtherDocuments",
     "SecurityClassification": "Public"
   },
   {
@@ -2656,6 +2611,15 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dateAndTimeSubmitted",
+    "Label": "Date submitted",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
+  },
+  {
     "LiveFrom": "17/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submissionRequiredFieldsInfo1",
@@ -2817,6 +2781,23 @@
     "ID": "caseSolicitorOrgName",
     "Label": " ",
     "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitCountyCourtSelectionLabel",
+    "Label": "# Select the family court",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitCountyCourtSelection",
+    "Label": "Select the email address of the family court you want this application to go to",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "CountyCourtEmails",
     "SecurityClassification": "Public"
   }
 ]
