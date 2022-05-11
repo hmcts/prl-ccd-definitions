@@ -331,11 +331,12 @@
     "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/copy-manage-docs-for-tabs",
     "EndButtonLabel": "Save and continue"
   },
@@ -504,6 +505,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
@@ -520,7 +522,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
   },
   {
     "LiveFrom": "28/01/2022",
@@ -607,13 +609,14 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUE;GATE_KEEPING",
-    "PostConditionState": "*",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING",
+    "PostConditionState": "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
   },
   {
     "LiveFrom": "01/01/2017",
@@ -676,8 +679,7 @@
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "21/02/2022",
@@ -714,7 +716,6 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
-
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrders",
