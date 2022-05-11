@@ -92,11 +92,11 @@ module.exports = class PuppeteerHelpers extends Helper {
   }
 
   getHelper() {
-    return this.helpers['Puppeteer'] || this.helpers['WebDriver'];
+    return this.helpers.Puppeteer || this.helpers.WebDriver;
   }
 
-  isPuppeteer(){
-    return this.helpers['Puppeteer'];
+  isPuppeteer() {
+    return this.helpers.Puppeteer;
   }
 
   async runAccessibilityTest() {
@@ -104,12 +104,12 @@ module.exports = class PuppeteerHelpers extends Helper {
       return;
     }
 
-    let helper = this.getHelper();
-    if (helper === this.helpers['WebDriver']) {
+    const helper = this.getHelper();
+    if (helper === this.helpers.WebDriver) {
       await Promise.resolve();
     } else {
       const url = await helper.grabCurrentUrl();
-      const {page} = await helper;
+      const { page } = await helper;
       await runAccessibility(url, page);
     }
   }
