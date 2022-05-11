@@ -68,13 +68,13 @@ const setupConfig = {
     SauceLabsReportingHelper: {
       require: './test/end-to-end/helpers/SauceLabsReportingHelper.js',
     },
-    GeneralHelper: { 
+    GeneralHelper: {
       require: './test/end-to-end/helpers/generalHelper.js',
     },
-    PuppeteerHelpers: { 
+    PuppeteerHelpers: {
       require: './test/end-to-end/helpers/puppeterHelper.js',
     },
-    GenerateReportHelper: { 
+    GenerateReportHelper: {
       require: './test/end-to-end/helpers/generateReportHelper.js'
     },
     Mochawesome: {
