@@ -29,7 +29,7 @@
     "TabDisplayOrder": 1,
     "CaseFieldID": "summaryLabel",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]!=\"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE]!=\"AWAITING_RESUBMISSION_TO_HMCTS\""
+    "TabShowCondition": "[STATE]!=\"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE]!=\"AWAITING_RESUBMISSION_TO_HMCTS\""
   },
   {
     "LiveFrom": "08/11/2021",
@@ -101,6 +101,33 @@
     "CaseFieldID": "urgencyDetails",
     "TabFieldDisplayOrder": 9
   },
+
+
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "applicationTypeLabel",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "TabFieldDisplayOrder": 10
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "applicationTypeDetails",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "TabFieldDisplayOrder": 11
+  },
+
+
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -109,6 +136,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "allegationOfHarmLabel",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "TabFieldDisplayOrder": 10
   },
   {
@@ -119,6 +147,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "allegationOfHarm",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "TabFieldDisplayOrder": 11
   },
   {
@@ -149,7 +178,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "orderAppliedForLabel",
-    "FieldShowCondition": "ordersApplyingFor!=\"\"",
+    "FieldShowCondition": "ordersApplyingFor!=\"\"  AND caseTypeOfApplication=\"C100\"",
     "TabFieldDisplayOrder": 14
   },
   {
@@ -160,7 +189,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "summaryTabForOrderAppliedFor",
-    "FieldShowCondition": "ordersApplyingFor!=\"\"",
+    "FieldShowCondition": "ordersApplyingFor!=\"\" AND caseTypeOfApplication=\"C100\"",
     "TabFieldDisplayOrder": 15
   },
   {
@@ -181,7 +210,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "otherProceedingsForSummaryTab",
-    "FieldShowCondition": "existingProceedings!=\"\"",
+    "FieldShowCondition": "existingProceedings!=\"\" OR fl401OtherProceedingDetails !=\"\"",
     "TabFieldDisplayOrder": 17
   },
   {
@@ -213,5 +242,16 @@
     "TabDisplayOrder": 1,
     "CaseFieldID": "dateOfSubmission",
     "TabFieldDisplayOrder": 19
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "fl401OtherProceedingDetails",
+    "FieldShowCondition": "fl401OtherProceedingDetails =\"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 20
   }
 ]
