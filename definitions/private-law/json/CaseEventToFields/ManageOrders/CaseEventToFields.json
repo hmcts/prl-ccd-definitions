@@ -403,52 +403,9 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/fetch-child-details",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "manageOrderHeaderLabel5",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "checkYourOrder",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "checkYourOrderLabel",
-    "PageFieldDisplayOrder": 3,
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "previewOrderDoc",
-    "PageFieldDisplayOrder": 4,
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -465,7 +422,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "checkOrderRestrictionsLabel",
+    "CaseFieldID": "checkYourOrder",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 6,
@@ -476,11 +433,55 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "orderRecipientsLabel",
+    "CaseFieldID": "checkYourOrderLabel",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 6,
     "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "previewOrderDoc",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel7",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "checkOrderRestrictionsLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "orderRecipientsLabel",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -490,8 +491,8 @@
   "CaseFieldID": "orderRecipients",
   "PageFieldDisplayOrder": 4,
   "DisplayContext": "MANDATORY",
-  "PageID": 6,
-  "PageDisplayOrder": 6,
+  "PageID": 7,
+  "PageDisplayOrder": 7,
   "ShowSummaryChangeOption": "Y"
   },
   {
@@ -501,8 +502,8 @@
     "CaseFieldID": "otherOrderRecipients",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -512,8 +513,8 @@
     "CaseFieldID": "cafcassRecipient",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -523,8 +524,8 @@
     "CaseFieldID": "cafcassEmailAddress",
     "PageFieldDisplayOrder": 7,
     "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "cafcassRecipient=\"cafcass\""
   },
@@ -535,8 +536,8 @@
     "CaseFieldID": "otherRecipient",
     "PageFieldDisplayOrder": 8,
     "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -546,10 +547,21 @@
     "CaseFieldID": "otherEmailAddress",
     "PageFieldDisplayOrder": 9,
     "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
+    "PageID": 7,
+    "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "otherRecipient=\"other\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel5",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "5/05/2022",
@@ -571,6 +583,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -632,7 +645,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "respondentDataOfBirth",
+    "CaseFieldID": "respondentDateOfBirth",
     "PageFieldDisplayOrder": 12,
     "DisplayContext": "MANDATORY",
     "PageID": 5,
@@ -705,7 +718,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "courtDeclares2 CONTAINS \"Other1\""
+    "FieldShowCondition": "courtDeclares2 CONTAINS \"other1\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -739,7 +752,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"AllowApplicantToOccupy\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"allowApplicantToOccupy\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -751,7 +764,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"MustNotOccupyAddress\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"mustNotOccupyAddress\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -763,7 +776,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"MustNotOccupyAddress\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"mustNotOccupyAddress\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -775,7 +788,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"MustNotOccupyAddress\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"mustNotOccupyAddress\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -787,7 +800,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"ShallLeaveAddress\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"shallLeaveAddress\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -799,7 +812,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"ShallLeaveAddress\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"shallLeaveAddress\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -811,7 +824,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"ObstructHarassOrInterfere\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"obstructHarassOrInterfere\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -823,7 +836,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"ObstructHarassOrInterfere\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"obstructHarassOrInterfere\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -835,7 +848,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"Other2\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"other2\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -847,7 +860,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "theRespondent2 CONTAINS \"Other2\""
+    "FieldShowCondition": "theRespondent2 CONTAINS \"other2\""
   },
   {
     "LiveFrom": "31/03/2022",
