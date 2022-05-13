@@ -25,7 +25,7 @@ module.exports = () => {
       return caseList.navigate();
     },
     triggerEvent(eventName) {
-       return generalHelper.triggerEvent(eventName);
+      return generalHelper.triggerEvent(eventName);
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
