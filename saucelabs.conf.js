@@ -68,6 +68,19 @@ const setupConfig = {
       host: 'ondemand.eu-central-1.saucelabs.com',
       port: 80,
       region: 'eu',
+      capabilities: {}
+    },
+    SauceLabsReportingHelper: { require: './test/end-to-end/helpers/SauceLabsReportingHelper.js' },
+    Mochawesome: { uniqueScreenshotNames: true },
+    GeneralHelper: { require: './test/end-to-end/helpers/generalHelper.js' },
+    PuppeteerHelpers: { require: './test/end-to-end/helpers/puppeterHelper.js' },
+    GenerateReportHelper: { require: './test/end-to-end/helpers/generateReportHelper.js' }
+  },
+  plugins: {
+    // autoLogin: testUserConfig.AutoLogin,
+    retryFailedStep: {
+      enabled: true,
+      retries: 2
       capabilities: {},
     },
     SauceLabsReportingHelper: {
