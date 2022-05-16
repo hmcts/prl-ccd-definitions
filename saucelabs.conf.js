@@ -87,7 +87,7 @@ const setupConfig = {
     PuppeteerHelpers: {
       require: './test/end-to-end/helpers/puppeterHelper.js',
     },
-    GenerateReportHelper: { 
+    GenerateReportHelper: {
       require: './test/end-to-end/helpers/generateReportHelper.js'
     },
     Mochawesome: {
