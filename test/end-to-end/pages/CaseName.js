@@ -4,7 +4,7 @@ const retryCount = 3;
 
 module.exports = {
 
-  fields: { 
+  fields: {
     submit: 'button[type="submit"]',
     eventList: 'select[id="next-step"]',
   },
@@ -20,13 +20,13 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Updated Case Name');
     await I.retry(retryCount).click('Continue');
   },
-  
+
   async triggerEvent(eventName) {
     await I.retry(retryCount).waitForElement(this.fields.eventList);
     await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
     await I.retry(retryCount).click(this.fields.submit);
   },
-  
+
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
     await I.retry(retryCount).waitForElement('i.icon-tick');
