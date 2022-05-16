@@ -169,7 +169,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "checkYourOrderLabel",
-    "Label": "Preview your order to check the details are correct.\n\nYou can correct any orders in the next screen",
+    "Label": "Preview your order to check the details are correct.\n\nYou can correct any orders in the next screen.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -177,8 +177,8 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "previewOrderDoc",
-    "Label": "This is the order document, when docmosis template is ready",
     "FieldType": "Document",
+    "Label": " ",
     "SecurityClassification": "Public"
   },
   {
@@ -264,9 +264,25 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "childListForSpecialGuardianship",
+    "Label": "For which child?",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "selectedOrder",
     "Label": " ",
     "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrder1",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   },
   {
@@ -328,6 +344,14 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel7",
+    "Label": "${manageOrderHeader1}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "orderCollection",
     "Label": "Orders",
     "FieldType": "Collection",
@@ -339,6 +363,14 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "childDetailsManageOrderLabel",
     "Label": "## Who's included in the order?",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "appointedGuardianLabel",
+    "Label": "## Who is the appointed guardian?",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -482,6 +514,32 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "childOption",
     "Label": " ",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caffcassOfficeName",
+    "Label": "## Name of Cafcass office",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "appointedGuardianName",
+    "Label": "Guardian Full Name",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "appointedGuardianFullName",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassOfficeDetails",
+    "Label": "Add details",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   }
