@@ -8,6 +8,11 @@ const LONG_STRING = 150;
 
 function isFieldDuplicated(field) {
   return function isDuplicated(field1, field2) {
+    if (field1.CaseTypeID === field2.CaseTypeID
+      && field1[field] === field2[field]
+      && field1.UserRole === field2.UserRole) {
+      console.log(`Duplicated field: ${field1[field]}`);
+    }
     return field1.CaseTypeID === field2.CaseTypeID
             && field1[field] === field2[field]
             && field1.UserRole === field2.UserRole;
