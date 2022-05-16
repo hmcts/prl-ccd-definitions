@@ -417,7 +417,7 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "PageShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "PageShowCondition": "createSelectOrderOptions=\"specialGuardianShip\" OR createSelectOrderOptions=\"appointmentOfGuardian\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -429,7 +429,20 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/show-preview-order",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectedOrder1",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -437,21 +450,47 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "appointedGuardianName",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 3,
     "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "caffcassOfficeName",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "31/03/2022",
+    "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "childListForSpecialGuardianship",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassOfficeDetails",
+    "DisplayContext": "MANDATORY",
     "PageID": 5,
-    "PageDisplayOrder": 5
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
