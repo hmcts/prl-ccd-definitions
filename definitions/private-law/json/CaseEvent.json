@@ -53,7 +53,7 @@
     "Name": "Case name",
     "Description": "Case name",
     "DisplayOrder": 2,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -101,7 +101,7 @@
     "Name": "Without notice order",
     "Description": "Without Notice Order",
     "DisplayOrder": 4,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -164,7 +164,7 @@
     "Description": "Details of the Applicant’s family",
     "DisplayOrder": 8,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -260,7 +260,7 @@
     "Description": "Details of other preceedings",
     "DisplayOrder": 11,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -337,6 +337,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/copy-manage-docs-for-tabs",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -368,6 +369,22 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addCaseNote",
+    "Name": "Add a case note",
+    "Description": "Add a case note",
+    "DisplayOrder": 22,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header-case-note",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-case-note",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -412,7 +429,7 @@
     "ID": "respondentRelationship",
     "Name": "Relationship to respondent",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -452,7 +469,7 @@
     "Name": "Upload documents",
     "Description": "Upload documents",
     "DisplayOrder": 49,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -497,12 +514,14 @@
     "Name": "Add case number",
     "Description": "CTSC staff add family man number for the case.",
     "DisplayOrder": 13,
-    "PreConditionState(s)": "SUBMITTED_PAID",
+    "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUE",
     "PostConditionState": "CASE_ISSUE",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-add-case-number",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
@@ -519,7 +538,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
   },
   {
     "LiveFrom": "28/01/2022",
@@ -528,7 +547,7 @@
     "Name": "Respondent's behaviour",
     "Description": "Respondent's behaviour",
     "DisplayOrder": 103,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
@@ -544,7 +563,7 @@
     "Name": "Type of application",
     "Description": "Type of application",
     "DisplayOrder": 100,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -571,7 +590,7 @@
     "Description": "Home situation",
     "DisplayOrder": 8,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -612,7 +631,8 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
   },
   {
     "LiveFrom": "01/01/2017",
@@ -621,7 +641,7 @@
     "Name": "Send to gate keeper",
     "Description": "Send to gate keeper",
     "DisplayOrder": 16,
-    "PreConditionState(s)": "CASE_ISSUE",
+    "PreConditionState(s)": "CASE_ISSUE;AWAITING_RESUBMISSION_TO_HMCTS;SUBMITTED_PAID",
     "PostConditionState": "GATE_KEEPING",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -651,7 +671,7 @@
     "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 17,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -669,7 +689,7 @@
     "Name": "Amend court details",
     "Description": "Amend court details",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -702,7 +722,7 @@
     "Name": "Upload documents",
     "Description": "Upload documents",
     "DisplayOrder": 16,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -712,7 +732,6 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
-
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrders",
@@ -756,5 +775,20 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401resubmit",
+    "Name": "Statement of Truth and submit",
+    "Description": "Statement of Truth and submit",
+    "DisplayOrder": 22,
+    "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application"
   }
 ]
