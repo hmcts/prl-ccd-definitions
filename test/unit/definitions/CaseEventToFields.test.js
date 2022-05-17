@@ -5,6 +5,21 @@ const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataPr
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
   const errors = [];
+  const temp = [];
+    caseEventToFieldsFile.forEach(caseEventToFieldsEntry1 => {
+      let count = 0;
+      caseEventToFieldsFile.forEach(caseEventToFieldsEntry2 => {
+        if((caseEventToFieldsEntry1.CaseEventID == caseEventToFieldsEntry2.CaseEventID) && (caseEventToFieldsEntry1.CaseFieldID == caseEventToFieldsEntry2.CaseFieldID)){
+          count++
+        }
+        return caseEventToFieldsEntry2;
+      })
+      if(count>1){
+        temp.push(caseEventToFieldsEntry1)
+      }
+      return caseEventToFieldsEntry1;
+    });
+    console.log('*****Duplicates ****'+JSON.stringify(temp))
   caseEventToFieldsFile.forEach(caseEventToFieldsEntry => {
     try {
       expect(find(caseEventFile, ['ID', caseEventToFieldsEntry.CaseEventID])).to.be.an('object');
