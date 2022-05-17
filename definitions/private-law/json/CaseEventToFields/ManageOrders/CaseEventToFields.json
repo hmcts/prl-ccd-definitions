@@ -14,17 +14,6 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "childOption",
-    "PageFieldDisplayOrder": 15,
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "manageOrderHeader1=\"DO NOT DISPLAY\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
     "CaseFieldID": "manageOrdersOptions",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
@@ -189,7 +178,6 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -337,6 +325,7 @@
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
   },
+
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
@@ -609,6 +598,55 @@
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel5",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "appointedGuardianLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/show-preview-order",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "appointedGuardianName",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "childListForSpecialGuardianship",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
