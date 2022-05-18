@@ -42,5 +42,106 @@
     "PageID": "orderDetails",
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "checkIfRestrictionsLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "orderRecipientsLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "orderSentToSolicitorLabel",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "applicantsServiceOfApplication",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "otherPeopleServiceOfApplication",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "MANDATORY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "cafcassSupportOfficerEmail",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "otherSaEmailAddressOption",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "cafcassEmailAddress",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "cafcassSupportOfficerEmail=\"cafcass\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "otherEmailAddress",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "MANDATORY",
+    "PageID": "checkRestrictions",
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "otherSaEmailAddressOption=\"other\""
   }
 ]
