@@ -140,7 +140,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "dateNextHearingInput",
-    "Label": "Date of next hearing",
+    "Label": "Date and place of next hearing",
     "FieldType": "Date",
     "SecurityClassification": "Public"
   },
@@ -163,16 +163,16 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "courtNameHearingInput",
-    "Label": "Court name",
+    "ID": "courtNameIfDifferent",
+    "Label": "Court Name (if different from above)",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "courtAddressHearingInput",
-    "Label": "Court Address",
+    "ID": "courtAddressIfDifferent",
+    "Label": "Court Address (if different from above)",
     "FieldType": "AddressUK",
     "SecurityClassification": "Public"
   },
@@ -180,7 +180,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "costOfApplication",
-    "Label": "Costs of this application (optional)",
+    "Label": "Costs of this application",
     "FieldType": "TextArea",
     "SecurityClassification": "Public"
   },
@@ -196,9 +196,37 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "addMoreDetails",
+    "ID": "addMoreDetailsNotContact",
     "Label": "Add more details",
     "FieldType": "TextArea",
+    "HintText": "Must not telephone, text, email or otherwise contact or attempt to contact the applicant",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addMoreDetailsNotAttendProperty",
+    "Label": "Add more details",
+    "FieldType": "TextArea",
+    "HintText": "Must not go to, enter or attempt to enter the property",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addMoreDetailsNotContactChildren",
+    "Label": "Add more details",
+    "FieldType": "TextArea",
+    "HintText": "Must not telephone, text, email or otherwise contact or attempt to contact the relevant children",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addMoreDetailsNotAttendSchool",
+    "Label": "Add more details",
+    "FieldType": "TextArea",
+    "HintText": "Must not go to, enter or attempt to enter the school",
     "SecurityClassification": "Public"
   },
   {
