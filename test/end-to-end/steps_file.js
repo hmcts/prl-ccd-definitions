@@ -140,6 +140,9 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
+    },
+    amOnHistoryPageWithSuccessNotification() {
+      return generalHelper.amOnHistoryPageWithSuccessNotification();
     }
   });
 };
