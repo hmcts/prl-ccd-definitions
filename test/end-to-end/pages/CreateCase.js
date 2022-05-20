@@ -1,5 +1,8 @@
 const I = actor();
 const retryCount = 3;
+const normalizeCaseId = caseId => {
+  return caseId.toString().replace(/\D/g, '');
+};
 
 module.exports = {
 
@@ -13,8 +16,6 @@ module.exports = {
   async clickCreateCase() {
     I.wait('7');
     await I.waitForText('Create case');
-    I.wait('5');
-    await I.retry(retryCount).click('Accept analytics cookies');
     I.wait('7');
     await I.retry(retryCount).click('Create case');
   },
@@ -48,6 +49,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantCaseName');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.retry(retryCount).click('Continue');
   },
@@ -58,6 +60,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantOrRespondentCaseName');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
     await I.retry(retryCount).click('Continue');
   },
@@ -67,8 +70,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -76,7 +79,30 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
-    await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createNewCaseC100andReturnID() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit();
+    await this.selectTypeOfApplicationC100();
+    await this.fillSolicitorApplicationPageC100();
+    await this.submitEvent();
+    await this.amOnHistoryPageWithSuccessNotification();
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    return caseId;
+  },
+  
+  async submitEvent() {
+    I.wait('2');
+    await I.retry(retryCount).waitForElement('h2');
+    await I.retry(retryCount).see('Check your answers');
+    await I.retry(retryCount).click('Save and continue');
+  },
+  
+  async amOnHistoryPageWithSuccessNotification() {
+    await I.retry(retryCount).waitForText('History');
+    await I.retry(retryCount).waitForElement('i.icon-tick');
   }
 };
