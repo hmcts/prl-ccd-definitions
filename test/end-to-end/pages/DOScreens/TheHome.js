@@ -2,7 +2,11 @@ const I = actor();
 
 module.exports = {
 
-  fields: { submit: 'button[type="submit"]' },
+  fields: {
+    submit: 'button[type="submit"]',
+    lenderFindAddress: 'home_mortgages_address_address',
+    landlordAddress: 'home_landlords_address_address'
+  },
 
   async triggerEvent() {
     await I.triggerEvent('The home');
@@ -41,6 +45,8 @@ module.exports = {
     await I.fillField('#home_mortgages_textAreaSomethingElse', 'Text Area');
     await I.fillField('#home_mortgages_mortgageNumber', '4545');
     await I.fillField('#home_mortgages_mortgageLenderName', 'Lender Name');
+    // I.wait('2');
+    await I.selectPostCodeLookupAddress('home_mortgages_address_address', 'SE1 1LB');
     I.wait('2');
 
     /* Landlord Details */
@@ -50,6 +56,9 @@ module.exports = {
     await I.checkOption('#home_landlords_mortgageNamedAfterList-someoneElse');
     await I.fillField('#home_landlords_textAreaSomethingElse', 'Text Area');
     await I.fillField('#home_landlords_landlordName', 'Landlord Name');
+    // I.wait('5');
+    await I.selectPostCodeLookupAddress('home_landlords_address_address', 'B11LS');
+    // await I.click(this.fields.landlordFindAddressBtn);
     I.wait('2');
 
     await I.click('#home_doesApplicantHaveHomeRights_Yes');

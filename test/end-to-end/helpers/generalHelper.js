@@ -29,10 +29,11 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     const postcodeInputLocator = `//input[@id="${locator}_postcodeInput"]`;
     const addressListLocator = `select[id="${locator}_addressList"]`;
+    const findAddressBtn = `#${locator}_postcodeLookup > button`;
 
     await Puppeteer.waitForElement(postcodeInputLocator);
     await Puppeteer.fillField(postcodeInputLocator, postcode);
-    await Puppeteer.click('Find address');
+    await Puppeteer.click(findAddressBtn);
     await Puppeteer.waitForElement(addressListLocator);
     await Puppeteer.wait(searchResponseTime);
     await Puppeteer.selectOption(addressListLocator, '1: Object');
