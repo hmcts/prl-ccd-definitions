@@ -23,8 +23,8 @@ When trying to create a XLS file ends with error message mentioning a module can
 ```sh
 yarn run v1.22.5
 $ TARGET_ENV=aat CCD_DEF_COS_URL=$npm_package_config_aat_cosUrl CCD_DEF_CCD_URL=$npm_package_config_aat_ccdUrl yarn run generate-excel -e *-prod.json
-$ yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-${TARGET_ENV:-base}.xlsx -e '*-prod.json'
-$ node ./bin/json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-aat.xlsx -e '*-prod.json'
+$ yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx -e '*-prod.json'
+$ node ./bin/json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-aat.xlsx -e '*-prod.json'
 node:internal/modules/cjs/loader:927
   throw err;
   ^
