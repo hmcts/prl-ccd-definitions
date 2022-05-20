@@ -1,11 +1,11 @@
 [
   {
-  "CaseTypeID": "PRLAPPS",
-  "TabID": "ServiceRequestTab",
-  "TabLabel": "Service Request",
-  "TabDisplayOrder": 6,
-  "CaseFieldID": "ServiceRequest",
-  "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]=\"SUBMITTED\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\"",
-  "TabFieldDisplayOrder": 1
-}
+    "CaseTypeID": "PRLAPPS",
+    "TabID": "ServiceRequestTab",
+    "TabLabel": "Service Request",
+    "TabDisplayOrder": 6,
+    "CaseFieldID": "ServiceRequest",
+    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]=\"SUBMITTED_NOT_PAID\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\"",
+    "TabFieldDisplayOrder": 1
+  }
 ]
