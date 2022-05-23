@@ -28,6 +28,7 @@ module.exports = {
   },
 
   async amOnHistoryPageWithSuccessNotification() {
+    I.wait('3');
     await I.retry(retryCount).waitForText('History');
     await I.retry(retryCount).waitForElement('i.icon-tick');
   },
