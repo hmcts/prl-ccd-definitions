@@ -10,6 +10,7 @@ module.exports = {
     jurisdiction: 'select[id="cc-jurisdiction"]',
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
+    createCaseLink: '//a[contains(.,"Create case")]',
     submit: 'button[type="submit"]'
   },
 
@@ -17,7 +18,7 @@ module.exports = {
     I.wait('7');
     await I.waitForText('Create case');
     I.wait('7');
-    await I.retry(retryCount).click('Create case');
+    await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
