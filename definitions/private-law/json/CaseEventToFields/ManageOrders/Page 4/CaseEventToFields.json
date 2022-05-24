@@ -8,8 +8,7 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"createAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -31,6 +30,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -126,7 +126,6 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/fetch-child-details",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
   },
@@ -193,208 +192,6 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "childrenList",
-    "PageFieldDisplayOrder": 16,
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childDetailsManageOrderLabel",
-    "PageFieldDisplayOrder": 16,
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption1",
-    "PageFieldDisplayOrder": 17,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 1",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"0*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption2",
-    "PageFieldDisplayOrder": 18,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 2",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"01*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption3",
-    "PageFieldDisplayOrder": 19,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 3",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"012*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption4",
-    "PageFieldDisplayOrder": 20,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 4",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"0123*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption5",
-    "PageFieldDisplayOrder": 21,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 5",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"01234*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption6",
-    "PageFieldDisplayOrder": 22,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 6",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"012345*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption7",
-    "PageFieldDisplayOrder": 23,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 7",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"0123456*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption8",
-    "PageFieldDisplayOrder": 24,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 8",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"01234567*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption9",
-    "PageFieldDisplayOrder": 25,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 9",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"012345678*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption10",
-    "PageFieldDisplayOrder": 26,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 10",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"0123456789*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption11",
-    "PageFieldDisplayOrder": 27,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 11",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"012345678910*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption12",
-    "PageFieldDisplayOrder": 28,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 12",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"01234567891011*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption13",
-    "PageFieldDisplayOrder": 29,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 13",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"0123456789101112*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption14",
-    "PageFieldDisplayOrder": 30,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 14",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"012345678910111213*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childSelectorOption15",
-    "PageFieldDisplayOrder": 31,
-    "DisplayContext": "OPTIONAL",
-    "ElementLabel": "Child 15",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" AND childOption=\"01234567891011121314*\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
     "CaseFieldID": "recitalsOrPreamble",
     "PageFieldDisplayOrder": 32,
     "DisplayContext": "OPTIONAL",
@@ -450,16 +247,5 @@
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "childOption",
-    "PageFieldDisplayOrder": 37,
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "FieldShowCondition": "manageOrderHeader1=\"DO NOT DISPLAY\""
   }
 ]
