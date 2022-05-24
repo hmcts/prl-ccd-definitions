@@ -777,6 +777,21 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application"
   },
   {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serviceOfApplication",
+    "Name": "Service of Application",
+    "Description": "Event to serve the parties, once all the orders and hearing notices have been generated",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "GATE_KEEPING",
+    "PostConditionState": "CASE_HEARING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/service-of-application-start",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401resubmit",
