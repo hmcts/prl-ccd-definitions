@@ -10,12 +10,6 @@ describe('AuthorisationCaseField', () => {
   describe('should :', () => {
     it('contain a unique case field ID, case type ID and role (no duplicates)', () => {
       const uniqResult = uniqWith(AuthorisationCaseFieldData, isFieldDuplicated('CaseFieldID'));
-      const difference = AuthorisationCaseFieldData.filter(x => {
-        return uniqResult.indexOf(x) === -1;
-      });
-      // console.log("Extra fields *** "+JSON.stringify(temp));
-      console.log(`Extra fields temptemp length *** ${difference.length}`);
-      console.log(`Extra fields difference *** ${JSON.stringify(difference)}`);
       expect(uniqResult).to.eql(AuthorisationCaseFieldData);
     });
 
