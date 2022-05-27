@@ -28,9 +28,11 @@ module.exports = {
   },
 
   async amOnHistoryPageWithSuccessNotification() {
-    I.wait('3');
+    I.wait('5');
     await I.retry(retryCount).waitForText('History');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).waitForElement('i.icon-tick');
+    I.wait('5');
   },
 
   async runEventCaseName() {

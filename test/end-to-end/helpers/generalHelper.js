@@ -19,9 +19,13 @@ class GeneralHelper extends Helper {
   }
 
   async amOnHistoryPageWithSuccessNotification() {
+    const historyResponseTime = 6;
     const { Puppeteer } = this.helpers;
+    await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
+    console.log(await Puppeteer.grabTextFrom('div.alert-message'));
     await Puppeteer.waitForElement('i.icon-tick');
+    await Puppeteer.wait(historyResponseTime);
   }
 
   async selectFromList(list, value) {
@@ -50,13 +54,16 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Puppeteer } = this.helpers;
+    const saveResponseTime = 5;
     try {
       await Puppeteer.waitForText('Check your answers', '30');
       await Puppeteer.click('Save and continue');
+      await Puppeteer.wait(saveResponseTime);
     } catch {
       await Puppeteer.click('Continue');
       await Puppeteer.waitForText('Check your answers', '30');
       await Puppeteer.click('Save and continue');
+      await Puppeteer.wait(saveResponseTime);
     }
   }
 

@@ -19,9 +19,13 @@ class GeneralHelper extends Helper {
   }
 
   async amOnHistoryPageWithSuccessNotification() {
+    const historyResponseTime = 6;
     const { Puppeteer } = this.helpers;
+    await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
+    console.log(Puppeteer.grabTextFrom('div.hmcts-banner__message'));
     await Puppeteer.waitForElement('i.icon-tick');
+    await Puppeteer.wait(historyResponseTime);
   }
 
   async selectPostCodeLookupAddress(locator, postcode) {
@@ -40,9 +44,12 @@ class GeneralHelper extends Helper {
   }
 
   async submitEvent() {
+    const saveResponseTime = 5;
     const { Puppeteer } = this.helpers;
     await Puppeteer.waitForText('Check your answers', '30');
     await Puppeteer.click('Save and continue');
+    await Puppeteer.wait(saveResponseTime);
+
   }
 
   async triggerEvent(eventName) {

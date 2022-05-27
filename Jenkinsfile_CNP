@@ -41,6 +41,7 @@ withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
+  enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
 
   after('test') {
     // enable yarn audit and send message on master branch only
@@ -112,4 +113,11 @@ withPipeline("nodejs", product, component) {
   after('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
+
+  before('crossBrowserTest') {}
+
+  after('crossBrowserTest') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
+  }
+
 }
