@@ -48,16 +48,8 @@ withPipeline("nodejs", product, component) {
       yarnBuilder.yarn('audit')
     } catch (error) {
       onMaster {
-        slackSend(channel: '#prl-tech', color: 'warning', message: "Yarn Audit has detected vulnerabilities in ${env.JOB_NAME}. You can check if there are patches for them in the full report, build details here: <${env.RUN_DISPLAY_URL}|Build ${env.BUILD_DISPLAY_NAME}>.")
+        slackSend(channel: '#prl-tech-notifications', color: 'warning', message: "Yarn Audit has detected vulnerabilities in ${env.JOB_NAME}. You can check if there are patches for them in the full report, build details here: <${env.RUN_DISPLAY_URL}|Build ${env.BUILD_DISPLAY_NAME}>.")
       }
-    }
-  }
-
-  before('highleveldatasetup') {
-    yarnBuilder.yarn('setup')
-
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
     }
   }
 
@@ -67,8 +59,9 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
-    yarnBuilder.yarn('test:uploadFile')
+    sh """
+      ./gradlew highLevelDataSetup --args="PREVIEW"
+    """
   }
 
   after('smoketest:preview') {
