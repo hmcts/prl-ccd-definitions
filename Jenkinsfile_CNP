@@ -53,6 +53,17 @@ withPipeline("nodejs", product, component) {
     }
   }
 
+  before('highleveldatasetup:preview') {
+    yarnBuilder.yarn('setup')
+
+    stageWithAgent('Generate Family Private Law Case config', product) {
+      yarnBuilder.yarn('generate-excel-all')
+    }
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+  }
+
   before('highleveldatasetup') {
     yarnBuilder.yarn('setup')
 
