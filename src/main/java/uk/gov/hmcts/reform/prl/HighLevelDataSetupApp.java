@@ -68,10 +68,6 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
     @Override
     protected List<String> getAllDefinitionFilesToLoadAt(String definitionsPath) {
         String environmentName = environment.name().toLowerCase(Locale.UK);
-        if (CcdEnvironment.PREVIEW.name().equalsIgnoreCase(environmentName)) {
-            return List.of(String.format("definitions/private-law/xlsx/ccd-config-PRL-%s.xlsx", CcdEnvironment.AAT.name().toLowerCase()));
-        } else {
-            return List.of(String.format("definitions/private-law/xlsx/ccd-config-PRL-%s.xlsx", environmentName));
-        }
+        return List.of(String.format("definitions/private-law/xlsx/ccd-config-PRL-%s.xlsx", environmentName));
     }
 }
