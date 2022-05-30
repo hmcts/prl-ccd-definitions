@@ -572,7 +572,7 @@
     "ListElementCode": "fl404bAddSchool",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "56",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
   },
   {
@@ -957,7 +957,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "88",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -969,7 +969,7 @@
     "EventElementLabel": "Time",
     "FieldDisplayOrder": "89",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
