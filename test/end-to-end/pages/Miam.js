@@ -101,7 +101,8 @@ module.exports = {
 
   async fillMIAMEvidenceChildProtectionConcerns() {
     I.wait('3');
-    await I.retry(retryCount).waitForText('MIAM Evidence: What reason does the applicant have for child protection concerns?');
+    // Once included in screen will uncomment the below line
+    // await I.retry(retryCount).waitForText('MIAM Evidence: What reason does the applicant have for child protection concerns?');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_1');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_2');
     await I.retry(retryCount).click(this.fields.submit);
