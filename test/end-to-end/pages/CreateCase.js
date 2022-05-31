@@ -24,13 +24,13 @@ module.exports = {
   async fillFormAndSubmit() {
     I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
-    // await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    // I.wait('5');
-    // await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    // await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
-    await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
-    await I.selectFromList(this.fields.event, 'Solicitor application')
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
+    // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
+    // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
+    // await I.selectFromList(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
@@ -65,7 +65,7 @@ module.exports = {
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Test Case DA');
+    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Test Case 1 DA 31');
     await I.retry(retryCount).click('Continue');
   },
 
