@@ -23,9 +23,16 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
-    console.log(Puppeteer.grabTextFrom('div.hmcts-banner__message'));
+    console.log(await Puppeteer.grabTextFrom('div.alert-message'));
     await Puppeteer.waitForElement('i.icon-tick');
     await Puppeteer.wait(historyResponseTime);
+  }
+
+  async selectFromList(list, value) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.waitForElement(list);
+    await Puppeteer.wait('5');
+    await Puppeteer.selectOption(list, value);
   }
 
   async selectPostCodeLookupAddress(locator, postcode) {
