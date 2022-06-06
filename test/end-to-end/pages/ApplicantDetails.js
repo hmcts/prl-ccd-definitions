@@ -28,7 +28,6 @@ module.exports = {
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
     I.wait('2');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicants_0_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '10');
@@ -52,6 +51,7 @@ module.exports = {
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('1');
   },
 
   async fillApplicantsPageFL401() {
@@ -85,8 +85,6 @@ module.exports = {
     await this.fillApplicantsPage();
     await I.submitEvent();
     await I.wait('3');
-    await I.runAccessibilityTest();
-    console.log(await I.grabTextFrom('div.alert-message'));
     await I.amOnHistoryPageWithSuccessNotification();
   },
 
