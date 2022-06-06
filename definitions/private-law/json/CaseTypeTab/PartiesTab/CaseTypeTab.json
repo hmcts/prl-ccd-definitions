@@ -18,7 +18,7 @@
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
     "CaseFieldID": "partiesTabLabel",
-    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]!=\"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE]!=\"AWAITING_RESUBMISSION_TO_HMCTS\"",
+    "TabShowCondition": "caseTypeOfApplication=\"C100\" AND [STATE]=\"SUBMITTED\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\"",
     "TabFieldDisplayOrder": 1
   },
   {

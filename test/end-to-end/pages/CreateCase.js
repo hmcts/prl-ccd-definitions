@@ -93,14 +93,14 @@ module.exports = {
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     return caseId;
   },
-
+  
   async submitEvent() {
     I.wait('2');
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
   },
-
+  
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
     await I.retry(retryCount).waitForElement('i.icon-tick');
