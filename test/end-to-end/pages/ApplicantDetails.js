@@ -84,6 +84,9 @@ module.exports = {
     await this.triggerEvent();
     await this.fillApplicantsPage();
     await I.submitEvent();
+    await I.wait('3');
+    await I.runAccessibilityTest();
+    console.log(await I.grabTextFrom('div.alert-message'));
     await I.amOnHistoryPageWithSuccessNotification();
   },
 
