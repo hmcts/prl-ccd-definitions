@@ -50,6 +50,8 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicants_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
+    await I.runAccessibilityTest();
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('1');
   },
@@ -58,10 +60,11 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="applicantsFL401_firstName"]', 'Applicant Firstname');
     I.wait('2');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicantsFL401_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '21');
+    await I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '12');
+    await I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '2000');
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_gender-male"]');
     await I.selectPostCodeLookupAddress(this.fields.applicantAddressFL401, 'B11LS');
@@ -77,6 +80,8 @@ module.exports = {
     await I.retry(retryCount).fillField('#applicantsFL401_solicitorTelephone', '0204344643');
     await this.searchAndSelectGivenRegisteredOrganisation();
     I.wait('2');
+    await I.runAccessibilityTest();
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
   },
 
