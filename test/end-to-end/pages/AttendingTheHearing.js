@@ -30,8 +30,6 @@ module.exports = {
 
   async attendingTheHearing() {
     await I.retry(retryCount).waitForPage('h1', 'Attending the hearing');
-    await I.runAccessibilityTest();
-
     await I.retry(retryCount).click(this.fields.isWelshNeeded);
     await I.retry(retryCount).see('Welsh needs');
     await I.retry(retryCount).click('#welshNeeds > div > button');
