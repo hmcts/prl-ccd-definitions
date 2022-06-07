@@ -19,9 +19,20 @@ class GeneralHelper extends Helper {
   }
 
   async amOnHistoryPageWithSuccessNotification() {
+    const historyResponseTime = 6;
     const { Puppeteer } = this.helpers;
+    await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
+    console.log(await Puppeteer.grabTextFrom('div.alert-message'));
     await Puppeteer.waitForElement('i.icon-tick');
+    await Puppeteer.wait(historyResponseTime);
+  }
+
+  async selectFromList(list, value) {
+    const { Puppeteer } = this.helpers;
+    await Puppeteer.waitForElement(list);
+    await Puppeteer.wait('5');
+    await Puppeteer.selectOption(list, value);
   }
 
   async selectPostCodeLookupAddress(locator, postcode) {
@@ -29,10 +40,13 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     const postcodeInputLocator = `//input[@id="${locator}_postcodeInput"]`;
     const addressListLocator = `select[id="${locator}_addressList"]`;
+    const findAddressBtn = `#${locator}_postcodeLookup > button`;
 
+    await Puppeteer.wait(searchResponseTime);
     await Puppeteer.waitForElement(postcodeInputLocator);
     await Puppeteer.fillField(postcodeInputLocator, postcode);
-    await Puppeteer.click('Find address');
+    await Puppeteer.click(findAddressBtn);
+    await Puppeteer.wait(searchResponseTime);
     await Puppeteer.waitForElement(addressListLocator);
     await Puppeteer.wait(searchResponseTime);
     await Puppeteer.selectOption(addressListLocator, '1: Object');
@@ -40,13 +54,16 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Puppeteer } = this.helpers;
+    const saveResponseTime = 5;
     try {
       await Puppeteer.waitForText('Check your answers', '30');
       await Puppeteer.click('Save and continue');
+      await Puppeteer.wait(saveResponseTime);
     } catch {
       await Puppeteer.click('Continue');
       await Puppeteer.waitForText('Check your answers', '30');
       await Puppeteer.click('Save and continue');
+      await Puppeteer.wait(saveResponseTime);
     }
   }
 
