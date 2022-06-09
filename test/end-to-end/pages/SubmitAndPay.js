@@ -30,6 +30,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     I.wait('2');
     await I.retry(retryCount).click('Pay now');
+    I.wait('5');
   },
 
   async submitAndPay() {
