@@ -19,7 +19,6 @@ module.exports = {
   async  hearingUrgency() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.appUrgentInput);
     await I.retry(retryCount).waitForEnabled(this.fields.caseUrgencyTimeAndReason);
     await I.retry(retryCount).fillField(this.fields.caseUrgencyTimeAndReason, this.fields.textareaText);

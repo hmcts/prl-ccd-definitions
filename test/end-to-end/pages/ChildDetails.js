@@ -14,9 +14,11 @@ module.exports = {
 
   async addNewChild2() {
     await I.retry(retryCount).click('Add new');
+    await I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="children_1_firstName"]', 'Test Firstname2');
     await I.retry(retryCount).fillField('//input[@id="children_1_lastName"]', 'Test Lastname2');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-day"])[2]', '22');
+    await I.wait('1');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-month"])[2]', '11');
     await I.wait('1');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-year"])[2]', '2005');
@@ -31,10 +33,10 @@ module.exports = {
   async fillChildrenPage() {
     await I.waitForElement('#children');
     await I.retry(retryCount).click('Add new');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="children_0_firstName"]', 'Test Firstname');
     await I.retry(retryCount).fillField('//input[@id="children_0_lastName"]', 'Test Lastname');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-day"])[1]', '11');
+    await I.wait('1');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-month"])[1]', '11');
     await I.wait('1');
     await I.retry(retryCount).fillField('(//input[@id="dateOfBirth-year"])[1]', '2005');

@@ -33,7 +33,6 @@ module.exports = {
     await I.retry(retryCount).wait('2');
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).see('Are these previous or ongoing proceedings? (Optional)');
-    await I.runAccessibilityTest();
     I.wait('3');
     await I.retry(retryCount).click(this.fields.existingProceedings_0_PreviousOrOngoingProceedings);
     await I.retry(retryCount).fillField(this.fields.existingProceedings_0_CaseNumber, '123456789');
