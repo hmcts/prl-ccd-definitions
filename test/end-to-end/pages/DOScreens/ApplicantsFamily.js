@@ -22,13 +22,6 @@ module.exports = {
     await I.fillField('#applicantChildDetails_0_applicantChildRelationship', 'Mother');
     await I.click('#applicantChildDetails_0_applicantRespondentShareParental_Yes');
     await I.fillField('#applicantChildDetails_0_respondentChildRelationship', 'Father');
-
-    await I.click('Add new');
-    I.wait('2');
-    await I.fillField('#applicantChildDetails_1_fullName', 'Child Name2');
-    await I.fillField('#applicantChildDetails_1_applicantChildRelationship', 'Mother');
-    await I.click('#applicantChildDetails_1_applicantRespondentShareParental_Yes');
-    await I.fillField('#applicantChildDetails_1_respondentChildRelationship', 'Father');
     await I.click('Continue');
   },
 
