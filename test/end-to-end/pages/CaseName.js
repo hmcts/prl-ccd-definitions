@@ -6,13 +6,13 @@ module.exports = {
 
   fields: {
     submit: 'button[type="submit"]',
-    eventList: 'select[id="next-step"]',
+    eventList: 'select[id="next-step"]'
   },
 
-// Clean the code below once cross browser Helper issue is resolved
-//   async triggerEvent() {
-//     await I.retry(retryCount).triggerEvent('Case name');
-//   },
+  // Clean the code below once cross browser Helper issue is resolved
+  //   async triggerEvent() {
+  //     await I.retry(retryCount).triggerEvent('Case name');
+  //   },
 
   async changeCaseName() {
     await I.retry(retryCount).waitForText('Case Name');
