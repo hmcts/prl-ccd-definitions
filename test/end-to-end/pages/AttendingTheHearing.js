@@ -30,8 +30,6 @@ module.exports = {
 
   async attendingTheHearing() {
     await I.retry(retryCount).waitForPage('h1', 'Attending the hearing');
-    await I.runAccessibilityTest();
-
     await I.retry(retryCount).click(this.fields.isWelshNeeded);
     await I.retry(retryCount).see('Welsh needs');
     await I.retry(retryCount).click('#welshNeeds > div > button');
@@ -54,12 +52,14 @@ module.exports = {
     await I.retry(retryCount).wait('1');
     await I.retry(retryCount).click(this.fields.isDisabilityPresent);
     await I.retry(retryCount).wait('1');
-    await I.retry(retryCount).see('Describe the adjustments that the court needs to make.');
+    // Needs to uncomment the below line once description added back in screen
+    // await I.retry(retryCount).see('Describe the adjustments that the court needs to make.');
     await I.retry(retryCount).fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
 
     await I.retry(retryCount).click(this.fields.isSpecialArrangementsRequired);
     await I.retry(retryCount).wait('1');
-    await I.retry(retryCount).see('Give details of the special arrangements that are required.');
+    // Needs to uncomment the below line once description added back in screen
+    // await I.retry(retryCount).see('Give details of the special arrangements that are required.');
     await I.retry(retryCount).fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
 
     await I.retry(retryCount).click(this.fields.isIntermediaryNeeded);
