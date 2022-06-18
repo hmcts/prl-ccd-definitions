@@ -601,5 +601,52 @@
     "PageDisplayOrder": 26,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "otherRecipient=\"other\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel8",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
+    "PageShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions=\"parentalResponsibility\""
+
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectedOrder2",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "parentalResponsibility",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "parentName",
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
   }
 ]
