@@ -539,7 +539,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"DisApproved\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\""
   },
   {
     "LiveFrom": "28/01/2022",
@@ -626,14 +626,14 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING;CASE_ISSUE",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\""
   },
   {
     "LiveFrom": "01/01/2017",
