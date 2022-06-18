@@ -10,6 +10,7 @@ module.exports = {
     jurisdiction: 'select[id="cc-jurisdiction"]',
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
+    createCaseLink: '//a[contains(.,"Create case")]',
     submit: 'button[type="submit"]'
   },
 
@@ -17,7 +18,7 @@ module.exports = {
     I.wait('7');
     await I.waitForText('Create case');
     I.wait('7');
-    await I.retry(retryCount).click('Create case');
+    await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
@@ -27,6 +28,9 @@ module.exports = {
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
+    // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
+    // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
+    // await I.selectFromList(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
@@ -50,7 +54,7 @@ module.exports = {
 
     await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
+    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Case C100');
     await I.retry(retryCount).click('Continue');
   },
 
@@ -61,7 +65,7 @@ module.exports = {
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Applicant & Respondent');
+    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Test Case 1 DA 31');
     await I.retry(retryCount).click('Continue');
   },
 

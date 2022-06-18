@@ -38,7 +38,7 @@ module.exports = {
 
     await I.retry(retryCount).waitForText('Correspondence');
     await I.retry(retryCount).click('Add new');
-    I.wait('1');
+    I.wait('3');
     await I.retry(retryCount).waitForElement('#correspondence_0_documentName');
     await I.retry(retryCount).fillField('#correspondence_0_documentName', 'DocumentName');
     await I.retry(retryCount).fillField('#correspondence_0_notes', 'Text Area');
