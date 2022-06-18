@@ -10,7 +10,6 @@ function createAssertExists(type) {
         expect(find(allDefinedRowsForEnv, ['ID', authDefinition[`Case${type}ID`]]))
           .to.be.an('object');
       } catch (error) {
-        console.log(`Case field missing: ${authDefinition[`Case${type}ID`]}`);
         errors.push(`\n${type} ${authDefinition[type]} is not defined`);
       }
     });

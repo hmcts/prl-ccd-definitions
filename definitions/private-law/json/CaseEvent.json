@@ -331,7 +331,7 @@
     "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -539,7 +539,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\""
   },
   {
     "LiveFrom": "28/01/2022",
@@ -626,14 +626,14 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING",
-    "PostConditionState": "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;*",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING;CASE_ISSUE",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\""
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\""
   },
   {
     "LiveFrom": "01/01/2017",
@@ -696,7 +696,8 @@
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "21/02/2022",
@@ -742,8 +743,8 @@
     "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/save-order-details",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-order-email-notification",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/manage-orders/about-to-submit",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
