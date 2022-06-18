@@ -31,6 +31,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.retry(retryCount).checkOption(this.fields.orderWithoutNoticeSelectYes);
     await I.click(this.fields.submit);
+    I.wait('3');
     await I.retry(retryCount).checkOption(this.fields.harmToApplicantOrChild);
     await I.retry(retryCount).checkOption(this.fields.deferringApplicationIfNotImmediate);
     await I.retry(retryCount).checkOption(this.fields.reasonForOrderWithoutGivingNotice);

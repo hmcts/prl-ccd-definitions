@@ -106,7 +106,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
@@ -153,7 +153,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -331,7 +331,7 @@
     "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -351,6 +351,7 @@
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/getSolicitorAndFeeDetails",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/create-payment-service-request",
     "EndButtonLabel": "Pay now",
     "ShowSummary": "N",
@@ -434,7 +435,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
@@ -550,7 +551,7 @@
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
@@ -568,7 +569,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
@@ -594,7 +595,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
@@ -625,8 +626,8 @@
     "Name": "Withdraw application",
     "Description": "Withdraw application",
     "DisplayOrder": 104,
-    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;GATE_KEEPING",
-    "PostConditionState": "CASE_WITHDRAWN(withDrawApplicationData.withDrawApplication=\"Yes\"):1;*",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUE;GATE_KEEPING",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-withdrawn-email-notification",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -695,7 +696,8 @@
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "21/02/2022",
@@ -741,7 +743,8 @@
     "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/save-order-details",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-order-email-notification",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/manage-orders/about-to-submit",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
