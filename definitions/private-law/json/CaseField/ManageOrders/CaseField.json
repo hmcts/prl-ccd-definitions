@@ -160,6 +160,32 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "transferCase",
+    "Label": "## Transfer case to another court",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "reasonsForTransfer",
+    "Label": "Reason for transfer",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "TransferReasonEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseTransferOptions",
+    "Label": " ",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "CaseTransferOptionsEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "checkYourOrder",
     "Label": "## Check your order",
     "FieldType": "Label",
@@ -352,7 +378,23 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "manageOrderHeaderLabel7",
+    "ID": "manageOrderHeaderLabel8",
+    "Label": "${manageOrderHeader1}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel9",
+    "Label": "${manageOrderHeader1}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel6",
     "Label": "${manageOrderHeader1}",
     "FieldType": "Label",
     "SecurityClassification": "Public"
@@ -908,6 +950,22 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "appointedGuardianFullName",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderLabel1",
+    "Label": "### ${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl404CustomFields",
+    "Label": " ",
+    "FieldType": "FL400",
     "SecurityClassification": "Public"
   },
   {
