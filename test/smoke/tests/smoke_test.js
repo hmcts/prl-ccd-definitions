@@ -5,7 +5,7 @@ Scenario('Sign in as local authority and create a case', async I => {
   const caseId = await I.createCaseAndReturnID();
   I.navigateToCaseList();
   I.grabCurrentUrl();
-  I.searchForCasesWithName('Test Child');
+  I.searchForCasesWithName('Test Child',caseId);
   I.grabCurrentUrl();
   I.waitForElement(`//ccd-search-result/table/tbody//tr//td//a[contains(@href,'/cases/case-details/${caseId}')]`);
   I.grabCurrentUrl();
