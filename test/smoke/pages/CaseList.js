@@ -11,12 +11,11 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: 'CCD Case Number',
+    caseId: 'CCD Number',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
     spinner: 'xuilib-loading-spinner'
-    caseNumber: 'CCD number'
   },
 
   navigate() {
@@ -51,7 +50,6 @@ module.exports = {
     I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     I.selectOption(this.fields.caseState, state);
-    I.selectOption(this.fields.caseNumber , caseId);
   },
 
   locateCase(caseId) {
