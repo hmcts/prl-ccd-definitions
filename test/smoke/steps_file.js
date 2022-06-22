@@ -18,8 +18,8 @@ module.exports = () => {
     createCaseAndReturnID() {
       return CreateCasePage.createNewCaseC100andReturnID();
     },
-    searchForCasesWithName(caseName) {
-      return caseList.searchForCasesWithName(caseName, 'Open');
+    searchForCasesWithId(caseId) {
+      return caseList.searchForCasesWithId(caseId, 'Any');
     },
     navigateToCaseList() {
       return caseList.navigate();
