@@ -36,14 +36,14 @@ module.exports = {
     I.grabCurrentUrl();
   },
 
-  searchForCasesWithName(caseName, state = 'Any',caseId) {
-    this.setInitialSearchFields(state,caseId);
+  searchForCasesWithName(caseName, state = 'Any') {
+    this.setInitialSearchFields(state);
     // wait for our filters to load
     I.fillField(this.fields.caseName, caseName);
     I.click(this.fields.search);
   },
 
-  setInitialSearchFields(state = 'Any',caseId) {
+  setInitialSearchFields(state = 'Any') {
     // wait for initial filters to load
     // eslint-disable-next-line no-magic-numbers
     I.waitForVisible(this.fields.jurisdiction, 30);
