@@ -11,7 +11,7 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: '#[CASE_REFERENCE]',
+    caseId: '//*[@id="[CASE_REFERENCE]"]',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
