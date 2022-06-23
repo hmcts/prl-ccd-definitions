@@ -11,7 +11,7 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: 'CCD Case Number',
+    caseId: '//*[@id="[CASE_REFERENCE]"]',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
@@ -29,11 +29,8 @@ module.exports = {
 
   searchForCasesWithId(caseId, state = 'Any') {
     this.setInitialSearchFields(state);
-    I.grabCurrentUrl();
     I.fillField(this.fields.caseId, caseId);
-    I.grabCurrentUrl();
     I.click(this.fields.search);
-    I.grabCurrentUrl();
   },
 
   searchForCasesWithName(caseName, state = 'Any') {
