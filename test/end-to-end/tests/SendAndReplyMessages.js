@@ -12,6 +12,7 @@ Scenario('Create a Case as a Solicitor, Send and Reply to Messages via Case Even
   await I.runRelationshipToRespondent();
   await I.runRespondentBehaviour();
   await I.runTheHomeHappyPath();
+  await I.statementOfTruth();
   I.wait('200');
   await I.signOut();
   await I.loginAsCourtAdminUserOne();
