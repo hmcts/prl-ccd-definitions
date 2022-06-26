@@ -73,6 +73,11 @@ class GeneralHelper extends Helper {
     await Puppeteer.selectOption(fields.eventList, eventName);
     await Puppeteer.click(fields.submit);
   }
+  
+  async getCurrentUrl() {
+    const helper = this.helpers['Puppeteer'];
+    return helper.page.url();
+  }
 
   async waitForPage(header, headerText) {
     const { Puppeteer } = this.helpers;
