@@ -27,6 +27,7 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const SendAndReplyMessages = require('./pages/SendAndReplyMessages');
 
 module.exports = () => {
   return actor({
@@ -149,6 +150,9 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    sendMessage() {
+      return SendAndReplyMessages.sendMessage();
     }
   });
 };
