@@ -32,7 +32,7 @@ module.exports = {
   
     async loginAsCourtAdminUserOne() {
       
-    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+//     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
 //       await I.retry(retryCount).click('#cookie-accept-submit');
 //       await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
