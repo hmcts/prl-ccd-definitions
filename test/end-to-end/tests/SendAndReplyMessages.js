@@ -6,6 +6,7 @@ Scenario('Create a Case as a Solicitor, Send and Reply to Messages via Case Even
   let createdCaseUrl = await I.getCurrentPageUrl();
   await I.signOut();
   await I.loginAsCourtAdminUserOne();
+  I.wait('2');
   await I.amOnPage(createdCaseUrl);
   await I.sendMessage();
 
