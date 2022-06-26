@@ -14,6 +14,7 @@ module.exports = {
   
   async completeSoTPage() {
 //     await I.waitForText('Statement of Truth and submit');
+    I.wait('2');
     await I.click('#fl401StmtOfTruth_applicantConsent-fl401Consent');
     await I.retry(retryCount).fillField('#dateOfBirth-day', '10');
     await I.retry(retryCount).fillField('#dateOfBirth-month', '10');
