@@ -8,7 +8,7 @@
     "TabDisplayOrder": 3,
     "CaseFieldID": "submitAndPayDownloadApplicationLink",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "[STATE]=\"SUBMITTED\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\""
+    "TabShowCondition": "[STATE]=\"SUBMITTED_NOT_PAID\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\""
   },
   {
     "LiveFrom": "10/08/2021",
@@ -147,7 +147,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "c8Document",
+    "CaseFieldID": "c1ADocument",
     "TabFieldDisplayOrder":15
   },
   {
@@ -157,7 +157,7 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "c8WelshDocument",
+    "CaseFieldID": "c1AWelshDocument",
     "TabFieldDisplayOrder":16
   },
   {
@@ -167,28 +167,8 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
-    "CaseFieldID": "c1ADocument",
-    "TabFieldDisplayOrder":17
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
-    "CaseFieldID": "c1AWelshDocument",
-    "TabFieldDisplayOrder":18
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
     "CaseFieldID": "existingProceedings",
-    "TabFieldDisplayOrder": 19,
+    "TabFieldDisplayOrder": 17,
     "DisplayContextParameter": "#TABLE(uploadRelevantOrder)"
   },
   {
@@ -199,7 +179,7 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "scannedDocuments",
-    "TabFieldDisplayOrder": 20
+    "TabFieldDisplayOrder": 18
   },
   {
     "LiveFrom": "10/08/2021",
@@ -209,7 +189,7 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "finalDocument",
-    "TabFieldDisplayOrder":21
+    "TabFieldDisplayOrder":19
   },
   {
     "LiveFrom": "10/08/2021",
@@ -219,6 +199,48 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "finalWelshDocument",
-    "TabFieldDisplayOrder":22
+    "TabFieldDisplayOrder":20
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "c8Document",
+    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
+    "TabFieldDisplayOrder": 21
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "c8WelshDocument",
+    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
+    "TabFieldDisplayOrder": 22
+  },
+  {
+  "LiveFrom": "10/08/2021",
+  "CaseTypeID": "PRLAPPS",
+  "Channel": "CaseWorker",
+  "TabID": "documents",
+  "TabLabel": "Case documents",
+  "TabDisplayOrder": 3,
+  "CaseFieldID": "fl401UploadWitnessDocuments",
+  "TabFieldDisplayOrder":23
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "fl401UploadSupportDocuments",
+    "TabFieldDisplayOrder":24
   }
 ]

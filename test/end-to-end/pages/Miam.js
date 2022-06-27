@@ -52,7 +52,6 @@ module.exports = {
 
   async fillMIAMEvidenceDomesticViolence() {
     await I.retry(retryCount).waitForText('MIAM Evidence : What evidence of domestic violence or abuse does the applicant have ?');
-    await I.runAccessibilityTest();
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_22');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_21');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_20');
@@ -100,7 +99,9 @@ module.exports = {
   },
 
   async fillMIAMEvidenceChildProtectionConcerns() {
-    await I.retry(retryCount).waitForText('MIAM Evidence: What reason does the applicant have for child protection concerns?');
+    I.wait('3');
+    // Once included in screen will uncomment the below line
+    // await I.retry(retryCount).waitForText('MIAM Evidence: What reason does the applicant have for child protection concerns?');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_1');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_2');
     await I.retry(retryCount).click(this.fields.submit);
