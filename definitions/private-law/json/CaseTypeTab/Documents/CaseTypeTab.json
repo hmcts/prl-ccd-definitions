@@ -251,7 +251,7 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "c8DraftDocument",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
+    "FieldShowCondition": "caseTypeOfApplication =\"C100\"",
     "TabFieldDisplayOrder": 25
   },
   {
@@ -262,18 +262,7 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "c8WelshDraftDocument",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
-    "TabFieldDisplayOrder": 25
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
-    "CaseFieldID": "c1ADraftDocument",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
+    "FieldShowCondition": "caseTypeOfApplication =\"C100\"",
     "TabFieldDisplayOrder": 26
   },
   {
@@ -283,8 +272,19 @@
     "TabID": "documents",
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
+    "CaseFieldID": "c1ADraftDocument",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "TabFieldDisplayOrder": 7
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
     "CaseFieldID": "c1AWelshDraftDocument",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
-    "TabFieldDisplayOrder": 27
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "TabFieldDisplayOrder": 28
   }
 ]
