@@ -15,7 +15,7 @@ module.exports = {
   async completeSoTPage() {
 //     await I.waitForText('Statement of Truth and submit');
     I.wait('2');
-    await I.click('#fl401StmtOfTruth_applicantConsent-fl401Consent');
+    await I.retry(retryCount).click('#fl401StmtOfTruth_applicantConsent-fl401Consent');
     await I.retry(retryCount).fillField('#dateOfBirth-day', '10');
     await I.retry(retryCount).fillField('#dateOfBirth-month', '10');
     await I.retry(retryCount).fillField('#dateOfBirth-year', '2010');
@@ -24,12 +24,11 @@ module.exports = {
     await I.fillField('#fl401StmtOfTruth_signOnBehalf', 'Test OnBehalfName');
     await I.click('Continue');
     I.wait('2');
-    await I.click('#fl401ConfidentialityCheck_confidentialityConsent-fl401ConfidentialConsent');
+    await I.retry(retryCount).click('#fl401ConfidentialityCheck_confidentialityConsent-fl401ConfidentialConsent');
     await I.click('Continue');
     I.wait('2');
     await I.retry(retryCount).selectOption(this.fields.countyCourt, 'family.swansea.countycourt@justice.gov.uk');
     await I.click('Continue');
-    
     I.wait('3');
     await I.click(this.fields.submit);
   },
