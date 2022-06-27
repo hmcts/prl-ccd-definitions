@@ -10,7 +10,7 @@ module.exports = {
   },
   
    async triggerEvent() {
-    await I.triggerEvent('Statement of truth and submit');
+    await I.triggerEvent('Statement of Truth and submit');
   },
   
   async completeSoTPage() {
