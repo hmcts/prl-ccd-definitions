@@ -17,9 +17,9 @@ module.exports = {
 //     await I.waitForText('Statement of Truth and submit');
     I.wait('2');
     await I.retry(retryCount).click('#fl401StmtOfTruth_applicantConsent-fl401Consent');
-    await I.retry(retryCount).fillField('#dateOfBirth-day', '10');
-    await I.retry(retryCount).fillField('#dateOfBirth-month', '10');
-    await I.retry(retryCount).fillField('#dateOfBirth-year', '2010');
+    await I.retry(retryCount).fillField('#date-day', '10');
+    await I.retry(retryCount).fillField('#date-month', '10');
+    await I.retry(retryCount).fillField('#date-year', '2010');
     await I.fillField('#fl401StmtOfTruth_fullname', 'Test Name');
     await I.fillField('#fl401StmtOfTruth_nameOfFirm', 'Test Firm');
     await I.fillField('#fl401StmtOfTruth_signOnBehalf', 'Test OnBehalfName');
