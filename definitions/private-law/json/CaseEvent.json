@@ -384,6 +384,22 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "amendLitigationCapacity",
+    "Name": "Litigation capacity",
+    "Description": "Litigation capacity",
+    "DisplayOrder": 14,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "welshLanguageRequirements",
     "Name": "Welsh language requirements",
     "Description": "Welsh language requirements",
