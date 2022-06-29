@@ -3,7 +3,8 @@ Feature('C100 Court Admin Journey');
 Scenario('Create a Case as a Solicitor, and continue with C100 Case Events as CourtAdmin User', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
-  let createdCaseUrl = await I.getCurrentPageUrl();
+  // Enable below steps once Submit and Pay works on PR
+  //let createdCaseUrl = await I.getCurrentPageUrl();
   await I.typeOfApplicationEventC100();
   await I.hearingUrgency();
   await I.applicantDetailsC100();
