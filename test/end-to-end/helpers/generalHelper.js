@@ -74,11 +74,10 @@ class GeneralHelper extends Helper {
     await Puppeteer.click(fields.submit);
   }
   
-  // eslint-disable-next-line func-names
   async getCurrentPageUrl() {
     const { Puppeteer } = this.helpers;
-    // eslint-disable-next-line no-undef
-    return await Puppeteer.page.url();
+    const currentURL = await Puppeteer.page.url();
+    return currentURL;
   }
 
   async waitForPage(header, headerText) {
