@@ -16,7 +16,7 @@ Scenario('Create a Case as a Solicitor, and continue with FL401 Case Events as C
   I.wait('2');
   await I.signOut();
   await I.loginAsCourtAdminUserOne();
-  I.wait('2');
+  I.wait('5');
   await I.amOnPage(createdCaseUrl);
 
 }).retry({ retries: 3, minTimeout: 30000 });
