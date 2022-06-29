@@ -1,6 +1,6 @@
-Feature('Send and Reply to messages via case event, as different users');
+Feature('C100 Court Admin Journey');
 
-Scenario('Create a Case as a Solicitor, Send and Reply to Messages via Case Event as Court Admin Users', async I => {
+Scenario('Create a Case as a Solicitor, and continue with C100 Case Events as CourtAdmin User', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
   let createdCaseUrl = await I.getCurrentPageUrl();
