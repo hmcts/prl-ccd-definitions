@@ -5,8 +5,7 @@ module.exports = {
 
   fields: {
     submit: 'button[type="submit"]',
-    countyCourt: '#submitCountyCourtSelection',
-    submit: 'button[type="submit"]'
+    countyCourt: '#submitCountyCourtSelection'
   },
   
    async triggerEvent() {
