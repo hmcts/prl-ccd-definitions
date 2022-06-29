@@ -1,6 +1,6 @@
-Feature('FL401 Court Admin Journey');
+Feature('FL401 DO Court Admin Journey');
 
-Scenario('Create a Case as a Solicitor, and continue with Case Events as Court Admin User', async I => {
+Scenario('Create a Case as a Solicitor, and continue with FL401 Case Events as Court Admin User', async I => {
   await I.loginAsSolicitor();
   await I.createCaseFL401();
   let createdCaseUrl = await I.getCurrentPageUrl();
