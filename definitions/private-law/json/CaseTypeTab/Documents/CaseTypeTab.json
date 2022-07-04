@@ -8,7 +8,7 @@
     "TabDisplayOrder": 3,
     "CaseFieldID": "submitAndPayDownloadApplicationLink",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "[STATE]=\"SUBMITTED_NOT_PAID\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\""
+    "TabShowCondition": "[STATE]=\"SUBMITTED\" OR [STATE]=\"SUBMITTED_NOT_PAID\" OR [STATE]=\"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE]=\"CASE_ISSUE\" OR [STATE]=\"CASE_WITHDRAWN\" OR [STATE]=\"SUBMITTED_PAID\" OR [STATE]=\"GATE_KEEPING\""
   },
   {
     "LiveFrom": "10/08/2021",
@@ -202,28 +202,6 @@
     "TabFieldDisplayOrder":20
   },
   {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
-    "CaseFieldID": "c8Document",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
-    "TabFieldDisplayOrder": 21
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "documents",
-    "TabLabel": "Case documents",
-    "TabDisplayOrder": 3,
-    "CaseFieldID": "c8WelshDocument",
-    "FieldShowCondition": "caseTypeOfApplication!=\"C100\"",
-    "TabFieldDisplayOrder": 22
-  },
-  {
   "LiveFrom": "10/08/2021",
   "CaseTypeID": "PRLAPPS",
   "Channel": "CaseWorker",
@@ -231,7 +209,7 @@
   "TabLabel": "Case documents",
   "TabDisplayOrder": 3,
   "CaseFieldID": "fl401UploadWitnessDocuments",
-  "TabFieldDisplayOrder":23
+  "TabFieldDisplayOrder":21
   },
   {
     "LiveFrom": "10/08/2021",
@@ -241,6 +219,36 @@
     "TabLabel": "Case documents",
     "TabDisplayOrder": 3,
     "CaseFieldID": "fl401UploadSupportDocuments",
+    "TabFieldDisplayOrder":22
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "mainAppNotConf",
+    "TabFieldDisplayOrder":23
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "corrNotConf",
     "TabFieldDisplayOrder":24
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "otherDocNotConf",
+    "TabFieldDisplayOrder":25
   }
 ]
