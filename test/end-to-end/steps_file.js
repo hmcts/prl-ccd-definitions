@@ -27,11 +27,20 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const signOut = require('./pages/Logout');
+const SendAndReplyMessages = require('./pages/SendAndReplyMessages');
+const SoT = require('./pages/DOScreens/StatementOfTruth');
 
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsCourtAdminUserOne() {
+      return LoginPage.loginAsCourtAdminUserOne();
+    },
+    loginAsCourtAdminUserTwo() {
+      return LoginPage.loginAsCourtAdminUserTwo();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -143,6 +152,15 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    statementOfTruth() {
+      return SoT.submitStatementOfTruth();
+    },
+    signOut() {
+      return signOut.clickSignOut();
+    },
+    sendMessage() {
+      return SendAndReplyMessages.sendMessage();
     }
   });
 };
