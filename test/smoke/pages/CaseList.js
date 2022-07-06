@@ -15,7 +15,9 @@ module.exports = {
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
-    spinner: 'xuilib-loading-spinner'
+    spinner: 'xuilib-loading-spinner',
+    applicationType: '//*[@id="caseTypeOfApplication-C100"]',
+    reset: 'Reset'
   },
 
   navigate() {
@@ -28,8 +30,10 @@ module.exports = {
   },
 
   searchForCasesWithId(caseId, state = 'Any') {
+    I.click(this.fields.reset);
     this.setInitialSearchFields(state);
     I.fillField(this.fields.caseId, caseId);
+    I.click(this.fields.applicationType);
     I.click(this.fields.search);
   },
 
