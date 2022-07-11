@@ -1,5 +1,89 @@
 [
   {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "ApplicantOrganisationPolicy",
+    "ListElementCode": "solicitorOrg.OrganisationID",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "ApplicantOrganisationPolicy",
+    "ListElementCode": "solicitorOrg.OrganisationID",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "ApplicantOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[APPLICANTSOLICITOR]",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "ApplicantOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[APPLICANTSOLICITOR]",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "04/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "RespondentOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[RESPONDENTSOLICITOR]",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "04/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "respondentsDetails",
+    "CaseFieldID": "RespondentOrganisationPolicy",
+    "ListElementCode": "solicitorOrg.OrganisationID",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "04/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "respondentsDetails",
+    "CaseFieldID": "RespondentOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[RESPONDENTSOLICITOR]",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "04/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "RespondentOrganisationPolicy",
+    "ListElementCode": "solicitorOrg.OrganisationID",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "",
+    "DisplayContext": "MANDATORY"
+  },
+  {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "WelshNeed",
@@ -953,6 +1037,17 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorReference",
     "EventElementLabel": "",
+    "FieldDisplayOrder": "28",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "applicantsDetails",
+    "CaseFieldID": "applicants",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[APPLICANTSOLICITOR]",
     "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   },
@@ -1970,6 +2065,16 @@
     "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "respondents.doTheyHaveLegalRepresentation=\"yes\""
+  },
+  {
+    "LiveFrom": "04/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "respondentsDetails",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[RESPONDENTSOLICITOR]",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
