@@ -1,6 +1,6 @@
 const { expect, assert } = require('chai');
-const { find } = require('lodash');
-const { isPositiveNumber, whenPopulated } = require('../utils/utils');
+const { find, uniqWith } = require('lodash');
+const { isPositiveNumber, whenPopulated, isCaseEventToFieldDuplicated } = require('../utils/utils');
 const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataProvider');
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
@@ -99,6 +99,11 @@ describe('CaseEventToFields ', () => {
 
   it('should contain valid field IDs', () => {
     assertHasOnlyValidFieldIds(CaseEventToFieldData, caseFieldata);
+  });
+
+  it('should not contain duplicate field IDs', () => {
+    const uniqResult = uniqWith(CaseEventToFieldData, isCaseEventToFieldDuplicated('CaseFieldID'));
+    expect(uniqResult).to.eql(CaseEventToFieldData);
   });
 
   it('should contain valid order fields', () => {
