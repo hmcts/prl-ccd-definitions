@@ -25,7 +25,7 @@
     "ID": "withDrawApplicationObject",
     "CaseEventID": "WithdrawApplication_Event",
     "CaseFieldID": "withDrawApplicationData",
-    "ListElementCode": "withDrawApplication",
+    "ListElementCode": "withDrawApplicationCourtInfo",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY"
   },
@@ -35,8 +35,18 @@
     "ID": "withDrawApplicationObject",
     "CaseEventID": "WithdrawApplication_Event",
     "CaseFieldID": "withDrawApplicationData",
-    "ListElementCode": "withDrawApplicationReason",
+    "ListElementCode": "withDrawApplication",
     "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "29/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "withDrawApplicationObject",
+    "CaseEventID": "WithdrawApplication_Event",
+    "CaseFieldID": "withDrawApplicationData",
+    "ListElementCode": "withDrawApplicationReason",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "withDrawApplicationData.withDrawApplication=\"Yes\""
   }
