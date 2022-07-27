@@ -8,9 +8,9 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/other-people-dynamic-list",
-    "PageShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -21,7 +21,21 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
+
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "checkYourOrder2",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -32,7 +46,8 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -43,6 +58,43 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "amendOrderReplaceOrderLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrdersAmendedOrderLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrdersAmendedOrder",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\"",
+    "ShowSummaryChangeOption": "N"
   }
 ]
