@@ -25,7 +25,7 @@ def secrets = [
                 secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
                 secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD')
         ],
-        'prl-${env}': [
+        'aac-${env}': [
                 secret('idam-caa-username', 'IDAM_CAA_USERNAME'),
                 secret('idam-caa-password', 'IDAM_CAA_PASSWORD'),
                 secret('manage-case-s2s-key', 'MANAGE_CASE_S2S_KEY'),
