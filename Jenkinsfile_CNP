@@ -31,8 +31,8 @@ def secrets = [
                 secret('idam-noc-approver-password', 'IDAM_NOC_APPROVER_PASSWORD'),
                 secret('notify-mca-api-key-secret', 'NOTIFY_MCA_API_KEY'),
                 secret('idam-mca-client-secret', 'IDAM_MCA_CLIENT_SECRET'),
-                secret('IDAM_CAA_USERNAME', 'idam-mca-system-user-username'),
-                secret('IDAM_CAA_PASSWORD' ,'idam-mca-system-user-password')
+                secret('idam-mca-system-user-username','IDAM_CAA_USERNAME' ),
+                secret('idam-mca-system-user-password','IDAM_CAA_PASSWORD' ,)
         ]
 ]
 
