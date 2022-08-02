@@ -11,6 +11,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-privatelaw-bulkscan');
   I.createRole('caseworker-privatelaw-bulkscansystemupdate');
   I.createRole('payments');
+  I.createRole('caseworker-caa');
   I.createRole('pui-case-manager');
   I.click('Manage User Roles');
   I.see('caseworker-privatelaw-solicitor');
@@ -22,6 +23,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('caseworker-privatelaw-bulkscan');
   I.see('caseworker-privatelaw-bulkscansystemupdate');
   I.see('payments');
+  I.see('caseworker-caa');
   I.see('pui-case-manager');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
 
