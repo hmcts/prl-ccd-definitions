@@ -2,6 +2,7 @@ Feature('Admin Web');
 
 Scenario('add all the roles @pipeline', I => {
   I.loginToAdminConsole();
+  I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
   I.createRole('caseworker-privatelaw-courtadmin');
   I.createRole('caseworker-privatelaw-judge');
@@ -14,6 +15,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-caa');
   I.createRole('pui-case-manager');
   I.click('Manage User Roles');
+  I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
   I.see('caseworker-privatelaw-courtadmin');
   I.see('caseworker-privatelaw-judge');
