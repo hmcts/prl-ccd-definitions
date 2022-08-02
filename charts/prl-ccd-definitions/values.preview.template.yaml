@@ -180,7 +180,6 @@ ccd:
       enabled: false
 
   elasticsearch:
-    nameOverride: ${SERVICE_NAME}-es
     clusterName: "es"
     imageTag: "7.17.0"
     replicas: 1
@@ -223,6 +222,7 @@ aac-manage-case-assignment:
     releaseNameOverride: ${SERVICE_NAME}-aac-manage-case-assignment
     image: hmctspublic.azurecr.io/aac/manage-case-assignment:latest
     ingressHost: aac-${SERVICE_FQDN}
+    keyVaults: []
     environment:
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
@@ -234,15 +234,10 @@ aac-manage-case-assignment:
       CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       CCD_DEFINITION_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-definition-store
       PRD_HOST: http://rd-professional-api-aat.service.core-compute-aat.internal
+      IDAM_CLIENT_SECRET: ${IDAM_MCA_CLIENT_SECRET}
+      MANAGE_CASE_S2S_KEY: ${MANAGE_CASE_S2S_KEY}
+      IDAM_NOC_APPROVER_USERNAME: ${IDAM_NOC_APPROVER_USERNAME}
+      IDAM_NOC_APPROVER_PASSWORD: ${IDAM_NOC_APPROVER_PASSWORD}
+      NOTIFY_MCA_API_KEY: ${UK_GOV_NOTIFY_API_KEY}
       autoscaling:
         enabled: false
-      keyVaults:
-        aac:
-          secrets:
-            - aac-manage-case-s2s-secret
-            - idam-mca-client-secret
-            - idam-mca-system-user-username
-            - idam-mca-system-user-password
-            - idam-noc-approver-username
-            - idam-noc-approver-password
-            - notify-mca-api-key-secret
