@@ -15,7 +15,9 @@ module.exports = {
   //   },
 
   async changeCaseName() {
+    I.wait('5');
     await I.retry(retryCount).waitForText('Case Name');
+    I.wait('5');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Updated Case Name');
     await I.retry(retryCount).click('Continue');
