@@ -9,7 +9,7 @@
     "PageID": 16,
     "PageDisplayOrder": 16,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -20,7 +20,9 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
+
   },
   {
     "LiveFrom": "31/03/2022",
@@ -31,7 +33,8 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -42,6 +45,43 @@
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "amendOrderReplaceOrderLabel",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrdersAmendedOrderLabel",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrdersAmendedOrder",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\"",
+    "ShowSummaryChangeOption": "N"
   }
 ]
