@@ -16,8 +16,10 @@ module.exports = {
     await I.retry(retryCount).wait('2');
     await I.retry(retryCount).fillField('#search-org-text', this.fields.organisation);
     await I.retry(retryCount).wait('2');
+    // await I.retry(retryCount).click(locate('a').withText('Select')
+    //   .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
     await I.retry(retryCount).click(locate('a').withText('Select')
-      .inside(locate('#organisation-table').withDescendant(locate('h3').withText(this.fields.organisation))));
+      .inside(locate('#organisation-table')));
   },
 
   async respondentDetailsC100() {
