@@ -884,7 +884,7 @@
     "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 17,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;CASE_HEARING",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -992,6 +992,22 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application"
   },
   {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serviceOfApplication",
+    "Name": "Service of Application",
+    "Description": "Event to serve the parties, once all the orders and hearing notices have been generated",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "GATE_KEEPING;CASE_HEARING",
+    "PostConditionState": "CASE_HEARING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/service-of-application/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/service-of-application/about-to-submit",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401resubmit",
@@ -1004,6 +1020,7 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application"
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application",
+    "EndButtonLabel": "Save and continue"
   }
 ]
