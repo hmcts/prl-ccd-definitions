@@ -54,7 +54,8 @@ withNightlyPipeline("nodejs", product, component) {
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
     enableFullFunctionalTest(200)
-    enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
+    // enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
+    enableCrossBrowserTest(60)
 
     after('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
