@@ -11,6 +11,7 @@ const defaultSauceOptions = {
   tags: ['Private Law'],
   maxDuration: 5000,
   commandTimeout: 600,
+
 };
 
 function merge(intoObject, fromObject) {
@@ -131,9 +132,9 @@ const setupConfig = {
     firefox: {
       browsers: getBrowserConfig('firefox'),
     },
-    safari: {
-      browsers: getBrowserConfig('safari'),
-    },
+    // safari: {
+    //   browsers: getBrowserConfig('safari'),
+    // },
   },
   name: 'PRL Cross-Browser Tests',
 };

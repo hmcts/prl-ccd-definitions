@@ -809,7 +809,7 @@
   },
   {
     "LiveFrom": "14/1/2022",
-    "ID": "restrictToGroup",
+    "ID": "RestrictToCafcassHmcts",
     "ListElementCode": "restrictToGroup",
     "ListElement": "Yes - restrict to this group",
     "DisplayOrder": 1
@@ -2168,6 +2168,76 @@
     "DisplayOrder": 1
   },
   {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum",
+    "ListElementCode": "occupyAsHome",
+    "ListElement": "Is entitled to occupy the address as their home",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum",
+    "ListElementCode": "rightsInAddress",
+    "ListElement": "has home rights in the address",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum",
+    "ListElementCode": "rightsToEnterAddress",
+    "ListElement": "has the right to enter into and occupy the address",
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum",
+    "ListElementCode": "other1",
+    "ListElement": "Other",
+    "DisplayOrder": 4
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "allowApplicantToOccupy",
+    "ListElement": "Shall allow the applicant to occupy the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "mustNotOccupyAddress",
+    "ListElement": "must not occupy the address",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "shallLeaveAddress",
+    "ListElement": "shall leave the address",
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "attemptToEnterAddress",
+    "ListElement": "having left, must not return to, enter or attempt to enter the address",
+    "DisplayOrder": 4
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "obstructHarassOrInterfere",
+    "ListElement": "must not obstruct, harass,or interfere with the applicant's peaceful occupation of the address",
+    "DisplayOrder": 5
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum",
+    "ListElementCode": "other2",
+    "ListElement": "Other",
+    "DisplayOrder": 6
+  },
+  {
     "LiveFrom": "01/05/2022",
     "ID": "ChildSelectorEnum",
     "ListElementCode": "SELECTED",
@@ -2191,30 +2261,380 @@
   {
     "LiveFrom": "22/02/2022",
     "ID": "CountyCourtEmails",
+    "ListElementCode": "eastlondonfamilycourt",
+    "ListElement": "eastlondonfamilypr@justice.gov.uk",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "porttalbotCountyCourt",
+    "ListElement": "family.porttalbot.countycourt@justice.gov.uk",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
     "ListElementCode": "swanseaCountyCourt",
     "ListElement": "family.swansea.countycourt@justice.gov.uk",
-    "DisplayOrder": 1
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "llanelliCountyCourt",
+    "ListElement": "family.llanelli.countycourt@justice.gov.uk",
+    "DisplayOrder": 4
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "aberystwythCountyCourt",
+    "ListElement": "family.aberystwyth.countycourt@justice.gov.uk",
+    "DisplayOrder": 5
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "haverfordwestCountyCourt",
+    "ListElement": "family.haverfordwest.countycourt@justice.gov.uk",
+    "DisplayOrder": 6
   },
   {
     "LiveFrom": "22/02/2022",
     "ID": "CountyCourtEmails",
     "ListElementCode": "southamptonCountyCourt",
     "ListElement": "family.southampton.countycourt@justice.gov.uk",
-    "DisplayOrder": 2
+    "DisplayOrder": 7
   },
   {
     "LiveFrom": "22/02/2022",
     "ID": "CountyCourtEmails",
     "ListElementCode": "exeterCountyCourt",
     "ListElement": "family.exeter.countycourt@justice.gov.uk",
-    "DisplayOrder": 3
+    "DisplayOrder": 8
   },
   {
     "LiveFrom": "22/02/2022",
     "ID": "CountyCourtEmails",
     "ListElementCode": "gloucesterCountyCourt",
     "ListElement": "family.gloucester.countycourt@justice.gov.uk",
+    "DisplayOrder": 9
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "kingstonuponhullCountyCourt",
+    "ListElement": "hull.private.filing@justice.gov.uk",
+    "DisplayOrder": 10
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "newcastlecivilandfamilycourtsandTribunalCentre",
+    "ListElement": "newcastle.c100applications@justice.gov.uk",
+    "DisplayOrder": 11
+  },
+  {
+    "LiveFrom": "22/02/2022",
+    "ID": "CountyCourtEmails",
+    "ListElementCode": "medwayCountyCourtandFamilyCourt",
+    "ListElement": "KentPRL@justice.gov.uk",
+    "DisplayOrder": 12
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "CaseTransferOptionsEnum",
+    "ListElementCode": "theHighCourt",
+    "ListElement": "The high court",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "CaseTransferOptionsEnum",
+    "ListElementCode": "countyCourt",
+    "ListElement": "County court",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "CaseTransferOptionsEnum",
+    "ListElementCode": "familyProceedingCourt",
+    "ListElement": "Family proceedings court",
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason1",
+    "ListElement": "the transfer will significantly accelerate the determination of the proceedings",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason2",
+    "ListElement": "there is a real possibility of difficulty in resolving conflicts in the evidence of witnesses",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason3",
+    "ListElement": "there is a real possibility of conflict in the evidence of two or more experts",
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason4",
+    "ListElement": "there is a novel or difficult point of law",
     "DisplayOrder": 4
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason5",
+    "ListElement": "there are proceedings concerning the child in another jurisdiction or there are international law issues",
+    "DisplayOrder": 5
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason6",
+    "ListElement": "there is a real possibility that enforcement proceedings may be necessary and the method of enforcement or the likely penalty is beyond the powers of a magistrates court",
+    "DisplayOrder": 6
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "TransferReasonEnum",
+    "ListElementCode": "transferReason7",
+    "ListElement": "there is another good reason for the proceedings to be transferred",
+    "DisplayOrder": 7
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum1",
+    "ListElementCode": "respondentNotToThreat",
+    "ListElement": "use or threaten violence against the applicant, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum2",
+    "ListElementCode": "respondentMustNotIntimidate",
+    "ListElement": "must not intimidate, harass or pester the applicant, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum3",
+    "ListElementCode": "respondentMustNotTelephone",
+    "ListElement": "must not telephone, text, email or otherwise contact or attempt to contact the applicant",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum4",
+    "ListElementCode": "respondentMustNotDamageOrThreat",
+    "ListElement": "must not damage, attempt to damage or threaten to damage any property owned by or in the possession or control of the applicant, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum5",
+    "ListElementCode": "respondentMustNotDamage",
+    "ListElement": "must not damage, attempt to damage or threaten to damage the property or contents of the property, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum6",
+    "ListElementCode": "respondentMustNotEnter",
+    "ListElement": "must not go to, enter or attempt to enter the property",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum7",
+    "ListElementCode": "respondentMustNotThreatChild",
+    "ListElement": "must not use or threaten violence against the relevant children, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum8",
+    "ListElementCode": "respondentMustNotHarassChild",
+    "ListElement": "must not intimidate, harass or pester the relevant children, and must not instruct, encourage or in any way suggest that any other person should do so",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum9",
+    "ListElementCode": "respondentMustNotTelephoneChild",
+    "ListElement": "must not telephone, text, email or otherwise contact or attempt to contact the relevant children",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "04/04/2022",
+    "ID": "respondentNotToDoEnum10",
+    "ListElementCode": "respondentMustNotEnterSchool",
+    "ListElement": "must not go to, enter or attempt to enter the school",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum1",
+    "ListElementCode": "occupyAsHome",
+    "ListElement": "Is entitled to occupy the address as their home",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum2",
+    "ListElementCode": "rightsInAddress",
+    "ListElement": "has home rights in the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum3",
+    "ListElementCode": "rightsToEnterAddress",
+    "ListElement": "has the right to enter into and occupy the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "courtDeclaresEnum4",
+    "ListElementCode": "other1",
+    "ListElement": "Other",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum1",
+    "ListElementCode": "allowApplicantToOccupy",
+    "ListElement": "Shall allow the applicant to occupy the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum2",
+    "ListElementCode": "mustNotOccupyAddress",
+    "ListElement": "must not occupy the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum3",
+    "ListElementCode": "shallLeaveAddress",
+    "ListElement": "shall leave the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum4",
+    "ListElementCode": "attemptToEnterAddress",
+    "ListElement": "having left, must not return to, enter or attempt to enter the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum5",
+    "ListElementCode": "obstructHarassOrInterfere",
+    "ListElement": "must not obstruct, harass, or interfere with the applicant's peaceful occupation of the address",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "theRespondentEnum6",
+    "ListElementCode": "other2",
+    "ListElement": "Other",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "OrderNoticeEnum",
+    "ListElementCode": "WithNotice",
+    "ListElement": "With notice",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "OrderNoticeEnum",
+    "ListElementCode": "WithoutNotice",
+    "ListElement": "Without notice",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "courtDirectsLetter",
+    "ListElement": "Court directs the type of letters for the hearing",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "safeguardingLetters1",
+    "ListElement": "Safeguarding letters",
+    "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "privateLawReport",
+    "ListElement": "Private Law report Type",
+    "DisplayOrder": 3
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "addendumReport",
+    "ListElement": "S7 Addendum Report",
+    "DisplayOrder": 4
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "section7Report",
+    "ListElement": "Section 7 Report",
+    "DisplayOrder": 5
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "sixteenReport",
+    "ListElement": "16.4 Report",
+    "DisplayOrder": 6
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "updateSafeguardingLetter",
+    "ListElement": "Update to Safeguarding Letter",
+    "DisplayOrder": 7
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "safeguardingLetters2",
+    "ListElement": "Safeguarding Letter",
+    "DisplayOrder": 8
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "nonS7Report1",
+    "ListElement": "Other Non s7 Report",
+    "DisplayOrder": 9
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "cafcassReportsEnum",
+    "ListElementCode": "nonS7Report2",
+    "ListElement": "Other Non s7 Report",
+    "DisplayOrder": 10
   },
   {
     "LiveFrom": "31/03/2022",

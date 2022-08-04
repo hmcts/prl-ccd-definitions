@@ -11,11 +11,13 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: 'CCD Case Number',
+    caseId: '//*[@id="[CASE_REFERENCE]"]',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
-    spinner: 'xuilib-loading-spinner'
+    spinner: 'xuilib-loading-spinner',
+    applicationType: '//*[@id="caseTypeOfApplication-C100"]',
+    reset: 'Reset'
   },
 
   navigate() {
@@ -28,12 +30,11 @@ module.exports = {
   },
 
   searchForCasesWithId(caseId, state = 'Any') {
+    I.click(this.fields.reset);
     this.setInitialSearchFields(state);
-    I.grabCurrentUrl();
     I.fillField(this.fields.caseId, caseId);
-    I.grabCurrentUrl();
+    I.click(this.fields.applicationType);
     I.click(this.fields.search);
-    I.grabCurrentUrl();
   },
 
   searchForCasesWithName(caseName, state = 'Any') {

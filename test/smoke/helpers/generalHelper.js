@@ -56,7 +56,6 @@ class GeneralHelper extends Helper {
     await Puppeteer.waitForText('Check your answers', '30');
     await Puppeteer.click('Save and continue');
     await Puppeteer.wait(saveResponseTime);
-
   }
 
   async triggerEvent(eventName) {
