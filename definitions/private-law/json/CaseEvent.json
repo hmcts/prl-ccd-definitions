@@ -1022,5 +1022,20 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application",
     "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "25/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "resetAccessCode",
+    "Name": "Reset access code",
+    "Description": "Reset access code for citizen",
+    "DisplayOrder": 23,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/regenerate-access-code",
+    "EndButtonLabel": "Reset access code"
   }
 ]
