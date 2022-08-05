@@ -22,10 +22,10 @@ module.exports = {
       await I.runAccessibilityTest();
       await I.retry(retryCount).seeElement('#authorizeCommand');
       await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password1);
     } catch {
       await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password1);
     }
     await I.retry(retryCount).click(this.fields.submit);
   }

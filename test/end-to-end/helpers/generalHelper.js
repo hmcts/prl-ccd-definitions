@@ -12,7 +12,11 @@ class GeneralHelper extends Helper {
     await Puppeteer.click('Add new', { css: `#${field}>div>button` });
     await Puppeteer.attachFile(`input[id="${field}_value"]`, '../resource/dummy.pdf');
   }
-
+  async getCurrentPageUrl() {
+    const { Puppeteer } = this.helpers;
+    // eslint-disable-next-line no-return-await
+    return await Puppeteer.page.url();
+  }
   async attachDocument(field) {
     const { Puppeteer } = this.helpers;
     await Puppeteer.attachFile(`input[id="${field}"]`, '../resource/dummy.pdf');

@@ -7,7 +7,7 @@ module.exports = {
     submit: 'button[type="submit"]',
     applicantAddress: 'applicants_0_address_address',
     applicantAddressFL401: 'applicantsFL401_address_address',
-    organisation: 'AAT'
+    organisation: 'test'
   },
 
   async triggerEvent() {

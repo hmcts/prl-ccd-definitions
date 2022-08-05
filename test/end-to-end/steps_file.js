@@ -27,6 +27,9 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const logout = require('./pages/Logout');
+const loginAsCourtAdmin = require('./pages/LoginAsCourtAdmin');
+const payment = require('./pages/PaymentCA');
 
 module.exports = () => {
   return actor({
@@ -143,6 +146,15 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    paymentCA() {
+      return payment.payByCard();
+    },
+    logout() {
+      return logout.clickSignOut();
+    },
+    loginAsCourtAdmin() {
+      return loginAsCourtAdmin.loginAsCourtAdmin();
     }
   });
 };

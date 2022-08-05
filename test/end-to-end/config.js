@@ -1,9 +1,11 @@
-const defaultPassword = 'Nagoya0102';
+//const defaultPassword = 'Testing1234';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-e2etestsolicitor@mailinator.com',
-    password: defaultPassword
+    email: 'testways2payuser4@mailnesia.com',
+    emailCourtAdmin: 'prl_caseworker_courtadmin@mailinator.com',
+    password1: 'Testing1234',
+    password2: 'Nagoya0102'
   },
   definition: {
     jurisdiction: 'PRIVATELAW',

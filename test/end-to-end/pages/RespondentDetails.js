@@ -8,7 +8,7 @@ module.exports = {
     respondentAddress: 'respondents_0_address_address',
     respondentAddressFL401: 'respondentsFL401_address_address',
     submit: 'button[type="submit"]',
-    organisation: 'AAT'
+    organisation: 'test'
   },
 
   async searchAndSelectGivenRegisteredOrganisation() {

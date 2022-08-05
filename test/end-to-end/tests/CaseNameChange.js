@@ -1,6 +1,6 @@
-Feature('Case Name Change');
+Feature('CA Submit and Pay');
 
-Scenario('Case Name - basic journey @cross-browser', async I => {
+Scenario('Create a Case and Submit/Pay ', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.caseNameChange();
