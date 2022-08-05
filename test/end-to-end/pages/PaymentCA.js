@@ -8,7 +8,7 @@ module.exports = {
 
   async payment() {
     I.wait('10');
-    await I.retry(retryCount).click('#mat-tab-label-9-4');
+    await I.retry(retryCount).click('#mat-tab-label-0-4');
     I.wait('5');
     await I.retry(retryCount).click('Pay now');
     I.wait('1');
@@ -16,8 +16,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.pbaNumber, 'PBA0086304');
     await I.retry(retryCount).fillField('#pbaAccountRef', '12345678');
     await I.retry(retryCount).click('#conditional-contact > div.govuk-form-group.ng-star-inserted > label');
-    await I.retry(retryCount).click('Confirm payment');
-    I.wait('1');
+    I.wait('2');
   },
   async confirmPayment(){
     await I.retry(retryCount).click('Confirm payment');
