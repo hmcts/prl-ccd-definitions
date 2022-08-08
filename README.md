@@ -7,7 +7,6 @@ Updated with Release 1
 
 ## Usage
 
-Dummy PR
 Clone project and in the project directory run:
  - `yarn install && yarn reset-ccd-submodule`
 
