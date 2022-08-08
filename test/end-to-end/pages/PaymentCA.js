@@ -8,8 +8,9 @@ module.exports = {
 
   async payment() {
     I.wait('10');
-    await I.retry(retryCount).click('#mat-tab-label-0-4');
-    I.wait('5');
+    await I.retry(retryCount).click('body div.mat-tab-label-container > div > div');
+    await I.retry(retryCount).click('Service Request');
+    I.wait('8');
     await I.retry(retryCount).click('Pay now');
     I.wait('1');
     await I.retry(retryCount).click('#pbaAccount');
