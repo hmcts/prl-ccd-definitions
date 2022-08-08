@@ -8,9 +8,29 @@ const LONG_STRING = 150;
 
 function isFieldDuplicated(field) {
   return function isDuplicated(field1, field2) {
+    if (field1.CaseTypeID === field2.CaseTypeID
+      && field1[field] === field2[field]
+      && field1.UserRole === field2.UserRole) {
+      console.log(`Duplicated field: ${field1[field]}`);
+    }
     return field1.CaseTypeID === field2.CaseTypeID
             && field1[field] === field2[field]
             && field1.UserRole === field2.UserRole;
+  };
+}
+
+function isCaseEventToFieldDuplicated(field) {
+  return function isDuplicated(field1, field2) {
+    if (field1.CaseTypeID === field2.CaseTypeID
+        && field1.CaseTypeID === field2.CaseTypeID
+        && field1.CaseEventID === field2.CaseEventID
+        && field1[field] === field2[field]) {
+      console.log(`Duplicated field: ${field1[field]}`);
+    }
+    return field1.CaseTypeID === field2.CaseTypeID
+            && field1.CaseTypeID === field2.CaseTypeID
+            && field1.CaseEventID === field2.CaseEventID
+            && field1[field] === field2[field];
   };
 }
 
@@ -44,6 +64,9 @@ function whenPopulated(key, type) {
 }
 
 function noDuplicateFound(a, b) {
+  if (a.CaseTypeID === b.CaseTypeID && a.ID === b.ID) {
+    console.log(`Duplicated field: ${a.ID}`);
+  }
   return a.CaseTypeID === b.CaseTypeID && a.ID === b.ID;
 }
 
@@ -58,6 +81,11 @@ function noDuplicateFoundFL(a, b) {
 function noDuplicateFoundCT(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.TabID === b.TabID && a.CaseFieldID === b.CaseFieldID;
 }
+
+function noDuplicateFoundCaseEventToField(a, b) {
+  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.CaseFieldID === b.CaseFieldID && a.PageDisplayOrder === b.PageDisplayOrder;
+}
+
 
 function noDuplicateFoundEvent(a, b) {
   return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
@@ -126,6 +154,7 @@ module.exports = {
   MEDIUM_STRING,
   LONG_STRING,
   isFieldDuplicated,
+  isCaseEventToFieldDuplicated,
   loadAllFiles,
   sortCaseTypeTabs,
   noDuplicateFound,
@@ -135,6 +164,7 @@ module.exports = {
   noDuplicateFoundCCT,
   noDuplicateFoundACT,
   noDuplicateFoundEvent,
+  noDuplicateFoundCaseEventToField,
   isNotEmpty,
   isNotLongerThan,
   isPositiveNumber,
