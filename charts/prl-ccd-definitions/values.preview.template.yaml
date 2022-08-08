@@ -25,6 +25,7 @@ xui-webapp:
     image: hmctspublic.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
     environment:
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
       HEALTH_CCD_COMPONENT_API: https://gateway-${SERVICE_FQDN}/health
       HEALTH_CCD_DATA_API: https://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}.service.core-compute-preview.internal/health
@@ -123,6 +124,7 @@ ccd:
       ingressHost: admin-web-${SERVICE_FQDN}
       keyVaults: []
       environment:
+        NODE_TLS_REJECT_UNAUTHORIZED: 0
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
         IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
         IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
