@@ -108,7 +108,6 @@ ccd:
       imagePullPolicy: Always
       keyVaults: []
       environment:
-        NODE_TLS_REJECT_UNAUTHORIZED: 0
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment
