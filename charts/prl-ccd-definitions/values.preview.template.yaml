@@ -87,7 +87,7 @@ ccd:
         IDAM_DATA_STORE_SYSTEM_USER_PASSWORD: ${IDAM_DATA_STORE_SYSTEM_USER_PASSWORD}
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
         IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
-        CASE_DOCUMENT_AM_URL: https://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
+        CASE_DOCUMENT_AM_URL: http://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOSTS: ${SERVICE_NAME}-es-master:9200
         CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: aac_manage_case_assignment,prl_cos_api
@@ -215,7 +215,7 @@ ccd-case-document-am-api:
     environment:
       CASE_DOCUMENT_S2S_AUTHORISED_SERVICES: ccd_case_document_am_api,ccd_gw,xui_webapp,ccd_data,bulk_scan_processor,sscs,probate_backend,iac,em_npa_app,fprl_dgs_api,dg_docassembly_api,em_stitching_api,em_ccd_orchestrator,cmc_claim_store,civil_service,bulk_scan_orchestrator,ethos_repl_service,divorce_document_generator,finrem_document_generator,fpl_case_service,et_cos,prl_cos_api,prl_dgs_api,et_sya_api,adoption_cos_api,adoption_web,prl_citizen_frontend
       DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
-      CCD_DATA_STORE_API_BASE_URL: https://ccd-data-store-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
+      CCD_DATA_STORE_API_BASE_URL: http://ccd-data-store-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
       IDAM_USER_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
 
