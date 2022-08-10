@@ -34,7 +34,7 @@ xui-webapp:
       SERVICES_CCD_CASE_ASSIGNMENT_API: https://aac-${SERVICE_FQDN}
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}.service.core-compute-preview.internal
       JURISDICTIONS: PRIVATELAW
-      SERVICES_DOCUMENTS_API_V2: https://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
+      SERVICES_DOCUMENTS_API_V2: http://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
 
 ccd:
   ccd:
@@ -87,7 +87,7 @@ ccd:
         IDAM_DATA_STORE_SYSTEM_USER_PASSWORD: ${IDAM_DATA_STORE_SYSTEM_USER_PASSWORD}
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
         IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
-        CASE_DOCUMENT_AM_URL: https://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
+        CASE_DOCUMENT_AM_URL: http://ccd-case-document-am-api-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOSTS: ${SERVICE_NAME}-es-master:9200
         CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: aac_manage_case_assignment,prl_cos_api
