@@ -220,7 +220,13 @@ ccd-case-document-am-api:
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
       S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
-    keyVaults: []
+    keyVaults:
+      ccd:
+        secrets:
+          - name: AppInsightsInstrumentationKey
+            alias: azure.application-insights.instrumentation-key
+          - name: ccd-case-document-am-api-s2s-secret
+            alias: CASE_DOCUMENT_AM_API_S2S_SECRET
 
 aac-manage-case-assignment:
   enabled: true
