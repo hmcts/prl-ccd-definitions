@@ -1,5 +1,3 @@
-
-
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
@@ -14,7 +12,7 @@ dependencies:
     tags:
       - ccd-pr
   - name: xui-webapp
-    version: ~0.2.1
+    version: ~1.0.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: xui-webapp.enabled
   - name: idam-pr

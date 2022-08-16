@@ -39,6 +39,20 @@ describe('AuthorisationCaseState', () => {
       });
     });
 
+    context('Solicitor has valid permissions', () => {
+      it('CRU permissions for all states', () => {
+        nonProd.forEach(authState => {
+          if (authState.UserRole === 'citizen') {
+            try {
+              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
+            } catch (error) {
+              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-solicitor`);
+            }
+          }
+        });
+      });
+    });
+
     context('caseworker-privatelaw-judge has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
