@@ -2,6 +2,7 @@ Feature('Admin Web');
 
 Scenario('add all the roles @pipeline', I => {
   I.loginToAdminConsole();
+  I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
   I.createRole('caseworker-privatelaw-courtadmin');
   I.createRole('caseworker-privatelaw-judge');
@@ -13,7 +14,9 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('payments');
   I.createRole('caseworker-caa');
   I.createRole('pui-case-manager');
+  I.createRole('courtnav');
   I.click('Manage User Roles');
+  I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
   I.see('caseworker-privatelaw-courtadmin');
   I.see('caseworker-privatelaw-judge');
@@ -25,6 +28,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('payments');
   I.see('caseworker-caa');
   I.see('pui-case-manager');
+  I.see('courtnav');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', I => {
