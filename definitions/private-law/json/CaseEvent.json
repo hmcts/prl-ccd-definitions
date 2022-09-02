@@ -1138,5 +1138,20 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "solicitorDraftAnOrder",
+    "Name": "Draft an order",
+    "Description": "Draft an order",
+    "DisplayOrder": 26,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/draft-an-order-about-to-start",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
