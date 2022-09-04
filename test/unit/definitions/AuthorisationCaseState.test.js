@@ -28,7 +28,7 @@ describe('AuthorisationCaseState', () => {
     context('Solicitor has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
-          if (authState.AccessProfile === 'caseworker-privatelaw-solicitor') {
+          if (authState.UserRole === 'caseworker-privatelaw-solicitor') {
             try {
               expect(('CRUD').includes(authState.CRUD)).to.eql(true);
             } catch (error) {
@@ -42,7 +42,7 @@ describe('AuthorisationCaseState', () => {
     context('caseworker-privatelaw-judge has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
-          if (authState.AccessProfile === 'caseworker-privatelaw-judge') {
+          if (authState.UserRole === 'caseworker-privatelaw-judge') {
             try {
               expect(('CRUD').includes(authState.CRUD)).to.eql(true);
             } catch (error) {
@@ -56,7 +56,7 @@ describe('AuthorisationCaseState', () => {
     context('caseworker-privatelaw-courtadmin has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
-          if (authState.AccessProfile === 'caseworker-privatelaw-courtadmin') {
+          if (authState.UserRole === 'caseworker-privatelaw-courtadmin') {
             try {
               expect(('CRUD').includes(authState.CRUD)).to.eql(true);
             } catch (error) {
@@ -70,7 +70,7 @@ describe('AuthorisationCaseState', () => {
     context('caseworker-privatelaw-systemupdate has valid permissions', () => {
       it('CRU permissions for all states', () => {
         nonProd.forEach(authState => {
-          if (authState.AccessProfile === 'caseworker-privatelaw-systemupdate') {
+          if (authState.UserRole === 'caseworker-privatelaw-systemupdate') {
             try {
               expect(('CRUD').includes(authState.CRUD)).to.eql(true);
             } catch (error) {
