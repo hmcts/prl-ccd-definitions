@@ -10,12 +10,12 @@ function isFieldDuplicated(field) {
   return function isDuplicated(field1, field2) {
     if (field1.CaseTypeID === field2.CaseTypeID
       && field1[field] === field2[field]
-      && field1.UserRole === field2.UserRole) {
+      && field1.AccessProfile === field2.AccessProfile) {
       console.log(`Duplicated field: ${field1[field]}`);
     }
     return field1.CaseTypeID === field2.CaseTypeID
             && field1[field] === field2[field]
-            && field1.UserRole === field2.UserRole;
+            && field1.AccessProfile === field2.AccessProfile;
   };
 }
 
@@ -88,11 +88,11 @@ function noDuplicateFoundCaseEventToField(a, b) {
 
 
 function noDuplicateFoundEvent(a, b) {
-  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.UserRole === b.UserRole;
+  return a.CaseTypeID === b.CaseTypeID && a.CaseEventID === b.CaseEventID && a.AccessProfile === b.AccessProfile;
 }
 
 function noDuplicateFoundACT(a, b) {
-  return a.CaseTypeID === b.CaseTypeID && a.UserRole === b.UserRole;
+  return a.CaseTypeID === b.CaseTypeID && a.AccessProfile === b.AccessProfile;
 }
 
 function noDuplicateFoundCCT(a, b) {
@@ -139,7 +139,7 @@ function byStateName(stateEntry) {
 function mapErrorArray(caseType) {
   return entry => {
     return {
-      UserRole: entry.UserRole,
+      AccessProfile: entry.AccessProfile,
       CaseType: caseType
     };
   };
