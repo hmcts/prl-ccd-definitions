@@ -12,7 +12,7 @@ function assertFieldDefinitionIsValid(row) {
     return v.startsWith('PRLAPPS');
   });
   expect(row.CaseEventID).to.be.a('string').and.satisfy(isNotLongerThan(MEDIUM_STRING));
-  // expect(row.UserRole).to.be.a('string').and.satisfy(isNotEmpty());
+  // expect(row.AccessProfile).to.be.a('string').and.satisfy(isNotEmpty());
   // expect(('CRUD').includes(row.CRUD)).to.eql(true);
 }
 
