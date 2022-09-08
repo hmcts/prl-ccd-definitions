@@ -3,6 +3,9 @@ const { uniqWith } = require('lodash');
 const { isFieldDuplicated } = require('../utils/utils');
 const { createAssertExists } = require('../utils/assertBuilders');
 const { AuthorisationCaseFieldData, caseFieldata } = require('../utils/dataProvider');
+const { AuthorisationCaseFieldData } = require('../utils/dataProvider');
+
+
 
 const assertFieldExists = createAssertExists('Field');
 
