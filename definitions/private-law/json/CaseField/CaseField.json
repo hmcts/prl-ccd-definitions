@@ -1365,6 +1365,14 @@
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "selectedCaseTypeID",
+    "Label": "Type of Case",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "caseTypeOfApplication",
     "Label": " ",
     "FieldType": "FixedRadioList",
@@ -2800,14 +2808,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "14/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "fl401FamilymanCaseNumber",
-    "Label": "FamilyMan case number",
-    "FieldType": "Text",
-    "SecurityClassification": "Public"
-  },
-  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseSolicitorName",
@@ -2846,6 +2846,56 @@
     "Label": "Select the email address of the family court you want this application to go to",
     "FieldType": "FixedList",
     "FieldTypeParameter": "CountyCourtEmails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantOrganisationPolicy",
+    "Label": "Petitioner solicitor's firm",
+    "HintText": "Petitioner solicitor's firm",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantAge",
+    "Label": " ",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ApplicantAge",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "specialCourtName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseOrigin",
+    "Label": "Case originated by ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "courtNavApproved",
+    "Label": "Courtnav approved? ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "numberOfAttachments",
+    "Label": "Total no of attachments from courtnav ",
+    "FieldType": "Text",
     "SecurityClassification": "Public"
   }
 ]
