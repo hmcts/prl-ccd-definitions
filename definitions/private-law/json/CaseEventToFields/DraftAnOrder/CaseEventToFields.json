@@ -19,8 +19,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/solicitor-prepopulate-draft-order-text"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -150,11 +149,23 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "solicitorDraftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "COMPLEX",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/solicitor-prepopulate-draft-order-text"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorDraftAnOrder",
     "CaseFieldID": "previewDraftAnOrderLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-draft-an-order"
   },
   {
@@ -164,8 +175,8 @@
     "CaseFieldID": "previewDraftAnOrder",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -175,8 +186,8 @@
     "CaseFieldID": "solicitorDraftOrderDoc",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
   }
 ]
