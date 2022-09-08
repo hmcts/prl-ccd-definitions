@@ -7,7 +7,7 @@ const { AuthorisationCaseFieldData } = require('../utils/dataProvider');
 
 
 
-const assertFieldExists = createAssertExists('Field');
+//const assertFieldExists = createAssertExists('Field');
 
 describe('AuthorisationCaseField', () => {
   describe('should :', () => {
