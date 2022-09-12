@@ -15,7 +15,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-caa');
   I.createRole('pui-case-manager');
   I.createRole('courtnav');
-  I.createRole('caseworker-wa-task-configuration')
+  I.createRole('caseworker-wa-task-configuration');
   I.click('Manage User Roles');
   I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
