@@ -34,8 +34,8 @@ module.exports = {
     await I.retry(retryCount).waitForText('History');
     I.wait('5');
     await I.runAccessibilityTest();
-    console.log(await I.grabTextFrom('div.alert-message'));
-    await I.retry(retryCount).waitForElement('i.icon-tick');
+    // console.log(await I.grabTextFrom('div.alert-message'));
+    // await I.retry(retryCount).waitForElement('i.icon-tick');
     I.wait('5');
   },
 
