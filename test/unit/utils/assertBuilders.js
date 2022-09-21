@@ -10,7 +10,7 @@ function createAssertExists(type) {
         expect(find(allDefinedRowsForEnv, ['ID', authDefinition[`Case${type}ID`]]))
           .to.be.an('object');
       } catch (error) {
-        errors.push(`\n${type} ${authDefinition[type]} is not defined`);
+        errors.push(`\n${type} ${authDefinition[type]} ${authDefinition[`Case${type}ID`]} is not defined`);
       }
     });
 
