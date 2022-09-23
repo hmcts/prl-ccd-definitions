@@ -15,7 +15,9 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-caa');
   I.createRole('pui-case-manager');
   I.createRole('courtnav');
+  I.createRole('global');
   I.createRole('caseworker-wa-task-configuration');
+  I.createRole('caseworker-ras-validation');
   I.click('Manage User Roles');
   I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
@@ -31,6 +33,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('pui-case-manager');
   I.see('courtnav');
   I.see('caseworker-wa-task-configuration');
+  I.see('caseworker-ras-validation');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', I => {
