@@ -30,6 +30,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("pui-case-manager", PUBLIC),
             new CcdRoleConfig("courtnav", PUBLIC),
             new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
+            new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
     };
 
     private final CcdEnvironment environment;
