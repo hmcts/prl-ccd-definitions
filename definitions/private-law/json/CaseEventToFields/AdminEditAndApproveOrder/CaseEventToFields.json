@@ -21,7 +21,7 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-populate-draft-order"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -44,7 +44,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-generate-draft-order"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-generate-draft-order"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -78,27 +78,5 @@
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "doYouWantCourtAdminToAddAnything",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "courtAdminMessage",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "OPTIONAL",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
   }
 ]
