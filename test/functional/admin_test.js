@@ -4,6 +4,7 @@ Scenario('add all the roles @pipeline', I => {
   I.loginToAdminConsole();
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
+  I.createRole('caseworker-privatelaw-respondent-solicitor');
   I.createRole('caseworker-privatelaw-courtadmin');
   I.createRole('caseworker-privatelaw-judge');
   I.createRole('caseworker-privatelaw-la');

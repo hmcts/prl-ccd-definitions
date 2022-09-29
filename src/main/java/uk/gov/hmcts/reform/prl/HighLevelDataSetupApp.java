@@ -24,6 +24,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("caseworker-privatelaw-judge", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-la", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-solicitor", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-respondent-solicitor", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-superuser", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-systemupdate", PUBLIC),
             new CcdRoleConfig("payments", PUBLIC),
