@@ -9,7 +9,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/admin-populate-draft-order-details"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-details"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -132,7 +132,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "selectTypeOfOrder=\"finl\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -143,7 +144,8 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doesOrderClosesCase=\"Yes\" AND selectTypeOfOrder=\"finl\""
   },
   {
     "LiveFrom": "31/03/2022",
