@@ -15,6 +15,22 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentSolicitorCreate",
+    "Name": "Respond to application",
+    "Description": "Respondent solicitor is responding to the child arrangements application ",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/about-to-submit-case-creation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "attendingTheHearing",
@@ -1138,5 +1154,21 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "consentToApplication",
+    "Name": "Consent to the application",
+    "Description": "Respondent Solicitor will provide consent to Application",
+    "DisplayOrder": 1,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "CASE_HEARING",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-applicant-child-names",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue"
   }
 ]
