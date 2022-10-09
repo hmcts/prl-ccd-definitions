@@ -1,3 +1,58 @@
 [
-
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Consent",
+    "CaseEventID": "solicitorConsentToApplication",
+    "CaseFieldID": "respondentConsentToApplication",
+    "ListElementCode": "consentToTheApplication",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Consent",
+    "CaseEventID": "solicitorConsentToApplication",
+    "CaseFieldID": "respondentConsentToApplication",
+    "ListElementCode": "noConsentReason",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "respondentConsentToApplication.consentToTheApplication=\"No\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Consent",
+    "CaseEventID": "solicitorConsentToApplication",
+    "CaseFieldID": "respondentConsentToApplication",
+    "ListElementCode": "applicationReceivedDate",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Consent",
+    "CaseEventID": "solicitorConsentToApplication",
+    "CaseFieldID": "respondentConsentToApplication",
+    "ListElementCode": "permissionFromCourt",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Consent",
+    "CaseEventID": "solicitorConsentToApplication",
+    "CaseFieldID": "respondentConsentToApplication",
+    "ListElementCode": "courtOrderDetails",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "respondentConsentToApplication.permissionFromCourt=\"Yes\""
+  }
 ]
