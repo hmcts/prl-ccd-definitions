@@ -263,11 +263,7 @@ em-ccdorc:
     image: hmctspublic.azurecr.io/em/ccdorc:latest
     ingressHost: em-ccdorc-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
-    keyVaults:
-      em-ccdorc:
-        secrets:
-          - name: microservicekey-em-ccd-orchestrator
-            alias: S2S_KEY
+    keyVaults: []
     environment:
       IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
       OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
