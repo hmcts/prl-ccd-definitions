@@ -2,10 +2,10 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "Consent",
+    "ID": "PartyDetails",
     "CaseEventID": "solicitorConsentToApplication",
     "CaseFieldID": "respondentConsentToApplication",
-    "ListElementCode": "consentToTheApplication",
+    "ListElementCode": "response.consent.consentToTheApplication",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
@@ -13,21 +13,20 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "Consent",
+    "ID": "PartyDetails",
     "CaseEventID": "solicitorConsentToApplication",
     "CaseFieldID": "respondentConsentToApplication",
-    "ListElementCode": "noConsentReason",
+    "ListElementCode": "response.consent.noConsentReason",
     "FieldDisplayOrder": "2",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "respondentConsentToApplication.consentToTheApplication=\"No\""
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "Consent",
+    "ID": "PartyDetails",
     "CaseEventID": "solicitorConsentToApplication",
     "CaseFieldID": "respondentConsentToApplication",
-    "ListElementCode": "applicationReceivedDate",
+    "ListElementCode": "response.consent.applicationReceivedDate",
     "EventElementLabel": "",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -35,10 +34,10 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "Consent",
+    "ID": "PartyDetails",
     "CaseEventID": "solicitorConsentToApplication",
     "CaseFieldID": "respondentConsentToApplication",
-    "ListElementCode": "permissionFromCourt",
+    "ListElementCode": "response.consent.permissionFromCourt",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
@@ -46,13 +45,12 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "Consent",
+    "ID": "PartyDetails",
     "CaseEventID": "solicitorConsentToApplication",
     "CaseFieldID": "respondentConsentToApplication",
-    "ListElementCode": "courtOrderDetails",
+    "ListElementCode": "response.consent.courtOrderDetails",
     "EventElementLabel": "",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "respondentConsentToApplication.permissionFromCourt=\"Yes\""
+    "DisplayContext": "OPTIONAL"
   }
 ]
