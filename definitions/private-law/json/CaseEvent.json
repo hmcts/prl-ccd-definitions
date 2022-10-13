@@ -1146,9 +1146,9 @@
     "Name": "Create a bundle",
     "Description": "Create a bundle in the case",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "GATE_KEEPING",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   }
