@@ -374,15 +374,12 @@
     "ID": "internationalElement",
     "Name": "International element",
     "Description": "Details of the international element of the case",
-    "DisplayOrder": 13,
-    "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS;",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "21/11/2021",
