@@ -38,6 +38,6 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
-    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+    // await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };
