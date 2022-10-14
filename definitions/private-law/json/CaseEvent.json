@@ -949,7 +949,7 @@
     "Name": "Manage orders",
     "Description": "Manage orders",
     "DisplayOrder": 161,
-    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING;CASE_HEARING;ALL_FINAL_ORDERS_ISSUED;CASE_WITHDRAWN",
     "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-order-email-notification",
