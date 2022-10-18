@@ -1208,5 +1208,18 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nocRequest",
+    "Name": "NoC Request",
+    "Description": "Notice of Change Request",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToSubmitEvent": "${SERVICES_CCD_CASE_ASSIGNMENT_API}/noc/check-noc-approval",
+    "ShowEventNotes": "Y"
   }
 ]
