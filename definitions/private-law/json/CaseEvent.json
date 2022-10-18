@@ -382,15 +382,12 @@
     "ID": "internationalElement",
     "Name": "International element",
     "Description": "Details of the international element of the case",
-    "DisplayOrder": 13,
-    "SecurityClassification": "Public",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS;",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "21/11/2021",
@@ -970,7 +967,7 @@
     "Name": "Manage orders",
     "Description": "Manage orders",
     "DisplayOrder": 161,
-    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING;CASE_HEARING;ALL_FINAL_ORDERS_ISSUED;CASE_WITHDRAWN",
     "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-order-email-notification",
@@ -1186,6 +1183,19 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
+    "ID": "reviewAndSubmit",
+    "Name": "Citizen Response C7",
+    "Description": "Citizen Response C7",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
     "ID": "linkCitizenAccount",
     "Name": "Link citizen account",
     "Description": "Citizen linked their account to the case with access code",
@@ -1255,5 +1265,18 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondent-responded-to-case",
+    "Name": "Respondent responded to case",
+    "Description": "Respondent responded to case",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
