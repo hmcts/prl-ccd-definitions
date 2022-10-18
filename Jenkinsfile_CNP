@@ -63,8 +63,6 @@ withPipeline("nodejs", product, component) {
   }
 
   before('highleveldatasetup:preview') {
-    //yarnBuilder.yarn('setup')
-    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('setup')
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
@@ -75,8 +73,6 @@ withPipeline("nodejs", product, component) {
   }
 
   before('highleveldatasetup') {
-    //yarnBuilder.yarn('setup')
-    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('setup')
 
     stageWithAgent('Generate Family Private Law Case config', product) {
@@ -85,8 +81,6 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:preview') {
-    //yarnBuilder.yarn('setup')
-    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('setup')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
