@@ -17,7 +17,7 @@ module.exports = {
   async changeCaseName() {
     I.wait('5');
     await I.retry(retryCount).waitForText('Case Name');
-    I.wait('5');
+    I.wait('10');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Updated Case Name');
     await I.retry(retryCount).click('Continue');
@@ -40,6 +40,7 @@ module.exports = {
   },
 
   async runEventCaseName() {
+    I.wait('5');
     await this.triggerEvent('Case name');
     await this.changeCaseName();
     await I.retry(retryCount).click('Save and continue');
