@@ -7,7 +7,7 @@
     "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
     "ListElementCode": "haveYouAttendedMiam",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -18,7 +18,7 @@
     "ListElementCode": "willingnessToAttendMiam",
     "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.haveYouAttendedMiam=\"No\"",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -29,7 +29,7 @@
     "ListElementCode": "notWillingnessToAttendMiamText",
     "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.haveYouAttendedMiam=\"No\" AND respondentSolicitorWillingnessToAttendMiam.willingnessToAttendMiam=\"No\"",
     "FieldDisplayOrder": "2",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   }
 
 ]
