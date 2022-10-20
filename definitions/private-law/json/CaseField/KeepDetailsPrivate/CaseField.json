@@ -4,7 +4,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "keepContactDetailsPrivate",
     "Label": " ",
-    "FieldType": "PartyDetails",
+    "FieldType": "KeepDetailsPrivate",
     "SecurityClassification": "Public"
   },
   {
@@ -12,7 +12,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "keepContactDetailsPrivateOther",
     "Label": " ",
-    "FieldType": "PartyDetails",
+    "FieldType": "KeepDetailsPrivate",
     "SecurityClassification": "Public"
   },
   {
@@ -35,7 +35,7 @@
     "LiveFrom": "25/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "keepDetailsPrivateSummary",
-    "Label": "You have told us you want to keep these contact details private: <ul><li>Address</li><li>Email</li></ul>",
+    "Label": "You have told us you want to keep these contact details private: ${confidentialListDetails}",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -52,6 +52,22 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "courtAction",
     "Label": "The court will hold this information securely and will not share it with anyone except Cafcass (Children and Family Court Advisory and Support Service) or Cafcass CYMRU unless it is by order of the court.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "keepDetailsPrivateNoHeading",
+    "Label": "### The court will not keep your contact details private",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "noNeedOfPrivateDetailsLabel",
+    "Label": "You have told us you do not want to keep your contact details private from the other people in this application.\n",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   }

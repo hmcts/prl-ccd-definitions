@@ -5,7 +5,7 @@
     "ListElementCode": "otherPeopleKnowYourContactDetails",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "ElementLabel": "Do the other people named in this application (the applicants) \nknow any of your contact details?\n",
+    "ElementLabel": "*Do the other people named in this application (the applicants) \nknow any of your contact details?\n",
     "SecurityClassification": "Public"
   },
   {
@@ -13,7 +13,7 @@
     "ID": "KeepDetailsPrivate",
     "ListElementCode": "confidentialityHeading",
     "FieldType": "Label",
-    "ElementLabel": "### Do you want to keep your contact details private from the other people named in the application (the applicants)? ",
+    "ElementLabel": "* ### Do you want to keep your contact details private from the other people named in the application (the applicants)? ",
     "SecurityClassification": "Public"
   },
   {
@@ -47,8 +47,7 @@
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "ConfidentialityListEnum",
     "ElementLabel": " ",
-    "FieldShowCondition": "confidentiality=\"No\"",
+    "FieldShowCondition": "confidentiality=\"Yes\"",
     "SecurityClassification": "Public"
   }
-
 ]
