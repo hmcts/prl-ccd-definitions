@@ -376,18 +376,21 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
-  {
+ {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
     "Name": "International element",
     "Description": "Details of the international element of the case",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "DisplayOrder": 13,
     "SecurityClassification": "Public",
-    "ShowSummary": "N",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "21/11/2021",
