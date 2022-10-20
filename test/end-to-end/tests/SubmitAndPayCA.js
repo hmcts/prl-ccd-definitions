@@ -13,7 +13,6 @@ Scenario('Create a Case and Submit/Pay ', async I => {
   await I.otherPeopleInTheCase();
   await I.otherProceedingsEventC100();
   await I.runAttendingTheHearingEvent();
-  I.wait('5');
   await I.internationalElement();
   await I.litigationCapacity();
   await I.welshLanguageRequirement();

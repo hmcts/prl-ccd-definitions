@@ -14,7 +14,6 @@ module.exports = {
   },
   async internationalElement() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
-    I.wait('8');
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
     await I.retry(retryCount).click(this.fields.habitualResidentInOtherState);
     await I.retry(retryCount).fillField(this.fields.habitualResidentInOtherStateGiveReason, this.fields.textareaText);
