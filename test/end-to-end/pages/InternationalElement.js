@@ -13,6 +13,7 @@ module.exports = {
     requestToForeignAuthorityGiveReason: 'textarea[id="requestToForeignAuthorityGiveReason"]'
   },
   async internationalElement() {
+    I.wait('5');
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
     await I.retry(retryCount).click(this.fields.habitualResidentInOtherState);
