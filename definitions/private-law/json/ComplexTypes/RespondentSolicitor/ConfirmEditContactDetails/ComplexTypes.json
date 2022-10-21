@@ -1,10 +1,19 @@
 [
   {
     "LiveFrom": "20/10/2022",
+    "ID": "AddressCollection",
+    "ListElementCode": "nameAndDateOfBirthLabel",
+    "FieldType": "AddressUK",
+    "FieldShowCondition": "nameAndDateOfBirthLabel = \"DO_NOT_SHOW\"",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
     "ID": "ConfirmEditDetails",
     "ListElementCode": "nameAndDateOfBirthLabel",
     "FieldType": "Label",
-    "ElementLabel": "*Your name and date of birth",
+    "ElementLabel": "### *Your name and date of birth",
     "SecurityClassification": "Public"
   },
   {
@@ -52,7 +61,7 @@
     "ID": "ConfirmEditDetails",
     "ListElementCode": "address",
     "FieldType": "AddressUK",
-    "ElementLabel": "*Your address",
+    "ElementLabel": "### *Your address",
     "SecurityClassification": "Public"
   },
   {
@@ -68,7 +77,7 @@
     "ID": "ConfirmEditDetails",
     "ListElementCode": "addressDetails",
     "FieldType": "Collection",
-    "FieldTypeParameter": "AddressUK",
+    "FieldTypeParameter": "AddressCollection",
     "ElementLabel": " ",
     "HintText": "Give details of previous addresses you have lived at in the last 5 years, starting with your most recent address",
     "FieldShowCondition": "haveYouLivedAtAddress=\"No\"",
@@ -79,7 +88,7 @@
     "ID": "ConfirmEditDetails",
     "ListElementCode": "contactDetailsLabel",
     "FieldType": "Label",
-    "ElementLabel": "*Contact Details",
+    "ElementLabel": "### *Contact Details",
     "SecurityClassification": "Public"
   },
   {
