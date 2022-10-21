@@ -17,7 +17,8 @@ module.exports = {
     caseList: 'Case list',
     spinner: 'xuilib-loading-spinner',
     applicationType: '//*[@id="caseTypeOfApplication-C100"]',
-    reset: 'Reset'
+    reset: 'Reset',
+    caseNameXpath: '//*[@id="applicantCaseName"]'
   },
 
   navigate() {
@@ -51,6 +52,7 @@ module.exports = {
     I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     I.selectOption(this.fields.caseState, state);
+    I.fillField(this.fields.caseNameXpath, config.definition.caseName);
   },
 
   locateCase(caseId) {
