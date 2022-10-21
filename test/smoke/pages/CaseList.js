@@ -52,7 +52,7 @@ module.exports = {
     I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     I.selectOption(this.fields.caseState, state);
-    I.selectOption(this.fields.caseNameXpath, config.definition.caseName);
+    I.fillField(this.fields.caseNameXpath, config.definition.caseName);
   },
 
   locateCase(caseId) {
