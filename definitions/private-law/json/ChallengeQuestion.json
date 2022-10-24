@@ -1,22 +1,20 @@
 [
   {
-    "LiveFrom": "01/01/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "NoCChallenge",
     "DisplayOrder": "1",
-    "QuestionText": "Applicant's name",
+    "QuestionText": "Claimant name",
     "AnswerFieldType": "Text",
-    "Answer": "${applicantName}:[APPLICANTSOLICITORONE],${applicantName}:[RESPONDENTSOLICITORONE]",
+    "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITORONE],${applicantName}|${applicantName}:[RESPONDENTSOLICITORONE]",
     "QuestionId": "applicantName"
   },
   {
-    "LiveFrom": "01/01/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "NoCChallenge",
     "DisplayOrder": "2",
-    "QuestionText": "Your client's first name",
+    "QuestionText": "Clients title (if applicable), First and Last Name/Organisation Name",
     "AnswerFieldType": "Text",
-    "Answer": "${respondentName}:[APPLICANTSOLICITORONE],${respondentName}:[RESPONDENTSOLICITORONE]",
-    "QuestionId": "respondentName"
+    "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITORONE],${respondentName}:[RESPONDENTSOLICITORONE]",
+    "QuestionId": "clientName"
   }
 ]
