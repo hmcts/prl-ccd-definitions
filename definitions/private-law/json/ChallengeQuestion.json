@@ -6,17 +6,16 @@
     "DisplayOrder": "1",
     "QuestionText": "Applicant Name",
     "AnswerFieldType": "Text",
-    "Answer": "${applicantName}",
+    "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITOR],${applicantName}|${applicantName}:[RESPONDENTSOLICITOR]",
     "QuestionId": "applicantName"
   },
   {
-    "LiveFrom": "01/01/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "NoCChallenge",
     "DisplayOrder": "2",
-    "QuestionText": "Respondent Name",
+    "QuestionText": "Clients title (if applicable), First and Last Name/Organisation Name",
     "AnswerFieldType": "Text",
-    "Answer": "${applicantCaseName}",
+    "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITOR],${respondentName}:[RESPONDENTSOLICITOR]",
     "QuestionId": "clientName"
   }
 ]
