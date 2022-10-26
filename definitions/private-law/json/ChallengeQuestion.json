@@ -13,9 +13,18 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "NoCChallenge",
     "DisplayOrder": "2",
-    "QuestionText": "Clients title (if applicable), First and Last Name/Organisation Name",
+    "QuestionText": "Your client's first name",
     "AnswerFieldType": "Text",
     "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITOR],${applicantName}:[APPLICANTSOLICITOR]",
-    "QuestionId": "clientName"
+    "QuestionId": "clientFirstName"
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "ID": "NoCChallenge",
+    "DisplayOrder": "3",
+    "QuestionText": "Your client's last name",
+    "AnswerFieldType": "Text",
+    "Answer": "${applicantName}|${applicantName}:[APPLICANTSOLICITOR],${applicantName}:[APPLICANTSOLICITOR]",
+    "QuestionId": "clientLastName"
   }
 ]
