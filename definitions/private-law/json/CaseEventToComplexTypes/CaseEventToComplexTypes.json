@@ -610,5 +610,38 @@
     "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\"",
     "EventElementLabel": "",
     "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "respondentOrganisationPolicy",
+    "ListElementCode": "Organisation.OrganisationID",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "respondentOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
+    "DefaultValue": "[RESPONDENTSOLICITOR]",
+    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\"",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "respondentOrganisationPolicy",
+    "ListElementCode": "OrgPolicyReference",
+    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\"",
+    "EventElementLabel": "",
+    "DisplayContext": "OPTIONAL"
   }
 ]
