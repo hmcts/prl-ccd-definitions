@@ -1234,5 +1234,19 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "draftAnOrder",
+    "Name": "Draft an order",
+    "Description": "Draft an order",
+    "DisplayOrder": 161,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "Publish" : "False"
   }
 ]
