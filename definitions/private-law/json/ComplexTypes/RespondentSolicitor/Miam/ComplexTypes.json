@@ -1,0 +1,28 @@
+[
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "IsMiamAttended",
+    "ListElementCode": "didYouAttend",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Have you attended Miam?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "WillYouAttendMiam",
+    "ListElementCode": "willYouAttend",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Would you be willing to attend a Miam?",
+    "FieldShowCondition": "didYouAttendMiam.didYouAttend=\"No\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "WillYouAttendMiam",
+    "ListElementCode": "explainWhy",
+    "FieldType": "TextArea",
+    "ElementLabel": "Explain why?",
+    "FieldShowCondition": "willYouAttend=\"No\"",
+    "SecurityClassification": "Public"
+  }
+]
