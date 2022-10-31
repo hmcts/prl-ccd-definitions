@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'java-library'
     id 'jacoco'
+    id 'maven'
 }
 
 group 'com.github.hmcts'
@@ -14,6 +15,7 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven { url 'https://jitpack.io' }
+    jcenter()
 }
 
 task highLevelDataSetup(type: JavaExec) {
