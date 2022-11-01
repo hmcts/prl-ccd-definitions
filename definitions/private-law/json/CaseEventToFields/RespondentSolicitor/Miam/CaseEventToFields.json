@@ -3,11 +3,12 @@
     "LiveFrom": "26/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "respondentSolicitorMiam",
-    "CaseFieldID": "didYouAttendMiam",
-    "DisplayContext": "COMPLEX",
+    "CaseFieldID": "whatIsMiamPlaceHolder",
+    "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "didYouAttendMiam=\"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -18,7 +19,30 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "26/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "respondentSolicitorMiam",
+    "CaseFieldID": "didYouAttendMiam",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "26/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "respondentSolicitorMiam",
+    "CaseFieldID": "helpMiamCostsExemptionsPlaceHolder",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "didYouAttendMiam=\"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -29,7 +53,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageShowCondition": "didYouAttendMiam.didYouAttend=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -41,7 +65,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
   }
 ]
