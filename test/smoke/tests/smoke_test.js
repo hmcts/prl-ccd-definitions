@@ -7,7 +7,7 @@ Scenario('Sign in as local authority and create a case', async I => {
   I.grabCurrentUrl();
   I.searchForCasesWithId(caseId);
   I.grabCurrentUrl();
-  I.waitForElement({ xpath: `//ccd-search-result/table/tbody//tr//td//a[contains(@href,'/cases/case-details/${caseId}')]` });
+  I.waitForElement($("ccd-search-result .govuk-link"));
   I.grabCurrentUrl();
   I.seeCaseInSearchResult(caseId);
 });
