@@ -14,9 +14,41 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "SolicitorMiam",
     "CaseEventID": "respondentSolicitorMiam",
+    "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
+    "ListElementCode": "willingnessToAttendMiam",
+    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam=\"DO_NOT_SHOW\"",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "respondentSolicitorMiam",
+    "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
+    "ListElementCode": "notWillingnessToAttendMiamText",
+    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam=\"DO_NOT_SHOW\"",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "respondentSolicitorMiam",
+    "CaseFieldID": "respondentSolicitorWillingnessToAttendMiam",
+    "ListElementCode": "haveYouAttendedMiam",
+    "FieldShowCondition": "respondentSolicitorWillingnessToAttendMiam=\"DO_NOT_SHOW\"",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "respondentSolicitorMiam",
     "CaseFieldID": "respondentSolicitorWillingnessToAttendMiam",
     "ListElementCode": "willingnessToAttendMiam",
-    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.haveYouAttendedMiam=\"No\"",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -27,7 +59,7 @@
     "CaseEventID": "respondentSolicitorMiam",
     "CaseFieldID": "respondentSolicitorWillingnessToAttendMiam",
     "ListElementCode": "notWillingnessToAttendMiamText",
-    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.haveYouAttendedMiam=\"No\" AND respondentSolicitorWillingnessToAttendMiam.willingnessToAttendMiam=\"No\"",
+    "FieldShowCondition": "respondentSolicitorWillingnessToAttendMiam.willingnessToAttendMiam=\"No\"",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
   }
