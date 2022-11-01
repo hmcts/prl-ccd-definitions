@@ -9,6 +9,23 @@
   },
   {
     "LiveFrom": "20/10/2022",
+    "ID": "IsMiamAttended",
+    "ListElementCode": "whatIsMiamPlaceHolder",
+    "FieldType": "Text",
+    "FieldShowCondition": "didYouAttend=\"DO_NOT_SHOW\"",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "IsMiamAttended",
+    "ListElementCode": "whatIsMiamLabel",
+    "FieldType": "Label",
+    "ElementLabel": "${whatIsMiamPlaceHolder}",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
     "ID": "WillYouAttendMiam",
     "ListElementCode": "willYouAttend",
     "FieldType": "YesOrNo",
@@ -21,6 +38,24 @@
     "ListElementCode": "explainWhy",
     "FieldType": "TextArea",
     "ElementLabel": "Explain why?",
+    "FieldShowCondition": "willYouAttend=\"No\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "WillYouAttendMiam",
+    "ListElementCode": "helpMiamCostsExemptionsPlaceHolder",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "FieldShowCondition": "willYouAttend=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "ID": "WillYouAttendMiam",
+    "ListElementCode": "helpMiamCostsExemptionsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "${helpMiamCostsExemptionsPlaceHolder}",
     "FieldShowCondition": "willYouAttend=\"No\"",
     "SecurityClassification": "Public"
   }
