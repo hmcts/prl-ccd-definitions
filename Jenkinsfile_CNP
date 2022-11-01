@@ -46,8 +46,6 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
-  env.TESTS_FOR_ACCESSIBILITY = true
-  
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
