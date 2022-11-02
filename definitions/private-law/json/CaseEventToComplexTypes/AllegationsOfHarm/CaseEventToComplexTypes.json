@@ -1,11 +1,13 @@
 [
+
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "Behaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
-    "ListElementCode": "behavioursDescriptionLabel",
+    "ListElementCode": "domesticAbuseLabel",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "EventElementLabel": "",
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
@@ -16,9 +18,35 @@
     "ID": "Behaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
-    "ListElementCode": "typeOfAbuseDescriptionLabel",
+    "ListElementCode": "childAbuseLabel",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Behaviours",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "behaviours",
+    "ListElementCode": "behavioursDescriptionLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Behaviours",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "behaviours",
+    "ListElementCode": "typeOfAbuseDescriptionLabel",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -29,7 +57,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "typeOfAbuseList",
     "EventElementLabel": "         ",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -40,7 +68,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "abuseNatureDescription",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -51,7 +79,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -62,7 +90,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursNature",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -73,7 +101,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -85,7 +113,7 @@
     "ListElementCode": "behavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -97,7 +125,7 @@
     "ListElementCode": "behavioursApplicantHelpAction",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -108,7 +136,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "addNewBehaviourLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "READONLY"
   }
 ]
