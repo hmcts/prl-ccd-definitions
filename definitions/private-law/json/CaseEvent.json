@@ -376,7 +376,7 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
-  {
+ {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
@@ -970,7 +970,7 @@
     "Name": "Manage orders",
     "Description": "Manage orders",
     "DisplayOrder": 161,
-    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "CASE_ISSUE;GATE_KEEPING;CASE_HEARING;ALL_FINAL_ORDERS_ISSUED;CASE_WITHDRAWN",
     "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-order-email-notification",
@@ -1040,7 +1040,22 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "test",
+    "Name": "Test",
+    "Description": "test and submit",
+    "DisplayOrder": 22,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/test-about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/test-about-to-submit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue"
   },
   {
@@ -1186,6 +1201,19 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
+    "ID": "reviewAndSubmit",
+    "Name": "Citizen Response C7",
+    "Description": "Citizen Response C7",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
     "ID": "linkCitizenAccount",
     "Name": "Link citizen account",
     "Description": "Citizen linked their account to the case with access code",
@@ -1205,6 +1233,41 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondent-responded-to-case",
+    "Name": "Respondent responded to case",
+    "Description": "Respondent responded to case",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "19/10/22",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcass-document-upload",
+    "Name": "Document uploaded by cafcass",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "19/10/22",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "create-case-privatelaw-bs",
+    "Name": "Create case by bulk scan api",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
