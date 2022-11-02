@@ -62,6 +62,7 @@ async function runAccessibility(url, page) {
 }
 
 function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityErrorsOnThePage) {
+  console.log(`analyzing the accessibilityErrorsOnThePage    ${accessibilityErrorsOnThePage}`);
   const isPageAccessible = accessibilityErrorsOnThePage.length === 0 ? result.PASSED : result.FAILED;
 
   const urlArr = url.split('/');
