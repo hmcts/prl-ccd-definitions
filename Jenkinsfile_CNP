@@ -5,6 +5,13 @@
 String product = "prl"
 String component = "ccd-definitions"
 
+properties([
+        parameters([
+                string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
+                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
+        ])
+])
+
 def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
@@ -46,6 +53,10 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
+  env.TEST_URL = params.XUI_WEB_URL
+  env.test_environment = params.RUNNING_ENV
+  env.TESTS_FOR_ACCESSIBILITY = true
+
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
