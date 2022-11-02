@@ -262,7 +262,18 @@ em-ccdorc:
     image: hmctspublic.azurecr.io/em/ccdorc:latest
     ingressHost: em-ccdorc-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
-    keyVaults: []
+    keyVaults:
+      em-ccdorc:
+        resourceGroup: em-ccdorc
+        secrets:
+          - name: AppInsightsInstrumentationKey
+            alias: APPINSIGHTS_INSTRUMENTATIONKEY
+          - name: microservicekey-em-ccd-orchestrator
+            alias: S2S_KEY
+          - name: notification-api-key
+            alias: NOTIFICATION_API_KEY
+          - name: app-insights-connection-string
+            alias: app-insights-connection-string
     environment:
       IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
       OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
@@ -271,4 +282,3 @@ em-ccdorc:
       DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
       CCD_DATA_API_URL: http://prl-ccd-definitions-pr-643-ccd-data-store-api
       CALLBACK_DOMAIN: em-ccdorc-${SERVICE_FQDN}
-      S2S_KEY: ${EM_CCDORC_S2S_KEY}
