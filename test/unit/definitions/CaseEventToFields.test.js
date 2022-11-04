@@ -1,6 +1,6 @@
 const { expect, assert } = require('chai');
-//const { find, uniqWith } = require('lodash');
-//const { isPositiveNumber, whenPopulated, isCaseEventToFieldDuplicated } = require('../utils/utils');
+const { find, uniqWith } = require('lodash');
+const { isPositiveNumber, whenPopulated, isCaseEventToFieldDuplicated } = require('../utils/utils');
 const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataProvider');
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
@@ -64,27 +64,27 @@ function assertHasOnlyValidFieldIds(caseEventToFieldsFile, caseFieldFile) {
 //   }
 // }
 
-//function assertOrderField(row, field) {
-  //try {
-    //whenPopulated(row[field], 'number').expect(isPositiveNumber());
-  //} catch (error) {
-    //console.log(`Invalid ${field} in `, row);
-    //console.error(error);
-    //throw error;
-  //}
-//}
+function assertOrderField(row, field) {
+  try {
+    whenPopulated(row[field], 'number').expect(isPositiveNumber());
+  } catch (error) {
+    console.log(`Invalid ${field} in `, row);
+    console.error(error);
+    throw error;
+  }
+}
 
-//function assertPageFieldDisplayOrder(row) {
-  //assertOrderField(row, 'PageFieldDisplayOrder');
-//}
+function assertPageFieldDisplayOrder(row) {
+  assertOrderField(row, 'PageFieldDisplayOrder');
+}
 
-//function assertPageDisplayOrder(row) {
-  //assertOrderField(row, 'PageDisplayOrder');
-//}
+function assertPageDisplayOrder(row) {
+  assertOrderField(row, 'PageDisplayOrder');
+}
 
-//function assertPageColumnNumber(row) {
- // assertOrderField(row, 'PageColumnNumber');
-//}
+function assertPageColumnNumber(row) {
+  assertOrderField(row, 'PageColumnNumber');
+}
 
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
@@ -102,17 +102,17 @@ describe('CaseEventToFields ', () => {
   });
 
   it('should not contain duplicate field IDs', () => {
-    //const uniqResult = uniqWith(CaseEventToFieldData, isCaseEventToFieldDuplicated('CaseFieldID'));
-   // expect(uniqResult).to.eql(CaseEventToFieldData);
+    const uniqResult = uniqWith(CaseEventToFieldData, isCaseEventToFieldDuplicated('CaseFieldID'));
+    expect(uniqResult).to.eql(CaseEventToFieldData);
   });
 
-  //it('should contain valid order fields', () => {
-    //CaseEventToFieldData.forEach(row => {
-      //assertPageFieldDisplayOrder(row);
-     // assertPageDisplayOrder(row);
-   //   assertPageColumnNumber(row);
-    //});
-  //});
+  it('should contain valid order fields', () => {
+    CaseEventToFieldData.forEach(row => {
+      assertPageFieldDisplayOrder(row);
+      assertPageDisplayOrder(row);
+      assertPageColumnNumber(row);
+    });
+  });
 
   // describe('CallBackURLMidEvent', () => {
   //   it('(if defined) is added to the first field on page', () => {
