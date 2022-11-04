@@ -1,6 +1,6 @@
 const { expect, assert } = require('chai');
-const { find, uniqWith } = require('lodash');
-const { isPositiveNumber, whenPopulated, isCaseEventToFieldDuplicated } = require('../utils/utils');
+//const { find, uniqWith } = require('lodash');
+//const { isPositiveNumber, whenPopulated, isCaseEventToFieldDuplicated } = require('../utils/utils');
 const { CaseEventToFieldData, ccdData, caseFieldata } = require('../utils/dataProvider');
 
 function assertHasOnlyValidEventIds(caseEventToFieldsFile, caseEventFile) {
