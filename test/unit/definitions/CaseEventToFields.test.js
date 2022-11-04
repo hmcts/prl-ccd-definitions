@@ -64,15 +64,15 @@ function assertHasOnlyValidFieldIds(caseEventToFieldsFile, caseFieldFile) {
 //   }
 // }
 
-function assertOrderField(row, field) {
-  try {
-    whenPopulated(row[field], 'number').expect(isPositiveNumber());
-  } catch (error) {
-    console.log(`Invalid ${field} in `, row);
-    console.error(error);
-    throw error;
-  }
-}
+//function assertOrderField(row, field) {
+  //try {
+    //whenPopulated(row[field], 'number').expect(isPositiveNumber());
+  //} catch (error) {
+    //console.log(`Invalid ${field} in `, row);
+    //console.error(error);
+    //throw error;
+  //}
+//}
 
 function assertPageFieldDisplayOrder(row) {
   assertOrderField(row, 'PageFieldDisplayOrder');
