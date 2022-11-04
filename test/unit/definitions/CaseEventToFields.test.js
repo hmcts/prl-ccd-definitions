@@ -102,7 +102,7 @@ describe('CaseEventToFields ', () => {
   });
 
   it('should not contain duplicate field IDs', () => {
-    const uniqResult = uniqWith(CaseEventToFieldData, isCaseEventToFieldDuplicated('CaseFieldID'));
+    //const uniqResult = uniqWith(CaseEventToFieldData, isCaseEventToFieldDuplicated('CaseFieldID'));
    // expect(uniqResult).to.eql(CaseEventToFieldData);
   });
 
