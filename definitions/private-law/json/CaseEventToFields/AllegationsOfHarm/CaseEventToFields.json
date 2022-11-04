@@ -69,8 +69,10 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "physicalAbuseVictim",
+    "ListElementCode": "allegationsOfHarmDomesticAbuse",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "PageID": 3,
@@ -81,8 +83,10 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
     "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "emotionalAbuseVictim",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "ListElementCode": "emotionalAbuseVictim",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "PageID": 3,
@@ -93,8 +97,10 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
     "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "psychologicalAbuseVictim",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "ListElementCode": "psychologicalAbuseVictim",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "PageID": 3,
@@ -105,8 +111,10 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
     "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "sexualAbuseVictim",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "ListElementCode": "sexualAbuseVictim",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "PageID": 3,
@@ -117,8 +125,10 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
     "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "financialAbuseVictim",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "ListElementCode": "financialAbuseVictim",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
     "PageID": 3,
@@ -126,6 +136,33 @@
     "PageFieldDisplayOrder": 7,
     "ShowSummaryChangeOption": "Yes"
   },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "AllegationsOfHarmDomesticAbuse",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "ListElementCode": "addNewDomesticAbuseBehaviourLabel",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "8",
+    "DisplayContext": "READONLY"
+  },
+
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "AllegationsOfHarmDomesticAbuse",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" ",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Yes"
+  },
+
+
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -763,6 +800,21 @@
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
+
+
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuse",
+    "DisplayContext": "COMPLEX",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
