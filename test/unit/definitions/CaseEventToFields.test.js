@@ -74,17 +74,17 @@ function assertHasOnlyValidFieldIds(caseEventToFieldsFile, caseFieldFile) {
   //}
 //}
 
-function assertPageFieldDisplayOrder(row) {
-  assertOrderField(row, 'PageFieldDisplayOrder');
-}
+//function assertPageFieldDisplayOrder(row) {
+  //assertOrderField(row, 'PageFieldDisplayOrder');
+//}
 
-function assertPageDisplayOrder(row) {
-  assertOrderField(row, 'PageDisplayOrder');
-}
+//function assertPageDisplayOrder(row) {
+  //assertOrderField(row, 'PageDisplayOrder');
+//}
 
-function assertPageColumnNumber(row) {
-  assertOrderField(row, 'PageColumnNumber');
-}
+//function assertPageColumnNumber(row) {
+ // assertOrderField(row, 'PageColumnNumber');
+//}
 
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
@@ -106,13 +106,13 @@ describe('CaseEventToFields ', () => {
    // expect(uniqResult).to.eql(CaseEventToFieldData);
   });
 
-  it('should contain valid order fields', () => {
-    CaseEventToFieldData.forEach(row => {
-      assertPageFieldDisplayOrder(row);
-      assertPageDisplayOrder(row);
-      assertPageColumnNumber(row);
-    });
-  });
+  //it('should contain valid order fields', () => {
+    //CaseEventToFieldData.forEach(row => {
+      //assertPageFieldDisplayOrder(row);
+     // assertPageDisplayOrder(row);
+   //   assertPageColumnNumber(row);
+    //});
+  //});
 
   // describe('CallBackURLMidEvent', () => {
   //   it('(if defined) is added to the first field on page', () => {
