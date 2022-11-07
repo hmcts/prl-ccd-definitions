@@ -636,10 +636,10 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" OR allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -800,6 +800,21 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N"
   },
+
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childAbuseBehaviours",
+    "DisplayContext": "COMPLEX",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+
+
   {
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
