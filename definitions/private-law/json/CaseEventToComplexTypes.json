@@ -2292,6 +2292,31 @@
     "DisplayContext": "OPTIONAL"
   },
 
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ChildAbuseBehaviours",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childAbuseBehaviours",
+    "ListElementCode": "childAbuseLabel",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ChildAbuseBehaviours",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childAbuseBehaviours",
+    "ListElementCode": "childAbuseList",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL"
+  },
+
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -2299,17 +2324,6 @@
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "childAbuseBehaviours",
     "ListElementCode": "abuseNatureDescription",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ChildAbuseBehaviours",
-    "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "behavioursStartDateAndLength",
     "EventElementLabel": "",
     "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
@@ -2320,7 +2334,7 @@
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "behavioursNature",
+    "ListElementCode": "behavioursStartDateAndLength",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
@@ -2331,9 +2345,20 @@
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "behavioursApplicantSoughtHelp",
+    "ListElementCode": "behavioursNature",
     "EventElementLabel": "",
     "FieldDisplayOrder": "7",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ChildAbuseBehaviours",
+    "CaseEventID": "allegationsOfHarm",
+    "CaseFieldID": "childAbuseBehaviours",
+    "ListElementCode": "behavioursApplicantSoughtHelp",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -2345,7 +2370,7 @@
     "ListElementCode": "behavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -2357,7 +2382,7 @@
     "ListElementCode": "behavioursApplicantHelpAction",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
 
