@@ -36,7 +36,7 @@ module.exports = {
     await I.retry(retryCount).checkOption(this.fields.deferringApplicationIfNotImmediate);
     await I.retry(retryCount).checkOption(this.fields.reasonForOrderWithoutGivingNotice);
     await I.fillField(this.fields.reasonForOrderWithoutGivingNoticeFurtherDetails, 'Further Optional Details');
-    I.wait('2');
+    I.wait('5');
     await I.click(this.fields.submit);
     I.wait('3');
     await I.retry(retryCount).checkOption(this.fields.selectBailConditionYes);
@@ -55,6 +55,7 @@ module.exports = {
   async fillDetailsWithoutNoticeOrderHappyPath() {
     await this.triggerEvent();
     await this.fillDetailsWithoutNoticeOrder();
+    I.wait('5');
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
