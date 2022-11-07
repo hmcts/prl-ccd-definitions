@@ -34,8 +34,8 @@ module.exports = {
     behaviours_0_behavioursApplicantSoughtHelp: '//*[@id="behaviours_0_behavioursApplicantSoughtHelp_Yes"]',
 
     // OtherConcerns Page
-    allegationsOfHarmOtherConcerns: '//*[@id="allegationsOfHarmOtherConcerns_Yes"]',
-    allegationsOfHarmOtherConcernsDetails: '//*[@id="allegationsOfHarmOtherConcernsDetails"]',
+   // allegationsOfHarmOtherConcerns: '//*[@id="allegationsOfHarmOtherConcerns_Yes"]',
+    //allegationsOfHarmOtherConcernsDetails: '//*[@id="allegationsOfHarmOtherConcernsDetails"]',
     allegationsOfHarmOtherConcernsCourtActions: '//*[@id="allegationsOfHarmOtherConcernsCourtActions"]'
   },
 
@@ -110,9 +110,9 @@ module.exports = {
   },
   async otherConcerns() {
     await I.retry(retryCount).waitForText('Other concerns');
-    await I.retry(retryCount).click(this.fields.allegationsOfHarmOtherConcerns);
+    //await I.retry(retryCount).click(this.fields.allegationsOfHarmOtherConcerns);
     I.wait('2');
-    await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsDetails, this.fields.textareaText);
+    //await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsDetails, this.fields.textareaText);
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsCourtActions, this.fields.textareaText);
 
