@@ -18,7 +18,7 @@
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
     "ListElementCode": "domesticAbuseLabel",
-    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" OR allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
@@ -30,7 +30,7 @@
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
     "ListElementCode": "domesticAbuseList",
-    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" OR allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "EventElementLabel": "         ",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -41,8 +41,7 @@
     "ID": "Behaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
-    "ListElementCode": "childAbuseLabel",
-    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "ListElementCode": "abuseNatureDescription",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
@@ -53,32 +52,9 @@
     "ID": "Behaviours",
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "behaviours",
-    "ListElementCode": "childAbuseList",
-    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
-    "EventElementLabel": "         ",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "Behaviours",
-    "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "behaviours",
-    "ListElementCode": "abuseNatureDescription",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "Behaviours",
-    "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -89,7 +65,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursNature",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -100,7 +76,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "behavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -112,7 +88,7 @@
     "ListElementCode": "behavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -124,7 +100,7 @@
     "ListElementCode": "behavioursApplicantHelpAction",
     "FieldShowCondition": "behaviours.behavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -135,7 +111,7 @@
     "CaseFieldID": "behaviours",
     "ListElementCode": "addNewBehaviourLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "READONLY"
   },
 
@@ -159,7 +135,7 @@
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "childAbuseBehaviours",
     "ListElementCode": "domesticAbuseLabel",
-    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" OR allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
@@ -171,7 +147,7 @@
     "CaseEventID": "allegationsOfHarm",
     "CaseFieldID": "childAbuseBehaviours",
     "ListElementCode": "domesticAbuseList",
-    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo=\"Yes\" OR allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "EventElementLabel": "         ",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -181,8 +157,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarm",
-    "CaseFieldID": "behaviours",
-    "ListElementCode": "childAbuseBehaviours",
+    "CaseFieldID": "childAbuseBehaviours",
+    "ListElementCode": "childAbuseLabel",
     "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
