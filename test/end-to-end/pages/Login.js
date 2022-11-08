@@ -7,7 +7,6 @@ const retryCount = 3;
 const baseUrl = config.baseUrl;
 
 module.exports = {
-
   fields: {
     email: '#username',
     password: '#password',
@@ -31,15 +30,7 @@ module.exports = {
   },
   
     async loginAsCourtAdminUserOne() {
-     //remove 
-    //await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-      //remove
-      // await I.retry(retryCount).click('#cookie-accept-submit');
-      // await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
-      // await I.runAccessibilityTest();
-      // await I.retry(retryCount).seeElement('#authorizeCommand');
-// till here
       await I.fillField(this.fields.email, config.testCourtAdminUserOne.email);
       await I.fillField(this.fields.password, config.testCourtAdminUserOne.password);
     } catch {
