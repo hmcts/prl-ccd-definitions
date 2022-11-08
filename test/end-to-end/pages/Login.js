@@ -31,13 +31,15 @@ module.exports = {
   },
   
     async loginAsCourtAdminUserOne() {
-      
-//     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+     //remove 
+    //await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-//       await I.retry(retryCount).click('#cookie-accept-submit');
-//       await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
-//       await I.runAccessibilityTest();
-//       await I.retry(retryCount).seeElement('#authorizeCommand');
+      //remove
+      // await I.retry(retryCount).click('#cookie-accept-submit');
+      // await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
+      // await I.runAccessibilityTest();
+      // await I.retry(retryCount).seeElement('#authorizeCommand');
+// till here
       await I.fillField(this.fields.email, config.testCourtAdminUserOne.email);
       await I.fillField(this.fields.password, config.testCourtAdminUserOne.password);
     } catch {

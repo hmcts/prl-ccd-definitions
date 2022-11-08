@@ -15,8 +15,19 @@ Scenario('Create a Case as a Solicitor, and continue with FL401 Case Events as C
   await I.statementOfTruth();
   I.wait('2');
   await I.signOut();
+  I.wait('5');
   await I.loginAsCourtAdminUserOne();
   I.wait('5');
   await I.amOnPage(createdCaseUrl);
-
+  I.wait('5');
+  await I.addCaseNumber();
+  I.wait('5');
+  await I.addNewGateKeeper();
+  I.wait('5');
+  await I.runEventHappyPath();
+  I.wait('5');
+  await I.runManageDocuments();
+  I.wait('5');
+  await I.runServiceApplication();
+  I.wait('5');
 }).retry({ retries: 3, minTimeout: 30000 });

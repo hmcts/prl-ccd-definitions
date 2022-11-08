@@ -30,6 +30,10 @@ const caseList = require('./pages/CaseList');
 const signOut = require('./pages/Logout');
 const SendAndReplyMessages = require('./pages/SendAndReplyMessages');
 const SoT = require('./pages/DOScreens/StatementOfTruth');
+const AddCaseNumber = require('./pages/AddCaseNumber');
+const SendToGateKeeper = require('./pages/SendToGateKeeper');
+const ManageOrdersUpload = require('./pages/ManageOrders');
+const ServiceOfApplication = require('./pages/ServiceOfApplication');
 
 module.exports = () => {
   return actor({
@@ -161,6 +165,18 @@ module.exports = () => {
     },
     sendMessage() {
       return SendAndReplyMessages.sendMessage();
+    },
+    addCaseNumber() {
+      return AddCaseNumber.AddingCaseNumber();
+    },
+    addNewGateKeeper() {
+      return SendToGateKeeper.AddNewGateKeeper();
+    },
+    runEventHappyPath() {
+      return ManageOrdersUpload.runEventHappyPath();
+    },
+    runServiceApplication() {
+      return ServiceOfApplication .runServiceApplication() 
     }
   });
 };
