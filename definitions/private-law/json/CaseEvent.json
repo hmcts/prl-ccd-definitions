@@ -1236,6 +1236,20 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
+    "LiveFrom": "31/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createBundle",
+    "Name": "Create a bundle",
+    "Description": "Create a bundle in the case",
+    "DisplayOrder": 24,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "hearings-notification",
