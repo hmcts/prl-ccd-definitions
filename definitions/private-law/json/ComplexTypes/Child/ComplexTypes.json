@@ -1,6 +1,23 @@
 [
   {
     "LiveFrom": "01/01/2022",
+    "ID": "ApplicantRelatedToChild",
+    "ListElementCode": "selectedApplicantName",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Applicant Name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "ApplicantRelatedToChild",
+    "ListElementCode": "applicantRelationWithChild",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "RelationshipsEnum",
+    "ElementLabel": "*What is the applicant's relationship to child?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2022",
     "ID": "OtherPersonWhoLivesWithChild",
     "ListElementCode": "firstName",
     "FieldType": "Text",
@@ -99,6 +116,16 @@
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "OrderAppliedFor",
     "ElementLabel": "*Order applied for",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Child",
+    "ListElementCode": "applicantsRelatedToChild",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ApplicantRelatedToChild",
+    "ElementLabel": "Realtions",
     "SecurityClassification": "Public"
   },
   {
