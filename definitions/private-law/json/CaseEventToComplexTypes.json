@@ -1183,9 +1183,20 @@
     "ID": "Child",
     "CaseEventID": "childDetails",
     "CaseFieldID": "children",
-    "ListElementCode": "otherApplicantsRelationshipToChild",
+    "ListElementCode": "applicantRelations",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Child",
+    "CaseEventID": "childDetails",
+    "CaseFieldID": "children",
+    "ListElementCode": "otherApplicantsRelationshipToChild",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "children.applicantsRelationshipToChild=\"Other\""
   },
@@ -1197,7 +1208,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "respondentsRelationshipToChild",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1208,7 +1219,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "otherRespondentsRelationshipToChild",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "children.respondentsRelationshipToChild=\"Other\""
   },
@@ -1220,7 +1231,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "childLiveWith",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1231,7 +1242,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "otherPersonWhoLivesWithChild",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "13",
     "FieldShowCondition": "children.childLiveWith CONTAINS \"AnotherPerson\"",
     "DisplayContext": "OPTIONAL"
   },
@@ -1243,7 +1254,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "isChildCurrentAddressKnown",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "13",
+    "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "children.childLiveWith CONTAINS \"AnotherPerson\""
   },
@@ -1255,7 +1266,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "14",
+    "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "children.isChildCurrentAddressKnown=\"Yes\" AND children.childLiveWith CONTAINS \"AnotherPerson\""
   },
@@ -1267,7 +1278,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.AddressLine1",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "15",
+    "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1278,7 +1289,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.AddressLine2",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "16",
+    "FieldDisplayOrder": "17",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1289,7 +1300,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.AddressLine3",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "17",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1300,7 +1311,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.PostTown",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1311,7 +1322,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.County",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1322,7 +1333,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.PostCode",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1333,7 +1344,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "address.Country",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1344,7 +1355,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "isChildAddressConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "22",
+    "FieldDisplayOrder": "23",
     "FieldShowCondition": "children.isChildCurrentAddressKnown=\"Yes\" AND children.childLiveWith CONTAINS \"AnotherPerson\"",
     "DisplayContext": "OPTIONAL"
   },
@@ -1356,7 +1367,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "childUnsupervisedTime",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1367,7 +1378,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "childContactFromOtherRecipients",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1378,7 +1389,7 @@
     "CaseFieldID": "children",
     "ListElementCode": "addNewChildLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "MANDATORY"
   },
   {
