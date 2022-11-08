@@ -12,10 +12,10 @@ module.exports = {
     async  ServiceConfirmRecipients () {
         I.wait('5');
         await I.retry(retryCount).click('Continue');
-        // await I.retry(retryCount).checkOption('#confirmRecipients_applicantsList-applicantOrApplicantSolicitor');
-        // await I.retry(retryCount).checkOption('#confirmRecipients_applicantsList-respondentOrRespondentSolicitor');
-        // await I.retry(retryCount).checkOption('#confirmRecipients_otherPeopleList-xyz');
-        // await I.retry(retryCount).checkOption('#confirmRecipients_otherPeopleList-abc');
+        await I.retry(retryCount).checkOption('#confirmRecipients_applicantsList-applicantOrApplicantSolicitor');
+        await I.retry(retryCount).checkOption('#confirmRecipients_applicantsList-respondentOrRespondentSolicitor');
+        await I.retry(retryCount).checkOption('#confirmRecipients_otherPeopleList-xyz');
+        await I.retry(retryCount).checkOption('#confirmRecipients_otherPeopleList-abc');
         await I.retry(retryCount).click('Continue');
         I.wait('2');
         await I.retry(retryCount).click(this.fields.submit);
