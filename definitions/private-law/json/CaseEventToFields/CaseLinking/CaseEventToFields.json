@@ -4,13 +4,12 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "createCaseLink",
     "CaseFieldID": "caseLinks",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "componentLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "Publish" : "False"
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -22,22 +21,19 @@
     "FieldShowCondition": "",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes",
-    "Publish" : "False"
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "maintainCaseLink",
     "CaseFieldID": "caseLinks",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "componentLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "Publish" : "False"
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -49,8 +45,28 @@
     "FieldShowCondition": "",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes",
-    "Publish" : "False"
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "08/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createCaseLink",
+    "CaseFieldID": "componentLauncherLabel",
+    "DisplayContext": "READONLY",
+    "PageID": "createCaseLink",
+    "PageLabel": " ",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "08/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "maintainCaseLink",
+    "CaseFieldID": "componentLauncherLabel",
+    "DisplayContext": "READONLY",
+    "PageID": "maintainCaseLink",
+    "PageLabel": " ",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
   }
 ]
