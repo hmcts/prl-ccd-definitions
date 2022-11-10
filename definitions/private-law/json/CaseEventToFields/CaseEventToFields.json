@@ -279,7 +279,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 9,
-    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
     "RetainHiddenValue": "Y"
   },
   {
@@ -287,7 +287,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "createFlags",
     "CaseFieldID": "flagLauncher",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "DisplayContextParameter": "#ARGUMENT(CREATE)",
     "PageID": 1,
     "PageDisplayOrder": 1,
@@ -302,7 +302,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
-    "FieldShowCondition": "caseTypeOfApplication= \"DO_NOT_SHOW\"",
+    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
     "RetainHiddenValue": "Y"
   },
   {
@@ -310,10 +310,34 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageFlags",
     "CaseFieldID": "flagLauncher",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "DisplayContextParameter": "#ARGUMENT(UPDATE)",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 12
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "flagLauncherLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": "createFlags",
+    "PageLabel": " ",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "flagLauncherLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": "manageFlags",
+    "PageLabel": " ",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
   }
 ]
