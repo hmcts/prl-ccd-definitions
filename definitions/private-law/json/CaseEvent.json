@@ -376,7 +376,7 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
- {
+  {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
@@ -1309,7 +1309,8 @@
     "DisplayOrder": 24,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundleCallback",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -1336,5 +1337,49 @@
     "ShowSummary": "N",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
-  }
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizen-case-update",
+    "Name": "Update case by citizen",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenCreate",
+    "Name": "Citizen Create Case",
+    "Description": "Apply for a court order to make arrangements for a child or resolve a dispute about their upbringing",
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-submission-callback/submitted",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizen-case-submit",
+    "Name": "Submit Citizen Case",
+    "Description": "Submit Citizen Case",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+  "LiveFrom": "10/11/2022",
+  "CaseTypeID": "PRLAPPS",
+  "ID": "asyncStitchingComplete",
+  "Name": "Stitching bundle complete",
+  "DisplayOrder": 25,
+  "PreConditionState(s)": "*",
+  "PostConditionState": "*",
+  "SecurityClassification": "Public",
+  "ShowSummary": "Y",
+  "ShowEventNotes": "N"
+}
 ]
