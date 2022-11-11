@@ -1309,7 +1309,8 @@
     "DisplayOrder": 24,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundleCallback",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -1368,5 +1369,17 @@
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
-  }
+  },
+  {
+  "LiveFrom": "10/11/2022",
+  "CaseTypeID": "PRLAPPS",
+  "ID": "asyncStitchingComplete",
+  "Name": "Stitching bundle complete",
+  "DisplayOrder": 25,
+  "PreConditionState(s)": "*",
+  "PostConditionState": "*",
+  "SecurityClassification": "Public",
+  "ShowSummary": "Y",
+  "ShowEventNotes": "N"
+}
 ]
