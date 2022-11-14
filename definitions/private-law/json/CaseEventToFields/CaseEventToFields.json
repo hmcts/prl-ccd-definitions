@@ -274,59 +274,23 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "createFlags",
-    "CaseFieldID": "flagLauncherLabel",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
-    "PageID": "createFlags",
-    "PageLabel": " ",
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "N"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageFlags",
-    "CaseFieldID": "flagLauncherLabel",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
-    "PageID": "manageFlags",
-    "PageLabel": " ",
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "N"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "createFlags",
-    "CaseFieldID": "caseFlags",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
-    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
-    "RetainHiddenValue": "Y"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "createFlags",
     "CaseFieldID": "flagLauncher",
     "DisplayContext": "MANDATORY",
     "DisplayContextParameter": "#ARGUMENT(CREATE)",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10
+    "PageFieldDisplayOrder": 1
   },
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageFlags",
+    "CaseEventID": "createFlags",
     "CaseFieldID": "caseFlags",
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
-    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
     "RetainHiddenValue": "Y"
   },
   {
@@ -338,6 +302,18 @@
     "DisplayContextParameter": "#ARGUMENT(UPDATE)",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 12
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "caseFlags",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
   }
 ]
