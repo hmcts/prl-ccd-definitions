@@ -1281,10 +1281,11 @@
     "DisplayOrder": 70,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": ""
+    "EndButtonLabel": "Create Case Link",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -1295,10 +1296,11 @@
     "DisplayOrder": 71,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": ""
+    "EndButtonLabel": "Maintain Case Links",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "31/10/2022",
@@ -1309,8 +1311,7 @@
     "DisplayOrder": 24,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
     "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundleCallback",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
