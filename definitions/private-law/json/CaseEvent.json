@@ -1263,8 +1263,7 @@
     "Name": "Submit Citizen Case",
     "Description": "Submit Citizen Case",
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/c100Rebuild-generate-document-submit-application",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/c100Rebuild-citizen-application-send-notification",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
