@@ -468,6 +468,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "behaviours",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 41
   },
   {
@@ -477,9 +478,21 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
+    "CaseFieldID": "childAbuseBehaviours",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 42
+  },
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 2,
     "CaseFieldID": "allegationsOfHarmOtherConcernsTable",
     "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 42
+    "TabFieldDisplayOrder": 43
   },
   {
     "LiveFrom": "08/11/2021",
@@ -490,7 +503,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "allegationsOfHarmYesNo",
     "FieldShowCondition": "allegationsOfHarmYesNo = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 43
+    "TabFieldDisplayOrder": 44
   },
   {
     "LiveFrom": "08/11/2021",
@@ -501,7 +514,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "claimingExemptionMiam",
     "FieldShowCondition": "claimingExemptionMiam = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 44
+    "TabFieldDisplayOrder": 45
   },
   {
     "LiveFrom": "08/11/2021",
@@ -512,7 +525,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "applicantAttendedMiam",
     "FieldShowCondition": "applicantAttendedMiam = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 45
+    "TabFieldDisplayOrder": 46
   },
   {
     "LiveFrom": "08/11/2021",
@@ -523,7 +536,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "habitualResidentInOtherState",
     "FieldShowCondition": "habitualResidentInOtherState = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 46
+    "TabFieldDisplayOrder": 47
   },
   {
     "LiveFrom": "08/11/2021",
@@ -534,7 +547,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "isWelshNeeded",
     "FieldShowCondition": "isWelshNeeded = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 47
+    "TabFieldDisplayOrder": 48
   },
   {
     "LiveFrom": "08/11/2021",
@@ -545,7 +558,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "ordersApplyingFor",
     "FieldShowCondition": "ordersApplyingFor = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 48
+    "TabFieldDisplayOrder": 49
   },
   {
     "LiveFrom": "08/11/2021",
@@ -556,7 +569,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "litigationCapacityFactors",
     "FieldShowCondition": "litigationCapacityFactors = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 49
+    "TabFieldDisplayOrder": 50
   },
   {
     "LiveFrom": "08/11/2021",
@@ -567,7 +580,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "welshLanguageRequirement",
     "FieldShowCondition": "welshLanguageRequirement = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 50
+    "TabFieldDisplayOrder": 51
   },
   {
     "LiveFrom": "08/11/2021",
@@ -578,7 +591,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "isCaseUrgent",
     "FieldShowCondition": "isCaseUrgent = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 51
+    "TabFieldDisplayOrder": 52
   },
   {
     "LiveFrom": "08/11/2021",
@@ -589,7 +602,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "caseTypeOfApplication",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 52
+    "TabFieldDisplayOrder": 53
   },
   {
     "LiveFrom": "08/11/2021",
@@ -600,7 +613,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "applicants",
     "FieldShowCondition": "applicants = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 53
+    "TabFieldDisplayOrder": 54
   },
   {
     "LiveFrom": "08/11/2021",
@@ -611,7 +624,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "respondents",
     "FieldShowCondition": "respondents = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 54
+    "TabFieldDisplayOrder": 55
   },
   {
     "LiveFrom": "08/11/2021",
@@ -622,7 +635,7 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "children",
     "FieldShowCondition": "children = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 55
+    "TabFieldDisplayOrder": 56
   },
   {
     "LiveFrom": "08/11/2021",
@@ -633,6 +646,6 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "othersToNotify",
     "FieldShowCondition": "othersToNotify = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 56
+    "TabFieldDisplayOrder": 57
   }
 ]
