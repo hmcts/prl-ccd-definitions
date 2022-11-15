@@ -12,7 +12,7 @@ Scenario('Create a Case as a Solicitor, and continue with FL401 Case Events as C
   await I.runRelationshipToRespondent();
   await I.runRespondentBehaviour();
   await I.runTheHomeHappyPath();
-  await I.statementOfTruth();
+  await I.submitStatementOfTruth();
   I.wait('2');
   await I.logOut();
   I.wait('5');
