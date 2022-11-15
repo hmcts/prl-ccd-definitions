@@ -236,7 +236,10 @@ aac-manage-case-assignment:
     image: hmctspublic.azurecr.io/aac/manage-case-assignment:latest
     ingressHost: aac-${SERVICE_FQDN}
     keyVaults: []
+    ports:
+      - 5005:5005
     environment:
+      JAVA_TOOL_OPTIONS: -Xms128m -Xmx600m -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
