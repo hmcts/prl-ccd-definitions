@@ -1,296 +1,289 @@
 [
   {
-    "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
+
   {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "courtnav"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
+
   {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "SUBMITTED_NOT_PAID",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
+
   {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_NOT_PAID",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_RESUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_RESUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_ISSUE",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_ISSUE",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_ISSUE",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "22/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "AWAITING_RESUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "ALL_FINAL_ORDERS_ISSUED",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "ALL_FINAL_ORDERS_ISSUED",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "ALL_FINAL_ORDERS_ISSUED",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "ALL_FINAL_ORDERS_ISSUED",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-  "LiveFrom": "19/01/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseStateID": "CASE_ISSUE",
-  "UserRole": "caseworker-privatelaw-judge",
-  "CRUD": "CRU"
-  },
-  {
-  "LiveFrom": "19/01/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseStateID": "CASE_ISSUE",
-  "UserRole": "caseworker-privatelaw-la",
-  "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_SUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_PAID",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "SUBMITTED_NOT_PAID",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "CASE_ISSUE",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "07/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "AWAITING_RESUBMISSION_TO_HMCTS",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "07/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "CASE_WITHDRAWN",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "07/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseStateID": "GATE_KEEPING",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "ALL_FINAL_ORDERS_ISSUED",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "CASE_HEARING",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

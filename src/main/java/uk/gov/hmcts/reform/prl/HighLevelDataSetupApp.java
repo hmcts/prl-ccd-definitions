@@ -16,6 +16,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
 
     public static final String PUBLIC = "PUBLIC";
     private static final CcdRoleConfig[] CCD_ROLES_NEEDED_FOR_PRL = {
+            new CcdRoleConfig("citizen", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-bulkscan", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-bulkscansystemupdate", PUBLIC),
@@ -26,7 +27,11 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("caseworker-privatelaw-superuser", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-systemupdate", PUBLIC),
             new CcdRoleConfig("payments", PUBLIC),
-            new CcdRoleConfig("pui-case-manager", PUBLIC)
+            new CcdRoleConfig("pui-case-manager", PUBLIC),
+            new CcdRoleConfig("courtnav", PUBLIC),
+            new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
+            new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
+            new CcdRoleConfig("GS_profile", PUBLIC),
     };
 
     private final CcdEnvironment environment;

@@ -5,6 +5,7 @@
 String product = "prl"
 String component = "ccd-definitions"
 
+
 def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
@@ -64,7 +65,6 @@ withPipeline("nodejs", product, component) {
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
-
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
