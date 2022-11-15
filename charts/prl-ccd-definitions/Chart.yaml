@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.11
+version: 0.0.12
 dependencies:
   - name: nodejs
     version: ~2.4.5
@@ -27,3 +27,11 @@ dependencies:
     version: ~0.2.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: aac-manage-case-assignment.enabled
+  - name: em-ccdorc
+    version: 2.0.2
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: em-ccdorc.enabled
+  - name: em-stitching
+    version: 1.0.24
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: em-stitching.enabled
