@@ -331,6 +331,23 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "newAllegationsOfHarm",
+    "Name": "New Allegations of harm",
+    "Description": "New Allegations of harm",
+    "DisplayOrder": 10,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "amendAllegationsOfHarm",
     "Name": "Amend Allegations of harm",
     "Description": "Allegations of harm",
