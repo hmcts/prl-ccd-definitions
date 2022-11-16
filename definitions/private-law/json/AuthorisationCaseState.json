@@ -181,7 +181,8 @@
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
-          "caseworker-caa"
+          "caseworker-caa",
+          "case_link_profile"
         ],
         "CRUD": "CRUD"
       },
@@ -236,7 +237,8 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "case_link_profile"
         ],
         "CRUD": "CRUD"
       },
@@ -291,5 +293,54 @@
         "CRUD": "R"
       }
     ]
-  }
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "CASE_ISSUED",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "case_link_profile"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "JUDICIAL_REVIEW",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "case_link_profile"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "PREPARED_FOR_HEARING",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "case_link_profile"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "DECISION_OUTCOME",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "case_link_profile"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+
 ]
