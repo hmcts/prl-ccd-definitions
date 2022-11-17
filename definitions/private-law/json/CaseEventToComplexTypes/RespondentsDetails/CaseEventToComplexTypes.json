@@ -536,25 +536,12 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
-    "CaseEventID": "respondentsDetails",
-    "CaseFieldID": "respondents",
-    "ListElementCode": "respondentFlag",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "47",
-    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
-    "RetainHiddenValue": "Y",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
     "CaseEventID": "createFlags",
     "CaseFieldID": "respondents",
-    "ListElementCode": "respondentFlag",
+    "ListElementCode": "partyLevelFlag",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "48",
-    "FieldShowCondition": "flagLauncherLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "FieldDisplayOrder": "47",
+    "FieldShowCondition": "respondents.firstName=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
     "RetainHiddenValue": "Y",
     "DisplayContext": "OPTIONAL"
   }
