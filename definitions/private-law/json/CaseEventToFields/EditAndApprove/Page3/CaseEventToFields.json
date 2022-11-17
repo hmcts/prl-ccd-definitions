@@ -9,7 +9,8 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-custom-fields"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-custom-fields",
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -83,23 +84,13 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "approvalDate",
-    "PageFieldDisplayOrder": 8,
-    "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "hearingType",
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 8,
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -164,7 +155,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "dateOrderMade",
     "PageFieldDisplayOrder": 15,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
@@ -186,17 +177,6 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "recitalsOrPreamble",
     "PageFieldDisplayOrder": 17,
-    "DisplayContext": "OPTIONAL",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "appointmentOfGuardian",
-    "PageFieldDisplayOrder": 18,
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
