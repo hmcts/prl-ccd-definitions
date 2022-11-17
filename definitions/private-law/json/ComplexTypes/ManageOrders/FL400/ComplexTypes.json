@@ -774,7 +774,8 @@
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "orderType",
-    "FieldType": "Text",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
     "ElementLabel": "Type of order",
     "SecurityClassification": "Public"
   },
@@ -811,12 +812,13 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "DraftOrder",
-    "ListElementCode": "orderText",
-    "FieldType": "Text",
-    "ElementLabel": "Draft order text",
-    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\"",
+    "ListElementCode": "isTheOrderAboutAllChildren",
+    "ElementLabel": "Is the order about all children?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoNotRequiredEnum",
     "SecurityClassification": "Public"
   },
   {
@@ -824,7 +826,7 @@
     "ID": "DraftOrder",
     "ListElementCode": "fl404CustomFields",
     "FieldType": "FL400",
-    "ElementLabel": "Draft order text",
+    "ElementLabel": "Custom fields",
     "SecurityClassification": "Public"
   }
 ]
