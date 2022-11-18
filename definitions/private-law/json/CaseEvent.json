@@ -1254,7 +1254,7 @@
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "editAndApproveAnOrder",
-    "Name": "Judge Edit and approve a draft order",
+    "Name": "Edit and approve a draft order",
     "Description": "Edit and approve a draft order",
     "DisplayOrder": 27,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
@@ -1263,21 +1263,22 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Send to admin",
-    "ShowSummary": "N"
+    "ShowSummary": "N",
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "adminEditAndApproveAnOrder",
-    "Name": "Admin Edit and approve a draft order",
+    "Name": "Edit and approve a draft order",
     "Description": "Edit and approve a draft order",
-    "DisplayOrder": 27,
+    "DisplayOrder": 28,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
     "PreConditionState(s)": "SUBMITTED_PAID",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "EndButtonLabel": "Send to admin",
+    "EndButtonLabel": "Submit",
     "ShowSummary": "N"
   },
   {
