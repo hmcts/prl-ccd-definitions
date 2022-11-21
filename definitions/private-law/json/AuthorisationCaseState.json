@@ -135,7 +135,7 @@
           "caseworker-privatelaw-solicitor",
           "citizen",
           "caseworker-privatelaw-systemupdate",
-          "case_link_profile"
+          "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
       },
@@ -183,7 +183,7 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-caa",
-          "case_link_profile"
+          "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
       },
@@ -206,7 +206,8 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
       },
@@ -239,7 +240,7 @@
           "caseworker-privatelaw-solicitor",
           "citizen",
           "caseworker-privatelaw-systemupdate",
-          "case_link_profile"
+          "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
       },
@@ -271,7 +272,8 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
       },
@@ -292,6 +294,18 @@
           "GS_profile"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "DECISION_OUTCOME",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-case-link-profile"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
