@@ -12,12 +12,12 @@ module.exports = {
   },
   
   testCourtAdminUserOne: {
-    email: 'prl_caseworker_courtadmin@mailinator.com',
+    email: 'fprl_caseworker_courtadm_test@mailinator.com',
     password: defaultPassword
   },
   
   testCourtAdminUserTwo: {
-    email: 'fprl_caseworker_courtadm_test@mailinator.com',
+    email: 'fprl_caseworker_courtadmin@mailinator.com',
     password: defaultPassword
   },
   

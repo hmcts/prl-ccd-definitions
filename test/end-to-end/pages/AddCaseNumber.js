@@ -10,6 +10,7 @@ module.exports = {
 
     async AddingCaseNumber() {
         await this.triggerEvent();
+        await I.wait('5');
         await I.retry(retryCount).waitForText('Family Man ID:');
         await I.wait('2');
         await I.retry(retryCount).fillField('//input[@id="familymanCaseNumber"]', '122354545454');
