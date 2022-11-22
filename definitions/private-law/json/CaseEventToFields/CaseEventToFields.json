@@ -263,6 +263,16 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "test",
+    "CaseFieldID": "childOption",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "createFlags",
     "CaseFieldID": "flagLauncher",
     "DisplayContext": "MANDATORY",
@@ -270,6 +280,18 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "applicants",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
   },
   {
     "LiveFrom": "10/08/2021",
