@@ -129,15 +129,17 @@
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-admin",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "AccessProfiles": "GS_profile,caseworker-privatelaw-case-link-profile"
   },
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-judiciary",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "AccessProfiles": "GS_profile,caseworker-privatelaw-case-link-profile"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -150,8 +152,9 @@
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-ctsc",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "AccessProfiles": "GS_profile,caseworker-privatelaw-case-link-profile"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -173,5 +176,32 @@
     "RoleName" : "judge",
     "ReadOnly": "Y",
     "AccessProfiles": "GS_profile"
+  },
+  {
+    "RoleName": "idam:caseworker-privatelaw-cafcass",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "caseworker-privatelaw-cafcass",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "hearing-centre-team-leader",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "caseworker-privatelaw-case-link-profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "hearing-centre-admin",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "caseworker-privatelaw-case-link-profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
   }
 ]
