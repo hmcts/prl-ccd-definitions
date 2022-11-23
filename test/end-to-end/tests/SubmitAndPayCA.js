@@ -1,6 +1,6 @@
 Feature('CA Submit and Pay');
 
-Scenario('Create a Case and Submit/Pay ', async I => {
+Scenario('Create a Case and Submit/Pay @cross-browser', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.typeOfApplicationEventC100();

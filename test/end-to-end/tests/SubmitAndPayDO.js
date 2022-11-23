@@ -1,6 +1,6 @@
 Feature('Submit and Pay - DO');
 
-Scenario('Submit and Pay - basic journey for FL401 Casetype', async I => {
+Scenario('Submit and Pay - basic journey for FL401 Casetype @cross-browser', async I => {
   await I.loginAsSolicitor();
   await I.createCaseFL401();
   await I.typeOfApplicationEventFL401();
