@@ -259,6 +259,109 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 8
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "test",
+    "CaseFieldID": "childOption",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "flagLauncher",
+    "DisplayContext": "MANDATORY",
+    "DisplayContextParameter": "#ARGUMENT(CREATE)",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "applicants",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "respondents",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createFlags",
+    "CaseFieldID": "caseFlags",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "flagLauncher",
+    "DisplayContext": "MANDATORY",
+    "DisplayContextParameter": "#ARGUMENT(UPDATE)",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "caseFlags",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "applicants",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageFlags",
+    "CaseFieldID": "respondents",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y"
   }
-
 ]
