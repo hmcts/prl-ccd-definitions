@@ -7,7 +7,8 @@
     "TabLabel": "Case Flags",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "caseFlags",
+    "CaseFieldID": "flagLauncher",
+    "DisplayContextParameter": "#ARGUMENT(READ)",
     "TabFieldDisplayOrder": 1
   },
   {
@@ -17,9 +18,9 @@
     "TabID": "caseFlags",
     "TabLabel": "Case Flags",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "flagLauncher",
-    "DisplayContextParameter": "#ARGUMENT(READ)",
-    "TabFieldDisplayOrder": 2
+    "CaseFieldID": "caseFlags",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_FIELD_TO_HIDE\""
   },
   {
     "LiveFrom": "25/11/2021",
