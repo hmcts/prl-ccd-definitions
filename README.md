@@ -2,7 +2,7 @@
 
 Project creating Family Private Law (PRL) CCD config files..
 
-Updated with Release 2.2
+Updated with Release 3.0
 ### Usage
 
 Clone project and in the project directory run:
