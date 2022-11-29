@@ -27,13 +27,35 @@
     "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "createCaseLink",
+    "CaseFieldID": "caseLinksFlag",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": "createCaseLink",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "maintainCaseLink",
+    "CaseFieldID": "maintainCaseLinksFlag",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": "maintainCaseLink",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createCaseLink",
     "CaseFieldID": "caseNameHmctsInternal",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": "createCaseLink",
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "caseNameHmctsInternal=\"NEVER_SHOW\""
+    "FieldShowCondition": "caseLinksFlag=\"DUMMY_VALUE_TO_HIDE_FIELD\""
   },
   {
     "LiveFrom": "03/11/2022",
@@ -45,6 +67,6 @@
     "PageID": "maintainCaseLink",
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "caseNameHmctsInternal=\"NEVER_SHOW\""
+    "FieldShowCondition": "maintainCaseLinksFlag=\"DUMMY_VALUE_TO_HIDE_FIELD\""
   }
 ]
