@@ -50,6 +50,15 @@
   },
   {
     "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleSubfolder",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
     "ID": "BundleFolder",
     "ListElementCode": "name",
     "FieldType": "Text",
@@ -72,7 +81,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleSubfolder",
     "ElementLabel": "Subfolders",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "bundleInformation.caseBundles.value.folders.value.documents!=\"\" OR bundleInformation.caseBundles.value.folders.value.folders.value.documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
