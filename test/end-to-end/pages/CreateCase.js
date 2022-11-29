@@ -95,8 +95,8 @@ module.exports = {
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
-    return caseId;
+//    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+//    return caseId;
   },
 
   async submitEvent() {

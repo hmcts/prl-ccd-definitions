@@ -16,7 +16,7 @@ module.exports = () => {
       return CreateCasePage.createNewCaseFL401();
     },
     createCaseAndReturnID() {
-      return CreateCasePage.createNewCaseC100andReturnID();
+      CreateCasePage.createNewCaseC100andReturnID();
     },
     searchForCasesWithId(caseId) {
       return caseList.searchForCasesWithId(caseId, 'Any');
