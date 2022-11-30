@@ -427,6 +427,19 @@
   {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "citizenInternationalElement",
+    "Name": "International element",
+    "Description": "International element updated by citizen",
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "amendInternationalElement",
     "Name": "Amend International element",
     "Description": "Amend international element of the case",
@@ -1263,6 +1276,20 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createBundle",
+    "Name": "Create a bundle",
+    "Description": "Create a bundle in the case",
+    "DisplayOrder": 24,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
