@@ -27,7 +27,8 @@
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarmRevised",
     "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "newAbuseNatureDescription",
+    "ListElementCode": "whichChildrenAreRisk",
+    "FieldShowCondition": "childAbuseBehaviours.allChildrenAreRisk=\"No\"",
     "EventElementLabel": "",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -38,7 +39,7 @@
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarmRevised",
     "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "newBehavioursStartDateAndLength",
+    "ListElementCode": "newAbuseNatureDescription",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
@@ -49,9 +50,20 @@
     "ID": "ChildAbuseBehaviours",
     "CaseEventID": "allegationsOfHarmRevised",
     "CaseFieldID": "childAbuseBehaviours",
-    "ListElementCode": "newBehavioursApplicantSoughtHelp",
+    "ListElementCode": "newBehavioursStartDateAndLength",
     "EventElementLabel": "",
     "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ChildAbuseBehaviours",
+    "CaseEventID": "allegationsOfHarmRevised",
+    "CaseFieldID": "childAbuseBehaviours",
+    "ListElementCode": "newBehavioursApplicantSoughtHelp",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -63,7 +75,7 @@
     "ListElementCode": "newBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "childAbuseBehaviours.newBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -74,7 +86,7 @@
     "CaseFieldID": "childAbuseBehaviours",
     "ListElementCode": "addNewChildAbuseBehavioursLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "READONLY"
   },
   {
