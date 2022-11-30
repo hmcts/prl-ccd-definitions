@@ -49,7 +49,7 @@ module.exports = () => {
       return CreateCasePage.createNewCaseFL401();
     },
     createCaseAndReturnID() {
-      CreateCasePage.createNewCaseC100andReturnID();
+      return CreateCasePage.createNewCaseC100andReturnID();
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
