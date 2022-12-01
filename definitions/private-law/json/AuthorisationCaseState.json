@@ -303,9 +303,62 @@
     "AccessControl": [
       {
         "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
           "caseworker-privatelaw-case-link-profile"
         ],
         "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
       }
     ]
   }
