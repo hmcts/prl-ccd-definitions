@@ -33,6 +33,23 @@
   },
   {
     "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Subfolder Name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Sub Folder Documents",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
     "ID": "BundleSubfolder",
     "ListElementCode": "name",
     "FieldType": "Text",
@@ -45,6 +62,15 @@
     "ListElementCode": "documents",
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleNestedSubfolder1",
     "ElementLabel": "Folder Documents",
     "SecurityClassification": "Public"
   },
