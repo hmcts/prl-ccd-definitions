@@ -2,7 +2,8 @@
 
 Project creating Family Private Law (PRL) CCD config files..
 
-Updated with Release 2.2
+Updated with Release 2.2 - branch for feature/noc-respondent-journey
+
 ### Usage
 
 Clone project and in the project directory run:
