@@ -13,7 +13,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-privatelaw-bulkscansystemupdate');
   I.createRole('payments');
   I.createRole('caseworker-caa');
-  I.createRole('caseworker-approver')
+  I.createRole('caseworker-approver');
   I.createRole('pui-case-manager');
   I.createRole('courtnav');
   I.createRole('global');
