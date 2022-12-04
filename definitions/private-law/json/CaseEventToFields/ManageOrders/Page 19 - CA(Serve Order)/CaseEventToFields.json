@@ -1,0 +1,130 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel19",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveToRespondentOptions",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\""
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "servingRespondentsOptions",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "FieldShowCondition": "serveToRespondentOptions=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "recipientsOptions",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "FieldShowCondition": "serveToRespondentOptions=\"No\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+  "LiveFrom": "14/1/2022",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "manageOrders",
+  "CaseFieldID": "cafcassServedOptions",
+  "PageFieldDisplayOrder": 5,
+  "DisplayContext": "MANDATORY",
+  "PageID": 19,
+  "PageDisplayOrder": 19,
+  "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassCymruServedOptions",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassCymruEmail",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "FieldShowCondition": "cafcassCymruServedOptions=\"No\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "anotherOrganisationOptions",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "deliveryByOptions",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "MANDATORY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "anotherOrganisationOptions=\"anotherOrganisation\""
+  },
+  {
+  "LiveFrom": "20/08/2021",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "manageOrders",
+  "CaseFieldID": "postalInformation",
+  "PageID": 19,
+  "PageDisplayOrder": 19,
+  "PageFieldDisplayOrder": 10,
+  "DisplayContext": "COMPLEX",
+  "FieldShowCondition": "deliveryByOptions=\"post\"",
+  "ShowSummaryChangeOption": "Y"
+  },
+  {
+  "LiveFrom": "20/08/2021",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "manageOrders",
+  "CaseFieldID": "emailInformation",
+  "PageID": 19,
+  "PageDisplayOrder": 19,
+  "PageFieldDisplayOrder": 11,
+  "DisplayContext": "COMPLEX",
+  "FieldShowCondition": "deliveryByOptions=\"email\"",
+  "ShowSummaryChangeOption": "Y"
+  }
+]
