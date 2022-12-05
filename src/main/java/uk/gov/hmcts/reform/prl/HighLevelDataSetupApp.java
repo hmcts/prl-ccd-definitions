@@ -28,6 +28,10 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
             new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
             new CcdRoleConfig("GS_profile", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-cafcass", PUBLIC),
+            new CcdRoleConfig("caseworker_profile", PUBLIC),
+            new CcdRoleConfig("caseworker_admin_profile", PUBLIC),
+            new CcdRoleConfig("case_link_profile", PUBLIC),
     };
 
     private final CcdEnvironment environment;
