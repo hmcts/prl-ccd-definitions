@@ -2,10 +2,10 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrderAdditionalDocuments",
+    "ID": "ServeOrderAdditionalDocument",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOrderAdditionalDocuments",
-    "ListElementCode": "serveOrderDocuments",
+    "ListElementCode": "serveOrderDocument",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
@@ -13,10 +13,10 @@
   {
   "LiveFrom": "01/12/2022",
   "CaseTypeID": "PRLAPPS",
-  "ID": "emailInformationCA",
+  "ID": "EmailInformation",
   "CaseEventID": "manageOrders",
   "CaseFieldID": "emailInformationCA",
-  "ListElementCode": "emailNameCA",
+  "ListElementCode": "emailName",
   "EventElementLabel": " ",
   "FieldDisplayOrder": "1",
   "DisplayContext": "MANDATORY"
@@ -24,10 +24,10 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "emailInformationCA",
+    "ID": "EmailInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "emailInformationCA",
-    "ListElementCode": "emailAddressDA",
+    "ListElementCode": "emailAddress",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
@@ -35,10 +35,10 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationCA",
+    "ID": "EmailInformation",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalNameCA",
+    "CaseFieldID": "emailInformationDA",
+    "ListElementCode": "emailName",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
@@ -46,10 +46,10 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationCA",
+    "ID": "EmailInformation",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA",
+    "CaseFieldID": "emailInformationDA",
+    "ListElementCode": "emailAddress",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
@@ -57,10 +57,32 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationCA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.AddressLine1",
+    "ListElementCode": "postalName",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PostalInformation",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "postalInformationCA",
+    "ListElementCode": "postalAddress",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PostalInformation",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "postalInformationCA",
+    "ListElementCode": "postalAddress.AddressLine1",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
@@ -70,7 +92,7 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.AddressLine2",
+    "ListElementCode": "postalAddress.AddressLine2",
     "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
@@ -80,7 +102,7 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.AddressLine3",
+    "ListElementCode": "postalAddress.AddressLine3",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
@@ -90,7 +112,7 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.PostTown",
+    "ListElementCode": "postalAddress.PostTown",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL"
   },
@@ -100,7 +122,7 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.County",
+    "ListElementCode": "postalAddress.County",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
   },
@@ -110,7 +132,7 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.PostCode",
+    "ListElementCode": "postalAddress.PostCode",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
   },
@@ -120,17 +142,17 @@
     "ID": "postalInformationCA",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationCA",
-    "ListElementCode": "postalAddressCA.Country",
+    "ListElementCode": "postalAddress.Country",
     "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalNameDA",
+    "ListElementCode": "postalName",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
@@ -138,10 +160,10 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA",
+    "ListElementCode": "postalAddress",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
@@ -149,93 +171,71 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.AddressLine1",
+    "ListElementCode": "postalAddress.AddressLine1",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.AddressLine2",
+    "ListElementCode": "postalAddress.AddressLine2",
     "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.AddressLine3",
+    "ListElementCode": "postalAddress.AddressLine3",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.PostTown",
+    "ListElementCode": "postalAddress.PostTown",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.County",
+    "ListElementCode": "postalAddress.County",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.PostCode",
+    "ListElementCode": "postalAddress.PostCode",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "postalInformationDA",
+    "ID": "PostalInformation",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "postalInformationDA",
-    "ListElementCode": "postalAddressDA.Country",
+    "ListElementCode": "postalAddress.Country",
     "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "emailInformationDA",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "emailInformationDA",
-    "ListElementCode": "emailNameDA",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "emailInformationDA",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "emailInformationDA",
-    "ListElementCode": "emailAddressDA",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "2",
-    "DisplayContext": "MANDATORY"
   }
 ]
