@@ -147,9 +147,22 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 1,
     "CaseFieldID": "allegationOfHarm",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreated!=\"Yes\"",
     "TabFieldDisplayOrder": 11
   },
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "allegationOfHarmRevised",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreated=\"Yes\"",
+    "TabFieldDisplayOrder": 11
+  },
+
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
