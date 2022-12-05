@@ -1308,5 +1308,31 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applyNocDecision",
+    "Name": "Apply NoC Decision",
+    "Description": "Apply Notice of Change Request",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/apply-decision",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "updateRepresentation",
+    "Name": "Update representation",
+    "Description": "Update respondent representation via NoC",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_AAC_URL}/noc/set-organisation-to-remove",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N"
   }
 ]
