@@ -586,7 +586,8 @@
   "CaseFieldID": "applicantOrganisationPolicy",
   "ListElementCode": "Organisation.OrganisationID",
   "EventElementLabel": "",
-  "FieldDisplayOrder": "",
+  "FieldDisplayOrder": "8",
+  "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
   "DisplayContext": "MANDATORY"
   },
   {
@@ -597,7 +598,8 @@
     "CaseFieldID": "applicantOrganisationPolicy",
     "ListElementCode": "OrgPolicyCaseAssignedRole",
     "DefaultValue": "[APPLICANTSOLICITOR]",
-    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\"",
+    "FieldDisplayOrder": "9",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -607,7 +609,20 @@
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "applicantOrganisationPolicy",
     "ListElementCode": "OrgPolicyReference",
-    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\"",
+    "FieldDisplayOrder": "10",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "EventElementLabel": "",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OrganisationPolicy",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "lastNoCRequestedBy",
+    "FieldDisplayOrder": "11",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "EventElementLabel": "",
     "DisplayContext": "OPTIONAL"
   }
