@@ -1,5 +1,37 @@
 [
   {
+    "LiveFrom": "01/12/2022",
+    "ID": "EmailInformation",
+    "ListElementCode": "emailName",
+    "FieldType": "Text",
+    "ElementLabel": "Name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "ID": "EmailInformation",
+    "ListElementCode": "emailAddress",
+    "FieldType": "Text",
+    "ElementLabel": "Email address",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "ID": "PostalInformation",
+    "ListElementCode": "postalName",
+    "FieldType": "Text",
+    "ElementLabel": "Name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "ID": "PostalInformation",
+    "ListElementCode": "postalAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "OtherOrderDetails",
     "ListElementCode": "createdBy",
@@ -41,6 +73,72 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "additionalDocuments",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "serveOnRespondent",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "servingRespondent",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "cafcassServed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "cafcassEmail",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "otherPartiesServed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "postalInformation",
+    "FieldType": "PostalInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "emailInformation",
+    "FieldType": "EmailInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "OrderDetails",
     "ListElementCode": "orderTypeId",
     "FieldType": "Text",
@@ -78,6 +176,23 @@
     "ListElementCode": "otherDetails",
     "FieldType": "OtherOrderDetails",
     "ElementLabel": "Other details",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "serveOrderDetails",
+    "FieldType": "ServeOrderDetails",
+    "ElementLabel": "Serve order details",
+    "FieldShowCondition": "serveOrderDetails=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "orderServed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Order served?",
     "SecurityClassification": "Public"
   },
   {
