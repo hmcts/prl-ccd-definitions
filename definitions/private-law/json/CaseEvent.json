@@ -1265,6 +1265,32 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
+    "ID": "c100CreateFlags",
+    "Name": "Create Flag",
+    "Description": "Create Flag",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ManageFlags",
+    "Name": "Manage Flags",
+    "Description": "Manage Flag",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
     "ID": "citizen-case-update",
     "Name": "Update case by citizen",
     "PreConditionState(s)": "*",
@@ -1298,25 +1324,27 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "createFlags",
+    "ID": "fl401CreateFlags",
     "Name": "Create Flag",
     "Description": "Create Flag",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "manageFlags",
+    "ID": "fl401ManageFlags",
     "Name": "Manage Flags",
     "Description": "Manage Flag",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
 ]
