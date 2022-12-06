@@ -1,8 +1,8 @@
 const I = actor();
 const retryCount = 3;
-const normalizeCaseId = caseId => {
-  return caseId.toString().replace(/\D/g, '');
-};
+// const normalizeCaseId = caseId => {
+//  return caseId.toString().replace(/\D/g, '');
+// };
 
 module.exports = {
 
@@ -27,6 +27,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
     // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
@@ -94,8 +95,8 @@ module.exports = {
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
-    return caseId;
+    //    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    //    return caseId;
   },
 
   async submitEvent() {
@@ -107,6 +108,6 @@ module.exports = {
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
-    await I.retry(retryCount).waitForElement('i.icon-tick');
+//    await I.retry(retryCount).waitForElement('i.icon-tick');
   }
 };
