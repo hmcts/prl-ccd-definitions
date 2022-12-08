@@ -69,13 +69,18 @@ module.exports = {
       I.wait('4');
     },
 
-    async allegationsOfHarmForChildOrApplicant() {
+  async allegationsOfHarmForChildOrApplicant() {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
+
+  },
+
+
+  async allegationsOfHarmInformation() {
     await I.retry(retryCount).click(this.fields.domesticAbuse);
     await I.retry(retryCount).click(this.fields.childAbuse);
     await I.retry(retryCount).click(this.fields.childAbduction);
@@ -113,7 +118,7 @@ module.exports = {
 
   },
 
-  async behaviour() {
+  async domesticAbuseBehaviour() {
 
     //Domestic Abuse
     await I.retry(retryCount).waitForText('Domestic abuse - Behaviours');
@@ -126,6 +131,12 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.behaviourDAApplicantSoughtHelp);
     await I.retry(retryCount).fillField('//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
     await I.retry(retryCount).click('Continue');
+
+    
+
+  },
+
+  async childAbuseBehaviour() {
 
     //Child Abuse
     await I.retry(retryCount).waitForText('Child abuse - Behaviours');
@@ -184,7 +195,9 @@ module.exports = {
   async allegationsOfHarmEvent() {
     await this.triggerEvent('Allegations of harm');
     await this.allegationsOfHarmForChildOrApplicant();
-    await this.behaviour();
+    await this.allegationsOfHarmInformation()
+    await this.domesticAbusebehaviour();
+    await this.childAbusebehaviour();
     await this.childAbductionAOH();
     await this.otherConcerns();
     await this.submitEvent();
