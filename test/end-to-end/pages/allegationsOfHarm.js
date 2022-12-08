@@ -62,23 +62,23 @@ module.exports = {
 
   },
 
-    async triggerEvent(eventName) {
-      await I.retry(retryCount).waitForElement(this.fields.eventList);
-      await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
-      await I.retry(retryCount).click(this.fields.submit);
-      I.wait('4');
-    },
-
-  async allegationsOfHarmForChildOrApplicant() {
-    await I.retry(retryCount).waitForText('Allegations of harm');
-    I.wait('2');
-    await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
-    I.wait('2');
-    await I.retry(retryCount).click('Continue');
-    I.wait('2');
-
+  async triggerEvent(eventName) {
+    await I.retry(retryCount).waitForElement(this.fields.eventList);
+    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
+    I.wait('4');
+    await I.retry(retryCount).click(this.fields.submit);
+    I.wait('7');
   },
 
+  async allegationsOfHarm() {
+    await I.retry(retryCount).waitForText('Allegations of harm');
+    I.wait('4');
+    await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
+    I.wait('4');
+    await I.retry(retryCount).click('Continue');
+    I.wait('4');
+
+  },
 
   async allegationsOfHarmInformation() {
     await I.retry(retryCount).click(this.fields.domesticAbuse);
@@ -115,13 +115,15 @@ module.exports = {
     await I.retry(retryCount).click('//*[@id="newOrdersUndertakingInPlace_No"]');
     I.wait('2');
     await I.retry(retryCount).click('Continue');
+    I.wait('2');
+
 
   },
 
   async domesticAbuseBehaviour() {
-
-    //Domestic Abuse
+    // Domestic Abuse
     await I.retry(retryCount).waitForText('Domestic abuse - Behaviours');
+    I.wait('2');
     await I.retry(retryCount).click('Add new');
     I.wait('2');
     // eslint-disable-next-line max-len
@@ -131,15 +133,14 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.behaviourDAApplicantSoughtHelp);
     await I.retry(retryCount).fillField('//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
     await I.retry(retryCount).click('Continue');
-
-    
+    I.wait('2');
 
   },
 
   async childAbuseBehaviour() {
-
-    //Child Abuse
+    // Child Abuse
     await I.retry(retryCount).waitForText('Child abuse - Behaviours');
+    I.wait('2');
     await I.retry(retryCount).click('Add new');
     I.wait('2');
     // eslint-disable-next-line max-len
@@ -151,6 +152,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
+    I.wait('2');
 
   },
 
@@ -168,9 +170,10 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
     await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionMother); 
-    await I.retry(retryCount).fillField(this.fields.abductionChildPassportOtherPossession, this.fields.textareaText);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
+    I.wait('2');
+
   },
 
   async otherConcerns() {
@@ -183,6 +186,8 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.otherConcernsOtherFormsOfContact);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
+    I.wait('2');
+
   },
 
   async submitEvent() {
@@ -194,10 +199,10 @@ module.exports = {
 
   async allegationsOfHarmEvent() {
     await this.triggerEvent('Allegations of harm');
-    await this.allegationsOfHarmForChildOrApplicant();
-    await this.allegationsOfHarmInformation()
-    await this.domesticAbusebehaviour();
-    await this.childAbusebehaviour();
+    await this.allegationsOfHarm();
+    await this.allegationsOfHarmInformation();
+    await this.domesticAbuseBehaviour();
+    await this.childAbuseBehaviour();
     await this.childAbductionAOH();
     await this.otherConcerns();
     await this.submitEvent();
