@@ -7,7 +7,6 @@ module.exports = {
     textareaText: 'Testing text area',
     eventList: 'select[id="next-step"]',
     submit: 'button[type="submit"]',
-    allegationsOfHarmYesNo: '//*[@id="newAllegationsOfHarmYesNo_Yes"]',
     newAllegationsOfHarmLabel: '//*[@id="newAllegationsOfHarmLabel"]',
     domesticAbuse: '//*[@id="newAllegationsOfHarmDomesticAbuseYesNo_Yes"]',
     childAbuse: '//*[@id="newAllegationsOfHarmChildAbuseYesNo_Yes"]',
@@ -73,7 +72,7 @@ module.exports = {
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('4');
-    await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
+    await I.retry(retryCount).click('//*[@id="newAllegationsOfHarmYesNo_Yes"]');
     I.wait('4');
     await I.retry(retryCount).click('Continue');
     I.wait('4');
