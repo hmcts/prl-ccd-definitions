@@ -155,7 +155,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.abductionPoliceInvolvedDetails, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.abductionChildrenHavePassport);
     I.wait('2');
-    await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport); //yes
+    await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
     await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionMother); 
     await I.retry(retryCount).fillField(this.fields.abductionChildPassportOtherPossession, this.fields.textareaText);
     I.wait('2');
