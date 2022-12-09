@@ -6,10 +6,11 @@
     "TabID": "CaseFlags",
     "TabLabel": "Case Flags",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "TabDisplayOrder": 1,
+    "TabDisplayOrder": 2,
     "CaseFieldID": "flagLauncher",
     "DisplayContextParameter": "#ARGUMENT(READ)",
-    "TabFieldDisplayOrder": 1
+    "TabFieldDisplayOrder": 1,
+    "TabShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "25/11/2021",
@@ -17,7 +18,7 @@
     "Channel": "CaseWorker",
     "TabID": "CaseFlags",
     "TabLabel": "Case Flags",
-    "TabDisplayOrder": 1,
+    "TabDisplayOrder": 2,
     "CaseFieldID": "caseFlags",
     "TabFieldDisplayOrder": 2,
     "FieldShowCondition": "flagLauncher=\"DUMMY_FIELD_TO_HIDE\""
@@ -28,7 +29,7 @@
     "Channel": "CaseWorker",
     "TabID": "CaseFlags",
     "TabLabel": "Case Flags",
-    "TabDisplayOrder": 1,
+    "TabDisplayOrder": 2,
     "CaseFieldID": "applicants",
     "TabFieldDisplayOrder": 3,
     "FieldShowCondition": "applicants=\"DUMMY_FIELD_TO_HIDE\""
@@ -39,9 +40,31 @@
     "Channel": "CaseWorker",
     "TabID": "CaseFlags",
     "TabLabel": "Case Flags",
-    "TabDisplayOrder": 1,
+    "TabDisplayOrder": 2,
     "CaseFieldID": "respondents",
     "TabFieldDisplayOrder": 4,
     "FieldShowCondition": "respondents=\"DUMMY_FIELD_TO_HIDE\""
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "CaseFlags",
+    "TabLabel": "Case Flags",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicantsFL401",
+    "TabFieldDisplayOrder": 3,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_FIELD_TO_HIDE\""
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "CaseFlags",
+    "TabLabel": "Case Flags",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondentsFL401",
+    "TabFieldDisplayOrder": 4,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_FIELD_TO_HIDE\""
   }
 ]
