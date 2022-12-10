@@ -644,7 +644,7 @@
     "ID": "OrganisationPolicy",
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "applicantOrganisationPolicy",
-    "ListElementCode": "LastNoCRequestedBy",
+    "ListElementCode": "lastNoCRequestedBy",
     "FieldDisplayOrder": "13",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "EventElementLabel": "",
@@ -657,9 +657,10 @@
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "applicantOrganisationPolicy",
     "ListElementCode": "PrepopulateToUsersOrganisation",
-    "FieldDisplayOrder": "13",
+    "DefaultValue": "YES",
+    "FieldDisplayOrder": 5,
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "EventElementLabel": "",
-    "DisplayContext": "OPTIONAL"
+    "RetainHiddenValue": "Y"
   }
 ]
