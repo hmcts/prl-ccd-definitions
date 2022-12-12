@@ -17,5 +17,4 @@ Scenario('Create a Case and Submit/Pay ', async I => {
 //  await I.litigationCapacity();
 //  await I.welshLanguageRequirement();
 //  await I.runSubmitAndPayHappyPath();
-
 }).retry({ retries: 3, minTimeout: 30000 });
