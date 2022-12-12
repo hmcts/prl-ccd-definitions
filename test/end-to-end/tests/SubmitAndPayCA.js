@@ -3,7 +3,6 @@ Feature('CA Submit and Pay');
 Scenario('Create a Case and Submit/Pay ', async I => {
   await I.loginAsSolicitor();
   await I.createCase();
-
 //  await I.typeOfApplicationEventC100();
 //  await I.hearingUrgency();
 //  await I.applicantDetailsC100();
