@@ -8,7 +8,7 @@ Scenario('Create a Case and Submit/Pay ', async I => {
 //  await I.applicantDetailsC100();
 //  await I.childDetails();
 //  await I.respondentDetailsC100();
-//  await I.allegationsOfHarmEvent();
+  await I.allegationsOfHarmEvent();
 //  await I.runMIAMEventHappyPath();
 //  await I.otherPeopleInTheCase();
 //  await I.otherProceedingsEventC100();
