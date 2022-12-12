@@ -57,7 +57,8 @@
     "ListElementCode": "name",
     "FieldType": "Text",
     "ElementLabel": "Subfolder Name",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "folders.documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -66,7 +67,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleDocument",
     "ElementLabel": "Folder Documents",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -75,7 +77,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleNestedSubfolder1",
     "ElementLabel": "Folder Documents",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "folders.documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -83,7 +86,8 @@
     "ListElementCode": "name",
     "FieldType": "Text",
     "ElementLabel": "Folder Name",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "folders.folders.documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -92,7 +96,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleDocument",
     "ElementLabel": "Folder Documents",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -101,7 +106,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleSubfolder",
     "ElementLabel": "Subfolders",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "folders.folders.documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -143,7 +149,8 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleDocument",
     "ElementLabel": "Bundle document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "documents!=\"\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -152,7 +159,9 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleFolder",
     "ElementLabel": "Bundle folder",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "folders.folders.folders.documents!=\"\""
+
   },
   {
     "LiveFrom": "31/10/2022",
