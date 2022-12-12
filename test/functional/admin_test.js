@@ -23,7 +23,6 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker_profile');
   I.createRole('caseworker_admin_profile');
   I.createRole('case_link_profile');
-  I.createRole('ctsc-team-leader');
   I.click('Manage User Roles');
   I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
@@ -45,7 +44,6 @@ Scenario('add all the roles @pipeline', I => {
   I.see('caseworker_profile');
   I.see('caseworker_admin_profile');
   I.see('case_link_profile');
-  I.see('ctsc-team-leader');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', I => {
