@@ -5,7 +5,15 @@
     "Channel": "CaseWorker",
     "TabID": "CaseFlags",
     "TabLabel": "Case Flags",
-    "UserRole": "caseworker-privatelaw-courtadmin",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ],
     "TabDisplayOrder": 2,
     "CaseFieldID": "flagLauncher",
     "DisplayContextParameter": "#ARGUMENT(READ)",
