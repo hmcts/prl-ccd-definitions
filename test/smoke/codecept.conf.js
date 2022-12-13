@@ -23,7 +23,7 @@ exports.config = {
       minTimeout: 2000
     }
   },
-  include: { I: './steps_file.js' },
+  //include: { I: './steps_file.js' },
   bootstrap: null,
   mocha: {
     reporterOptions: {
