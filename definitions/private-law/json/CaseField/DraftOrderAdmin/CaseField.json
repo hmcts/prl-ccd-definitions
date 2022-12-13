@@ -10,10 +10,51 @@
   {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "whenToServeOrder",
-    "Label": "When do you want to serve the order?",
+    "ID": "doYouWantToServeOrder",
+    "Label": "Do you want to serve the order now?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassOrCymruNeedToProvideReport",
+    "Label": "Does Cafcass or Cafcass Cymru need to provide a report?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassCymruDocuments",
+    "Label": "Cafcass or Cafcass Cymru needs to produce the following documentation: ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "CafcassCymruDocumentsEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "whenReportsMustBeFiled",
+    "FieldType": "Date",
+    "Label": "When must the reports be filed?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderEndsInvolvementOfCafcassOrCymru",
+    "FieldType": "YesOrNo",
+    "Label": "Does this order end the involvement of Cafcass or Cafcass Cymru in this case?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "whatDoWithOrder",
+    "Label": "What would you like to do with the order?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "NowOrLaterEnum",
+    "FieldTypeParameter": "WhatToDoWithOrderEnum",
     "SecurityClassification": "Public"
   }
 ]
