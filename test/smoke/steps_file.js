@@ -1,8 +1,8 @@
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
-const generalHelper = require('./helpers/generalHelper');
+//const generalHelper = require('./helpers/generalHelper');
 
-const caseList = require('./pages/CaseList');
+//const caseList = require('./pages/CaseList');
 
 module.exports = () => {
   return actor({
