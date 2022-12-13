@@ -48,9 +48,8 @@ module.exports = {
     abductionPoliceInvolvedDetails: '//*[@id="newAbductionPreviousPoliceInvolvementDetails"]',
     abductionChildrenHavePassport: '//*[@id="newAbductionChildHasPassport_Yes"]',
     abductionChildrenMorethanOnePassport: '//*[@id="childPassportDetails_newChildHasMultiplePassports_Yes"]',
-    abductionChildPassportPossessionMother: '//*[@id="childPassportDetails_newChildPassportPossession-mother"]',
+    abductionChildPassportPossessionFather: '//*[@id="childPassportDetails_newChildPassportPossession-father"]',
     abductionChildPassportOtherPossession: '//*[@id="childPassportDetails_newChildPassportPossessionOtherDetails"]',
-
 
     // OtherConcerns Page
     otherConcernsWhatSteps: '//*[@id="newAllegationsOfHarmOtherConcernsCourtActions"]',
@@ -168,7 +167,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.abductionChildrenHavePassport);
     I.wait('2');
     await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
-    await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionMother); 
+    await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionFather); 
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
