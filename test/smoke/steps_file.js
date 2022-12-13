@@ -1,8 +1,8 @@
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
-//const generalHelper = require('./helpers/generalHelper');
+const generalHelper = require('./helpers/generalHelper');
 
-//const caseList = require('./pages/CaseList');
+const caseList = require('./pages/CaseList');
 
 module.exports = () => {
   return actor({
@@ -15,7 +15,7 @@ module.exports = () => {
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
     },
-   /* createCaseAndReturnID() {
+    createCaseAndReturnID() {
       return CreateCasePage.createNewCaseC100andReturnID();
     },
     searchForCasesWithId(caseId) {
@@ -29,6 +29,6 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
-    }*/
+    }
   });
 };
