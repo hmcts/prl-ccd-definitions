@@ -15,7 +15,7 @@ module.exports = () => {
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
     },
-    createCaseAndReturnID() {
+   /* createCaseAndReturnID() {
       return CreateCasePage.createNewCaseC100andReturnID();
     },
     searchForCasesWithId(caseId) {
@@ -29,6 +29,6 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
-    }
+    }*/
   });
 };
