@@ -1294,5 +1294,23 @@
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantRelationToChild",
+    "Name": "Applicant Relation To Child",
+    "Description": "Create a Relation between Applicant and Child",
+    "DisplayOrder": 102,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-applicant-to-child-relation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-applicant-to-child-relation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
