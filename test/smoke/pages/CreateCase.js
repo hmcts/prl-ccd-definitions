@@ -89,7 +89,7 @@ module.exports = {
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
-    return caseId;
+    //const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    //return caseId;
   }
 };
