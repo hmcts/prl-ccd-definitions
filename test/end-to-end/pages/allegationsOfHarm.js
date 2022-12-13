@@ -59,7 +59,6 @@ module.exports = {
 
 
   },
-
   async triggerEvent(eventName) {
     await I.retry(retryCount).waitForElement(this.fields.eventList);
     await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
@@ -67,7 +66,6 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
     I.wait('7');
   },
-
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('4');
@@ -77,7 +75,6 @@ module.exports = {
     I.wait('4');
 
   },
-
   async allegationsOfHarmInformation() {
     await I.retry(retryCount).click(this.fields.domesticAbuse);
     await I.retry(retryCount).click(this.fields.childAbuse);
@@ -117,7 +114,6 @@ module.exports = {
 
 
   },
-
   async domesticAbuseBehaviour() {
     // Domestic Abuse
     await I.retry(retryCount).waitForText('Domestic abuse - Behaviours');
@@ -134,7 +130,6 @@ module.exports = {
     I.wait('2');
 
   },
-
   async childAbuseBehaviour() {
     // Child Abuse
     await I.retry(retryCount).waitForText('Child abuse - Behaviours');
@@ -153,7 +148,6 @@ module.exports = {
     I.wait('2');
 
   },
-
   async childAbductionAOH() {
     await I.retry(retryCount).waitForText('Child abduction');
     await I.retry(retryCount).fillField(this.fields.abductionWhyDescription, this.fields.textareaText);
@@ -173,7 +167,6 @@ module.exports = {
     I.wait('2');
 
   },
-
   async otherConcerns() {
     await I.retry(retryCount).waitForText('Other concerns');
     await I.retry(retryCount).fillField(this.fields.otherConcernsWhatSteps, this.fields.textareaText);
@@ -187,14 +180,12 @@ module.exports = {
     I.wait('2');
 
   },
-
   async submitEvent() {
     I.wait('2');
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
   },
-
   async allegationsOfHarmEvent() {
     await this.triggerEvent('Allegations of harm');
     await this.allegationsOfHarm();
