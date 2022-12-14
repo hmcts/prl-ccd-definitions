@@ -41,18 +41,8 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/keep-details-private-list",
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorKeepDetailsPrivate",
-    "CaseFieldID": "submissionRequiredFieldsInfo3",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -62,7 +52,8 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "keepContactDetailsPrivateOther.confidentiality=\"Yes\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -73,7 +64,7 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
     "FieldShowCondition": "keepDetailsPrivateSummary=\"never_show\""
   },
   {
@@ -84,7 +75,7 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -95,7 +86,7 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -106,7 +97,30 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorKeepDetailsPrivate",
+    "CaseFieldID": "keepDetailsPrivateNoHeading",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "keepContactDetailsPrivateOther.confidentiality=\"No\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorKeepDetailsPrivate",
+    "CaseFieldID": "noNeedOfPrivateDetailsLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "N"
   }
 ]

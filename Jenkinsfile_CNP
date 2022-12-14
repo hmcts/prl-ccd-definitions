@@ -64,7 +64,6 @@ withPipeline("nodejs", product, component) {
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
-
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
