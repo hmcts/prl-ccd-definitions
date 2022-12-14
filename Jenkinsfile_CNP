@@ -5,6 +5,7 @@
 String product = "prl"
 String component = "ccd-definitions"
 
+
 def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
@@ -51,7 +52,7 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  after('test') {
+  afterAlways('test') {
     // enable yarn audit and send message on master branch only
     try {
       yarnBuilder.yarn('audit')
@@ -90,18 +91,18 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:preview') {
+  afterAlways('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
 
-  after('functionalTest:preview') {
+  afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
 
 
-  after('functionalTest:aat') {
+  afterAlways('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
@@ -117,7 +118,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:aat') {
+  afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
