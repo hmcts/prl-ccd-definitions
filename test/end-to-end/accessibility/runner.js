@@ -62,18 +62,19 @@ async function runAccessibility(url, page) {
 }
 
 function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityErrorsOnThePage) {
-  const isPageAccessible = accessibilityErrorsOnThePage.length === 0 ? result.PASSED : result.FAILED;
-
+  console.log(`analyzing the accessibilityErrorsOnThePage    ${accessibilityErrorsOnThePage}`);
+  var isPageAccessible = null;
+  if (accessibilityErrorsOnThePage) {
+    isPageAccessible = accessibilityErrorsOnThePage.length === 0 ? result.PASSED : result.FAILED;
+    if (isPageAccessible === result.PASSED) {
+      resultObj.passCount += 1;
+    } else {
+      resultObj.failCount += 1;
+    }
+  }
   const urlArr = url.split('/');
   const urlArrLengthBefore = 2;
   const urlArrLengthAfter = 1;
-
-  if (isPageAccessible === result.PASSED) {
-    resultObj.passCount += 1;
-  } else {
-    resultObj.failCount += 1;
-  }
-
   resultObj.tests.push({
     name: `${urlArr[urlArr.length - urlArrLengthBefore]}/${urlArr[urlArr.length - urlArrLengthAfter]}`,
     pageUrl: url,

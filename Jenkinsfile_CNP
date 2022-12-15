@@ -5,6 +5,7 @@
 String product = "prl"
 String component = "ccd-definitions"
 
+
 def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
@@ -24,6 +25,15 @@ def secrets = [
                 secret('idam-data-store-client-secret','IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
                 secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
                 secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD')
+        ],
+        'aac-${env}': [
+                secret('aac-manage-case-s2s-secret', 'MANAGE_CASE_S2S_KEY'),
+                secret('idam-noc-approver-username', 'IDAM_NOC_APPROVER_USERNAME'),
+                secret('idam-noc-approver-password', 'IDAM_NOC_APPROVER_PASSWORD'),
+                secret('notify-mca-api-key-secret', 'NOTIFY_MCA_API_KEY'),
+                secret('idam-mca-client-secret', 'IDAM_MCA_CLIENT_SECRET'),
+                secret('idam-mca-system-user-username', 'IDAM_CAA_USERNAME'),
+                secret('idam-mca-system-user-password', 'IDAM_CAA_PASSWORD',)
         ]
 ]
 
@@ -42,7 +52,7 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  after('test') {
+  afterAlways('test') {
     // enable yarn audit and send message on master branch only
     try {
       yarnBuilder.yarn('audit')
@@ -55,7 +65,6 @@ withPipeline("nodejs", product, component) {
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
-
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
@@ -82,18 +91,18 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:preview') {
+  afterAlways('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
 
-  after('functionalTest:preview') {
+  afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
 
 
-  after('functionalTest:aat') {
+  afterAlways('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
@@ -109,7 +118,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:aat') {
+  afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
