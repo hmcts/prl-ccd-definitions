@@ -23,7 +23,7 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
-    console.log(await Puppeteer.grabTextFrom('div.alert-message'));
+    //console.log(await Puppeteer.grabTextFrom('div.alert-message'));
     await Puppeteer.waitForElement('i.icon-tick');
     await Puppeteer.wait(historyResponseTime);
   }
