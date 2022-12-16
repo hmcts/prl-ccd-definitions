@@ -1,5 +1,16 @@
 [
   {
+    "LiveFrom": "13/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "MagistrateLastName",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "magistrateLastName",
+    "ListElementCode": "lastName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "FL400",
@@ -38,7 +49,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.AddressLine2",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -48,7 +59,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.AddressLine3",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -58,7 +69,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.PostTown",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -68,7 +79,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.County",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -78,7 +89,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.PostCode",
-    "FieldDisplayOrder": "13",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -88,7 +99,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtAddress.Country",
-    "FieldDisplayOrder": "14",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -99,8 +110,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCaseNumber",
     "EventElementLabel": "Case number",
-    "FieldDisplayOrder": "15",
-    "DisplayContext": "MANDATORY"
+    "FieldDisplayOrder": "10",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -110,8 +122,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantName",
     "EventElementLabel": "Applicant name",
-    "FieldDisplayOrder": "16",
-    "DisplayContext": "MANDATORY"
+    "FieldDisplayOrder": "11",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -121,8 +134,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantReference",
     "EventElementLabel": "Applicant reference",
-    "FieldDisplayOrder": "17",
-    "DisplayContext": "OPTIONAL"
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -132,8 +146,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentName",
     "EventElementLabel": "Respondent name",
-    "FieldDisplayOrder": "18",
-    "DisplayContext": "MANDATORY"
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -143,8 +158,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentReference",
     "EventElementLabel": "Respondent reference",
-    "FieldDisplayOrder": "19",
-    "DisplayContext": "OPTIONAL"
+    "FieldDisplayOrder": "14",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -154,8 +170,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentDob",
     "EventElementLabel": "Respondent date of birth",
-    "FieldDisplayOrder": "20",
-    "DisplayContext": "MANDATORY"
+    "FieldDisplayOrder": "15",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -165,9 +182,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress",
     "EventElementLabel": "Respondent address",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldShowCondition": "fl404CustomFields=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -176,9 +193,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.AddressLine1",
-    "FieldDisplayOrder": "22",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "17",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -187,9 +203,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.AddressLine2",
-    "FieldDisplayOrder": "23",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "18",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -198,9 +213,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.AddressLine3",
-    "FieldDisplayOrder": "24",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "19",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -209,9 +223,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.PostTown",
-    "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "20",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -220,9 +233,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.County",
-    "FieldDisplayOrder": "26",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "21",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -231,9 +243,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.PostCode",
-    "FieldDisplayOrder": "27",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "22",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -242,134 +253,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentAddress.Country",
-    "FieldDisplayOrder": "28",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor",
-    "EventElementLabel": "Address the order applies to",
-    "FieldDisplayOrder": "29",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.AddressLine1",
-    "FieldDisplayOrder": "30",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.AddressLine2",
-    "FieldDisplayOrder": "31",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.AddressLine3",
-    "FieldDisplayOrder": "32",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.PostTown",
-    "FieldDisplayOrder": "33",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.County",
-    "FieldDisplayOrder": "34",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.PostCode",
-    "FieldDisplayOrder": "35",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddressAppliedFor.Country",
-    "FieldDisplayOrder": "36",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bHearingOutcome",
-    "EventElementLabel": "Hearing outcome",
-    "FieldDisplayOrder": "37",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"amendDischargedVaried\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bPowerOfArrestParagraph",
-    "EventElementLabel": "Paragraphs of the order to which the power of arrest applies",
-    "FieldDisplayOrder": "38",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRiskOfSignificantHarm",
-    "EventElementLabel": "Is there risk of significant harm to the applicant or children if ther power of arrest is not attached immediately?",
-    "FieldDisplayOrder": "39",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\""
+    "FieldDisplayOrder": "23",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -379,9 +264,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bMentionedProperty",
     "EventElementLabel": "Does the order mention a property?",
-    "FieldDisplayOrder": "40",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -391,9 +275,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddressOfProperty",
     "EventElementLabel": "Add address of the property",
-    "FieldDisplayOrder": "41",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bMentionedProperty=\"Yes\""
+    "FieldShowCondition": "fl404CustomFields.fl404bMentionedProperty=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -403,9 +287,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentLabel",
     "EventElementLabel": "# The respondent must not do the following:",
-    "FieldDisplayOrder": "42",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "26",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -415,9 +298,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToThreat",
     "EventElementLabel": "Select all that apply",
-    "FieldDisplayOrder": "43",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "27",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -427,9 +309,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotIntimidate",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "44",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "28",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -439,9 +320,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToTelephone",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "45",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "29",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -451,9 +331,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddMoreDetailsTelephone",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "46",
+    "FieldDisplayOrder": "30",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToTelephone=\"respondentMustNotTelephone\""
+    "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToTelephone=\"respondentMustNotTelephone\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -463,9 +343,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToDamageOrThreat",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "47",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "31",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -475,9 +354,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToDamage",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "48",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "32",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -487,9 +365,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToEnterProperty",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "49",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "33",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -499,9 +376,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddMoreDetailsProperty",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "50",
+    "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterProperty=\"respondentMustNotEnter\""
+    "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToEnterProperty=\"respondentMustNotEnter\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -511,9 +388,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToThreatChild",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "51",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "35",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -523,9 +399,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotHarassOrIntimidate",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "52",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "36",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -535,9 +410,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToTelephoneChild",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "53",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "37",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -547,9 +421,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddMoreDetailsPhoneChild",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "54",
+    "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToTelephoneChild=\"respondentMustNotTelephoneChild\""
+    "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToTelephoneChild=\"respondentMustNotTelephoneChild\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -559,9 +433,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToEnterSchool",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "55",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldDisplayOrder": "39",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -571,9 +444,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddSchool",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "56",
+    "FieldDisplayOrder": "40",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
+    "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -583,9 +456,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddMoreDetailsSchool",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "57",
+    "FieldDisplayOrder": "41",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
+    "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -593,11 +466,32 @@
     "ID": "FL400",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantLabel",
+    "ListElementCode": "addDirections",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "58",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"occupation\""
+    "FieldDisplayOrder": "42",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "addDirections.directionText",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "43",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "addDirections.isBold",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "44",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -605,11 +499,23 @@
     "ID": "FL400",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantIsEntitledToOccupy",
+    "ListElementCode": "orderEndDateAndTimeOptions",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "59",
+    "FieldDisplayOrder": "45",
+    "DisplayContext": "OPTIONAL"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderSpecifiedDateTime",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "46",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
+    "FieldShowCondition": "fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -617,359 +523,10 @@
     "ID": "FL400",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantHasHomeRight",
+    "ListElementCode": "fl404bDateAndTimeOfNextHearing",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "60",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantHomeInstruction",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "61",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bApplicantHasHomeRight=\"rightsInAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantHasRightToEnter",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "62",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantHasOtherInstruction",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "63",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantOtherInstruction",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "64",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bApplicantHasOtherInstruction=\"other1\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentCheckListLabel",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "65",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantAllowedToOccupy",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "66",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest1",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "67",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bApplicantAllowedToOccupy=\"allowApplicantToOccupy\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentMustNotOccupyAddress",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "68",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bOccupationDate1",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "69",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bOccupationTime1",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "70",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bOccupationDate2",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "71",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bOccupationTime2",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "72",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest2",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "73",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentShallLeaveAddress",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "74",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bWhenRespondentShallLeave",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "75",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentShallLeaveAddress=\"shallLeaveAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest3",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "76",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentShallLeaveAddress=\"shallLeaveAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentMustNotEnterAddress",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "77",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddMoreDetails",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "78",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotEnterAddress=\"attemptToEnterAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest4",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "79",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentMustNotEnterAddress=\"attemptToEnterAddress\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentObstructOrHarass",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "80",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest5",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "81",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentObstructOrHarass=\"obstructHarassOrInterfere\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bRespondentOtherInstructions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "82",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bAddAnotherInstructions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "83",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentOtherInstructions=\"other2\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsPowerOfArrest6",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "84",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fl404CustomFields.fl404bRespondentOtherInstructions=\"other2\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bDateOrderMade",
-    "EventElementLabel": "Date order made",
-    "FieldDisplayOrder": "85",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bDateOrderEnd",
-    "EventElementLabel": "Date order ends",
-    "FieldDisplayOrder": "86",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bDateOrderEndTime",
-    "EventElementLabel": "Time",
-    "FieldDisplayOrder": "87",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\" OR orderType=\"nonMolestation\" OR orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bDateOfNextHearing",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "88",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bTimeOfNextHearing",
-    "EventElementLabel": "Time",
-    "FieldDisplayOrder": "89",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "47",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -979,9 +536,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bTimeEstimate",
     "EventElementLabel": "Time estimate",
-    "FieldDisplayOrder": "90",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "48",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -990,10 +546,9 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCourtName1",
-    "EventElementLabel": "Court name",
-    "FieldDisplayOrder": "91",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "EventElementLabel": "Court name for hearing",
+    "FieldDisplayOrder": "49",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1002,10 +557,9 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "92",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "EventElementLabel": "Court address for hearing",
+    "FieldDisplayOrder": "50",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1014,9 +568,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine1",
-    "FieldDisplayOrder": "93",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "51",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1025,9 +578,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine2",
-    "FieldDisplayOrder": "94",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "52",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1036,9 +588,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine3",
-    "FieldDisplayOrder": "95",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "53",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1047,9 +598,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.PostTown",
-    "FieldDisplayOrder": "96",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "54",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1058,9 +608,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.County",
-    "FieldDisplayOrder": "97",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "55",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1069,9 +618,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.PostCode",
-    "FieldDisplayOrder": "98",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "56",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1080,9 +628,8 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOtherCourtAddress.Country",
-    "FieldDisplayOrder": "99",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "57",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1092,9 +639,8 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCostOfApplication",
     "EventElementLabel": "Costs of this application",
-    "FieldDisplayOrder": "100",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "58",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1104,8 +650,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsNoticeGiven",
     "EventElementLabel": "Is this order made with or without notice?",
-    "FieldDisplayOrder": "101",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"nonMolestation\" OR orderType=\"occupation\""
+    "FieldDisplayOrder": "59",
+    "DisplayContext": "MANDATORY"
   }
 ]
