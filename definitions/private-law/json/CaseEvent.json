@@ -1517,7 +1517,7 @@
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "c100ResSolStartingResponse",
-    "Name": "C100 Respondent Solicitor started responding",
+    "Name": "C100 respondent solicitor",
     "Description": "C100 Respondent solicitor is responding to the child arrangements application",
     "DisplayOrder": 1,
     "PreConditionState(s)": "*",
@@ -1525,7 +1525,8 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1533,7 +1534,7 @@
     "ID": "c100ResSolConsentingToApplication",
     "Name": "Do you give your consent?",
     "Description": "C100 Respondent Solicitor will provide consent to Application",
-    "DisplayOrder": 1,
+    "DisplayOrder": 2,
     "SecurityClassification": "Public",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
