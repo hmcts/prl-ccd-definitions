@@ -15,20 +15,6 @@
     "EndButtonLabel": "Save and continue"
   },
   {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "respondentSolicitorCreate",
-    "Name": "Respond to application",
-    "Description": "Respondent solicitor is responding to the child arrangements application ",
-    "DisplayOrder": 1,
-    "PreConditionState(s)": "CASE_HEARING",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue"
-  },
-  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "attendingTheHearing",
@@ -1337,21 +1323,6 @@
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "solicitorConsentToApplication",
-    "Name": "Do you give your consent?",
-    "Description": "Respondent Solicitor will provide consent to Application",
-    "DisplayOrder": 1,
-    "SecurityClassification": "Public",
-    "PreConditionState(s)": "CASE_HEARING",
-    "PostConditionState": "*",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
     "ID": "solicitorKeepDetailsPrivate",
     "Name": "Keep your details private",
     "Description": "Respondent Solicitor provides confidential details",
@@ -1541,5 +1512,34 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ResSolStartingResponse",
+    "Name": "C100 Respondent Solicitor started responding",
+    "Description": "C100 Respondent solicitor is responding to the child arrangements application",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ResSolConsentingToApplication",
+    "Name": "Do you give your consent?",
+    "Description": "C100 Respondent Solicitor will provide consent to Application",
+    "DisplayOrder": 1,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
