@@ -82,6 +82,21 @@
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "testEvent",
+    "Name": "Test Event",
+    "Description": "Test Event",
+    "DisplayOrder": 2,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "Publish" : "False"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "fl401CaseName",
     "Name": "Case name",
     "Description": "Case name",
@@ -1486,5 +1501,45 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nocRequest",
+    "Name": "NoC Request",
+    "Description": "Notice of Change Request",
+    "DisplayOrder": 201,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/check-noc-approval",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applyNocDecision",
+    "Name": "Apply NoC Decision",
+    "Description": "Apply Notice of Change Request",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_AAC_URL}/noc/apply-decision",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "updateRepresentation",
+    "Name": "Update representation",
+    "Description": "Update respondent representation via NoC",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_AAC_URL}/noc/set-organisation-to-remove",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N"
   }
 ]
