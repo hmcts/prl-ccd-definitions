@@ -12,15 +12,16 @@
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order"
   },
   {
-    "LiveFrom": "31/03/2022",
+    "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "caseTypeOfApplication",
-    "PageFieldDisplayOrder": 1,
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "draftOrdersDynamicList=\"DO NOT SHOW\""
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel18=\"DO_NOT_SHOW\"",
+    "Publish" : "False"
   }
 ]
