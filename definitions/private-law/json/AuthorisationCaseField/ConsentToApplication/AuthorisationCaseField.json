@@ -3,42 +3,30 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentConsentToApplication",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
