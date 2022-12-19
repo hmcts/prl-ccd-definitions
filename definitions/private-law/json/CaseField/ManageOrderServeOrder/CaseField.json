@@ -3,7 +3,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel18",
-    "Label": "## Serve Saved orders",
+    "Label": "## Serve saved orders",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -11,7 +11,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderDynamicList",
-    "Label": "Select the order you plan to serve",
+    "Label": "Select the orders you plan to serve",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public"
   },
@@ -19,7 +19,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderAdditionalDocumentsLabel",
-    "Label": "### Upload additional documents",
+    "Label": "### Upload additional documents (Optional)",
     "HintText": "Upload additional documents that you plan to serve",
     "FieldType": "Label",
     "SecurityClassification": "Public"
@@ -71,7 +71,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "otherParties",
-    "Label": "Which other people in the case should the order be sent to?",
+    "Label": "Which other people in the case should the order be sent to? (Optional)",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -87,7 +87,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "cafcassCymruServedOptions",
-    "Label": "Does Cafcass Cymru needs to be served?",
+    "Label": "Does Cafcass Cymru need to be served?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -105,7 +105,7 @@
     "ID": "serveOtherPartiesCA",
     "Label": " ",
     "FieldType": "MultiSelectList",
-    "HintText": "For example DWP or the local authority",
+    "HintText": "For example, DWP or the local authority",
     "FieldTypeParameter": "OtherOrganisationOptions",
     "SecurityClassification": "Public"
   },
@@ -150,7 +150,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "emailInformationDA",
     "Label": " ",
-    "FieldType": "EmailInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
     "SecurityClassification": "Public"
   },
   {
@@ -158,7 +159,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "postalInformationDA",
     "Label": " ",
-    "FieldType": "PostalInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
     "SecurityClassification": "Public"
   },
   {
