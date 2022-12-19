@@ -28,56 +28,42 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "paymentSuccessCallback",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "03/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentSuccessCallback",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentSuccessCallback",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "03/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentSuccessCallback",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "paymentFailureCallback",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentFailureCallback",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentFailureCallback",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "paymentFailureCallback",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
