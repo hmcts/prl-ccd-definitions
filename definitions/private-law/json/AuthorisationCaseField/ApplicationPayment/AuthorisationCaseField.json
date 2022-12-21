@@ -3,21 +3,16 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ApplicationPaymentLinkLabel",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ApplicationPaymentLinkLabel",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ApplicationPaymentLinkLabel",
-    "UserRole": "citizen",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-wa-task-configuration",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]

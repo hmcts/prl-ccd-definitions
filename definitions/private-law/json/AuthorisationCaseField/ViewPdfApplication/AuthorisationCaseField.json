@@ -3,21 +3,16 @@
     "LiveFrom": "03/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "draftOrderDocWelsh",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "draftOrderDocWelsh",
-    "UserRole": "citizen",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "draftOrderDocWelsh",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]

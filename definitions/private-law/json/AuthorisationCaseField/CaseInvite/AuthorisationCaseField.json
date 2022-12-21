@@ -3,28 +3,17 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseInvites",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "caseInvites",
-    "UserRole": "citizen",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "caseInvites",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "caseInvites",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]

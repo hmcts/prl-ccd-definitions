@@ -3,21 +3,29 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicationWithdrawnRequestLabel",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicationWithdrawnRequestStatusLabel",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnRequestStatusLabel",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
