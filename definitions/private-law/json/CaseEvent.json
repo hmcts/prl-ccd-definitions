@@ -1348,6 +1348,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -1379,9 +1380,9 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor-miam/about-to-start",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/respondent-solicitor-miam/mid-event",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor-miam/about-to-submit"
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start-miam",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/mid-event-miam",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-submit-miam"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1532,7 +1533,7 @@
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "c100ResSolConsentingToApplication",
-    "Name": "Do you give your consent?",
+    "Name": "Consent to the application",
     "Description": "C100 Respondent Solicitor will provide consent to Application",
     "DisplayOrder": 2,
     "SecurityClassification": "Public",
