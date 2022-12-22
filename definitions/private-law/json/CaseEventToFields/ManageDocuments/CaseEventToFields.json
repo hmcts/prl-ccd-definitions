@@ -14,6 +14,18 @@
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageDocuments",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "documentCategoryChecklist = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageDocuments",
     "CaseFieldID": "furtherEvidenceLabel",
     "DisplayContext": "READONLY",
     "PageID": 2,
@@ -102,17 +114,5 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "14/1/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageDocuments",
-    "CaseFieldID": "otherDocuments",
-    "DisplayContext": "COMPLEX",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 2,
-    "FieldShowCondition": "furtherEvidenceLabel = \"DO_NOT_SHOW\"",
-    "Publish" : "True"
   }
 ]
