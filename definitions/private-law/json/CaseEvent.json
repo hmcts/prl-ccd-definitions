@@ -75,7 +75,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-solicitor-respondent-list",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/populate-solicitor-respondent-list",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/test-about-to-submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
@@ -1543,6 +1544,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/consent-to-application-about-to-submit",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
