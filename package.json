@@ -12,7 +12,8 @@
   "config": {
     "local": {
       "cosUrl": "http://localhost:4044",
-      "ccdUrl": "http://localhost:4452"
+      "ccdUrl": "http://localhost:4452",
+      "aacUrl": "http://localhost:4454"
     },
     "demo": {
       "cosUrl": "http://prl-cos-demo.service.core-compute-demo.internal",
@@ -54,7 +55,7 @@
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
-    "generate-excel-local": "TARGET_ENV=local CCD_DEF_COS_URL=$npm_package_config_local_cosUrl CCD_DEF_CCD_URL=$npm_package_config_local_ccdUrl yarn run generate-excel -e *-prod.json",
+    "generate-excel-local": "TARGET_ENV=local CCD_DEF_COS_URL=$npm_package_config_local_cosUrl CCD_DEF_CCD_URL=$npm_package_config_local_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_local_aacUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-demo": "TARGET_ENV=demo CCD_DEF_COS_URL=$npm_package_config_demo_cosUrl CCD_DEF_CCD_URL=$npm_package_config_demo_ccdUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-aat": "TARGET_ENV=aat CCD_DEF_COS_URL=$npm_package_config_aat_cosUrl CCD_DEF_CCD_URL=$npm_package_config_aat_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_aat_aacUrl yarn run generate-excel -e *-prod.json",
     "generate-excel-perftest": "TARGET_ENV=perftest CCD_DEF_COS_URL=$npm_package_config_perftest_cosUrl CCD_DEF_CCD_URL=$npm_package_config_perftest_ccdUrl yarn run generate-excel -e *-prod.json",
