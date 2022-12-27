@@ -3,29 +3,42 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
-        ],
-        "CRUD": "R"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]"
-        ],
-        "CRUD": "CRUD"
-      },
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-systemupdate"
-        ],
-        "CRUD": "CRU"
-      }
-    ]
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "UserRole": "caseworker-privatelaw-superuser",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
   }
 ]

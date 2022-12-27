@@ -3,31 +3,56 @@
     "LiveFrom": "15/02/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "finalWelshDocument",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "courtnav",
-          "caseworker-wa-task-configuration"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-judge"
-        ],
-        "CRUD": "R"
-      },
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate"
-        ],
-        "CRUD": "CRUD"
-      }
-    ]
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "14/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "14/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "14/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "14/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "14/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalWelshDocument",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "CRU"
   }
 ]

@@ -3,29 +3,21 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "deletionConsent",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]"
-        ],
-        "CRUD": "CRU"
-      }
-    ]
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "deleteApplicationNote",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "caseworker-wa-task-configuration"
-        ],
-        "CRUD": "R"
-      }
-    ]
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "deleteApplicationNote",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
   }
 ]
