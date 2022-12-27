@@ -3,21 +3,21 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "WithdrawApplication_Event",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-  "LiveFrom": "03/02/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseEventID": "WithdrawApplication_Event",
-  "UserRole": "citizen",
-  "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "WithdrawApplication_Event",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
