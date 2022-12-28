@@ -1,8 +1,8 @@
 const I = actor();
 const retryCount = 3;
 //const normalizeCaseId = caseId => {
- // return caseId.toString().replace(/\D/g, '');
-//};
+//return caseId.toString().replace(/\D/g, '');
+// };
 
 module.exports = {
 
