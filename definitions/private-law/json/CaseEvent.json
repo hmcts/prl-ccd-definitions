@@ -1325,21 +1325,6 @@
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "solicitorKeepDetailsPrivate",
-    "Name": "Keep your details private",
-    "Description": "Respondent Solicitor provides confidential details",
-    "DisplayOrder": 2,
-    "SecurityClassification": "Public",
-    "PreConditionState(s)": "CASE_HEARING",
-    "PostConditionState": "*",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
     "ID": "solicitorConfirmOrEditContactDetails",
     "Name": "Edit your contact details",
     "Description": "Respondent Solicitor can update or confirm respondent details",
@@ -1545,6 +1530,23 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/consent-to-application-about-to-submit",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ResSolKeepDetailsPrivate",
+    "Name": "Keep your details private",
+    "Description": "C100 Respondent Solicitor marks details private",
+    "DisplayOrder": 2,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/keep-details-private-about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/keep-details-private-about-to-submit",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   }
 ]
