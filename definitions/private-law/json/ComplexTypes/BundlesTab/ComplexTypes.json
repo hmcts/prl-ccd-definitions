@@ -129,14 +129,6 @@
   },
   {
     "LiveFrom": "31/10/2022",
-    "ID": "BundlingInformation",
-    "ListElementCode": "bundleCreationDate",
-    "FieldType": "DateTime",
-    "ElementLabel": "Bundle Creation Date and Time",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "31/10/2022",
     "ID": "Bundle",
     "ListElementCode": "documents",
     "FieldType": "Collection",
@@ -262,6 +254,24 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "21/11/2021",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleStatusInfo",
+    "FieldType": "Label",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Bundle generation is in progress.. Please refresh the page manually to see the bundle pdf if the Stitch Status as NEW in the below details</strong></div>",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "caseBundles.value.stitchStatus=\"NEW\""
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleCreationDate",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle Creation Date and Time",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "caseBundles.value.stitchStatus!=\"NEW\""
+  },
+  {
     "LiveFrom": "24/11/2022",
     "ID": "BundlingInformation",
     "ListElementCode": "caseBundles",
@@ -314,11 +324,11 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "21/11/2021",
+    "LiveFrom": "03/02/2022",
     "ID": "createBundleTransitionDetailsObject",
-    "ListElementCode": "bundleCreationStatusLabel",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon'>!</span><strong class='govuk-warning-text__text'>Please wait for sometime to generate the pdf</strong></div>",
+    "ListElementCode": "bundleCreationSubmittedWhatHappensNextLabel",
     "FieldType": "Label",
-    "ElementLabel": "Bundle generation is in progress.. Please refresh the page if you see the Stitch Status as NEW",
     "SecurityClassification": "Public"
   }
 ]
