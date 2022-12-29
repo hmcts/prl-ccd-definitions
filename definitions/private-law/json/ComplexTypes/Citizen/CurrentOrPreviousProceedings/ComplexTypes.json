@@ -1,5 +1,78 @@
 [
   {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "orderDetail",
+    "FieldType": "Text",
+    "ElementLabel": "order details",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "caseNo",
+    "FieldType": "Text",
+    "ElementLabel": "Case number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "orderDate",
+    "FieldType": "Date",
+    "ElementLabel": "Order date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "currentOrder",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Current order",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "orderEndDate",
+    "FieldType": "Date",
+    "ElementLabel": "Order end date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "orderCopy",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Copy of order",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedingDetails",
+    "ListElementCode": "orderDocument",
+    "FieldType": "Document",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedings",
+    "ListElementCode": "orderType",
+    "FieldType": "Text",
+    "ElementLabel": "order Type",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "ID": "OtherProceedings",
+    "ListElementCode": "proceedingDetails",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherProceedingDetails",
+    "ElementLabel": "Other proceedings ",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "07/09/2022",
     "ID": "CurrentOrPreviousProceedings",
     "ListElementCode": "haveChildrenBeenInvolvedInCourtCase",
@@ -20,8 +93,8 @@
     "ID": "CurrentOrPreviousProceedings",
     "ListElementCode": "proceedingsList",
     "FieldType": "Collection",
-    "FieldTypeParameter": "Proceedings",
-    "ElementLabel": " ",
+    "FieldTypeParameter": "OtherProceedings",
+    "ElementLabel": "Other proceedings ",
     "SecurityClassification": "Public"
   }
 ]
