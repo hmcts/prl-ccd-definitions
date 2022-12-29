@@ -129,14 +129,6 @@
   },
   {
     "LiveFrom": "31/10/2022",
-    "ID": "BundlingInformation",
-    "ListElementCode": "bundleCreationDate",
-    "FieldType": "Text",
-    "ElementLabel": "Bundle Creation Date and Time",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "31/10/2022",
     "ID": "Bundle",
     "ListElementCode": "documents",
     "FieldType": "Collection",
@@ -271,13 +263,13 @@
     "FieldShowCondition": "caseBundles.value.stitchStatus=\"NEW\""
   },
   {
-    "LiveFrom": "21/11/2021",
+    "LiveFrom": "31/10/2022",
     "ID": "BundlingInformation",
-    "ListElementCode": "bundlingProgressInfo",
+    "ListElementCode": "bundleCreationDate",
     "FieldType": "Text",
-    "ElementLabel": "Bundle generation is in progress.. Please refresh the page if you see the Stitch Status as NEW ",
+    "ElementLabel": "Bundle Creation Date and Time",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "caseBundles.value.stitchStatus=\"NEW\""
+    "FieldShowCondition": "caseBundles.value.stitchStatus!=\"NEW\""
   },
   {
     "LiveFrom": "24/11/2022",
