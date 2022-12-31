@@ -11112,8 +11112,30 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "otherProceedingsLabel",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "10/08/2021",
