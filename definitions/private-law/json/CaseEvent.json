@@ -1312,11 +1312,9 @@
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
-    "RetriesTimeoutURLAboutToSubmitEvent": "15,20,30,45,55",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Create Bundle",
-    "Publish": "Y"
+    "EndButtonLabel": "Create Bundle"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1438,5 +1436,18 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "16/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "DocumentUpdated",
+    "Name": "Document Updated",
+    "Description": "Document Updated",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": ""
   }
 ]
