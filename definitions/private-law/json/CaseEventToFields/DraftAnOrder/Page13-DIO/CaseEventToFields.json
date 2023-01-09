@@ -1,0 +1,63 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioPreamblesLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "createSelectOrderOptions=\"directionOnIssue\"",
+    "FieldShowCondition": "dioPreamblesList CONTAINS \"rightToAskCourt\" OR dioPreamblesList CONTAINS \"partyRaisedDomesticAbuse\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioRightToAskCourtLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioPreamblesList CONTAINS \"rightToAskCourt\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioRightToAskCourt",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioPreamblesList CONTAINS \"rightToAskCourt\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioPartiesRaisedAbuseLabel",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "READONLY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioPreamblesList CONTAINS \"partyRaisedDomesticAbuse\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioPartiesRaisedAbuseCollection",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "COMPLEX",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioPreamblesList CONTAINS \"partyRaisedDomesticAbuse\""
+  }
+]
