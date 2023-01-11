@@ -1349,5 +1349,37 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createCaseLink",
+    "Name": "Link cases",
+    "Description": "To link related cases",
+    "DisplayOrder": 70,
+    "PreConditionState(s)": "CASE_ISSUE;CASE_WITHDRAWN;GATE_KEEPING;ALL_FINAL_ORDERS_ISSUED;CASE_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Create Case Link",
+    "Publish": "Y",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "maintainCaseLink",
+    "Name": "Manage case links",
+    "Description": "To maintain linked cases",
+    "DisplayOrder": 71,
+    "PreConditionState(s)": "CASE_ISSUE;CASE_WITHDRAWN;GATE_KEEPING;ALL_FINAL_ORDERS_ISSUED;CASE_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Maintain Case Links",
+    "Publish": "Y",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
