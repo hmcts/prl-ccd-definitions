@@ -1302,12 +1302,12 @@
     "Name": "Create a bundle",
     "Description": "Create a bundle in the case",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING",
+    "PreConditionState(s)": "PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EndButtonLabel": "Create Bundle"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1373,6 +1373,19 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Maintain Case Links",
     "Publish": "Y",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "10/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "asyncStitchingComplete",
+    "Name": "Stitching bundle complete",
+    "DisplayOrder": 25,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
