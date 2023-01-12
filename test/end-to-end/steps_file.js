@@ -27,11 +27,24 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const signOut = require('./pages/Logout');
+const SendAndReplyMessages = require('./pages/SendAndReplyMessages');
+const SoT = require('./pages/DOScreens/StatementOfTruth');
+const AddCaseNumber = require('./pages/AddCaseNumber');
+const SendToGateKeeper = require('./pages/SendToGateKeeper');
+const ManageOrdersUpload = require('./pages/ManageOrders');
+const ServiceOfApplication = require('./pages/ServiceOfApplication');
 
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsCourtAdminUserOne() {
+      return LoginPage.loginAsCourtAdminUserOne();
+    },
+    loginAsCourtAdminUserTwo() {
+      return LoginPage.loginAsCourtAdminUserTwo();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -143,6 +156,27 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    statementOfTruth() {
+      return SoT.submitStatementOfTruth();
+    },
+    signOut() {
+      return signOut.clickSignOut();
+    },
+    sendMessage() {
+      return SendAndReplyMessages.sendMessage();
+    },
+    addCaseNumber() {
+      return AddCaseNumber.AddingCaseNumber();
+    },
+    addNewGateKeeper() {
+      return SendToGateKeeper.AddNewGateKeeper();
+    },
+    runEventHappyPath() {
+      return ManageOrdersUpload.runEventHappyPath();
+    },
+    runServiceApplication() {
+      return ServiceOfApplication .runServiceApplication() 
     }
   });
 };
