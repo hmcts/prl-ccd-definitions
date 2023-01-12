@@ -26,10 +26,10 @@ module.exports = {
   },
 
   async fillApplicantsPage() {
-    I.wait('2');
+    I.wait('5');
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
-    I.wait('2');
+    
     await I.retry(retryCount).fillField('//input[@id="applicants_0_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-month"]', '10');

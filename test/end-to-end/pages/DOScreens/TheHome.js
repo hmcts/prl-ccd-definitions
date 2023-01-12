@@ -28,7 +28,7 @@ module.exports = {
 
     /* Child Details */
     await I.click('Add new');
-    I.wait('2');
+    I.wait('5');
     await I.click('#home_children_0_keepChildrenInfoConfidential_Yes');
     await I.fillField('#home_children_0_childFullName', 'Child Name');
     await I.fillField('#home_children_0_childsAge', '6');

@@ -49,6 +49,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Allegations of harm');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.allegationsOfHarmYesNo);
+    I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
     await I.retry(retryCount).click(this.fields.domesticAbuse);

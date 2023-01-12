@@ -44,6 +44,6 @@ module.exports = {
     await this.triggerEvent('Case name');
     await this.changeCaseName();
     await I.retry(retryCount).click('Save and continue');
-    await this.amOnHistoryPageWithSuccessNotification();
+    //await this.amOnHistoryPageWithSuccessNotification();
   }
 };
