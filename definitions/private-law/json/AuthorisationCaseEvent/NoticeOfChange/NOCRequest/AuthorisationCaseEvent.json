@@ -3,14 +3,15 @@
     "LiveFrom": "01/01/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "nocRequest",
-    "UserRole": "caseworker-caa",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "01/01/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "nocRequest",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]
