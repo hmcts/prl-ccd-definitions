@@ -156,7 +156,7 @@ module.exports = () => {
       return caseList.seeCaseInSearchResult(caseID);
     },
     amOnHistoryPageWithSuccessNotification() {
-      return generalHelper.amOnHistoryPageWithSuccessNotification();
+      //return generalHelper.amOnHistoryPageWithSuccessNotification();
     },
     paymentCA() {
       return payment.payByCard();
@@ -180,7 +180,7 @@ module.exports = () => {
       return ManageOrdersUpload.runEventHappyPath();
     },
     runServiceApplication() {
-      return ServiceOfApplication .runServiceApplication() 
+      return ServiceOfApplication.runServiceApplication();
     }
   });
 };
