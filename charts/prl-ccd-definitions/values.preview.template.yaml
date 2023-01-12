@@ -73,7 +73,7 @@ ccd:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
       keyVaults: []
       environment:
-        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition
+        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   ccd-data-store-api:
@@ -91,10 +91,10 @@ ccd:
         CASE_DOCUMENT_AM_URL: http://${SERVICE_NAME}-cdam
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOSTS: ${SERVICE_NAME}-es-master:9200
-        CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: aac_manage_case_assignment,prl_cos_api
+        CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: aac_manage_case_assignment,prl_cos_api,prl_citizen_frontend
         ELASTIC_SEARCH_DATA_NODES_HOSTS:  http://${SERVICE_NAME}-es-master:9200
         DATA_STORE_DEFAULT_LOG_LEVEL: DEBUG
-        DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api
+        DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend
       keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
@@ -112,7 +112,7 @@ ccd:
       environment:
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
-        DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment
+        DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
         IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
         OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
@@ -213,7 +213,7 @@ ccd-case-document-am-api:
     image: hmctspublic.azurecr.io/ccd/case-document-am-api:latest
     ingressHost: ccd-case-document-am-api-${SERVICE_FQDN}
     environment:
-      CASE_DOCUMENT_S2S_AUTHORISED_SERVICES: ccd_case_document_am_api,ccd_gw,xui_webapp,ccd_data,bulk_scan_processor,sscs,probate_backend,iac,em_npa_app,fprl_dgs_api,dg_docassembly_api,em_stitching_api,em_ccd_orchestrator,cmc_claim_store,civil_service,bulk_scan_orchestrator,ethos_repl_service,divorce_document_generator,finrem_document_generator,fpl_case_service,et_cos,prl_cos_api,prl_dgs_api,et_sya_api,adoption_cos_api,adoption_web
+      CASE_DOCUMENT_S2S_AUTHORISED_SERVICES: ccd_case_document_am_api,ccd_gw,xui_webapp,ccd_data,bulk_scan_processor,sscs,probate_backend,iac,em_npa_app,fprl_dgs_api,dg_docassembly_api,em_stitching_api,em_ccd_orchestrator,cmc_claim_store,civil_service,bulk_scan_orchestrator,ethos_repl_service,divorce_document_generator,finrem_document_generator,fpl_case_service,et_cos,prl_cos_api,prl_dgs_api,et_sya_api,adoption_cos_api,adoption_web,prl_citizen_frontend
       DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
       CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
@@ -243,7 +243,7 @@ aac-manage-case-assignment:
       S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
       MCA_DS_PROXY_URLS_ALLOWED_LIST: /searchCases.*,/internal/searchCases.*,/internal/cases.*
       MCA_DEF_STORE_PROXY_URLS_ALLOWED_LIST: /api/display/challenge-questions.*
-      MANAGE_CASE_S2S_AUTHORISED_SERVICES: xui_webapp,ccd_data,prl_cos_api
+      MANAGE_CASE_S2S_AUTHORISED_SERVICES: xui_webapp,ccd_data,prl_cos_api,prl_citizen_frontend
       CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       CCD_DEFINITION_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-definition-store
       PRD_HOST: http://rd-professional-api-aat.service.core-compute-aat.internal
@@ -256,65 +256,3 @@ aac-manage-case-assignment:
       NOTIFY_MCA_API_KEY: ${NOTIFY_MCA_API_KEY}
       autoscaling:
           enabled: false
-em-ccdorc:
-  enabled: true
-  java:
-    image: hmctspublic.azurecr.io/em/ccdorc:pr-996-81a90a6-20221104140138
-    ingressHost: em-ccdorc-${SERVICE_FQDN}
-    releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
-    keyVaults:
-      em-ccdorc:
-        resourceGroup: em-ccdorc
-        secrets:
-          - name: AppInsightsInstrumentationKey
-            alias: APPINSIGHTS_INSTRUMENTATIONKEY
-          - name: microservicekey-em-ccd-orchestrator
-            alias: S2S_KEY
-          - name: notification-api-key
-            alias: NOTIFICATION_API_KEY
-          - name: app-insights-connection-string
-            alias: app-insights-connection-string
-    environment:
-      IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
-      OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
-      S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
-      EM_STITCHING_API_URL: http://prl-ccd-definitions-pr-662-em-stitching
-      DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
-      CCD_DATA_API_URL: http://prl-ccd-definitions-pr-662-ccd-data-store-api
-      CALLBACK_DOMAIN: em-ccdorc-${SERVICE_FQDN}
-
-em-stitching:
-  enabled: true
-  java:
-    image: hmctspublic.azurecr.io/em/stitching:pr-1230-5f7a442-20221104121522
-    ingressHost: em-stitching-${SERVICE_FQDN}
-    releaseNameOverride: ${SERVICE_NAME}-em-stitching
-    keyVaults:
-      em-stitching:
-        resourceGroup: em-stitching
-        secrets:
-          - name: AppInsightsInstrumentationKey
-            alias: APPINSIGHTS_INSTRUMENTATIONKEY
-          - name: docmosis-access-key
-            alias: DOCMOSIS_ACCESS_KEY
-          - name: microservicekey-em-stitching-api
-            alias: S2S_KEY
-          - name: stitching-POSTGRES-PASS
-            alias: SPRING_DATASOURCE_PASSWORD
-          - name: app-insights-connection-string
-            alias: app-insights-connection-string
-    environment:
-      SPRING_DATASOURCE_PORT: 5432
-      SPRING_DATASOURCE_NAME: emstitch
-      SPRING_DATASOURCE_OPTIONS: "?sslmode=require"
-      SPRING_DATASOURCE_HOST: em-stitching-postgres-db-v11-aat.postgres.database.azure.com
-      SPRING_DATASOURCE_USERNAME: emstitch@em-stitching-postgres-db-v11-aat
-      RUN_DB_MIGRATION_ON_STARTUP: 'false'
-      # Regardless of environment, point towards AAT instances. Overwrite in product charts etc.
-      IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
-      OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
-      S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
-      DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
-      DOCMOSIS_ENDPOINT: https://docmosis.aat.platform.hmcts.net/rs/convert
-      DOCMOSIS_RENDER_ENDPOINT: https://docmosis.aat.platform.hmcts.net/rs/render
-      CDAM_URL: http://prl-ccd-definitions-pr-662-cdam
