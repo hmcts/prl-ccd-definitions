@@ -2,9 +2,8 @@
 
 Project creating Family Private Law (PRL) CCD config files..
 
-Updated with Release 2.2 - branch for feature/noc-respondent-journey
-
-### Usage
+Updated with Release 2.2
+#### Usage
 
 Clone project and in the project directory run:
  - `yarn install && yarn reset-ccd-submodule`
@@ -15,6 +14,7 @@ be generated with `yarn generate-excel-aat`
 ## Troubleshooting
 
 ### Error: Cannot find modules
+
 
 When trying to create a XLS file ends with error message mentioning a module cannot be found
 
