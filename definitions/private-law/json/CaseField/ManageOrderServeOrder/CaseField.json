@@ -3,7 +3,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel18",
-    "Label": "## Served Saved orders",
+    "Label": "## Serve saved orders",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -11,17 +11,26 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderDynamicList",
-    "Label": "Select the order you want to serve",
+    "Label": "Select the orders you plan to serve :",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "serveOrderAdditionalDocumentsLabel",
+    "Label": "### Upload additional documents (Optional)",
+    "HintText": "Upload any additional documents that you plan to serve",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderAdditionalDocuments",
-    "Label": "Upload additional documents",
-    "HintText": "Upload additional documents you want to serve",
+    "Label": " ",
     "FieldType": "Collection",
+    "HintText": "Upload additional documents that you plan to serve",
     "FieldTypeParameter": "Document",
     "SecurityClassification": "Public"
   },
@@ -45,7 +54,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "servingRespondentsOptionsCA",
-    "Label": "Who is responsible for serving respondent?",
+    "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ServingRespondentsEnum",
     "SecurityClassification": "Public"
@@ -62,7 +71,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "otherParties",
-    "Label": "Which other people in the case should the order be sent to?",
+    "Label": "Which other people in the case should the order be sent to? (Optional)",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -70,7 +79,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "cafcassServedOptions",
-    "Label": "Does the Cafcass need to be served?",
+    "Label": "Does Cafcass need to be served?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -78,7 +87,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "cafcassCymruServedOptions",
-    "Label": "Does the Cafcass Cymru needs to be served?",
+    "Label": "Does Cafcass Cymru need to be served?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -96,6 +105,7 @@
     "ID": "serveOtherPartiesCA",
     "Label": " ",
     "FieldType": "MultiSelectList",
+    "HintText": "For example, DWP or the local authority",
     "FieldTypeParameter": "OtherOrganisationOptions",
     "SecurityClassification": "Public"
   },
@@ -103,7 +113,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "deliveryByOptionsCA",
-    "Label": "Delivery by",
+    "Label": "Delivered by",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "DeliveryByEnum",
     "SecurityClassification": "Public"
@@ -113,7 +123,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "emailInformationCA",
     "Label": " ",
-    "FieldType": "EmailInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
     "SecurityClassification": "Public"
   },
   {
@@ -121,7 +132,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "postalInformationCA",
     "Label": " ",
-    "FieldType": "PostalInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
     "SecurityClassification": "Public"
   },
   {
@@ -138,7 +150,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "emailInformationDA",
     "Label": " ",
-    "FieldType": "EmailInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
     "SecurityClassification": "Public"
   },
   {
@@ -146,14 +159,15 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "postalInformationDA",
     "Label": " ",
-    "FieldType": "PostalInformation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "deliveryByOptionsDA",
-    "Label": "Delivery by",
+    "Label": "Delivered by",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "DeliveryByEnum",
     "SecurityClassification": "Public"
@@ -162,7 +176,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "servingRespondentsOptionsDA",
-    "Label": "Who is responsible for serving respondent?",
+    "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ServingRespondentsEnum",
     "SecurityClassification": "Public"
