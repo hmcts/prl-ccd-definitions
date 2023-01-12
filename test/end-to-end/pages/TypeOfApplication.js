@@ -44,11 +44,15 @@ module.exports = {
     checkYourAnswersPageHeader: 'Check your answers'
   },
 
-  async actionTypeOfApplicationEvent() {
-    await I.retry(retryCount).waitForText(this.fields.eventName);
-    await I.retry(retryCount).selectOption(this.fields.eventSelectField, this.fields.eventName);
-    await I.retry(retryCount).waitForEnabled(this.fields.submit);
-    await I.retry(retryCount).click(this.fields.submit);
+  // async actionTypeOfApplicationEvent() {
+  //   await I.retry(retryCount).waitForText(this.fields.eventName);
+  //   await I.retry(retryCount).selectOption(this.fields.eventSelectField, this.fields.eventName);
+  //   await I.retry(retryCount).waitForEnabled(this.fields.submit);
+  //   await I.retry(retryCount).click(this.fields.submit);
+  // },
+
+  async triggerEvent() {
+    await I.retry(retryCount).triggerEvent(this.fields.eventName);
   },
 
   async whatOrdersPageC100() {
@@ -120,7 +124,8 @@ module.exports = {
   },
 
   async typeOfApplicationEventC100() {
-    await this.actionTypeOfApplicationEvent();
+    //await this.actionTypeOfApplicationEvent();
+    await this.triggerEvent();
     await this.whatOrdersPageC100();
     await this.draftConsentOrderC100();
     await this.permissionsPageC100();
@@ -129,7 +134,8 @@ module.exports = {
   },
 
   async typeOfApplicationEventFL401() {
-    await this.actionTypeOfApplicationEvent();
+    //await this.actionTypeOfApplicationEvent();
+    await this.triggerEvent();
     await this.ordersApplyingForPageFL401();
     await this.linkToChildArrangementsApplicationFL401();
     await this.checkYourAnswersPageFL401();

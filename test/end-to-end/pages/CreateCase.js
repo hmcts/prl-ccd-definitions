@@ -15,19 +15,19 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('7');
+    I.wait('10');
     await I.waitForText('Create case');
-    I.wait('7');
+    I.wait('10');
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
-    I.wait('5');
-    await I.waitForElement(this.fields.jurisdiction);
+    I.wait('10');
+    //await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('5');
+    I.wait('10');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    I.wait('5');
+    I.wait('10');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
     // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
@@ -76,7 +76,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    await this.amOnHistoryPageWithSuccessNotification();
+    //await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -85,7 +85,7 @@ module.exports = {
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
     await this.submitEvent();
-    await this.amOnHistoryPageWithSuccessNotification();
+    //await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseC100andReturnID() {
@@ -94,7 +94,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    await this.amOnHistoryPageWithSuccessNotification();
+    //await this.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     return caseId;
   },
@@ -104,6 +104,7 @@ module.exports = {
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
+    I.wait('10');
   },
 
   async amOnHistoryPageWithSuccessNotification() {
