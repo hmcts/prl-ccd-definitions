@@ -2923,6 +2923,67 @@
     "FieldType": "FixedList",
     "FieldTypeParameter": "CaseCreatedByEnum",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsApplyingFor",
+    "Label": "What are you applying for?",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "AdditionalApplicationTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "typeOfC2Application",
+    "Label": "What type of C2 application?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C2ApplicationTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantsList",
+    "Label": "Select applicant",
+    "FieldType": "DynamicList",
+    "FieldTypeParameter": "C2ApplicationTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryOtherApplicationsBundle",
+    "Label": "Other applications",
+    "FieldType": "OtherApplicationsBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryC2Document",
+    "Label": "C2 application",
+    "FieldType": "C2DocumentBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseFlags",
+    "Label": "Case level Flags",
+    "FieldType": "Flags",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "flagLauncher",
+    "Label": "Launch the Flags screen",
+    "FieldType": "FlagLauncher",
+    "SecurityClassification": "Public"
   }
 ]
 
