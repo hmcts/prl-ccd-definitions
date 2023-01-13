@@ -21,7 +21,8 @@
     "ListElementCode": "sortIndex",
     "FieldType": "Number",
     "ElementLabel": "Sort Index",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "sortIndex=\"DUMMY_VALUE_TO_HIDE_FIELD\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -29,6 +30,23 @@
     "ListElementCode": "sourceDocument",
     "FieldType": "Document",
     "ElementLabel": "Source Document",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Subfolder Name",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Sub Folder Documents",
     "SecurityClassification": "Public"
   },
   {
@@ -45,6 +63,15 @@
     "ListElementCode": "documents",
     "FieldType": "Collection",
     "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleNestedSubfolder1",
     "ElementLabel": "Folder Documents",
     "SecurityClassification": "Public"
   },
@@ -73,6 +100,7 @@
     "FieldTypeParameter": "BundleSubfolder",
     "ElementLabel": "Subfolders",
     "SecurityClassification": "Public"
+
   },
   {
     "LiveFrom": "31/10/2022",
@@ -80,7 +108,17 @@
     "ListElementCode": "sortIndex",
     "FieldType": "Number",
     "ElementLabel": "Sort Index",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "sortIndex=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "21/11/2022",
+    "ID": "Bundle",
+    "ListElementCode": "bundleStatusInfo",
+    "FieldType": "Label",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Bundle generation is in progress.. Please refresh the page manually to see the bundle pdf if the Stitch Status is NEW in the below details</strong></div>",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "stitchStatus=\"NEW\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -115,6 +153,7 @@
     "FieldTypeParameter": "BundleFolder",
     "ElementLabel": "Bundle folder",
     "SecurityClassification": "Public"
+
   },
   {
     "LiveFrom": "31/10/2022",
@@ -130,7 +169,8 @@
     "ListElementCode": "title",
     "FieldType": "Text",
     "ElementLabel": "Config used for bundle",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "title=\"DUMMY_VALUE_TO_HIDE_FIELD\""
   },
   {
     "LiveFrom": "31/10/2022",
@@ -220,6 +260,82 @@
     "FieldType": "FixedList",
     "FieldTypeParameter": "pageNumberFormat",
     "ElementLabel": "Page Number Format",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleCreationDateAndTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Bundle Creation Date and Time",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleHearingDateAndTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Hearing Date and Time",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "caseBundles",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Bundle",
+    "ElementLabel": "Case Bundles",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "historicalBundles",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Bundle",
+    "ElementLabel": "Historical Bundles",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleConfiguration",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle Configuration",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "bundleConfiguration=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "multiBundleConfiguration",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle Configuration",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "multiBundleConfiguration=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "Please click Submit button to generate the bundle",
+    "ListElementCode": "createBundleSubmitLabel",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon'>!</span><strong class='govuk-warning-text__text'>Please wait for sometime to generate the pdf</strong></div>",
+    "ListElementCode": "bundleCreationSubmittedWhatHappensNext",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon'>!</span><strong class='govuk-warning-text__text'>Please wait for sometime to generate the pdf</strong></div>",
+    "ListElementCode": "bundleCreationSubmittedWhatHappensNextLabel",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   }
 ]
