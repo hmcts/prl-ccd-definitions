@@ -3,49 +3,25 @@
     "LiveFrom": "22/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "citizen",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "22/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401StatementOfTruthAndSubmit",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
