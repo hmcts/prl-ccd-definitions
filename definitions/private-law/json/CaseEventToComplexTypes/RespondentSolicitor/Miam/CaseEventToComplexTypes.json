@@ -5,7 +5,7 @@
     "ID": "SolicitorMiam",
     "CaseEventID": "c100ResSolMiam",
     "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
-    "ListElementCode": "haveYouAttendedMiam",
+    "ListElementCode": "attendedMiam",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -15,8 +15,8 @@
     "ID": "SolicitorMiam",
     "CaseEventID": "c100ResSolMiam",
     "CaseFieldID": "respondentSolicitorWillingnessToAttendMiam",
-    "ListElementCode": "willingnessToAttendMiam",
-    "FieldDisplayOrder": "2",
+    "ListElementCode": "willingToAttendMiam",
+    "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -25,9 +25,9 @@
     "ID": "SolicitorMiam",
     "CaseEventID": "c100ResSolMiam",
     "CaseFieldID": "respondentSolicitorWillingnessToAttendMiam",
-    "ListElementCode": "notWillingnessToAttendMiamText",
-    "FieldShowCondition": "respondentSolicitorWillingnessToAttendMiam.willingnessToAttendMiam=\"No\"",
-    "FieldDisplayOrder": "3",
+    "ListElementCode": "reasonNotAttendingMiam",
+    "FieldShowCondition": "respondentSolicitorWillingnessToAttendMiam.willingToAttendMiam=\"No\"",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
   }
 ]
