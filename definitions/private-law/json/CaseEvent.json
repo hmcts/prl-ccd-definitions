@@ -935,6 +935,8 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/amend-court-details/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/amend-court-details/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
@@ -1372,20 +1374,6 @@
   {
     "LiveFrom": "01/01/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "nocRequest",
-    "Name": "NoC Request",
-    "Description": "Notice of Change Request",
-    "DisplayOrder": 201,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/check-noc-approval",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "Y"
-  },
-  {
-    "LiveFrom": "01/01/2021",
-    "CaseTypeID": "PRLAPPS",
     "ID": "applyNocDecision",
     "Name": "Apply NoC Decision",
     "Description": "Apply Notice of Change Request",
@@ -1607,6 +1595,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/response-submit-validation",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
