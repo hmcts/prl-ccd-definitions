@@ -9,7 +9,7 @@
     "PageID": 19,
     "PageDisplayOrder": 19,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\" AND caseTypeOfApplication=\"C100\""
+    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -20,18 +20,19 @@
     "DisplayContext": "MANDATORY",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "servingRespondentsOptionsCA",
+    "CaseFieldID": "servingRespondentsOptions",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "FieldShowCondition": "serveToRespondentOptions=\"Yes\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"Yes\" OR caseTypeOfApplication=\"FL401\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -55,7 +56,8 @@
     "DisplayContext": "READONLY",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
   "LiveFrom": "01/12/2022",
@@ -66,7 +68,8 @@
   "DisplayContext": "MANDATORY",
   "PageID": 19,
   "PageDisplayOrder": 19,
-  "ShowSummaryChangeOption": "Y"
+  "ShowSummaryChangeOption": "Y",
+  "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -77,7 +80,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -100,42 +104,55 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 19,
     "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveOtherPartiesDA",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "deliveryByOptionsCA",
-    "PageFieldDisplayOrder": 10,
+    "CaseFieldID": "deliveryByOptions",
+    "PageFieldDisplayOrder": 11,
     "DisplayContext": "MANDATORY",
     "PageID": 19,
     "PageDisplayOrder": 19,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\""
+    "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\" OR serveOtherPartiesDA=\"other\""
   },
   {
   "LiveFrom": "01/12/2022",
   "CaseTypeID": "PRLAPPS",
   "CaseEventID": "manageOrders",
-  "CaseFieldID": "postalInformationCA",
+  "CaseFieldID": "postalInformation",
   "PageID": 19,
   "PageDisplayOrder": 19,
-  "PageFieldDisplayOrder": 11,
+  "PageFieldDisplayOrder": 12,
   "DisplayContext": "COMPLEX",
-  "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\" AND deliveryByOptionsCA=\"post\"",
+  "FieldShowCondition": "deliveryByOptions=\"post\"",
   "ShowSummaryChangeOption": "Y"
   },
   {
   "LiveFrom": "01/12/2022",
   "CaseTypeID": "PRLAPPS",
   "CaseEventID": "manageOrders",
-  "CaseFieldID": "emailInformationCA",
+  "CaseFieldID": "emailInformation",
   "PageID": 19,
   "PageDisplayOrder": 19,
-  "PageFieldDisplayOrder": 12,
+  "PageFieldDisplayOrder": 13,
   "DisplayContext": "COMPLEX",
-  "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\" AND deliveryByOptionsCA=\"email\"",
+  "FieldShowCondition": "deliveryByOptions=\"email\"",
   "ShowSummaryChangeOption": "Y"
   }
 ]
