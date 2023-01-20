@@ -25,8 +25,8 @@
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "allocatedJudge",
-    "CaseFieldID": "isAllocatedJudgeOrLegalAdviser",
-    "DisplayContext": "MANDATORY",
+    "CaseFieldID": "isSpecificJudgeOrLegalAdviserNeeded",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -36,12 +36,36 @@
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "allocatedJudge",
-    "CaseFieldID": "nameOfJudgeOrLegalAdviser",
+    "CaseFieldID": "isJudgeOrLegalAdviser",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "isAllocatedJudgeOrLegalAdviser=\"Yes\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "nameOfJudge",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isJudgeOrLegalAdviser=\"Yes\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "nameOfLegalAdviser",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isJudgeOrLegalAdviser=\"No\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -50,12 +74,10 @@
     "CaseEventID": "allocatedJudge",
     "CaseFieldID": "tierOfJudiciary",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "isAllocatedJudgeOrLegalAdviser=\"No\"",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   }
-
-
 ]

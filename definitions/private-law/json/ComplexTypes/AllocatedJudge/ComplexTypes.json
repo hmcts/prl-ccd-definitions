@@ -2,7 +2,7 @@
   {
     "LiveFrom": "01/01/2023",
     "ID": "AllocatedJudge",
-    "ListElementCode": "isAllocatedJudgeOrLegalAdviser",
+    "ListElementCode": "isSpecificJudgeOrLegalAdviserNeeded",
     "FieldType": "YesOrNo",
     "ElementLabel": "Do you want to allocate a specific judge or legal adviser?",
     "SecurityClassification": "Public"
@@ -10,9 +10,25 @@
   {
     "LiveFrom": "01/01/2023",
     "ID": "AllocatedJudge",
-    "ListElementCode": "nameOfJudgeOrLegalAdviser",
+    "ListElementCode": "isJudgeOrLegalAdviser",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "allocatedJudgeTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "AllocatedJudge",
+    "ListElementCode": "nameOfJudge",
     "FieldType": "Text",
     "ElementLabel": "Name of judge or legal adviser",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "AllocatedJudge",
+    "ListElementCode": "nameOfLegalAdviser",
+    "FieldType": "Text",
+    "ElementLabel": "Name of legal adviser",
     "SecurityClassification": "Public"
   },
   {

@@ -1,6 +1,6 @@
 [
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "18/01/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "allocatedJudeLabel",
     "Label": "Allocated Judge",
@@ -8,7 +8,7 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "18/01/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "allocatedJudgeInfo",
     "Label": "You can update this at any point in the case",
@@ -16,23 +16,39 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "18/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "isAllocatedJudgeOrLegalAdviser",
+    "ID": "isSpecificJudgeOrLegalAdviserNeeded",
     "Label": "Do you want to allocate a specific judge or legal adviser?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "18/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "nameOfJudgeOrLegalAdviser",
-    "Label": "Name of judge or legal adviser",
+    "ID": "isJudgeOrLegalAdviser",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "allocatedJudgeTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfJudge",
+    "Label": "Name of judge",
     "FieldType": "Text",
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "18/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfLegalAdviser",
+    "Label": "Name of legal adviser",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/01/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "tierOfJudiciary",
     "Label": "Select the tier of judiciary",
@@ -40,6 +56,4 @@
     "FieldTypeParameter": "tierOfJudiciaryEnum",
     "SecurityClassification": "Public"
   }
-
-
 ]
