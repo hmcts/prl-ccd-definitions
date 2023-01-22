@@ -145,7 +145,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressHistory",
+    "ListElementCode": "isAtAddressLessThan5Years",
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
@@ -155,7 +155,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressHistory.isAtAddressLessThan5Years",
+    "ListElementCode": "previousAddressHistory",
     "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
   },
@@ -165,9 +165,9 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory",
+    "ListElementCode": "previousAddressHistory.address.AddressLine1",
     "FieldDisplayOrder": "17",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
@@ -175,7 +175,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.AddressLine1",
+    "ListElementCode": "previousAddressHistory.address.AddressLine2",
     "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
@@ -185,7 +185,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.AddressLine2",
+    "ListElementCode": "previousAddressHistory.address.AddressLine3",
     "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL"
   },
@@ -195,7 +195,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.AddressLine3",
+    "ListElementCode": "previousAddressHistory.address.PostTown",
     "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL"
   },
@@ -205,7 +205,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.PostTown",
+    "ListElementCode": "previousAddressHistory.address.County",
     "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL"
   },
@@ -215,7 +215,7 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.County",
+    "ListElementCode": "previousAddressHistory.address.PostCode",
     "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
   },
@@ -225,18 +225,8 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.PostCode",
+    "ListElementCode": "previousAddressHistory.address.Country",
     "FieldDisplayOrder": "23",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/10/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
-    "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
-    "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "addressDetails.previousAddressHistory.Country",
-    "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
   },
   {
