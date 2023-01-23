@@ -2835,8 +2835,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "submitCountyCourtSelection",
     "Label": "Select the email address of the family court you want this application to go to",
-    "FieldType": "FixedList",
-    "FieldTypeParameter": "CountyCourtEmails",
+    "FieldType": "DynamicList",
     "SecurityClassification": "Public"
   },
   {
@@ -2968,6 +2967,22 @@
     "FieldType": "C2DocumentBundle",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseFlags",
+    "Label": "Case level Flags",
+    "FieldType": "Flags",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "flagLauncher",
+    "Label": "Launch the Flags screen",
+    "FieldType": "FlagLauncher",
+    "SecurityClassification": "Public"
   }
 ]
 
