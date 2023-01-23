@@ -145,88 +145,108 @@
     "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "isAtAddressLessThan5Years",
+    "ListElementCode": "addressHistory",
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory",
+    "ListElementCode": "addressHistory.isAtAddressLessThan5Years",
     "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.AddressLine1",
+    "ListElementCode": "addressHistory.detailsOfAddressHistoryLabel",
     "FieldDisplayOrder": "17",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "READONLY"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.AddressLine2",
+    "ListElementCode": "addressHistory.previousAddressHistory",
     "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.AddressLine3",
+    "ListElementCode": "addressHistory.previousAddressHistory.AddressLine1",
     "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.PostTown",
+    "ListElementCode": "addressHistory.previousAddressHistory.AddressLine2",
     "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.County",
+    "ListElementCode": "addressHistory.previousAddressHistory.AddressLine3",
     "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.PostCode",
+    "ListElementCode": "addressHistory.previousAddressHistory.PostTown",
     "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "AddressHistory",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "previousAddressHistory.address.Country",
+    "ListElementCode": "addressHistory.previousAddressHistory.County",
     "FieldDisplayOrder": "23",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "AddressHistory",
+    "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
+    "CaseFieldID": "resSolConfirmEditContactDetails",
+    "ListElementCode": "addressHistory.previousAddressHistory.PostCode",
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "AddressHistory",
+    "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
+    "CaseFieldID": "resSolConfirmEditContactDetails",
+    "ListElementCode": "addressHistory.previousAddressHistory.Country",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -236,7 +256,7 @@
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
     "ListElementCode": "contactDetailsLabel",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "READONLY"
   },
   {
@@ -246,27 +266,27 @@
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
     "ListElementCode": "contact",
-    "FieldDisplayOrder": "26",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/10/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
-    "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
-    "CaseFieldID": "resSolConfirmEditContactDetails",
-    "ListElementCode": "contact.phoneNumber",
     "FieldDisplayOrder": "27",
     "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ConfirmEditDetails",
+    "ID": "Contact",
+    "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
+    "CaseFieldID": "resSolConfirmEditContactDetails",
+    "ListElementCode": "contact.phoneNumber",
+    "FieldDisplayOrder": "28",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Contact",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetails",
     "CaseFieldID": "resSolConfirmEditContactDetails",
     "ListElementCode": "contact.email",
-    "FieldDisplayOrder": "28",
+    "FieldDisplayOrder": "29",
     "DisplayContext": "OPTIONAL"
   }
 ]
