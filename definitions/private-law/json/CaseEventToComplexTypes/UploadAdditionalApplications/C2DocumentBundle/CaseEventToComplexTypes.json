@@ -64,7 +64,7 @@
     "ListElementCode": "hearingList",
     "EventElementLabel": "Which hearing are you requesting to be adjourned?",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "temporaryC2Document.c2AdditionalOrdersRequested CONTAINS \"REQUESTING_ADJOURNMENT\""
   },
   {
@@ -162,7 +162,7 @@
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
     "EventElementLabel": "Draft Orders",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle",
+    "ListElementCode": "additionalDraftOrdersBundle",
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
@@ -173,7 +173,7 @@
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
     "EventElementLabel": "File name",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle.title",
+    "ListElementCode": "additionalDraftOrdersBundle.title",
     "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY"
   },
@@ -183,7 +183,7 @@
     "ID": "C2DocumentBundle",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle.notes",
+    "ListElementCode": "additionalDraftOrdersBundle.notes",
     "FieldDisplayOrder": "17",
     "DisplayContext": "OPTIONAL"
   },
@@ -193,7 +193,7 @@
     "ID": "C2DocumentBundle",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle.document",
+    "ListElementCode": "additionalDraftOrdersBundle.document",
     "EventElementLabel": "Upload document",
     "FieldDisplayOrder": "18",
     "DisplayContext": "MANDATORY"
@@ -204,7 +204,7 @@
     "ID": "C2DocumentBundle",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle.documentAcknowledgeLabel",
+    "ListElementCode": "additionalDraftOrdersBundle.documentAcknowledgeLabel",
     "FieldDisplayOrder": "19",
     "DisplayContext": "READONLY",
     "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to Familyman Case number/Names/CCD</strong></div><br>"
@@ -215,7 +215,7 @@
     "ID": "C2DocumentBundle",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
-    "ListElementCode": "uploadApplicationDraftOrdersBundle.documentAcknowledge",
+    "ListElementCode": "additionalDraftOrdersBundle.documentAcknowledge",
     "FieldDisplayOrder": "20",
     "DisplayContext": "MANDATORY",
     "EventElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD"
