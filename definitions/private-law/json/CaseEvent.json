@@ -211,8 +211,26 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreatedFlagForChildDetails!=\"Yes\""
   },
+
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childDetailsRevised",
+    "Name": "Child details",
+    "Description": "Details of the children in the case",
+    "DisplayOrder": 6,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreatedFlagForChildDetails=\"Yes\""
+  },
+
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -227,8 +245,25 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreatedFlagForChildDetails!=\"Yes\""
   },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendChildDetailsRevised",
+    "Name": "Amend Child details",
+    "Description": "Details of the children in the case",
+    "DisplayOrder": 6,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND isNewCaseCreatedFlagForChildDetails=\"Yes\""
+  },
+
   {
     "LiveFrom": "16/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -369,6 +404,22 @@
     "DisplayOrder": 10,
     "SecurityClassification": "Public",
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherChildNotInTheCase",
+    "Name": "Other children not in the case",
+    "Description": "Other children not part of this application but related to the case",
+    "DisplayOrder": 11,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
