@@ -196,7 +196,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "checkYourOrder",
-    "Label": "## Check your order",
+    "Label": "## Preview the order",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -204,7 +204,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "checkYourOrderLabel",
-    "Label": "Preview your order to check the details are correct.\n\nYou can correct any orders in the next screen.",
+    "Label": "If you want to make further changes, go back to the previous screen.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -427,6 +427,14 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel14",
+    "Label": "${manageOrderHeader1}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel16",
     "Label": "${manageOrderHeader1}",
     "FieldType": "Label",
@@ -507,8 +515,6 @@
   },
   {
     "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "LiveFrom": "09/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "magistrateLastName",
     "Label": "Last name",
@@ -976,6 +982,15 @@
     "Label": "Select all that apply",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "cafcassReportsEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderType",
+    "Label": "Select order",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
     "SecurityClassification": "Public"
   }
 ]

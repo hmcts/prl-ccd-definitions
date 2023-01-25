@@ -3,49 +3,25 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "citizen",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "19/01/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "submit",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
