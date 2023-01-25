@@ -1610,6 +1610,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start-response-validation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/submit-c7-response",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -1678,20 +1680,19 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
-    "LiveFrom": "14/01/2022",
+    "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "uploadAdditionalApplications",
     "Name": "Upload additional applications",
     "Description": "Upload additional applications",
     "DisplayOrder": 107,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-applicants",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/other-applications-tabs",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/upload-additional-application/about-to-submit",
     "EndButtonLabel": "Save and continue",
     "Publish" : "False"
   },
