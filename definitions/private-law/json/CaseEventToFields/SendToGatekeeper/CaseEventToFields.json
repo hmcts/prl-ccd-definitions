@@ -1,24 +1,71 @@
 [
   {
-    "LiveFrom": "26/01/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "localGateKeeperHint",
+    "CaseFieldID": "letGateKeepersKnowLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "CaseFieldID": "sendToGateKeeperHint",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "N"
   },
   {
-    "LiveFrom": "26/01/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "gatekeeper",
-    "DisplayContext": "COMPLEX",
+    "CaseFieldID": "isSpecificGateKeeperNeeded",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "CaseFieldID": "isJudgeOrLegalAdviserGatekeeping",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "CaseFieldID": "judgeList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"judge\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "CaseFieldID": "legalAdvisorList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"legalAdviser\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   }
 ]
