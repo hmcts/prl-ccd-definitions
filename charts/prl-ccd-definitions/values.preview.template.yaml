@@ -123,7 +123,7 @@ ccd:
         OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOST: ${SERVICE_NAME}-es-master
-        ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 15000
+        ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 17000
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
   ccd-admin-web:
@@ -193,6 +193,13 @@ ccd:
     clusterName: "es"
     imageTag: "7.17.0"
     replicas: 1
+    initResources:
+      limits:
+        cpu: "500m"
+        memory: "512Mi"
+      requests:
+        cpu: "25m"
+        memory: "512Mi"
     minimumMasterNodes: 1
     antiAffinity: "soft"
     esJavaOpts: "-Xmx512m -Xms512m"
@@ -201,6 +208,8 @@ ccd:
         value: single-node
       - name: cluster.initial_master_nodes
         value: ""
+      - name: action.auto_create_index
+        value: .security*,.watches,.triggered_watches,.watcher-history-*,.logstash_dead_letter,.ml*
     persistence:
       enabled: false
     ingress:
