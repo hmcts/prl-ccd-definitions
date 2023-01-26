@@ -5,7 +5,31 @@
     "ListElementCode": "otherPeopleKnowYourContactDetails",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "ElementLabel": " ",
+    "ElementLabel": "*Do the other people named in this application (the applicants) \nknow any of your contact details?\n",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "KeepDetailsPrivate",
+    "ListElementCode": "confidentialityHeading",
+    "FieldType": "Label",
+    "ElementLabel": "* ### Do you want to keep your contact details private from the other people named in the application (the applicants)? ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "KeepDetailsPrivate",
+    "ListElementCode": "confidentialityHintLine1",
+    "FieldType": "Label",
+    "ElementLabel": "The answers you give in your response will be shared with the other people named in this application (the applicants). This will include your contact details. ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "KeepDetailsPrivate",
+    "ListElementCode": "confidentialityHintLine2",
+    "FieldType": "Label",
+    "ElementLabel": "For example, if you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private.",
     "SecurityClassification": "Public"
   },
   {
@@ -23,6 +47,7 @@
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "ConfidentialityListEnum",
     "ElementLabel": " ",
+    "FieldShowCondition": "confidentiality=\"Yes\"",
     "SecurityClassification": "Public"
   }
 ]

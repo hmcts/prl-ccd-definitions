@@ -2835,8 +2835,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "submitCountyCourtSelection",
     "Label": "Select the email address of the family court you want this application to go to",
-    "FieldType": "FixedList",
-    "FieldTypeParameter": "CountyCourtEmails",
+    "FieldType": "DynamicList",
     "SecurityClassification": "Public"
   },
   {
@@ -2914,6 +2913,94 @@
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "Y"
+  },
+  {
+    "LiveFrom": "02/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseCreatedBy",
+    "Label": " ",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "CaseCreatedByEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsApplyingFor",
+    "Label": "What are you applying for?",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "AdditionalApplicationTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "typeOfC2Application",
+    "Label": "What type of C2 application?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C2ApplicationTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicantsList",
+    "Label": "Select applicant",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryOtherApplicationsBundle",
+    "Label": "Other applications",
+    "FieldType": "OtherApplicationsBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryC2Document",
+    "Label": "C2 application",
+    "FieldType": "C2DocumentBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseFlags",
+    "Label": "Case level Flags",
+    "FieldType": "Flags",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "flagLauncher",
+    "Label": "Launch the Flags screen",
+    "FieldType": "FlagLauncher",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "uploadC2Link",
+    "FieldType": "Label",
+    "Label": "[Upload additional applications](/case/${[JURISDICTION]}/${[CASE_TYPE]}/${[CASE_REFERENCE]}/trigger/uploadAdditionalApplications)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsBundle",
+    "Label": "Additional applications",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "AdditionalApplicationsBundle",
+    "SecurityClassification": "Public"
   }
 ]
 
