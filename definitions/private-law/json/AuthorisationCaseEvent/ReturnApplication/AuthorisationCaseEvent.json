@@ -3,28 +3,21 @@
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "returnApplication",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "returnApplication",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "returnApplication",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "returnApplication",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   }
 ]
