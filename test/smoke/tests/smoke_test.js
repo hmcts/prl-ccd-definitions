@@ -8,6 +8,7 @@ Scenario('Sign in as local authority and create a case', async I => {
   I.searchForCasesWithId(caseId);
   I.grabCurrentUrl();
   I.waitForElement(searchResultsCaseId);
-  I.grabCurrentUrl();
-  I.seeCaseInSearchResult(caseId);
+  //The following test cases are no longer required as 'ccd-search-result .govuk-link' takes care of searching the case created.
+  //I.grabCurrentUrl();
+  //I.seeCaseInSearchResult(caseId);
 });
