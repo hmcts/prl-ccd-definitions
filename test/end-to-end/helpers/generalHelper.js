@@ -18,6 +18,12 @@ class GeneralHelper extends Helper {
     await Puppeteer.attachFile(`input[id="${field}"]`, '../resource/dummy.pdf');
   }
 
+  async getCurrentPageUrl() {
+    const { Puppeteer } = this.helpers;
+    // eslint-disable-next-line no-return-await
+    return await Puppeteer.page.url();
+  }
+
   async amOnHistoryPageWithSuccessNotification() {
     const historyResponseTime = 6;
     const { Puppeteer } = this.helpers;
