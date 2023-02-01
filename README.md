@@ -1,9 +1,9 @@
-# prl-ccd-definitions
+## prl-ccd-definitions
 
-Project creating Family Private Law (PRL) CCD config files..
+Project creating Family Private Law (PRL) CCD config files.
 
-Updated with Release 2.2
-#### Usage
+Updated with Release 3.1
+## Usage
 
 Clone project and in the project directory run:
  - `yarn install && yarn reset-ccd-submodule`
@@ -62,3 +62,4 @@ try to reset definition processor submodule with `yarn reset-ccd-submodule`. Pre
 ```$bash
  SHOW_BROWSER_WINDOW=true PARALLEL_CHUNKS=5 yarn test
 ```
+
