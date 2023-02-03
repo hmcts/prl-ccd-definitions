@@ -85,6 +85,7 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
+      devcpuRequests: 500m
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
