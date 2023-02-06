@@ -63,6 +63,15 @@
     "CaseAccessCategories": ""
   },
   {
+    "RoleName" : "idam:caseworker-approver",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "caseworker-approver",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
     "RoleName" : "[APPLICANTSOLICITOR]",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
@@ -72,10 +81,91 @@
     "CaseAccessCategories": ""
   },
   {
-    "RoleName" : "[RESPONDENTSOLICITOR]",
+    "RoleName" : "[SOLICITORA]",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "[RESPONDENTSOLICITOR]",
+    "AccessProfiles": "[SOLICITORA]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORB]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORB]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORC]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORC]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORD]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORD]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORE]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORE]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORF]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORF]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORG]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORG]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORH]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORH]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORI]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORI]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[SOLICITORJ]",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "[SOLICITORJ]",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -126,55 +216,6 @@
     "CaseAccessCategories": ""
   },
   {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName": "hmcts-admin",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName": "hmcts-judiciary",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName": "hmcts-legal-operations",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName": "hmcts-ctsc",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName" : "circuit-judge",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
-  "LiveFrom": "01/07/2021",
-  "CaseTypeID": "PRLAPPS",
-  "RoleName" : "leadership-judge",
-  "ReadOnly": "Y",
-  "AccessProfiles": "GS_profile"
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "RoleName" : "judge",
-    "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile"
-  },
-  {
     "RoleName": "idam:caseworker-privatelaw-cafcass",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
@@ -182,13 +223,21 @@
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },{
-  "RoleName": "specific-access-judiciary",
-  "Authorisation": "",
-  "CaseTypeID": "PRLAPPS",
-  "AccessProfiles": "GS_profile",
-  "ReadOnly": "Y"
-},
+  },
+  {
+    "RoleName": "ctsc-team-leader",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "ctsc-team-leader",
+    "ReadOnly": "Y"
+  },
+  {
+    "RoleName": "specific-access-judiciary",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y"
+  },
   {
     "RoleName": "challenged-access-judiciary",
     "Authorisation": "",
