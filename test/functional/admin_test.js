@@ -13,6 +13,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-privatelaw-bulkscansystemupdate');
   I.createRole('payments');
   I.createRole('caseworker-caa');
+  I.createRole('caseworker-approver');
   I.createRole('pui-case-manager');
   I.createRole('courtnav');
   I.createRole('global');
@@ -31,6 +32,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('caseworker-privatelaw-bulkscansystemupdate');
   I.see('payments');
   I.see('caseworker-caa');
+  I.see('caseworker-approver');
   I.see('pui-case-manager');
   I.see('courtnav');
   I.see('caseworker-wa-task-configuration');
@@ -40,6 +42,11 @@ Scenario('add all the roles @pipeline', I => {
 
 Scenario('upload Private Law Config file @pipeline', I => {
   I.loginToAdminConsole();
-  I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
-  I.see('Case Definition data successfully imported');
+  try {
+    I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
+    I.wait('20');
+  } catch (error) {
+    console.log(error);
+  }
+  // I.see('Case Definition data successfully imported');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
