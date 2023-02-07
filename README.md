@@ -2,7 +2,7 @@
 
 Project creating Family Private Law (PRL) CCD config files.
 
-Updated with Release 3.0
+Updated with Release 3.1
 ## Usage
 
 Clone project and in the project directory run:
@@ -11,7 +11,7 @@ Clone project and in the project directory run:
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
 
-## Troubleshooting
+#### Troubleshooting
 
 ### Error: Cannot find modules
 
