@@ -6,7 +6,7 @@ module.exports = {
     headerText: 'Other people in the case',
     textareaText: 'Testing text area',
     submit: 'button[type="submit"]',
-    otherPeopleAddress: 'othersToNotify_0_address_address'
+    otherPeopleAddress: 'othersToNotify_0_address_address',
   },
 
   async otherPeopleInTheCase() {
@@ -34,10 +34,11 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="othersToNotify_0_canYouProvidePhoneNumber_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_phoneNumber"]', '07122884667');
     await I.retry(retryCount).checkOption('//input[@id="othersToNotify_0_isPhoneNumberConfidential_Yes"]');
+    await I.retry(retryCount).click('div#othersToNotify_0_otherPersonRelationshipToChildren  .button.write-collection-add-item__top');
     I.wait('2');
+    await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_otherPersonRelationshipToChildren_0_personRelationshipToChild"]', this.fields.textareaText);
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');
   }
-
 };
