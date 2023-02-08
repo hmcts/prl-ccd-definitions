@@ -182,6 +182,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "childDetailsRevisedTable",
+    "FieldShowCondition": "newChildDetails!=\"\"",
     "TabFieldDisplayOrder": 13
   },
 
@@ -193,7 +194,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "childDetailsExtraTable",
-    "FieldShowCondition": "children!=\"\"",
+    "FieldShowCondition": "children!=\"\" OR newChildDetails!=\"\"",
     "TabFieldDisplayOrder": 14
   },
   {
