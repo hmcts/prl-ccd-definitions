@@ -1,0 +1,131 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel20",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "manageOrdersOptions=\"uploadAnOrder\" AND isUploadAnOrderByAdmin=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "whenToServeOrderLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectTypeOfUploadOrder",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "doesUploadOrderClosesCase",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "selectTypeOfUploadOrder=\"finl\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "uploadOrderCloseCaseDoableActions",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "READONLY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doesUploadOrderClosesCase=\"Yes\" AND selectTypeOfUploadOrder=\"finl\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassOrCymruNeedToProvideReport",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassCymruDocuments",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "whenReportsMustBeFiled",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "orderEndsInvolvementOfCafcassOrCymru",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "doYouWantToServeOrder",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/add-upload-order"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "whatDoWithOrder",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doYouWantToServeOrder=\"No\""
+
+  }
+]
