@@ -33,7 +33,7 @@
     "PageID": 21,
     "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\""
+    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\" OR doYouWantToServeOrder=\"Yes\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -55,5 +55,17 @@
     "PageDisplayOrder": 21,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersNeedToBeServed",
+    "DisplayContext": "MANDATORY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
   }
 ]
