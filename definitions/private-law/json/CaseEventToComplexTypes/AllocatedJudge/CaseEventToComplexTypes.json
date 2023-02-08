@@ -6,7 +6,7 @@
     "CaseEventID": "allocatedJudge",
     "CaseFieldID": "allocatedJudge",
     "ListElementCode": "isSpecificJudgeOrLegalAdviserNeeded",
-    "EventElementLabel": " ",
+    "EventElementLabel": "*Do you want to allocate a specific judge or legal adviser?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
   },
@@ -17,9 +17,10 @@
     "CaseEventID": "allocatedJudge",
     "CaseFieldID": "allocatedJudge",
     "ListElementCode": "isJudgeOrLegalAdviser",
-    "EventElementLabel": " ",
+    "EventElementLabel": "*Please select judge or legal adviser",
     "FieldDisplayOrder": "2",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -30,7 +31,8 @@
     "ListElementCode": "judgeDetails",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"judge\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -39,9 +41,10 @@
     "CaseEventID": "allocatedJudge",
     "CaseFieldID": "allocatedJudge",
     "ListElementCode": "legalAdviserList",
-    "EventElementLabel": " ",
+    "EventElementLabel": "Name of legal adviser",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -50,8 +53,9 @@
     "CaseEventID": "allocatedJudge",
     "CaseFieldID": "allocatedJudge",
     "ListElementCode": "tierOfJudiciary",
-    "EventElementLabel": " ",
+    "EventElementLabel": "Select the tier of judiciary",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\""
   }
 ]
