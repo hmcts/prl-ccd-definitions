@@ -5,22 +5,22 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "caseTypeOfApplication",
     "DisplayContext": "MANDATORY",
-    "PageID": 18,
-    "PageDisplayOrder": 18,
+    "PageID": 21,
+    "PageDisplayOrder": 21,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition" : "manageOrderHeaderLabel18=\"DO_NOT_SHOW\"",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\"",
     "Publish" : "False"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "manageOrderHeaderLabel18",
+    "CaseFieldID": "manageOrderHeaderLabel21",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 18,
-    "PageDisplayOrder": 18,
+    "PageID": 21,
+    "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -30,10 +30,10 @@
     "CaseFieldID": "serveOrderDynamicList",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": 18,
-    "PageDisplayOrder": 18,
+    "PageID": 21,
+    "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\""
+    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\" OR doYouWantToServeOrder=\"Yes\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -41,8 +41,8 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOrderAdditionalDocumentsLabel",
     "DisplayContext": "READONLY",
-    "PageID": 18,
-    "PageDisplayOrder": 18,
+    "PageID": 21,
+    "PageDisplayOrder": 21,
     "PageFieldDisplayOrder": 4
   },
   {
@@ -51,9 +51,21 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOrderAdditionalDocuments",
     "DisplayContext": "OPTIONAL",
-    "PageID": 18,
-    "PageDisplayOrder": 18,
+    "PageID": 21,
+    "PageDisplayOrder": 21,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersNeedToBeServed",
+    "DisplayContext": "MANDATORY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
   }
 ]

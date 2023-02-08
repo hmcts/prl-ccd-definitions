@@ -248,19 +248,32 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions!=\"uploadAnOrder\""
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "isThOrderAboutChildren",
+    "PageFieldDisplayOrder": 22,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "childOption",
-    "PageFieldDisplayOrder": 22,
+    "PageFieldDisplayOrder": 23,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\""
+    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" OR isThOrderAboutChildren=\"Yes\" "
 
   },
   {
@@ -268,7 +281,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "recitalsOrPreamble",
-    "PageFieldDisplayOrder": 23,
+    "PageFieldDisplayOrder": 25,
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -280,7 +293,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "appointmentOfGuardian",
-    "PageFieldDisplayOrder": 24,
+    "PageFieldDisplayOrder": 26,
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -292,7 +305,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "orderDirections",
-    "PageFieldDisplayOrder": 25,
+    "PageFieldDisplayOrder": 27,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -304,11 +317,23 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "furtherDirectionsIfRequired",
-    "PageFieldDisplayOrder": 26,
+    "PageFieldDisplayOrder": 28,
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "isUploadAnOrderByAdmin",
+    "PageFieldDisplayOrder": 29,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "manageOrderHeaderLabel4=\"DO_NOT_SHOW\""
   }
 ]
