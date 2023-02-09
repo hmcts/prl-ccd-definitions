@@ -5,9 +5,7 @@
     "CaseEventID": "sendToGateKeeper",
     "CaseFieldID": "isSpecificGateKeeperNeeded",
     "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "FieldDisplayOrder": "1",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -16,11 +14,9 @@
     "CaseEventID": "sendToGateKeeper",
     "CaseFieldID": "isJudgeOrLegalAdviserGatekeeping",
     "DisplayContext": "OPTIONAL",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\""
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\"",
+    "FieldDisplayOrder": "2"
   },
   {
     "LiveFrom": "25/01/2023",
@@ -29,9 +25,7 @@
     "CaseFieldID": "judgeName",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"judge\"",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "FieldDisplayOrder": "3",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -41,9 +35,7 @@
     "CaseFieldID": "legalAdviserList",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"legalAdviser\"",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "FieldDisplayOrder": "4",
     "ShowSummaryChangeOption": "Yes"
   }
 
