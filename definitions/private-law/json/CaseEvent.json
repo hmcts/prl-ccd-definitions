@@ -1381,6 +1381,7 @@
     "DisplayOrder": 201,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/set-noc-flag-true",
     "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/check-noc-approval",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -1444,7 +1445,7 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-submit",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1461,7 +1462,7 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-submit",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1478,7 +1479,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1495,7 +1496,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1512,7 +1513,7 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-submit",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
 
   },
   {
@@ -1530,7 +1531,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1547,7 +1548,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1564,7 +1565,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1581,7 +1582,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1597,7 +1598,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/generate-c7response-document",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1614,7 +1615,8 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/about-to-start-response-validation",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/submit-c7-response",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"No\""
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/respondent-solicitor/set-noc-flag-false",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND nocApproved=\"Yes\""
   },
   {
     "LiveFrom": "03/11/2022",
