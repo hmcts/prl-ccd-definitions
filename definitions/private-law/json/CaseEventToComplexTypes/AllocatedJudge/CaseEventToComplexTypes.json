@@ -20,7 +20,7 @@
     "EventElementLabel": "*Please select judge or legal adviser",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
+    "FieldShowCondition": "allocatedJudge.isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -32,7 +32,7 @@
     "EventElementLabel": "Name of judge ",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"judge\""
+    "FieldShowCondition": "allocatedJudge.isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND allocatedJudge.isJudgeOrLegalAdviser=\"judge\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -44,7 +44,7 @@
     "EventElementLabel": "Name of legal adviser",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\""
+    "FieldShowCondition": "allocatedJudge.isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND allocatedJudge.isJudgeOrLegalAdviser=\"legalAdviser\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -56,6 +56,6 @@
     "EventElementLabel": "Select the tier of judiciary",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\""
+    "FieldShowCondition": "allocatedJudge.isSpecificJudgeOrLegalAdviserNeeded=\"No\""
   }
 ]
