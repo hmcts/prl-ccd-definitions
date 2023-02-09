@@ -9,44 +9,14 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "25/01/2023",
+    "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "sendToGateKeeperHint",
-    "Label": "This will send the case to the gatekeepers for your court or area, or to a specific gatekeeper.",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "isSpecificGateKeeperNeeded",
-    "Label": "*Do you want to send this case to a specific gatekeeper?",
-    "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "18/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "isJudgeOrLegalAdviserGatekeeping",
-    "Label": "*Judge or legal adviser?",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "sendToGatekeeperTypeEnum",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "judgeName",
-    "Label": "Name of the judge",
-    "FieldType": "JudicialUser",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "legalAdvisorList",
-    "Label": "Name of the legal adviser",
-    "FieldType": "DynamicList",
-    "SecurityClassification": "Public"
+    "ID": "gatekeepingDetails",
+    "Label": "Gatekeeper",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "GatekeepingDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
