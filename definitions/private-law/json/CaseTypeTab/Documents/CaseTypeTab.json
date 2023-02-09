@@ -353,5 +353,27 @@
     "TabDisplayOrder": 3,
     "TabFieldDisplayOrder": 34,
     "CaseFieldID": "citizenResponseC7DocumentList"
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 4,
+    "CaseFieldID": "caseCreatedBy",
+    "FieldShowCondition": "caseCreatedBy = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 35
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "documents",
+    "TabLabel": "Case documents",
+    "TabDisplayOrder": 3,
+    "CaseFieldID": "draftOrderDoc",
+    "TabFieldDisplayOrder": 36,
+    "FieldShowCondition": "caseCreatedBy=\"CITIZEN\" AND [STATE]!=\"AWAITING_SUBMISSION_TO_HMCTS\" AND [STATE]!=\"DELETED\""
   }
 ]

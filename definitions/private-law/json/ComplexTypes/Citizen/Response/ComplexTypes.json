@@ -5,7 +5,8 @@
     "ListElementCode": "legalRepresentation",
     "FieldType": "YesOrNo",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -13,7 +14,8 @@
     "ListElementCode": "consent",
     "FieldType": "Consent",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -21,7 +23,8 @@
     "ListElementCode": "keepDetailsPrivate",
     "FieldType": "KeepDetailsPrivate",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -29,7 +32,17 @@
     "ListElementCode": "citizenDetails",
     "FieldType": "CitizenDetails",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "attendToCourt",
+    "FieldType": "AttendToCourt",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -37,7 +50,8 @@
     "ListElementCode": "citizenFlags",
     "FieldType": "CitizenFlags",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -45,7 +59,44 @@
     "ListElementCode": "miam",
     "FieldType": "Miam",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respKeepDetailsPrivate",
+    "FieldType": "KeepDetailsPrivate",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respKeepDetailsPrivateConfidentiality",
+    "FieldType": "KeepDetailsPrivate",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respSolHaveYouAttendedMiam",
+    "FieldType": "Miam",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respSolWillingnessToAttendMiam",
+    "FieldType": "Miam",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -53,7 +104,139 @@
     "ListElementCode": "currentOrPreviousProceedings",
     "FieldType": "CurrentOrPreviousProceedings",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "currentOrPastProceedingsForChildren",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoDontKnow",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respondentExistingProceedings",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ProceedingDetails",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "factorsAffectingAbilityToParticipate",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoDontKnow",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "provideDetailsForFactorsAffectingAbilityToParticipate",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respAohYesOrNo",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respAllegationsOfHarmInfo",
+    "FieldType": "RespondentAllegationsOfHarm",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respDomesticAbuseInfo",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Behaviours",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respChildAbuseInfo",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Behaviours",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respChildAbductionInfo",
+    "FieldType": "RespondentChildAbduction",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "respOtherConcernsInfo",
+    "FieldType": "RespondentOtherConcerns",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "internationalElementChildInfo",
+    "FieldType": "SolicitorInternationalElement",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "internationalElementParentInfo",
+    "FieldType": "SolicitorInternationalElement",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "internationalElementJurisdictionInfo",
+    "FieldType": "SolicitorInternationalElement",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "internationalElementRequestInfo",
+    "FieldType": "SolicitorInternationalElement",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -61,6 +244,61 @@
     "ListElementCode": "citizenInternationalElements",
     "FieldType": "CitizenInternationalElements",
     "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "safeToCallOption",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "safetyConcerns",
+    "FieldType": "SafetyConcerns",
+     "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+ {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "activeRespondent",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/12/2022",
+    "ID": "Response",
+    "ListElementCode": "supportYouNeed",
+    "FieldType": "ReasonableAdjustmentsSupport",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "c7ResponseSubmitted",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Response",
+    "ListElementCode": "c1AResponseSubmitted",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
