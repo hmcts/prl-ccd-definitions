@@ -1,46 +1,53 @@
 [
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "GatekeepingDetails",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "gatekeepingDetails",
-    "ListElementCode": "isSpecificGateKeeperNeeded",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY"
+    "CaseFieldID": "isSpecificGateKeeperNeeded",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "GatekeepingDetails",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "gatekeepingDetails",
-    "ListElementCode": "isJudgeOrLegalAdviserGatekeeping",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "2",
-    "DisplayContext": "OPTIONAL"
+    "CaseFieldID": "isJudgeOrLegalAdviserGatekeeping",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "GatekeepingDetails",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "gatekeepingDetails",
-    "ListElementCode": "judgeName",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL"
+    "CaseFieldID": "judgeName",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"judge\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "25/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "GatekeepingDetails",
     "CaseEventID": "sendToGateKeeper",
-    "CaseFieldID": "gatekeepingDetails",
-    "ListElementCode": "legalAdviserList",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL"
+    "CaseFieldID": "legalAdviserList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"legalAdviser\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
   }
+
 ]
+
+
+
