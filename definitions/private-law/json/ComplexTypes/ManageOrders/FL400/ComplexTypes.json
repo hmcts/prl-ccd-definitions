@@ -719,20 +719,73 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
-    "ListElementCode": "orderTypeId",
-    "FieldType": "Text",
-    "ElementLabel": "Order type",
+    "ListElementCode": "magistrateLastName",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "MagistrateLastName",
+    "ElementLabel": "Last name",
     "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
-    "ListElementCode": "orderType",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
-    "ElementLabel": "Type of order",
+    "ListElementCode": "dateOrderMade",
+    "FieldType": "Date",
+    "ElementLabel": "Date order made",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "recitalsOrPreamble",
+    "FieldType": "Text",
+    "ElementLabel": "Add recitals or preamble",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderDirections",
+    "FieldType": "Text",
+    "ElementLabel": "Add order directions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "furtherDirectionsIfRequired",
+    "FieldType": "Text",
+    "ElementLabel": "Add further directions, if required",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "justiceLegalAdviserFullName",
+    "FieldType": "Text",
+    "ElementLabel": "Justice's Legal Adviser's full name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "judgeOrMagistratesLastName",
+    "FieldType": "Text",
+    "ElementLabel": "Last name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "wasTheOrderApprovedAtHearing",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Was the order approved at a hearing?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -748,28 +801,56 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
-    "ListElementCode": "orderDocumentWelsh",
-    "FieldType": "Document",
-    "ElementLabel": "Welsh document",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "ID": "DraftOrder",
-    "ListElementCode": "isTheOrderAboutAllChildren",
-    "ElementLabel": "Is the order about all children?",
+    "ListElementCode": "judgeOrMagistrateTitle",
+    "ElementLabel": "Select or amend title of judge or magistrate",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "YesNoNotRequiredEnum",
+    "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
-    "ListElementCode": "otherDetails",
-    "FieldType": "OtherDraftOrderDetails",
-    "ElementLabel": "Other details",
+    "ListElementCode": "isTheOrderByConsent",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the order by consent?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "typeOfOrder",
+    "FieldType": "Text",
+    "ElementLabel": "Final General Interim ?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderTypeId",
+    "FieldType": "Text",
+    "ElementLabel": "Order type",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderType",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
+    "ElementLabel": "Type of order",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderDocumentWelsh",
+    "FieldType": "Document",
+    "ElementLabel": "Welsh document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -779,15 +860,6 @@
     "ListElementCode": "orderDocument",
     "FieldType": "Document",
     "ElementLabel": "English document",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "DraftOrder",
-    "ListElementCode": "otherDetails",
-    "FieldType": "OtherDraftOrderDetails",
-    "ElementLabel": "Other details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -812,10 +884,38 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
-    "ListElementCode": "magistrateLastName",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "MagistrateLastName",
-    "ElementLabel": "Last name",
+    "ListElementCode": "parentName",
+    "FieldType": "Text",
+    "ElementLabel": "Full name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "otherDetails",
+    "FieldType": "OtherDraftOrderDetails",
+    "ElementLabel": "Other details",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "DraftOrder",
+    "ListElementCode": "isTheOrderAboutAllChildren",
+    "ElementLabel": "Is the order about all children?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoNotRequiredEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "fl404CustomFields",
+    "FieldType": "FL400",
+    "ElementLabel": "Custom fields",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -828,5 +928,288 @@
     "ElementLabel": "Guardian Full Name",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersFl402CourtName",
+    "FieldType": "Text",
+    "ElementLabel": "Court name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersFl402CourtAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Court address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersFl402CaseNo",
+    "FieldType": "Text",
+    "ElementLabel": "Case number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersFl402Applicant",
+    "FieldType": "Text",
+    "ElementLabel": "Applicant name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersFl402ApplicantRef",
+    "FieldType": "Text",
+    "ElementLabel": "Applicant reference",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersDateOfhearing",
+    "FieldType": "Date",
+    "ElementLabel": "Date and place of hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "dateOfHearingTime",
+    "FieldType": "Text",
+    "ElementLabel": "Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "dateOfHearingTimeEstimate",
+    "FieldType": "Text",
+    "ElementLabel": "Time estimate",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "fl402HearingCourtname",
+    "FieldType": "Text",
+    "ElementLabel": "Court name for hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "fl402HearingCourtAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Court address for hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "childArrangementsOrdersToIssue",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OrderTypeEnum",
+    "ElementLabel": "Select orders to issue",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "selectChildArrangementsOrder",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "childArrangementOrderTypeEnum",
+    "ElementLabel": "Select type of child arrangements order",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "cafcassOfficeDetails",
+    "FieldType": "Text",
+    "ElementLabel": "Add details",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersCourtName",
+    "FieldType": "Text",
+    "ElementLabel": "Court name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersCourtAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Court address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersCaseNo",
+    "FieldType": "Text",
+    "ElementLabel": "Case number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersApplicant",
+    "FieldType": "Text",
+    "ElementLabel": "Applicant name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersApplicantReference",
+    "FieldType": "Text",
+    "ElementLabel": "Applicant reference",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersRespondent",
+    "FieldType": "Text",
+    "ElementLabel": "Respondent name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersRespondentReference",
+    "FieldType": "Text",
+    "ElementLabel": "Respondent reference",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersRespondentDob",
+    "FieldType": "Date",
+    "ElementLabel": "Respondent date of birth",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersRespondentAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Respondent address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersUnderTakingRepr",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the person giving the undertaking represented?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingSolicitorCounsel",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "UnderTakingEnum",
+    "ElementLabel": "Are they represented by solicitor or counsel?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersUnderTakingPerson",
+    "FieldType": "Text",
+    "ElementLabel": "Person giving undertaking",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersUnderTakingAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": "Address of person giving undertaking",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersUnderTakingTerms",
+    "FieldType": "TextArea",
+    "ElementLabel": "Terms of undertaking",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrdersDateOfUnderTaking",
+    "FieldType": "Date",
+    "ElementLabel": "Date of undertaking",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingDateExpiry",
+    "FieldType": "Date",
+    "ElementLabel": "Expiry date of undertaking",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingExpiryTime",
+    "FieldType": "Text",
+    "ElementLabel": "Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingFormSign",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Must the person giving the undertaking sign the statement on the form?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
+
 ]
