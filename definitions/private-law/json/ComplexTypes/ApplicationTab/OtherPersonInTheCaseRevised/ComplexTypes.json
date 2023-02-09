@@ -1,16 +1,7 @@
 [
   {
-    "LiveFrom": "05/01/2022",
-    "ID": "RelationshipToChild",
-    "ListElementCode": "personRelationshipToChild",
-    "FieldType": "Text",
-    "ElementLabel": "*What is this person’s relationship to Child?",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "firstName",
     "FieldType": "Text",
     "ElementLabel": "*First name(s)",
@@ -19,7 +10,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "lastName",
     "FieldType": "Text",
     "ElementLabel": "*Last name",
@@ -28,7 +19,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "previousName",
     "FieldType": "Text",
     "ElementLabel": "Previous name (if any)",
@@ -37,7 +28,7 @@
   },
   {
     "LiveFrom": "16/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "isDateOfBirthKnown",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Is date of birth known?",
@@ -46,7 +37,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "dateOfBirth",
     "FieldType": "Date",
     "ElementLabel": "Date of birth",
@@ -55,7 +46,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "gender",
     "FieldType": "Text",
     "ElementLabel": "*Gender",
@@ -64,7 +55,7 @@
   },
   {
     "LiveFrom": "05/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "otherGender",
     "FieldType": "Text",
     "ElementLabel": "*Gender",
@@ -73,7 +64,7 @@
   },
   {
     "LiveFrom": "16/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "isPlaceOfBirthKnown",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Is place of birth known?",
@@ -82,7 +73,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "placeOfBirth",
     "FieldType": "Text",
     "ElementLabel": "*Place of birth (town)",
@@ -91,7 +82,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "isCurrentAddressKnown",
     "FieldType": "YesOrNo",
     "ElementLabel": "Is current address known?",
@@ -100,7 +91,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "address",
     "FieldType": "AddressUK",
     "ElementLabel": " ",
@@ -109,7 +100,15 @@
   },
   {
     "LiveFrom": "05/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
+    "ListElementCode": "isAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the address confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "canYouProvideEmailAddress",
     "FieldType": "YesOrNo",
     "ElementLabel": "Can you provide email address?",
@@ -118,7 +117,7 @@
   },
   {
     "LiveFrom": "05/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "email",
     "FieldType": "Email",
     "ElementLabel": "*Email address",
@@ -126,8 +125,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "ID": "OtherPersonInTheCaseRevised",
+    "ListElementCode": "isEmailAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the email address confidential?",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "16/11/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "canYouProvidePhoneNumber",
     "FieldType": "YesOrNo",
     "ElementLabel": "Can you provide a contact number?",
@@ -136,7 +143,7 @@
   },
   {
     "LiveFrom": "20/08/2021",
-    "ID": "OtherPersonInTheCase",
+    "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "phoneNumber",
     "FieldType": "Text",
     "RegularExpression": "^[0-9 +().-]{9,}$",
@@ -145,13 +152,11 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "05/01/2022",
-    "ID": "OtherPersonInTheCase",
-    "ListElementCode": "relationshipToChild",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "RelationshipToChild",
-    "ElementLabel": "Relationship to child",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
+    "LiveFrom": "05/11/2021",
+    "ID": "OtherPersonInTheCaseRevised",
+    "ListElementCode": "isPhoneNumberConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the contact number confidential?",
+    "SecurityClassification": "Public"
   }
 ]
