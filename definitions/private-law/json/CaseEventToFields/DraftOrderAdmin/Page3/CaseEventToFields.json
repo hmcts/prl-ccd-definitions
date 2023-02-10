@@ -9,7 +9,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"uploadAnOrder\" AND isUploadedOrAmendedOrder=\"Yes\""
+    "PageShowCondition": "isUploadedOrAmendedOrder=\"Yes\""
   },
   {
   "LiveFrom": "31/03/2022",
@@ -32,5 +32,18 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "isUploadedOrAmendedOrder",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "makeChangesToUploadedOrder=\"DO_NOT_SHOW\"",
+    "Publish" : "False"
   }
 ]
