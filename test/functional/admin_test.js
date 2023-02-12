@@ -52,5 +52,5 @@ Scenario('upload Private Law Config file @pipeline', I => {
   } catch (error) {
     console.log(error);
   }
-  // I.see('Case Definition data successfully imported');
+  I.see('Case Definition data successfully imported');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
