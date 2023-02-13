@@ -82,7 +82,7 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:preview') {
-    yarnBuilder.yarn('setup')
+    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
