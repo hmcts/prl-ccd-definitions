@@ -852,7 +852,8 @@
     "FieldType": "Document",
     "ElementLabel": "Welsh document",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1210,5 +1211,25 @@
     "ElementLabel": "Must the person giving the undertaking sign the statement on the form?",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "childrenList",
+    "FieldType": "Text",
+    "ElementLabel": "Children list ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderSelectionType",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ManageOrdersOptionsEnum",
+    "ElementLabel": "Order options",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
   }
 ]

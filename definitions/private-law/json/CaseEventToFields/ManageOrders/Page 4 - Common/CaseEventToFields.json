@@ -23,18 +23,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "LiveFrom": "01/02/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "dateUploadOrderMade",
-    "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\""
-  },
-  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
@@ -236,8 +224,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -255,7 +242,7 @@
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "isThOrderAboutChildren",
+    "CaseFieldID": "isTheOrderAboutChildren",
     "PageFieldDisplayOrder": 22,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
@@ -273,7 +260,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" OR isThOrderAboutChildren=\"Yes\" "
+    "FieldShowCondition": "isTheOrderAboutAllChildren=\"no\" OR isTheOrderAboutChildren=\"Yes\" "
 
   },
   {
@@ -323,17 +310,5 @@
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
-  },
-  {
-    "LiveFrom": "01/02/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "isUploadAnOrderByAdmin",
-    "PageFieldDisplayOrder": 29,
-    "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition" : "manageOrderHeaderLabel4=\"DO_NOT_SHOW\""
   }
 ]
