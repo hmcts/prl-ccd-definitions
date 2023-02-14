@@ -17,12 +17,46 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isSpecificGateKeeperNeeded",
+    "Label": "*Do you want to send this case to a specific gatekeeper?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isJudgeOrLegalAdviserGatekeeping",
+    "Label": "*Judge or legal adviser?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SendToGatekeeperTypeEnum",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeName",
+    "Label": "Name of the judge",
+    "FieldType": "JudicialUser",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "legalAdvisorList",
+    "Label": "Name of the legal adviser",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "gatekeepingDetails",
     "Label": "Gatekeeper",
-    "FieldTypeParameter": "GatekeepingDetails",
+    "FieldType": "GatekeepingDetails",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "gatekeepingDetails = \"DO_NOT_SHOW\""
   }
 ]
