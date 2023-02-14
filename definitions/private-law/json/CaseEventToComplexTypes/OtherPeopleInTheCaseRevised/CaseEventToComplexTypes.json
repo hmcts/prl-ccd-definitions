@@ -213,6 +213,31 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "othersToNotify.isCurrentAddressKnown=\"Yes\""
   },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "othersToNotify",
+    "ListElementCode": "isAtAddressLessThan5Years",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "20",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "othersToNotify",
+    "ListElementCode": "addressLivedLessThan5YearsDetails",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "21",
+    "FieldShowCondition": "othersToNotify.isAtAddressLessThan5Years=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -221,7 +246,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "canYouProvideEmailAddress",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -232,7 +257,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "email",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "othersToNotify.canYouProvideEmailAddress=\"Yes\""
   },
@@ -244,7 +269,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "isEmailAddressConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "22",
+    "FieldDisplayOrder": "24",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "othersToNotify.canYouProvideEmailAddress=\"Yes\""
   },
@@ -256,7 +281,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "canYouProvidePhoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -267,7 +292,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "phoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "othersToNotify.canYouProvidePhoneNumber=\"Yes\""
   },
@@ -279,7 +304,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "isPhoneNumberConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "27",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "othersToNotify.canYouProvidePhoneNumber=\"Yes\""
   },
@@ -291,7 +316,7 @@
     "CaseFieldID": "othersToNotify",
     "ListElementCode": "addNewApplicantLabel",
     "EventElementLabel": "Add new person",
-    "FieldDisplayOrder": "26",
+    "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   }
 ]
