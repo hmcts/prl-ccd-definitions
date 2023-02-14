@@ -79,7 +79,18 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 12,
+    "CaseFieldID": "childDetailsRevisedExtraTable",
+    "FieldShowCondition": "newChildDetails!=\"\"",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 13,
     "CaseFieldID": "partiesTabRespondentsLabel",
     "TabFieldDisplayOrder": 6
   },
@@ -89,7 +100,7 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 14,
     "CaseFieldID": "respondentTable",
     "TabFieldDisplayOrder": 7
   },
@@ -99,9 +110,9 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 15,
     "CaseFieldID": "partiesTabOtherPartiesLabel",
-    "FieldShowCondition": "othersToNotify!=\"\"",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion!=\"v2\"",
     "TabFieldDisplayOrder": 8
   },
   {
@@ -110,12 +121,23 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 16,
     "CaseFieldID": "otherPeopleInTheCaseTable",
     "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion!=\"v2\"",
     "TabFieldDisplayOrder": 9
   },
 
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 15,
+    "CaseFieldID": "partiesTabOtherPartiesRevisedLabel",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion=\"v2\"",
+    "TabFieldDisplayOrder": 8
+  },
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -195,6 +217,28 @@
     "TabDisplayOrder": 11,
     "CaseFieldID": "childAndOtherPeopleRelationsTable",
     "FieldShowCondition": "childAndOtherPeopleRelations!=\"\"",
+    "TabFieldDisplayOrder": 17
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "partiesTabOtherChildAndRespondentPartiesLabel",
+    "FieldShowCondition": "childAndRespondentRelations!=\"\"",
+    "TabFieldDisplayOrder": 16
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "childAndRespondentRelationsTable",
+    "FieldShowCondition": "childAndRespondentRelations!=\"\"",
     "TabFieldDisplayOrder": 17
   }
 
