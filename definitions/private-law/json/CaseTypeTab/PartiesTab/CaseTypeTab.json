@@ -59,6 +59,7 @@
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
     "CaseFieldID": "childDetailsTable",
+    "FieldShowCondition": "children!=\"\"",
     "TabFieldDisplayOrder": 5
   },
   {
@@ -68,6 +69,28 @@
     "TabID": "Parties",
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
+    "CaseFieldID": "childDetailsRevisedTable",
+    "FieldShowCondition": "newChildDetails!=\"\"",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 12,
+    "CaseFieldID": "childDetailsRevisedExtraTable",
+    "FieldShowCondition": "newChildDetails!=\"\"",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 13,
     "CaseFieldID": "partiesTabRespondentsLabel",
     "TabFieldDisplayOrder": 6
   },
@@ -77,7 +100,7 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 14,
     "CaseFieldID": "respondentTable",
     "TabFieldDisplayOrder": 7
   },
@@ -87,9 +110,32 @@
     "Channel": "CaseWorker",
     "TabID": "Parties",
     "TabLabel": "Parties",
-    "TabDisplayOrder": 11,
+    "TabDisplayOrder": 15,
     "CaseFieldID": "partiesTabOtherPartiesLabel",
-    "FieldShowCondition": "othersToNotify!=\"\"",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion!=\"v2\"",
+    "TabFieldDisplayOrder": 8
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 16,
+    "CaseFieldID": "otherPeopleInTheCaseTable",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion!=\"v2\"",
+    "TabFieldDisplayOrder": 9
+  },
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 15,
+    "CaseFieldID": "partiesTabOtherPartiesRevisedLabel",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion=\"v2\"",
     "TabFieldDisplayOrder": 8
   },
   {
@@ -99,8 +145,101 @@
     "TabID": "Parties",
     "TabLabel": "Parties",
     "TabDisplayOrder": 11,
-    "CaseFieldID": "otherPeopleInTheCaseTable",
-    "FieldShowCondition": "othersToNotify!=\"\"",
-    "TabFieldDisplayOrder": 9
+    "CaseFieldID": "otherPeopleInTheCaseRevisedTable",
+    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion=\"v2\"",
+    "TabFieldDisplayOrder": 10
+  },
+
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "partiesTabOtherChildNotInThePartiesLabel",
+    "FieldShowCondition": "childrenNotInTheCase!=\"\"",
+    "TabFieldDisplayOrder": 10
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "otherChildNotInTheCaseTable",
+    "FieldShowCondition": "childrenNotInTheCase!=\"\"",
+    "TabFieldDisplayOrder": 11
+  },
+
+
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "partiesTabChildAndApplicantPartiesLabel",
+    "FieldShowCondition": "childAndApplicantRelations!=\"\"",
+    "TabFieldDisplayOrder": 12
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "childAndApplicantsRelationTable",
+    "FieldShowCondition": "childAndApplicantRelations!=\"\"",
+    "TabFieldDisplayOrder": 13
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "partiesTabOtherChildAndOtherPeoplePartiesLabel",
+    "FieldShowCondition": "childAndOtherPeopleRelations!=\"\"",
+    "TabFieldDisplayOrder": 16
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "childAndOtherPeopleRelationsTable",
+    "FieldShowCondition": "childAndOtherPeopleRelations!=\"\"",
+    "TabFieldDisplayOrder": 17
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "partiesTabOtherChildAndRespondentPartiesLabel",
+    "FieldShowCondition": "childAndRespondentRelations!=\"\"",
+    "TabFieldDisplayOrder": 16
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Parties",
+    "TabLabel": "Parties",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "childAndRespondentRelationsTable",
+    "FieldShowCondition": "childAndRespondentRelations!=\"\"",
+    "TabFieldDisplayOrder": 17
   }
+
 ]
