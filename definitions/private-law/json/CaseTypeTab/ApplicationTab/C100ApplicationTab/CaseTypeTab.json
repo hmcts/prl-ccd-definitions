@@ -446,7 +446,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "otherPeopleInTheCaseTable",
-    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion!=\"v2\"",
+    "FieldShowCondition": "othersToNotify!=\"\"",
     "TabFieldDisplayOrder": 36
   },
 
@@ -458,7 +458,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 2,
     "CaseFieldID": "otherPeopleInTheCaseRevisedTable",
-    "FieldShowCondition": "othersToNotify!=\"\" AND taskListVersion=\"v2\"",
+    "FieldShowCondition": "otherPartyInTheCaseRevised!=\"\"",
     "TabFieldDisplayOrder": 36
   },
   {
@@ -780,7 +780,17 @@
     "FieldShowCondition": "othersToNotify = \"DO_NOT_SHOW\"",
     "TabFieldDisplayOrder": 65
   },
-
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "FieldShowCondition": "othersToNotify = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 65
+  },
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
