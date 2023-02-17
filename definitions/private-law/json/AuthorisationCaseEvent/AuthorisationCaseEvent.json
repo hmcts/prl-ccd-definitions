@@ -107,17 +107,26 @@
     "CRUD": "CRU"
   },
   {
-    "LiveFrom": "01/08/2021",
+    "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "citizen-case-submit-with-hwf",
-    "UserRole": "citizen",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "citizen-case-submit-with-hwf",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CaseEventID": "citizenCaseSubmitWithHWF",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
