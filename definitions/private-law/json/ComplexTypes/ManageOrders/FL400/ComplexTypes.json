@@ -718,6 +718,37 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "reviewRequiredBy",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "AmendOrderCheckEnum",
+    "ElementLabel": "Status",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "reviewRequiredBy=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfJudgeForReview",
+    "FieldType": "Text",
+    "ElementLabel": "Name Judge For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfJudgeForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfLaForReview",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "magistrateLastName",
     "FieldType": "Collection",
@@ -732,6 +763,15 @@
     "ListElementCode": "dateOrderMade",
     "FieldType": "Date",
     "ElementLabel": "Date order made",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "approvalDate",
+    "FieldType": "Date",
+    "ElementLabel": "Approval date",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -1225,11 +1265,20 @@
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "orderSelectionType",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "ManageOrdersOptionsEnum",
+    "FieldType": "Text",
     "ElementLabel": "Order options",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderCreatedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Order options",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderCreatedBy=\"DO_NOT_SHOW\""
   }
 ]
