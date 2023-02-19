@@ -3,13 +3,24 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "dioDioLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "PageShowCondition": "createSelectOrderOptions=\"directionOnIssue\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
     "CaseFieldID": "dioPreamblesLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 13,
     "PageDisplayOrder": 13,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "createSelectOrderOptions=\"directionOnIssue\"",
     "FieldShowCondition": "dioPreamblesList CONTAINS \"rightToAskCourt\" OR dioPreamblesList CONTAINS \"partyRaisedDomesticAbuse\""
   },
   {
@@ -69,7 +80,8 @@
     "DisplayContext": "READONLY",
     "PageID": 13,
     "PageDisplayOrder": 13,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "isHearingsAndNextStepsSelected=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -729,7 +741,7 @@
     "PageID": 13,
     "PageDisplayOrder": 13,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dioCafcassOrCymruList CONTAINS \"cafcassSafeguarding\""
+    "FieldShowCondition": "dioCafcassOrCymruList CONTAINS \"cafcassCymruSafeguarding\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -741,7 +753,7 @@
     "PageID": 13,
     "PageDisplayOrder": 13,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dioCafcassOrCymruList CONTAINS \"cafcassSafeguarding\""
+    "FieldShowCondition": "dioCafcassOrCymruList CONTAINS \"cafcassCymruSafeguarding\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -934,5 +946,17 @@
     "PageDisplayOrder": 13,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "dioOtherList CONTAINS \"applicationToApplyPermission\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "isHearingsAndNextStepsSelected",
+    "PageFieldDisplayOrder": 76,
+    "DisplayContext": "MANDATORY",
+    "PageID": 13,
+    "PageDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioOtherList CONTAINS \"DO_NOT_SHOW\""
   }
 ]
