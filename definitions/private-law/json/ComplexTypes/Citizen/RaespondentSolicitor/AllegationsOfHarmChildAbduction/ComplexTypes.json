@@ -1,0 +1,107 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "reasonForChildAbductionBelief",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Why do you believe the child(ren) may be abducted?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "previousThreatsForChildAbduction",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Have there been any previous threats, attempts to abduct or actual  abduction of the child(ren)?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "previousThreatsForChildAbductionDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Give details",
+    "FieldShowCondition": "previousThreatsForChildAbduction=\"Yes\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "whereIsChild",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Where is/are the child(ren) now?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "hasPassportOfficeNotified",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Has the passport office been notifed? ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "anyOrgInvolvedInPreviousAbduction",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Were the police or any other organisation/agency involved in any previous incident of attempted abduction or abduction?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "anyOrgInvolvedInPreviousAbductionDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Give details",
+    "FieldShowCondition": "anyOrgInvolvedInPreviousAbduction=\"Yes\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "childrenHavePassport",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do the children have a passport?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "childrenHaveMoreThanOnePassport",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do the children have more than one passport?",
+    "FieldShowCondition": "childrenHavePassport=\"Yes\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "whoHasChildPassport",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "WhomConsistPassportList",
+    "ElementLabel": "*Who has the children’s passport(s)?",
+    "FieldShowCondition": "childrenHavePassport=\"Yes\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "RespondentChildAbduction",
+    "ListElementCode": "whoHasChildPassportOther",
+    "FieldType": "Text",
+    "ElementLabel": "*Who has the children’s passport(s)?",
+    "FieldShowCondition": "childrenHavePassport=\"Yes\" AND whoHasChildPassport CONTAINS \"otherPeople\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  }
+]
