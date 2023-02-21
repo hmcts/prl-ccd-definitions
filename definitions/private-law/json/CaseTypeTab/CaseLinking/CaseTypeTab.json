@@ -5,9 +5,10 @@
     "TabID": "caseLinksTab",
     "TabLabel": "Linked cases",
     "CaseFieldID": "caseLinks",
-    "DisplayContextParameter": "#ARGUMENT(READ)",
+    "DisplayContextParameter": "#ARGUMENT(LinkedCases)",
     "TabDisplayOrder": 12,
-    "TabFieldDisplayOrder": 1
+    "TabFieldDisplayOrder": 1,
+    "FieldShowCondition": "LinkedCasesComponentLauncher!=\"\""
   },
   {
     "LiveFrom": "03/11/2022",
@@ -18,5 +19,15 @@
     "TabDisplayOrder": 12,
     "FieldShowCondition": "caseLinks=\"DUMMY_VALUE\"",
     "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "10/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "TabID": "caseLinksTab",
+    "TabLabel": "Linked cases",
+    "CaseFieldID": "LinkedCasesComponentLauncher",
+    "TabDisplayOrder": 12,
+    "TabFieldDisplayOrder": 1,
+    "DisplayContextParameter": "#ARGUMENT(LinkedCases)"
   }
 ]
