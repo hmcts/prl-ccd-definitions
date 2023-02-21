@@ -16,9 +16,20 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "listWithoutNoticeHearingLabel",
+    "EventElementLabel": "## Hearing",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingTypes",
     "EventElementLabel": "Hearing Type",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -29,9 +40,9 @@
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingTypeOtherDetails",
     "EventElementLabel": "Other",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "hearingTypes=\"Other\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.value.hearingTypes.value=\"Other\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -41,7 +52,7 @@
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingDateConfirmOptionEnum",
     "EventElementLabel": "Has the hearing date been confirmed",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   }
 ]
