@@ -20,8 +20,9 @@ class GeneralHelper extends Helper {
 
   async amOnHistoryPageWithSuccessNotification() {
     // const historyResponseTime = 6;
+    const { Puppeteer } = this.helpers;
     await Puppeteer.wait('3');
-    // const { Puppeteer } = this.helpers;
+    
     // await Puppeteer.wait(historyResponseTime);
     // await Puppeteer.waitForText('History');
     // console.log(await Puppeteer.grabTextFrom('div.alert-message'));
