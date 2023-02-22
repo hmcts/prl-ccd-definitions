@@ -5,7 +5,9 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     textareaText: 'Testing text area',
-    applicantRelationship: 'buffChildAndApplicantRelations_0_childAndApplicantRelation'  
+    applicant1Relationship: 'select[id="buffChildAndApplicantRelations_0_childAndApplicantRelation"]', 
+    applicant2Relationship: 'select[id="buffChildAndApplicantRelations_1_childAndApplicantRelation"]' 
+
 },
 
   async triggerEvent() {
@@ -14,9 +16,14 @@ module.exports = {
   async childAndApplicantRelationship() {
     await I.waitForText('Children and applicants');
     I.wait('2');
-    await I.selectFromList(this.fields.applicantRelationship, 'Father');
+    await I.retry(retryCount).selectOption(this.fields.applicant1Relationship, 'Father');
     I.wait('1');
     await I.retry(retryCount).checkOption('//input[@id="buffChildAndApplicantRelations_0_childLivesWith_No"]');
+    I.wait('2');
+    await I.retry(retryCount).selectOption(this.fields.applicant2Relationship, 'Step-mother');
+    I.wait('1');
+    await I.retry(retryCount).checkOption('//input[@id="buffChildAndApplicantRelations_1_childLivesWith_No"]');
+    I.wait('1');
     await I.retry(retryCount).click(this.fields.submit);
   },
   async runChildrenAndApplicantRelationship() {
