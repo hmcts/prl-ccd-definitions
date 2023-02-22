@@ -376,7 +376,7 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
- {
+  {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
@@ -1263,6 +1263,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "Publish" : "False"
   },
   {
@@ -1278,6 +1279,7 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Send to admin",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
   },
@@ -1294,6 +1296,7 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Submit",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
   },
@@ -1720,5 +1723,18 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenCaseSubmitWithHWF",
+    "Name": "Submit Citizen Case with HWF",
+    "Description": "Submit Citizen Case with Help With Fees",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
   }
 ]
