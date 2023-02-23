@@ -7,7 +7,11 @@ module.exports = {
     textareaText: 'Testing text area',
     submit: 'button[type="submit"]',
     otherPeoplePlaceOfBirth: '//*[@id="otherPartyInTheCaseRevised_0_placeOfBirth"]',
-    otherPeopleAddress: 'otherPartyInTheCaseRevised_0_address_address'
+    otherPeopleAddress: 'otherPartyInTheCaseRevised_0_address_address',
+
+    //Fill in Other People in the case
+    opFirstName: '//*[@id="otherPartyInTheCaseRevised_0_firstName"]',
+    opLastName: '//*[@id="otherPartyInTheCaseRevised_0_lastName"]',
   },
 
   async otherPeopleInTheCase() {
@@ -15,9 +19,9 @@ module.exports = {
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
     await I.retry(retryCount).click('Add new');
     I.wait('1');
-    await I.retry(retryCount).fillField('//*[@id="otherPartyInTheCaseRevised_0_firstName"]', 'Other Firstname');
+    await I.retry(retryCount).fillField(this.fields.opFirstName, 'Other Firstname');
     I.wait('2');
-    await I.retry(retryCount).fillField('//*[@id="otherPartyInTheCaseRevised_0_lastName"]', 'Other Lastname');
+    await I.retry(retryCount).fillField(this.fields.opLastName, 'Other Lastname');
     await I.retry(retryCount).fillField('//*[@id="otherPartyInTheCaseRevised_0_previousName"]', 'Other PreviousName');
     await I.retry(retryCount).checkOption('#otherPartyInTheCaseRevised_0_isDateOfBirthKnown_Yes');
     await I.retry(retryCount).fillField('//*[@id="dateOfBirth-day"]', '12');
