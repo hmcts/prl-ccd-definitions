@@ -15251,5 +15251,29 @@
     "CaseFieldID": "respondentAgreeStatement",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCafcass",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
