@@ -40,7 +40,7 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "recipientsOptions",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "PageID": 22,
     "PageDisplayOrder": 22,
     "FieldShowCondition": "serveToRespondentOptions=\"No\"",
@@ -52,21 +52,22 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "otherParties",
     "PageFieldDisplayOrder": 5,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 22,
     "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y"
   },
   {
-  "LiveFrom": "01/12/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseEventID": "manageOrders",
-  "CaseFieldID": "cafcassServedOptions",
-  "PageFieldDisplayOrder": 6,
-  "DisplayContext": "MANDATORY",
-  "PageID": 22,
-  "PageDisplayOrder": 22,
-  "ShowSummaryChangeOption": "Y"
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cafcassServedOptions",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "FieldShowCondition": "isCafcass=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/12/2022",
@@ -77,6 +78,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 22,
     "PageDisplayOrder": 22,
+    "FieldShowCondition": "isCafcass=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
