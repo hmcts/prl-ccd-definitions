@@ -27,33 +27,57 @@
     "ID": "HearingData",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "otherLabel",
-    "EventElementLabel": "Other",
-    "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingTypes=\"Other\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "hearingTypeOtherDetails",
-    "EventElementLabel": "Give details",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingTypes=\"Other\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingDateConfirmOptionEnum",
     "EventElementLabel": "Has the hearing date been confirmed",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
+    "EventElementLabel": "**The date is confirmed in the Hearings tab",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "confirmedHearingDates",
+    "EventElementLabel": "Select from hearing",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "additionalHearingDetails",
+    "EventElementLabel": "Additional hearing details",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "instructionsForRemoteHearing",
+    "EventElementLabel": "Insert joining instructions for remote hearing",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   }
 ]
