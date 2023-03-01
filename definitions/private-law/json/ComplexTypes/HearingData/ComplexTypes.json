@@ -94,7 +94,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedDays",
-    "FieldType": "Text",
+    "FieldType": "Number",
     "ElementLabel": "Days",
     "SecurityClassification": "Public"
   },
@@ -102,7 +102,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedHours",
-    "FieldType": "Text",
+    "FieldType": "Number",
     "ElementLabel": "Hours",
     "SecurityClassification": "Public"
   },
@@ -110,7 +110,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedMinutes",
-    "FieldType": "Text",
+    "FieldType": "Number",
     "ElementLabel": "Minutes",
     "SecurityClassification": "Public"
   },
@@ -153,7 +153,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "${applicantsFL401.partyLevelFlag.partyName}(Applicant)",
+    "ElementLabel": "${mainApplicantName}(Applicant)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -287,5 +287,16 @@
     "ElementLabel": "Hearing listed with a linked case",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "mainApplicantName",
+    "FieldType": "Text",
+    "ElementLabel": "Main Applicant Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hearingJudgeEmailAddress=\"DO_NOT_SHOW\""
   }
+
 ]

@@ -126,7 +126,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND hearingChannelDynamicRadioList=\"VID\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND hearingChannelDynamicRadioList CONTAINS \"VID\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -138,7 +138,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND hearingChannelDynamicRadioList=\"TEL\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND hearingChannelDynamicRadioList CONTAINS \"TEL\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -149,7 +149,7 @@
     "ListElementCode": "allPartiesAttendHearingSameWayYesOrNo",
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -161,7 +161,7 @@
     "ListElementCode": "applicantHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "14",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -173,7 +173,7 @@
     "ListElementCode": "applicantSolicitorHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "15",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -185,7 +185,7 @@
     "ListElementCode": "respondentHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "16",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -197,7 +197,7 @@
     "ListElementCode": "respondentSolicitorHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -209,7 +209,7 @@
     "ListElementCode": "cafcassHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "18",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -221,7 +221,7 @@
     "ListElementCode": "cafcassCymruHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "19",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -233,7 +233,7 @@
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "20",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
@@ -245,7 +245,7 @@
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
