@@ -193,7 +193,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "doesOrderClosesCase",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "05/11/2022",
@@ -3125,29 +3125,22 @@
     "LiveFrom": "7/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dateOrderEnds",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "7/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "dateOrderEnds",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "7/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "dateOrderEnds",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "7/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "dateOrderEnds",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+        },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+        }
+      ]
   },
   {
     "LiveFrom": "7/05/2022",
