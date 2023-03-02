@@ -34,7 +34,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="othersToNotify_0_canYouProvidePhoneNumber_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="othersToNotify_0_phoneNumber"]', '07122884667');
     await I.retry(retryCount).checkOption('//input[@id="othersToNotify_0_isPhoneNumberConfidential_Yes"]');
-    await I.retry(retryCount).waitForText('Save and continue', '10');
-    await I.retry(retryCount).click('Save and continue');
+    await I.retry(retryCount).waitForText('Continue', '10');
+    await I.retry(retryCount).click('Continue');
   }
 };
