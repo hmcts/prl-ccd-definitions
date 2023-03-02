@@ -5,7 +5,8 @@
     "ID": "courtName",
     "Label": "Court name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -13,7 +14,8 @@
     "ID": "taskList",
     "Label": "Case name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -21,7 +23,8 @@
     "ID": "taskListLabel",
     "Label": "${taskList}",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -29,7 +32,8 @@
     "ID": "taskListReturn",
     "Label": "Case name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -37,7 +41,8 @@
     "ID": "taskListReturnLabel",
     "Label": "${taskListReturn}",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -45,7 +50,8 @@
     "ID": "caseHistory",
     "Label": "History",
     "FieldType": "CaseHistoryViewer",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -53,7 +59,8 @@
     "ID": "applicantName",
     "Label": "Applicant name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -61,7 +68,8 @@
     "ID": "childName",
     "Label": "Child name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -69,7 +77,8 @@
     "ID": "respondentName",
     "Label": "Respondent name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -77,7 +86,8 @@
     "ID": "labelPleaseUploadDocuments",
     "Label": "**Please upload documents that relate to this application:**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -85,7 +95,8 @@
     "ID": "labelDocumentsRequired",
     "Label": "Documents required based on your answers",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -93,7 +104,8 @@
     "ID": "labelContactOrResidenceOrder",
     "Label": "A contact or residence order made within proceedings for a divorce or dissolution of a civil partnership",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -101,7 +113,8 @@
     "ID": "labelC8FormForConfidentiality",
     "Label": "--- \n C8 form for confidentiality of the applicant",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -109,7 +122,8 @@
     "ID": "labelUploadOtherDocuments",
     "Label": "--- \n Upload other documents",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -118,7 +132,9 @@
     "Label": "Contact order",
     "FieldType": "Collection",
     "FieldTypeParameter": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -127,7 +143,9 @@
     "Label": "C8 form",
     "FieldType": "Collection",
     "FieldTypeParameter": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "confidential"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -136,7 +154,9 @@
     "Label": "Other documents",
     "FieldType": "Collection",
     "FieldTypeParameter": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "anyOtherDoc"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -144,7 +164,8 @@
     "ID": "labelLanguageRequirements",
     "Label": "### Language requirements",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -152,17 +173,18 @@
     "ID": "isWelshNeeded",
     "Label": "*Will the applicant, or anyone else attending court, need to speak Welsh or read and write in Welsh during the proceedings?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "welshNeeds",
     "Label": "Welsh needs",
-    "Min": 1,
     "FieldType": "Collection",
     "FieldTypeParameter": "WelshNeed",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -172,7 +194,8 @@
     "Min": 1,
     "FieldType": "Collection",
     "FieldTypeParameter": "WelshNeed",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -180,17 +203,18 @@
     "ID": "isInterpreterNeeded",
     "Label": "*Do you know if an interpreter will be needed in the court to explain information in a certain language?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "interpreterNeeds",
     "Label": "Interpreter needs",
-    "Min": 1,
     "FieldType": "Collection",
     "FieldTypeParameter": "InterpreterNeed",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -198,7 +222,8 @@
     "ID": "labelAccessibility",
     "Label": "### Accessibility",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -206,7 +231,8 @@
     "ID": "isDisabilityPresent",
     "Label": "*Does the applicant, or anyone else attending the court, have a disability?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -214,7 +240,8 @@
     "ID": "labelAdjustmentsRequired",
     "Label": "*Describe the adjustments that the court needs to make.\n\nFor example - someone with a hearing impairment may need an induction loop to be fitted in the courtroom.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -222,7 +249,8 @@
     "ID": "adjustmentsRequired",
     "Label": " ",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -230,7 +258,8 @@
     "ID": "labelSpecialArrangements",
     "Label": "### Special arrangements",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -238,7 +267,8 @@
     "ID": "labelSpecialArrangementsDescription",
     "Label": "In some cases, the court can make special arrangements for an adult or child involved in the case.\n\nFor example - the court may provide a separate waiting room that is set apart from the respondent.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -246,7 +276,8 @@
     "ID": "isSpecialArrangementsRequired",
     "Label": "*Will the court need to make special arrangements for the applicant, or any child involved in the case?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -254,7 +285,8 @@
     "ID": "labelSpecialArrangementsRequired",
     "Label": "*Give details of the special arrangements that are required.\n\nFor example, a screen to separate the applicant from the respondent.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -262,7 +294,8 @@
     "ID": "specialArrangementsRequired",
     "Label": " ",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -270,7 +303,8 @@
     "ID": "labelIntermediaryDescription",
     "Label": "The court can appoint an intermediary for vulnerable applicants.\n\nThe intermediary helps the applicant to communicate and give evidence during the case.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -278,7 +312,8 @@
     "ID": "isIntermediaryNeeded",
     "Label": "*Do you know if an intermediary will be required?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -286,7 +321,8 @@
     "ID": "reasonsForIntermediary",
     "Label": "*Set out the reasons that an intermediary is required.",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -295,7 +331,8 @@
     "Label": "*What order(s) are you applying for?",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "OrderTypeEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -304,7 +341,8 @@
     "Label": "*Select type of child arrangements order",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "childArrangementOrderTypeEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -312,7 +350,8 @@
     "ID": "paraConsentOrderNotification",
     "Label": "A copy of the draft order must be uploaded in the **Upload a document** section",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -320,7 +359,8 @@
     "ID": "natureOfOrderLabel",
     "Label": "Provide more information on the type of order you are requesting.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -328,7 +368,8 @@
     "ID": "natureOfOrder",
     "Label": "*For example-does the order detail who the child will live with, or how often they will spend type with a parent.",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -336,7 +377,8 @@
     "ID": "paraWhyMakingApplication",
     "Label": "### Why are you making this application?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -344,7 +386,8 @@
     "ID": "paraWhyMakingApplication2",
     "Label": "### *Why are you making this application?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -353,7 +396,8 @@
     "Label": "*Have you applied to the court for permission to make this application?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "PermissionRequiredEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -361,7 +405,8 @@
     "ID": "applicationPermissionRequiredReason",
     "Label": "*Give details of why permission is required from the court.",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -369,7 +414,8 @@
     "ID": "paraApplicationDetails",
     "Label": "Provide brief details of:\r\n* any previous formal (or informal) parenting plans, and how these have broken down\r\n* the reason for bringing this application to court\r\n* what you are asking the court to do\r\n* reasons given by the respondent(s) for their actions in relation to this application",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -377,7 +423,8 @@
     "ID": "applicationDetails",
     "Label": " ",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -385,7 +432,8 @@
     "ID": "domesticAbuse",
     "Label": "Any form of domestic abuse?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -393,7 +441,8 @@
     "ID": "childAbduction",
     "Label": "Child abduction?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -401,7 +450,8 @@
     "ID": "childAbuse",
     "Label": "Child abuse?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -409,7 +459,8 @@
     "ID": "drugsAlcoholSubstanceAbuse",
     "Label": "Drugs, alcohol or substance abuse?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -417,7 +468,8 @@
     "ID": "safetyWelfareConcerns",
     "Label": "Other safety or welfare concerns?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -425,7 +477,8 @@
     "ID": "paraChildAbduction",
     "Label": "### Child abduction",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -433,7 +486,8 @@
     "ID": "childAtRiskOfAbduction",
     "Label": "Are the children at risk of being abducted?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -441,7 +495,8 @@
     "ID": "policeNotified",
     "Label": "Have the police been notified?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -449,7 +504,8 @@
     "ID": "childHasPassport",
     "Label": "Do any of the children have a passport?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -457,7 +513,8 @@
     "ID": "childAbductedBefore",
     "Label": "Have the children been abducted or kept outside the UK without your consent before?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -465,7 +522,8 @@
     "ID": "childHasMultiplePassports",
     "Label": "*Do the children have more than one passport?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -474,7 +532,8 @@
     "Label": "*Who is in possession of the children's passports?",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "PassportPossessionEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -482,7 +541,8 @@
     "ID": "childPassportPossessionOtherDetails",
     "Label": "Give details of the other person",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -490,7 +550,8 @@
     "ID": "childAbductionDetails",
     "Label": "Provide details of previous abductions",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -498,7 +559,8 @@
     "ID": "abductionPoliceInvolved",
     "Label": "Were the police, private investigators or any Organisation involved?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -506,7 +568,8 @@
     "ID": "abductionPoliceInvolvedDetails",
     "Label": "Provide more details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -514,7 +577,8 @@
     "ID": "childAtRiskOfAbductionReason",
     "Label": "Why do you think the children may be abducted or kept outside the UK without the Applicant's consent?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -522,7 +586,8 @@
     "ID": "childWhereabouts",
     "Label": "Where are the children now?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -530,7 +595,8 @@
     "ID": "paraChildAbuse",
     "Label": "### Child abuse",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -538,7 +604,8 @@
     "ID": "childAbuseSexually",
     "Label": "Have the children ever been sexually abused?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -546,7 +613,8 @@
     "ID": "childAbuseSexuallyDetails",
     "Label": "Nature of behaviour / what happened?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -554,7 +622,8 @@
     "ID": "childAbuseSexuallyStartDate",
     "Label": "When did the behaviour start?",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -562,7 +631,8 @@
     "ID": "childAbuseSexuallyOngoing",
     "Label": "Is the behaviour still ongoing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -570,7 +640,8 @@
     "ID": "childAbuseSexuallyHelpSought",
     "Label": "Was help sought? If so, who from?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -578,7 +649,8 @@
     "ID": "childAbusePhysically",
     "Label": "Have the children ever been physically abused?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -586,7 +658,8 @@
     "ID": "childAbusePhysicallyDetails",
     "Label": "Nature of behaviour / what happened?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -594,7 +667,8 @@
     "ID": "childAbusePhysicallyStartDate",
     "Label": "When did the behaviour start?",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -602,7 +676,8 @@
     "ID": "childAbusePhysicallyOngoing",
     "Label": "Is the behaviour still ongoing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -610,7 +685,8 @@
     "ID": "childAbusePhysicallyHelpSought",
     "Label": "Was help sought? If so, who from?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -618,7 +694,8 @@
     "ID": "childAbuseFinancially",
     "Label": "Have the children ever been financially abused?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -626,7 +703,8 @@
     "ID": "childAbuseFinanciallyDetails",
     "Label": "Nature of behaviour / what happened?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -634,7 +712,8 @@
     "ID": "childAbuseFinanciallyStartDate",
     "Label": "When did the behaviour start?",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -642,7 +721,8 @@
     "ID": "childAbuseFinanciallyOngoing",
     "Label": "Is the behaviour still ongoing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -650,7 +730,8 @@
     "ID": "childAbuseFinanciallyHelpSought",
     "Label": "Was help sought? If so, who from?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -658,7 +739,8 @@
     "ID": "childAbuseDomestic",
     "Label": "Any form of domestic abuse?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -666,7 +748,8 @@
     "ID": "childAbuseDomesticDetails",
     "Label": "Nature of behaviour / what happened?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -674,7 +757,8 @@
     "ID": "childAbuseDomesticStartDate",
     "Label": "When did the behaviour start?",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -682,7 +766,8 @@
     "ID": "childAbuseDomesticOngoing",
     "Label": "Is the behaviour still ongoing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -690,7 +775,8 @@
     "ID": "childAbuseDomesticHelpSought",
     "Label": "Was help sought? If so, who from?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -698,7 +784,8 @@
     "ID": "childDrugsAlcoholSubstanceAbuse",
     "Label": "Drugs, alcohol or substance abuse?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -706,7 +793,8 @@
     "ID": "childDrugsAlcoholSubstanceAbuseDetails",
     "Label": "Nature of behaviour / what happened?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -714,7 +802,8 @@
     "ID": "childDrugsAlcoholSubstanceAbuseStartDate",
     "Label": "When did the behaviour start?",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -722,7 +811,8 @@
     "ID": "childDrugsAlcoholSubstanceAbuseOngoing",
     "Label": "Is the behaviour still ongoing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -730,7 +820,8 @@
     "ID": "childDrugsAlcoholSubstanceAbuseHelpSought",
     "Label": "Was help sought? If so, who from?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -738,7 +829,8 @@
     "ID": "otherSafetyOrWelfareConcerns",
     "Label": "Other safety or welfare concerns?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -746,7 +838,8 @@
     "ID": "otherSafetyOrWelfareConcernsDetails",
     "Label": "Other safety or welfare concerns details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -754,7 +847,8 @@
     "ID": "labelWhereChildrenLive",
     "Label": "**Where do the children live?**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -762,7 +856,8 @@
     "ID": "childrenAddress",
     "Label": " ",
     "FieldType": "AddressUK",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -770,7 +865,8 @@
     "ID": "labelChildren",
     "Label": "**The child(ren)**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -780,7 +876,8 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -788,7 +885,8 @@
     "ID": "labelChildrenAdditionalQuestions",
     "Label": "**The child(ren) additional questions**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -797,7 +895,8 @@
     "Label": "Are any of the children known to the local authority children's services?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -805,7 +904,8 @@
     "ID": "childAndLocalAuthority",
     "Label": "*If Yes please state which child and the name of the Local Authority and Social worker (if known)",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -814,7 +914,8 @@
     "Label": "Are any of the children the subject of a child protection plan?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -823,7 +924,8 @@
     "Label": "Do all the children have the same parents?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -831,7 +933,8 @@
     "ID": "parentsAndTheirChildren",
     "Label": "If No, please give details of each parent and their children involved in this application",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -839,7 +942,8 @@
     "ID": "parentalResponsibilities",
     "Label": "Please state everyone who has parental responsibility for each child and how they have parental responsibility (e.g. 'child's mother', 'child's father and was married to the mother when the child was born' etc.)",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -848,7 +952,8 @@
     "Label": "Who do the children currently live with?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "WhoChildrenLiveWith",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -856,6 +961,7 @@
     "ID": "childAddressAndAdultsLivingWith",
     "Label": "If other, please give the full address of the child, the names of any adults living with the children and their relationship to or involvement with the child.",
     "FieldType": "TextArea",
+    "Searchable": "N",
     "SecurityClassification": "Public"
   },
   {
@@ -864,7 +970,8 @@
     "ID": "labelOtherCourtCases",
     "Label": "**Other court cases which concern the children listed**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -872,7 +979,8 @@
     "ID": "isExistingProceedings",
     "Label": "Are there previous or ongoing proceedings for the child(ren)?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -880,7 +988,8 @@
     "ID": "childrenInProceeding",
     "Label": "Name of child(ren)",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -889,7 +998,8 @@
     "Label": "Other proceedings",
     "FieldType": "Collection",
     "FieldTypeParameter": "ProceedingDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -897,7 +1007,8 @@
     "ID": "labelTheApplicants",
     "Label": "**The Applicant(s)**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -907,7 +1018,8 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "PartyDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -915,7 +1027,8 @@
     "ID": "typeOfApplication",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -923,7 +1036,8 @@
     "ID": "applicantsFL401",
     "Label": "Applicant",
     "FieldType": "PartyDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -931,7 +1045,8 @@
     "ID": "labelTheRespondents",
     "Label": "**The Respondent(s)**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -939,8 +1054,10 @@
     "ID": "respondents",
     "Label": "*Respondent",
     "FieldType": "Collection",
+    "Min": "1",
     "FieldTypeParameter": "PartyDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -948,7 +1065,8 @@
     "ID": "respondentsFL401",
     "Label": "Respondent",
     "FieldType": "PartyDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -956,7 +1074,8 @@
     "ID": "labelOthersToNotify",
     "Label": "**Others who should be given notice**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -965,7 +1084,8 @@
     "Label": "Person",
     "FieldType": "Collection",
     "FieldTypeParameter": "PartyDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -973,7 +1093,8 @@
     "ID": "labelOtherChildren",
     "Label": "**Other children not part of the application**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -982,7 +1103,8 @@
     "Label": "Child",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -990,7 +1112,8 @@
     "ID": "applicantAttendedMIAMLabel",
     "Label": "## *Has the applicant attended a Mediation information & Assessment Meeting (MIAM)?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -998,7 +1121,8 @@
     "ID": "applicantAttendedMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1006,7 +1130,8 @@
     "ID": "claimingExemptionMIAMLabel",
     "Label": "## *Is the applicant claiming exemption from the requirement to attend a MIAM ?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1014,7 +1139,8 @@
     "ID": "claimingExemptionMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1022,7 +1148,8 @@
     "ID": "miamExemptionsLabel",
     "Label": "## MIAM Exemptions : what is the reason(s) for the applicant not attending a MIAM?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1030,7 +1157,8 @@
     "ID": "familyMediatorMIAMLabel",
     "Label": "## *Has a family mediator informed the applicant that a mediator\u2019s exemption applies, and they do not need to attend a MIAM ?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1038,7 +1166,8 @@
     "ID": "familyMediatorMiam",
     "Label": "        ",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1046,7 +1175,8 @@
     "ID": "miamExemptionsSelectAll",
     "Label": "*Select all that apply",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1055,7 +1185,8 @@
     "Label": "       ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MIAMExemptionsChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1063,7 +1194,8 @@
     "ID": "miamDomesticViolenceLabel",
     "Label": "## MIAM Evidence : What evidence of domestic violence or abuse does the applicant have ?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1071,7 +1203,8 @@
     "ID": "miamDomesticViolenceSelectAll",
     "Label": "*Select all that apply",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1080,7 +1213,8 @@
     "Label": "        ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MIAMDomesticViolenceChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/01/2022",
@@ -1088,7 +1222,8 @@
     "ID": "miamChildProtectionConcernLabel",
     "Label": "## MIAM Evidence: What reason does the applicant have for child protection concerns?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/01/2022",
@@ -1097,7 +1232,8 @@
     "Label": "*The applicant confirms that a child who would be the subject of the\napplication or another child of the family who is living\nwith that child is currently",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MiamChildProtectionConcernChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1105,7 +1241,8 @@
     "ID": "miamUrgencyReasonLabel",
     "Label": "## MIAM Evidence: what reason does the applicant have for the application to be made urgently?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1113,7 +1250,8 @@
     "ID": "miamUrgencyReasonSelectAll",
     "Label": "*Select all that apply",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1122,7 +1260,8 @@
     "Label": "        ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MIAMUrgencyReasonChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1130,7 +1269,8 @@
     "ID": "miamPreviousAttendanceLabel",
     "Label": "## MIAM Evidence : Previous MIAM attendance or MIAM exemption",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1139,7 +1279,8 @@
     "Label": "*Select one",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "MIAMPreviousAttendanceChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1147,7 +1288,8 @@
     "ID": "miamOtherGroundsLabel",
     "Label": "## MIAM Evidence : What other grounds of exemption apply?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1156,7 +1298,8 @@
     "Label": "*Select one",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "MIAMOtherGroundsChecklistEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1164,7 +1307,8 @@
     "ID": "miamCertificationPageLabel",
     "Label": "## Enter details of MIAM certification",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1172,7 +1316,8 @@
     "ID": "mediatorRegistrationNumber",
     "Label": "*Mediator Registration Number (URN)",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1180,7 +1325,8 @@
     "ID": "familyMediatorServiceName",
     "Label": "*Family Mediation Service Name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1188,7 +1334,8 @@
     "ID": "soleTraderName",
     "Label": "*Sole Trader Name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1196,7 +1343,8 @@
     "ID": "miamCertificationPageMessage",
     "Label": "**You should have a document signed by the mediator confirming this. Upload this here.**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/10/2021",
@@ -1204,7 +1352,9 @@
     "ID": "miamCertificationDocumentUpload",
     "Label": "*MIAM certificate",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "MIAMCertificate"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1212,7 +1362,8 @@
     "ID": "miamCertificationPageLabel1",
     "Label": "## Enter details of MIAM certification",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1220,7 +1371,8 @@
     "ID": "mediatorRegistrationNumber1",
     "Label": "*Mediator Registration Number (URN)",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1228,7 +1380,8 @@
     "ID": "familyMediatorServiceName1",
     "Label": "*Family Mediation Service Name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1236,7 +1389,8 @@
     "ID": "soleTraderName1",
     "Label": "*Sole Trader Name",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -1244,7 +1398,8 @@
     "ID": "miamCertificationPageMessage1",
     "Label": "**You should have a document signed by the mediator confirming this. Upload this here.**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/10/2021",
@@ -1252,7 +1407,9 @@
     "ID": "miamCertificationDocumentUpload1",
     "Label": "*MIAM certificate",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "MIAMCertificate"
   },
   {
     "LiveFrom": "05/10/2021",
@@ -1260,7 +1417,8 @@
     "ID": "consentOrder",
     "Label": "*Do you have a draft consent order?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/10/2021",
@@ -1270,7 +1428,8 @@
     "FieldType": "Document",
     "HintText": "Upload a scanned PDF or DOCX of the draft consent order, signed by both parties. Wherever possible, documents should be scanned in greyscale.",
     "RegularExpression": ".pdf,.docx",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1278,7 +1437,8 @@
     "ID": "isCaseUrgent",
     "Label": "*Is this case urgent?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1286,7 +1446,8 @@
     "ID": "caseUrgencyTimeAndReason",
     "Label": "*Set out how soon the case needs to be heard in days and hours, and give the reason for the urgency.",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1294,7 +1455,8 @@
     "ID": "effortsMadeWithRespondents",
     "Label": "*What efforts have you made to notify each respondent of the application?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1302,7 +1464,8 @@
     "ID": "doYouNeedAWithoutNoticeHearing",
     "Label": "*Do you need a without notice hearing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1310,7 +1473,8 @@
     "ID": "reasonsForApplicationWithoutNotice",
     "Label": "*Set out the reasons for the application to be considered without notice. This\ninformation must be provided - if reasons are not given, the case will not be\nheard without notice.",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1318,7 +1482,8 @@
     "ID": "doYouRequireAHearingWithReducedNotice",
     "Label": "*Do you require a hearing with reduced notice?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1326,7 +1491,8 @@
     "ID": "setOutReasonsBelow",
     "Label": "*Set out the reasons below",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "04/11/2021",
@@ -1334,7 +1500,8 @@
     "ID": "areRespondentsAwareOfProceedings",
     "Label": "*Are respondents aware of proceedings?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1343,7 +1510,8 @@
     "Label": "Case Name",
     "HintText": "Enter the eldest child\u2019s full name. For example, John Smith",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1352,7 +1520,8 @@
     "Label": "Case Name",
     "HintText": "Enter the full name of the applicant and respondent. For example, Jo Davis & Jon Smith",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1360,7 +1529,8 @@
     "ID": "caseTypeOfApplicationLabel",
     "Label": "## Type of application\nWhich application are you applying for ?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1368,7 +1538,8 @@
     "ID": "selectedCaseTypeID",
     "Label": "Type of Case",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1377,7 +1548,8 @@
     "Label": " ",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "CaseTypeOfApplicationEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1385,7 +1557,8 @@
     "ID": "fl401ConfidentialityDisclaimerLabel1",
     "Label": "## Confidentiality Statement\n\n**When completing this form, you have the option to mark information as  \nconfidential and you do not need to complete a C8 form.**\n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1393,7 +1566,8 @@
     "ID": "state",
     "Label": "Case State",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1402,7 +1576,8 @@
     "Label": " ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "ConfidentialityStatementDisclaimerEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1410,7 +1585,8 @@
     "ID": "c100ConfidentialityDisclaimerLabel1",
     "Label": "## Confidentiality Statement\n\nWhen completing this form, you have the option to mark information as confidential. \n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n- the Children and Family Court Advisory and Support Service (CAFCASS)\n- CAFCASS Cymru\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1419,7 +1595,8 @@
     "Label": " ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "ConfidentialityStatementDisclaimerEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1427,7 +1604,8 @@
     "ID": "litigationCapacityFactors",
     "Label": "Give details of any factors affecting litigation capacity",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1435,7 +1613,8 @@
     "ID": "litigationCapacityReferrals",
     "Label": "Provide details of any referral to or assessment by the Adult Learning Disability team, and/or any adult health service, where known, together with the outcome",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1443,7 +1622,8 @@
     "ID": "litigationCapacityOtherFactors",
     "Label": "Are you aware of any other factors which may affect the ability of the person concerned to take part in the proceedings?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1451,7 +1631,8 @@
     "ID": "litigationCapacityOtherFactorsDetails",
     "Label": "*Give Details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1459,7 +1640,8 @@
     "ID": "habitualResidentInOtherState",
     "Label": "Do you have any reason to believe that any child, parent or potentially significant\n adult in the child's life may be habitually resident in another state?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1467,7 +1649,8 @@
     "ID": "jurisdictionIssue",
     "Label": "Do you have any reason to believe that there may be an issue as to jurisdiction in\n this case?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1475,7 +1658,8 @@
     "ID": "requestToForeignAuthority",
     "Label": "Has a request been made or should a request be made to a Central Authority or other competent authority in a foreign state or a consular authority in England and Wales?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1483,7 +1667,8 @@
     "ID": "habitualResidentInOtherStateGiveReason",
     "Label": "*Give reason",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1491,7 +1676,8 @@
     "ID": "jurisdictionIssueGiveReason",
     "Label": "*Give reason",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1499,7 +1685,8 @@
     "ID": "requestToForeignAuthorityGiveReason",
     "Label": "*Give reason",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1507,7 +1694,8 @@
     "ID": "welshLanguageRequirement",
     "Label": "Does any person in this case need orders or documents in Welsh?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1516,7 +1704,8 @@
     "Label": "*Which language are you using to complete this application?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "Language",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1524,7 +1713,8 @@
     "ID": "languageRequirementApplicationNeedWelsh",
     "Label": "*Does this application need to be translated into Welsh?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1532,7 +1722,8 @@
     "ID": "welshLanguageRequirementApplicationNeedEnglish",
     "Label": "*Does this application need to be translated into English?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "24/11/2021",
@@ -1540,7 +1731,8 @@
     "ID": "childDetailsAdditionalQuestionsLabel",
     "Label": "**Additional questions**",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "24/11/2021",
@@ -1549,7 +1741,8 @@
     "Label": "*Are any of the children known to the local authority children's services?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "24/11/2021",
@@ -1557,7 +1750,8 @@
     "ID": "childrenKnownToLocalAuthorityTextArea",
     "Label": "*State which child and the name of the Local Authority and Social Worker (if known)",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "24/11/2021",
@@ -1566,7 +1760,8 @@
     "Label": "*Are any of the children the subject of a child protection plan?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1574,7 +1769,9 @@
     "ID": "allegationsOfHarmHint",
     "Label": "If you fill out this section you do not need to send a separate C1A form.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1582,7 +1779,8 @@
     "ID": "allegationsOfHarmYesNo",
     "Label": "*Are there allegations of harm?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1590,7 +1788,8 @@
     "ID": "allegationsOfHarmLabel",
     "Label": "Are there allegations that the child(ren) have experienced, or are at risk of experiencing, harm from any of the following by any person who has had contact with the child?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1598,7 +1797,8 @@
     "ID": "allegationsOfHarmDomesticAbuseYesNo",
     "Label": "*Any form of domestic abuse",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1606,7 +1806,8 @@
     "ID": "allegationsOfHarmChildAbductionYesNo",
     "Label": "*Child abduction",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1614,7 +1815,8 @@
     "ID": "allegationsOfHarmChildAbuseYesNo",
     "Label": "*Child abuse",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1622,7 +1824,8 @@
     "ID": "allegationsOfHarmSubstanceAbuseYesNo",
     "Label": "*Drugs, alcohol or substance abuse",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1630,7 +1833,8 @@
     "ID": "allegationsOfHarmOtherConcernsYesNo",
     "Label": "*Other safety or welfare concerns",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1639,7 +1843,8 @@
     "Label": "Physical abuse",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "applicantOrChildren",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1648,7 +1853,8 @@
     "Label": "Emotional abuse",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "applicantOrChildren",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1657,7 +1863,8 @@
     "Label": "Psychological abuse",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "applicantOrChildren",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1666,7 +1873,8 @@
     "Label": "Sexual abuse",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "applicantOrChildren",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1675,7 +1883,8 @@
     "Label": "Financial abuse",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "applicantOrChildren",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1683,7 +1892,8 @@
     "ID": "childAbductionReasons",
     "Label": "*Why do you believe the child(ren) may be abducted?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1691,7 +1901,8 @@
     "ID": "previousAbductionThreats",
     "Label": "*Have there been any previous threats, attempts to abduct or actual abduction of the child(ren)?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1699,7 +1910,8 @@
     "ID": "previousAbductionThreatsDetails",
     "Label": "*Give details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1707,6 +1919,7 @@
     "ID": "childrenLocationNow",
     "Label": "*Where is/are the child(ren) now?",
     "FieldType": "TextArea",
+    "Searchable": "N",
     "SecurityClassification": "Public"
   },
   {
@@ -1715,7 +1928,8 @@
     "ID": "abductionPassportOfficeNotified",
     "Label": "*Has the passport office been notified?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1723,7 +1937,8 @@
     "ID": "abductionChildHasPassport",
     "Label": "*Do(es) the child(ren) have more than one passport?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1732,7 +1947,8 @@
     "Label": "*Who is in posession of the child(ren)'s passport(s)?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "abductionChildPassportPossessionEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1740,7 +1956,8 @@
     "ID": "abductionChildPassportPosessionOtherDetail",
     "Label": "*Give Details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1748,7 +1965,8 @@
     "ID": "abductionPreviousPoliceInvolvement",
     "Label": "*Were the police or any other organisation/agency involved in any previous incident of attempted abduction or abduction?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1756,7 +1974,8 @@
     "ID": "abductionPreviousPoliceInvolvementDetails",
     "Label": "*Give details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1764,7 +1983,8 @@
     "ID": "abductionOtherSafetyConcerns",
     "Label": "*Do you have any other concerns about your child(ren)'s safety and wellbeing? ",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1772,7 +1992,8 @@
     "ID": "abductionOtherSafetyConcernsDetails",
     "Label": "*Give details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1780,7 +2001,8 @@
     "ID": "abductionCourtStepsRequested",
     "Label": "*What steps or orders do you want the court to take or make to protect the safety of the child(ren) and/or yourself?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1789,7 +2011,8 @@
     "Label": "Behaviour",
     "FieldType": "Collection",
     "FieldTypeParameter": "Behaviours",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1797,7 +2020,8 @@
     "ID": "allegationOfHarmOrdersLabel",
     "Label": "### Orders",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1805,7 +2029,8 @@
     "ID": "allegationOfHarmOrdersLabelDetail",
     "Label": "Has the applicant had or does the applicant currently have any of the following orders?",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1813,7 +2038,8 @@
     "ID": "ordersNonMolestation",
     "Label": "*Non-molestation order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1821,7 +2047,8 @@
     "ID": "ordersOccupation",
     "Label": "*Occupation order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1829,7 +2056,8 @@
     "ID": "ordersForcedMarriageProtection",
     "Label": "*Forced marriage protection order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1837,7 +2065,8 @@
     "ID": "ordersRestraining",
     "Label": "*Restraining order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1845,7 +2074,8 @@
     "ID": "ordersOtherInjunctive",
     "Label": "*Other injunctive order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1853,7 +2083,8 @@
     "ID": "ordersUndertakingInPlace",
     "Label": "*Undertaking in place order",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1861,7 +2092,8 @@
     "ID": "ordersNonMolestationDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1869,7 +2101,8 @@
     "ID": "ordersNonMolestationEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1877,7 +2110,8 @@
     "ID": "ordersNonMolestationCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1885,7 +2119,8 @@
     "ID": "ordersNonMolestationCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1893,7 +2128,9 @@
     "ID": "ordersNonMolestationDocument",
     "Label": "Upload relevant order(s)",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1901,7 +2138,8 @@
     "ID": "ordersOccupationDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1909,7 +2147,8 @@
     "ID": "ordersOccupationEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1917,7 +2156,8 @@
     "ID": "ordersOccupationCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1925,7 +2165,8 @@
     "ID": "ordersOccupationCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1933,7 +2174,9 @@
     "ID": "ordersOccupationDocument",
     "Label": "Upload relevant order(s)",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1941,7 +2184,8 @@
     "ID": "ordersForcedMarriageProtectionDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1949,7 +2193,8 @@
     "ID": "ordersForcedMarriageProtectionEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1957,7 +2202,8 @@
     "ID": "ordersForcedMarriageProtectionCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1965,7 +2211,8 @@
     "ID": "ordersForcedMarriageProtectionCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1973,7 +2220,9 @@
     "ID": "ordersForcedMarriageProtectionDocument",
     "Label": "Upload relevant order(s)",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1981,7 +2230,8 @@
     "ID": "ordersRestrainingDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1989,7 +2239,8 @@
     "ID": "ordersRestrainingEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1997,7 +2248,8 @@
     "ID": "ordersRestrainingCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2005,7 +2257,8 @@
     "ID": "ordersRestrainingCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2013,7 +2266,9 @@
     "ID": "ordersRestrainingDocument",
     "Label": "Restraining order document",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2021,7 +2276,8 @@
     "ID": "ordersOtherInjunctiveDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2029,7 +2285,8 @@
     "ID": "ordersOtherInjunctiveEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2037,7 +2294,8 @@
     "ID": "ordersOtherInjunctiveCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2045,7 +2303,8 @@
     "ID": "ordersOtherInjunctiveCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2053,7 +2312,9 @@
     "ID": "ordersOtherInjunctiveDocument",
     "Label": "Other injunctive order document",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2061,7 +2322,8 @@
     "ID": "ordersUndertakingInPlaceDateIssued",
     "Label": "Date issued",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2069,7 +2331,8 @@
     "ID": "ordersUndertakingInPlaceEndDate",
     "Label": "End date",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2077,7 +2340,8 @@
     "ID": "ordersUndertakingInPlaceCurrent",
     "Label": "*Is the order current?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2085,7 +2349,8 @@
     "ID": "ordersUndertakingInPlaceCourtName",
     "Label": "Name of court",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2093,7 +2358,9 @@
     "ID": "ordersUndertakingInPlaceDocument",
     "Label": "Upload relevant order(s)",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2101,7 +2368,8 @@
     "ID": "allegationsOfHarmOtherConcernsLabel",
     "Label": "### Other concerns",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2109,7 +2377,8 @@
     "ID": "allegationsOfHarmOtherConcerns",
     "Label": "*Are there other concerns about the child(ren)'s safety and wellbeing?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2117,7 +2386,8 @@
     "ID": "allegationsOfHarmOtherConcernsDetails",
     "Label": "*Give details",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2125,7 +2395,8 @@
     "ID": "allegationsOfHarmOtherConcernsCourtActions",
     "Label": "*What steps or orders does the applicant want the court to take or make to protect the safety of the child(ren) and/or yourself?",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2133,7 +2404,8 @@
     "ID": "allegationsOfHarmChildContactLabel",
     "Label": "### Child contact",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2141,7 +2413,8 @@
     "ID": "agreeChildUnsupervisedTime",
     "Label": "*Do you agree to the child(ren) spending unsupervised time with the other person(s) in receipt of this form?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2149,7 +2422,8 @@
     "ID": "agreeChildSupervisedTime",
     "Label": "*Do you agree to the child(ren) spending supervised time with the other person(s) in receipt of this form?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2157,7 +2431,8 @@
     "ID": "agreeChildOtherContact",
     "Label": "*Do you agree to the child having other forms of contact with the other person in receipt of this form? (by telephone, text, email, social media)",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "21/11/2021",
@@ -2165,7 +2440,8 @@
     "ID": "otherProceedingsLabel",
     "Label": "Other court cases which concern the children listed",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "21/11/2021",
@@ -2174,7 +2450,8 @@
     "Label": "Are there previous or ongoing proceedings for the child(ren)?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -2183,7 +2460,8 @@
     "Label": "### Download Application",
     "FieldType": "Label",
     "FieldTypeParameter": "",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -2192,7 +2470,8 @@
     "Label": "Use this link to download and check the application.",
     "FieldType": "Label",
     "FieldTypeParameter": "",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -2200,7 +2479,8 @@
     "ID": "c100draftOrderDocLabel",
     "Label": "### C100 draft",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -2208,7 +2488,8 @@
     "ID": "fl401draftOrderDocLabel",
     "Label": "### FL401 draft",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -2216,7 +2497,9 @@
     "ID": "draftOrderDoc",
     "Label": "Draft application",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "ordersSubmittedWithApplication"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -2224,7 +2507,8 @@
     "ID": "id",
     "Label": " ",
     "FieldType": "Number",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2232,7 +2516,8 @@
     "ID": "submitAndPayDeclaration",
     "Label": "### Declaration",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2240,7 +2525,8 @@
     "ID": "submitAndPayAgreeStmtLabel",
     "Label": "I understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2248,7 +2534,8 @@
     "ID": "solicitorName",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2256,7 +2543,8 @@
     "ID": "submitAndPayAgreeSignStmtLabel",
     "Label": "The applicant believes that the facts stated in this form and any continuation sheets are true. ${solicitorName}  is authorised by the applicant to sign this statement. ",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2266,7 +2554,8 @@
     "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "Consent",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2276,7 +2565,8 @@
     "HintText": "This option should only be selected if the legal representative is signing the form on behalf of the applicant.",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "Consent",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2284,7 +2574,8 @@
     "ID": "submitAndPayNextPage",
     "Label": "### Next step - payment",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2292,7 +2583,8 @@
     "ID": "submitAndPayNextPageDesc",
     "Label": "Now that you have filled out your application and signed it, you must pay or submit your help with fees, to have it considered by the courts.",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2301,7 +2593,8 @@
     "Label": "### Application fee to pay",
     "HintText": "£${feeAmount}",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2310,7 +2603,8 @@
     "Label": " ",
     "HintText": "${feeAmount}",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2318,7 +2612,8 @@
     "ID": "submitAndPayDownloadApplication",
     "Label": "### Download Application",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2326,7 +2621,8 @@
     "ID": "submitAndPayDownloadApplicationLinkLabel",
     "Label": "Use this link to download and check the application before sending:",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2334,7 +2630,8 @@
     "ID": "c100submitAndPayDownloadApplicationLinkLabel",
     "Label": "### C100 draft",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2342,7 +2639,8 @@
     "ID": "viewPDFlinkLabelText",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2350,7 +2648,8 @@
     "ID": "viewPDFlinkLabel",
     "Label": "${viewPDFlinkLabelText}",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2358,7 +2657,9 @@
     "ID": "submitAndPayDownloadApplicationLink",
     "Label": "Draft application",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "applicantApplication"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2366,7 +2667,8 @@
     "ID": "serviceRequest",
     "Label": "Service Request",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2374,7 +2676,8 @@
     "ID": "paymentCallbackServiceRequestUpdate",
     "Label": " ",
     "FieldType": "PaymentCallbackServiceRequestUpdate",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2382,7 +2685,8 @@
     "ID": "paymentServiceRequestReferenceNumber",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "27/01/2022",
@@ -2390,7 +2694,8 @@
     "ID": "respondentRelationObject",
     "Label": " ",
     "FieldType": "RespondentRelationObjectType",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "27/01/2022",
@@ -2398,7 +2703,8 @@
     "ID": "respondentRelationDateInfoObject",
     "Label": " ",
     "FieldType": "RespondentRelationDateInfo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "27/01/2022",
@@ -2406,7 +2712,8 @@
     "ID": "respondentRelationOptions",
     "Label": " ",
     "FieldType": "RespondentRelationOptionsInfo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2414,7 +2721,8 @@
     "ID": "rejectReasonLabel",
     "Label": "### Reason for rejection",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2423,7 +2731,8 @@
     "Label": " ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "rejectReasonEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2432,7 +2741,8 @@
     "Label": " ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "FL401RejectReasonEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2440,7 +2750,8 @@
     "ID": "returnMessageLabel",
     "Label": "### Return message",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2448,7 +2759,8 @@
     "ID": "returnMessage",
     "Label": "Return message will be this",
     "FieldType": "TextArea",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2456,7 +2768,8 @@
     "ID": "familymanCaseNumber",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "19/01/2022",
@@ -2464,7 +2777,8 @@
     "ID": "localCourtHint",
     "Label": "Let the local court admin know there’s a new case",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "19/01/2022",
@@ -2474,7 +2788,8 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "localCourtAdminEmail",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -2483,7 +2798,8 @@
     "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "UserInfo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2491,7 +2807,8 @@
     "ID": "caseworkerEmailAddress",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2499,7 +2816,8 @@
     "ID": "applicantSolicitorEmailAddress",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "12/02/2022",
@@ -2507,7 +2825,9 @@
     "ID": "finalDocument",
     "Label": "Final Document",
     "FieldType": "Document",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "applicantApplication"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2515,7 +2835,8 @@
     "ID": "issueDate",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "08/02/2022",
@@ -2524,7 +2845,8 @@
     "Label": "Applicant",
     "FieldType": "Collection",
     "FieldTypeParameter": "ApplicantConfidentialityDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "08/02/2022",
@@ -2533,7 +2855,8 @@
     "Label": "Child confidential details",
     "FieldType": "Collection",
     "FieldTypeParameter": "ChildConfidentialityDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "08/02/2022",
@@ -2542,7 +2865,8 @@
     "Label": "Child confidential details",
     "FieldType": "Collection",
     "FieldTypeParameter": "Fl401ChildConfidentialityDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2550,7 +2874,8 @@
     "ID": "TestField",
     "Label": "FamilyMan case number",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "28/01/2022",
@@ -2558,7 +2883,8 @@
     "ID": "respondentBehaviourData",
     "Label": " ",
     "FieldType": "respondentBObject",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -2567,6 +2893,7 @@
     "Label": " ",
     "FieldType": "TypeOfApplicationOrders",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2576,6 +2903,7 @@
     "Label": " ",
     "FieldType": "LinkToCA",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2584,7 +2912,8 @@
     "ID": "applicantFamilyDetails",
     "Label": " ",
     "FieldType": "applicantFamilyDetailsObject",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2594,14 +2923,16 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "FL401ApplicantChildDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   { "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "orderWithoutGivingNoticeToRespondent",
     "Label": " ",
     "FieldType": "WithoutNoticeOrder",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -2609,7 +2940,8 @@
     "ID": "reasonForOrderWithoutGivingNotice",
     "Label": " ",
     "FieldType": "reasonForWithoutNoticeOrder",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -2617,7 +2949,8 @@
     "ID": "bailDetails",
     "Label": " ",
     "FieldType": "respondentBailConditionDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -2625,7 +2958,8 @@
     "ID": "anyOtherDtailsForWithoutNoticeOrder",
     "Label": " ",
     "FieldType": "otherDetailsOfWithoutNoticeOrder",
-     "SecurityClassification": "Public"
+     "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2633,7 +2967,8 @@
     "ID": "home",
     "Label": " ",
     "FieldType": "Home",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -2641,7 +2976,8 @@
     "ID": "dateSubmitted",
     "Label": " ",
     "FieldType": "Date",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "17/12/2021",
@@ -2650,6 +2986,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2659,6 +2996,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2668,6 +3006,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2677,6 +3016,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2686,6 +3026,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2695,6 +3036,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2704,6 +3046,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2713,6 +3056,7 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2721,7 +3065,8 @@
     "ID": "localGateKeeperHint",
     "Label": "### Let the gatekeeper know there’s a new case",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -2731,14 +3076,16 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "GatekeeperEmail",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   { "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401OtherProceedingDetails",
     "Label": " ",
     "FieldType": "Fl401ProceedingDetails",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "14/01/2022",
@@ -2746,7 +3093,8 @@
     "ID": "confidentialityDisclaimer",
     "Label": " ",
     "FieldType": "confidentialityDisclaimerObject",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "22/02/2022",
@@ -2755,6 +3103,7 @@
     "Label": " ",
     "FieldType": "StatementOfTruth",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2764,6 +3113,7 @@
     "Label": " ",
     "FieldType": "ConfidentialityCheck",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2772,7 +3122,8 @@
     "ID": "courtEmailAddress",
     "Label": "Court Email Address",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -2780,7 +3131,8 @@
     "ID": "hearingUrgencyLabel",
     "Label": "The court will review the application and make a decision on the urgency of the application based on the details you provide",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2788,7 +3140,8 @@
     "ID": "isNotificationSent",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2796,7 +3149,8 @@
     "ID": "isCourtEmailFound",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2804,7 +3158,8 @@
     "ID": "caseSolicitorName",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2812,7 +3167,8 @@
     "ID": "isDocumentGenerated",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2820,7 +3176,8 @@
     "ID": "caseSolicitorOrgName",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -2828,16 +3185,17 @@
     "ID": "submitCountyCourtSelectionLabel",
     "Label": "# Select the family court",
     "FieldType": "Label",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/04/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitCountyCourtSelection",
     "Label": "Select the email address of the family court you want this application to go to",
-    "FieldType": "FixedList",
-    "FieldTypeParameter": "CountyCourtEmails",
-    "SecurityClassification": "Public"
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "18/01/2021",
@@ -2846,7 +3204,8 @@
     "Label": "Petitioner solicitor's firm",
     "HintText": "Petitioner solicitor's firm",
     "FieldType": "OrganisationPolicy",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -2855,7 +3214,8 @@
     "Label": " ",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ApplicantAge",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -2863,7 +3223,8 @@
     "ID": "specialCourtName",
     "Label": " ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -2871,7 +3232,8 @@
     "ID": "caseOrigin",
     "Label": "Case originated by ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -2879,7 +3241,8 @@
     "ID": "courtNavApproved",
     "Label": "Courtnav approved? ",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -2887,7 +3250,8 @@
     "ID": "hasDraftOrder",
     "Label": "Has draft order?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -2895,7 +3259,8 @@
     "ID": "numberOfAttachments",
     "Label": "Total no of attachments from courtnav ",
     "FieldType": "Text",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -2904,6 +3269,7 @@
     "Label": "Submitted date and time",
     "FieldType": "DateTime",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "Y"
   },
   {
@@ -2913,6 +3279,7 @@
     "Label": "Submitted date and time",
     "FieldType": "Text",
     "SecurityClassification": "Public",
+    "Searchable": "N",
     "Searchable": "Y"
   },
   {
@@ -2922,7 +3289,96 @@
     "Label": " ",
     "FieldType": "FixedList",
     "FieldTypeParameter": "CaseCreatedByEnum",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsApplyingFor",
+    "Label": "What are you applying for?",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "AdditionalApplicationTypeEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "typeOfC2Application",
+    "Label": "What type of C2 application?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C2ApplicationTypeEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicantsList",
+    "Label": "Select applicant",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryOtherApplicationsBundle",
+    "Label": "Other applications",
+    "FieldType": "OtherApplicationsBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "temporaryC2Document",
+    "Label": "C2 application",
+    "FieldType": "C2DocumentBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseFlags",
+    "Label": "Case level Flags",
+    "FieldType": "Flags",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "flagLauncher",
+    "Label": "Launch the Flags screen",
+    "FieldType": "FlagLauncher",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "uploadC2Link",
+    "FieldType": "Label",
+    "Label": "[Upload additional applications](/case/${[JURISDICTION]}/${[CASE_TYPE]}/${[CASE_REFERENCE]}/trigger/uploadAdditionalApplications)",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsBundle",
+    "Label": "Additional applications",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "AdditionalApplicationsBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
 
