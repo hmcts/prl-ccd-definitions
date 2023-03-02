@@ -1,5 +1,5 @@
 #!groovy
-
+import uk.gov.hmcts.contino.GithubAPI
 @Library("Infrastructure")
 
 String product = "prl"
@@ -47,6 +47,12 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
+  onPR {
+    def githubApi = new GithubAPI(this)
+    if (!githubApi.getLabelsbyPattern(env.BRANCH_NAME, "keep-helm")) {
+        enableCleanupOfHelmReleaseOnSuccess()
+    }
+  }
 
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
@@ -82,7 +88,7 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:preview') {
-    yarnBuilder.yarn('setup')
+    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
@@ -122,3 +128,4 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
+
