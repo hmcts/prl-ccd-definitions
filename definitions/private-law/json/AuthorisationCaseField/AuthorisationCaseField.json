@@ -624,6 +624,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "welshNeeds",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "fl401WelshNeeds",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -6353,6 +6360,13 @@
     "CaseFieldID": "applicantCaseName",
     "UserRole": "courtnav",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantCaseName",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -15251,5 +15265,29 @@
     "CaseFieldID": "respondentAgreeStatement",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCafcass",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
