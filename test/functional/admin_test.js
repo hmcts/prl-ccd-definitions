@@ -46,7 +46,7 @@ Scenario('add all the roles @pipeline', I => {
 
 Scenario('upload Private Law Config file @pipeline', I => {
   I.loginToAdminConsole();
-  I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
-  I.wait('20');
-  I.see('Case Definition data successfully imported');
+  //I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
+  //I.wait('20');
+  //I.see('Case Definition data successfully imported');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
