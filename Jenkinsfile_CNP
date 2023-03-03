@@ -1,5 +1,5 @@
 #!groovy
-
+import uk.gov.hmcts.contino.GithubAPI
 @Library("Infrastructure")
 
 String product = "prl"
@@ -47,6 +47,12 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
+  onPR {
+    def githubApi = new GithubAPI(this)
+    if (!githubApi.getLabelsbyPattern(env.BRANCH_NAME, "keep-helm")) {
+        enableCleanupOfHelmReleaseOnSuccess()
+    }
+  }
 
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
