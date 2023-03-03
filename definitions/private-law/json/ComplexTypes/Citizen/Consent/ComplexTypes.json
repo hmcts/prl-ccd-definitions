@@ -4,39 +4,47 @@
     "ID": "Consent",
     "ListElementCode": "consentToTheApplication",
     "FieldType": "YesOrNo",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "ElementLabel": "*Do you consent to the application? ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Consent",
     "ListElementCode": "noConsentReason",
-    "FieldType": "Text",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "FieldType": "TextArea",
+    "ElementLabel": "*Give your reasons for not consenting to the application.",
+    "FieldShowCondition": "consentToTheApplication=\"No\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Consent",
     "ListElementCode": "applicationReceivedDate",
     "FieldType": "Date",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "ElementLabel": "*When did you receive the application? ",
+    "HintText": "For example, 27 3 2007",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Consent",
     "ListElementCode": "permissionFromCourt",
     "FieldType": "YesOrNo",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "ElementLabel": "*Does the respondent need permission from the court before making applications? ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "Consent",
     "ListElementCode": "courtOrderDetails",
-    "FieldType": "Text",
-    "ElementLabel": " ",
-    "SecurityClassification": "Public"
+    "FieldType": "TextArea",
+    "ElementLabel": "*Provide details of the court order in place.",
+    "FieldShowCondition": "permissionFromCourt=\"Yes\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
