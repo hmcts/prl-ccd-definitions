@@ -1,0 +1,82 @@
+[
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel21",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveOrderDynamicList",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "manageOrdersOptions=\"servedSavedOrders\" OR doYouWantToServeOrder=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveOrderAdditionalDocumentsLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "PageFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveOrderAdditionalDocuments",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersNeedToBeServed",
+    "DisplayContext": "MANDATORY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "currentOrderCreatedDateTime",
+    "DisplayContext": "MANDATORY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "isCafcass",
+    "DisplayContext": "MANDATORY",
+    "PageID": 23,
+    "PageDisplayOrder": 23,
+    "PageFieldDisplayOrder": 8,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  }
+]
