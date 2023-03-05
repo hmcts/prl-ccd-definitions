@@ -8,7 +8,7 @@
     "ListElementCode": "addNewHearingDataLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "READONLY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -28,9 +28,9 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingDateConfirmOptionEnum",
-    "EventElementLabel": "Has the hearing date been confirmed",
+    "EventElementLabel": "Has the hearing date been confirmed?",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -65,7 +65,7 @@
     "ListElementCode": "estimatedTimeLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -341,9 +341,9 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
-    "EventElementLabel": "**The date is confirmed in the Hearings tab",
+    "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "29",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -355,7 +355,7 @@
     "ListElementCode": "confirmedHearingDates",
     "EventElementLabel": "Select from hearing",
     "FieldDisplayOrder": "30",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
