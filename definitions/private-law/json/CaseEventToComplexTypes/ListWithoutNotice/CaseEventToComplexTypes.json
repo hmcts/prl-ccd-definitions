@@ -62,6 +62,18 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "hearingDateTime",
+    "EventElementLabel": "Hearing DateTime",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "estimatedTimeLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
@@ -123,7 +135,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingVideoChannels",
-    "EventElementLabel": "",
+    "EventElementLabel": "**Video** \n\nSelect a platform",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
@@ -135,7 +147,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingTelephoneChannels",
-    "EventElementLabel": "",
+    "EventElementLabel": "**Telephone** \n\nSelect a platform",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
@@ -159,7 +171,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "applicantHearingChannel",
-    "EventElementLabel": "${HearingData.mainApplicantName} (Applicant)",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.mainApplicantName} (Applicant)",
     "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
