@@ -53,7 +53,7 @@
     "ListElementCode": "addNewHearingScheduleDetailsLabel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -116,14 +116,13 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
-
   {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "hearingVideoChannel",
+    "ListElementCode": "hearingVideoChannels",
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
@@ -135,7 +134,7 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "hearingTelephoneChannel",
+    "ListElementCode": "hearingTelephoneChannels",
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL",
@@ -343,7 +342,7 @@
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
     "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "29",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
