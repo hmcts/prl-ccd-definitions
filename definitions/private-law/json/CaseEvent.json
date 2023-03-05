@@ -1268,8 +1268,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "Publish" : "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
+    "Publish" : "True"
   },
   {
     "LiveFrom": "26/07/2022",
@@ -1284,7 +1283,6 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Send to admin",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "Publish" : "True"
@@ -1293,8 +1291,8 @@
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "adminEditAndApproveAnOrder",
-    "Name": "Edit and approve a draft order",
-    "Description": "Edit and approve a draft order",
+    "Name": "Edit and serve a draft order",
+    "Description": "Edit and serve a draft order",
     "DisplayOrder": 28,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
@@ -1302,7 +1300,6 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
   },
