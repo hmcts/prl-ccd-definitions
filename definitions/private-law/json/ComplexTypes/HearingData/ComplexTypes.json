@@ -131,6 +131,18 @@
     "FieldType": "DynamicRadioList",
     "ElementLabel": "How does the hearing need to take place?(Optional)",
     "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hearingChannels=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingChannelsEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingChannelsEnum",
+    "ElementLabel": "How does the hearing need to take place?",
+    "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
@@ -163,7 +175,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": " ${[HearingData.mainApplicantName]} (Applicant)",
+    "ElementLabel": " ${HearingData.mainApplicantName} (Applicant)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
