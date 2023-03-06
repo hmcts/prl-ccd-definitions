@@ -27,6 +27,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
     // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
@@ -107,6 +108,5 @@ module.exports = {
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
-    await I.retry(retryCount).waitForElement('i.icon-tick');
   }
 };

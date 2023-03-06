@@ -1,7 +1,5 @@
 package uk.gov.hmcts.reform.prl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import uk.gov.hmcts.befta.dse.ccd.CcdEnvironment;
 import uk.gov.hmcts.befta.dse.ccd.CcdRoleConfig;
 import uk.gov.hmcts.befta.dse.ccd.DataLoaderToDefinitionStore;
@@ -11,8 +9,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
-
-    private static final Logger logger = LoggerFactory.getLogger(HighLevelDataSetupApp.class);
 
     public static final String PUBLIC = "PUBLIC";
     private static final CcdRoleConfig[] CCD_ROLES_NEEDED_FOR_PRL = {
@@ -29,6 +25,11 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("payments", PUBLIC),
             new CcdRoleConfig("pui-case-manager", PUBLIC),
             new CcdRoleConfig("courtnav", PUBLIC),
+            new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
+            new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
+            new CcdRoleConfig("GS_profile", PUBLIC),
+            new CcdRoleConfig("ctsc-team-leader", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-cafcass", PUBLIC),
     };
 
     private final CcdEnvironment environment;
@@ -55,11 +56,8 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
     public void addCcdRoles() {
         for (CcdRoleConfig roleConfig : CCD_ROLES_NEEDED_FOR_PRL) {
             try {
-                logger.info("\n\nAdding CCD Role {}.", roleConfig);
                 addCcdRole(roleConfig);
-                logger.info("\n\nAdded CCD Role {}.", roleConfig);
             } catch (Exception e) {
-                logger.error("\n\nCouldn't add CCD Role {} - Exception: {}.\n\n", roleConfig, e);
                 if (!shouldTolerateDataSetupFailure()) {
                     throw e;
                 }
