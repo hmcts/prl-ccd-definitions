@@ -38,6 +38,18 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "dateIsReservedWithListAssistLabel",
+    "EventElementLabel": "**The date is reserved with List Assist**",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingScheduleDetails",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
@@ -75,7 +87,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "estimatedTimeLabel",
-    "EventElementLabel": "",
+    "EventElementLabel": "Estimated time",
     "FieldDisplayOrder": "6",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
@@ -134,8 +146,8 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "hearingVideoChannels",
-    "EventElementLabel": "**Video** \n\nSelect a platform",
+    "ListElementCode": "hearingVideoChannelsLabel",
+    "EventElementLabel": "**Video**",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
@@ -146,8 +158,32 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "hearingVideoChannels",
+    "EventElementLabel": "Select a platform",
+    "FieldDisplayOrder": "11",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "hearingTelephoneChannelsLabel",
+    "EventElementLabel": "**Telephone**",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingTelephoneChannels",
-    "EventElementLabel": "**Telephone** \n\nSelect a platform",
+    "EventElementLabel": "Select a platform",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
@@ -171,7 +207,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "applicantHearingChannel",
-    "EventElementLabel": "${listWithoutNoticeHearingDetails.mainApplicantName} (Applicant)",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantName} (Applicant)",
     "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
@@ -183,7 +219,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel",
-    "EventElementLabel": "",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
     "FieldDisplayOrder": "15",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
@@ -195,7 +231,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "respondentHearingChannel",
-    "EventElementLabel": "",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
     "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
@@ -207,7 +243,7 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel",
-    "EventElementLabel": "",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor}  (Respondent Solicitor)",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""

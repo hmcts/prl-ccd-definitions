@@ -73,6 +73,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "dateIsReservedWithListAssistLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**The date is reserved with List Assist**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingScheduleDetails",
@@ -146,19 +155,37 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingVideoChannelsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Video**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "01/01/2023",
     "ID": "HearingData",
     "ListElementCode": "hearingVideoChannels",
     "FieldType": "DynamicList",
-    "ElementLabel": "**Video** \n\nSelect a platform",
+    "ElementLabel": "Select a platform",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingTelephoneChannelsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Telephone**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "01/01/2023",
     "ID": "HearingData",
     "ListElementCode": "hearingTelephoneChannels",
     "FieldType": "DynamicList",
-    "ElementLabel": "**Telephone** \n\nSelect a platform",
+    "ElementLabel": "Select a platform",
     "SecurityClassification": "Public"
   },
   {
@@ -175,7 +202,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": " ${listWithoutNoticeHearingDetails.mainApplicantName} (Applicant)",
+    "ElementLabel": " ${listWithoutNoticeHearingDetails.applicantName} (Applicant)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -184,7 +211,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "ApplicantSolicitor",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -193,7 +220,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "Respondent",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -202,7 +229,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "RespondentSolicitor",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor}  (Respondent Solicitor)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -313,12 +340,41 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
-    "ListElementCode": "mainApplicantName",
+    "ListElementCode": "applicantName",
     "FieldType": "Text",
-    "ElementLabel": "Main Applicant Name",
+    "ElementLabel": "applicantName",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "hearingJudgeEmailAddress=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor=\"DO_NOT_SHOW\""
   }
-
 ]
