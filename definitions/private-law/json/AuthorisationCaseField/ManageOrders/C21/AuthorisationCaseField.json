@@ -2,7 +2,7 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "selectedOrderLabel13",
+    "CaseFieldID": "selectedOrder13",
     "AccessControl": [
       {
         "UserRoles": [
@@ -28,6 +28,31 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "c21OrderOptions",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedC21Order",
     "AccessControl": [
       {
         "UserRoles": [
