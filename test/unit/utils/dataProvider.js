@@ -16,6 +16,13 @@ getFieldata = (filePath, fileType) => {
   return fieldsArray;
 };
 
+getFieldataFromMultiFileType = (filePath, fileType1, fileType2) => {
+  fieldsArray = [];
+  processDir(filePath, fileType1);
+  processDir(filePath, fileType2);
+  return fieldsArray;
+};
+
 processDir = (filePath, fileType) => {
   const fileNames = fs.readdirSync(path.resolve(__dirname, filePath));
   if (!Object.prototype.toString.call(fileNames) === '[object Array]') {
@@ -51,7 +58,7 @@ module.exports = {
   ccdData: {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
-    CaseEvent: loadFile('CaseEvent'),
+    CaseEvent: getFieldataFromMultiFileType('../../../definitions/private-law/json/CaseEvent', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
     FixedLists: loadFile('FixedLists'),
