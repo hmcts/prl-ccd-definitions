@@ -65,7 +65,7 @@ module.exports = {
   },
   caseFieldata: getFieldata('../../../definitions/private-law/json', 'CaseField.json'),
   AuthorisationCaseFieldData: getFieldata('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
-  CaseEventToFieldData: getFieldata('../../../definitions/private-law/json/CaseEvent/order', 'CaseEventToFields.json'),
+  CaseEventToFieldData: getFieldata('../../../definitions/private-law/json/CaseEvent/Order', 'CaseEventToFields.json'),
   CaseTypeTab: getFieldata('../../../definitions/private-law/json', 'CaseTypeTab.json'),
   AuthorisationCaseEvent: getFieldata('../../../definitions/private-law/json', 'AuthorisationCaseEvent.json'),
   CaseEventToComplexTypes: getFieldata('../../../definitions/private-law/json', 'CaseEventToComplexTypes.json'),
