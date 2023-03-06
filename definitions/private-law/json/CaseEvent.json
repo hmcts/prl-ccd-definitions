@@ -376,7 +376,7 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
- {
+  {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
@@ -1743,6 +1743,19 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenCaseSubmitWithHWF",
+    "Name": "Submit Citizen Case with HWF",
+    "Description": "Submit Citizen Case with Help With Fees",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
     "LiveFrom": "19/10/22",
     "CaseTypeID": "PRLAPPS",
     "ID": "cafcass-document-upload",
@@ -1752,19 +1765,6 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/07/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "citizen-case-submit-with-hwf",
-    "Name": "Submit Citizen Case with HWF",
-    "Description": "Submit Citizen Case with Help With Fees",
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
-    "PostConditionState": "SUBMITTED_NOT_PAID",
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/02/2023",
