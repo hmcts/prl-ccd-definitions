@@ -59,7 +59,7 @@ module.exports = {
   ccdData: {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
-    CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json/CaseEvent', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
+    CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
     FixedLists: loadFile('FixedLists'),
