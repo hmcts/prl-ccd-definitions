@@ -5,7 +5,7 @@ Project creating Family Private Law (PRL) CCD config files.
 
 Updated with Release 3.1 fixes
 
-### Usage
+## Usage
 
 Clone project and in the project directory run:
  - `yarn install && yarn reset-ccd-submodule`
