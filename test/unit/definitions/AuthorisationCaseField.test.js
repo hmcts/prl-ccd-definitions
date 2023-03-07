@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { uniqWith } = require('lodash');
 const { isFieldDuplicated } = require('../utils/utils');
 const { createAssertExists } = require('../utils/assertBuilders');
-const { AuthorisationCaseFieldData, caseFieldata } = require('../utils/dataProvider');
+const { AuthorisationCaseFieldData, caseFieldData } = require('../utils/dataProvider');
 
 const assertFieldExists = createAssertExists('Field');
 
@@ -14,7 +14,7 @@ describe('AuthorisationCaseField', () => {
     });
 
     it('use existing fields', () => {
-      assertFieldExists(AuthorisationCaseFieldData, caseFieldata);
+      assertFieldExists(AuthorisationCaseFieldData, caseFieldData);
     });
   });
 });
