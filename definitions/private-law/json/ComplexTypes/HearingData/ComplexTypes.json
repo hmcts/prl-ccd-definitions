@@ -1,5 +1,15 @@
 [
   {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingScheduleDetails",
+    "ListElementCode": "hearingDateTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Enter a date and time ",
+    "DisplayContextParameter" : "#DATETIMEENTRY(MM-dd'T'HH:mm),#DATETIMEDISPLAY(yyyy MM dd HH:mm)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "16/02/2022",
     "ID": "HearingData",
     "ListElementCode": "addNewHearingLabel",
@@ -74,9 +84,9 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
-    "ListElementCode": "hearingDateTimes",
+    "ListElementCode": "hearingScheduleDetails",
     "FieldType": "Collection",
-    "FieldTypeParameter": "DateTime",
+    "FieldTypeParameter": "HearingScheduleDetails",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -84,9 +94,9 @@
   {
     "LiveFrom": "16/02/2022",
     "ID": "HearingData",
-    "ListElementCode": "addNewHearingDateTimesLabel",
+    "ListElementCode": "addNewHearingScheduleDetailsLabel",
     "FieldType": "Label",
-    "ElementLabel": "## Add new HearingDateTimes",
+    "ElementLabel": "## Add new HearingScheduleDetails",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
