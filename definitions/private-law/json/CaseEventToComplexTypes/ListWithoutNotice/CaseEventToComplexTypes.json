@@ -86,11 +86,23 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "orderWillBeServedWithTheDateToBeFixedLabel",
+    "EventElementLabel": "**This order will be served with the 'date to be fixed'**",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingSpecificDatesOptionsEnum",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -102,7 +114,7 @@
     "EventElementLabel": "**Yes**",
     "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -126,7 +138,7 @@
     "EventElementLabel": "The hearing must take place at",
     "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -138,7 +150,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -150,7 +162,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -162,7 +174,7 @@
     "EventElementLabel": "**It needs to take place between certain dates**",
     "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -174,7 +186,7 @@
     "EventElementLabel": "Earliest hearing date",
     "FieldDisplayOrder": "15",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -186,7 +198,7 @@
     "EventElementLabel": "Latest hearing date",
     "FieldDisplayOrder": "16",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\"  OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -198,7 +210,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -210,7 +222,7 @@
     "EventElementLabel": "Estimated time",
     "FieldDisplayOrder": "18",
     "DisplayContext": "READONLY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -222,7 +234,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -234,7 +246,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "20",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -246,7 +258,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -258,7 +270,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -270,7 +282,7 @@
     "EventElementLabel": "**Video**",
     "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -282,7 +294,7 @@
     "EventElementLabel": "Select a platform",
     "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"VID\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -294,7 +306,7 @@
     "EventElementLabel": "**Telephone**",
     "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -306,7 +318,7 @@
     "EventElementLabel": "Select a platform",
     "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.hearingChannelsEnum=\"TEL\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -318,7 +330,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "27",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -330,7 +342,7 @@
     "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantName} (Applicant)",
     "FieldDisplayOrder": "28",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantName!=\"\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantName!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -342,7 +354,7 @@
     "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
     "FieldDisplayOrder": "29",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantSolicitor!=\"\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantSolicitor!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -354,7 +366,7 @@
     "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
     "FieldDisplayOrder": "30",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.respondentName!=\"\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.respondentName!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -366,7 +378,7 @@
     "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor}  (Respondent Solicitor)",
     "FieldDisplayOrder": "31",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.respondentSolicitor!=\"\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.respondentSolicitor!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -378,7 +390,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "32",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -390,7 +402,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "33",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -402,19 +414,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "34",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "listWithoutNotice",
-    "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "localAuthorityHearingChannel",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "35",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "(listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -426,7 +426,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -438,7 +438,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -450,7 +450,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -498,7 +498,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "42",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
 
   {
@@ -535,7 +535,19 @@
     "EventElementLabel": "Additional hearing details",
     "FieldDisplayOrder": "45",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "customDetails",
+    "EventElementLabel": "Custom details",
+    "FieldDisplayOrder": "45",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "16/02/2022",
