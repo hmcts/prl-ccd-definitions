@@ -29,6 +29,8 @@ const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
 const ChildrenAndApplicants = require('./pages/ChildrenAndApplicants');
 const ChildrenAndRespondents = require('./pages/ChildrenAndRespondents');
+const OtherChildNotInCase = require('./pages/OtherChildNotInCase');
+const ChildrenAndOtherPeople = require('./pages/ChildrenAndOtherPeople');
 
 module.exports = () => {
   return actor({
@@ -74,11 +76,14 @@ module.exports = () => {
     applicantDetailsFL401() {
       return ApplicantDetails.runApplicantDetailsFL401EventHappyPath();
     },
-    childrenAndApplicantRelationship(){
+    runChildrenAndApplicantRelationship(){
       return ChildrenAndApplicants.runChildrenAndApplicantRelationship();
     },
-    childrenAndRespondentRelationship() {
+    runChildrenAndRespondentRelationship() {
       return ChildrenAndRespondents.runChildrenAndRespondentRelationship();
+    },
+    runChildrenAndOtherPeopleRelationship() {
+      return ChildrenAndOtherPeople.runChildrenAndOtherPeopleRelationship();
     },
     caseNameChange() {
       return CaseName.runEventCaseName();
@@ -89,8 +94,11 @@ module.exports = () => {
     litigationCapacity() {
       return LitigationCapacity.litigationCapacity();
     },
-    otherPeopleInTheCase() {
-      return OtherPeopleInTheCase.otherPeopleInTheCase();
+    runOtherPeopleInTheCase() {
+      return OtherPeopleInTheCase.runOtherPeopleInTheCase();
+    },
+    runOtherChildrenNotInCase() {
+      return OtherChildNotInCase.runOtherChildrenNotInCase();
     },
     internationalElement() {
       return InternationalElement.internationalElement();

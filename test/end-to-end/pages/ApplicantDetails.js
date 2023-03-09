@@ -26,7 +26,7 @@ module.exports = {
   },
 
   async fillApplicantsPage() {
-    I.wait('2');
+    await I.waitForText('Applicant details');
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
     I.wait('2');
