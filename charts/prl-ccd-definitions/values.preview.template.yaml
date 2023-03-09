@@ -85,6 +85,7 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
+      devcpuRequests: 500m
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
@@ -123,8 +124,7 @@ ccd:
         OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
         ELASTIC_SEARCH_ENABLED: true
         ELASTIC_SEARCH_HOST: ${SERVICE_NAME}-es-master
-        ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 10000
-        DATA_STORE_DEFAULT_LOG_LEVEL: DEBUG
+        ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 17000
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
   ccd-admin-web:
