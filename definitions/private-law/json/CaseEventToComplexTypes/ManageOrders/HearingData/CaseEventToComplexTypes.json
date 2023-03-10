@@ -218,6 +218,18 @@
     "ID": "HearingData",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel1",
+    "EventElementLabel": "${applicants.firstName}  (Applicant Solicitor)",
+    "FieldDisplayOrder": "18",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND applicants.firstName !=\"\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "respondentHearingChannel",
     "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
     "FieldDisplayOrder": "19",
