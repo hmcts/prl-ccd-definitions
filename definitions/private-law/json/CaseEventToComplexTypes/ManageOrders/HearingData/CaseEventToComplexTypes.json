@@ -219,7 +219,7 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "applicantHearingChannel1",
-    "EventElementLabel": "${applicantList[0].firstName} (Applicant)",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantList[0].firstName} (Applicant)",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND applicantList[0].firstName!=\"\""
@@ -255,7 +255,7 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "respondentHearingChannel1",
-    "EventElementLabel": "${respondentList[0].firstName} (Respondent)",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.respondentList[0].firstName} (Respondent)",
     "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND respondentList[0].firstName!=\"\""
