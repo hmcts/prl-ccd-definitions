@@ -16,6 +16,18 @@
     "ID": "HearingData",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "ListElementCode": "hearingDateTimes",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "hearingTypes",
     "EventElementLabel": "Hearing Type",
     "FieldDisplayOrder": "2",
@@ -206,11 +218,11 @@
     "ID": "HearingData",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "applicantSolicitorHearingChannel",
-    "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
-    "FieldDisplayOrder": "18",
+    "ListElementCode": "applicantHearingChannel",
+    "EventElementLabel": "${applicantList[0].firstName} (Applicant)",
+    "FieldDisplayOrder": "17",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantSolicitor!=\"\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND applicantList[0].firstName!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -218,10 +230,11 @@
     "ID": "HearingData",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "applicantSolicitorHearingChannel1",
-    "EventElementLabel": "${applicants[0].firstName}  (Applicant Solicitor)",
+    "ListElementCode": "applicantSolicitorHearingChannel",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
     "FieldDisplayOrder": "18",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND listWithoutNoticeHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND listWithoutNoticeHearingDetails.applicantSolicitor!=\"\""
   },
   {
     "LiveFrom": "16/02/2022",
