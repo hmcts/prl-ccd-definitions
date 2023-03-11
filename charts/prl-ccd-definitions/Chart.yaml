@@ -1,16 +1,16 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-home: https://github.com/hmcts/prl-ccd-definitions/
 version: 0.0.13
 dependencies:
   - name: nodejs
     version: ~2.4.14
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
   - name: ccd
-    version: 8.0.23
+    version: ~8.0.23
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
-    condition: prl-ccd-stack.enabled
+    tags:
+      - ccd-pr
   - name: xui-webapp
     version: ~1.0.4
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
