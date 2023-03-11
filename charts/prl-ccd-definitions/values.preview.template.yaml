@@ -53,9 +53,9 @@ ccd:
     s2s:
       enabled: false
     printService:
-      enabled: true
+      enabled: false
     elastic:
-      enabled: true
+      enabled: false
 
   ingressHost: ${SERVICE_FQDN}
   ingressIP: ${INGRESS_IP}
@@ -71,16 +71,6 @@ ccd:
     postgresUsername: hmcts
     postgresPassword: hmcts
     s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
-
-  ccd-user-profile-api:
-    java:
-      imagePullPolicy: Always
-      enviroment:
-        USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults: []
-      environment:
-        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
-      ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   ccd-data-store-api:
     java:
@@ -103,13 +93,6 @@ ccd:
       keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
-  am-role-assignment-service:
-    java:
-      keyVaults:
-        am:
-          secrets:
-            - role-assignment-service-LD-SDK-KEY
-
   ccd-definition-store-api:
     java:
       imagePullPolicy: Always
@@ -127,32 +110,6 @@ ccd:
         DATA_STORE_DEFAULT_LOG_LEVEL: DEBUG
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
-  ccd-admin-web:
-    nodejs:
-      image: hmctspublic.azurecr.io/ccd/admin-web:latest
-      ingressHost: admin-web-${SERVICE_FQDN}
-      keyVaults: []
-      environment:
-        USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-        IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
-        IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
-    idam-pr:
-      enabled: true
-
-  ccd-case-management-web:
-    nodejs:
-      environment:
-        CCD_ACTIVITY_URL: null
-        DM_URL: https://gateway-${SERVICE_FQDN}/documents
-        DM_URL_REMOTE: https?://(gateway-${SERVICE_FQDN}:443|dm-store-aat.service.core-compute-aat.internal)/documents
-        NODE_TLS_REJECT_UNAUTHORIZED: 0
-        APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}
-        APPINSIGHTS_ENABLED: false
-      ingressHost: case-management-web-${SERVICE_FQDN}
-      ingressIP: ${INGRESS_IP}
-    idam-pr:
-      enabled: true
-
   ccd-api-gateway-web:
     nodejs:
       keyVaults: []
@@ -164,26 +121,6 @@ ccd:
         ADDRESS_LOOKUP_TOKEN: ${ADDRESS_LOOKUP_TOKEN}
       ingressHost: gateway-${SERVICE_FQDN}
       ingressIP: ${INGRESS_IP}
-
-  ccd-case-print-service:
-    nodejs:
-      keyVaults: []
-      environment:
-        IDAM_PRINT_SERVICE_KEY: ${PRINT_S2S_KEY}
-      ingressHost: ccd-case-print-service-${SERVICE_FQDN}
-
-  importer:
-    userprofile:
-      enabled: true
-      jurisdictions:
-        - PRIVATELAW
-      users:
-        - fprl_caseworker_solicitor@mailinator.com|PRIVATELAW|PRLAPPS|Created
-      userProfileDatabaseHost: ${SERVICE_NAME}-ccd-postgres
-      userProfileDatabasePort: 5432
-      userProfileDatabaseUser: hmcts
-      userProfileDatabasePassword: hmcts
-      userProfileDatabaseName: user-profile
 
   postgresql:
     persistence:
