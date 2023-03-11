@@ -31,7 +31,8 @@
     "PageID": 22,
     "PageDisplayOrder": 22,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/serve-order/mid-event"
   },
   {
     "LiveFrom": "01/12/2022",
@@ -42,6 +43,18 @@
     "PageID": 22,
     "PageDisplayOrder": 22,
     "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "otherPeoplePresentInCaseFlag",
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
   }
