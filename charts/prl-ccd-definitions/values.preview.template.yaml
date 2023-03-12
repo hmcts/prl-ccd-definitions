@@ -47,9 +47,9 @@ ccd:
     definitionImporter:
       enabled: false
     managementWeb:
-      enabled: false
-    apiGatewayWeb:
       enabled: true
+    apiGatewayWeb:
+      enabled: false
     s2s:
       enabled: false
     printService:
@@ -174,7 +174,7 @@ ccd:
 
   importer:
     userprofile:
-      enabled: false
+      enabled: true
       jurisdictions:
         - PRIVATELAW
       users:
@@ -220,7 +220,7 @@ ccd:
         - es-${SERVICE_FQDN}
 
 ccd-case-document-am-api:
-  enabled: false
+  enabled: true
   java:
     releaseNameOverride: ${SERVICE_NAME}-cdam
     imagePullPolicy: Always
