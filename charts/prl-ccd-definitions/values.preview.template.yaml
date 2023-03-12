@@ -1,17 +1,6 @@
 tags:
   ccd-pr: true
 
-nodejs:
-  # Don't modify below here
-  image: ${IMAGE_NAME}
-  ingressHost: ${SERVICE_FQDN}
-  devmemoryLimits: 2Gi
-  devmemoryRequests: 512Mi
-  devcpuLimits: 1000m
-  devcpuRequests: 500m
-  autoscaling:
-    enabled: false
-
 idam-pr:
   releaseNameOverride: ${SERVICE_NAME}-idam-pr
   enabled: true
@@ -47,7 +36,7 @@ ccd:
     definitionImporter:
       enabled: false
     managementWeb:
-      enabled: true
+      enabled: false
     apiGatewayWeb:
       enabled: true
     s2s:
@@ -55,7 +44,7 @@ ccd:
     printService:
       enabled: false
     elastic:
-      enabled: true
+      enabled: false
 
   ingressHost: ${SERVICE_FQDN}
   ingressIP: ${INGRESS_IP}
@@ -174,7 +163,7 @@ ccd:
 
   importer:
     userprofile:
-      enabled: true
+      enabled: false
       jurisdictions:
         - PRIVATELAW
       users:
@@ -220,7 +209,7 @@ ccd:
         - es-${SERVICE_FQDN}
 
 ccd-case-document-am-api:
-  enabled: true
+  enabled: false
   java:
     releaseNameOverride: ${SERVICE_NAME}-cdam
     imagePullPolicy: Always
