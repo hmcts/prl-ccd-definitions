@@ -608,9 +608,21 @@
     "ID": "FL400",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bApplicantLabel",
+    "ListElementCode": "fl404SchoolDirections&Details",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "58",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bApplicantLabel",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "59",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -622,7 +634,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantIsEntitledToOccupy",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "59",
+    "FieldDisplayOrder": "60",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -634,7 +646,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantHasHomeRight",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "60",
+    "FieldDisplayOrder": "61",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -646,7 +658,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantHomeInstruction",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "61",
+    "FieldDisplayOrder": "62",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bApplicantHasHomeRight=\"rightsInAddress\""
   },
@@ -658,7 +670,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantHasRightToEnter",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "62",
+    "FieldDisplayOrder": "63",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -670,7 +682,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantHasOtherInstruction",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "63",
+    "FieldDisplayOrder": "64",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -682,7 +694,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantOtherInstruction",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "64",
+    "FieldDisplayOrder": "65",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bApplicantHasOtherInstruction=\"other1\""
   },
@@ -694,7 +706,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentCheckListLabel",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "65",
+    "FieldDisplayOrder": "66",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -706,7 +718,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bApplicantAllowedToOccupy",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "66",
+    "FieldDisplayOrder": "67",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -718,7 +730,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsPowerOfArrest1",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "67",
+    "FieldDisplayOrder": "68",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bApplicantAllowedToOccupy=\"allowApplicantToOccupy\""
   },
@@ -730,7 +742,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentMustNotOccupyAddress",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "68",
+    "FieldDisplayOrder": "69",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -742,7 +754,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOccupationDate1",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "69",
+    "FieldDisplayOrder": "70",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
   },
@@ -754,7 +766,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOccupationTime1",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "70",
+    "FieldDisplayOrder": "71",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
   },
@@ -766,7 +778,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOccupationDate2",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "71",
+    "FieldDisplayOrder": "72",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
   },
@@ -778,7 +790,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bOccupationTime2",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "72",
+    "FieldDisplayOrder": "73",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
   },
@@ -790,7 +802,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsPowerOfArrest2",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "73",
+    "FieldDisplayOrder": "74",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
   },
@@ -802,7 +814,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentShallLeaveAddress",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "74",
+    "FieldDisplayOrder": "75",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -814,7 +826,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bWhenRespondentShallLeave",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "75",
+    "FieldDisplayOrder": "76",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentShallLeaveAddress=\"shallLeaveAddress\""
   },
@@ -826,7 +838,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsPowerOfArrest3",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "76",
+    "FieldDisplayOrder": "77",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentShallLeaveAddress=\"shallLeaveAddress\""
   },
@@ -838,7 +850,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentMustNotEnterAddress",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "77",
+    "FieldDisplayOrder": "78",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"occupation\""
   },
@@ -850,7 +862,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddMoreDetails",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "78",
+    "FieldDisplayOrder": "79",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotEnterAddress=\"attemptToEnterAddress\""
   },
@@ -862,7 +874,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsPowerOfArrest4",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "79",
+    "FieldDisplayOrder": "80",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  fl404CustomFields.fl404bRespondentMustNotEnterAddress=\"attemptToEnterAddress\""
   },
