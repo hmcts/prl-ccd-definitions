@@ -267,6 +267,30 @@
   {
     "LiveFrom": "15/02/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "uploadOrAmendDirectionsFromJudge",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "previewUploadedOrder",
     "AccessControl": [
       {
