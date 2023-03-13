@@ -115,7 +115,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+    "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -123,8 +123,8 @@
     "ID": "HearingData",
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
-    "ListElementCode": "${listWithoutNoticeHearingDetails.fillingFormRenderingInfo}",
-    "EventElementLabel": "",
+    "ListElementCode": "fillingFormRenderingInfoLabel",
+    "EventElementLabel": "${listWithoutNoticeHearingDetails.fillingFormRenderingInfo}",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
