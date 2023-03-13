@@ -1736,5 +1736,20 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "listWithoutNotice",
+    "Name": "List Without Notice",
+    "Description": "List Without Notice",
+    "PreConditionState(s)": "GATE_KEEPING",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
 ]
