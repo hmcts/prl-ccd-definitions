@@ -903,45 +903,9 @@
     "ID": "FL400",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderLengthOptions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "99",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bCostOfApplication",
-    "EventElementLabel": "Costs of this application",
-    "FieldDisplayOrder": "100",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bIsNoticeGiven",
-    "EventElementLabel": "Is this order made with or without notice?",
-    "FieldDisplayOrder": "101",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "addDirections",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "102",
+    "FieldDisplayOrder": "90",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
@@ -953,19 +917,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "addDirections.directionText",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "103",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "addDirections.isBold",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "104",
+    "FieldDisplayOrder": "91",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
@@ -975,10 +927,10 @@
     "ID": "FL400",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderEndDateAndTimeOptions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "105",
-    "DisplayContext": "OPTIONAL",
+    "ListElementCode": "orderLengthOptions",
+    "EventElementLabel": "How long will the order be in force? ",
+    "FieldDisplayOrder": "99",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
@@ -989,8 +941,32 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "orderSpecifiedDateTime",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "106",
+    "FieldDisplayOrder": "101",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderLengthOptions=\"specificDate\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bCostOfApplication",
+    "EventElementLabel": "Costs of this application",
+    "FieldDisplayOrder": "104",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bIsNoticeGiven",
+    "EventElementLabel": "Is this order made with or without notice?",
+    "FieldDisplayOrder": "105",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
   }
 ]
