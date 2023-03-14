@@ -932,5 +932,65 @@
     "FieldDisplayOrder": "101",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "addDirections",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "102",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "addDirections.directionText",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "103",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "addDirections.isBold",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "104",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderEndDateAndTimeOptions",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "105",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderSpecifiedDateTime",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "106",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
   }
 ]
