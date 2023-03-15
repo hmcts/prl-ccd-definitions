@@ -1673,6 +1673,7 @@
     "Description": "HMC Case Update to Decision Outcome",
     "PreConditionState(s)": "*",
     "PostConditionState": "DECISION_OUTCOME",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
@@ -1686,6 +1687,7 @@
     "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
     "PostConditionState": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
@@ -1736,7 +1738,7 @@
   {
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "updateNextHearingInfo",
+    "ID": "UpdateNextHearingInfo",
     "Name": "Update Next Hearing Date",
     "Description": "Updates Next Hearing",
     "DisplayOrder": 1,
