@@ -6,8 +6,8 @@
     "CaseFieldID": "manageOrderHeaderLabel20",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
     "PageShowCondition": "amendOrderSelectCheckOptions !=\"judgeOrLegalAdvisorCheck\" AND amendOrderSelectCheckOptions !=\"managerCheck\" AND manageOrdersOptions!=\"servedSavedOrders\" AND loggedInUserType!=\"JUDGE\""
   },
@@ -18,44 +18,44 @@
     "CaseFieldID": "whenToServeOrderLabel",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "selectTypeOfUploadOrder",
+    "CaseFieldID": "selectTypeOfOrder",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "doesUploadOrderClosesCase",
+    "CaseFieldID": "doesOrderClosesCase",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "selectTypeOfUploadOrder=\"finl\""
+    "FieldShowCondition": "selectTypeOfOrder=\"finl\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "uploadOrderCloseCaseDoableActions",
+    "CaseFieldID": "closeCaseDoableActions",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "doesUploadOrderClosesCase=\"Yes\" AND selectTypeOfUploadOrder=\"finl\""
+    "FieldShowCondition": "doesOrderClosesCase=\"Yes\" AND selectTypeOfOrder=\"finl\""
   },
   {
     "LiveFrom": "01/02/2023",
@@ -64,8 +64,8 @@
     "CaseFieldID": "cafcassOrCymruNeedToProvideReport",
     "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -75,8 +75,8 @@
     "CaseFieldID": "cafcassCymruDocuments",
     "PageFieldDisplayOrder": 7,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\""
   },
@@ -87,8 +87,8 @@
     "CaseFieldID": "whenReportsMustBeFiled",
     "PageFieldDisplayOrder": 8,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\""
   },
@@ -99,8 +99,8 @@
     "CaseFieldID": "orderEndsInvolvementOfCafcassOrCymru",
     "PageFieldDisplayOrder": 9,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -110,8 +110,8 @@
     "CaseFieldID": "doYouWantToServeOrder",
     "PageFieldDisplayOrder": 10,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/add-upload-order"
   },
@@ -122,8 +122,8 @@
     "CaseFieldID": "whatDoWithOrder",
     "PageFieldDisplayOrder": 11,
     "DisplayContext": "MANDATORY",
-    "PageID": 21,
-    "PageDisplayOrder": 21,
+    "PageID": 22,
+    "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "doYouWantToServeOrder=\"No\""
 
