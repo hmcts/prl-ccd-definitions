@@ -64,13 +64,13 @@ ccd:
   global:
     idamApiUrl: https://idam-api.aat.platform.hmcts.net
     idamWebUrl: https://idam-web-public.aat.platform.hmcts.net
-    dmStoreUrl: http://dm-store-aat.service.core-compute-aat.internal
+    dmStoreUrl: http://dm-store-aat.aat.platform.hmcts.net
     ccdAdminWebIngress: admin-web-${SERVICE_FQDN}
     ccdApiGatewayIngress: gateway-${SERVICE_FQDN}
     ccdCaseManagementWebIngress: case-management-web-${SERVICE_FQDN}
     postgresUsername: hmcts
     postgresPassword: hmcts
-    s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+    s2sUrl: http://rpe-service-auth-provider-aat.aat.platform.hmcts.net
 
   ccd-user-profile-api:
     java:
@@ -144,7 +144,7 @@ ccd:
       environment:
         CCD_ACTIVITY_URL: null
         DM_URL: https://gateway-${SERVICE_FQDN}/documents
-        DM_URL_REMOTE: https?://(gateway-${SERVICE_FQDN}:443|dm-store-aat.service.core-compute-aat.internal)/documents
+        DM_URL_REMOTE: https?://(gateway-${SERVICE_FQDN}:443|dm-store-aat.aat.platform.hmcts.net)/documents
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}
         APPINSIGHTS_ENABLED: false
@@ -159,7 +159,7 @@ ccd:
       environment:
         IDAM_SERVICE_KEY: ${API_GATEWAY_S2S_KEY}
         IDAM_OAUTH2_CLIENT_SECRET: ${API_GATEWAY_IDAM_SECRET}
-        PROXY_DOCUMENT_MANAGEMENT: http://dm-store-aat.service.core-compute-aat.internal
+        PROXY_DOCUMENT_MANAGEMENT: http://dm-store-aat.aat.platform.hmcts.net
         PROXY_PRINT_SERVICE: http://ccd-case-print-service-${SERVICE_FQDN}
         ADDRESS_LOOKUP_TOKEN: ${ADDRESS_LOOKUP_TOKEN}
       ingressHost: gateway-${SERVICE_FQDN}
@@ -228,12 +228,12 @@ ccd-case-document-am-api:
     ingressHost: ccd-case-document-am-api-${SERVICE_FQDN}
     environment:
       CASE_DOCUMENT_S2S_AUTHORISED_SERVICES: ccd_case_document_am_api,ccd_gw,xui_webapp,ccd_data,bulk_scan_processor,sscs,probate_backend,iac,em_npa_app,fprl_dgs_api,dg_docassembly_api,em_stitching_api,em_ccd_orchestrator,cmc_claim_store,civil_service,bulk_scan_orchestrator,ethos_repl_service,divorce_document_generator,finrem_document_generator,fpl_case_service,et_cos,prl_cos_api,prl_dgs_api,et_sya_api,adoption_cos_api,adoption_web,prl_citizen_frontend
-      DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
+      DM_STORE_BASE_URL: http://dm-store-aat.aat.platform.hmcts.net
       CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
-      S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      S2S_URL: http://rpe-service-auth-provider-aat.aat.platform.hmcts.net
     keyVaults:
       ccd:
         secrets:
@@ -257,13 +257,13 @@ aac-manage-case-assignment:
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
-      S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      S2S_URL: http://rpe-service-auth-provider-aat.aat.platform.hmcts.net
       MCA_DS_PROXY_URLS_ALLOWED_LIST: /searchCases.*,/internal/searchCases.*,/internal/cases.*
       MCA_DEF_STORE_PROXY_URLS_ALLOWED_LIST: /api/display/challenge-questions.*
       MANAGE_CASE_S2S_AUTHORISED_SERVICES: xui_webapp,ccd_data,prl_cos_api,prl_citizen_frontend
       CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       CCD_DEFINITION_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-definition-store
-      PRD_HOST: http://rd-professional-api-aat.service.core-compute-aat.internal
+      PRD_HOST: http://rd-professional-api-aat.aat.platform.hmcts.net
       IDAM_CAA_USERNAME: ${IDAM_CAA_USERNAME}
       IDAM_CAA_PASSWORD: ${IDAM_CAA_PASSWORD}
       IDAM_CLIENT_SECRET: ${IDAM_MCA_CLIENT_SECRET}
