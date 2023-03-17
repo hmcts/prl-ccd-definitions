@@ -5965,6 +5965,13 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCaseUrgent",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseUrgencyTimeAndReason",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -6546,6 +6553,13 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseTypeOfApplication",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "fl401ConfidentialityDisclaimerLabel1",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "R"
@@ -7669,6 +7683,13 @@
     "CaseFieldID": "allegationsOfHarmYesNo",
     "UserRole": "caseworker-privatelaw-superuser",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmYesNo",
+    "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -15265,5 +15286,45 @@
     "CaseFieldID": "respondentAgreeStatement",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "createdDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "citizen",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "lastModifiedDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "citizen",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   }
 ]
