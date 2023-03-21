@@ -376,7 +376,7 @@
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
- {
+  {
     "LiveFrom": "21/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "internationalElement",
@@ -586,7 +586,7 @@
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/getSolicitorAndFeeDetails",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/create-payment-service-request",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/payment-confirmation",
     "EndButtonLabel": "Pay now",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
@@ -1255,58 +1255,6 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "draftAnOrder",
-    "Name": "Draft an order",
-    "Description": "Draft an order",
-    "DisplayOrder": 161,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(doesOrderClosesCase=\"Yes\"):1;*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/reset-fields",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/about-to-submit",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "Publish" : "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "26/07/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "editAndApproveAnOrder",
-    "Name": "Edit and approve a draft order",
-    "Description": "Edit and approve a draft order",
-    "DisplayOrder": 27,
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "EndButtonLabel": "Send to admin",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "Publish" : "True"
-  },
-  {
-    "LiveFrom": "26/07/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "adminEditAndApproveAnOrder",
-    "Name": "Edit and approve a draft order",
-    "Description": "Edit and approve a draft order",
-    "DisplayOrder": 28,
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N"
-  },
-  {
     "LiveFrom": "31/10/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "createBundle",
@@ -1376,6 +1324,17 @@
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dss-citizen-case-submit",
+    "Name": "Submit Citizen Case",
+    "Description": "Submit Citizen Case",
+    "PreConditionState(s)": "*",
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
@@ -1693,23 +1652,6 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "uploadAdditionalApplications",
-    "Name": "Upload additional applications",
-    "Description": "Upload additional applications",
-    "DisplayOrder": 107,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUE;GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-applicants",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/upload-additional-application/about-to-submit",
-    "EndButtonLabel": "Save and continue",
-    "Publish" : "False"
-  },
-  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401CreateFlags",
@@ -1734,6 +1676,30 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenCaseSubmitWithHWF",
+    "Name": "Submit Citizen Case with HWF",
+    "Description": "Submit Citizen Case with Help With Fees",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "19/10/22",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcass-document-upload",
+    "Name": "Document uploaded by cafcass",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "01/02/2023",
