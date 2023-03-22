@@ -1728,6 +1728,22 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addCafcassOfficer",
+    "Name": "Add cafcass officer",
+    "Description": "Add cafcass officer",
+    "PreConditionState(s)": "GATE_KEEPING;AWAITING_RESUBMISSION_TO_HMCTS;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/add-cafcass-officer/about-to-submit",
+    "EndButtonLabel": "Save and continue",
+    "Publish" : "False",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    },
+    {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "citizenCaseSubmitWithHWF",
