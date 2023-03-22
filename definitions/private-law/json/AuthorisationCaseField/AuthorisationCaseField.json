@@ -14672,6 +14672,7 @@
     "CRUD": "R"
   },
   {
+
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dateSubmittedAndTime",
@@ -17543,6 +17544,30 @@
           "caseworker-privatelaw-solicitor"
         ],
         "CRUD": "CRU"
+       }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCafcass",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
       }
     ]
   },

@@ -3,35 +3,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "manageOrderHeader1",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "manageOrders",
     "CaseFieldID": "manageOrdersOptions",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/amend-order/mid-event"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-order/mid-event"
   },
   {
-    "LiveFrom": "31/03/2022",
+    "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "amendOrderDynamicList",
-    "PageFieldDisplayOrder": 3,
+    "CaseFieldID": "caseTypeOfApplication",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"amendOrderUnderSlipRule\""
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\"",
+    "Publish" : "False"
   }
 ]
