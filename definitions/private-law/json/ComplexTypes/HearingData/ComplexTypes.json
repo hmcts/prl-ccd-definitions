@@ -1,94 +1,5 @@
 [
   {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "hearingSpecificDatesOptionsEnum",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "HearingSpecificDatesOptionsEnum",
-    "ElementLabel": "Does the hearing need to take place on a specific date?",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "yesLabel",
-    "FieldType": "Label",
-    "ElementLabel": "**Yes**",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition":"hearingSpecificDatesOptionsEnum=\"Yes\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "firstDateOfTheHearing",
-    "FieldType": "Date",
-    "ElementLabel": "First date of the hearing",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition":"hearingSpecificDatesOptionsEnum=\"Yes\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "theHearingMustTakePlaceAtLabel",
-    "FieldType": "Label",
-    "ElementLabel": "The hearing must take place at",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition":"hearingSpecificDatesOptionsEnum=\"Yes\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "hearingMustTakePlaceAtHour",
-    "FieldType": "Number",
-    "ElementLabel": "Hour",
-    "SecurityClassification": "Public",
-    "FieldShowCondition":"hearingSpecificDatesOptionsEnum=\"Yes\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "hearingMustTakePlaceAtMinute",
-    "FieldType": "Number",
-    "ElementLabel": "Minute",
-    "SecurityClassification": "Public",
-    "FieldShowCondition":"hearingSpecificDatesOptionsEnum=\"Yes\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "hearingNeedsBetweenCertianDatesLabel",
-    "FieldType": "Label",
-    "ElementLabel": "**It needs to take place between certain dates**",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "earliestHearingDate",
-    "FieldType": "Date",
-    "ElementLabel": "Earliest hearing date",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "HearingSpecificDateDetails",
-    "ListElementCode": "latestHearingDate",
-    "FieldType": "Date",
-    "ElementLabel": "Latest hearing date",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\""
-  },
-  {
     "LiveFrom": "16/02/2022",
     "ID": "HearingData",
     "ListElementCode": "addNewHearingLabel",
@@ -239,9 +150,80 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
-    "ListElementCode": "hearingSpecificDateDetails",
-    "FieldType": "HearingSpecificDateDetails",
-    "ElementLabel": " ",
+    "ListElementCode": "hearingSpecificDatesOptionsEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingSpecificDatesOptionsEnum",
+    "ElementLabel": "Does the hearing need to take place on a specific date?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "yesLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Yes**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "firstDateOfTheHearing",
+    "FieldType": "Date",
+    "ElementLabel": "First date of the hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "theHearingMustTakePlaceAtLabel",
+    "FieldType": "Label",
+    "ElementLabel": "The hearing must take place at",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingMustTakePlaceAtHour",
+    "FieldType": "Number",
+    "ElementLabel": "Hour",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingMustTakePlaceAtMinute",
+    "FieldType": "Number",
+    "ElementLabel": "Minute",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingNeedsBetweenCertianDatesLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**It needs to take place between certain dates**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "earliestHearingDate",
+    "FieldType": "Date",
+    "ElementLabel": "Earliest hearing date",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "latestHearingDate",
+    "FieldType": "Date",
+    "ElementLabel": "Latest hearing date",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
