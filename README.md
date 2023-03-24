@@ -1,6 +1,7 @@
 ## prl-ccd-definitions
 
-Project creating Family Private Law (PRL) CCD config files.
+Project creating Family Private Law (PRL) CCD config files. - For Demo purpose only. Restored it from 
+commit - https://github.com/hmcts/prl-ccd-definitions/commit/533309da84751fd7a5c0dffe6dc3f8e4e358bb0b
 
 Updated with Release 4.0 - created for demo deployment
 ## Usage
