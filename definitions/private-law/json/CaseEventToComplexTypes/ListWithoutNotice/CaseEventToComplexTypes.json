@@ -112,10 +112,10 @@
     "CaseEventID": "listWithoutNotice",
     "CaseFieldID": "listWithoutNoticeHearingDetails",
     "ListElementCode": "fillingFormRenderingInfo",
-    "EventElementLabel": "<details class='govuk-details'>\n\n<summary class='govuk-details__summary'>\n\n<span class='govuk-details__summary-text'>\n\nWhen should I fill this in?\n\n</span>\n\n</summary>\n\n<div class='govuk-details__text'>\n\n<p><strong>Only fill the following if you haven't requested the hearing yet</strong></p></br>\n\n</div>\n\n</details>",
+    "EventElementLabel": "",
     "FieldDisplayOrder": "10",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -127,7 +127,7 @@
     "EventElementLabel": "${listWithoutNoticeHearingDetails.fillingFormRenderingInfo}",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "listWithoutNoticeHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
 
   {
