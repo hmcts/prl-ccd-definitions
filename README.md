@@ -3,7 +3,7 @@
 Project creating Family Private Law (PRL) CCD config files.
 
 Updated with Release for Gatekeeping changes
-## Usage
+### Usage
 
 Clone project and in the project directory run:
  - `yarn install && yarn reset-ccd-submodule`
@@ -59,7 +59,7 @@ Require stack:
 
 </details>
 
-try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before. 
+try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before.
 
 ## Running E2E against remote environment
 ```$bash
