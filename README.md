@@ -11,7 +11,7 @@ Clone project and in the project directory run:
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
 
-#### Troubleshooting
+#### Troubleshootingg
 
 ### Managing Preview environment PODs
 Make sure you have added the label 'keep-helm' while creating the PR. Otherwise, add the label and re-trigger the build.
