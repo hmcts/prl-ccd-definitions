@@ -35,11 +35,11 @@
     "ID": "testingSupportPaymentSuccessCallback",
     "Name": "Dummy Payment confirmation",
     "PreConditionState(s)": "SUBMITTED_NOT_PAID",
-    "PostConditionState": "SUBMITTED_PAID",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/submitted-payment-confirmation",
-    "CallBackURLSubmittedEvent": "caseTypeOfApplication=\"C100\"",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/submitted-payment-confirmation",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "EndButtonLabel": "Make the payment"
   }
 ]
