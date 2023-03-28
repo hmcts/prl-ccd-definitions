@@ -1,71 +1,24 @@
 [
   {
-    "LiveFrom": "25/01/2023",
+    "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "letGateKeepersKnowLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 0,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "sendToGateKeeperHint",
+    "CaseFieldID": "localGateKeeperHint",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "25/01/2023",
+    "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "isSpecificGateKeeperNeeded",
-    "DisplayContext": "MANDATORY",
+    "CaseFieldID": "gatekeeper",
+    "DisplayContext": "COMPLEX",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "isJudgeOrLegalAdviserGatekeeping",
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\""
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "judgeName",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"judge\"",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "25/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "amendSendToGateKeeper",
-    "CaseFieldID": "legalAdviserList",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"legalAdviser\"",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -78,7 +31,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "sendToGateKeeperHint=\"DO_NOT_SHOW\"",
+    "FieldShowCondition": "localGateKeeperHint=\"DO_NOT_SHOW\"",
     "Publish" : "True"
   }
 ]
