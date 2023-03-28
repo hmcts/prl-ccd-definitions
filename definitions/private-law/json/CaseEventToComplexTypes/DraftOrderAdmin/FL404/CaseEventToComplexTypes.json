@@ -428,7 +428,7 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToThreat",
-    "EventElementLabel": "Select all that apply",
+    "EventElementLabel": "Select any that apply",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "orderType=\"nonMolestation\""
@@ -611,7 +611,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "53",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
+    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -636,30 +636,6 @@
     "FieldDisplayOrder": "55",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "orderType=\"nonMolestation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderEndDateAndTimeOptions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "56",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderSpecifiedDateTime",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "57",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
   },
   {
     "LiveFrom": "20/08/2021",
