@@ -894,6 +894,22 @@
     "Publish" : "True"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendSendToGateKeeper",
+    "Name": "Amend Send to gate keeper",
+    "Description": "Amend Send to gate keeper",
+    "DisplayOrder": 16,
+    "PreConditionState(s)": "CASE_ISSUE;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "GATE_KEEPING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
+    "EndButtonLabel": "Save and continue",
+    "Publish" : "True"
+  },
+  {
     "LiveFrom": "04/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "resendRpa",
