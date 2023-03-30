@@ -11,7 +11,9 @@ module.exports = {
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
     createCaseLink: '//a[contains(.,"Create case")]',
-    submit: 'button[type="submit"]'
+    submit: 'button[type="submit"]',
+    caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
+    caseFromCourtNav_No: '#caseFromCourtNav_No'
   },
 
   async clickCreateCase() {
@@ -45,6 +47,7 @@ module.exports = {
   async selectTypeOfApplicationFL401() {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
     await I.retry(retryCount).click('Continue');
   },
 
