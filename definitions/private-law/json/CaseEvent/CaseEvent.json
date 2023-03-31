@@ -1691,5 +1691,17 @@
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenCaseWithdraw",
+    "Name": "Withdraw Citizen Case",
+    "Description": "Withdraw a case submitted by citizen",
+    "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/citizen-case-withdrawn-notification",
+    "PostConditionState": "CASE_WITHDRAWN",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
   }
 ]
