@@ -132,6 +132,35 @@
   {
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentTaskList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentTaskListA",
     "AccessControl": [
       {
@@ -15101,7 +15130,6 @@
     "CRUD": "R"
   },
   {
-
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dateSubmittedAndTime",
@@ -15755,7 +15783,7 @@
           "caseworker-privatelaw-solicitor"
         ],
         "CRUD": "CRU"
-       }
+      }
     ]
   },
   {
