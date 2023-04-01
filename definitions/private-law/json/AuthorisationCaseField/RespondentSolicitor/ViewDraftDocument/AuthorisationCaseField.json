@@ -104,74 +104,6 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "isEngC7DocGen",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[SOLICITORA]",
-          "[SOLICITORB]",
-          "[SOLICITORC]",
-          "[SOLICITORD]",
-          "[SOLICITORE]",
-          "[SOLICITORF]",
-          "[SOLICITORG]",
-          "[SOLICITORH]",
-          "[SOLICITORI]",
-          "[SOLICITORJ]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "viewC7PdflinkText",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[SOLICITORA]",
-          "[SOLICITORB]",
-          "[SOLICITORC]",
-          "[SOLICITORD]",
-          "[SOLICITORE]",
-          "[SOLICITORF]",
-          "[SOLICITORG]",
-          "[SOLICITORH]",
-          "[SOLICITORI]",
-          "[SOLICITORJ]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "draftC7ResponseDoc",
     "AccessControl": [
       {
@@ -200,6 +132,52 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "draftC1ADoc",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
