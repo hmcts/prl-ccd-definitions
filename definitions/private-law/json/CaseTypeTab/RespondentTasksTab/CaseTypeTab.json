@@ -3,34 +3,44 @@
     "LiveFrom": "25/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "RespondentTasks",
-    "TabLabel": "Respondent tasks",
-    "UserRole": "caseworker-privatelaw-solicitor",
+    "TabID": "RespondentTasksA",
+    "TabLabel": "Respondent tasks A",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListReturnLabel",
-    "TabShowCondition": "caseTypeOfApplication = \"NEVER_SHOW\"",
+    "CaseFieldID": "respondentTaskListLabelA",
     "TabFieldDisplayOrder": 1
   },
   {
     "LiveFrom": "25/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "RespondentTasks",
-    "TabLabel": "Respondent tasks",
+    "TabID": "RespondentTasksA",
+    "TabLabel": "Respondent tasks A",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "respondentTaskListLabel",
-    "TabFieldDisplayOrder": 5
+    "CaseFieldID": "respondentTaskListA",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListA = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelA is defined as '${respondentTaskListA}' thus respondentTaskListA must be present on tab"
   },
   {
     "LiveFrom": "25/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "RespondentTasks",
-    "TabLabel": "Respondent tasks",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "respondentTaskList",
-    "TabFieldDisplayOrder": 6,
-    "FieldShowCondition": "respondentTaskList = \"DO_NOT_SHOW\"",
-    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
+    "TabID": "RespondentTasksB",
+    "TabLabel": "Respondent tasks B",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelB",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksB",
+    "TabLabel": "Respondent tasks B",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListB",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListB = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelB is defined as '${respondentTaskListB}' thus respondentTaskListB must be present on tab"
   }
 ]
