@@ -243,20 +243,6 @@ ccd:
         value: http://${SERVICE_NAME}-es-master:9200
       - name: ES_URL
         value: http://${SERVICE_NAME}-es-master:9200
-    resources:
-      requests:
-        cpu: "500m"
-        memory: "1024Mi"
-      limits:
-        cpu: "2500m"
-        memory: "1024Mi"
-      configTpl:
-        db.url: jdbc:postgresql://${SERVICE_NAME}-postgresql:5432/data-store?ssl=disable&stringtype=unspecified
-        db.user: ${POSTGRES_USER}
-        db.pwd: ${POSTGRES_PASSWORD}
-        es.data.nodes.url: http://${SERVICE_NAME}-es-master:9200
-      livenessProbe:
-        initialDelaySeconds: 90
 
 ccd-case-document-am-api:
   enabled: true
