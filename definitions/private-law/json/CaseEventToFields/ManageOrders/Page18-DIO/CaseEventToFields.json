@@ -158,13 +158,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "dioApplicationIsReservedTo",
+    "CaseFieldID": "dioAllocateOrReserveJudge",
     "PageFieldDisplayOrder": 13,
     "DisplayContext": "MANDATORY",
     "PageID": 18,
     "PageDisplayOrder": 18,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "dioHearingsAndNextStepsList CONTAINS \"allocateNamedJudge\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "dioAllocateOrReserveJudgeName",
+    "PageFieldDisplayOrder": 14,
+    "DisplayContext": "MANDATORY",
+    "PageID": 18,
+    "PageDisplayOrder": 19,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dioAllocateOrReserveJudge =\"allocatedTo\" OR dioAllocateOrReserveJudge =\"reservedTo\""
   },
   {
     "LiveFrom": "31/03/2022",
