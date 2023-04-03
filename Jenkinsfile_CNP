@@ -1,9 +1,10 @@
 #!groovy
-
+import uk.gov.hmcts.contino.GithubAPI
 @Library("Infrastructure")
 
 String product = "prl"
 String component = "ccd-definitions"
+
 
 def channel = '#prl-tech-notifications'
 
@@ -46,12 +47,18 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
+  onPR {
+    def githubApi = new GithubAPI(this)
+    if (!githubApi.getLabelsbyPattern(env.BRANCH_NAME, "keep-helm")) {
+        enableCleanupOfHelmReleaseOnSuccess()
+    }
+  }
 
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  after('test') {
+  afterAlways('test') {
     // enable yarn audit and send message on master branch only
     try {
       yarnBuilder.yarn('audit')
@@ -64,12 +71,11 @@ withPipeline("nodejs", product, component) {
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
-
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
   }
 
@@ -82,27 +88,27 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:preview') {
-    yarnBuilder.yarn('setup')
+    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:preview') {
+  afterAlways('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
 
-  after('functionalTest:preview') {
+  afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
 
 
-  after('functionalTest:aat') {
+  afterAlways('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
@@ -118,7 +124,8 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('test:uploadFile')
   }
 
-  after('smoketest:aat') {
+  afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 }
+

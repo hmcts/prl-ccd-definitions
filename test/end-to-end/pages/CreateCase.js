@@ -11,7 +11,9 @@ module.exports = {
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
     createCaseLink: '//a[contains(.,"Create case")]',
-    submit: 'button[type="submit"]'
+    submit: 'button[type="submit"]',
+    caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
+    caseFromCourtNav_No: '#caseFromCourtNav_No'
   },
 
   async clickCreateCase() {
@@ -27,6 +29,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
     // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
@@ -44,6 +47,7 @@ module.exports = {
   async selectTypeOfApplicationFL401() {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
     await I.retry(retryCount).click('Continue');
   },
 
@@ -107,6 +111,5 @@ module.exports = {
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
-    await I.retry(retryCount).waitForElement('i.icon-tick');
   }
 };

@@ -1,0 +1,381 @@
+[
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleDocument",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Document Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleDocument",
+    "ListElementCode": "description",
+    "FieldType": "TextArea",
+    "ElementLabel": "Short Description",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleDocument",
+    "ListElementCode": "sortIndex",
+    "FieldType": "Number",
+    "ElementLabel": "Sort Index",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "sortIndex=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleDocument",
+    "ListElementCode": "sourceDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Source Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Subfolder Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleNestedSubfolder1",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Sub Folder Documents",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Subfolder Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleSubfolder",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleNestedSubfolder1",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleFolder",
+    "ListElementCode": "name",
+    "FieldType": "Text",
+    "ElementLabel": "Folder Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleFolder",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Folder Documents",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleFolder",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleSubfolder",
+    "ElementLabel": "Subfolders",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundleFolder",
+    "ListElementCode": "sortIndex",
+    "FieldType": "Number",
+    "ElementLabel": "Sort Index",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "sortIndex=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "21/11/2022",
+    "ID": "Bundle",
+    "ListElementCode": "bundleStatusInfo",
+    "FieldType": "Label",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Bundle generation is in progress.. Please refresh the page manually to see the bundle pdf if the Stitch Status is NEW in the below details</strong></div>",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "stitchStatus=\"NEW\""
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "stitchStatus",
+    "FieldType": "Text",
+    "ElementLabel": "Stitch status",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "stitchedDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Stitched document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleDocument",
+    "ElementLabel": "Bundle document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "folders",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BundleFolder",
+    "ElementLabel": "Bundle folder",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "stitchingFailureMessage",
+    "FieldType": "Text",
+    "ElementLabel": "Error from Stiching service",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "title",
+    "FieldType": "Text",
+    "ElementLabel": "Config used for bundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "title=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "id",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle ID",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "description",
+    "FieldType": "TextArea",
+    "ElementLabel": "Description",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "eligibleForStitching",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is this the bundle you want to amend?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "eligibleForCloning",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is this the bundle you want to clone?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "hasCoversheets",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Should this bundle have coversheets separating each document?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "hasTableOfContents",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Should this bundle have a title page with a table of contents?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "hasFolderCoversheets",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Should this bundle’s folders have a coversheet?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "fileName",
+    "FieldType": "Text",
+    "ElementLabel": "Name of the PDF",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "paginationStyle",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "paginationStyle",
+    "ElementLabel": "Pagination Style",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "coverpageTemplate",
+    "FieldType": "Text",
+    "ElementLabel": "Cover page template",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "pageNumberFormat",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "pageNumberFormat",
+    "ElementLabel": "Page Number Format",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleCreationDateAndTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Bundle Creation Date and Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleHearingDateAndTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Hearing Date and Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "caseBundles",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Bundle",
+    "ElementLabel": "Case Bundles",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "historicalBundles",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Bundle",
+    "ElementLabel": "Historical Bundles",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "bundleConfiguration",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle Configuration",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "bundleConfiguration=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "ID": "BundlingInformation",
+    "ListElementCode": "multiBundleConfiguration",
+    "FieldType": "Text",
+    "ElementLabel": "Bundle Configuration",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "multiBundleConfiguration=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "Please click Submit button to generate the bundle",
+    "ListElementCode": "createBundleSubmitLabel",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon'>!</span><strong class='govuk-warning-text__text'>Please wait for sometime to generate the pdf</strong></div>",
+    "ListElementCode": "bundleCreationSubmittedWhatHappensNext",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "createBundleTransitionDetailsObject",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon'>!</span><strong class='govuk-warning-text__text'>Please wait for sometime to generate the pdf</strong></div>",
+    "ListElementCode": "bundleCreationSubmittedWhatHappensNextLabel",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  }
+]
