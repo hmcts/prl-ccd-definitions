@@ -717,21 +717,6 @@
     "Publish": "True"
   },
   {
-    "LiveFrom": "11/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "peopleInTheCase",
-    "Name": "People in the case",
-    "Description": "People in the case",
-    "DisplayOrder": 50,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
-  },
-  {
     "LiveFrom": "13/01/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "caseNumber",
@@ -889,9 +874,9 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/allocateJudge/pre-populate-legalAdvisor-details",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
-    "EndButtonLabel": "Save and continue",
-    "Publish": "True"
+    "Publish" : "True"
   },
   {
     "LiveFrom": "04/03/2022",
@@ -1709,6 +1694,37 @@
     "ShowSummary": "N"
   },
   {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allocatedJudge",
+    "Name": "Allocated Judge",
+    "Description": "Allocated Judge",
+    "PreConditionState(s)": "GATE_KEEPING;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/allocateJudge/pre-populate-legalAdvisor-details",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/allocateJudge/allocatedJudgeDetails",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "listWithoutNotice",
+    "Name": "List Without Notice",
+    "Description": "List Without Notice",
+    "PreConditionState(s)": "GATE_KEEPING",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+   },
+   {
     "LiveFrom": "01/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "citizenCaseWithdraw",
