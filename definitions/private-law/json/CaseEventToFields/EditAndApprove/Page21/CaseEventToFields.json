@@ -15,6 +15,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "isOrderCompleteToServe",
+    "FieldShowCondition": "[STATE] = \"CASE_ISSUE\" OR [STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\" OR [STATE] = \"SUBMITTED_PAID\" OR [STATE] = \"SUBMITTED_NOT_PAID\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE] = \"CASE_ISSUE\" OR [STATE] = \"GATE_KEEPING\"",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
