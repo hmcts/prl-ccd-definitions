@@ -97,8 +97,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "hearingType",
     "Label": "Which hearing?",
-    "FieldType": "FixedList",
-    "FieldTypeParameter": "HearingTypeEnum",
+    "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -1068,6 +1067,15 @@
     "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "tempCaseIdForHearing",
+    "Label": "Enter caseId to retrieve hearings ?",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
