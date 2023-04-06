@@ -9,7 +9,9 @@
     "DisplayContextParameter": "#ARGUMENT(CREATE)",
     "PageID": "createCaseLink",
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "LinkedCasesComponentLauncher = \"DO_NOT_SHOW\"",
+    "RetainHiddenValue": "Y"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -21,7 +23,9 @@
     "DisplayContextParameter": "#ARGUMENT(UPDATE)",
     "PageID": "maintainCaseLink",
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "LinkedCasesComponentLauncher = \"DO_NOT_SHOW\"",
+    "RetainHiddenValue": "Y"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -68,5 +72,29 @@
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "maintainCaseLinksFlag=\"DUMMY_VALUE_TO_HIDE_FIELD\""
+  },
+  {
+    "LiveFrom": "10/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "createCaseLink",
+    "CaseFieldID": "LinkedCasesComponentLauncher",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "DisplayContextParameter": "#ARGUMENT(CREATE,LinkedCases)",
+    "PageID": "createCaseLink",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "10/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "maintainCaseLink",
+    "CaseFieldID": "LinkedCasesComponentLauncher",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "DisplayContextParameter": "#ARGUMENT(UPDATE,LinkedCases)",
+    "PageID": "maintainCaseLink",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
   }
 ]

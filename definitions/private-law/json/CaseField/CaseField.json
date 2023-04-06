@@ -11,6 +11,15 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
+    "ID": "courtSeal",
+    "Label": "Court Seal",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
     "ID": "taskList",
     "Label": "Case name",
     "FieldType": "Text",
@@ -1535,6 +1544,15 @@
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "caseFromCourtNav",
+    "Label": "*Did you receive the case from CourtNav?",
+    "HintText": "Questions marked with a * need to be completed before you can create a case",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "selectedCaseTypeID",
     "Label": "Type of Case",
     "FieldType": "Text",
@@ -2893,7 +2911,6 @@
     "Label": " ",
     "FieldType": "TypeOfApplicationOrders",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2903,7 +2920,6 @@
     "Label": " ",
     "FieldType": "LinkToCA",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2986,7 +3002,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -2996,7 +3011,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3006,7 +3020,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3016,7 +3029,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3026,7 +3038,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3036,7 +3047,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3046,7 +3056,6 @@
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3055,27 +3064,6 @@
     "ID": "submissionRequiredFieldsInfo8",
     "Label": "You can save and return to this page at any time. Questions marked with a * need to be completed before you can send your application.",
     "FieldType": "Label",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "localGateKeeperHint",
-    "Label": "### Let the gatekeeper know there’s a new case",
-    "FieldType": "Label",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "gatekeeper",
-    "Label": "Gatekeeper",
-    "Min": "1",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "GatekeeperEmail",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -3103,7 +3091,6 @@
     "Label": " ",
     "FieldType": "StatementOfTruth",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3113,7 +3100,6 @@
     "Label": " ",
     "FieldType": "ConfidentialityCheck",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3269,7 +3255,6 @@
     "Label": "Submitted date and time",
     "FieldType": "DateTime",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "Y"
   },
   {
@@ -3279,8 +3264,7 @@
     "Label": "Submitted date and time",
     "FieldType": "Text",
     "SecurityClassification": "Public",
-    "Searchable": "N",
-    "Searchable": "Y"
+    "Searchable": "N"
   },
   {
     "LiveFrom": "02/12/2022",
@@ -3317,9 +3301,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalApplicantsList",
     "Label": "Select applicant",
-    "FieldType": "DynamicList",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3329,7 +3312,6 @@
     "Label": "Other applications",
     "FieldType": "OtherApplicationsBundle",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3339,7 +3321,6 @@
     "Label": "C2 application",
     "FieldType": "C2DocumentBundle",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3367,7 +3348,6 @@
     "FieldType": "Label",
     "Label": "[Upload additional applications](/case/${[JURISDICTION]}/${[CASE_TYPE]}/${[CASE_REFERENCE]}/trigger/uploadAdditionalApplications)",
     "SecurityClassification": "Public",
-    "Searchable": "N",
     "Searchable": "N"
   },
   {
@@ -3379,6 +3359,42 @@
     "FieldTypeParameter": "AdditionalApplicationsBundle",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isCafcass",
+    "Label": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createdDate",
+    "Label": "Created date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "lastModifiedDate",
+    "Label": "Last modified date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "18/03/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassUploadedDocs",
+    "Label": "Cafcass uploaded documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "UploadedDocuments",
+    "SecurityClassification": "Public"
   }
 ]
 
