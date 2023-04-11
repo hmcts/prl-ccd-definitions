@@ -1,5 +1,35 @@
 [
   {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtSeal",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "courtnav",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "courtName",
@@ -6724,6 +6754,30 @@
     "CaseFieldID": "caseTypeOfApplication",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseFromCourtNav",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "10/08/2021",
@@ -14072,20 +14126,6 @@
     "CRUD": "R"
   },
   {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "localGateKeeperHint",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "10/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "gatekeeper",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "issueDate",
@@ -15657,6 +15697,30 @@
           "caseworker-privatelaw-solicitor"
         ],
         "CRUD": "CRU"
+       }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCafcass",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -15680,5 +15744,19 @@
         "CRUD": "CRU"
       }
     ]
+  },
+  {
+  "LiveFrom": "19/10/2021",
+  "CaseTypeID": "PRLAPPS",
+  "CaseFieldID": "cafcassUploadedDocs",
+  "UserRole": "caseworker-privatelaw-cafcass",
+  "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "19/10/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "cafcassUploadedDocs",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "R"
   }
 ]
