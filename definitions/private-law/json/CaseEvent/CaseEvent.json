@@ -1601,10 +1601,12 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "hmcCaseUpdateSuccess",
-    "Name": "Hearing update",
+    "ID": "hmcCaseUpdDecOutcome",
+    "Name": "Decision Outcome",
+    "Description": "HMC Case Update to Decision Outcome",
     "PreConditionState(s)": "*",
     "PostConditionState": "DECISION_OUTCOME",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
@@ -1613,10 +1615,12 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "hmcCaseUpdateFailure",
-    "Name": "Hearing update failure",
+    "ID": "hmcCaseUpdPrepForHearing",
+    "Name": "Prepare for Hearing",
+    "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
     "PostConditionState": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
@@ -1717,6 +1721,31 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/citizen-case-withdrawn-notification",
     "PostConditionState": "CASE_WITHDRAWN",
     "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "19/10/22",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cafcass-document-upload",
+    "Name": "Document uploaded by cafcass",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "UpdateNextHearingInfo",
+    "Name": "Update Next Hearing Date",
+    "Description": "Updates Next Hearing",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-next-hearing-details-callback/about-to-submit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
     "ShowEventNotes": "N"
   }
 ]
