@@ -20,6 +20,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-wa-task-configuration');
   I.createRole('caseworker-ras-validation');
   I.createRole('GS_profile');
+  I.createRole('caseworker-privatelaw-externaluser-viewonly');
   I.createRole('ctsc-team-leader');
   I.createRole('caseworker-privatelaw-cafcass');
   I.click('Manage User Roles');
@@ -40,6 +41,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('caseworker-wa-task-configuration');
   I.see('caseworker-ras-validation');
   I.see('GS_profile');
+  I.see('caseworker-privatelaw-externaluser-viewonly');
   I.see('ctsc-team-leader');
   I.see('caseworker-privatelaw-cafcass');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers
@@ -48,9 +50,8 @@ Scenario('upload Private Law Config file @pipeline', I => {
   I.loginToAdminConsole();
   try {
     I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
-    I.wait('20');
+    I.wait('40');
   } catch (error) {
     console.log(error);
   }
-  // I.see('Case Definition data successfully imported');
 }).retry({ retries: 3, minTimeout: 30000 }); // eslint-disable-line no-magic-numbers

@@ -5,13 +5,16 @@ Project creating Family Private Law (PRL) CCD config files.
 Updated with Release 4.0
 ## Usage
 
-Clone project and in the project directory run:
+Clone project and in the project directory run: 
  - `yarn install && yarn reset-ccd-submodule`
 
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
 
 #### Troubleshooting
+
+### Managing Preview environment PODs
+Make sure you have added the label 'keep-helm' while creating the PR. Otherwise, add the label and re-trigger the build.
 
 ### Error: Cannot find modules
 
