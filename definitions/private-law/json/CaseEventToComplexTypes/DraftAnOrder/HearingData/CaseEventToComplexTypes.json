@@ -63,30 +63,6 @@
     "ID": "HearingData",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "fillingFormRenderingInfo",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "10",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "fillingFormRenderingInfoLabel",
-    "EventElementLabel": "${ordersHearingDetails.fillingFormRenderingInfo}",
-    "FieldDisplayOrder": "11",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "estimatedTimeLabel",
     "EventElementLabel": "Estimated time",
     "FieldDisplayOrder": "21",
@@ -319,7 +295,8 @@
     "ListElementCode": "hearingJudgeNameAndEmail",
     "EventElementLabel": "",
     "FieldDisplayOrder": "40",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersHearingDetails.hasJudgeProvidedHearingDetails=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
