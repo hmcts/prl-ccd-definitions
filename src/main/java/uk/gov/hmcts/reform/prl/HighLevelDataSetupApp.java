@@ -69,8 +69,6 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
     @Override
     protected List<String> getAllDefinitionFilesToLoadAt(String definitionsPath) {
         String environmentName = environment.name().toLowerCase(Locale.UK);
-        BeftaUtils.defaultLog("environmentName is:: %s" + environmentName);
-        BeftaUtils.defaultLog("definitionsPath is:: %s" + definitionsPath);
         return List.of(String.format("definitions/private-law/xlsx/ccd-config-PRL-%s.xlsx", environmentName));
     }
 }
