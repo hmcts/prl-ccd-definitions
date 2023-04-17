@@ -96,17 +96,17 @@ describe('AuthorisationCaseState', () => {
     });
 
     context('caseworker-privatelaw-externaluser-viewonly has valid permissions', () => {
-      it('CRU permissions for all states', () => {
-        nonProd.forEach(authState => {
-          if (authState.UserRole === 'caseworker-privatelaw-externaluser-viewonly') {
-            try {
-              expect(('CRUD').includes(authState.CRUD)).to.eql(true);
-            } catch (error) {
-              expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-externaluser-viewonly`);
-            }
-          }
-        });
-      });
-    });
+          it('CRU permissions for all states', () => {
+            nonProd.forEach(authState => {
+              if (authState.UserRole === 'caseworker-privatelaw-externaluser-viewonly') {
+                try {
+                  expect(('CRUD').includes(authState.CRUD)).to.eql(true);
+                } catch (error) {
+                  expect.fail(null, null, `State: ${authState.CaseStateID} must have CRU permission for caseworker-privatelaw-externaluser-viewonly`);
+                }
+              }
+            });
+          });
+     });
   });
 });
