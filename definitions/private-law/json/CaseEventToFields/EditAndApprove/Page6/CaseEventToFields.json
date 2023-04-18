@@ -3,13 +3,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
+    "CaseFieldID": "occupationLabel",
     "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"childArrangementsSpecificProhibitedOrder\" AND orderType!=\"parentalResponsibility\" AND orderType!=\"specialGuardianShip\" AND orderType!=\"appointmentOfGuardian\" AND orderType!=\"generalForm\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"blankOrderOrDirections\" AND orderType!=\"blankOrderOrDirectionsWithdraw\"",
+    "FieldShowCondition": "orderType=\"occupation\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "COMPLEX",
     "PageID": 6,
     "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"childArrangementsSpecificProhibitedOrder\" AND orderType!=\"parentalResponsibility\" AND orderType!=\"specialGuardianShip\" AND orderType!=\"appointmentOfGuardian\" AND orderType!=\"generalForm\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"blankOrderOrDirections\" AND orderType!=\"blankOrderOrDirectionsWithdraw\""
+    "ShowSummaryChangeOption": "Y"
   }
 ]
