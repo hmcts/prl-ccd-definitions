@@ -603,7 +603,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "53",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -614,7 +614,7 @@
     "ListElementCode": "addDirections.directionText",
     "EventElementLabel": "",
     "FieldDisplayOrder": "54",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
@@ -635,11 +635,47 @@
     "ID": "FL400",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "fl404bDateAndTimeOfNextHearing",
+    "ListElementCode": "orderEndDateAndTimeOptions",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "56",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderSpecifiedDateTime",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "57",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404SchoolDirections&Details",
+    "ListElementCode": "fl404SchoolDirections&DetailsComplex",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "58",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bDateAndTimeOfNextHearing",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "110",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "fl404bDateAndTimeOfNextHearing=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1011,7 +1047,7 @@
     "EventElementLabel": "Time estimate",
     "FieldDisplayOrder": "89",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1023,7 +1059,7 @@
     "EventElementLabel": "Court name for hearing",
     "FieldDisplayOrder": "90",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1035,7 +1071,7 @@
     "EventElementLabel": "Court address for hearing",
     "FieldDisplayOrder": "91",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1046,7 +1082,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine1",
     "FieldDisplayOrder": "92",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1057,7 +1093,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine2",
     "FieldDisplayOrder": "93",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1068,7 +1104,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.AddressLine3",
     "FieldDisplayOrder": "94",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1079,7 +1115,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.PostTown",
     "FieldDisplayOrder": "95",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1090,7 +1126,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.County",
     "FieldDisplayOrder": "96",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1101,7 +1137,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.PostCode",
     "FieldDisplayOrder": "97",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1112,7 +1148,7 @@
     "ListElementCode": "fl404bOtherCourtAddress.Country",
     "FieldDisplayOrder": "98",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
+    "FieldShowCondition": "createSelectOrderOptions=\"occupation\""
   },
   {
     "LiveFrom": "20/08/2021",
