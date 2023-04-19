@@ -411,6 +411,41 @@
   {
     "LiveFrom": "15/02/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "amendedOrderLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]",
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "blankOrderLabel",
     "AccessControl": [
       {
