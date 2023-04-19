@@ -3,37 +3,35 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "manageOrderHeaderLabel10",
+    "CaseFieldID": "manageOrderHeaderLabel11",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "PageShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
-    "ShowSummaryChangeOption": "Y"
+    "PageShowCondition": "createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"blank\" OR createSelectOrderOptions=\"amendDischargedVaried\"",
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "appointedGuardianLabel",
+    "CaseFieldID": "selectedOrderLabel1",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "appointedGuardianName",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "CaseFieldID": "fl404CustomFields",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "COMPLEX",
-    "FieldShowCondition": "createSelectOrderOptions=\"specialGuardianShip\"",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
   }
 ]
