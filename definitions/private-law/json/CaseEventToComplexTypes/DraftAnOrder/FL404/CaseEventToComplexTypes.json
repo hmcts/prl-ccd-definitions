@@ -603,7 +603,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "53",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.fl404bRespondentNotToEnterSchool=\"respondentMustNotEnterSchool\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -627,7 +627,43 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "55",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderEndDateAndTimeOptions",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "56",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "orderSpecifiedDateTime",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "57",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404SchoolDirections&Details",
+    "ListElementCode": "fl404SchoolDirections&DetailsComplex",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "58",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -637,10 +673,9 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bDateAndTimeOfNextHearing",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "58",
+    "FieldDisplayOrder": "110",
     "DisplayContext": "OPTIONAL",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "fl404bDateAndTimeOfNextHearing=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1105,28 +1140,15 @@
     "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "FL400",
-    "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderEndDateAndTimeOptions",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "98",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
-  },
-  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "FL400",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "fl404CustomFields",
-    "ListElementCode": "orderSpecifiedDateTime",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "99",
+    "ListElementCode": "fl404bOtherCourtAddress.Country",
+    "FieldDisplayOrder": "98",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" AND fl404CustomFields.orderEndDateAndTimeOptions=\"specifiedDateAndTime\""
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1136,7 +1158,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bCostOfApplication",
     "EventElementLabel": "Costs of this application",
-    "FieldDisplayOrder": "100",
+    "FieldDisplayOrder": "99",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
   },
@@ -1148,7 +1170,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bIsNoticeGiven",
     "EventElementLabel": "Is this order made with or without notice?",
-    "FieldDisplayOrder": "101",
+    "FieldDisplayOrder": "100",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\""
   }
