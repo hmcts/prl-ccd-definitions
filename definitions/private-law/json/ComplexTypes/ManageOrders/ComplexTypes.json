@@ -91,6 +91,24 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "approvalDate",
+    "FieldType": "Text",
+    "ElementLabel": "Approval date",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "status",
+    "FieldType": "Text",
+    "ElementLabel": "Order status",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "ServeOrderDetails",
     "ListElementCode": "additionalDocuments",
     "FieldType": "Collection",
@@ -114,6 +132,24 @@
     "ListElementCode": "servingRespondent",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ServingRespondentsEnum",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "recipientsOptions",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "otherParties",
+    "FieldType": "Text",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -211,6 +247,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "03/02/2022",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "cafcassCymruDocuments",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "CafcassCymruDocumentsEnum",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "OrderDetails",
     "ListElementCode": "orderTypeId",
@@ -288,6 +334,16 @@
     "ListElementCode": "childrenList",
     "FieldType": "Text",
     "ElementLabel": "Children list ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "isTheOrderAboutChildren",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the order about the children?",
+    "Searchable": "N",
     "SecurityClassification": "Public"
   },
   {
@@ -326,6 +382,16 @@
     "FieldType": "DateTime",
     "ElementLabel": "Date created",
     "FieldShowCondition": "dateCreated=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "manageOrderHearingDetails",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "HearingData",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -371,6 +437,15 @@
     "ListElementCode": "guardianFullNameLabel",
     "FieldType": "Label",
     "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "19/01/2022",
+    "ID": "schoolDirections&Details",
+    "ListElementCode": "fl404SchoolDirections&DetailsComplex",
+    "FieldType": "Text",
+    "ElementLabel": "Add directions and any further details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
