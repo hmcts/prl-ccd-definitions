@@ -10,6 +10,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
+    "envs": "node json-env.js",
     "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && cd ccd-definition-processor && yarn install",
     "setup": "git submodule update --init --recursive && cd ccd-definition-processor && yarn install",
     "lint": "eslint --fix .",
