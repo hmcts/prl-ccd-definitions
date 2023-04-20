@@ -1,0 +1,75 @@
+[
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "additionalDirectionsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "### AdditionalDirections",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "additionalDirections",
+    "ElementLabel": "Select all that apply ",
+    "HintText": "These reasons will be shared with the applicant",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FL401ListOnNoticeDirectionsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "reducedNoticePeriodDetails",
+    "FieldType": "Text",
+    "ElementLabel": "### Reduced notice period",
+    "HintText": "Give further details",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDirections CONTAINS \"reducedNoticedPeriod\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "linkedCACasesList",
+    "FieldType": "DynamicList",
+    "ElementLabel": "List with Child arrangements case",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementsCase\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "linkedCACasesFurtherDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Give further details",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementsCase\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "applicantNeedsFurtherInfoDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Applicant needs to provide further information",
+    "HintText": "Give further details",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDirections CONTAINS \"applicantNeedsToProvideInfo\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "Fl401ListOnNoticeDirections",
+    "ListElementCode": "respondentNeedsFileStatementDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "The respondent needs to file a statement",
+    "HintText": "Give further details",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDirections CONTAINS \"respondentNeedsToFileStatement\"",
+    "Searchable": "N"
+  }
+]
