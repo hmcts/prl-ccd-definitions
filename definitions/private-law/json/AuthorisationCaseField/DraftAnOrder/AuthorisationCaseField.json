@@ -89,5 +89,41 @@
     "CaseFieldID": "draftOrderCollection",
     "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "c43Label",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]",
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
