@@ -112,6 +112,7 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
           "caseworker-privatelaw-courtadmin"
         ],
         "CRUD": "CRU"
@@ -119,7 +120,42 @@
       {
         "UserRoles": [
           "citizen",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "c43LabelBold",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[SOLICITORA]",
+          "[SOLICITORB]",
+          "[SOLICITORC]",
+          "[SOLICITORD]",
+          "[SOLICITORE]",
+          "[SOLICITORF]",
+          "[SOLICITORG]",
+          "[SOLICITORH]",
+          "[SOLICITORI]",
+          "[SOLICITORJ]",
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
