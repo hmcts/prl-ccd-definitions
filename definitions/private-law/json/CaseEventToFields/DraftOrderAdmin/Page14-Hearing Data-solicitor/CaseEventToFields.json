@@ -9,6 +9,6 @@
     "PageDisplayOrder": 14,
     "PageFieldDisplayOrder": 1,
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "PageShowCondition": "isOrderCreatedBySolicitor=\"Yes\""
+    "PageShowCondition": "isOrderCreatedBySolicitor=\"Yes\" AND orderType=\"nonMolestation\" OR orderType=\"childArrangementsSpecificProhibitedOrder\" OR orderType=\"occupation\" OR orderType=\"blank\" OR orderType=\"amendDischargedVaried\""
   }
 ]
