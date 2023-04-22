@@ -30,7 +30,8 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-ca-linked-cases-and-legal-adviser"
   },
   {
     "LiveFrom": "08/11/2021",
@@ -63,6 +64,40 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/fl401ListOnNotice-document-generation"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "checkYourOrder",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "checkYourOrderLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "fl401ListOnNoticeDocument",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -71,9 +106,9 @@
     "CaseEventID": "fl401ListOnNotice",
     "CaseFieldID": "allocatedJudeLabel",
     "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 0,
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -81,69 +116,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "fl401ListOnNotice",
     "CaseFieldID": "allocatedJudgeInfo",
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "PageID": 6,
+    "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "isSpecificJudgeOrLegalAdviserNeeded",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "isJudgeOrLegalAdviser",
-    "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "CaseFieldID": "fl401ListOnNoticeAllocatedJudge",
+    "DisplayContext": "COMPLEX",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "judgeNameAndEmail",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"judge\"",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "legalAdviserList",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\"",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "tierOfJudiciary",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\"",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   }
 ]

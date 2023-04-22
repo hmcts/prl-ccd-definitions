@@ -37,7 +37,7 @@
     "FieldType": "DynamicList",
     "ElementLabel": "List with Child arrangements case",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementsCase\"",
+    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementCases\"",
     "Searchable": "N"
   },
   {
@@ -47,7 +47,7 @@
     "FieldType": "TextArea",
     "ElementLabel": "Give further details",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementsCase\"",
+    "FieldShowCondition": "additionalDirections CONTAINS \"listWithChildArrangementCases\"",
     "Searchable": "N"
   },
   {
@@ -71,5 +71,56 @@
     "SecurityClassification": "Public",
     "FieldShowCondition": "additionalDirections CONTAINS \"respondentNeedsToFileStatement\"",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeAllocatedJudge",
+    "ListElementCode": "isSpecificJudgeOrLegalAdviserNeeded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you want to allocate a specific judge or legal adviser?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeAllocatedJudge",
+    "ListElementCode": "isJudgeOrLegalAdviser",
+    "FieldType": "FixedRadioList",
+    "ElementLabel": "*Please select judge or legal adviser",
+    "FieldTypeParameter": "AllocatedJudgeTypeEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "Fl401ListOnNoticeAllocatedJudge",
+    "ListElementCode": "judgeNameAndEmail",
+    "FieldType": "JudicialUser",
+    "ElementLabel": "Name of the judge",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"judge\""
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "Fl401ListOnNoticeAllocatedJudge",
+    "ListElementCode": "legalAdviserList",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Name of legal adviser",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\""
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "Fl401ListOnNoticeAllocatedJudge",
+    "ListElementCode": "tierOfJudiciary",
+    "FieldType": "FixedRadioList",
+    "ElementLabel": "Select the tier of judiciary",
+    "FieldTypeParameter": "TierOfJudiciaryEnum",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\""
   }
 ]
