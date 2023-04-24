@@ -30,7 +30,7 @@
     "ListElementCode": "hearingDateConfirmOptionEnum",
     "EventElementLabel": "Has the hearing date been confirmed?",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -66,7 +66,7 @@
     "ListElementCode": "hearingDateTimes",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -307,7 +307,7 @@
     "ListElementCode": "hearingChannelsEnum",
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -367,7 +367,7 @@
     "ListElementCode": "allPartiesAttendHearingSameWayYesOrNo",
     "EventElementLabel": "",
     "FieldDisplayOrder": "30",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -379,7 +379,7 @@
     "ListElementCode": "applicantHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.applicantName}",
     "FieldDisplayOrder": "31",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": " ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -391,7 +391,7 @@
     "ListElementCode": "applicantSolicitorHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor}",
     "FieldDisplayOrder": "32",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -403,7 +403,7 @@
     "ListElementCode": "respondentHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.respondentName}",
     "FieldDisplayOrder": "33",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND   ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -428,7 +428,7 @@
     "ListElementCode": "cafcassHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "35",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -440,7 +440,7 @@
     "ListElementCode": "cafcassCymruHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "36",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -452,7 +452,7 @@
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "37",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND  ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
