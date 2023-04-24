@@ -185,7 +185,7 @@
     "ID": "sdoNextStepsAllocationTo",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "SdoNextStepsAllocationEnum",
-    "Label": "Allocation to",
+    "Label": "Allocate to",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -353,7 +353,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoPositionStatementDeadlineDate",
-    "Label": "Deadline date to send report",
+    "Label": "Deadline to send the report",
     "FieldType": "Date",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -373,7 +373,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoMiamAttendingPerson",
     "Label": "Name of the person to attend MIAM",
-    "FieldType": "Text",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "MiamAttendingPersonName",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -622,7 +623,7 @@
     "ID": "sdoAllocateOrReserveJudge",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "AllocateOrReserveJudgeEnum",
-    "Label": "The case is to be",
+    "Label": "Allocate or reserve to a named judge",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
