@@ -1287,7 +1287,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoTransferApplicationCourtDynamicList",
     "PageFieldDisplayOrder": 109,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 16,
     "PageDisplayOrder": 16,
     "ShowSummaryChangeOption": "Y",
@@ -2090,25 +2090,13 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "sdoScheduleOfAllegationsCheck",
-    "PageFieldDisplayOrder": 176,
-    "DisplayContext": "MANDATORY",
-    "PageID": 16,
-    "PageDisplayOrder": 16,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoDocumentationAndEvidenceList CONTAINS \"scheduleOfAllegations\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoScheduleOfAllegationsCheckLabel",
     "PageFieldDisplayOrder": 177,
     "DisplayContext": "READONLY",
     "PageID": 16,
     "PageDisplayOrder": 16,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoScheduleOfAllegationsCheck =\"other\" AND sdoDocumentationAndEvidenceList CONTAINS \"scheduleOfAllegations\""
+    "FieldShowCondition": "sdoScheduleOfAllegationsOption CONTAINS \"other\" AND sdoDocumentationAndEvidenceList CONTAINS \"scheduleOfAllegations\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -2120,7 +2108,7 @@
     "PageID": 16,
     "PageDisplayOrder": 16,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoScheduleOfAllegationsCheck =\"other\" AND sdoDocumentationAndEvidenceList CONTAINS \"scheduleOfAllegations\""
+    "FieldShowCondition": "sdoScheduleOfAllegationsOption CONTAINS \"other\" AND sdoDocumentationAndEvidenceList CONTAINS \"scheduleOfAllegations\""
   },
   {
     "LiveFrom": "31/03/2022",
