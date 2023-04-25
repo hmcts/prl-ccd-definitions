@@ -13,7 +13,7 @@ if (!envs.hasOwnProperty(environment)) {
   throw new Error(`Environment "${environment}" not found in the JSON file.`);
 }
 
-const cmd = `TARGET_ENV=${environment} CCD_DEF_COS_URL=envs[${environment}.cosUrl] CCD_DEF_CCD_URL=envs[${environment}.ccdUrl] CCD_DEF_AAC_URL=envs[${environment}.aacUrl] yarn ${scriptToRun}`;
+const cmd = `TARGET_ENV=${environment} CCD_DEF_COS_URL=${envs[environment].cosUrl} CCD_DEF_CCD_URL=${envs[environment].ccdUrl} CCD_DEF_AAC_URL=${envs[environment].aacUrl} yarn ${scriptToRun}`;
 const subprocess = spawn(cmd, { shell: true, stdio: 'inherit' });
 
 subprocess.on('exit', code => {
