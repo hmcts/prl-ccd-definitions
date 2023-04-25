@@ -225,102 +225,54 @@
     ]
   },
   {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "15/02/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "15/02/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoNameOfCouncil",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "15/02/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "15/02/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "14/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sdoCafcassCymruReportSentByDate",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "01/01/2017",
@@ -331,14 +283,17 @@
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
           "caseworker-privatelaw-systemupdate"
         ],
-        "CRUD": "CRUD"
+        "CRUD": "CRU"
       },
       {
         "UserRoles": [
           "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
         ],
         "CRUD": "R"
       }
@@ -353,14 +308,47 @@
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-la"
         ],
         "CRUD": "CRUD"
       },
       {
         "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "sdoSection7CheckLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
         ],
         "CRUD": "R"
       }
