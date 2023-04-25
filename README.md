@@ -68,7 +68,7 @@ try to reset definition processor submodule with `yarn reset-ccd-submodule`. Pre
 ## Changes after yarn upgrade
 
 After the yarn upgrade you need to follow the below steps to ensure that yarn commands are working fine in local:
-1. Ensure you have the latest yarn update from master
+1. Ensure that branch is synched with master
 2. Run _yarn install_ in local
 3. Run _yarn reset-ccd-submodule_ in local
 4. Now you can run the yarn commands locally.
