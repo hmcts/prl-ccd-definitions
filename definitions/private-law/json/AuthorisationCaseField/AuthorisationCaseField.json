@@ -1,5 +1,36 @@
 [
   {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtSeal",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "courtnav",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "courtName",
@@ -13730,48 +13761,6 @@
     "CRUD": "R"
   },
   {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnWhatHappenNext",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnWhatHappenNext",
-    "UserRole": "citizen",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnWhatHappenNext",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnStatusLabel",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnStatusLabel",
-    "UserRole": "citizen",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicationWithdrawnStatusLabel",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
     "LiveFrom": "17/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "submissionRequiredFieldsInfo1",
@@ -15714,5 +15703,19 @@
         "CRUD": "CRU"
       }
     ]
+  },
+  {
+  "LiveFrom": "19/10/2021",
+  "CaseTypeID": "PRLAPPS",
+  "CaseFieldID": "cafcassUploadedDocs",
+  "UserRole": "caseworker-privatelaw-cafcass",
+  "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "19/10/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "cafcassUploadedDocs",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "R"
   }
 ]
