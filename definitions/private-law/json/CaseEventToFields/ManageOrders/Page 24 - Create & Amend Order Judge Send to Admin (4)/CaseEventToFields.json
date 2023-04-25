@@ -44,7 +44,7 @@
     "PageID": 24,
     "PageDisplayOrder": 24,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "amendOrderSelectCheckOptions=\"judgeOrLegalAdvisorCheck\" AND amendOrderSelectJudgeOrLa=\"judge\""
+    "FieldShowCondition": "amendOrderSelectCheckOptions=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -56,6 +56,30 @@
     "PageID": 24,
     "PageDisplayOrder": 24,
     "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "amendOrderSelectCheckOptions=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "nameOfJudgeToReviewOrder",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "amendOrderSelectCheckOptions=\"judgeOrLegalAdvisorCheck\" AND amendOrderSelectJudgeOrLa=\"judge\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "nameOfLaToReviewOrder",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 20,
+    "PageDisplayOrder": 20,
+    "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "amendOrderSelectCheckOptions=\"judgeOrLegalAdvisorCheck\" AND amendOrderSelectJudgeOrLa=\"legalAdvisor\""
   },
   {
@@ -63,7 +87,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "managerCheckAmendOrder",
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 8,
     "DisplayContext": "READONLY",
     "PageID": 24,
     "PageDisplayOrder": 24,

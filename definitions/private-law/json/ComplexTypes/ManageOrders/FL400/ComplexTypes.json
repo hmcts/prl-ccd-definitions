@@ -6,8 +6,7 @@
     "FieldType": "Text",
     "ElementLabel": "Court name",
     "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -655,7 +654,7 @@
     "ListElementCode": "addDirections",
     "FieldType": "Collection",
     "FieldTypeParameter": "DirectionDetails",
-    "ElementLabel": "Add directions",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -684,7 +683,7 @@
     "ID": "OtherDraftOrderDetails",
     "ListElementCode": "createdBy",
     "FieldType": "Text",
-    "ElementLabel": "Created by",
+    "ElementLabel": "Order made by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -749,6 +748,26 @@
     "LiveFrom": "20/08/2021",
     "ID": "OtherDraftOrderDetails",
     "ListElementCode": "nameOfLaForReview",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfJudgeForReviewOrder",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfLaForReviewOrder",
     "FieldType": "Text",
     "ElementLabel": "Name LA For Review",
     "SecurityClassification": "Public",
@@ -1380,6 +1399,7 @@
     "FieldTypeParameter": "HearingData",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -1391,5 +1411,25 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "ID": "DraftOrder",
+    "ListElementCode": "childOption",
+    "ElementLabel": " ",
+    "FieldType": "DynamicMultiSelectList",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "hasJudgeProvidedHearingDetails",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   }
 ]
