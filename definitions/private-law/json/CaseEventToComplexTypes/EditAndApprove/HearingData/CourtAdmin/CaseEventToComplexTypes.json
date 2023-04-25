@@ -30,7 +30,7 @@
     "ListElementCode": "hearingDateConfirmOptionEnum",
     "EventElementLabel": "Has the hearing date been confirmed?",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -54,7 +54,7 @@
     "ListElementCode": "dateIsReservedWithListAssistLabel",
     "EventElementLabel": "**The date is reserved with List Assist**",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -66,7 +66,7 @@
     "ListElementCode": "hearingDateTimes",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -90,7 +90,7 @@
     "ListElementCode": "dateNeedsToBeConfirmedByListingTeamBeforeServiceLabel",
     "EventElementLabel": "**The date needs to be confirmed by the listing team before service**",
     "FieldDisplayOrder": "8",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
   {
@@ -102,7 +102,7 @@
     "ListElementCode": "orderWillBeServedWithTheDateToBeFixedLabel",
     "EventElementLabel": "**This order will be served with the 'date to be fixed'**",
     "FieldDisplayOrder": "9",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -114,7 +114,7 @@
     "ListElementCode": "fillingFormRenderingInfo",
     "EventElementLabel": "",
     "FieldDisplayOrder": "10",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
   },
   {
@@ -126,7 +126,7 @@
     "ListElementCode": "fillingFormRenderingInfoLabel",
     "EventElementLabel": "${ordersHearingDetails.fillingFormRenderingInfo}",
     "FieldDisplayOrder": "10",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
 
@@ -223,7 +223,7 @@
     "ListElementCode": "earliestHearingDate",
     "EventElementLabel": "Earliest hearing date",
     "FieldDisplayOrder": "18",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND hearingSpecificDatesOptionsEnum!=\"dateReservedWithListAssit\"  AND hearingSpecificDatesOptionsEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -271,7 +271,7 @@
     "ListElementCode": "hearingEstimatedDays",
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -283,7 +283,7 @@
     "ListElementCode": "hearingEstimatedHours",
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -295,7 +295,7 @@
     "ListElementCode": "hearingEstimatedMinutes",
     "EventElementLabel": "",
     "FieldDisplayOrder": "24",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -307,7 +307,7 @@
     "ListElementCode": "hearingChannelsEnum",
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -549,7 +549,7 @@
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
     "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "45",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
