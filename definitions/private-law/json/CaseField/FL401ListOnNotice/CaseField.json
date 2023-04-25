@@ -21,6 +21,16 @@
   {
     "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "fl401ListOnNoticeDocumentHintLabel1",
+    "Label": "### Completing this form will generate a draft FL404B directions order",
+    "HintText": "These reasons will be shared with the applicant",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "fl401OnNoticeLabel",
     "Label": "### On Notice",
     "FieldType": "Label",
@@ -38,11 +48,61 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "25/05/2022",
+    "LiveFrom": "14/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "fl401ListOnNoticeAdditionalDirections",
-    "Label": " ",
-    "FieldType": "Fl401ListOnNoticeDirections",
+    "ID": "additionalDirections",
+    "Label": "AdditionalDirections",
+    "HintText": "Select all that apply ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FL401ListOnNoticeDirectionsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "reducedNoticePeriodDetails",
+    "Label": "Reduced notice period",
+    "HintText": "Give further details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "linkedCaCasesList",
+    "Label": "List with Child arrangements case",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "linkedCaCasesFurtherDetails",
+    "Label": "Give further details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicantNeedsFurtherInfoDetails",
+    "Label": "Applicant needs to provide further information",
+    "HintText": "Give further details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondentNeedsFileStatementDetails",
+    "Label": "The respondent needs to file a statement",
+    "HintText": "Give further details",
+    "FieldType": "TextArea",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -57,21 +117,21 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/10/2022",
+    "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "fl401ListOnNoticeHearingDetails",
-    "Label": "Hearing",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "HearingData",
+    "ID": "fl401LonOrderCompleteToServe",
+    "Label": "Once this order is complete, can the application be served?",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/10/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "fl401ListOnNoticeAllocatedJudge",
-    "Label": " ",
-    "FieldType": "Fl401ListOnNoticeAllocatedJudge",
+    "ID": "fl401ListOnNoticeHearingDetails",
+    "Label": "Hearing",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "HearingData",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
