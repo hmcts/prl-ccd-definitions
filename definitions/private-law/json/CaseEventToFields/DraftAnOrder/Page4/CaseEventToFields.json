@@ -142,12 +142,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "isTheOrderAboutAllChildren",
+    "PageFieldDisplayOrder": 18,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
     "CaseFieldID": "isTheOrderAboutChildren",
     "PageFieldDisplayOrder": 18,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -159,7 +172,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "isTheOrderAboutChildren=\"Yes\""
+    "FieldShowCondition": "isTheOrderAboutChildren=\"Yes\" OR isTheOrderAboutAllChildren=\"No\""
   },
   {
     "LiveFrom": "31/03/2022",
