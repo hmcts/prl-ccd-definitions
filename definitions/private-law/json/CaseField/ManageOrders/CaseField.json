@@ -160,16 +160,6 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "isTheOrderAboutAllChildren",
-    "Label": "Is the order about all children?",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "YesNoNotRequiredEnum",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
     "ID": "recitalsOrPreamble",
     "Label": "Add recitals or preamble",
     "FieldType": "TextArea",
@@ -1009,6 +999,15 @@
   {
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
+    "ID": "isTheOrderAboutAllChildren",
+    "Label": "Is the order about all the children?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel20",
     "Label": "${manageOrderHeader1}",
     "FieldType": "Label",
@@ -1048,6 +1047,7 @@
     "ID": "currentOrderCreatedDateTime",
     "Label": "Current Order Created Date Time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -1203,6 +1203,15 @@
     "ID": "selectedHearingType",
     "Label": "Selected hearings dropdown value",
     "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isHearingPageNeeded",
+    "Label": " ",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
