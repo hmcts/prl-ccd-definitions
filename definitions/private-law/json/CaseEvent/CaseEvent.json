@@ -1712,7 +1712,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
-    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+    "Publish": "Y"
    },
    {
     "LiveFrom": "01/03/2023",
@@ -1725,6 +1725,22 @@
     "PostConditionState": "CASE_WITHDRAWN",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "listOnNotice",
+    "Name": "List on notice",
+    "Description": "List on notice",
+    "PreConditionState(s)": "JUDICIAL_REVIEW",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-list-on-notice",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listOnNotice",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "19/10/22",
