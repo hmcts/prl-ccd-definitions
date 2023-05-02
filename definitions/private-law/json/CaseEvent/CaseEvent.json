@@ -878,6 +878,24 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/allocateJudge/pre-populate-legalAdvisor-details",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401SendToGateKeeper",
+    "Name": "Send to gate keeper",
+    "Description": "Send to gate keeper",
+    "DisplayOrder": 16,
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "JUDICIAL_REVIEW",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/allocateJudge/pre-populate-legalAdvisor-details",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "Publish" : "True"
   },
   {
