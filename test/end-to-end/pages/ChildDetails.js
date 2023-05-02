@@ -10,7 +10,7 @@ module.exports = {
     child2FirstName: '//*[@id="newChildDetails_1_firstName"]',
     child2LastName: '//*[@id="newChildDetails_1_lastName"]',
     parentalResponsibilityDetails: '//*[@id="newChildDetails_0_parentalResponsibilityDetails"]',
-    parentalResponsibilityDetails2: '//*[@id="newChildDetails_1_parentalResponsibilityDetails"]',
+    parentalResponsibilityDetails2: '//*[@id="newChildDetails_1_parentalResponsibilityDetails"]'
   },
 
   async triggerEvent() {
@@ -32,7 +32,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails, 'Text area field Test');
     await this.addNewChild2();
   },
-  
+
   async addNewChild2() {
     await I.retry(retryCount).click('Add new');
     I.wait('2');

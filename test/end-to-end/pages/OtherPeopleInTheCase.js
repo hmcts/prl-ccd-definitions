@@ -6,7 +6,7 @@ module.exports = {
     headerText: 'Other people in the case',
     textareaText: 'Testing text area',
     submit: 'button[type="submit"]',
-    otherPeopleAddress: 'othersToNotify_0_address_address',
+    otherPeopleAddress: 'othersToNotify_0_address_address'
   },
 
   async otherPeopleInTheCase() {

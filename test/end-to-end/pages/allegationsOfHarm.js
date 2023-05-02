@@ -3,7 +3,7 @@ const retryCount = 3;
 
 module.exports = {
 
- fields: {
+  fields: {
     textareaText: 'Testing text area',
     eventList: 'select[id="next-step"]',
     submit: 'button[type="submit"]',
@@ -15,30 +15,30 @@ module.exports = {
     substanceAbuseReason: '//*[@id="newAllegationsOfHarmSubstanceAbuseDetails"]',
     otherSafetyConcerns: '//*[@id="newAllegationsOfHarmOtherConcerns_Yes"]',
     otherSafetyConcernsReason: '//*[@id="newAllegationsOfHarmOtherConcernsDetails"]',
- 
-    //Orders Page
+
+    // Orders Page
     ordersNonMolestationYes: '//*[@id="newOrdersNonMolestation_Yes"]',
     ordersOccupationNo: '//*[@id="newOrdersOccupation_No"]',
     ordersForcedMarriageProtectionNo: '//*[@id="newOrdersForcedMarriageProtection_No"]',
     ordersRestrainingNo: '//*[@id="newOrdersRestraining_No"]',
     ordersOtherInjunctiveNo: '//*[@id="newOrdersOtherInjunctive_No"]',
 
-    //Domestic Abuse - Behaviours
+    // Domestic Abuse - Behaviours
     behaviourDAPhysicalAbuse: '//*[@id="domesticBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
-    behaviourDANatureWhatWhoDescription: '//*[@id="domesticBehaviours_0_newAbuseNatureDescription"]',   
+    behaviourDANatureWhatWhoDescription: '//*[@id="domesticBehaviours_0_newAbuseNatureDescription"]',
     behaviourDAStartDateAndLength: '//*[@id="domesticBehaviours_0_newBehavioursStartDateAndLength"]',
     behaviourDAApplicantSoughtHelp: '//*[@id="domesticBehaviours_0_newBehavioursApplicantSoughtHelp_Yes"]',
     behaviourDAWhoHelpFromDescription: '//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
 
-    //Child Abuse - Behaviours
+    // Child Abuse - Behaviours
     behaviourCAPhysicalAbuse: '//*[@id="childAbuseBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
     behaviourCARisk: '//*[@id="childAbuseBehaviours_0_allChildrenAreRisk_Yes"]',
-    behaviourCANatureWhatWhoDescription: '//*[@id="childAbuseBehaviours_0_newAbuseNatureDescription"]',   
+    behaviourCANatureWhatWhoDescription: '//*[@id="childAbuseBehaviours_0_newAbuseNatureDescription"]',
     behaviourCAStartDateAndLength: '//*[@id="childAbuseBehaviours_0_newBehavioursStartDateAndLength"]',
     behaviourCAApplicantSoughtHelp: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantSoughtHelp_Yes"]',
     behaviourCAWhoHelpFromDescription: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
 
-    //Child Abduction Page
+    // Child Abduction Page
     abductionWhyDescription: '//*[@id="newChildAbductionReasons"]',
     abductionPreviousThreats: '//*[@id="newPreviousAbductionThreats_Yes"]',
     abductionPreviousThreatsDetails: '//*[@id="newPreviousAbductionThreatsDetails"]',
@@ -73,7 +73,6 @@ module.exports = {
     I.wait('4');
     await I.retry(retryCount).click('Continue');
     I.wait('4');
-
   },
   async allegationsOfHarmInformation() {
     await I.retry(retryCount).click(this.fields.domesticAbuse);
@@ -86,7 +85,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.otherSafetyConcernsReason, this.fields.textareaText);
     I.wait('2');
 
-    //Orders
+    // Orders
     const uploadTime = 5;
     await I.retry(retryCount).click(this.fields.ordersNonMolestationYes);
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationDateIssued-day"]', '1');
@@ -111,8 +110,6 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
-
-
   },
   async domesticAbuseBehaviour() {
     // Domestic Abuse
@@ -128,7 +125,6 @@ module.exports = {
     await I.retry(retryCount).fillField('//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
     await I.retry(retryCount).click('Continue');
     I.wait('2');
-
   },
   async childAbuseBehaviour() {
     // Child Abuse
@@ -146,7 +142,6 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
-
   },
   async childAbductionAOH() {
     await I.retry(retryCount).waitForText('Child abduction');
@@ -161,11 +156,10 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.abductionChildrenHavePassport);
     I.wait('2');
     await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
-    await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionFather); 
+    await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionFather);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
-
   },
   async otherConcerns() {
     await I.retry(retryCount).waitForText('Other concerns');
@@ -178,7 +172,6 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
-
   },
   async submitEvent() {
     I.wait('2');
