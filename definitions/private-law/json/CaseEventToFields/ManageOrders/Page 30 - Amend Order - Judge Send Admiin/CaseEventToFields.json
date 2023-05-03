@@ -1,0 +1,26 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "judgeDirectionsToAdminAmendOrder",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 30,
+    "PageDisplayOrder": 30,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "manageOrdersOptions!=\"servedSavedOrders\" AND loggedInUserType=\"JUDGE\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "isOrderCompleteToServeAmendOrder",
+    "FieldShowCondition": "[STATE] = \"CASE_ISSUED\" OR [STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\" OR [STATE] = \"SUBMITTED_PAID\" OR [STATE] = \"SUBMITTED_NOT_PAID\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\" OR [STATE] = \"CASE_ISSUED\" OR [STATE] = \"JUDICIAL_REVIEW\"",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 30,
+    "PageDisplayOrder": 30,
+    "ShowSummaryChangeOption": "N"
+  }
+]
