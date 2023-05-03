@@ -138,5 +138,22 @@
     "CaseFieldID": "sendAndReplyEventLink",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "sendOrReplyEventLink",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
