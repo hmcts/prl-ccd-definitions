@@ -24,7 +24,7 @@
     "ID": "internalOrExternalMessage",
     "Label": "Are you sending an internal or external message?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "internalExternalMessageEnum",
+    "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -34,7 +34,7 @@
     "ID": "messageAbout",
     "Label": "What is this message about?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "messageAboutEnum",
+    "FieldTypeParameter": "MessageAboutEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -44,7 +44,7 @@
     "ID": "internalMessageWhoToSendTo",
     "Label": "Select who to send to",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "internalMessageWhoToSendToEnum",
+    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -138,6 +138,26 @@
     "ID": "externalPartiesList",
     "Label": "Select who to send the message to",
     "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "openMessagesList",
+    "Label": "Open messages",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Message",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "closedMessagesList",
+    "Label": "Closed messages",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Message",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

@@ -9,7 +9,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "No",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-or-reply-to-messages/mid-event"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -89,7 +89,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "judicialOrMagistrateTierList",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "internalMessageWhoToSendTo=\"JUDICIARY\"",
+    "FieldShowCondition": "internalOrExternalMessage=\"INTERNAL\" AND internalMessageWhoToSendTo=\"JUDICIARY\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 8,
@@ -101,7 +101,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendReplyJudgeName",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "internalMessageWhoToSendTo=\"JUDICIARY\"",
+    "FieldShowCondition": "internalOrExternalMessage=\"INTERNAL\" AND internalMessageWhoToSendTo=\"JUDICIARY\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 9,
@@ -113,7 +113,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "ctscEmailList",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "internalMessageWhoToSendTo=\"OTHER\"",
+    "FieldShowCondition": "internalOrExternalMessage=\"INTERNAL\" AND internalMessageWhoToSendTo=\"OTHER\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 10,
@@ -125,7 +125,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "ctscEmailAddress",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "internalMessageWhoToSendTo=\"OTHER\"",
+    "FieldShowCondition": "internalOrExternalMessage=\"INTERNAL\" AND internalMessageWhoToSendTo=\"OTHER\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
@@ -147,11 +147,23 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "externalPartiesList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "internalOrExternalMessage=\"EXTERNAL\"",
+    "PageID": 2,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 13,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "messageAbout",
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 13,
+    "PageFieldDisplayOrder": 14,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -163,7 +175,7 @@
     "FieldShowCondition": "messageAbout!=\"\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 14,
+    "PageFieldDisplayOrder": 15,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -175,7 +187,7 @@
     "FieldShowCondition": "messageAbout=\"APPLICATION\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 15,
+    "PageFieldDisplayOrder": 16,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -187,7 +199,7 @@
     "FieldShowCondition": "messageAbout=\"HEARING\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 16,
+    "PageFieldDisplayOrder": 17,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -199,7 +211,7 @@
     "FieldShowCondition": "messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\"",
     "PageID": 2,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 17,
+    "PageFieldDisplayOrder": 18,
     "ShowSummaryChangeOption": "Yes"
   },
   {
