@@ -3,44 +3,11 @@
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "fl401OnNoticeLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "fl401WithOutNoticeReasonToRespondentLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
-    "CaseFieldID": "withOutNoticeReasonToShareApplicantLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "fl401ListOnNotice",
     "CaseFieldID": "isFl401CaseCreatedForWithOutNotice",
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "fl401WithOutNoticeReasonToRespondent=\"DO_NOT_SHOW\""
   },
@@ -52,9 +19,42 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
     "PageShowCondition": "isFl401CaseCreatedForWithOutNotice=\"Yes\""
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "fl401OnNoticeLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "fl401WithOutNoticeReasonToRespondentLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401ListOnNotice",
+    "CaseFieldID": "withOutNoticeReasonToShareApplicantLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "08/11/2021",
@@ -161,7 +161,6 @@
     "FieldShowCondition": "additionalDirections CONTAINS \"respondentNeedsToFileStatement\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/fl401ListOnNotice-document-generation"
   },
-
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
@@ -309,6 +308,6 @@
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "tierOfJudiciary=\"DO_NOT_SHOW\"",
-    "Publish" : "True"
+    "Publish": "True"
   }
 ]
