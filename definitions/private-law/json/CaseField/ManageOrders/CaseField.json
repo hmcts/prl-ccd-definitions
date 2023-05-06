@@ -105,6 +105,15 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "hearingsType",
+    "Label": "At which hearing was the order approved?",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "judgeOrMagistrateTitle",
     "Label": "Select or amend title of judge or magistrate",
     "FieldType": "FixedRadioList",
@@ -145,16 +154,6 @@
     "ID": "dateOrderMade",
     "Label": "Date order made",
     "FieldType": "Date",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "isTheOrderAboutAllChildren",
-    "Label": "Is the order about all children?",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "YesNoNotRequiredEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -627,7 +626,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "selectedOrderLabel1",
-    "Label": "${selectedOrder}",
+    "Label": "## ${selectedOrder}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -1000,6 +999,15 @@
   {
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
+    "ID": "isTheOrderAboutAllChildren",
+    "Label": "Is the order about all the children?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel20",
     "Label": "${manageOrderHeader1}",
     "FieldType": "Label",
@@ -1039,6 +1047,7 @@
     "ID": "currentOrderCreatedDateTime",
     "Label": "Current Order Created Date Time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -1068,6 +1077,150 @@
     "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "Child",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioCaseReviewHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioPermissionHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioUrgentFirstHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioUrgentHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioWithoutNoticeHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "dioFhdraHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoUrgentHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoFhdraHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPermissionHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDraHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSettlementHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hasJudgeProvidedHearingDetails",
+    "FieldType": "YesOrNo",
+    "Label": "Has the judge provided you with the hearing details?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderName",
+    "Label": " ",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedHearingType",
+    "Label": "Selected hearings dropdown value",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isHearingPageNeeded",
+    "Label": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "markedToServeEmailNotification",
+    "Label": "Serve Email Notification flag",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
