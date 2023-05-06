@@ -74,8 +74,8 @@ withPipeline("nodejs", product, component) {
     stageWithAgent('Generate Family Private Law Case config', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
   }
 
@@ -91,8 +91,8 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
     yarnBuilder.yarn('test:uploadFile')
   }
