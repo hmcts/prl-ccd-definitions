@@ -30,8 +30,8 @@
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "CASE_ISSUE",
-    "Name": "Issued",
+    "ID": "CASE_ISSUED",
+    "Name": "Case Issued",
     "Description": "C100 Case Issue",
     "DisplayOrder": 4,
     "TitleDisplay": "# #${[CASE_REFERENCE]}\n ## Case Name: ${applicantCaseName}\n ## Family Man ID: ${familymanCaseNumber}"
@@ -60,7 +60,7 @@
   {
     "LiveFrom": "21/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "GATE_KEEPING",
+    "ID": "JUDICIAL_REVIEW",
     "Name": "Gatekeeping",
     "Description": "Gatekeeping",
     "DisplayOrder": 7,
@@ -78,7 +78,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "ALL_FINAL_ORDERS_ISSUED",
-    "Name": "All final orders issued",
+    "Name": "Closed",
     "Description": "All final orders issued",
     "DisplayOrder": 9,
     "TitleDisplay": "# #${[CASE_REFERENCE]}\n ## Case Name: ${applicantCaseName}\n ## Family Man ID: ${familymanCaseNumber}"
@@ -87,7 +87,7 @@
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
-    "Name": "Prepare for hearing",
+    "Name": "Hearing",
     "Description": "Prepare for hearing",
     "DisplayOrder": 10,
     "TitleDisplay": "# #${[CASE_REFERENCE]}\n ## Case Name: ${applicantCaseName}\n ## Family Man ID: ${familymanCaseNumber}"
@@ -96,9 +96,18 @@
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "DECISION_OUTCOME",
-    "Name": "Hearing outcome",
+    "Name": "Hearing Outcome",
     "Description": "Hearing outcome",
     "DisplayOrder": 11,
+    "TitleDisplay": "# #${[CASE_REFERENCE]}\n ## Case Name: ${applicantCaseName}\n ## Family Man ID: ${familymanCaseNumber}"
+  },
+  {
+    "LiveFrom": "26/04/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "REQUESTED_FOR_DELETION",
+    "Name": "Requested for deletion",
+    "Description": "Requested for deletion",
+    "DisplayOrder": 12,
     "TitleDisplay": "# #${[CASE_REFERENCE]}\n ## Case Name: ${applicantCaseName}\n ## Family Man ID: ${familymanCaseNumber}"
   }
 ]
