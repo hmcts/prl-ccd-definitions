@@ -1,20 +1,49 @@
 [
   {
     "LiveFrom": "16/02/2022",
-    "ID": "GatekeeperEmail",
-    "ListElementCode": "email",
-    "FieldType": "Email",
-    "ElementLabel": "Email address",
+    "ID": "GatekeepingDetails",
+    "ListElementCode": "isSpecificGateKeeperNeeded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you want to send this case to a specific gatekeeper?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "16/02/2022",
-    "ID": "GatekeeperEmail",
-    "ListElementCode": "addNewEmailLabel",
-    "FieldType": "Label",
-    "ElementLabel": " ",
+    "ID": "GatekeepingDetails",
+    "ListElementCode": "isJudgeOrLegalAdviserGatekeeping",
+    "FieldType": "FixedRadioList",
+    "ElementLabel": "*Judge or legal adviser?",
+    "FieldTypeParameter": "SendToGatekeeperTypeEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "GatekeepingDetails",
+    "ListElementCode": "judgeName",
+    "FieldType": "JudicialUser",
+    "ElementLabel": "Name of the judge",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "GatekeepingDetails",
+    "ListElementCode": "legalAdviserList",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Name of the legal adviser",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "GatekeepingDetails",
+    "ListElementCode": "judgePersonalCode",
+    "FieldType": "Text",
+    "ElementLabel": "judgePersonalCode",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "judgePersonalCode=\"DO_NOT_SHOW\""
   }
 ]
