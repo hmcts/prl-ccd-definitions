@@ -36,16 +36,18 @@
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "adminEditAndApproveAnOrder",
-    "Name": "Edit and approve a draft order",
-    "Description": "Edit and approve a draft order",
+    "Name": "Edit and serve a draft order",
+    "Description": "Edit and serve a draft order",
     "DisplayOrder": 28,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/submitted",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "EndButtonLabel": "Submit",
     "ShowSummary": "N",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   }
 ]
