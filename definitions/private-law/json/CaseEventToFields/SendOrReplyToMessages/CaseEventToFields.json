@@ -15,7 +15,7 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "replyMessageDynamicList",
+    "CaseFieldID": "messageReplyDynamicList",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
     "PageID": 1,
@@ -212,6 +212,30 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessage",
+    "DisplayContext": "COMPLEX",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "respondToMessage",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   }
 ]

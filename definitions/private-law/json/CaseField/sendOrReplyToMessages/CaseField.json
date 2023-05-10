@@ -1,6 +1,6 @@
 [
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "sendingMessagesLabel",
     "Label": "### Sending messages",
@@ -10,7 +10,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "sendingMessagesHint",
     "Label": "You can send internal messages to HMCTS staff including the judiciary or to external parties.",
@@ -19,7 +19,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "internalOrExternalMessage",
     "Label": "Are you sending an internal message?",
@@ -30,7 +30,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "messageAbout",
     "Label": "What is this message about?",
@@ -40,7 +40,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "internalMessageWhoToSendTo",
     "Label": "Select who to send to",
@@ -50,7 +50,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "internalMessageUrgent",
     "Label": "Is this urgent?",
@@ -59,7 +59,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "judicialOrMagistrateTierList",
     "Label": "Select a judicial tier or enter a judge's name manually",
@@ -69,7 +69,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "sendReplyJudgeName",
     "Label": "Enter name of Judge",
@@ -78,7 +78,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "ctscEmailList",
     "Label": "Select where you're sending it from",
@@ -88,7 +88,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "recipientEmailAddresses",
     "Label": "Enter email address",
@@ -98,7 +98,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "messageSubject",
     "Label": "Enter the message subject",
@@ -107,7 +107,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "linkedApplicationsList",
     "Label": "Select the application",
@@ -116,7 +116,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "futureHearingsList",
     "Label": "Select hearing",
@@ -125,7 +125,7 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "submittedDocumentsList",
     "Label": "Select file",
@@ -154,20 +154,31 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "sendingMessagesExternalLabel",
-    "Label": "### Sending messages",
-    "FieldType": "Label",
+    "ID": "messageReplyDynamicList",
+    "Label": "Select a message to reply to",
+    "HintText": "Message subject comprises application type and urgency, if relevant , and date requested.",
+    "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
+    "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "sendingMessagesExternalHint",
-    "Label": "The message you enter here will be sent in a notification to the parties you've selected. This will be presented as a letter that they can access online in their account, and posted if they've chosen to receive physical letters. \n\n You can also attach documents from the case that will be included in the notification.",
-    "FieldType": "Label",
+    "ID": "replyMessage",
+    "Label": " ",
+    "FieldType": "Message",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "respondToMessage",
+    "Label": "Do you need to respond to this message?",
+    "HintText": "If no response is required, the message will be marked as closed.",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
