@@ -133,8 +133,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalOrExternalMessage",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalExternalMessageEnum",
+    "FieldType": "Text",
     "ElementLabel": "Internal or external message",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -143,26 +142,35 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalMessageWhoToSendTo",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
-    "ElementLabel": "Internal or external message",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "judicialOrMagistrateTier",
     "FieldType": "Text",
-    "ElementLabel": "Judicial or magistrate Tier selected",
+    "ElementLabel": "Internal message who to send to",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "sendReplyJudgeName",
-    "FieldType": "JudicialUser",
+    "ListElementCode": "judicialOrMagistrateTierCode",
+    "FieldType": "Text",
+    "ElementLabel": "Judicial or magistrate Tier selected code",
+    "FieldShowCondition": "judicialOrMagistrateTierCode=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "judicialOrMagistrateTierValue",
+    "FieldType": "Text",
+    "ElementLabel": "Judicial or magistrate Tier",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "judgeName",
+    "FieldType": "Text",
     "ElementLabel": "Judge name",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -172,16 +180,16 @@
     "ID": "Message",
     "ListElementCode": "selectedCtscEmail",
     "FieldType": "Text",
-    "ElementLabel": "CTSC email selected",
+    "ElementLabel": "CTSC email",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "ctscEmailAddress",
+    "ListElementCode": "recipientEmailAddresses",
     "FieldType": "Text",
-    "ElementLabel": "CTSC email address",
+    "ElementLabel": "Recipient email addresses",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -198,8 +206,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "messageAbout",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "MessageAboutEnum",
+    "FieldType": "Text",
     "ElementLabel": "Message about?",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -207,27 +214,57 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "selectedLinkedApplications",
+    "ListElementCode": "selectedLinkedApplicationCode",
     "FieldType": "Text",
-    "ElementLabel": "Linked application selected",
+    "ElementLabel": "Linked application selected code",
+    "FieldShowCondition": "selectedLinkedApplicationCode=\"DO_NOT_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "selectedFutureHearings",
+    "ListElementCode": "selectedLinkedApplicationValue",
     "FieldType": "Text",
-    "ElementLabel": "Future hearing selected",
+    "ElementLabel": "Linked application",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "selectedSubmittedDocuments",
+    "ListElementCode": "selectedFutureHearingCode",
     "FieldType": "Text",
-    "ElementLabel": "submitted document selected",
+    "ElementLabel": "Future hearing selected code",
+    "FieldShowCondition": "selectedFutureHearingCode=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "selectedFutureHearingValue",
+    "FieldType": "Text",
+    "ElementLabel": "Future hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "selectedSubmittedDocumentCode",
+    "FieldType": "Text",
+    "ElementLabel": "submitted document selected code",
+    "FieldShowCondition": "selectedSubmittedDocumentCode=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "selectedSubmittedDocumentValue",
+    "FieldType": "Text",
+    "ElementLabel": "submitted document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

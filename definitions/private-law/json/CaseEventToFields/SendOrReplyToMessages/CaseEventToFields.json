@@ -15,7 +15,7 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "replyMessageDynamicList",
+    "CaseFieldID": "messageReplyDynamicList",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
     "PageID": 1,
@@ -47,7 +47,7 @@
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -58,7 +58,7 @@
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -123,7 +123,7 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "ctscEmailAddress",
+    "CaseFieldID": "recipientEmailAddresses",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "internalOrExternalMessage=\"INTERNAL\" AND internalMessageWhoToSendTo=\"OTHER\"",
     "PageID": 2,
@@ -141,18 +141,6 @@
     "PageID": 2,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 12,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "externalPartiesList",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "internalOrExternalMessage=\"EXTERNAL\"",
-    "PageID": 2,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 13,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -220,10 +208,34 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "messageContent",
     "DisplayContext": "MANDATORY",
-    "PageShowCondition": "messageSubject!=\"\"",
+    "FieldShowCondition": "messageSubject!=\"\"",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessage",
+    "DisplayContext": "COMPLEX",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "respondToMessage",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   }
 ]
