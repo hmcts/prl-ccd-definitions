@@ -41,5 +41,44 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/submitted-payment-confirmation",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "EndButtonLabel": "Make the payment"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportRespondentTaskListA",
+    "Name": "TS-Fill Respondent TaskList A",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/fillRespondentTaskList",
+    "EventEnablingCondition": "respondentTaskListA!=\"\"",
+    "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportRespondentTaskListB",
+    "Name": "TS-Fill Respondent TaskList B",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/fillRespondentTaskList",
+    "EventEnablingCondition": "respondentTaskListB!=\"\"",
+    "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportRespondentTaskListC",
+    "Name": "TS-Fill Respondent TaskList C",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/fillRespondentTaskList",
+    "EventEnablingCondition": "respondentTaskListC!=\"\"",
+    "EndButtonLabel": "Submit"
   }
 ]
