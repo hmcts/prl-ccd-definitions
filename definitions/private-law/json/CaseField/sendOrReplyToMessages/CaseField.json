@@ -22,7 +22,8 @@
     "LiveFrom": "31/03/2033",
     "CaseTypeID": "PRLAPPS",
     "ID": "internalOrExternalMessage",
-    "Label": "Are you sending an internal or external message?",
+    "Label": "Are you sending an internal message?",
+    "HintText": "External message option will be added later.",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
@@ -133,15 +134,6 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2033",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "externalPartiesList",
-    "Label": "Select who to send the message to",
-    "FieldType": "DynamicMultiSelectList",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "openMessagesList",
@@ -176,17 +168,6 @@
     "ID": "sendingMessagesExternalHint",
     "Label": "The message you enter here will be sent in a notification to the parties you've selected. This will be presented as a letter that they can access online in their account, and posted if they've chosen to receive physical letters. \n\n You can also attach documents from the case that will be included in the notification.",
     "FieldType": "Label",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2033",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "externalPartyDocuments",
-    "Label": "Add document(Optional)",
-    "HintText": "Attach a document to the letter",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "ExternalPartyDocument",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
