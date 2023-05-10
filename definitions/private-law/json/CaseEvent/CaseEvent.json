@@ -1599,5 +1599,21 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-screen-and-hearing-data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-list-on-notice/about-to-submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401AmendTypeOfApplication",
+    "Name": "Amend Type of application",
+    "Description": "Amend Type of application",
+    "DisplayOrder": 3,
+    "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUED",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   }
 ]
