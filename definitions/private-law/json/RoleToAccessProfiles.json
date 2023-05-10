@@ -1,15 +1,6 @@
 [
   {
-    "RoleName" : "hearing-centre-admin",
-    "Authorisation": "",
-    "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-courtadmin",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName" : "hearing-centre-team-leader",
+    "RoleName" : "idam:caseworker-privatelaw-courtadmin",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
     "AccessProfiles": "caseworker-privatelaw-courtadmin",
@@ -27,16 +18,16 @@
     "CaseAccessCategories": ""
   },
   {
-    "RoleName" : "tribunal-caseworker",
+    "RoleName" : "idam:caseworker-privatelaw-judge",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-la",
+    "AccessProfiles": "caseworker-privatelaw-judge",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
   },
   {
-    "RoleName" : "senior-tribunal-caseworker",
+    "RoleName" : "idam:caseworker-privatelaw-la",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
     "AccessProfiles": "caseworker-privatelaw-la",
@@ -225,6 +216,15 @@
     "CaseAccessCategories": ""
   },
   {
+    "RoleName" : "idam:caseworker-privatelaw-externaluser-viewonly",
+    "Authorisation": "",
+    "CaseTypeID": "PRLAPPS",
+    "AccessProfiles": "caseworker-privatelaw-externaluser-viewonly",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+   },
+   {
     "RoleName": "idam:caseworker-privatelaw-cafcass",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
@@ -237,74 +237,63 @@
     "RoleName": "ctsc-team-leader",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-courtadmin",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName": "ctsc",
-    "Authorisation": "",
-    "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-courtadmin",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
+    "AccessProfiles": "ctsc-team-leader",
+    "ReadOnly": "Y"
   },
   {
     "RoleName": "specific-access-judiciary",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-judge",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "challenged-access-judiciary",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-judge",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "specific-access-legal-operations",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-la",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "challenged-access-legal-operations",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-la",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "specific-access-admin",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "challenged-access-admin",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "specific-access-ctsc",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
     "RoleName": "challenged-access-ctsc",
     "Authorisation": "",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin",
+    "AccessProfiles": "GS_profile",
     "ReadOnly": "Y"
   },
   {
@@ -312,54 +301,48 @@
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-admin",
     "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin"
+    "AccessProfiles": "GS_profile"
   },
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-judiciary",
     "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin"
+    "AccessProfiles": "GS_profile"
   },
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-legal-operations",
     "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin"
+    "AccessProfiles": "GS_profile"
   },
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "RoleName": "hmcts-ctsc",
     "ReadOnly": "Y",
-    "AccessProfiles": "GS_profile,caseworker-privatelaw-courtadmin"
+    "AccessProfiles": "GS_profile"
   },
   {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
     "RoleName" : "circuit-judge",
-    "Authorisation": "",
-    "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-judge,GS_profile",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
+    "ReadOnly": "Y",
+    "AccessProfiles": "GS_profile"
   },
   {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
     "RoleName" : "leadership-judge",
-    "Authorisation": "",
-    "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-judge,GS_profile",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
+    "ReadOnly": "Y",
+    "AccessProfiles": "GS_profile"
   },
   {
-    "RoleName" : "judge",
-    "Authorisation": "",
+    "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
-    "AccessProfiles": "caseworker-privatelaw-judge,GS_profile",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
+    "RoleName" : "judge",
+    "ReadOnly": "Y",
+    "AccessProfiles": "GS_profile"
   }
 ]
