@@ -77,6 +77,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/about-to-submit-case-creation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
@@ -991,7 +992,7 @@
     "Description": "Delete application",
     "DisplayOrder": 110,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "DELETED",
+    "PostConditionState": "REQUESTED_FOR_DELETION",
     "SecurityClassification": "Public",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/callback/case-deletion/about-to-submit",
     "ShowSummary": "Y",
@@ -1624,7 +1625,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1710,7 +1712,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
-    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+    "Publish": "Y"
    },
    {
     "LiveFrom": "01/03/2023",
@@ -1723,6 +1725,22 @@
     "PostConditionState": "CASE_WITHDRAWN",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "listOnNotice",
+    "Name": "List on notice",
+    "Description": "List on notice",
+    "PreConditionState(s)": "JUDICIAL_REVIEW",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-list-on-notice",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listOnNotice",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "19/10/22",
@@ -1748,5 +1766,21 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401ListOnNotice",
+    "Name": "List on notice",
+    "Description": "List on notice",
+    "PreConditionState(s)": "JUDICIAL_REVIEW",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-screen-and-hearing-data",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-list-on-notice/about-to-submit",
+    "Publish": "Y"
   }
 ]
