@@ -180,5 +180,35 @@
             "CRUD": "R"
           }
       ]
-    }
+    },
+     {
+       "LiveFrom": "10/05/2023",
+       "CaseTypeID": "PRLAPPS",
+       "CaseFieldID": "reviewDoc",
+       "AccessControl": [
+           {
+             "UserRoles": [
+               "caseworker-privatelaw-la",
+               "caseworker-privatelaw-judge",
+               "caseworker-privatelaw-superuser"
+             ],
+             "CRUD": "R"
+           },
+           {
+             "UserRoles": [
+               "courtnav",
+               "caseworker-wa-task-configuration"
+             ],
+             "CRUD": "CRU"
+           },
+           {
+               "UserRoles": [
+                 "caseworker-privatelaw-systemupdate",
+                 "caseworker-privatelaw-courtadmin"
+               ],
+               "CRUD": "CRUD"
+           }
+       ]
+     }
+
 ]
