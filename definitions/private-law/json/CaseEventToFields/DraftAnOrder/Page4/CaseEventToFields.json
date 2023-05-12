@@ -10,7 +10,6 @@
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-fields",
-    "PageShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" OR createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
   },
   {
@@ -34,6 +33,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "PageShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
