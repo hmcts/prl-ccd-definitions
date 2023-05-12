@@ -5,7 +5,7 @@ const envs = require('./env.json');
 const environment = process.argv[2];
 const scriptToRun = process.argv[3];
 // Capture optional arguments after the scriptToRun argument
-const arg4MagicNumberFix = 4
+const arg4MagicNumberFix = 4;
 const optionalArgs = process.argv.slice(arg4MagicNumberFix).join(' ');
 
 if (!environment || !scriptToRun) {
