@@ -56,7 +56,6 @@ withPipeline("nodejs", product, component) {
 
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
-  syncBranchesWithMaster(['demo'])
   enableSlackNotifications(channel)
 
   afterAlways('test') {
@@ -90,7 +89,7 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:preview') {
     yarnBuilder.yarn('reset-ccd-submodule')
-    yarnBuilder.yarn('generate-excel-preview')
+    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
@@ -100,15 +99,6 @@ withPipeline("nodejs", product, component) {
 
   afterAlways('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
-  }
-
-
-  afterAlways('functionalTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-  }
-
-  afterAlways('functionalTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
   before('smoketest:aat') {
@@ -125,6 +115,14 @@ withPipeline("nodejs", product, component) {
 
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+  }
+
+  afterAlways('functionalTest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+  }
+
+  afterAlways('functionalTest:aat') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 }
 
