@@ -169,8 +169,10 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalOrExternalMessage",
-    "FieldType": "Text",
-    "ElementLabel": "Internal or external message",
+    "ElementLabel": "Are you sending an internal message?",
+    "HintText": "External message option will be added later.",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -178,8 +180,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalMessageWhoToSendTo",
-    "FieldType": "Text",
-    "ElementLabel": "Internal message who to send to",
+    "ElementLabel": "Who to send to",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -242,8 +245,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "messageAbout",
-    "FieldType": "Text",
     "ElementLabel": "Message about?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "MessageAboutEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -317,27 +321,6 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "internalOrExternalMessageEnum",
-    "ElementLabel": "Are you sending an internal message?",
-    "HintText": "External message option will be added later.",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalExternalMessageEnum",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "internalMessageWhoToSendToEnum",
-    "ElementLabel": "Who to send to",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
     "ListElementCode": "judicialOrMagistrateTierList",
     "ElementLabel": "Select a judicial tier or enter a judge's name manually",
     "HintText": "Select Judicial tier",
@@ -360,16 +343,6 @@
     "ListElementCode": "ctscEmailList",
     "ElementLabel": "CTSC email",
     "FieldType": "DynamicList",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "messageAboutEnum",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "MessageAboutEnum",
-    "ElementLabel": "Message about?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },

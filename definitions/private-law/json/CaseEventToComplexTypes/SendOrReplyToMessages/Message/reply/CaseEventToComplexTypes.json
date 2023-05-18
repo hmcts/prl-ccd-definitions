@@ -5,12 +5,10 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "internalMessageWhoToSendToEnum",
+    "ListElementCode": "internalMessageWhoToSendTo",
     "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "ShowSummaryChangeOption": "Yes"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -23,8 +21,7 @@
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\"",
-    "ShowSummaryChangeOption": "Yes"
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -36,7 +33,7 @@
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\"",
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -50,7 +47,7 @@
     "EventHintText": "Depending on your selection, the email template will change",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -63,7 +60,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -74,9 +71,7 @@
     "ListElementCode": "internalMessageUrgent",
     "EventElementLabel": "Is this urgent?",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "ShowSummaryChangeOption": "Yes"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -88,8 +83,6 @@
     "EventElementLabel": "Your message",
     "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
     "FieldDisplayOrder": "7",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "ShowSummaryChangeOption": "Yes"
+    "DisplayContext": "MANDATORY"
   }
 ]

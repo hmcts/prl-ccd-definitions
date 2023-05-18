@@ -5,12 +5,11 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
-    "ListElementCode": "internalOrExternalMessageEnum",
+    "ListElementCode": "internalOrExternalMessage",
     "EventElementLabel": "Are you sending an internal message?",
     "EventHintText": "External feature will be added later.",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -18,11 +17,11 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
-    "ListElementCode": "internalMessageWhoToSendToEnum",
+    "ListElementCode": "internalMessageWhoToSendTo",
     "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalOrExternalMessageEnum=\"INTERNAL\""
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"INTERNAL\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -35,7 +34,7 @@
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -47,7 +46,7 @@
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -60,7 +59,7 @@
     "EventHintText": "Depending on your selection, the email template will change",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -73,7 +72,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -85,7 +84,7 @@
     "EventElementLabel": "Is this urgent?",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalOrExternalMessageEnum=\"INTERNAL\" OR chooseSendOrReply=\"REPLY\""
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"INTERNAL\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -93,11 +92,10 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
-    "ListElementCode": "messageAboutEnum",
+    "ListElementCode": "messageAbout",
     "EventElementLabel": "What is this message about?",
     "FieldDisplayOrder": "8",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -109,7 +107,7 @@
     "EventElementLabel": "Enter the message subject",
     "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.messageAboutEnum!=\"\""
+    "FieldShowCondition": "sendMessageObject.messageAbout!=\"\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -121,7 +119,7 @@
     "EventElementLabel": "Select the application",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.messageAboutEnum=\"APPLICATION\""
+    "FieldShowCondition": "sendMessageObject.messageAbout=\"APPLICATION\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -133,7 +131,7 @@
     "EventElementLabel": "Select hearing",
     "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.messageAboutEnum=\"HEARING\""
+    "FieldShowCondition": "sendMessageObject.messageAbout=\"HEARING\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -145,6 +143,6 @@
     "EventElementLabel": "Select file",
     "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.messageAboutEnum=\"REVIEW_SUBMITTED_DOCUMENTS\""
+    "FieldShowCondition": "sendMessageObject.messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\""
   }
 ]
