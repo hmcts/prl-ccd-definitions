@@ -5,7 +5,7 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "internalMessageWhoToSendToEnum",
+    "ListElementCode": "internalMessageWhoToSendTo",
     "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
@@ -23,7 +23,7 @@
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\"",
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -36,7 +36,7 @@
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"JUDICIARY\"",
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -50,7 +50,7 @@
     "EventHintText": "Depending on your selection, the email template will change",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -63,7 +63,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendToEnum=\"OTHER\""
+    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
