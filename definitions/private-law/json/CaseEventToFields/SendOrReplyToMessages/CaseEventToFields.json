@@ -126,12 +126,24 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "replyMessageObject",
-    "DisplayContext": "COMPLEX",
+    "CaseFieldID": "messageReplyTableLabel2",
+    "DisplayContext": "READONLY",
     "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   }
 ]
