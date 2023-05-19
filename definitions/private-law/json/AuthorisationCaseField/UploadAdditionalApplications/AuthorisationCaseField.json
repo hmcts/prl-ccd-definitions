@@ -248,57 +248,27 @@
     "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "courtnav",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "uploadC2Link",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "courtnav"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-caa"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "31/03/2022",
@@ -336,11 +306,11 @@
     "CRUD": "R"
   },
   {
-  "LiveFrom": "31/03/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseFieldID": "additionalApplicationsBundle",
-  "UserRole": "caseworker-privatelaw-systemupdate",
-  "CRUD": "CRU"
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "additionalApplicationsBundle",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "31/03/2022",
