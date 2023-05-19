@@ -7,7 +7,6 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "internalOrExternalMessage",
     "EventElementLabel": "Are you sending an internal message?",
-    "EventHintText": "External feature will be added later.",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -142,6 +141,18 @@
     "ListElementCode": "submittedDocumentsList",
     "EventElementLabel": "Select file",
     "FieldDisplayOrder": "12",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "selectedDocument",
+    "EventElementLabel": "Document",
+    "FieldDisplayOrder": "13",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\""
   }
