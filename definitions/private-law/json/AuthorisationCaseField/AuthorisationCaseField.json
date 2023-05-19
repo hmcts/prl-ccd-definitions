@@ -124,7 +124,8 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "citizen",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa"
         ],
         "CRUD": "R"
       }
@@ -144,6 +145,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -165,7 +167,21 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentTaskListLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-caa"
         ],
         "CRUD": "R"
       }
@@ -186,7 +202,8 @@
       },
       {
         "UserRoles": [
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa"
         ],
         "CRUD": "R"
       }
@@ -207,6 +224,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -228,6 +246,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -270,6 +289,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -312,6 +332,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -354,6 +375,7 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
           "citizen"
         ],
         "CRUD": "R"
@@ -398,11 +420,19 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "citizen",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa"
         ],
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseHistory",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -15692,6 +15722,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "flagLauncher",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "flagLauncher",
+    "UserRole": "caseworker-caa",
     "CRUD": "R"
   },
   {
