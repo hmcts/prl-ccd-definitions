@@ -1,5 +1,41 @@
 [
   {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageFrom",
+    "FieldType": "Text",
+    "ElementLabel": "From",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageTo",
+    "FieldType": "Text",
+    "ElementLabel": "Message to",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageDate",
+    "FieldType": "Text",
+    "ElementLabel": "Message date",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "isUrgent",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Urgent",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "10/11/2021",
     "ID": "Message",
     "ListElementCode": "senderEmail",
@@ -133,8 +169,10 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalOrExternalMessage",
-    "FieldType": "Text",
-    "ElementLabel": "Internal or external message",
+    "ElementLabel": "Are you sending an internal message?",
+    "HintText": "External message option will be added later.",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -142,8 +180,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalMessageWhoToSendTo",
-    "FieldType": "Text",
-    "ElementLabel": "Internal message who to send to",
+    "ElementLabel": "Who to send to",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -206,8 +245,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "messageAbout",
-    "FieldType": "Text",
     "ElementLabel": "Message about?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "MessageAboutEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -275,6 +315,71 @@
     "FieldType": "Document",
     "ElementLabel": "File",
     "CategoryID": "sendAndReply",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "replyHistory",
+    "ElementLabel": "Message history",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "MessageHistory",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "judicialOrMagistrateTierList",
+    "ElementLabel": "Select a judicial tier or enter a judge's name manually",
+    "HintText": "Select Judicial tier",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "sendReplyJudgeName",
+    "ElementLabel": "Enter name of Judge",
+    "FieldType": "JudicialUser",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "ctscEmailList",
+    "ElementLabel": "CTSC email",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "applicationsList",
+    "ElementLabel": "Linked applications list",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "futureHearingsList",
+    "ElementLabel": "Future hearings list",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "submittedDocumentsList",
+    "ElementLabel": "Submitted documents list",
+    "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
