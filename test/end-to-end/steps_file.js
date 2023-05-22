@@ -27,11 +27,16 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const manageOrder = require('./pages/ManageOrders');
+const manageOrderHearing = require('./pages/ManageOrderHearing');
 
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsCourtAdmin() {
+      return LoginPage.loginAsCourtAdmin();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -44,6 +49,9 @@ module.exports = () => {
     },
     createCase() {
       return CreateCasePage.createNewCaseC100();
+    },
+    createCase_TS() {
+      return CreateCasePage.createNewCaseC100_TS();
     },
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
@@ -132,6 +140,9 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPay_TS() {
+      return submitAndPay.dummyPaymentConfirmation();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -141,8 +152,20 @@ module.exports = () => {
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
     },
+    issueAndSendToLocalCourt() {
+      return caseList.issueAndSendToLocalCourt();
+    },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    manageOrderCreateOrderC21() {
+      return manageOrder.createAnOrderC21();
+    },
+    fillHearingDetails() {
+      return manageOrderHearing.fillHearingDetails();
+    },
+    submitManageOrder() {
+      return manageOrder.submitManageOrder();
     }
   });
 };

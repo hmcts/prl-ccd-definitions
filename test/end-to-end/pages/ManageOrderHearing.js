@@ -12,7 +12,7 @@ module.exports = {
     courtList: '#ordersHearingDetails_0_courtList',
     hearingJudgeNameAndEmail: '#ordersHearingDetails_0_hearingJudgeNameAndEmail',
     additionalHearingDetails: '#ordersHearingDetails_0_additionalHearingDetails',
-    instructionsForRemoteHearing: '#ordersHearingDetails_0_instructionsForRemoteHearing',
+    instructionsForRemoteHearing: '#ordersHearingDetails_0_instructionsForRemoteHearing'
 
   },
   async fillHearingDetails() {
@@ -29,6 +29,6 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.instructionsForRemoteHearing, 'JOINING INSTRUCTIONS');
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
-  },
+  }
 
 };
