@@ -435,7 +435,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoPositionStatementOtherCheckDetails",
     "PageFieldDisplayOrder": 37,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -495,7 +495,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoMiamOtherCheckDetails",
     "PageFieldDisplayOrder": 42,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -734,7 +734,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoFactFindingOtherCheck",
     "PageFieldDisplayOrder": 62,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -795,7 +795,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoInterpreterOtherDetailsCheck",
     "PageFieldDisplayOrder": 67,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -859,7 +859,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\" OR sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassCymru\" OR sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\" OR sdoCafcassOrCymruList CONTAINS \"section7Report\" OR sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsCmyru\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\" OR sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassCymru\" OR sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\" OR sdoCafcassOrCymruList CONTAINS \"section7Report\" OR sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsCmyru\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -871,7 +871,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -883,7 +883,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -895,7 +895,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -903,11 +903,11 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoCafcassFileAndServeCheck",
     "PageFieldDisplayOrder": 76,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -919,7 +919,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassFileAndServeCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassFileAndServeCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -931,7 +931,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassFileAndServeCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"safeguardingCafcass\""
+    "FieldShowCondition": "sdoCafcassFileAndServeCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"safeguardingCafcassOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -975,7 +975,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "safeguardingCafcassCymruCheck",
     "PageFieldDisplayOrder": 82,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1015,7 +1015,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1027,7 +1027,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1035,11 +1035,11 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoPartyToProvideDetailsCheck",
     "PageFieldDisplayOrder": 87,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\""
+    "FieldShowCondition": "sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1051,7 +1051,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoPartyToProvideDetailsCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\""
+    "FieldShowCondition": "sdoPartyToProvideDetailsCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1063,7 +1063,7 @@
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "sdoPartyToProvideDetailsCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"partyToProvideDetails\""
+    "FieldShowCondition": "sdoPartyToProvideDetailsCheck =\"other\" AND sdoCafcassOrCymruList CONTAINS \"partyToProvideDetailsOnly\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1095,7 +1095,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoNewPartnersToCafcassCheck",
     "PageFieldDisplayOrder": 92,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1251,7 +1251,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSection7Check",
     "PageFieldDisplayOrder": 105,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1335,7 +1335,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoLocalAuthorityCheck",
     "PageFieldDisplayOrder": 112,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1431,7 +1431,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoTransferCourtDetailsCheck",
     "PageFieldDisplayOrder": 120,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1503,7 +1503,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoCrossExaminationCourtCheck",
     "PageFieldDisplayOrder": 126,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1695,7 +1695,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoWitnessStatementsCheck",
     "PageFieldDisplayOrder": 142,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1779,7 +1779,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoInstructionsFilingCheck",
     "PageFieldDisplayOrder": 149,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -1923,7 +1923,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoMedicalDiscFilingCheck",
     "PageFieldDisplayOrder": 161,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -2043,7 +2043,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoLetterFromDiscGpCheck",
     "PageFieldDisplayOrder": 171,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -2164,7 +2164,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoLetterFromSchoolCheck",
     "PageFieldDisplayOrder": 181,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -2212,7 +2212,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoScheduleOfAllegationsOption",
     "PageFieldDisplayOrder": 185,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
@@ -2284,7 +2284,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoDisClosureProceedingCheck",
     "PageFieldDisplayOrder": 191,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 17,
     "PageDisplayOrder": 17,
     "ShowSummaryChangeOption": "Y",
