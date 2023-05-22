@@ -66,5 +66,8 @@ module.exports = {
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+    await I.wait('4');
+    await I.retry(retryCount).click('Draft orders');
+    await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
   }
 };
