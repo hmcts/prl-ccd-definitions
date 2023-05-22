@@ -11,6 +11,10 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Submit and pay');
   },
 
+  async triggerEvent_TS() {
+    await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
+  },
+
   async confidentialityStatement() {
     await I.wait('10');
     await I.retry(retryCount).waitForText('Confidentiality Statement');

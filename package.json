@@ -22,7 +22,7 @@
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test:uploadFile": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
     "test:functional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
-    "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
+    "test:fullfunctional": "codeceptjs run --steps --grep \"@nightly\" -c test/end-to-end/codecept.conf.js",
     "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",

@@ -52,6 +52,9 @@ module.exports = () => {
     createCase() {
       return CreateCasePage.createNewCaseC100();
     },
+    createCase_TS() {
+      return CreateCasePage.createNewCaseC100_TS();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
@@ -163,6 +166,9 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPay_TS() {
+      return submitAndPay.dummyPaymentConfirmation();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -171,6 +177,9 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
+    },
+    issueAndSendToLocalCourt() {
+      return caseList.issueAndSendToLocalCourt();
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
