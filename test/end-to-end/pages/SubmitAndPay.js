@@ -8,6 +8,10 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Submit and pay');
   },
 
+  async triggerEvent_TS() {
+    await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
+  },
+
   async confidentialityStatement() {
     I.wait('10');
     await I.retry(retryCount).waitForText('Confidentiality Statement');
@@ -38,6 +42,13 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
+    await I.retry(retryCount).click('click here to pay');
+    await I.wait('3');
     // await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+  async dummyPaymentConfirmation() {
+    await this.triggerEvent_TS();
+    await I.retry(retryCount).click('Make the payment');
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };

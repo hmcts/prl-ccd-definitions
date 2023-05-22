@@ -17,7 +17,7 @@ module.exports = {
     recticalsOrPreambels: '#recitalsOrPreamble',
     orderDirections: '#orderDirections',
     furtherDirections: '#furtherDirectionsIfRequired',
-    furtherInformation: '#furtherInformationIfRequired',
+    furtherInformation: '#furtherInformationIfRequired'
   },
   async selectOrder() {
     await I.retry(retryCount).triggerEvent('Manage orders');
@@ -65,5 +65,5 @@ module.exports = {
     await I.wait('4');
     await I.retry(retryCount).click('Draft orders');
     await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
-  },
+  }
 };

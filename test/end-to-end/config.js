@@ -5,6 +5,10 @@ module.exports = {
     email: 'prl-e2etestsolicitor@mailinator.com',
     password: defaultPassword
   },
+  legalProfessionalUserTwo: {
+    email: 'fprl_caseworker_courtadm_test@mailinator.com',
+    password: defaultPassword
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',

@@ -1,6 +1,8 @@
 const { I } = inject();
 const config = require('../config');
 
+const retryCount = 3;
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -15,7 +17,8 @@ module.exports = {
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
-    spinner: 'xuilib-loading-spinner'
+    spinner: 'xuilib-loading-spinner',
+    listofcourts: 'select[id="courtList"]'
   },
 
   navigate() {
@@ -58,6 +61,16 @@ module.exports = {
 
   seeCaseInSearchResult(caseId) {
     I.seeElement(this.locateCase(normalizeCaseId(caseId)));
+  },
+
+  async issueAndSendToLocalCourt() {
+    await I.retry(retryCount).triggerEvent('Issue and send to local court');
+    I.wait('5');
+    await I.waitForElement(this.fields.listofcourts);
+    await I.retry(retryCount).selectOption(this.fields.listofcourts, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click('Submit');
   }
 
 };
