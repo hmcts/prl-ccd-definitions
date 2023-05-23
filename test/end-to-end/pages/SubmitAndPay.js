@@ -42,13 +42,14 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
+    await I.wait('3');
     await I.retry(retryCount).click('click here to pay');
     await I.wait('3');
-    // await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   async dummyPaymentConfirmation() {
     await this.triggerEvent_TS();
     await I.retry(retryCount).click('Make the payment');
+    await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };
