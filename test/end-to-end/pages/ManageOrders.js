@@ -38,6 +38,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherInformation, 'TEST FURTHER INFORMATION');
     await I.retry(retryCount).click('Continue');
+    await I.wait('7');
   },
 
   async fillGenericScreen() {
@@ -62,8 +63,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).click('Submit');
-    await I.wait('4');
-    await I.retry(retryCount).click('Draft orders');
-    await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
+    await I.wait('5');
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };
