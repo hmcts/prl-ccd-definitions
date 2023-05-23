@@ -7,7 +7,6 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "internalOrExternalMessage",
     "EventElementLabel": "Are you sending an internal message?",
-    "EventHintText": "External feature will be added later.",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -33,7 +32,7 @@
     "EventElementLabel": "Select a judicial tier or enter a judge's name manually",
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
@@ -45,7 +44,7 @@
     "ListElementCode": "sendReplyJudgeName",
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
@@ -144,5 +143,17 @@
     "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "selectedDocument",
+    "EventElementLabel": "Document",
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "selectedDocument=\"DO_NOT_SHOW\""
   }
 ]

@@ -22,7 +22,71 @@
     "ID": "MessageHistory",
     "ListElementCode": "messageDate",
     "FieldType": "Text",
-    "ElementLabel": "Message date",
+    "ElementLabel": "Date sent",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedApplicationCode",
+    "FieldType": "Text",
+    "ElementLabel": "Selected application code",
+    "FieldShowCondition": "selectedApplicationCode=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageSubject",
+    "FieldType": "Text",
+    "ElementLabel": "Message subject",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageContent",
+    "FieldType": "TextArea",
+    "ElementLabel": "Message",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalOrExternalMessage",
+    "ElementLabel": "Are you sending an internal message?",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalMessageWhoToSendTo",
+    "ElementLabel": "Who to send to",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "judicialOrMagistrateTierValue",
+    "FieldType": "Text",
+    "ElementLabel": "Judicial or magistrate Tier",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "judgeName",
+    "FieldType": "Text",
+    "ElementLabel": "Judge Name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -31,7 +95,80 @@
     "ID": "MessageHistory",
     "ListElementCode": "isUrgent",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Urgent",
+    "ElementLabel": "Internal message urgent?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedCtscEmail",
+    "FieldType": "Text",
+    "ElementLabel": "CTSC email",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "recipientEmailAddresses",
+    "FieldType": "Text",
+    "ElementLabel": "Recipient email addresses",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "selecteddApplicationValue",
+    "FieldType": "Text",
+    "ElementLabel": "Selected Application",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedFutureHearingValue",
+    "FieldType": "Text",
+    "ElementLabel": "Selected Future Hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedSubmittedDocumentValue",
+    "FieldType": "Text",
+    "ElementLabel": "Submitted Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Document",
+    "CategoryID": "sendAndReply",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "selectedApplicationValue",
+    "FieldType": "Text",
+    "ElementLabel": "Application",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "messageAbout",
+    "FieldType": "Text",
+    "ElementLabel": "Message about?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -170,7 +307,6 @@
     "ID": "Message",
     "ListElementCode": "internalOrExternalMessage",
     "ElementLabel": "Are you sending an internal message?",
-    "HintText": "External message option will be added later.",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
@@ -313,7 +449,7 @@
     "ID": "Message",
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
-    "ElementLabel": "File",
+    "ElementLabel": "Document",
     "CategoryID": "sendAndReply",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -360,7 +496,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "applicationsList",
-    "ElementLabel": "Linked applications list",
+    "ElementLabel": "Applications list",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
