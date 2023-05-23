@@ -35,7 +35,9 @@ module.exports = {
     await I.wait('2');
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
     await I.retry(retryCount).click('Sign out');
-    await I.retry(retryCount).amOnPage(`${`${process.env.XUI_WEB_URL}` + '/case-details/'}${caseId}`);
+    await I.wait('5');
+    const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+    await I.retry(retryCount).amOnPage(pageUrl);
     try {
       // await I.retry(retryCount).click('#cookie-accept-submit');
       // await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
