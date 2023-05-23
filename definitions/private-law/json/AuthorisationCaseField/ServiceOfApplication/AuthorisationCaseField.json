@@ -658,10 +658,29 @@
     "CRUD": "R"
   },
   {
-    "LiveFrom": "11/05/2022",
+    "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "emailNotificationDetails",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRUD"
+    "CaseFieldID": "servedApplicationDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
