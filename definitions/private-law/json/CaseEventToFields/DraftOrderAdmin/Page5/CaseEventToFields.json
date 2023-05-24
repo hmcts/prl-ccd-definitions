@@ -10,7 +10,7 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-custom-fields",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\""
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\""
   },
   {
     "LiveFrom": "51/05/2022",
@@ -208,41 +208,5 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "orderType=\"blankOrderOrDirections\" OR orderType=\"other\" OR orderType=\"blank\""
-  },
-  {
-    "LiveFrom": "51/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "orderType",
-    "PageFieldDisplayOrder": 24,
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "isOrderCreatedBySolicitor",
-    "PageFieldDisplayOrder": 27,
-    "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition" : "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "isHearingPageNeeded",
-    "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 28,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition" : "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
   }
 ]
