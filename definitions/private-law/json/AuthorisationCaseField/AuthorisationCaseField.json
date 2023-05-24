@@ -125,7 +125,8 @@
           "[CREATOR]",
           "citizen",
           "caseworker-wa-task-configuration",
-          "caseworker-caa"
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -146,6 +147,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -168,6 +170,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -181,7 +184,8 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-caa"
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -203,7 +207,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
-          "caseworker-caa"
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -225,6 +230,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -247,6 +253,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -290,6 +297,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -333,6 +341,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -376,6 +385,7 @@
         "UserRoles": [
           "caseworker-wa-task-configuration",
           "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -421,7 +431,8 @@
           "[CREATOR]",
           "citizen",
           "caseworker-wa-task-configuration",
-          "caseworker-caa"
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -432,6 +443,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseHistory",
     "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseHistory",
+    "UserRole": "caseworker-approver",
     "CRUD": "R"
   },
   {
@@ -14052,6 +14070,20 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantsFL401",
+    "UserRole": "caseworker-caa",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsFL401",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsFL401",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "R"
   },
@@ -15306,6 +15338,13 @@
     "CRUD": "CRUD"
   },
   {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantCaseName",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRUD"
+  },
+  {
     "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantCaseName",
@@ -15322,6 +15361,13 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familymanCaseNumber",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantName",
     "UserRole": "caseworker-caa",
     "CRUD": "CRUD"
@@ -15329,8 +15375,22 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantName",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentName",
     "UserRole": "caseworker-caa",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentName",
+    "UserRole": "caseworker-approver",
     "CRUD": "CRUD"
   },
   {
@@ -15743,6 +15803,13 @@
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseSubmittedTimeStamp",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseSubmittedTimeStamp",
     "UserRole": "citizen",
     "CRUD": "CRU"
   },
@@ -15813,6 +15880,13 @@
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dateSubmittedAndTime",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "dateSubmittedAndTime",
     "UserRole": "citizen",
     "CRUD": "CRU"
   },
@@ -15823,6 +15897,7 @@
       {
         "UserRoles": [
           "caseworker-caa",
+          "caseworker-approver",
           "caseworker-ras-validation"
         ],
         "CRUD": "R"
@@ -16303,6 +16378,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "flagLauncher",
     "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "flagLauncher",
+    "UserRole": "caseworker-approver",
     "CRUD": "R"
   },
   {
