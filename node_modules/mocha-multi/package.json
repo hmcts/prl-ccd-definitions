@@ -1,0 +1,51 @@
+{
+  "name": "mocha-multi",
+  "version": "1.1.7",
+  "description": "A bit of a hack to get multiple reporters working with mocha",
+  "main": "mocha-multi.js",
+  "scripts": {
+    "test": "run-s lint verify:*",
+    "ci": "run-s -c lint verify:*",
+    "verify:node": "node ./verify.js",
+    "verify:sh": "./verify all",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/glenjamin/mocha-multi.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "Glen Mailer <glenjamin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glenjamin/mocha-multi/issues"
+  },
+  "homepage": "https://github.com/glenjamin/mocha-multi",
+  "devDependencies": {
+    "async": "^3.0.1",
+    "chalk": "^2.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "mocha": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "q": "^1.5.1",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "is-string": "^1.0.4",
+    "lodash.once": "^4.1.1",
+    "mkdirp": "^1.0.4",
+    "object-assign": "^4.1.1"
+  },
+  "peerDependencies": {
+    "mocha": ">=2.2.0 <7 || >=9"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
