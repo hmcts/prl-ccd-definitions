@@ -158,7 +158,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "FieldShowCondition": "payAgreeStatement=\"agree\""
+    "FieldShowCondition": "payAgreeStatement=\"agree\" AND isEngDocGen=\"No\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -181,7 +181,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "FieldShowCondition": "payAgreeStatement=\"agree\""
+    "FieldShowCondition": "payAgreeStatement=\"agree\" AND isEngDocGen=\"Yes\""
   },
   {
     "LiveFrom": "02/12/2021",
@@ -211,6 +211,17 @@
     "CaseEventID": "submitAndPay",
     "CaseFieldID": "caseworkerEmailAddress",
     "PageFieldDisplayOrder": 14,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "submitAndPayAgreeStmtLabel=\"never_show\""
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitAndPay",
+    "CaseFieldID": "courtName",
+    "PageFieldDisplayOrder": 15,
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,

@@ -2,16 +2,19 @@
 
 Project creating Family Private Law (PRL) CCD config files.
 
-Updated with Release 3.1 fixes
+Updated with Release 4.0
 ## Usage
 
-Clone project and in the project directory run:
+Clone project and in the project directory run: 
  - `yarn install && yarn reset-ccd-submodule`
 
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
 
 #### Troubleshooting
+
+### Managing Preview environment PODs
+Make sure you have added the label 'keep-helm' while creating the PR. Otherwise, add the label and re-trigger the build.
 
 ### Error: Cannot find modules
 
@@ -62,4 +65,13 @@ try to reset definition processor submodule with `yarn reset-ccd-submodule`. Pre
 ```$bash
  SHOW_BROWSER_WINDOW=true PARALLEL_CHUNKS=5 yarn test
 ```
+## Changes after yarn upgrade
+
+After the yarn upgrade you need to follow the below steps to ensure that yarn commands are working fine in local:
+1. Ensure that branch is synched with master
+2. Run _yarn install_ in local
+3. Run _yarn reset-ccd-submodule_ in local
+4. Now you can run the yarn commands locally.
+5. Also the file to update the environment urls is now env.json (env.json is read by json-env.js)
+
 

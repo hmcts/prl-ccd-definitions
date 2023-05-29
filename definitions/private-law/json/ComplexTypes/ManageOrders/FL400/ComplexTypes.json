@@ -15,7 +15,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Court address",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -24,7 +25,8 @@
     "FieldType": "Text",
     "ElementLabel": "Case number",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -33,7 +35,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -42,7 +45,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant reference",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -51,7 +55,8 @@
     "FieldType": "Text",
     "ElementLabel": "Respondent name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -60,7 +65,8 @@
     "FieldType": "Text",
     "ElementLabel": "Respondent reference",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -69,7 +75,8 @@
     "FieldType": "Date",
     "ElementLabel": "Respondent date of birth",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "fl404bHearingOutcome=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -266,7 +273,7 @@
     "ID": "FL400",
     "ListElementCode": "fl404bAddMoreDetailsTelephone",
     "FieldType": "TextArea",
-    "ElementLabel": "Add more details",
+    "ElementLabel": "Add further details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -275,7 +282,7 @@
     "ID": "FL400",
     "ListElementCode": "fl404bAddMoreDetailsProperty",
     "FieldType": "TextArea",
-    "ElementLabel": "Add more details",
+    "ElementLabel": "Add further details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -284,7 +291,7 @@
     "ID": "FL400",
     "ListElementCode": "fl404bAddMoreDetailsPhoneChild",
     "FieldType": "TextArea",
-    "ElementLabel": "Add more details",
+    "ElementLabel": "Add further details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -302,7 +309,7 @@
     "ID": "FL400",
     "ListElementCode": "fl404bAddMoreDetailsSchool",
     "FieldType": "TextArea",
-    "ElementLabel": "Add more details",
+    "ElementLabel": "Add further details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -638,6 +645,7 @@
     "ListElementCode": "fl404bDateAndTimeOfNextHearing",
     "FieldType": "DateTime",
     "ElementLabel": "Date and place of next hearing",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -647,7 +655,7 @@
     "ListElementCode": "addDirections",
     "FieldType": "Collection",
     "FieldTypeParameter": "DirectionDetails",
-    "ElementLabel": "Add directions",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -657,7 +665,7 @@
     "ListElementCode": "orderEndDateAndTimeOptions",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "dateOrderEndsTimeEnum",
-    "ElementLabel": "Date order ends and time",
+    "ElementLabel": "How long will the order be in force?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -667,7 +675,7 @@
     "ListElementCode": "orderSpecifiedDateTime",
     "FieldType": "DateTime",
     "ElementLabel": " ",
-    "DisplayContextParameter": "#DATETIMEDISPLAY(dd-MM-yyyy hh:mm)",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -676,7 +684,7 @@
     "ID": "OtherDraftOrderDetails",
     "ListElementCode": "createdBy",
     "FieldType": "Text",
-    "ElementLabel": "Created by",
+    "ElementLabel": "Order made by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -718,6 +726,57 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "reviewRequiredBy",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "AmendOrderCheckEnum",
+    "ElementLabel": "Status",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "reviewRequiredBy=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfJudgeForReview",
+    "FieldType": "Text",
+    "ElementLabel": "Name Judge For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfJudgeForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfLaForReview",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfJudgeForReviewOrder",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "nameOfLaForReviewOrder",
+    "FieldType": "Text",
+    "ElementLabel": "Name LA For Review",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "nameOfLaForReview=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "magistrateLastName",
     "FieldType": "Collection",
@@ -733,6 +792,16 @@
     "FieldType": "Date",
     "ElementLabel": "Date order made",
     "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "approvalDate",
+    "FieldType": "Date",
+    "ElementLabel": "Approval date",
+    "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
@@ -742,25 +811,37 @@
     "FieldType": "Text",
     "ElementLabel": "Add recitals or preamble",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "orderDirections",
     "FieldType": "Text",
-    "ElementLabel": "Add order directions",
+    "ElementLabel": "Add directions",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "furtherDirectionsIfRequired",
     "FieldType": "Text",
-    "ElementLabel": "Add further directions, if required",
+    "ElementLabel": "Add further directions if these are required",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "furtherInformationIfRequired",
+    "FieldType": "Text",
+    "ElementLabel": "Add further information if this is required",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -769,7 +850,8 @@
     "FieldType": "Text",
     "ElementLabel": "Justice's Legal Adviser's full name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -778,7 +860,8 @@
     "FieldType": "Text",
     "ElementLabel": "Last name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -787,7 +870,8 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Was the order approved at a hearing?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -806,7 +890,8 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -815,7 +900,8 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the order by consent?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -824,7 +910,8 @@
     "FieldType": "Text",
     "ElementLabel": "Final General Interim ?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -833,7 +920,8 @@
     "FieldType": "Text",
     "ElementLabel": "Order type",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -842,6 +930,16 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
     "ElementLabel": "Type of order",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "c21OrderOptions",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C21OrderOptionsEnum",
+    "ElementLabel": "Type of c21 order",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -889,7 +987,8 @@
     "FieldType": "Text",
     "ElementLabel": "Full name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -901,24 +1000,14 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "DraftOrder",
-    "ListElementCode": "isTheOrderAboutAllChildren",
-    "ElementLabel": "Is the order about all children?",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "YesNoNotRequiredEnum",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "fl404CustomFields",
     "FieldType": "FL400",
     "ElementLabel": "Custom fields",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -937,7 +1026,8 @@
     "FieldType": "Text",
     "ElementLabel": "Court name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -946,7 +1036,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Court address",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -955,7 +1046,8 @@
     "FieldType": "Text",
     "ElementLabel": "Case number",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -964,7 +1056,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -973,7 +1066,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant reference",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -982,7 +1076,8 @@
     "FieldType": "Date",
     "ElementLabel": "Date and place of hearing",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -991,7 +1086,8 @@
     "FieldType": "Text",
     "ElementLabel": "Time",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1000,7 +1096,8 @@
     "FieldType": "Text",
     "ElementLabel": "Time estimate",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1009,7 +1106,8 @@
     "FieldType": "Text",
     "ElementLabel": "Court name for hearing",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1018,7 +1116,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Court address for hearing",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1028,7 +1127,8 @@
     "FieldTypeParameter": "OrderTypeEnum",
     "ElementLabel": "Select orders to issue",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1038,7 +1138,8 @@
     "FieldTypeParameter": "childArrangementOrderTypeEnum",
     "ElementLabel": "Select type of child arrangements order",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1047,7 +1148,8 @@
     "FieldType": "Text",
     "ElementLabel": "Add details",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1056,7 +1158,8 @@
     "FieldType": "Text",
     "ElementLabel": "Court name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1065,7 +1168,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Court address",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1074,7 +1178,8 @@
     "FieldType": "Text",
     "ElementLabel": "Case number",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1083,7 +1188,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1092,7 +1198,8 @@
     "FieldType": "Text",
     "ElementLabel": "Applicant reference",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1101,7 +1208,8 @@
     "FieldType": "Text",
     "ElementLabel": "Respondent name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1110,7 +1218,8 @@
     "FieldType": "Text",
     "ElementLabel": "Respondent reference",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1119,7 +1228,8 @@
     "FieldType": "Date",
     "ElementLabel": "Respondent date of birth",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1128,7 +1238,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Respondent address",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1137,7 +1248,8 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the person giving the undertaking represented?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1147,7 +1259,8 @@
     "FieldTypeParameter": "UnderTakingEnum",
     "ElementLabel": "Are they represented by solicitor or counsel?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1156,7 +1269,8 @@
     "FieldType": "Text",
     "ElementLabel": "Person giving undertaking",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1165,7 +1279,8 @@
     "FieldType": "AddressUK",
     "ElementLabel": "Address of person giving undertaking",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1174,7 +1289,8 @@
     "FieldType": "TextArea",
     "ElementLabel": "Terms of undertaking",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1183,16 +1299,18 @@
     "FieldType": "Date",
     "ElementLabel": "Date of undertaking",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "20/09/2021",
     "ID": "DraftOrder",
     "ListElementCode": "underTakingDateExpiry",
     "FieldType": "Date",
     "ElementLabel": "Expiry date of undertaking",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1201,7 +1319,8 @@
     "FieldType": "Text",
     "ElementLabel": "Time",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1210,6 +1329,125 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Must the person giving the undertaking sign the statement on the form?",
     "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "childrenList",
+    "FieldType": "Text",
+    "ElementLabel": "Children list ",
+    "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "isTheOrderAboutChildren",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the order about the children?",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "isTheOrderAboutAllChildren",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the order about all the children?",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderSelectionType",
+    "FieldType": "Text",
+    "ElementLabel": "Order options",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderCreatedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Order options",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderCreatedBy=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "isOrderUploadedByJudgeOrAdmin",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "manageOrderHearingDetails",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "HearingData",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "sdoDetails",
+    "FieldType": "SdoDetails",
+    "ElementLabel": "SDO details",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "ID": "DraftOrder",
+    "ListElementCode": "childOption",
+    "ElementLabel": " ",
+    "FieldType": "DynamicMultiSelectList",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "orderSelectionType=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "hasJudgeProvidedHearingDetails",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "hearingsType",
+    "ElementLabel": "At which hearing was the order approved?",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "isOrderCreatedBySolicitor",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is the order created by solicitor ?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   }
 ]

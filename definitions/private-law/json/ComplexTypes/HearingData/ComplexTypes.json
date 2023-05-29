@@ -1,0 +1,909 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingDateTimeOption",
+    "ListElementCode": "hearingDateTimeOption",
+    "FieldType": "DateTime",
+    "ElementLabel": "Enter a date and Time",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "addNewHearingLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Add new Hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingTypes",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Hearing Type",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingDateConfirmOptionEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingDateConfirmOptionEnum",
+    "ElementLabel": "Has the hearing date been confirmed?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "isRenderingRequiredFlag",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is rendering required flag?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**The date is confirmed in the Hearings tab**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "HearingData",
+    "ListElementCode": "confirmedHearingDates",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Select from hearing",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "HearingData",
+    "ListElementCode": "additionalHearingDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Additional hearing details",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "HearingData",
+    "ListElementCode": "customDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "Custom details",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2022",
+    "ID": "HearingData",
+    "ListElementCode": "instructionsForRemoteHearing",
+    "FieldType": "TextArea",
+    "ElementLabel": "Insert joining instructions for remote hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "dateIsReservedWithListAssistLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**The date is reserved with List Assist**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingDateTimes",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "HearingDateTimeOption",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "addNewHearingDateTimesLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Add new HearingDateTimes",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "dateNeedsToBeConfirmedByListingTeamBeforeServiceLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**The date needs to be confirmed by the listing team before service**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "orderWillBeServedWithTheDateToBeFixedLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**This order will be served with the 'date to be fixed'**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "fillingFormRenderingInfo",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "fillingFormRenderingInfoLabel",
+    "FieldType": "Label",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.fillingFormRenderingInfo}",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingSpecificDatesOptionsEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingSpecificDatesOptionsEnum",
+    "ElementLabel": "Does the hearing need to take place on a specific date?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "yesLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Yes**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "firstDateOfTheHearing",
+    "FieldType": "Date",
+    "ElementLabel": "First date of the hearing",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "theHearingMustTakePlaceAtLabel",
+    "FieldType": "Label",
+    "ElementLabel": "The hearing must take place at",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingMustTakePlaceAtHour",
+    "FieldType": "Number",
+    "ElementLabel": "Hour",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingMustTakePlaceAtMinute",
+    "FieldType": "Number",
+    "ElementLabel": "Minute",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingNeedsBetweenCertianDatesLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**It needs to take place between certain dates**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "earliestHearingDate",
+    "FieldType": "Date",
+    "ElementLabel": "Earliest hearing date",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "latestHearingDate",
+    "FieldType": "Date",
+    "ElementLabel": "Latest hearing date",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingPriorityTypeEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingPriorityTypeEnum",
+    "ElementLabel": "What is the priority level of this hearing?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "estimatedTimeLabel",
+    "FieldType": "Label",
+    "ElementLabel": "\nEstimated time \n\nOnly one input is required",
+    "HintText": "Only one input is required",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedDays",
+    "FieldType": "Number",
+    "ElementLabel": "Days",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedHours",
+    "FieldType": "Number",
+    "ElementLabel": "Hours",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedMinutes",
+    "FieldType": "Number",
+    "ElementLabel": "Minutes",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingChannelsEnum",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "HearingChannelsEnum",
+    "ElementLabel": "How does the hearing need to take place?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingVideoChannelsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Video**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingVideoChannels",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Select a platform",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "HearingData",
+    "ListElementCode": "hearingTelephoneChannelsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Telephone**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingTelephoneChannels",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Select a platform",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "allPartiesAttendHearingSameWayYesOrNo",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Will all parties attend the hearing in the same way?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor}  (Respondent Solicitor)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "cafcassHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Cafcass",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "cafcassCymruHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Cafcass Cymru",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "localAuthorityHearingChannel",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Local authority",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingChannels",
+    "FieldType": "DynamicList",
+    "ElementLabel": "hearing channels",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hearingChannels=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "courtList",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Court location",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "hearingAuthority",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DioBeforeAEnum",
+    "ElementLabel": "This hearing will be before",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingJudgeNameAndEmail",
+    "FieldType": "JudicialUser",
+    "ElementLabel": "Hearing judge",
+    "SecurityClassification": "Public"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingJudgePersonalCode",
+    "FieldType": "Text",
+    "ElementLabel": "hearingJudgePersonalCode",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "hearingJudgePersonalCode=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingJudgeLastName",
+    "FieldType": "Text",
+    "ElementLabel": "Last name",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hearingJudgeLastName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingJudgeEmailAddress",
+    "FieldType": "Text",
+    "ElementLabel": "Email address",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hearingJudgeEmailAddress=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "hearingListedLinkedCases",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Hearing listed with a linked case",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor=\"DO_NOT_SHOW\""
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName1",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName1",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel1",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant1)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName2",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName2",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel2",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant2)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName3",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName3",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel3",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant3)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName4",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName4",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel4",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant4)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantName5",
+    "FieldType": "Text",
+    "ElementLabel": "applicantName5",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantHearingChannel5",
+    "FieldType": "DynamicList",
+    "ElementLabel": "(Applicant5)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor1",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor1",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName1",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name1",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor1",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor1",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor2",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor2",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor2=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName2",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name2",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName2=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor2",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor2",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor2=\"DO_NOT_SHOW\""
+  }
+,
+
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor3",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor3",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor3=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName3",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name3",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName3=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor3",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor3",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor3=\"DO_NOT_SHOW\""
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor4",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor4",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor4=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName4",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name4",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName4=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor4",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor4",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor4=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitor5",
+    "FieldType": "Text",
+    "ElementLabel": "applicant Solicitor5",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantSolicitor5=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentName5",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Name5",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentName5=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitor5",
+    "FieldType": "Text",
+    "ElementLabel": "respondent Solicitor5",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "respondentSolicitor5=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel1",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor1}  (Applicant Solicitor1)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel1",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName1}  (Respondent1)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel1",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor1}  (Respondent Solicitor1)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel2",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor2}  (Applicant Solicitor2)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel2",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName2}  (Respondent2)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel2",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor2}  (Respondent Solicitor2)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel3",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor3}  (Applicant Solicitor3)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel3",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName3}  (Respondent3)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel3",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor3}  (Respondent Solicitor3)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel4",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor4}  (Applicant Solicitor4)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel4",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName4}  (Respondent4)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel4",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor4}  (Respondent Solicitor4)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "applicantSolicitorHearingChannel5",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor5}  (Applicant Solicitor5)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentHearingChannel5",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName5}  (Respondent5)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "HearingData",
+    "ListElementCode": "respondentSolicitorHearingChannel5",
+    "FieldType": "DynamicList",
+    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor5}  (Respondent Solicitor5)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  }
+]

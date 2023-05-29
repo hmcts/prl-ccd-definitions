@@ -3,30 +3,20 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "previewDraftOrderLabel",
+    "CaseFieldID": "downloadOrderLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "previewDraftOrderWelsh",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "READONLY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "orderUploadedAsDraftFlag=\"Yes\""
   },
   {
   "LiveFrom": "31/03/2022",
   "CaseTypeID": "PRLAPPS",
   "CaseEventID": "editAndApproveAnOrder",
-  "CaseFieldID": "previewDraftOrder",
-  "PageFieldDisplayOrder": 3,
+  "CaseFieldID": "previewUploadedOrder",
+  "PageFieldDisplayOrder": 2,
   "DisplayContext": "READONLY",
   "PageID": 2,
   "PageDisplayOrder": 2,
@@ -36,12 +26,35 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "doYouWantToEditTheOrder",
-    "PageFieldDisplayOrder": 4,
+    "CaseFieldID": "makeChangesToUploadedOrder",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "orderUploadedAsDraftFlag",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "makeChangesToUploadedOrder=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "manageOrdersOptions",
+    "PageFieldDisplayOrder": 7,
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields"
+    "FieldShowCondition" : "makeChangesToUploadedOrder=\"DO_NOT_SHOW\""
   }
 ]

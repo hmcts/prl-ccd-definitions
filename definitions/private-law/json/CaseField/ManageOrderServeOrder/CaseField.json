@@ -2,7 +2,7 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "manageOrderHeaderLabel18",
+    "ID": "manageOrderHeaderLabel21",
     "Label": "## Serve saved orders",
     "FieldType": "Label",
     "SecurityClassification": "Public",
@@ -13,7 +13,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderDynamicList",
     "Label": "Select the orders you plan to serve :",
-    "FieldType": "DynamicList",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -50,7 +50,7 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "manageOrderHeaderLabel19",
+    "ID": "manageOrderHeaderLabel22",
     "Label": "## Serve the order",
     "FieldType": "Label",
     "SecurityClassification": "Public",
@@ -71,7 +71,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "recipientsOptions",
     "Label": "Confirm Recipients",
-    "FieldType": "Label",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -79,8 +79,8 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "otherParties",
-    "Label": "Which other people in the case should the order be sent to? (Optional)",
-    "FieldType": "Label",
+    "Label": "Which other people in the case should the order be sent to?",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -114,6 +114,15 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "cafcassEmailId",
+    "Label": "Cafcass email address",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "serveOtherPartiesCA",
     "Label": " ",
     "FieldType": "MultiSelectList",
@@ -126,7 +135,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "deliveryByOptionsCA",
-    "Label": "Delivered by",
+    "Label": "Served by",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "DeliveryByEnum",
     "SecurityClassification": "Public",
@@ -186,7 +195,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "deliveryByOptionsDA",
-    "Label": "Delivered by",
+    "Label": "Served by",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "DeliveryByEnum",
     "SecurityClassification": "Public",
@@ -205,9 +214,114 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "manageOrderHeaderLabel20",
+    "ID": "manageOrderHeaderLabel23",
     "Label": "## How to serve",
     "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isOnlyC47aOrderSelectedToServe",
+    "Label": "Is Only C47a Order Selected To Serve",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeoplePresentInCaseFlag",
+    "Label": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageOrderHeaderLabel24",
+    "Label": "## Serve the order",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serveToRespondentOptionsOnlyC47a",
+    "Label": "Does this order need to be personally served on the respondent?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "servingRespondentsOptionsCaOnlyC47a",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "recipientsOptionsOnlyC47a",
+    "Label": "Confirm Recipients",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPartiesOnlyC47a",
+    "Label": "Which other people in the case should the order be sent to?",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serveOtherPartiesCaOnlyC47a",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "HintText": "For example, DWP or the local authority",
+    "FieldTypeParameter": "OtherOrganisationOptions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "deliveryByOptionsCaOnlyC47a",
+    "Label": "Served by",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DeliveryByEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "emailInformationCaOnlyC47a",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "postalInformationCaOnlyC47a",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
