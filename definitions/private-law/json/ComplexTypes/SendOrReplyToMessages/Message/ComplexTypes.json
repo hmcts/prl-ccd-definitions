@@ -11,6 +11,15 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
+    "ListElementCode": "senderNameAndRole",
+    "FieldType": "Text",
+    "ElementLabel": "From",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
     "ListElementCode": "messageTo",
     "FieldType": "Text",
     "ElementLabel": "Message to",
@@ -87,6 +96,15 @@
     "ListElementCode": "judgeName",
     "FieldType": "Text",
     "ElementLabel": "Judge Name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "MessageHistory",
+    "ListElementCode": "judgeEmail",
+    "FieldType": "Text",
+    "ElementLabel": "Judge Email",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -177,7 +195,16 @@
     "ID": "Message",
     "ListElementCode": "senderEmail",
     "FieldType": "Email",
-    "ElementLabel": "From",
+    "ElementLabel": "Sender's email",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "senderNameAndRole",
+    "FieldType": "Text",
+    "ElementLabel": "Sender's name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -213,7 +240,7 @@
     "ID": "Message",
     "ListElementCode": "messageSubject",
     "FieldType": "Text",
-    "ElementLabel": "Message subject",
+    "ElementLabel": "Subject",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -288,7 +315,7 @@
     "ID": "Message",
     "ListElementCode": "messageContent",
     "FieldType": "TextArea",
-    "ElementLabel": "Message",
+    "ElementLabel": "The message",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -306,7 +333,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalOrExternalMessage",
-    "ElementLabel": "Are you sending an internal message?",
+    "ElementLabel": "Internal or external message",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "InternalExternalMessageEnum",
     "SecurityClassification": "Public",
@@ -316,9 +343,19 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "internalMessageWhoToSendTo",
-    "ElementLabel": "Who to send to",
+    "ElementLabel": "To",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "internalMessageReplyTo",
+    "ElementLabel": "To",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalMessageReplyToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -353,6 +390,15 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
+    "ListElementCode": "judgeEmail",
+    "FieldType": "Text",
+    "ElementLabel": "Judge Email",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
     "ListElementCode": "selectedCtscEmail",
     "FieldType": "Text",
     "ElementLabel": "CTSC email",
@@ -373,7 +419,7 @@
     "ID": "Message",
     "ListElementCode": "internalMessageUrgent",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Internal message urgent?",
+    "ElementLabel": "Urgent",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -381,7 +427,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "messageAbout",
-    "ElementLabel": "Message about?",
+    "ElementLabel": "What is it about",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "MessageAboutEnum",
     "SecurityClassification": "Public",
@@ -421,7 +467,7 @@
     "ID": "Message",
     "ListElementCode": "selectedFutureHearingValue",
     "FieldType": "Text",
-    "ElementLabel": "Future hearing",
+    "ElementLabel": "Hearing",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -439,8 +485,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "selectedSubmittedDocumentValue",
+    "FieldShowCondition": "selectedSubmittedDocumentValue=\"DO_NOT_SHOW\"",
     "FieldType": "Text",
-    "ElementLabel": "submitted document",
+    "ElementLabel": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
