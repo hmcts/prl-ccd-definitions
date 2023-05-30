@@ -11,6 +11,15 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
+    "ListElementCode": "senderNameAndRole",
+    "FieldType": "Text",
+    "ElementLabel": "From",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
     "ListElementCode": "messageTo",
     "FieldType": "Text",
     "ElementLabel": "Message to",
@@ -186,7 +195,7 @@
     "ID": "Message",
     "ListElementCode": "senderEmail",
     "FieldType": "Email",
-    "ElementLabel": "From",
+    "ElementLabel": "Sender's email",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -195,7 +204,7 @@
     "ID": "Message",
     "ListElementCode": "senderNameAndRole",
     "FieldType": "Text",
-    "ElementLabel": "From",
+    "ElementLabel": "Sender's name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -343,6 +352,16 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
+    "ListElementCode": "internalMessageReplyTo",
+    "ElementLabel": "To",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "InternalMessageReplyToEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
     "ListElementCode": "judicialOrMagistrateTierCode",
     "FieldType": "Text",
     "ElementLabel": "Judicial or magistrate Tier selected code",
@@ -466,6 +485,7 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "selectedSubmittedDocumentValue",
+    "FieldShowCondition": "selectedSubmittedDocumentValue=\"DO_NOT_SHOW\"",
     "FieldType": "Text",
     "ElementLabel": "Document",
     "SecurityClassification": "Public",

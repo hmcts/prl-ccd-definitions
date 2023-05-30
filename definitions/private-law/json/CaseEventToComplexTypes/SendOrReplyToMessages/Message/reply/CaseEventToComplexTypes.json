@@ -5,7 +5,7 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "internalMessageWhoToSendTo",
+    "ListElementCode": "internalMessageReplyTo",
     "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
@@ -21,7 +21,7 @@
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -33,7 +33,7 @@
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "replyMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\"",
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -58,17 +58,5 @@
     "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "Message",
-    "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "sendMessageObject",
-    "ListElementCode": "judgeEmail",
-    "EventElementLabel": "Judge Email",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "judgeEmail=\"DO_NOT_SHOW\""
   }
 ]
