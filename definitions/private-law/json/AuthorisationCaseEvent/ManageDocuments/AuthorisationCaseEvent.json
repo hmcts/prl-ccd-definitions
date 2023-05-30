@@ -23,5 +23,30 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageDocumentsNew",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
