@@ -8,7 +8,8 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No",
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
     "FieldShowCondition" : "manageOrderHeader1=\"DO_NOT_SHOW\"",
     "Publish" : "True"
   },
@@ -34,5 +35,47 @@
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-order/mid-event"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "performingUser",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "manageOrderHeader1=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "performingAction",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "manageOrderHeader1=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "judgeLaReviewRequired",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "manageOrderHeader1=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
   }
 ]
