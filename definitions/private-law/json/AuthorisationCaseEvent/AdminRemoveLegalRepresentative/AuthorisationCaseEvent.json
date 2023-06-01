@@ -2,7 +2,32 @@
   {
     "LiveFrom": "17/05/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminRemoveLegalRepresentative",
+    "CaseEventID": "adminRemoveLegalRepresentativeC100",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminRemoveLegalRepresentativeFL401",
     "AccessControl": [
       {
         "UserRoles": [
