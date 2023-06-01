@@ -20,7 +20,7 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "PageShowCondition": "manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\"",
+    "PageShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND manageOrdersOptions!=\"adminProduceOrder\" AND createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\""
   },
@@ -90,6 +90,18 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "hearingType",
+    "PageFieldDisplayOrder": 14,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "hearingsType",
     "PageFieldDisplayOrder": 14,
     "DisplayContext": "OPTIONAL",
     "PageID": 5,
@@ -169,6 +181,18 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "isTheOrderAboutAllChildren",
+    "PageFieldDisplayOrder": 22,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
@@ -177,7 +201,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -189,7 +214,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "isTheOrderAboutChildren=\"Yes\""
+    "FieldShowCondition": "isTheOrderAboutChildren=\"Yes\" OR isTheOrderAboutAllChildren=\"No\""
   },
   {
     "LiveFrom": "31/03/2022",
