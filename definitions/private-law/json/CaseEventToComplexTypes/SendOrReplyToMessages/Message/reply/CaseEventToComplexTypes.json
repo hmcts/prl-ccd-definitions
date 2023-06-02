@@ -5,7 +5,7 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "internalMessageReplyTo",
+    "ListElementCode": "messageReplyTo",
     "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
@@ -21,7 +21,7 @@
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\""
+    "FieldShowCondition": "replyMessageObject.messageReplyTo=\"JUDICIARY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -33,7 +33,7 @@
     "EventElementLabel": "Enter name of Judge",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
+    "FieldShowCondition": "replyMessageObject.messageReplyTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -42,7 +42,7 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "internalMessageUrgent",
+    "ListElementCode": "urgency",
     "EventElementLabel": "Is this urgent?",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY"

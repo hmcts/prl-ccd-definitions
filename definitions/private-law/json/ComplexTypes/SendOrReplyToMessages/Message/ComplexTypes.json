@@ -111,9 +111,9 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
-    "ListElementCode": "isUrgent",
+    "ListElementCode": "urgency",
     "FieldType": "YesOrNo",
-    "ElementLabel": "Internal message urgent?",
+    "ElementLabel": "Urgent",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -138,7 +138,7 @@
   {
     "LiveFrom": "10/11/2021",
     "ID": "MessageHistory",
-    "ListElementCode": "selecteddApplicationValue",
+    "ListElementCode": "selectedApplicationValue",
     "FieldType": "Text",
     "ElementLabel": "Selected Application",
     "SecurityClassification": "Public",
@@ -204,7 +204,7 @@
     "ID": "Message",
     "ListElementCode": "senderNameAndRole",
     "FieldType": "Text",
-    "ElementLabel": "Sender's name",
+    "ElementLabel": "From",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -332,30 +332,20 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "internalOrExternalMessage",
-    "ElementLabel": "Internal or external message",
+    "ListElementCode": "messageWhoToSendTo",
+    "ElementLabel": "To",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalExternalMessageEnum",
+    "FieldTypeParameter": "MessageWhoToSendToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "internalMessageWhoToSendTo",
+    "ListElementCode": "messageReplyTo",
     "ElementLabel": "To",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalMessageWhoToSendToEnum",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "internalMessageReplyTo",
-    "ElementLabel": "To",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "InternalMessageReplyToEnum",
+    "FieldTypeParameter": "MessageReplyToEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -418,7 +408,7 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
-    "ListElementCode": "internalMessageUrgent",
+    "ListElementCode": "urgency",
     "FieldType": "YesOrNo",
     "ElementLabel": "Urgent",
     "SecurityClassification": "Public",
