@@ -158,5 +158,29 @@
     "CaseEventID": "cafcass-document-upload",
     "UserRole": "caseworker-privatelaw-cafcass",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "01/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenRemoveLegalRepresentative",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
