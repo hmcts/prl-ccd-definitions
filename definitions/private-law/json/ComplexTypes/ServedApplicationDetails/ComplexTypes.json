@@ -32,7 +32,7 @@
     "ID": "BulkPrintDetails",
     "ListElementCode": "postalAddress",
     "FieldType": "AddressUK",
-    "ElementLabel": "Recipient name",
+    "ElementLabel": "Recipients address",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -48,7 +48,7 @@
   {
     "LiveFrom": "23/05/2023",
     "ID": "EmailNotificationDetails",
-    "ListElementCode": "printedDocs",
+    "ListElementCode": "attachedDocs",
     "FieldType": "TextArea",
     "ElementLabel": "Documents attached",
     "SecurityClassification": "Public",
@@ -69,6 +69,16 @@
     "ListElementCode": "timeStamp",
     "FieldType": "Text",
     "ElementLabel": "Sent at",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "23/05/2023",
+    "ID": "EmailNotificationDetails",
+    "ListElementCode": "docs",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "ElementLabel": "Documents",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
