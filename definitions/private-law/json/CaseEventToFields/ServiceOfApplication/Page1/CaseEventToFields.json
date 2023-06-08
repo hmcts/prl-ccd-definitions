@@ -53,7 +53,8 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaIsOrderListEmpty=\"Yes\""
   },
   {
     "LiveFrom": "11/05/2022",
@@ -64,7 +65,8 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaIsOrderListEmpty=\"Yes\""
   },
   {
     "LiveFrom": "11/05/2022",
@@ -144,5 +146,17 @@
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition": "serveTheseOrdersLabel=\"DO_NOT_SHOW\"",
     "Publish" : "True"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "soaIsOrderListEmpty",
+    "PageFieldDisplayOrder": 13,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "serveTheseOrdersLabel=\"DO_NOT_SHOW\""
   }
 ]
