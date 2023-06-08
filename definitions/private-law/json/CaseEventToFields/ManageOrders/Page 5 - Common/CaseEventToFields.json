@@ -59,7 +59,7 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
-    "FieldShowCondition": "manageOrdersOptions = \"createAnOrder\" AND  createSelectOrderOptions != \"other\" AND  createSelectOrderOptions != \"standardDirectionsOrder\" AND  createSelectOrderOptions != \"directionOnIssue\""
+    "FieldShowCondition": "manageOrdersOptions = \"createAnOrder\" AND  (createSelectOrderOptions != \"other\" OR  createSelectOrderOptions != \"standardDirectionsOrder\" OR  createSelectOrderOptions != \"directionOnIssue\")"
   },
   {
     "LiveFrom": "31/03/2022",
