@@ -319,5 +319,28 @@
     "CaseFieldID": "additionalApplicationsBundle",
     "UserRole": "caseworker-privatelaw-superuser",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "05/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "additionalApplicationFeesToPay",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
