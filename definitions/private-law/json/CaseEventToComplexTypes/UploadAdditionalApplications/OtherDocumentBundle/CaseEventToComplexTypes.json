@@ -5,10 +5,11 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "applicationType",
+    "ListElementCode": "caApplicationType",
     "EventElementLabel": "Select application",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -16,11 +17,11 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "parentalResponsibilityType",
-    "EventElementLabel": "Who's seeking parental responsibility?",
-    "FieldDisplayOrder": "2",
+    "ListElementCode": "daApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "temporaryOtherApplicationsBundle.applicationType=\"C1_PARENTAL_RESPONSIBILITY\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "20/11/2022",
