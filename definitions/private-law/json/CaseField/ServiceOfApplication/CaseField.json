@@ -2,18 +2,19 @@
   {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "serviceOfApplicationScreen1",
-    "Label": "Select the orders and notices that were created at the gatekeeping stage that you would like to serve to parties",
-    "FieldType": "DynamicMultiSelectList",
+    "ID": "selectOrdersLabel1",
+    "FieldType": "Label",
+    "Label": "### Select orders",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "confirmRecipients",
+    "ID": "serviceOfApplicationScreen1",
     "Label": " ",
-    "FieldType": "ConfirmRecipients",
+    "HintText": "Select the orders and notices that you want  to serve on parties",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -40,7 +41,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "serveTheseOrdersLabel",
     "FieldType": "Label",
-    "Label": "### Serve these orders and notices to parties, alongside the application and other documents",
+    "Label": "## Select and upload orders and documents to be served",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -58,7 +59,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "pd36qLetterLabel",
     "FieldType": "Label",
-    "Label": "### Upload PD36Q letter",
+    "Label": "### Upload PD36Y letter",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -66,9 +67,28 @@
     "LiveFrom": "17/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "pd36qLetter",
-    "Label": "PD36Q letter",
+    "Label": "PD36Y letter",
     "FieldType": "Document",
-    "HintText": "Upload the PD36Q letter that is used by your court. The letter explains to users how the case allocation process may differ as a result of the Watford model.",
+    "HintText": "Upload the PD36Y letter that is used by your court. The letter explains how the court manages child arrangements order cases",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "noticeOfSafetyLabel",
+    "FieldType": "Label",
+    "Label": "### Upload notice of safety, protection and support needs",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "noticeOfSafetySupportLetter",
+    "Label": " ",
+    "FieldType": "Document",
+    "HintText": "Upload the version that is used by your court",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -87,7 +107,7 @@
     "ID": "specialArrangementsLetter",
     "Label": "Special arrangements letter",
     "FieldType": "Document",
-    "HintText": "Upload the special arrangement template letter that is used by your court. The letter explains to users what special measures and individual support may be available.",
+    "HintText": "Upload the special arrangement template letter that is used by your court. The letter explains what measures can be put in place by the court to support people in the case",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "CategoryID": "anyOtherDoc"
@@ -106,7 +126,20 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalDocuments",
     "Label": "Additional documents",
-    "FieldType": "Document",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "HintText": "Upload any additional documents in your service pack that are due to be sent to both applicant and respondent.",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "anyOtherDoc"
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalDocumentsList",
+    "Label": "Additional documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "HintText": "Upload any additional documents in your service pack that are due to be sent to both applicant and respondent.",
     "SecurityClassification": "Public",
     "Searchable": "N",
@@ -127,6 +160,207 @@
     "ID": "headerLabel",
     "FieldType": "Label",
     "Label": "${serviceOfApplicationHeader}",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "finalServedApplicationDetailsList",
+    "Label": "Print and email notifications",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServedApplicationDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaHeaderLabel22",
+    "Label": "## Serve the order",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServeToRespondentOptions",
+    "Label": "Does this order need to be personally served on the respondent?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServingRespondentsOptionsCA",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaRecipientsOptions",
+    "Label": "Confirm Recipients",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaOtherParties",
+    "Label": "Which other people in the case should the order be sent to?",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaCafcassServedOptions",
+    "Label": "Does Cafcass need to be served?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaCafcassCymruServedOptions",
+    "Label": "Does Cafcass Cymru need to be served?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaCafcassCymruEmail",
+    "Label": "Cafcass Cymru email address",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaCafcassEmailId",
+    "Label": "Cafcass email address",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServeOtherPartiesCA",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "HintText": "For example, DWP or the local authority",
+    "FieldTypeParameter": "OtherOrganisationOptions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaDeliveryByOptionsCA",
+    "Label": "Served by",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DeliveryByEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaPostalInformationCA",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaEmailInformationCA",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaOtherPeoplePresentInCaseFlag",
+    "Label": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServingRespondentsOptionsDA",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaDeliveryByOptionsDA",
+    "Label": "Served by",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DeliveryByEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaPostalInformationDA",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "PostalInformation",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaEmailInformationDA",
+    "Label": " ",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "EmailInformation",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServeOtherPartiesDA",
+    "Label": "Any other party who needs to be served with this application",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "ServeOtherPartiesOptions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaIsOrderListEmpty",
+    "Label": "Is the orders list empty?",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
