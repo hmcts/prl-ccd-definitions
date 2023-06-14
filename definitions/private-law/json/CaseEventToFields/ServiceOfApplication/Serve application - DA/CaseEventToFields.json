@@ -10,52 +10,5 @@
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
     "PageShowCondition": "caseTypeOfApplication=\"FL401\""
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaServeOtherPartiesDA",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "OPTIONAL",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaDeliveryByOptionsDA",
-    "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "soaServeOtherPartiesDA=\"other\""
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaPostalInformationDA",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 4,
-    "DisplayContext": "COMPLEX",
-    "FieldShowCondition": "soaServeOtherPartiesDA=\"other\" AND soaDeliveryByOptionsDA=\"post\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaEmailInformationDA",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
-    "DisplayContext": "COMPLEX",
-    "FieldShowCondition": "soaServeOtherPartiesDA=\"other\" AND soaDeliveryByOptionsDA=\"email\"",
-    "ShowSummaryChangeOption": "Y"
   }
 ]
