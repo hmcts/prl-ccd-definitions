@@ -1,6 +1,19 @@
 {
   "CaseTypeID": "PRLAPPS",
   "CaseFieldID": "PaymentHistory",
-  "UserRole": "payments",
-  "CRUD": "CRU"
+  "AccessControl": [
+    {
+      "UserRoles": [
+        "payments"
+      ],
+      "CRUD": "CRU"
+    },
+    {
+      "UserRoles": [
+        "caseworker-caa",
+        "caseworker-approver"
+      ],
+      "CRUD": "R"
+    }
+  ]
 }
