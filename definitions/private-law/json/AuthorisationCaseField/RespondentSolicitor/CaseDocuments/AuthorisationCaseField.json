@@ -2,6 +2,41 @@
     {
       "LiveFrom": "12/06/2023",
       "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "respondentDocsList",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "[APPLICANTSOLICITOR]",
+            "citizen",
+            "[C100RESPONDENTSOLICITOR1]",
+            "[C100RESPONDENTSOLICITOR2]",
+            "[C100RESPONDENTSOLICITOR3]",
+            "[C100RESPONDENTSOLICITOR4]",
+            "[C100RESPONDENTSOLICITOR5]"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "[CREATOR]",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-superuser"
+          ],
+          "CRUD": "R"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRU"
+        }
+      ]
+    },
+    {
+      "LiveFrom": "12/06/2023",
+      "CaseTypeID": "PRLAPPS",
       "CaseFieldID": "respondentAdocumentsList",
       "AccessControl": [
         {
