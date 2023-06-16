@@ -44,7 +44,19 @@
     "DisplayContext": "MANDATORY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy!=\"CITIZEN\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "soaCitizenServingRespondentsOptionsCA",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy=\"CITIZEN\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
