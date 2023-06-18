@@ -38,7 +38,7 @@
     "ID": "C2DocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryC2Document",
-    "ListElementCode": "reasonsForC2Application",
+    "ListElementCode": "c2AdditionalOrdersRequested",
     "EventElementLabel": "Are you using the C2 to apply for any of the below?",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
@@ -53,7 +53,7 @@
     "EventElementLabel": "Who's seeking parental responsibility?",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "temporaryC2Document.reasonsForC2Application CONTAINS \"PARENTAL_RESPONSIBILITY\""
+    "FieldShowCondition": "temporaryC2Document.c2AdditionalOrdersRequested CONTAINS \"PARENTAL_RESPONSIBILITY\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -65,7 +65,7 @@
     "EventElementLabel": "Which hearing are you requesting to be adjourned?",
     "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "temporaryC2Document.reasonsForC2Application CONTAINS \"REQUESTING_ADJOURNMENT\""
+    "FieldShowCondition": "temporaryC2Document.c2AdditionalOrdersRequested CONTAINS \"REQUESTING_ADJOURNMENT\""
   },
   {
     "LiveFrom": "20/11/2022",
