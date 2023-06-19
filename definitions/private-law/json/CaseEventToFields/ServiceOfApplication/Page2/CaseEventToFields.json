@@ -3,24 +3,23 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaServingRespondentsOptionsDA",
+    "CaseFieldID": "confidentialDetailsArePresentBanner",
     "PageFieldDisplayOrder": 1,
-    "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"  AND caseCreatedBy!=\"CITIZEN\"",
-    "PageShowCondition": "caseTypeOfApplication=\"FL401\""
+    "PageShowCondition": "isConfidential=\"Yes\""
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaCitizenServingRespondentsOptionsDA",
-    "PageFieldDisplayOrder": 1,
+    "CaseFieldID": "proceedToServing",
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"  AND caseCreatedBy=\"CITIZEN\""
   }
