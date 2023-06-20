@@ -124,7 +124,9 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "citizen",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -144,6 +146,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -165,7 +169,23 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentTaskListLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -186,7 +206,9 @@
       },
       {
         "UserRoles": [
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -207,6 +229,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -228,6 +252,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -270,6 +296,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -312,6 +340,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -354,6 +384,8 @@
       {
         "UserRoles": [
           "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver",
           "citizen"
         ],
         "CRUD": "R"
@@ -398,7 +430,9 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "citizen",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
@@ -408,6 +442,20 @@
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseHistory",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseHistory",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseHistory",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "R"
   },
@@ -772,6 +820,13 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isWelshNeeded",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isWelshNeeded",
     "UserRole": "caseworker-privatelaw-solicitor",
     "CRUD": "CRU"
   },
@@ -864,6 +919,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "welshNeeds",
     "UserRole": "caseworker-privatelaw-superuser",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "welshNeeds",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -961,6 +1023,13 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isInterpreterNeeded",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isInterpreterNeeded",
     "UserRole": "caseworker-privatelaw-solicitor",
     "CRUD": "CRU"
   },
@@ -1039,6 +1108,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "interpreterNeeds",
     "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "interpreterNeeds",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -1087,6 +1163,13 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isDisabilityPresent",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isDisabilityPresent",
     "UserRole": "citizen",
     "CRUD": "CRU"
   },
@@ -1157,6 +1240,13 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "adjustmentsRequired",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "adjustmentsRequired",
     "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRU"
   },
@@ -1186,7 +1276,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isSpecialArrangementsRequired",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isSpecialArrangementsRequired",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -1214,14 +1311,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isSpecialArrangementsRequired",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isSpecialArrangementsRequired",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "13/08/2021",
@@ -1296,6 +1393,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "specialArrangementsRequired",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isIntermediaryNeeded",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -1352,6 +1456,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isIntermediaryNeeded",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "reasonsForIntermediary",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -1403,6 +1514,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "reasonsForIntermediary",
     "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "reasonsForIntermediary",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -4995,6 +5113,13 @@
     "CaseFieldID": "applicantAttendedMiam",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantAttendedMiam",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "23/08/2021",
@@ -5043,6 +5168,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "claimingExemptionMiam",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "claimingExemptionMiam",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5127,6 +5259,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "familyMediatorMiam",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familyMediatorMiam",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5239,6 +5378,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamExemptionsChecklist",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamExemptionsChecklist",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5351,6 +5497,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamDomesticViolenceChecklist",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamDomesticViolenceChecklist",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5463,6 +5616,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamUrgencyReasonChecklist",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamUrgencyReasonChecklist",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5508,6 +5668,13 @@
     "CRUD": "CRU"
   },
   {
+    "LiveFrom": "05/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamChildProtectionConcernList",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamChildProtectionConcernList",
@@ -5588,6 +5755,13 @@
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamPreviousAttendanceChecklist",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamPreviousAttendanceChecklist",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
   },
@@ -5659,6 +5833,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamOtherGroundsChecklist",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamOtherGroundsChecklist",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5771,6 +5952,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "mediatorRegistrationNumber",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "mediatorRegistrationNumber",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5813,6 +6001,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "familyMediatorServiceName",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familyMediatorServiceName",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5855,6 +6050,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "soleTraderName",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "soleTraderName",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -5967,6 +6169,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "mediatorRegistrationNumber1",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "mediatorRegistrationNumber1",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -6009,6 +6218,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "familyMediatorServiceName1",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familyMediatorServiceName1",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -6051,6 +6267,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "soleTraderName1",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "soleTraderName1",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -6191,6 +6414,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamCertificationDocumentUpload",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamCertificationDocumentUpload",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -6240,6 +6470,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamCertificationDocumentUpload1",
     "UserRole": "citizen",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamCertificationDocumentUpload1",
+    "UserRole": "courtnav",
     "CRUD": "CRUD"
   },
   {
@@ -8083,6 +8320,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8223,6 +8467,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmDomesticAbuseYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuseYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8265,6 +8516,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmChildAbductionYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmChildAbductionYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8307,6 +8565,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmChildAbuseYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmChildAbuseYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8349,6 +8614,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmSubstanceAbuseYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmSubstanceAbuseYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8391,6 +8663,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmOtherConcernsYesNo",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsYesNo",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8433,6 +8712,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "physicalAbuseVictim",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "physicalAbuseVictim",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8482,6 +8768,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "emotionalAbuseVictim",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "emotionalAbuseVictim",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8531,6 +8824,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "psychologicalAbuseVictim",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "psychologicalAbuseVictim",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8580,6 +8880,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "sexualAbuseVictim",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "sexualAbuseVictim",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8629,6 +8936,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "financialAbuseVictim",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "financialAbuseVictim",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8678,6 +8992,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "childAbductionReasons",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "childAbductionReasons",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8727,6 +9048,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "previousAbductionThreats",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "previousAbductionThreats",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8776,6 +9104,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "previousAbductionThreatsDetails",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "previousAbductionThreatsDetails",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8825,6 +9160,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "childrenLocationNow",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "childrenLocationNow",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8874,6 +9216,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionPassportOfficeNotified",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionPassportOfficeNotified",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8923,6 +9272,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionChildHasPassport",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionChildHasPassport",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -8972,6 +9328,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionChildPassportPosession",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionChildPassportPosession",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9021,6 +9384,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionChildPassportPosessionOtherDetail",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionChildPassportPosessionOtherDetail",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9070,6 +9440,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionPreviousPoliceInvolvement",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionPreviousPoliceInvolvement",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9119,6 +9496,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "abductionPreviousPoliceInvolvementDetails",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "abductionPreviousPoliceInvolvementDetails",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9315,6 +9699,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "behaviours",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "behaviours",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9469,6 +9860,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestation",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestation",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9518,6 +9916,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupation",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupation",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9567,6 +9972,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtection",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtection",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9616,6 +10028,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestraining",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestraining",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9665,6 +10084,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctive",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctive",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9714,6 +10140,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlace",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlace",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9763,6 +10196,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestationDateIssued",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestationDateIssued",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9812,6 +10252,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestationEndDate",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestationEndDate",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9861,6 +10308,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestationCurrent",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestationCurrent",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9910,6 +10364,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestationCourtName",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestationCourtName",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -9959,6 +10420,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersNonMolestationDocument",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersNonMolestationDocument",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10015,6 +10483,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupationDateIssued",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupationDateIssued",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10064,6 +10539,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupationEndDate",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupationEndDate",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10113,6 +10595,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupationCurrent",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupationCurrent",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10162,6 +10651,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupationCourtName",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupationCourtName",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10205,6 +10701,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOccupationDocument",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOccupationDocument",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -10267,6 +10770,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtectionDateIssued",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtectionDateIssued",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10316,6 +10826,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtectionEndDate",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtectionEndDate",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10365,6 +10882,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtectionCurrent",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtectionCurrent",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10414,6 +10938,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtectionCourtName",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtectionCourtName",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10457,6 +10988,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersForcedMarriageProtectionDocument",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersForcedMarriageProtectionDocument",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -10519,6 +11057,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestrainingDateIssued",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestrainingDateIssued",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10568,6 +11113,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestrainingEndDate",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestrainingEndDate",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10617,6 +11169,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestrainingCurrent",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestrainingCurrent",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10666,6 +11225,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestrainingCourtName",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestrainingCourtName",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10709,6 +11275,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersRestrainingDocument",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersRestrainingDocument",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -10771,6 +11344,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctiveDateIssued",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctiveDateIssued",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10820,6 +11400,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctiveEndDate",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctiveEndDate",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -10870,6 +11457,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctiveCurrent",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctiveCurrent",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -10912,6 +11506,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctiveCourtName",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctiveCourtName",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -10961,6 +11562,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersOtherInjunctiveDocument",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersOtherInjunctiveDocument",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11017,6 +11625,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlaceDateIssued",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlaceDateIssued",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11066,6 +11681,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlaceEndDate",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlaceEndDate",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11115,6 +11737,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlaceCurrent",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlaceCurrent",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11164,6 +11793,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlaceCourtName",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlaceCourtName",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11213,6 +11849,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersUndertakingInPlaceDocument",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "ordersUndertakingInPlaceDocument",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11318,6 +11961,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmOtherConcerns",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmOtherConcerns",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11367,6 +12017,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmOtherConcernsDetails",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsDetails",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11416,6 +12073,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "allegationsOfHarmOtherConcernsCourtActions",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allegationsOfHarmOtherConcernsCourtActions",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11514,6 +12178,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "agreeChildUnsupervisedTime",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "agreeChildUnsupervisedTime",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11563,6 +12234,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "agreeChildSupervisedTime",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "agreeChildSupervisedTime",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11612,6 +12290,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "agreeChildOtherContact",
     "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "agreeChildOtherContact",
+    "UserRole": "courtnav",
     "CRUD": "CRU"
   },
   {
@@ -11733,6 +12418,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "previousOrOngoingProceedingsForChildren",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "previousOrOngoingProceedingsForChildren",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
   },
@@ -12840,7 +13532,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationObject",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -12889,7 +13581,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationObject",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -12903,7 +13595,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationObject",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -12924,7 +13616,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationObject",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -12959,7 +13651,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationDateInfoObject",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -12980,21 +13672,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationDateInfoObject",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationDateInfoObject",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationDateInfoObject",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13015,7 +13707,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationOptions",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13097,23 +13789,37 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "rejectReasonLabel",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "rejectReasonLabel",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationOptions",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationOptions",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentRelationOptions",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13140,6 +13846,20 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "rejectReason",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "rejectReason",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "rejectReason",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRUD"
   },
@@ -13148,6 +13868,20 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "fl401RejectReason",
     "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fl401RejectReason",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fl401RejectReason",
+    "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRU"
   },
   {
@@ -13168,6 +13902,20 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "returnMessageLabel",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "returnMessageLabel",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "returnMessageLabel",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRUD"
   },
@@ -13176,7 +13924,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationOrders",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -13197,21 +13945,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationOrders",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationOrders",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationOrders",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -13232,7 +13980,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationLinkToCA",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -13253,21 +14001,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationLinkToCA",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationLinkToCA",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "typeOfApplicationLinkToCA",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "26/01/2022",
@@ -13337,7 +14085,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentBehaviourData",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "28/01/2022",
@@ -13358,21 +14106,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentBehaviourData",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentBehaviourData",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentBehaviourData",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13414,21 +14162,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantsFL401",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantsFL401",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantsFL401",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13443,6 +14191,20 @@
     "CaseFieldID": "applicantsFL401",
     "UserRole": "caseworker-privatelaw-systemupdate",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsFL401",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsFL401",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13463,7 +14225,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantFamilyDetails",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13484,21 +14246,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantFamilyDetails",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantFamilyDetails",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantFamilyDetails",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13519,7 +14281,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantChildDetails",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13540,21 +14302,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantChildDetails",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantChildDetails",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantChildDetails",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13575,7 +14337,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentsFL401",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13596,21 +14358,21 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentsFL401",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentsFL401",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentsFL401",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13645,6 +14407,20 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "returnMessage",
     "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "returnMessage",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "returnMessage",
+    "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRUD"
   },
   {
@@ -13764,7 +14540,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "home",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "17/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "home",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "15/02/2021",
@@ -13862,7 +14645,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "home",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -13918,7 +14701,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "home",
     "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "14/1/2022",
@@ -14245,6 +15028,13 @@
     "CaseFieldID": "submissionRequiredFieldsInfo8",
     "UserRole": "caseworker-privatelaw-superuser",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "issueDate",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -14702,6 +15492,13 @@
     "CRUD": "CRUD"
   },
   {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantCaseName",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantCaseName",
@@ -14713,21 +15510,42 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "familymanCaseNumber",
     "UserRole": "caseworker-caa",
-    "CRUD": "CRUD"
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familymanCaseNumber",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantName",
     "UserRole": "caseworker-caa",
-    "CRUD": "CRUD"
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantName",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentName",
     "UserRole": "caseworker-caa",
-    "CRUD": "CRUD"
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentName",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15133,7 +15951,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseSubmittedTimeStamp",
     "UserRole": "caseworker-caa",
-    "CRUD": "CRU"
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseSubmittedTimeStamp",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "14/1/2022",
@@ -15209,6 +16034,13 @@
     "LiveFrom": "14/1/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dateSubmittedAndTime",
+    "UserRole": "caseworker-approver",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "dateSubmittedAndTime",
     "UserRole": "citizen",
     "CRUD": "CRU"
   },
@@ -15219,6 +16051,7 @@
       {
         "UserRoles": [
           "caseworker-caa",
+          "caseworker-approver",
           "caseworker-ras-validation"
         ],
         "CRUD": "R"
@@ -15236,6 +16069,13 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelAccessibility",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelAccessibility",
     "UserRole": "caseworker-privatelaw-solicitor",
     "CRUD": "CRU"
   },
@@ -15340,6 +16180,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelAdjustmentsRequired",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelSpecialArrangements",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -15396,6 +16243,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelSpecialArrangements",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelSpecialArrangementsDescription",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -15433,6 +16287,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelSpecialArrangementsDescription",
     "UserRole": "caseworker-privatelaw-superuser",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelSpecialArrangementsDescription",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -15508,6 +16369,13 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelSpecialArrangementsRequired",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelIntermediaryDescription",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
@@ -15559,6 +16427,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelIntermediaryDescription",
     "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelIntermediaryDescription",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -15566,6 +16441,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "labelLanguageRequirements",
     "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "labelLanguageRequirements",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -15692,6 +16574,20 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "flagLauncher",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "flagLauncher",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "flagLauncher",
+    "UserRole": "caseworker-approver",
     "CRUD": "R"
   },
   {
@@ -15699,7 +16595,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicants",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -15814,7 +16710,8 @@
           "citizen",
           "caseworker-wa-task-configuration",
           "caseworker-privatelaw-systemupdate",
-          "caseworker-privatelaw-solicitor"
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
         ],
         "CRUD": "CRU"
       }
@@ -15859,7 +16756,8 @@
           "citizen",
           "caseworker-wa-task-configuration",
           "caseworker-privatelaw-systemupdate",
-          "caseworker-privatelaw-solicitor"
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
         ],
         "CRUD": "CRU"
       }
