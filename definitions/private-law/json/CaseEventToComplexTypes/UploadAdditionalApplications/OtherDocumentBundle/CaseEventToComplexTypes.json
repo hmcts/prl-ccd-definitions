@@ -5,11 +5,11 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "caApplicationType",
+    "ListElementCode": "caApplicantApplicationType",
     "EventElementLabel": "Select application",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+    "FieldShowCondition": "solicitorRepresentingPartyType=\"SOLICITOR_REPRESENTING_CAAPPLICANT\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -17,11 +17,35 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "daApplicationType",
+    "ListElementCode": "caRespondentApplicationType",
     "EventElementLabel": "Select application",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
+    "FieldShowCondition": "solicitorRepresentingPartyType=\"SOLICITOR_REPRESENTING_CARESPONDENT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daApplicantApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "solicitorRepresentingPartyType=\"SOLICITOR_REPRESENTING_DAAPPLICANT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daRespondentApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "solicitorRepresentingPartyType=\"SOLICITOR_REPRESENTING_DARESPONDENT\""
   },
   {
     "LiveFrom": "20/11/2022",
