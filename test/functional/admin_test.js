@@ -9,6 +9,7 @@ Scenario('add all the roles @pipeline', I => {
   I.createRole('caseworker-privatelaw-la');
   I.createRole('caseworker-privatelaw-superuser');
   I.createRole('caseworker-privatelaw-systemupdate');
+  I.createRole('caseworker-privatelaw-readonly');
   I.createRole('caseworker-privatelaw-bulkscan');
   I.createRole('caseworker-privatelaw-bulkscansystemupdate');
   I.createRole('payments');
@@ -32,6 +33,7 @@ Scenario('add all the roles @pipeline', I => {
   I.see('caseworker-privatelaw-la');
   I.see('caseworker-privatelaw-superuser');
   I.see('caseworker-privatelaw-systemupdate');
+  I.see('caseworker-privatelaw-readonly');
   I.see('caseworker-privatelaw-bulkscan');
   I.see('caseworker-privatelaw-bulkscansystemupdate');
   I.see('payments');
