@@ -2590,7 +2590,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayNextPage",
-    "Label": "### Next step - payment",
+    "Label": "### Next step - Submit the application \n\n When you submit the application you will be asked to pay the application fee.\n\n If you have applied to get help with court fees, you will be asked to provide your Help with Fees reference number. \n\n ### Application fee due to be paid",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2599,7 +2599,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayNextPageDesc",
-    "Label": "Now that you have filled out your application and signed it, you must pay or submit your help with fees, to have it considered by the courts.",
+    "Label": "When you submit the application you will be asked to pay the application fee.\n\n If you have applied to get help with court fees, you will be asked to provide your Help with Fees reference number.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2608,7 +2608,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayFee",
-    "Label": "### Application fee to pay",
+    "Label": "### Application fee due to be paid",
     "HintText": "£${feeAmount}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
@@ -2628,7 +2628,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplication",
-    "Label": "### Download Application",
+    "Label": "### Final checks \n\n Download and check the application before you proceed. Make sure that all details are correct. \n\n ### C100 draft",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2637,7 +2637,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLinkLabel",
-    "Label": "Use this link to download and check the application before sending:",
+    "Label": "Download and check the application before you proceed. Make sure that all details are correct.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2648,6 +2648,24 @@
     "ID": "c100submitAndPayDownloadApplicationLinkLabel",
     "Label": "### C100 draft",
     "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "helpWithFees",
+    "Label": "Has the applicant applied for Help with Fees?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "helpWithFeesNumber",
+    "Label": "Enter the Help with Fees reference number",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -2673,7 +2691,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": "Draft application",
+    "Label": " ",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
