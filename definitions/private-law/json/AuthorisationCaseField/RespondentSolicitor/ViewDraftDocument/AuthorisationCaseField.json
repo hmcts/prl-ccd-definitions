@@ -40,7 +40,8 @@
           "[C100RESPONDENTSOLICITOR3]",
           "[C100RESPONDENTSOLICITOR4]",
           "[C100RESPONDENTSOLICITOR5]",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
         ],
         "CRUD": "CRU"
       },
@@ -48,7 +49,6 @@
         "UserRoles": [
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
-          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
@@ -98,7 +98,8 @@
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
           "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
+          "[C100RESPONDENTSOLICITOR5]",
+          "citizen"
         ],
         "CRUD": "CRU"
       },
@@ -106,7 +107,6 @@
         "UserRoles": [
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
-          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
@@ -133,7 +133,8 @@
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
           "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
+          "[C100RESPONDENTSOLICITOR5]",
+          "citizen"
         ],
         "CRUD": "CRU"
       },
@@ -141,7 +142,6 @@
         "UserRoles": [
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
-          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
@@ -168,7 +168,8 @@
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
           "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
+          "[C100RESPONDENTSOLICITOR5]",
+          "citizen"
         ],
         "CRUD": "CRU"
       },
@@ -176,7 +177,6 @@
         "UserRoles": [
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
-          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
@@ -191,6 +191,41 @@
         "CRUD": "CRUD"
       }
     ]
-  }
+  },
+  {
+      "LiveFrom": "02/12/2021",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "finalC8ResponseDoc",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "[C100RESPONDENTSOLICITOR1]",
+            "[C100RESPONDENTSOLICITOR2]",
+            "[C100RESPONDENTSOLICITOR3]",
+            "[C100RESPONDENTSOLICITOR4]",
+            "[C100RESPONDENTSOLICITOR5]",
+            "citizen"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "[APPLICANTSOLICITOR]",
+            "[CREATOR]",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-superuser"
+          ],
+          "CRUD": "R"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRUD"
+        }
+      ]
+    }
 ]
 
