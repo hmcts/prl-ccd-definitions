@@ -1203,5 +1203,30 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "servingCitizenRespondentsOptionsCA",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
