@@ -392,5 +392,48 @@
         "CRUD": "RU"
       }
     ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "PROCEEDS_IN_HERITAGE_SYSTEM",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa",
+          "caseworker-approver",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "GS_profile"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-bulkscan",
+          "caseworker-privatelaw-bulkscansystemupdate"
+        ],
+        "CRUD": "RU"
+      }
+    ]
   }
 ]
