@@ -11,11 +11,11 @@
     "ShowSummaryChangeOption": "Yes",
     "Publish" : "True"
   },
-   {
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "transferToAnotherCourt",
-    "CaseFieldID": "courtEmailAddress",
+    "CaseFieldID": "cantFindCourtCheck",
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
@@ -26,11 +26,35 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "transferToAnotherCourt",
-    "CaseFieldID": "reasonForTransferToAnotherCourt",
+    "CaseFieldID": "anotherCourt",
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "cantFindCourtCheck CONTAINS \"cantFindCourt\""
+  },
+   {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
+    "CaseFieldID": "courtEmailAddress",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes",
+     "FieldShowCondition": "cantFindCourtCheck CONTAINS \"cantFindCourt\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
+    "CaseFieldID": "reasonForTransferToAnotherCourt",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -41,7 +65,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "reasonForTransferToAnotherCourt CONTAINS \"anotherReason\""
   }

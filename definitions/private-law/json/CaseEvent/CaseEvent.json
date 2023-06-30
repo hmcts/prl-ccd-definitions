@@ -961,7 +961,7 @@
     "Description": "Transfer to another court",
     "DisplayOrder": 107,
     "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW",
-    "PostConditionState": "*",
+    "PostConditionState": "PROCEEDS_IN_HERITAGE_SYSTEM(cantFindCourtCheck!=\"null\"):1;*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/amend-court-details/about-to-start",
