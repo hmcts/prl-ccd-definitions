@@ -577,7 +577,7 @@
     "LiveFrom": "01/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageDocumentsNew",
-    "Name": "Manage documents - New",
+    "Name": "Manage documents",
     "Description": "Manage documents",
     "DisplayOrder": 19,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
@@ -956,7 +956,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sendOrReplyToMessages",
-    "Name": "Send and reply to messages New",
+    "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 17,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;PREPARE_FOR_HEARING_CONDUCT_HEARING",
@@ -1784,7 +1784,8 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "Publish": "True"
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1795,7 +1796,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
 
