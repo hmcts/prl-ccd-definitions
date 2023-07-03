@@ -5,8 +5,8 @@ Project creating Family Private Law (PRL) CCD config files.
 Updated with Release 4.0
 ## Usage
 
-Clone project and in the project directory run:
-- `yarn install && yarn reset-ccd-submodule`
+Clone project and in the project directory run: 
+ - `yarn install && yarn reset-ccd-submodule`
 
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
@@ -59,7 +59,7 @@ Require stack:
 
 </details>
 
-try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before.
+try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before. 
 
 ## Running E2E against remote environment
 ```$bash
