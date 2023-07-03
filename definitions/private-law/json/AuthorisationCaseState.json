@@ -13,8 +13,6 @@
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-caa",
           "caseworker-approver"
         ],
@@ -41,7 +39,9 @@
           "caseworker-privatelaw-solicitor",
           "citizen",
           "caseworker-privatelaw-systemupdate",
-          "courtnav"
+          "courtnav",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "CRUD"
       },
@@ -75,7 +75,9 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "CRUD"
       },
@@ -132,7 +134,7 @@
   },
   {
     "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_ISSUE",
+    "CaseStateID": "CASE_ISSUED",
     "AccessControl": [
       {
         "UserRoles": [
@@ -148,7 +150,8 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-caa",
-          "caseworker-approver"
+          "caseworker-approver",
+          "ctsc-team-leader"
         ],
         "CRUD": "CRUD"
       },
@@ -171,7 +174,9 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "CRUD"
       },
@@ -198,7 +203,7 @@
   },
   {
     "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
+    "CaseStateID": "JUDICIAL_REVIEW",
     "AccessControl": [
       {
         "UserRoles": [
@@ -247,7 +252,10 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-caa",
-          "caseworker-approver"
+          "caseworker-approver",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "CRUD"
       },
@@ -280,7 +288,12 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-caa",
-          "caseworker-approver"
+          "caseworker-approver",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-bulkscan",
+          "caseworker-privatelaw-bulkscansystemupdate"
         ],
         "CRUD": "CRUD"
       },
@@ -312,7 +325,11 @@
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
-          "caseworker-caa"
+          "caseworker-caa",
+          "caseworker-approver",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-externaluser-viewonly"
         ],
         "CRUD": "CRUD"
       },

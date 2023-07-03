@@ -76,7 +76,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoDirectionsForDraLabel",
     "FieldType": "Label",
-    "Label": "**Directions for DRA**",
+    "Label": "**Directions for dispute resolution appointment (DRA)**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -130,7 +130,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoNextStepsAfterSecondGKLabel",
     "FieldType": "Label",
-    "Label": "**Next steps after second gatekeeping appointment (PD36Q)**",
+    "Label": "**Case review at second gatekeeping appointment (PD36Y)**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -173,10 +173,19 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSecondHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoNextStepsAllocationTo",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "SdoNextStepsAllocationEnum",
-    "Label": "Allocation to a",
+    "Label": "Allocate to",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -186,6 +195,7 @@
     "ID": "sdoUrgentHearingDate",
     "FieldType": "DateTime",
     "Label": "Hearing date",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "HintText": "Please enter date and time",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -221,7 +231,8 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingUrgentCheckList",
-    "Label": "Select all that apply",
+    "Label": "The hearing is urgent because:",
+    "HintText": "Select all that apply",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoHearingUrgentCheckListEnum",
     "SecurityClassification": "Public",
@@ -249,7 +260,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingUrgentTimeShortened",
-    "Label": "Time for service of the application is shortened to(in Days)",
+    "Label": "Time for service of the application is shortened to (Days)",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -297,6 +308,7 @@
     "ID": "sdoFhdraStartDateTime",
     "Label": "Start date and time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "HintText": "Please enter date and time",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -343,7 +355,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoPositionStatementDeadlineDate",
-    "Label": "Deadline date to send report",
+    "Label": "Deadline to send the report",
     "FieldType": "Date",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -362,8 +374,9 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoMiamAttendingPerson",
-    "Label": "Name or person to attend MIAM",
-    "FieldType": "Text",
+    "Label": "Name of the person to attend MIAM",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "MiamAttendingPersonName",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -373,6 +386,7 @@
     "ID": "sdoPermissionHearingOn",
     "Label": "List for hearing on",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "HintText": "Please enter date and time",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -412,6 +426,7 @@
     "ID": "sdoDirectionsDraStartDateAndTime",
     "Label": "Start date and time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "HintText": "Please enter date and time",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -461,6 +476,7 @@
     "ID": "sdoSettlementConferenceDateTime",
     "Label": "Start date and time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "HintText": "Use 24 hour format",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -544,7 +560,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingReportsSentTo",
-    "FieldType": "FixedRadioList",
+    "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoReportsSentToEnum",
     "Label": "Report also sent to",
     "SecurityClassification": "Public",
@@ -554,7 +570,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingReportsAlsoSentTo",
-    "Label": "and also sent to",
+    "Label": "Report also sent to",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoReportsAlsoSentToEnum",
     "SecurityClassification": "Public",
@@ -566,6 +582,15 @@
     "ID": "sdoHearingMaximumPages",
     "Label": "Maximum number of pages",
     "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoHearingHowManyWitnessEvidence",
+    "Label": "How many witnesses' evidence may each party use?",
+    "FieldType": "Number",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -584,7 +609,7 @@
     "ID": "sdoInterpreterDialectRequired",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoLanguageDialect",
-    "Label": "Court to arrange interpeters",
+    "Label": "Court to arrange interpreters",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -594,6 +619,291 @@
     "ID": "sdoUpdateContactDetails",
     "FieldType": "TextArea",
     "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNextStepJudgeName",
+    "Label": "Name of judge",
+    "FieldType": "JudicialUser",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocateOrReserveJudge",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "AllocateOrReserveJudgeEnum",
+    "Label": "Allocate or reserve to a named judge",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocateOrReserveJudgeName",
+    "Label": "Name of judge",
+    "FieldType": "JudicialUser",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "23/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNamedJudgeFullName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocationDistJudgeLabel",
+    "FieldType": "Label",
+    "Label": "**District judge**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocationCircuitJudgeLabel",
+    "FieldType": "Label",
+    "Label": "**Circuit judge**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocationMagistratesLabel",
+    "FieldType": "Label",
+    "Label": "**Magistrates**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoReservedToLabel",
+    "FieldType": "Label",
+    "Label": "**Reserved To**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocatedToLabel",
+    "FieldType": "Label",
+    "Label": "**Allocated To**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPositionStatementOtherCheckDetails",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OtherDirectionPositionStatementEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPositionStatementOtherCheckDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for position statement**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPositionStatementOtherDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoMiamOtherDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoMiamOtherCheckDetails",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "MiamOtherDirectionEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoMiamOtherDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for MIAM attendance**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPermissionHearingDirections",
+    "Label": "List for the court to consider",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoFactFindingOtherCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "FactFindingOtherDirectionEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoFactFindingOtherCheckLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for the 'directions for fact-finding' hearing**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoFactFindingOtherDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoInterpreterOtherDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoInterpreterOtherDetailsCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "DioOtherDirectionEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoInterpreterOtherDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for the court to arrange interpreters**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCafcassFileAndServeDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCafcassFileAndServeCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoCafcassFileAndServeCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCafcassFileAndServeDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for safeguarding next steps (Cafcass)**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "safeguardingCafcassCymruDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "safeguardingCafcassCymruCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoSafeguardingCafcassCymruEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "safeguardingCafcassCymruDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for safeguarding next steps (Cafcass Cymru)**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoHearingUrgentAnotherReason",
+    "Label": "Another reason that has not been listed",
+    "HintText": "Give details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNextStepsAfterGatekeeping",
+    "Label": "Next steps after second gatekeeping appointment",
+    "FieldType": "TextArea",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

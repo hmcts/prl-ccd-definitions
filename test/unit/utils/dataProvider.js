@@ -6,13 +6,21 @@ const loadFile = file => {
   return Object.assign(load(`../../../definitions/private-law/json/${file}.json`), []);
 };
 
-let getFieldata = [];
+let getFieldData = [];
+let getFieldDataFromMultiFileType = [];
 let processDir = [];
 
 let fieldsArray = [];
-getFieldata = (filePath, fileType) => {
+getFieldData = (filePath, fileType) => {
   fieldsArray = [];
   processDir(filePath, fileType);
+  return fieldsArray;
+};
+
+getFieldDataFromMultiFileType = (filePath, fileType1, fileType2) => {
+  fieldsArray = [];
+  processDir(filePath, fileType1);
+  processDir(filePath, fileType2);
   return fieldsArray;
 };
 
@@ -51,7 +59,7 @@ module.exports = {
   ccdData: {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
-    CaseEvent: loadFile('CaseEvent'),
+    CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
     FixedLists: loadFile('FixedLists'),
@@ -63,11 +71,11 @@ module.exports = {
     WorkBasketInputFields: loadFile('WorkBasketInputFields'),
     WorkBasketResultFields: loadFile('WorkBasketResultFields')
   },
-  caseFieldata: getFieldata('../../../definitions/private-law/json', 'CaseField.json'),
-  AuthorisationCaseFieldData: getFieldata('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
-  CaseEventToFieldData: getFieldata('../../../definitions/private-law/json', 'CaseEventToFields.json'),
-  CaseTypeTab: getFieldata('../../../definitions/private-law/json', 'CaseTypeTab.json'),
-  AuthorisationCaseEvent: getFieldata('../../../definitions/private-law/json', 'AuthorisationCaseEvent.json'),
-  CaseEventToComplexTypes: getFieldata('../../../definitions/private-law/json', 'CaseEventToComplexTypes.json'),
-  ComplexTypes: getFieldata('../../../definitions/private-law/json', 'ComplexTypes.json')
+  caseFieldData: getFieldData('../../../definitions/private-law/json', 'CaseField.json'),
+  AuthorisationCaseFieldData: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
+  CaseEventToFieldData: getFieldData('../../../definitions/private-law/json', 'CaseEventToFields.json'),
+  CaseTypeTab: getFieldData('../../../definitions/private-law/json', 'CaseTypeTab.json'),
+  AuthorisationCaseEvent: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseEvent.json'),
+  CaseEventToComplexTypes: getFieldData('../../../definitions/private-law/json', 'CaseEventToComplexTypes.json'),
+  ComplexTypes: getFieldData('../../../definitions/private-law/json', 'ComplexTypes.json')
 };
