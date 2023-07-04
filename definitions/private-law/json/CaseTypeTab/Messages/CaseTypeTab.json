@@ -16,16 +16,6 @@
     "TabID": "Messages",
     "TabLabel": "Messages",
     "TabDisplayOrder": 10,
-    "CaseFieldID": "sendAndReplyEventLink",
-    "TabFieldDisplayOrder": 2
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "Messages",
-    "TabLabel": "Messages",
-    "TabDisplayOrder": 10,
     "CaseFieldID": "openMessageLabel",
     "FieldShowCondition": "openMessages!=\"\"",
     "TabFieldDisplayOrder": 3
@@ -60,5 +50,26 @@
     "TabDisplayOrder": 10,
     "CaseFieldID": "closedMessages",
     "TabFieldDisplayOrder": 6
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Messages",
+    "TabLabel": "Messages",
+    "TabDisplayOrder": 10,
+    "CaseFieldID": "sendOrReplyEventLink",
+    "TabFieldDisplayOrder": 7
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Messages",
+    "TabLabel": "Messages",
+    "TabDisplayOrder": 10,
+    "CaseFieldID": "messages",
+    "TabFieldDisplayOrder": 9,
+    "DisplayContextParameter": "#TABLE(senderRole, internalMessageWhoToSendTo, internalMessageUrgent, dateSent, updatedTime, status)"
   }
 ]
