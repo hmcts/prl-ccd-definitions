@@ -360,14 +360,18 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-solicitor",
-          "citizen",
           "caseworker-privatelaw-systemupdate"
         ],
-        "CRUD": "CRUD"
+        "CRUD": "CRU"
       },
       {
         "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-ras-validation",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "GS_profile",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
@@ -376,15 +380,6 @@
           "ctsc-team-leader",
           "caseworker-privatelaw-cafcass",
           "caseworker-privatelaw-externaluser-viewonly"
-        ],
-        "CRUD": "CRUD"
-      },
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration",
-          "caseworker-ras-validation",
-          "GS_profile"
         ],
         "CRUD": "R"
       }
