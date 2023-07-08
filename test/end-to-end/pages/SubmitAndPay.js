@@ -2,7 +2,12 @@ const I = actor();
 const retryCount = 3;
 
 module.exports = {
-  fields: { submit: 'button[type="submit"]' },
+  fields: {
+    submit: 'button[type="submit"]',
+    helpWithFees_Yes: '#helpWithFees_Yes',
+    helpWithFees_No: '#helpWithFees_No',
+    helpWithFeesReferenceNumber_text: '#helpWithFeesReferenceNumber'
+  },
 
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Submit and pay');
@@ -29,22 +34,36 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
   },
 
+  async helpWithFeeNo() {
+    await I.wait('2');
+    await I.retry(retryCount).waitForText('Has the applicant applied for Help with Fees?');
+    await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.wait('1');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('6');
+    await I.retry(retryCount).waitForText('Continue to payment');
+    await I.retry(retryCount).click('Pay the application fee.');
+    await I.wait('2');
+  },
+
   async payNow() {
     I.wait('2');
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
-    await I.retry(retryCount).click('Pay now');
     I.wait('5');
+    await I.retry(retryCount).waitForText('Please visit service request to make the payment');
+    await I.wait('3');
+    await I.retry(retryCount).click('click here to pay');
+    await I.wait('3');
   },
 
   async submitAndPay() {
     await this.triggerEvent();
     await this.confidentialityStatement();
     await this.declaration();
-    await this.payNow();
-    await I.wait('3');
-    await I.retry(retryCount).click('click here to pay');
-    await I.wait('3');
+    await this.helpWithFeeNo();
+    // await this.payNow();
   },
   async dummyPaymentConfirmation() {
     await this.triggerEvent_TS();

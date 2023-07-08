@@ -6,7 +6,7 @@ module.exports = {
     password: defaultPassword
   },
   legalProfessionalUserTwo: {
-    email: 'fprl_caseworker_courtadm_test@mailinator.com',
+    email: 'prl_ctscadmin11_stoke@justice.gov.uk',
     password: defaultPassword
   },
   definition: {

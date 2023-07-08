@@ -64,6 +64,11 @@ module.exports = {
   },
 
   async issueAndSendToLocalCourt() {
+    await I.wait('3');
+    await I.refreshPage();
+    await I.retry(retryCount).click('Assign to me');
+    await I.wait('5');
+    await I.retry(retryCount).waitForText('Issue and send to local Court');
     await I.retry(retryCount).triggerEvent('Issue and send to local court');
     await I.wait('5');
     await I.waitForElement(this.fields.listofcourts);
