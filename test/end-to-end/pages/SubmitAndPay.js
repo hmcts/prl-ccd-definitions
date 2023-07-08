@@ -4,7 +4,10 @@ const retryCount = 3;
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-    caseStatus: '.text-16'
+    caseStatus: '.text-16',
+    helpWithFees_Yes: '#helpWithFees_Yes',
+    helpWithFees_No: '#helpWithFees_No',
+    helpWithFeesReferenceNumber_text: '#helpWithFeesReferenceNumber'
   },
 
   async triggerEvent() {
@@ -30,6 +33,20 @@ module.exports = {
     await I.retry(retryCount).click('#payAgreeStatement-agree');
     await I.wait('1');
     await I.retry(retryCount).click('Continue');
+  },
+
+  async helpWithFeeNo() {
+    await I.wait('2');
+    await I.retry(retryCount).waitForText('Has the applicant applied for Help with Fees?');
+    await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.wait('1');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('6');
+    await I.retry(retryCount).waitForText('Continue to payment');
+    await I.retry(retryCount).click('Pay the application fee.');
+    await I.wait('2');
   },
 
   async payNow() {

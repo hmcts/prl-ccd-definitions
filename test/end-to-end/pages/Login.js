@@ -30,6 +30,7 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
   },
   async loginAsCourtAdmin() {
     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
