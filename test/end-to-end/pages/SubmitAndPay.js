@@ -47,6 +47,20 @@ module.exports = {
     await I.retry(retryCount).click('Pay the application fee.');
     await I.wait('2');
   },
+  async helpWithFeeYes() {
+    await I.wait('2');
+    await I.retry(retryCount).waitForText('Has the applicant applied for Help with Fees?');
+    await I.retry(retryCount).click(this.fields.helpWithFees_Yes);
+    await I.wait('1');
+    await I.retry(retryCount).fillField(this.fields.helpWithFeesReferenceNumber_text, 'ABC-123-DEF');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('6');
+    await I.retry(retryCount).waitForText('Help with fees requested');
+    await I.retry(retryCount).click('Close and Return to case details');
+    await I.wait('2');
+  },
 
   async payNow() {
     I.wait('2');
@@ -63,6 +77,13 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.helpWithFeeNo();
+    // await this.payNow();
+  },
+  async submitAndPay_HWF_Yes() {
+    await this.triggerEvent();
+    await this.confidentialityStatement();
+    await this.declaration();
+    await this.helpWithFeeYes();
     // await this.payNow();
   },
   async dummyPaymentConfirmation() {
