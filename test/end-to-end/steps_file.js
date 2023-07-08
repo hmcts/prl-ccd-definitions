@@ -166,6 +166,9 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPayHappyPath_HWF_Yes() {
+      return submitAndPay.submitAndPay_HWF_Yes();
+    },
     runSubmitAndPay_TS() {
       return submitAndPay.dummyPaymentConfirmation();
     },
