@@ -6,9 +6,8 @@
     "TabID": "ServiceOfApplication",
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
-    "CaseFieldID": "finalServedApplicationDetailsList",
-    "TabFieldDisplayOrder": 1,
-    "DisplayContextParameter": "#TABLE(servedBy,servedAt,modeOfService,whoIsResponsible)"
+    "CaseFieldID": "unServedPackLabel",
+    "TabFieldDisplayOrder": 1
   },
   {
     "LiveFrom": "01/01/2018",
@@ -17,7 +16,7 @@
     "TabID": "ServiceOfApplication",
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
-    "CaseFieldID": "applicantPack",
+    "CaseFieldID": "unServedApplicantPack",
     "TabFieldDisplayOrder": 2
   },
   {
@@ -27,7 +26,59 @@
     "TabID": "ServiceOfApplication",
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
-    "CaseFieldID": "respondentPack",
+    "CaseFieldID": "unServedRespondentPack",
     "TabFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedOthersPack",
+    "TabFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "servedPackLabel",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "finalServedApplicationDetailsList",
+    "TabFieldDisplayOrder": 6,
+    "DisplayContextParameter": "#TABLE(servedBy,servedAt,modeOfService,whoIsResponsible)",
+    "TabShowCondition": "finalServedApplicationDetailsList!=\"\" OR unServedRespondentPack!=\"\" OR unServedOthersPack!=\"\" OR unServedApplicantPack!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "confidentialCheckFailedLabel",
+    "TabFieldDisplayOrder": 7
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "confidentialCheckFailed",
+    "TabFieldDisplayOrder": 8
   }
 ]

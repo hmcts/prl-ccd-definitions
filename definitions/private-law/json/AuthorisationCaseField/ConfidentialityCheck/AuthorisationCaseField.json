@@ -50,16 +50,21 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantPack",
+    "CaseFieldID": "unServedApplicantPack",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-courtadmin"
         ],
         "CRUD": "RU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   },
@@ -82,16 +87,21 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentPack",
+    "CaseFieldID": "unServedRespondentPack",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-courtadmin"
         ],
         "CRUD": "RU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   },
@@ -123,7 +133,7 @@
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-systemupdate"
         ],
-        "CRUD": "CRU"
+        "CRUD": "CRUD"
       }
     ]
   },
@@ -139,7 +149,71 @@
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-systemupdate"
         ],
-        "CRUD": "CRU"
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicationServedYesNo",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "rejectionReason",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "unServedOthersPack",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "confidentialCheckFailed",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
