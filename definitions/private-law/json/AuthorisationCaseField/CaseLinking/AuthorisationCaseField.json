@@ -87,21 +87,22 @@
     "LiveFrom": "10/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "LinkedCasesComponentLauncher",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "10/02/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "LinkedCasesComponentLauncher",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "10/02/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "LinkedCasesComponentLauncher",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

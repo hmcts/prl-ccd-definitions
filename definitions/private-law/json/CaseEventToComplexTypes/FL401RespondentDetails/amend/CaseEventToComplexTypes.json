@@ -152,7 +152,17 @@
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
   },
-
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "respondentsFL401",
+    "ListElementCode": "isAddressConfidential",
+    "FieldDisplayOrder": "16",
+    "FieldShowCondition": "respondentsFL401.isCurrentAddressKnown=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
   {
     "LiveFrom": "16/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -160,7 +170,7 @@
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "canYouProvideEmailAddress",
-    "FieldDisplayOrder": "16",
+    "FieldDisplayOrder": "17",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -170,7 +180,7 @@
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "email",
-    "FieldDisplayOrder": "17",
+    "FieldDisplayOrder": "18",
     "FieldShowCondition": "respondentsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "OPTIONAL"
   },
@@ -180,8 +190,19 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondentsFL401",
+    "ListElementCode": "isEmailAddressConfidential",
+    "FieldDisplayOrder": "19",
+    "FieldShowCondition": "respondentsFL401.canYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "respondentsFL401",
     "ListElementCode": "canYouProvidePhoneNumber",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -191,8 +212,19 @@
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondentsFL401",
     "ListElementCode": "phoneNumber",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "21",
     "FieldShowCondition": "respondentsFL401.canYouProvidePhoneNumber=\"Yes\"",
     "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "respondentsFL401",
+    "ListElementCode": "isPhoneNumberConfidential",
+    "FieldDisplayOrder": "22",
+    "FieldShowCondition": "respondentsFL401.canYouProvidePhoneNumber=\"Yes\"",
+    "DisplayContext": "MANDATORY"
   }
 ]
