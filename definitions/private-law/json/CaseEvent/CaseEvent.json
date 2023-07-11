@@ -1798,6 +1798,24 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "statementOfService",
+    "Name": "Statement of service",
+    "Description": "Event to provide personal service to the parties",
+    "DisplayOrder": 63,
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}//Statement-of-service-confirmation",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
   }
 ]
 
