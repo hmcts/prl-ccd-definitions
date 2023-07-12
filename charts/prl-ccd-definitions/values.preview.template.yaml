@@ -126,6 +126,11 @@ ccd:
         ELASTIC_SEARCH_HOST: ${SERVICE_NAME}-es-master
         ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 17000
         DEFINITION_STORE_DEFAULT_LOG_LEVEL: DEBUG
+        spring:
+          servlet:
+            multipart:
+              max-file-size: 2MB
+              max-request-size: 2MB
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
   ccd-admin-web:
