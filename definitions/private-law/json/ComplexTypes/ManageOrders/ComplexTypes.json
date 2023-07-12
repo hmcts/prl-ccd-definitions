@@ -109,6 +109,26 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "partyId",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "partyName",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "ServeOrderDetails",
     "ListElementCode": "additionalDocuments",
     "FieldType": "Collection",
@@ -225,6 +245,17 @@
     "ListElementCode": "emailInformation",
     "FieldType": "Collection",
     "FieldTypeParameter": "EmailInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "servedParties",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServedParties",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
@@ -518,6 +549,16 @@
     "ListElementCode": "isOrderCreatedBySolicitor",
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the order created by solicitor ?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "typeOfChildArrangementsOrder",
+    "FieldType": "Text",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
