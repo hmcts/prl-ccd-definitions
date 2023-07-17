@@ -19,7 +19,7 @@
   {
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "beforeYouStartTextLabel",
+    "CaseFieldID": "beforeYouStartRestrictedTextLabel",
     "AccessControl": [
       {
         "UserRoles": [
@@ -54,6 +54,57 @@
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "reasonsToRestrict",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "beforeYouStartPublicTextLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "reasonsToMakePublicTitleLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "reasonsToMakePublic",
     "AccessControl": [
       {
         "UserRoles": [

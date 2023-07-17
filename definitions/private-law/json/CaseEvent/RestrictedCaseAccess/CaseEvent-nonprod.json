@@ -1,5 +1,4 @@
 [
-
   {
     "LiveFrom": "30/06/2023",
     "CaseTypeID": "PRLAPPS",
@@ -14,5 +13,18 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/mark-as-restricted",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/restricted-case-access",
     "EndButtonLabel": "Mark case as restricted"
+  },
+  {
+    "LiveFrom": "30/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "publicCaseAccess",
+    "Name": "Mark case as public",
+    "DisplayOrder": 201,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "ShowSummary": "Y",
+    "EndButtonLabel": "Mark case as public"
   }
 ]

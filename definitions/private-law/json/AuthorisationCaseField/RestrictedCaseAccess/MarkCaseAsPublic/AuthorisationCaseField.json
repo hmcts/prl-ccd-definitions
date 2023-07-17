@@ -2,7 +2,7 @@
   {
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "restrictedCaseAccess",
+    "CaseFieldID": "beforeYouStartPublicTextLabel",
     "AccessControl": [
       {
         "UserRoles": [
@@ -19,7 +19,24 @@
   {
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "publicCaseAccess",
+    "CaseFieldID": "reasonsToMakePublicTitleLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "reasonsToMakePublic",
     "AccessControl": [
       {
         "UserRoles": [
