@@ -55,5 +55,27 @@
     "ElementLabel": "Application status",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "AdditionalApplicationsBundle",
+    "ListElementCode": "partyType",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "PartyEnum",
+    "ElementLabel": "Party Type",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "applicationStatus=\"DO NOT SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "AdditionalApplicationsBundle",
+    "ListElementCode": "selectedParties",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServedParties",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "applicationStatus=\"DO NOT SHOW\"",
+    "Searchable": "N"
   }
 ]
