@@ -5,7 +5,12 @@ module.exports = {
 
   fields: {
     submit: 'button[type="submit"]',
-    typeOfDocument: 'select[id="mainApplicationDocument_0_typeOfDocumentFurtherEvidence"]'
+    typeOfDocument: 'select[id="mainApplicationDocument_0_typeOfDocumentFurtherEvidence"]',
+    selectParty: '#manageDocuments_0_documentParty',
+    selectDocumentCategory: '#manageDocuments_0_documentCategories',
+    documentUpload: '#manageDocuments_0_document',
+    detailsTextArea: '#manageDocuments_0_documentDetails',
+    restrictCheckBox: '#manageDocuments_0_documentRestrictCheckbox-restrictToGroup'
   },
 
   async triggerEvent() {
@@ -80,5 +85,33 @@ module.exports = {
     await this.anyOtherDocument();
     await I.retry(retryCount).submitEvent();
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+  async addADocument() {
+    const uploadTime = 5;
+    await I.wait('5');
+    await I.retry(retryCount).waitForElement(this.fields.selectParty);
+    await I.retry(retryCount).selectOption(this.fields.selectParty, 'Respondent');
+    await I.wait('1');
+    await I.retry(retryCount).selectOption(this.fields.selectDocumentCategory, 'Respondent C1A Response');
+    await I.wait('1');
+    await I.retry(retryCount).attachFile(this.fields.documentUpload, '../resource/dummy.pdf');
+    await I.retry(retryCount).wait(uploadTime);
+    await I.retry(retryCount).fillField(this.fields.detailsTextArea, 'SOLICITOR UPLOADED A DOCUMENT');
+  },
+  async restrictDocument() {
+    await I.retry(retryCount).click(this.fields.restrictCheckBox);
+  },
+  async checkYourAnswerAndSubmit() {
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.waitForText('Respondent C1A Response');
+    await I.waitForText('SOLICITOR UPLOADED A DOCUMENT');
+    await I.retry(retryCount).click('Save and continue');
+    await I.wait('2');
+  },
+  async uploadUnRestrictedDocument() {
+    await this.triggerEvent();
+    await this.addADocument();
+    await this.checkYourAnswerAndSubmit();
   }
 };

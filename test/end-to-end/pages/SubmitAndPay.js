@@ -76,8 +76,8 @@ module.exports = {
     await this.triggerEvent();
     await this.confidentialityStatement();
     await this.declaration();
-    await this.helpWithFeeNo();
-    // await this.payNow();
+    // await this.helpWithFeeNo();
+    await this.payNow();
   },
   async submitAndPay_HWF_Yes() {
     await this.triggerEvent();

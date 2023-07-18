@@ -29,6 +29,7 @@ const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
 const manageOrder = require('./pages/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
+const caseFileView = require('./pages/CaseFileView');
 
 module.exports = () => {
   return actor({
@@ -119,6 +120,9 @@ module.exports = () => {
     runManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
+    uploadUnRestrictedDocManageDocuments() {
+      return manageDocuments.uploadUnRestrictedDocument();
+    },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
     },
@@ -161,6 +165,9 @@ module.exports = () => {
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
     },
+    selectTab(tabName) {
+      return caseList.selectTab(tabName);
+    },
     manageOrderCreateOrderC21() {
       return manageOrder.createAnOrderC21();
     },
@@ -169,6 +176,9 @@ module.exports = () => {
     },
     submitManageOrder() {
       return manageOrder.submitManageOrder();
+    },
+    verifyRespondentC1AResponseFile() {
+      return caseFileView.verifyRespondentC1AResponseFile();
     }
   });
 };

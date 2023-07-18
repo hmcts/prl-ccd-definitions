@@ -78,6 +78,11 @@ module.exports = {
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+  async selectTab(tab) {
+    await I.wait('5');
+    const tabElement = `//*[@role="tab"]/div[text()="${tab}"]`;
+    await I.retry(retryCount).click(tabElement);
+    await I.retry(retryCount).click(tabElement);
   }
-
 };

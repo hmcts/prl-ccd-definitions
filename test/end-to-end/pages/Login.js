@@ -32,10 +32,11 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
   },
-  async loginAsCourtAdmin() {
+  async loginAsCourtAdmin(pageName) {
     await I.wait('2');
-    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
-    await I.retry(retryCount).click('Sign out');
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    // await I.retry(retryCount).click('Sign out');
+    const caseId = '1689692120579602';
     await I.wait('5');
     const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
     await I.retry(retryCount).amOnPage(pageUrl);
@@ -52,7 +53,17 @@ module.exports = {
     }
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
+    //
+    // await I.retry(retryCount).selectTab(pageName);
+    // await I.wait('5');
+    // await I.retry(retryCount).click('Applications');
+    // await I.wait('1');
+    // await I.retry(retryCount).click('Respondent Documents');
+    // await I.wait('1');
+    // await I.retry(retryCount).click('Respondent C1A Response');
+    // await I.wait('1');
+    // await I.retry(retryCount).waitForText('dummy.pdf');
+    // await I.retry(retryCount).click('dummy.pdf');
+    // await I.wait('5');
   }
-
-
 };
