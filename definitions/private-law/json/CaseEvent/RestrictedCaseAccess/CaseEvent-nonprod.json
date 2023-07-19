@@ -11,6 +11,7 @@
     "ShowEventNotes": "N",
     "ShowSummary": "Y",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/restricted-case-access/submitted-restricted-confirmation",
+    "EventEnablingCondition": "reasonsToRestrict=\"\"",
     "EndButtonLabel": "Mark case as restricted"
   },
   {
@@ -24,7 +25,9 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "ShowSummary": "Y",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/mark-as-public",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/restricted-case-access/submitted-public-confirmation",
+    "EventEnablingCondition": "reasonsToRestrict!=\"\"",
     "EndButtonLabel": "Mark case as public"
   }
 ]
