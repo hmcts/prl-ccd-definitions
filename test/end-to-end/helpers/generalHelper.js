@@ -19,13 +19,15 @@ class GeneralHelper extends Helper {
   }
 
   async amOnHistoryPageWithSuccessNotification() {
-    const historyResponseTime = 6;
+    // const historyResponseTime = 6;
     const { Puppeteer } = this.helpers;
-    await Puppeteer.wait(historyResponseTime);
-    await Puppeteer.waitForText('History');
+    await Puppeteer.wait('3');
+    
+    // await Puppeteer.wait(historyResponseTime);
+    // await Puppeteer.waitForText('History');
     // console.log(await Puppeteer.grabTextFrom('div.alert-message'));
     // await Puppeteer.waitForElement('i.icon-tick');
-    await Puppeteer.wait(historyResponseTime);
+    // await Puppeteer.wait(historyResponseTime);
   }
 
   async selectFromList(list, value) {
@@ -72,6 +74,12 @@ class GeneralHelper extends Helper {
     await Puppeteer.waitForElement(fields.eventList);
     await Puppeteer.selectOption(fields.eventList, eventName);
     await Puppeteer.click(fields.submit);
+  }
+  
+  async getCurrentPageUrl() {
+    const { Puppeteer } = this.helpers;
+    const currentURL = await Puppeteer.page.url();
+    return currentURL;
   }
 
   async waitForPage(header, headerText) {
