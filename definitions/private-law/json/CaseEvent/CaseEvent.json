@@ -949,7 +949,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/submitted",
-    "Publish" : "True"
+    "Publish": "True"
   },
   {
     "LiveFrom": "03/02/2022",
@@ -1050,6 +1050,7 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "Publish": "True"
   },
   {
@@ -1066,6 +1067,7 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "Publish": "True"
   },
@@ -1527,14 +1529,14 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
     "Publish": "Y"
-   },
-   {
+  },
+  {
     "LiveFrom": "01/03/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "citizenCaseWithdraw",
     "Name": "Withdraw Citizen Case",
     "Description": "Withdraw a case submitted by citizen",
-     "DisplayOrder": 66,
+    "DisplayOrder": 66,
     "PreConditionState(s)": "SUBMITTED_PAID;SUBMITTED_NOT_PAID",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/citizen-case-withdrawn-notification",
     "PostConditionState": "CASE_WITHDRAWN",
