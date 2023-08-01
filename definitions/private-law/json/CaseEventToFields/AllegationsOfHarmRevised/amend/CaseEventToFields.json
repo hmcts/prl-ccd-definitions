@@ -652,7 +652,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "domesticAbuseBehavioursLabel",
-    "PageShowCondition": "newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
+    "PageShowCondition": "newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
@@ -685,7 +685,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "childAbuseBehavioursLabel",
-    "PageShowCondition": "newAllegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "PageShowCondition": "newAllegationsOfHarmChildAbuseYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -707,7 +707,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "childAbuseBehaviours",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 3,
@@ -723,7 +723,7 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "childAbuseBehaviours CONTAINS \"physicalAbuse\""
+    "PageShowCondition": "childAbuseBehaviours CONTAINS \"physicalAbuse\" AND newAllegationsOfHarmYesNo=\"Yes\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -736,7 +736,7 @@
     "PageFieldDisplayOrder": 2
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "allChildrenAreRiskPhysicalAbuse",
@@ -747,12 +747,12 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "whichChildrenAreRiskPhysicalAbuse",
     "FieldShowCondition": "allChildrenAreRiskPhysicalAbuse=\"No\"",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 4,
@@ -779,7 +779,7 @@
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "childAbuseBehaviours CONTAINS \"psychologicalAbuse\""
+    "PageShowCondition": "childAbuseBehaviours CONTAINS \"psychologicalAbuse\" AND newAllegationsOfHarmYesNo=\"Yes\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -792,7 +792,7 @@
     "PageFieldDisplayOrder": 2
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "allChildrenAreRiskPsychologicalAbuse",
@@ -803,12 +803,12 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "whichChildrenAreRiskPsychologicalAbuse",
     "FieldShowCondition": "allChildrenAreRiskPsychologicalAbuse=\"No\"",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 4,
@@ -835,7 +835,7 @@
     "PageDisplayOrder": 7,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "childAbuseBehaviours CONTAINS \"sexualAbuse\""
+    "PageShowCondition": "childAbuseBehaviours CONTAINS \"sexualAbuse\" AND newAllegationsOfHarmYesNo=\"Yes\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -848,7 +848,7 @@
     "PageFieldDisplayOrder": 2
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "allChildrenAreRiskSexualAbuse",
@@ -859,12 +859,12 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "whichChildrenAreRiskSexualAbuse",
     "FieldShowCondition": "allChildrenAreRiskSexualAbuse=\"No\"",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 7,
     "PageDisplayOrder": 7,
     "PageFieldDisplayOrder": 4,
@@ -904,7 +904,7 @@
     "PageFieldDisplayOrder": 2
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "allChildrenAreRiskEmotionalAbuse",
@@ -915,12 +915,12 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "whichChildrenAreRiskEmotionalAbuse",
     "FieldShowCondition": "allChildrenAreRiskEmotionalAbuse=\"No\"",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 8,
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 4,
@@ -947,7 +947,7 @@
     "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "childAbuseBehaviours CONTAINS \"financialAbuse\""
+    "PageShowCondition": "childAbuseBehaviours CONTAINS \"financialAbuse\" AND newAllegationsOfHarmYesNo=\"Yes\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -960,7 +960,7 @@
     "PageFieldDisplayOrder": 2
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "allChildrenAreRiskFinancialAbuse",
@@ -971,12 +971,12 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
-    "LiveFrom": "17/11/2021",
+    "LiveFrom": "15/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "whichChildrenAreRiskFinancialAbuse",
     "FieldShowCondition": "allChildrenAreRiskFinancialAbuse=\"No\"",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 9,
     "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 4,
@@ -998,7 +998,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "childAbductionLabel",
-    "PageShowCondition": "newAllegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "PageShowCondition": "newAllegationsOfHarmChildAbductionYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
     "DisplayContext": "READONLY",
     "PageID": 10,
     "PageDisplayOrder": 10,
@@ -1112,7 +1112,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendAllegationsOfHarmRevised",
     "CaseFieldID": "othersConcernsLabel",
-    "PageShowCondition": "newAllegationsOfHarmOtherConcerns=\"Yes\"",
+    "PageShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
     "DisplayContext": "READONLY",
     "PageID": 11,
     "PageDisplayOrder": 11,
@@ -1174,4 +1174,5 @@
     "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   }
+
 ]
