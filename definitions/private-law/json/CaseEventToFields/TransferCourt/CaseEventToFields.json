@@ -92,7 +92,20 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
+    "CaseFieldID": "reasonForTransferToAnotherCourtDa",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -104,6 +117,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 8,
     "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "reasonForTransferToAnotherCourt CONTAINS \"anotherReason\""
+    "FieldShowCondition": "reasonForTransferToAnotherCourt CONTAINS \"anotherReason\" OR reasonForTransferToAnotherCourtDa CONTAINS \"anotherReason\""
   }
 ]
