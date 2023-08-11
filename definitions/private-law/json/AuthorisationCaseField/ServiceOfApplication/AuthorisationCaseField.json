@@ -1174,6 +1174,32 @@
     {
       "LiveFrom": "09/08/2023",
       "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "soaDocumentDynamicListForLa",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRUD"
+        },
+        {
+          "UserRoles": [
+            "citizen",
+            "caseworker-privatelaw-solicitor",
+            "caseworker-privatelaw-superuser",
+            "caseworker-wa-task-configuration",
+            "caseworker-privatelaw-readonly"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    },
+    {
+      "LiveFrom": "09/08/2023",
+      "CaseTypeID": "PRLAPPS",
       "CaseFieldID": "soaLaEmailAddress",
       "AccessControl": [
         {
