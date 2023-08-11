@@ -20,11 +20,22 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "reasonsForC2Application",
+    "ListElementCode": "caReasonsForC2Application",
     "ElementLabel": "Reason for application",
     "HintText": "Select all that apply",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "C2AdditionalOrdersRequested",
+    "FieldTypeParameter": "C2AdditionalOrdersRequestedCa",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "daReasonsForC2Application",
+    "ElementLabel": "Reason for application",
+    "HintText": "Select all that apply",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "C2AdditionalOrdersRequestedDa",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -38,6 +49,16 @@
     "FieldTypeParameter": "CombinedC2AdditionalOrdersRequested",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "otherReasonsFoC2Application",
+    "FieldType": "Text",
+    "ElementLabel": "Other reasons for C2 Application",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/11/2022",
