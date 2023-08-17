@@ -27,6 +27,9 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
+const ChildrenRelationships = require('./pages/ChildrenRelationships');
+
 
 module.exports = () => {
   return actor({
@@ -65,6 +68,18 @@ module.exports = () => {
     },
     childDetails() {
       return ChildDetails.runChildDetailsEventHappyPath();
+    },
+    runOtherChildDetailsEvent() {
+      return OtherChildrenNotInCase.runOtherChildDetailsEvent();
+    },
+    runChildrenAndApplicant() {
+      return ChildrenRelationships.runChildrenAndApplicant();
+    },
+    runChildrenAndRespondent() {
+      return ChildrenRelationships.runChildrenAndRespondent();
+    },
+    runChildrenAndOtherPeople() {
+      return ChildrenRelationships.runChildrenAndOtherPeople();
     },
     applicantDetailsC100() {
       return ApplicantDetails.runApplicantDetailsEventHappyPath();

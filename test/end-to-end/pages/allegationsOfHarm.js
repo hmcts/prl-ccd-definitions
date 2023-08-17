@@ -22,6 +22,7 @@ module.exports = {
     ordersForcedMarriageProtectionNo: '//*[@id="newOrdersForcedMarriageProtection_No"]',
     ordersRestrainingNo: '//*[@id="newOrdersRestraining_No"]',
     ordersOtherInjunctiveNo: '//*[@id="newOrdersOtherInjunctive_No"]',
+    ordersUndertakingNo: '//*[@id="newOrdersUndertakingInPlace_No"]',
 
     // Domestic Abuse - Behaviours
     behaviourDAPhysicalAbuse: '//*[@id="domesticBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
@@ -31,12 +32,12 @@ module.exports = {
     behaviourDAWhoHelpFromDescription: '//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
 
     // Child Abuse - Behaviours
-    behaviourCAPhysicalAbuse: '//*[@id="childAbuseBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
-    behaviourCARisk: '//*[@id="childAbuseBehaviours_0_allChildrenAreRisk_Yes"]',
-    behaviourCANatureWhatWhoDescription: '//*[@id="childAbuseBehaviours_0_newAbuseNatureDescription"]',
-    behaviourCAStartDateAndLength: '//*[@id="childAbuseBehaviours_0_newBehavioursStartDateAndLength"]',
-    behaviourCAApplicantSoughtHelp: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantSoughtHelp_Yes"]',
-    behaviourCAWhoHelpFromDescription: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
+    caTypeOfAbuse: '//*[@id="childAbuses-physicalAbuse"]',
+    behaviourCARisk: '//*[@id="allChildrenAreRiskPhysicalAbuse_Yes"]',
+    behaviourCANatureWhatWhoDescription: '//*[@id="childPhysicalAbuse_abuseNatureDescription"]',
+    behaviourCAStartDateAndLength: '//*[@id="childPhysicalAbuse_behavioursStartDateAndLength"]',
+    behaviourCAApplicantSoughtHelp: '//*[@id="childPhysicalAbuse_behavioursApplicantSoughtHelp_Yes"]',
+    behaviourCAWhoHelpFromDescription: '//*[@id="childPhysicalAbuse_behavioursApplicantHelpSoughtWho"]',
 
     // Child Abduction Page
     abductionWhyDescription: '//*[@id="newChildAbductionReasons"]',
@@ -106,7 +107,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.ordersRestrainingNo);
     I.wait('2');
     await I.retry(retryCount).click(this.fields.ordersOtherInjunctiveNo);
-    await I.retry(retryCount).click('//*[@id="newOrdersUndertakingInPlace_No"]');
+    await I.retry(retryCount).click(this.fields.ordersUndertakingNo);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
@@ -129,16 +130,17 @@ module.exports = {
   async childAbuseBehaviour() {
     // Child Abuse
     await I.retry(retryCount).waitForText('Child abuse - Behaviours');
-    I.wait('2');
-    await I.retry(retryCount).click('Add new');
-    I.wait('2');
+    await I.retry(retryCount).click(this.fields.caTypeOfAbuse);
+    await I.retry(retryCount).click('Continue');
+  },
+
+  async childAbusePhysicalAbuse() {
     // eslint-disable-next-line max-len
-    await I.retry(retryCount).click(this.fields.behaviourCAPhysicalAbuse);
     await I.retry(retryCount).click(this.fields.behaviourCARisk);
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourCAStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviourCAApplicantSoughtHelp);
-    await I.retry(retryCount).fillField('//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
+    await I.retry(retryCount).fillField(this.fields.behaviourCAWhoHelpFromDescription, this.fields.textareaText); 
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
