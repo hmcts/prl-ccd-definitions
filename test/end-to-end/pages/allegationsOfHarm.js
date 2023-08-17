@@ -140,7 +140,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourCAStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviourCAApplicantSoughtHelp);
-    await I.retry(retryCount).fillField(this.fields.behaviourCAWhoHelpFromDescription, this.fields.textareaText); 
+    await I.retry(retryCount).fillField(this.fields.behaviourCAWhoHelpFromDescription, this.fields.textareaText);
     I.wait('2');
     await I.retry(retryCount).click('Continue');
     I.wait('2');
