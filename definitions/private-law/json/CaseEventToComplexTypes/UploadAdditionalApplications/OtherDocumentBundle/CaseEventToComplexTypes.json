@@ -5,10 +5,11 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "applicationType",
+    "ListElementCode": "caApplicantApplicationType",
     "EventElementLabel": "Select application",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"CAAPPLICANT\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -16,11 +17,35 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "parentalResponsibilityType",
-    "EventElementLabel": "Who's seeking parental responsibility?",
-    "FieldDisplayOrder": "2",
+    "ListElementCode": "caRespondentApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "temporaryOtherApplicationsBundle.applicationType=\"C1_PARENTAL_RESPONSIBILITY\""
+    "FieldShowCondition": "representedPartyType=\"CARESPONDENT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daApplicantApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"DAAPPLICANT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daRespondentApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"DARESPONDENT\""
   },
   {
     "LiveFrom": "20/11/2022",
