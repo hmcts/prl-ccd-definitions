@@ -134,7 +134,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.caTypeOfAbuse);
     await I.retry(retryCount).click('Continue');
   },
-   async childAbusePhysicalAbuse() { 
+  async childAbusePhysicalAbuse() {
     // eslint-disable-next-line max-len
     await I.retry(retryCount).click(this.fields.behaviourCARisk);
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
