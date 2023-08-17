@@ -40,6 +40,12 @@ module.exports = {
     await I.retry(retryCount).checkOption('#buffChildAndOtherPeopleRelations_0_childLivesWith_Yes');
     I.wait('1');
     await I.retry(retryCount).checkOption('#buffChildAndOtherPeopleRelations_0_isChildLivesWithPersonConfidential_Yes');
+    I.wait('2');
+    await I.retry(retryCount).selectOption('//input[@id="buffChildAndOtherPeopleRelations_1_childAndOtherPeopleRelation"]', 'Grandparent');
+    I.wait('1');
+    await I.retry(retryCount).checkOption('#buffChildAndOtherPeopleRelations_1_childLivesWith_Yes');
+    I.wait('1');
+    await I.retry(retryCount).checkOption('#buffChildAndOtherPeopleRelations_1_isChildLivesWithPersonConfidential_Yes');
   },
   async runChildrenAndApplicant() {
     await this.childrenAndApplicant();
