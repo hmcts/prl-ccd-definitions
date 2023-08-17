@@ -81,6 +81,17 @@
     "ID": "OtherApplicationsBundle",
     "ListElementCode": "document",
     "FieldType": "Document",
+    "ElementLabel": " ",
+    "RegularExpression": ".doc,.docx,.pdf",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "finalDocument",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "ElementLabel": "Application",
     "RegularExpression": ".doc,.docx,.pdf",
     "SecurityClassification": "Public",
@@ -153,7 +164,8 @@
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "Comment": "Presentational only - used to display a warning label in the event."
+    "Comment": "Presentational only - used to display a warning label in the event.",
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -174,5 +186,14 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "documentAcknowledge=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "applicationStatus",
+    "FieldType": "Text",
+    "ElementLabel": "Application status",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
