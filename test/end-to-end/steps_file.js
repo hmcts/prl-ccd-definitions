@@ -68,8 +68,8 @@ module.exports = () => {
     childDetails() {
       return ChildDetails.runChildDetailsEventHappyPath();
     },
-     runOtherChildDetailsEvent() {
-     return OtherChildrenNotInCase.runOtherChildDetailsEvent();
+    runOtherChildDetailsEvent() {
+      return OtherChildrenNotInCase.runOtherChildDetailsEvent();
     },
     runChildrenAndApplicant() {
       return ChildrenRelationships.runChildrenAndApplicant();

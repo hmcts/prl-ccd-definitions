@@ -4,12 +4,12 @@ const retryCount = 3;
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-    textareaText: 'Testing text area',
+    textareaText: 'Testing text area'
   },
 
   async childrenAndApplicant() {
     await I.retry(retryCount).triggerEvent('Children and applicants');
-    await I.retry(retryCount).waitForText('Children and applicants', 30)
+    await I.retry(retryCount).waitForText('Children and applicants');
     I.wait('1');
     await I.retry(retryCount).selectOption('//input[@id="buffChildAndApplicantRelations_0_childAndApplicantRelation"]', 'Father');
     I.wait('1');
@@ -21,7 +21,7 @@ module.exports = {
   },
   async childrenAndRespondent() {
     await I.retry(retryCount).triggerEvent('Children and respondents');
-    await I.retry(retryCount).waitForText('Children and respondents', 30)
+    await I.retry(retryCount).waitForText('Children and respondents');
     I.wait('1');
     await I.retry(retryCount).selectOption('//input[@id="buffChildAndRespondentRelations_0_childAndRespondentRelation"]', 'Mother');
     I.wait('1');
@@ -33,7 +33,7 @@ module.exports = {
   },
   async childrenAndOtherPeople() {
     await I.retry(retryCount).triggerEvent('Children and other people');
-    await I.retry(retryCount).waitForText('Children and other people', 30)
+    await I.retry(retryCount).waitForText('Children and other people');
     I.wait('1');
     await I.retry(retryCount).selectOption('//input[@id="buffChildAndOtherPeopleRelations_0_childAndOtherPeopleRelation"]', 'Grandparent');
     I.wait('1');
