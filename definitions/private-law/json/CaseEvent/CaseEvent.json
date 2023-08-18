@@ -210,8 +210,26 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion!=\"v2\""
   },
+
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childDetailsRevised",
+    "Name": "Child details",
+    "Description": "Details of the children in the case",
+    "DisplayOrder": 6,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+  },
+
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -226,8 +244,25 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
   },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendChildDetailsRevised",
+    "Name": "Amend Child details",
+    "Description": "Details of the children in the case",
+    "DisplayOrder": 6,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+  },
+
   {
     "LiveFrom": "16/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -324,7 +359,40 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevised",
+    "Name": "Allegations of harm",
+    "Description": "Allegations of harm",
+    "DisplayOrder": 9,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-data",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendAllegationsOfHarmRevised",
+    "Name": "Amend Allegations of harm",
+    "Description": "Allegations of harm",
+    "DisplayOrder": 9,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -340,7 +408,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -356,7 +424,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -372,7 +440,58 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+  },
+
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeopleInTheCaseRevised",
+    "Name": "Other people in the case",
+    "Description": "Other people in the case",
+    "DisplayOrder": 10,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendOtherPeopleInTheCaseRevised",
+    "Name": "Amend Other people in the case",
+    "Description": "Other people in the case",
+    "DisplayOrder": 10,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+  },
+
+
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherChildNotInTheCase",
+    "Name": "Other children not in the case",
+    "Description": "Other children not part of this application but related to the case",
+    "DisplayOrder": 11,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
   },
   {
     "LiveFrom": "21/11/2021",
@@ -1781,7 +1900,62 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "True"
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childrenAndApplicants",
+    "Name": "Children and applicants",
+    "Description": "Create a Relation between Children and Applicants",
+    "DisplayOrder": 102,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-applicant-to-child-relation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-applicant-to-child-relation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childrenAndRespondents",
+    "Name": "Children and respondents",
+    "Description": "Create a Relation between Children and Respondents",
+    "DisplayOrder": 103,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-respondent-to-child-relation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-respondent-to-child-relation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childrenAndOtherPeople",
+    "Name": "Children and other people",
+    "Description": "Create a Relation between Children and Other People",
+    "DisplayOrder": 104,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-other-people-to-child-relation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-other-people-to-child-relation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
   }
 ]
 
