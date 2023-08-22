@@ -13,8 +13,6 @@ Clone project and in the project directory run:
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
 
-feature/setup-legal-rep-events
-
 #### Troubleshooting
 
 ### Managing Preview environment PODs
