@@ -15,12 +15,12 @@ module.exports = {
   async noOtherChildren() {
     await I.waitForText('Do you or respondents have other children who are not part of this application?');
     await I.retry(retryCount).checkOption('//input[@id="childrenNotPartInTheCaseYesNo_No"]');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async runOtherChildDetailsEvent() {
     await this.triggerEvent();
-    await this.fillOtherChildrenPage();
-    await this.fillAdditionalQuestionsPage();
+    await this.noOtherChildren();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }

@@ -27,10 +27,16 @@ module.exports = {
 
   async payNow() {
     I.wait('2');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
+  async happensNext() {
+    I.wait('6');
+    await I.retry(retryCount).click(this.fields.submit);
+    I.wait('4');
+    await I.retry(retryCount).waitForText('Case Status');
     I.wait('2');
-    await I.retry(retryCount).click('Pay now');
-    I.wait('5');
+    await I.retry(retryCount).waitForText('Pending');
   },
 
   async submitAndPay() {
@@ -38,6 +44,7 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
+    // await this.happensNext();
     // await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };

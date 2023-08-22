@@ -135,7 +135,6 @@ module.exports = {
   },
 
   async childAbusePhysicalAbuse() {
-    // eslint-disable-next-line max-len
     await I.retry(retryCount).click(this.fields.behaviourCARisk);
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourCAStartDateAndLength, this.fields.textareaText);
@@ -187,6 +186,7 @@ module.exports = {
     await this.allegationsOfHarmInformation();
     await this.domesticAbuseBehaviour();
     await this.childAbuseBehaviour();
+    await this.childAbusePhysicalAbuse();
     await this.childAbductionAOH();
     await this.otherConcerns();
     await this.submitEvent();

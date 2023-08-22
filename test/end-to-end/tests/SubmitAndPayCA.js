@@ -15,7 +15,6 @@ Scenario('Create a Case and Submit/Pay ', async I => {
   await I.runChildrenAndOtherPeople();
   await I.allegationsOfHarmEvent();
   await I.runMIAMEventHappyPath();
-  await I.otherPeopleInTheCase();
   await I.otherProceedingsEventC100();
   await I.runAttendingTheHearingEvent();
   await I.internationalElement();
