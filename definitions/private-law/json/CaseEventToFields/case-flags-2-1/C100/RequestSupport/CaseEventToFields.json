@@ -1,0 +1,40 @@
+[
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100RequestSupport",
+    "CaseFieldID": "flagLauncherExternal",
+    "DisplayContext": "MANDATORY",
+    "DisplayContextParameter": "#ARGUMENT(CREATE,EXTERNAL)",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100RequestSupport",
+    "CaseFieldID": "applicants",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "flagLauncherExternal=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100RequestSupport",
+    "CaseFieldID": "respondents",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "flagLauncherExternal=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes"
+  }
+]
