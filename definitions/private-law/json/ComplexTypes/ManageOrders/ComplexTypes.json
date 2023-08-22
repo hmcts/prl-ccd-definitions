@@ -467,6 +467,7 @@
     "FieldTypeParameter": "HearingData",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -561,6 +562,49 @@
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "c21OrderOptions",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C21OrderOptionsEnum",
+    "ElementLabel": "Type of c21 order",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "childArrangementsOrdersToIssue",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OrderTypeEnum",
+    "ElementLabel": "Select orders to issue",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "selectChildArrangementsOrder",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "childArrangementOrderTypeEnum",
+    "ElementLabel": "Select type of child arrangements order",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "ID": "OrderDetails",
+    "ListElementCode": "childOption",
+    "ElementLabel": " ",
+    "FieldType": "DynamicMultiSelectList",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   }
 ]
