@@ -7,8 +7,8 @@
     "UserRole": "caseworker-privatelaw-courtadmin",
     "TabLabel": "CA Tasks",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListReturnLabel",
-    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\" OR [STATE] = \"AWAITING_RESUBMISSION_TO_HMCTS\"",
+    "CaseFieldID": "taskListLabel",
+    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\"",
     "TabFieldDisplayOrder": 1
   },
   {
@@ -18,30 +18,8 @@
     "TabID": "CATasks",
     "TabLabel": "CA Tasks",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListReturn",
-    "TabFieldDisplayOrder": 2,
-    "FieldShowCondition": "taskListReturn = \"DO_NOT_SHOW\"",
-    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
-  },
-  {
-    "LiveFrom": "25/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "CATasks",
-    "TabLabel": "CA Tasks",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListLabel",
-    "TabFieldDisplayOrder": 3
-  },
-  {
-    "LiveFrom": "25/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "CATasks",
-    "TabLabel": "CA Tasks",
-    "TabDisplayOrder": 0,
     "CaseFieldID": "taskList",
-    "TabFieldDisplayOrder": 4,
+    "TabFieldDisplayOrder": 2,
     "FieldShowCondition": "taskList = \"DO_NOT_SHOW\"",
     "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
   }
