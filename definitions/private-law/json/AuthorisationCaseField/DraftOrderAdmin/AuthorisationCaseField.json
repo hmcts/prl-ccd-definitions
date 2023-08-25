@@ -390,5 +390,30 @@
     "CaseFieldID": "whatDoWithOrder",
     "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "R"
-  }
+  },
+  {
+      "LiveFrom": "24/08/2023",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "tempOrderStore",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRUD"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-superuser",
+            "caseworker-wa-task-configuration",
+            "caseworker-privatelaw-solicitor",
+            "citizen"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    }
 ]
