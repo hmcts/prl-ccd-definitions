@@ -12,9 +12,9 @@ module.exports = {
   async otherPeopleInTheCase() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).click('Add new');
-    await I.wait('1');
+    I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="otherPartyInTheCaseRevised_0_firstName"]', 'Other Firstname');
-    await I.wait('2');
+    I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="otherPartyInTheCaseRevised_0_lastName"]', 'Other Lastname');
     await I.retry(retryCount).fillField('//input[@id="otherPartyInTheCaseRevised_0_previousName"]', 'Other PreviousName');
     await I.retry(retryCount).checkOption('#otherPartyInTheCaseRevised_0_isDateOfBirthKnown_Yes');

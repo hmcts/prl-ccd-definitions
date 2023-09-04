@@ -4,8 +4,8 @@ const retryCount = 3;
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-    textareaText: 'Testing text area',
-    otherChildrenNo: '//input[@id="childrenNotPartInTheCaseYesNo_No"]',
+    textareaText: 'Testing text area'
+
   },
 
   async triggerEvent() {
@@ -14,7 +14,7 @@ module.exports = {
 
   async noOtherChildren() {
     await I.waitForText('Do you or respondents have other children who are not part of this application?');
-    await I.retry(retryCount).checkOption(this.fields.otherChildrenNo);
+    await I.retry(retryCount).checkOption('//input[@id="childrenNotPartInTheCaseYesNo_No"]');
     await I.retry(retryCount).click(this.fields.submit);
   },
 
