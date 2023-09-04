@@ -5,7 +5,7 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     textareaText: 'Testing text area',
-    otherChildrenNo: '//input[@id="childrenNotPartInTheCaseYesNo_No"]'
+    otherChildrenNo: '//input[@id="childrenNotPartInTheCaseYesNo_No"]',
   },
 
   async triggerEvent() {

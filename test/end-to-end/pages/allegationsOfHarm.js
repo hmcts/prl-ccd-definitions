@@ -127,7 +127,7 @@ module.exports = {
     await I.wait('2');
   },
   async childAbuseBehaviour() {
-    await I.retry(retryCount).waitForText('Child abuse - Behaviours');
+        await I.retry(retryCount).waitForText('Child abuse - Behaviours');
     await I.retry(retryCount).click(this.fields.caTypeOfAbuse);
     await I.retry(retryCount).click('Continue');
   },
