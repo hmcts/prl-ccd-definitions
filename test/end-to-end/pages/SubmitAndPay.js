@@ -53,7 +53,7 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).waitForText('Submitted');
   },
-  
+
   async submitAndPay() {
     await this.triggerEvent();
     await this.confidentialityStatement();
