@@ -31,7 +31,7 @@ module.exports = {
   },
 
   async happensNext() {
-    await I.wait('6');
+    await I.wait('12');
     await I.retry(retryCount).click('Close and Return to case details');
     await I.wait('4');
     await I.retry(retryCount).waitForText('Case Status');
