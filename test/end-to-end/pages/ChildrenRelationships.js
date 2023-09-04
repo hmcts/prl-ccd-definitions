@@ -4,21 +4,21 @@ const retryCount = 3;
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-    textareaText: 'Testing text area', 
+    textareaText: 'Testing text area',
 
-    //Applicant and Child 1/2
+    // Applicant and Child 1/2
     app1AndChild1: 'select[id="buffChildAndApplicantRelations_0_childAndApplicantRelation"]',
     app1AndChild2: 'select[id="buffChildAndApplicantRelations_1_childAndApplicantRelation"]',
     app1C1LiveWith: '#buffChildAndApplicantRelations_0_childLivesWith_Yes',
     app1C2LiveWith: '#buffChildAndApplicantRelations_1_childLivesWith_Yes',
 
-    //Child 1/2 and respondent
+    // Child 1/2 and respondent
     resp1AndChild1: 'select[id="buffChildAndRespondentRelations_0_childAndRespondentRelation"]',
     resp1AndChild2: 'select[id="buffChildAndRespondentRelations_1_childAndRespondentRelation"]',
     resp1C1LiveWith: '#buffChildAndRespondentRelations_0_childLivesWith_Yes',
     resp1C2LiveWith: '#buffChildAndRespondentRelations_1_childLivesWith_Yes',
 
-    //Child 1/2 and Other people
+    // Child 1/2 and Other people
     op1AndChild1: 'select[id="buffChildAndOtherPeopleRelations_0_childAndOtherPeopleRelation"]',
     op1AndChild2: 'select[id="buffChildAndOtherPeopleRelations_1_childAndOtherPeopleRelation"]',
     op1C1LiveWith: '#buffChildAndOtherPeopleRelations_0_childLivesWith_Yes',
