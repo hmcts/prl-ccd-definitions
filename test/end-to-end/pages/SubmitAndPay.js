@@ -2,9 +2,9 @@ const I = actor();
 const retryCount = 3;
 
 module.exports = {
-  fields: { 
-    submit: 'button[type="submit"]', 
-    caseStatus: '.text-16',
+  fields: {
+    submit: 'button[type="submit"]',
+    caseStatus: '.text-16'
   },
 
   async triggerEvent() {
