@@ -324,12 +324,22 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "OrderDetails",
+    "ListElementCode": "isOrderUploaded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Order uploaded ?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
     "ListElementCode": "orderTypeId",
     "FieldType": "Text",
     "ElementLabel": "Type of order",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+    "FieldShowCondition": "isOrderUploaded = \"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -466,7 +476,7 @@
     "FieldTypeParameter": "HearingData",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
+    "FieldShowCondition": "dateCreated=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
