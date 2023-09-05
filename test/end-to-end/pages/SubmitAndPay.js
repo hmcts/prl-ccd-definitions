@@ -2,7 +2,10 @@ const I = actor();
 const retryCount = 3;
 
 module.exports = {
-  fields: { submit: 'button[type="submit"]' },
+  fields: { 
+    submit: 'button[type="submit"]', 
+    caseStatus: '.text-16',
+  },
 
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Submit and pay');
@@ -34,7 +37,7 @@ module.exports = {
     await I.wait('12');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('6');
-    await I.retry(retryCount).waitForElement('.text-16');
+    await I.retry(retryCount).waitForElement(this.fields.caseStatus);
     await I.wait('4');
     await I.retry(retryCount).waitForText('Pending');
   },
@@ -49,7 +52,7 @@ module.exports = {
 
   async caseSubmittedCA() {
     await I.wait('4');
-    await I.retry(retryCount).waitForText('Case Status');
+    await I.retry(retryCount).waitForElement(this.fields.caseStatus);
     await I.wait('2');
     await I.retry(retryCount).waitForText('Submitted');
   },

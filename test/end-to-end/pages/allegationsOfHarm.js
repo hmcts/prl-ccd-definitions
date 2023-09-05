@@ -117,7 +117,6 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click('Add new');
     await I.wait('2');
-    // eslint-disable-next-line max-len
     await I.retry(retryCount).click(this.fields.behaviourDAPhysicalAbuse);
     await I.retry(retryCount).fillField(this.fields.behaviourDANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourDAStartDateAndLength, this.fields.textareaText);
@@ -131,7 +130,6 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.caTypeOfAbuse);
     await I.retry(retryCount).click('Continue');
   },
-
   async childAbusePhysicalAbuse() {
     await I.retry(retryCount).click(this.fields.behaviourCARisk);
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
