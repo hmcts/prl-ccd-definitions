@@ -1,5 +1,17 @@
 [
   {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "selectedOrderHearingLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 16,
+    "PageDisplayOrder": 16,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
@@ -7,8 +19,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "PageFieldDisplayOrder": 2,
     "PageShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR createSelectOrderOptions=\"blank\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"noticeOfProceedings\" OR createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR c21OrderOptions=\"c21other\""
   },
   {
@@ -19,7 +30,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 16,
     "PageDisplayOrder": 16,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\""
   }
 ]
