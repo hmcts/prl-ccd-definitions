@@ -5,12 +5,16 @@ Scenario('Create a Case and Submit/Pay ', async I => {
   await I.createCase();
   await I.typeOfApplicationEventC100();
   await I.hearingUrgency();
-  await I.applicantDetailsC100();
   await I.childDetails();
+  await I.applicantDetailsC100();
   await I.respondentDetailsC100();
+  await I.otherPeopleInTheCase();
+  await I.runOtherChildDetailsEvent();
+  await I.runChildrenAndApplicant();
+  await I.runChildrenAndRespondent();
+  await I.runChildrenAndOtherPeople();
   await I.allegationsOfHarmEvent();
   await I.runMIAMEventHappyPath();
-  await I.otherPeopleInTheCase();
   await I.otherProceedingsEventC100();
   await I.runAttendingTheHearingEvent();
   await I.internationalElement();
