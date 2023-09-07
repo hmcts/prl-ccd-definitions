@@ -28,5 +28,22 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
+  },
+  async loginAsCourtAdmin() {
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+    try {
+      await I.retry(retryCount).click('#cookie-accept-submit');
+      await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
+      await I.runAccessibilityTest();
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
   }
+
 };
