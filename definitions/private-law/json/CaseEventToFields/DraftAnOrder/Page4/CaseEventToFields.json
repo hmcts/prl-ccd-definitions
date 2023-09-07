@@ -94,8 +94,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\" AND draftOrderOptions!=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -106,7 +105,8 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\" AND draftOrderOptions!=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -130,7 +130,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "draftOrderOptions!=\"uploadAnOrder\""
+    "FieldShowCondition": "draftOrderOptions!=\"uploadAnOrder\" AND judgeOrMagistrateTitle = \"justicesLegalAdviser\""
   },
   {
     "LiveFrom": "31/03/2022",
