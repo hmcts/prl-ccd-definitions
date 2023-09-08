@@ -31,9 +31,6 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
-    // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
-    // await I.selectFromList(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
@@ -106,7 +103,7 @@ module.exports = {
   },
   async createNewCaseC100_TS() {
     await this.clickCreateCase();
-    await this.fillFormAndSubmit_TS();
+    await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationC100();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');

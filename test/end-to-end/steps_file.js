@@ -31,6 +31,7 @@ const manageOrders = require('./pages/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
+const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 
 module.exports = () => {
   return actor({
@@ -186,6 +187,12 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    selectApplication() {
+      return UploadAdditionalApplications.selectApplication();
+    },
+    uploadApplication() {
+      return UploadAdditionalApplications.uploadApplication();
     }
   });
 };
