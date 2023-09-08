@@ -29,7 +29,7 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Upload additional applications');
   },
 
-  async selectApplication(){
+  async selectApplication() {
     await this.triggerEvent();
     await I.wait('3');
     await I.retry(retryCount).waitForText(this.fields.pageTitle);
