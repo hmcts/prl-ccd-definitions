@@ -27,6 +27,8 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const manageOrders = require('./pages/ManageOrders');
+const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 
@@ -34,6 +36,9 @@ module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsCourtAdmin() {
+      return LoginPage.loginAsCourtAdmin();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -46,6 +51,18 @@ module.exports = () => {
     },
     createCase() {
       return CreateCasePage.createNewCaseC100();
+    },
+    createC100CaseByCourtAdmin() {
+      return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    manageOrderCreateOrderC21() {
+      return manageOrders.createAnOrderC21();
+    },
+    submitManageOrder() {
+      return manageOrders.submitManageOrder();
+    },
+    fillHearingDetails() {
+      return manageOrderHearing.fillHearingDetails();
     },
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
