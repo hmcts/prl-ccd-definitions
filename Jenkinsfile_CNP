@@ -4,7 +4,6 @@
 String product = "prl"
 String component = "ccd-definitions"
 
-
 def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
@@ -46,7 +45,6 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withPipeline("nodejs", product, component) {
-
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
