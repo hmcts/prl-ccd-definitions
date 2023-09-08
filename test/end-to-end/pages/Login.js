@@ -2,11 +2,11 @@ const I = actor();
 const config = require('../config');
 
 const retryCount = 3;
-// const normalizeCaseId = caseId => {
-//   return caseId.toString().replace(/\D/g, '');
-// };
+const normalizeCaseId = caseId => {
+  return caseId.toString().replace(/\D/g, '');
+};
 // eslint-disable-next-line no-unused-vars
-const baseUrl = config.baseUrl;
+// const baseUrl = config.baseUrl;
 
 module.exports = {
 
@@ -49,12 +49,8 @@ module.exports = {
   },
   async loginAsCourtAdminTSSolicitorCreate() {
     await I.wait('2');
-    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
-    // await I.retry(retryCount).click('Sign out');
-
-    const caseId = '1684793475603503';
-
-    // eslint-disable-next-line no-useless-concat
+    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    await I.retry(retryCount).click('Sign out');
     await I.retry(retryCount).amOnPage(`${`${process.env.XUI_WEB_URL}` + '/case-details/'}${caseId}`);
     try {
       // await I.retry(retryCount).click('#cookie-accept-submit');

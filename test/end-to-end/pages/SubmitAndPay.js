@@ -66,6 +66,7 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.payNow();
+    await I.wait('3');
     await this.happensNext();
     await this.runDummyPayment();
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();

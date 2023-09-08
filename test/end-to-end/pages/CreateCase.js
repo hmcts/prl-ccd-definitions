@@ -109,7 +109,7 @@ module.exports = {
     await this.fillFormAndSubmit_TS();
     await this.selectTypeOfApplicationC100();
     await I.retry(retryCount).click('Create my dummy case');
-    await I.wait('5');
+    await I.wait('7');
   },
   async createC100CaseByCourtAdmin() {
     await this.clickCreateCase();
