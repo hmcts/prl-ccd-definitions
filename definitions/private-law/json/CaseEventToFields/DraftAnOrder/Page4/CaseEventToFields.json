@@ -9,19 +9,20 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-fields",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/selected-order",
+    "FieldShowCondition": "typeOfC21Order=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "typeOfC21OrderLabel",
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-fields",
     "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
   },
   {
@@ -29,7 +30,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "selectedOrder",
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -41,7 +42,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "selectedOrderLabel",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
