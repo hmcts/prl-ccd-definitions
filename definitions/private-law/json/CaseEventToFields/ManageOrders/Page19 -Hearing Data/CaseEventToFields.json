@@ -1,5 +1,36 @@
 [
   {
+    "LiveFrom": "11/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectedOrderC6",
+    "DisplayContext": "READONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
+  },
+  {
+    "LiveFrom": "11/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "creatingHearingRequiredLabel",
+    "DisplayContext": "RADONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 2
+  },
+  {
+    "LiveFrom": "11/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "createOneHearingLabel",
+    "DisplayContext": "RADONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 3
+  },
+  {
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
@@ -7,8 +38,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
+    "PageFieldDisplayOrder": 4,
     "PageShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR c21OrderOptions=\"c21other\" OR createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"noticeOfProceedings\""
   }
 ]
