@@ -193,6 +193,9 @@ module.exports = () => {
     },
     uploadApplication() {
       return UploadAdditionalApplications.uploadApplication();
+    },
+    awpCAOtherOrders() {
+      return UploadAdditionalApplications.awpCAOtherOrders();
     }
   });
 };

@@ -4,4 +4,5 @@ Scenario('Solicitor Help With Fee in AWP @nightly', async I => {
   await I.loginAsSolicitor();
   await I.createCase_TS();
   await I.runSubmitAndPayHappyPath();
+  await I.awpCAOtherOrders();
 }).retry({ retries: 3, minTimeout: 30000 });

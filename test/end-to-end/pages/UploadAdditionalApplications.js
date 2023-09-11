@@ -10,15 +10,17 @@ module.exports = {
     c2OrderCheckbox: '#additionalApplicationsApplyingFor-c2Order',
     applicantCheckbox: '//*[starts-with(@id,\'additionalApplicantsList_\')]',
     selectCAApplicationDropdown: '#temporaryOtherApplicationsBundle_caApplicantApplicationType',
-    caseNameWithLabel: '//markdown/h2[1]',
-    documentRelatedToText: 'Check if this document is related to ',
+    uploadApplicationFile: '#temporaryOtherApplicationsBundle_document',
+    caseNameWithLabelElement: '//markdown/h2[1]',
+    documentRelatedToText: 'Check if this document is related to',
     caseNameLength: 'Case Name:',
     tickToConfirmCheckbox: '#temporaryOtherApplicationsBundle_documentAcknowledge-ACK_RELATED_TO_CASE',
     within2DaysRadio: '#temporaryOtherApplicationsBundle_urgencyTimeFrameType-WITHIN_2_DAYS',
-    helpWithFees_Yes: '#helpWithFees_Yes',
-    helpWithFees_No: '#helpWithFees_No',
-    helpWithFeesReferenceNumber_text: '#helpWithFeesReferenceNumber',
-    HWFQuestion: 'Has the applicant applied for Help with Fees?',
+    awpFee: '//*[@id="additionalApplicationFeesToPayText"]/dt/ccd-markdown/div/markdown/p[2]',
+    awphelpWithFees_Yes: '#additionalApplicationsHelpWithFees_Yes',
+    awphelpWithFees_No: '#additionalApplicationsHelpWithFees_No',
+    awphelpWithFeesReferenceNumber: '#additionalApplicationsHelpWithFeesNumber',
+    awpHWFQuestion: 'Has the applicant applied for Help with Fees?',
     prlNoHWFText: 'Help with Fees is not yet available in the Family Private Law digital service.',
     HWFYesErrorMsg: 'Help with Fees is not yet available in Family Private Law digital ' +
       'service. Select \'No\' to continue with your application',
@@ -31,7 +33,7 @@ module.exports = {
 
   async selectApplication() {
     await this.triggerEvent();
-    await I.wait('3');
+    await I.wait('8');
     await I.retry(retryCount).waitForText(this.fields.pageTitle);
     await I.retry(retryCount).waitForText(this.fields.applyingForQuestion);
     await I.retry(retryCount).click(this.fields.otherOrderCheckbox);
@@ -41,38 +43,38 @@ module.exports = {
   },
 
   async uploadApplication() {
-    await I.retry(retryCount).attachFile(this.fields.selectCAApplicationDropdown, '../resource/dummy.pdf');
-    const caseName = this.fields.caseNameWithLabel.substring(this.fields.caseNameLength.length);
+    await I.retry(retryCount).selectOption(this.fields.selectCAApplicationDropdown, 'FC600 - Committal application');
+    await I.retry(retryCount).attachFile(this.fields.uploadApplicationFile, '../resource/dummy.pdf');
+    const caseNameWithLabel = await I.grabTextFrom(this.fields.caseNameWithLabelElement);
+    const caseName = caseNameWithLabel.substring(this.fields.caseNameLength.length);
+    console.log(this.fields.documentRelatedToText.concat(caseName));
     await I.retry(retryCount).waitForText(this.fields.documentRelatedToText.concat(caseName));
     await I.retry(retryCount).click(this.fields.tickToConfirmCheckbox);
     await I.retry(retryCount).click(this.fields.within2DaysRadio);
+    await I.wait('5');
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
   },
+  async awpCAOtherOrders() {
+    await this.selectApplication();
+    await this.uploadApplication();
+    await this.awpHelpWithFeeNo();
+  },
 
-  // async helpWithFeeNo() {
-  //   await I.wait('2');
-  //   await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
-  //   await I.retry(retryCount).click(this.fields.helpWithFees_No);
-  //   await I.wait('1');
-  //   await I.retry(retryCount).click('Continue');
-  //   await I.wait('2');
-  //   await I.retry(retryCount).click(this.fields.submit);
-  //   await I.wait('6');
-  //   await I.retry(retryCount).waitForText('Continue to payment');
-  //   await I.retry(retryCount).click('Close and Return to case details');
-  //   await I.wait('2');
-  // },
-  // async helpWithFeeYes() {
-  //   await I.wait('2');
-  //   await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
-  //   await I.retry(retryCount).click(this.fields.helpWithFees_Yes);
-  //   await I.wait('1');
-  //   await I.retry(retryCount).fillField(this.fields.helpWithFeesReferenceNumber_text, this.fields.HWFRefNum);
-  //   await I.retry(retryCount).click('Continue');
-  //   await I.wait('2');
-  //   await I.retry(retryCount).waitForText(this.fields.HWFYesErrorMsg);
-  // },
+  async awpHelpWithFeeNo() {
+    await I.wait('2');
+    await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
+    await I.retry(retryCount).waitForText(this.fields.awpHWFQuestion);
+    await I.retry(retryCount).waitForText('£167.00');
+    await I.retry(retryCount).click(this.fields.awphelpWithFees_No);
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click('Save and continue');
+    await I.wait('12');
+    await I.retry(retryCount).click('Service request');
+    await I.wait('10');
+    await I.retry(retryCount).waitForText('£167.00');
+  },
   async submitAndPay_HWF_Yes() {
     await this.triggerEvent();
     await this.confidentialityStatement();
