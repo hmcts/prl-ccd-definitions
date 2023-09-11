@@ -141,6 +141,7 @@ module.exports = {
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
+    await I.wait('5');
   },
 
   async amOnHistoryPageWithSuccessNotification() {
