@@ -13,15 +13,40 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "12/09/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "caffcassOfficeName",
+    "CaseFieldID": "isCafcassCymru",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 14,
     "PageDisplayOrder": 14,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeader1=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "caffcassOfficeName",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "READONLY",
+    "PageID": 14,
+    "PageDisplayOrder": 14,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isCafcassCymru=\"No\""
+  },
+  {
+    "LiveFrom": "12/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "caffcassCymruOfficeName",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "READONLY",
+    "PageID": 14,
+    "PageDisplayOrder": 14,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isCafcassCymru=\"Yes\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -31,7 +56,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 14,
     "PageDisplayOrder": 14,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
   }
 ]
