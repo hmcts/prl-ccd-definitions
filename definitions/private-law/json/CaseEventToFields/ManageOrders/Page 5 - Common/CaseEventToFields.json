@@ -9,7 +9,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -34,7 +34,7 @@
     "PageDisplayOrder": 5,
     "PageShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND manageOrdersOptions!=\"adminProduceOrder\" AND createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -43,8 +43,8 @@
     "CaseFieldID": "selectedOrderLabel",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\""
   },
@@ -262,7 +262,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" OR createSelectOrderOptions!=\"other\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
