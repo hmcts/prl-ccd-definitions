@@ -173,9 +173,8 @@
     "ID": "ServeOrderDetails",
     "ListElementCode": "otherParties",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Other people",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -384,7 +383,7 @@
     "ElementLabel": "Welsh document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "draftOrders"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -429,7 +428,7 @@
     "ElementLabel": "English document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "draftOrders"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -467,6 +466,7 @@
     "FieldTypeParameter": "HearingData",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
