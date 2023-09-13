@@ -9,7 +9,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/selected-order",
+    "PageShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
@@ -24,18 +24,6 @@
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-fields",
     "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "selectedOrder",
-    "PageFieldDisplayOrder": 3,
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -59,7 +47,6 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "FieldShowCondition": "draftOrderOptions!=\"uploadAnOrder\"",
-    "PageShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
