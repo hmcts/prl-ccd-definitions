@@ -58,6 +58,18 @@ module.exports = () => {
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
     },
+    createAnOrderC21_applicationrefused_AllChildrenNo() {
+      return manageOrders.createAnOrderC21_applicationrefused_AllChildrenNo();
+    },
+    createAnOrderC21_applicationrefused_AllChildrenYes() {
+      return manageOrders.createAnOrderC21_applicationrefused_AllChildrenYes();
+    },
+    serveFinalOrder() {
+      return manageOrders.serveFinalOrder();
+    },
+    serveFinalOrder_CaseClosed() {
+      return manageOrders.serveFinalOrder_CaseClosed();
+    },
     submitManageOrder() {
       return manageOrders.submitManageOrder();
     },
