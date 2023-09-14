@@ -49,7 +49,7 @@
     "ID": "HearingDateTimeOption",
     "ListElementCode": "hearingDateTimeOption",
     "FieldType": "DateTime",
-    "ElementLabel": "Enter a date and Time",
+    "ElementLabel": "Enter date and Time",
     "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -152,15 +152,6 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "HearingDateTimeOption",
     "ElementLabel": " ",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "ID": "HearingData",
-    "ListElementCode": "addNewHearingDateTimesLabel",
-    "FieldType": "Label",
-    "ElementLabel": "## Add new HearingDateTimes",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -298,8 +289,7 @@
     "ID": "HearingData",
     "ListElementCode": "estimatedTimeLabel",
     "FieldType": "Label",
-    "ElementLabel": "\nEstimated time \n\nOnly one input is required",
-    "HintText": "Only one input is required",
+    "ElementLabel": "**Estimated time**\n\nA minimum of one input is required",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -422,7 +412,7 @@
     "ID": "HearingData",
     "ListElementCode": "cafcassHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "Cafcass",
+    "ElementLabel": "CAFCASS",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -431,7 +421,7 @@
     "ID": "HearingData",
     "ListElementCode": "cafcassCymruHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "Cafcass Cymru",
+    "ElementLabel": "CAFCASS Cymru",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -958,6 +948,15 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "HearingDataFromTabToDocmosis",
     "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "dateIsConfirmedInTheHearingsTabNote",
+    "FieldType": "Label",
+    "ElementLabel": "This is test note to user, note to be confirmed by UCD team",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
