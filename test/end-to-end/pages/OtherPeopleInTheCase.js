@@ -7,9 +7,9 @@ module.exports = {
     textareaText: 'Testing text area',
     submit: 'button[type="submit"]',
 
-    //Other Person Details
+    // Other Person Details
     opFirstName: '//input[@id="otherPartyInTheCaseRevised_0_firstName"]',
-    opLastName: '//input[@id="otherPartyInTheCaseRevised_0_lastName"]', 
+    opLastName: '//input[@id="otherPartyInTheCaseRevised_0_lastName"]',
     opPreviousName: '//input[@id="otherPartyInTheCaseRevised_0_previousName"]',
     opDateOfBirthKnown: '#otherPartyInTheCaseRevised_0_isDateOfBirthKnown_Yes',
     dobDay: '//input[@id="dateOfBirth-day"]',

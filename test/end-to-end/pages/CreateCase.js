@@ -31,20 +31,17 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
-    // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
-    // await I.selectFromList(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async fillFormAndSubmit_TS() {
-    I.wait('5');
+    await I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('5');
+    await I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    I.wait('5');
+    await I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.event, 'TS-Admin application-Noc');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('3');
@@ -60,6 +57,11 @@ module.exports = {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
+    await I.retry(retryCount).click('Continue');
+  },
+  async selectTypeOfApplicationFL401_TSCourtAdmin() {
+    await I.waitForText('TS-Admin application-Noc');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click('Continue');
   },
 
@@ -98,6 +100,14 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
     await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('10');
+  },
+
+  async createFL401CaseByCourtTSAdmin() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TS();
+    await this.selectTypeOfApplicationFL401_TSCourtAdmin();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('10');
   },
