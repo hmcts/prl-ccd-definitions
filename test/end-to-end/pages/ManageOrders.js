@@ -15,6 +15,7 @@ module.exports = {
     orderMade_year: '#dateOrderMade-year',
     OrderAboutAllChildren_Yes: '#isTheOrderAboutAllChildren_Yes',
     orderAboutAllChildren_No: '#isTheOrderAboutAllChildren_No',
+    isTheOrderAboutChildrenDA_No: '#isTheOrderAboutChildren_No',
     allChildrenList: '//p[contains(text(),\'Child \')]',
     recticalsOrPreambels: '#recitalsOrPreamble',
     orderDirections: '#orderDirections',
@@ -25,13 +26,16 @@ module.exports = {
     cafcassOrCymruNeedToProvideReport_No: '#cafcassOrCymruNeedToProvideReport_No',
     orderEndsInvolvementOfCafcassOrCymru_No: '#orderEndsInvolvementOfCafcassOrCymru_No',
     doYouWantToServeOrder_Yes: '#doYouWantToServeOrder_Yes',
-    selectOrderToServe: '//p[contains(text(),\'Blank order or directions (C21)\')]',
+    selectOrderToServe: '//input[contains(@id,\'serveOrderDynamicList_\')]',
     servePersonallyOptions_Yes: '#serveToRespondentOptions_Yes',
     servingRespondentsOptionsCA_applicantLegalRepresentative: '#servingRespondentsOptionsCA-applicantLegalRepresentative',
-    cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No'
+    cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No',
+    hearingOutcomeTxtBoxDA: '#fl404CustomFields_fl404bHearingOutcome',
+    draftOrderLink: '//a[contains(text(),\'raft.pdf\')]'
   },
   async selectOrder() {
     await I.retry(retryCount).triggerEvent('Manage orders');
+    await I.wait('2');
     await I.retry(retryCount).click('Create an order');
     await I.retry(retryCount).click('Continue');
   },
@@ -44,6 +48,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await this.fillGenericScreen();
+    await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).fillField(this.fields.orderDirections, 'TEST ORDER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
@@ -58,6 +63,12 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
+  async selectOrderFL404B() {
+    await I.retry(retryCount).click('Blank order (FL404B)');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+  },
+
   async createAnOrderC21_applicationrefused_AllChildrenNo() {
     await this.selectOrder();
     await this.selectOrderC21application_refused();
@@ -74,10 +85,37 @@ module.exports = {
     await this.selectOrder();
     await this.selectOrderC21application_refused();
     await this.fillGenericScreen();
+    await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).click('Continue');
     await I.wait('7');
+  },
+
+  async createAnFL404B_AboutChildrenNo() {
+    await this.selectOrder();
+    await this.selectOrderFL404B();
+    await this.fillGenericScreen();
+    await I.retry(retryCount).click(this.fields.isTheOrderAboutChildrenDA_No);
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('7');
+    await this.hearingOutCome();
+  },
+  async hearingOutCome() {
+    await I.retry(retryCount).waitForText('Hearing outcome');
+    await I.retry(retryCount).fillField(this.fields.hearingOutcomeTxtBoxDA, 'TEST HEARING OUTCOME');
+    await I.wait('2');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('7');
+  },
+
+  async previewTheOrder() {
+    await I.retry(retryCount).waitForText('Preview the order');
+    await I.retry(retryCount).waitForElement(this.fields.draftOrderLink);
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
   },
 
   async fillGenericScreen() {
@@ -93,8 +131,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.orderMade_month, '10');
     await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.orderMade_year, '2022');
-    await I.wait('1');
-    await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
+    await I.wait('2');
   },
   async submitManageOrder() {
     await I.wait('2');
@@ -109,14 +146,14 @@ module.exports = {
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   async checkOrder_nochecks() {
-    await I.wait('2');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).waitForText('Does someone need to check the order?');
     await I.wait('2');
     await I.retry(retryCount).click('No checks are required');
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
   async serveOrder_Final() {
+    await I.retry(retryCount).waitForText('When do you want to serve the order?');
     await I.retry(retryCount).selectOption(this.fields.typeOfOrder, 'Final');
     await I.wait('2');
     await I.retry(retryCount).click(this.fields.doesOrderClosesCase_Yes);
@@ -127,6 +164,7 @@ module.exports = {
     await I.wait('5');
   },
   async selectOrderToServe() {
+    await I.retry(retryCount).waitForText('Serve saved orders');
     await I.retry(retryCount).click(this.fields.selectOrderToServe);
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
@@ -141,7 +179,17 @@ module.exports = {
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
+  async serveOrderDA_Legalrep() {
+    await I.retry(retryCount).click('Applicant\'s legal representative');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('8');
+    await I.retry(retryCount).click('Submit');
+    await I.wait('5');
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+
   async serveFinalOrder() {
+    await this.previewTheOrder();
     await this.checkOrder_nochecks();
     await this.serveOrder_Final();
     await this.selectOrderToServe();
@@ -149,11 +197,19 @@ module.exports = {
     await I.retry(retryCount).waitForText('Gatekeeping');
   },
   async serveFinalOrder_CaseClosed() {
+    await this.serverFinalOrder_Part1();
+    await this.servePersonally_Legalrep();
+    await I.retry(retryCount).waitForText('Closed');
+  },
+  async serverFinalOrder_Part1() {
+    await this.previewTheOrder();
     await this.checkOrder_nochecks();
     await this.serveOrder_Final();
     await this.selectOrderToServe();
-    await this.servePersonally_Legalrep();
+  },
+  async serveFinalOrderDA_CaseClosed() {
+    await this.serverFinalOrder_Part1();
+    await this.serveOrderDA_Legalrep();
     await I.retry(retryCount).waitForText('Closed');
   }
-
 };

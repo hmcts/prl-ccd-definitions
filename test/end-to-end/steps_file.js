@@ -55,6 +55,9 @@ module.exports = () => {
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
+    createFL401CaseByCourtTSAdmin() {
+      return CreateCasePage.createFL401CaseByCourtTSAdmin();
+    },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
     },
@@ -64,11 +67,17 @@ module.exports = () => {
     createAnOrderC21_applicationrefused_AllChildrenYes() {
       return manageOrders.createAnOrderC21_applicationrefused_AllChildrenYes();
     },
+    createAnFL404B_AboutChildrenNo() {
+      return manageOrders.createAnFL404B_AboutChildrenNo();
+    },
     serveFinalOrder() {
       return manageOrders.serveFinalOrder();
     },
     serveFinalOrder_CaseClosed() {
       return manageOrders.serveFinalOrder_CaseClosed();
+    },
+    serveFinalOrderDA_CaseClosed() {
+      return manageOrders.serveFinalOrderDA_CaseClosed();
     },
     submitManageOrder() {
       return manageOrders.submitManageOrder();
