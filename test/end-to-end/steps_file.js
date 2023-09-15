@@ -64,6 +64,9 @@ module.exports = () => {
     manageOrderUploadOrderServeNowPersonally() {
       return manageOrders.manageOrderUploadOrderServeNowPersonally();
     },
+    manageOrderUploadOrderForJudgeReview() {
+      return manageOrders.manageOrderUploadOrderForJudgeReview();
+    },
     fillHearingDetails() {
       return manageOrderHearing.fillHearingDetails();
     },

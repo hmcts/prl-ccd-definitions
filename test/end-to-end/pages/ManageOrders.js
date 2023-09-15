@@ -39,7 +39,9 @@ module.exports = {
     dateOrderMade_year: '#dateOrderMade-year',
     uploadOrderDoc: '#uploadOrderDoc',
     nameOfJudgeToReviewOrder: '#nameOfJudgeToReviewOrder',
-    otherPartiesToServe: '//input[contains(@id,\'otherParties_\')]'
+    otherPartiesToServe: '//input[contains(@id,\'otherParties_\')]',
+    judgeNamePopup: '//div/div/div/div/mat-option[@id="mat-option-4"]/span[contains(text(), \'Raja Main\')]',
+    legalAdviserListToReviewOrder: '#nameOfLaToReviewOrder'
   },
   async selectOrder(modeOfOrder) {
     await I.retry(retryCount).triggerEvent('Manage orders');
@@ -89,7 +91,14 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click(judgeOrLA);
     await I.wait('2');
-    await I.retry(retryCount).fillField(this.fields.nameOfJudgeToReviewOrder, 'Raja Main (EMP40962@ejudiciary.net)');
+    if (judgeOrLA === 'Judge') {
+      await I.retry(retryCount).fillField(this.fields.nameOfJudgeToReviewOrder, 'Raja Main');
+      await I.wait('5');
+      await I.getElementById('#mat-option-4').click();
+    }
+    if (judgeOrLA === 'Legal advisor') {
+      await I.retry(retryCount).selectOption(this.fields.legalAdviserListToReviewOrder, 'Ahir(crd_func_test_2.0_rdcc_3831_74@justice.gov.uk)');
+    }
   },
   async serveOrderType(orderType, serveNow, draftOrFinalise) {
     await I.retry(retryCount).waitForText('When do you want to serve the order?');
@@ -131,6 +140,9 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
     await I.retry(retryCount).click('Continue');
     await I.wait('8');
+  },
+  async checkYourAnswersAndSubmit() {
+    await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
@@ -158,6 +170,15 @@ module.exports = {
     await this.serveOrderType('General', 'Yes', 'Finalise the order, and save to serve later');
     await this.selectOrderToServe();
     await this.servePersonalOrNonPersonal('Yes', 'Applicant\'s legal representative');
+    await this.checkYourAnswersAndSubmit();
+  },
+
+  async manageOrderUploadOrderForJudgeReview() {
+    await this.selectOrder('Upload an order');
+    await this.selectTypeOfOrderForUpload('Blank order or directions (C21)');
+    await this.uploadOrder();
+    await this.checkOrderBy('A judge or legal adviser needs to check the order', 'Legal advisor');
+    await this.checkYourAnswersAndSubmit();
   },
 
   async fillGenericScreen() {
