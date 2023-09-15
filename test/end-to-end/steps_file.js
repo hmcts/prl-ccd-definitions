@@ -31,6 +31,7 @@ const manageOrders = require('./pages/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
+const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 
 module.exports = () => {
   return actor({
@@ -39,6 +40,12 @@ module.exports = () => {
     },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
+    },
+    loginAsJudge() {
+      return LoginPage.loginAsJudge();
+    },
+    selectOrderForReview() {
+      return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
