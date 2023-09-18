@@ -59,22 +59,7 @@ module.exports = {
     I.wait('2');
     await I.retry(retryCount).click(this.fields.domesticAbuse);
     I.wait('2');
-    // await I.retry(retryCount).click(this.fields.physicalAbuseVictimApplicants);
-    // await I.retry(retryCount).click(this.fields.emotionalAbuseVictimApplicants);
-    // await I.retry(retryCount).click(this.fields.psychologicalAbuseVictimApplicants);
-    // await I.retry(retryCount).click(this.fields.sexualAbuseVictimApplicants);
-    // await I.retry(retryCount).click(this.fields.financialAbuseVictimApplicants);
     await I.retry(retryCount).click(this.fields.childAbduction);
-    //    await I.retry(retryCount).fillField(this.fields.childAbductionReason, this.fields.textareaText);
-    //    await I.retry(retryCount).checkOption('//*[@id="newPreviousAbductionThreats_Yes"]');
-    //    await I.retry(retryCount).fillField('//*[@id="newPreviousAbductionThreatsDetails"]', this.fields.textareaText);
-    //    await I.retry(retryCount).fillField('//*[@id="newChildrenLocationNow"]', this.fields.textareaText);
-    // await I.retry(retryCount).checkOption('//*[@id="abductionPassportOfficeNotified_Yes"]');
-    // await I.retry(retryCount).checkOption('//*[@id="abductionChildHasPassport_Yes"]');
-    // await I.retry(retryCount).checkOption('//*[@id="abductionChildPassportPosession-other"]');
-    // await I.retry(retryCount).fillField('//*[@id="abductionChildPassportPosessionOtherDetail"]', this.fields.textareaText);
-    // await I.retry(retryCount).checkOption('//*[@id="abductionPreviousPoliceInvolvement_Yes"]');
-    // await I.retry(retryCount).fillField('//*[@id="abductionPreviousPoliceInvolvementDetails"]', this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.childAbuse);
     await I.retry(retryCount).click(this.fields.drugsAndAlcohol);
     await I.retry(retryCount).fillField('//*[@id="newAllegationsOfHarmSubstanceAbuseDetails"]', this.fields.textareaText);
@@ -112,8 +97,6 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.behaviours_0_behavioursStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviours_0_behavioursApplicantSoughtHelp);
     await I.retry(retryCount).fillField(this.fields.behaviours_0_behavioursNature, this.fields.textareaText);
-    // await I.retry(retryCount).fillField('//*[@id="behaviours_0_behavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
-    //  await I.retry(retryCount).fillField('//*[@id="behaviours_0_behavioursApplicantHelpAction"]', this.fields.textareaText);
     await I.retry(retryCount).click('Continue');
   },
 
@@ -180,12 +163,9 @@ module.exports = {
 
   async otherConcerns() {
     await I.retry(retryCount).waitForText('Other concerns');
-    // await I.retry(retryCount).click(this.fields.allegationsOfHarmOtherConcerns);
     I.wait('2');
     await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsDetails, this.fields.textareaText);
     // eslint-disable-next-line max-len
-    // await I.retry(retryCount).fillField(this.fields.allegationsOfHarmOtherConcernsCourtActions, this.fields.textareaText);
-
     // Child Contact
     await I.retry(retryCount).checkOption('//*[@id="newAgreeChildUnsupervisedTime_Yes"]');
     await I.retry(retryCount).checkOption('//*[@id="newAgreeChildSupervisedTime_Yes"]');
