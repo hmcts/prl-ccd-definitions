@@ -28,7 +28,7 @@ module.exports = {
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    await I.waitForClickable(this.fields.submit);
+    //await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
