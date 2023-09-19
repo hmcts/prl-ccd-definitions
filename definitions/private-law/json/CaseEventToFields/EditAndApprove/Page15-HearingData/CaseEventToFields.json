@@ -1,5 +1,29 @@
 [
   {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "createHearingRequiredLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 15,
+    "PageDisplayOrder": 15,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"noticeOfProceedings\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "createHearingOptionalLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 15,
+    "PageDisplayOrder": 15,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\""
+  },
+  {
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
@@ -7,7 +31,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 15,
     "PageDisplayOrder": 15,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
     "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND isOrderCreatedBySolicitor=\"No\" AND isHearingPageNeeded=\"Yes\""
   }

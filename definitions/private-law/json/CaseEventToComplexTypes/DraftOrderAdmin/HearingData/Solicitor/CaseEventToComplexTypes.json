@@ -28,9 +28,9 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
     "ListElementCode": "hearingDateTimes",
-    "EventElementLabel": "",
+    "EventElementLabel": "Enter date and time",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -41,18 +41,7 @@
     "ListElementCode": "hearingDateTimes.hearingDateTimeOption",
     "EventElementLabel": "",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "addNewHearingDateTimesLabel",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "7",
-    "DisplayContext": "READONLY"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -61,7 +50,7 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
     "ListElementCode": "estimatedTimeLabel",
-    "EventElementLabel": "Estimated time",
+    "EventElementLabel": "**Estimated time**\n\nA minimum of one input is required",
     "FieldDisplayOrder": "21",
     "DisplayContext": "READONLY"
   },
@@ -72,6 +61,18 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
     "ListElementCode": "hearingEstimatedDays",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "22",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingEstimatedDays=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "hearingEstimatedDaysText",
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
@@ -85,6 +86,18 @@
     "ListElementCode": "hearingEstimatedHours",
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingEstimatedHours=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "hearingEstimatedHoursText",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -94,6 +107,18 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
     "ListElementCode": "hearingEstimatedMinutes",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "24",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingEstimatedMinutes=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "hearingEstimatedMinutesText",
     "EventElementLabel": "",
     "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
@@ -107,55 +132,7 @@
     "ListElementCode": "hearingChannelsEnum",
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "hearingVideoChannelsLabel",
-    "EventElementLabel": "**Video**",
-    "FieldDisplayOrder": "26",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingChannelsEnum=\"VID\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "hearingVideoChannels",
-    "EventElementLabel": "Select a platform",
-    "FieldDisplayOrder": "27",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingChannelsEnum=\"VID\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "hearingTelephoneChannelsLabel",
-    "EventElementLabel": "**Telephone**",
-    "FieldDisplayOrder": "28",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingChannelsEnum=\"TEL\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "hearingTelephoneChannels",
-    "EventElementLabel": "Select a platform",
-    "FieldDisplayOrder": "29",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.hearingChannelsEnum=\"TEL\""
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -166,7 +143,7 @@
     "ListElementCode": "allPartiesAttendHearingSameWayYesOrNo",
     "EventElementLabel": "",
     "FieldDisplayOrder": "30",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -178,7 +155,7 @@
     "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName}",
     "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -190,7 +167,7 @@
     "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor}",
     "FieldDisplayOrder": "32",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -202,7 +179,7 @@
     "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName}",
     "FieldDisplayOrder": "33",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -214,9 +191,248 @@
     "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor}",
     "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
   },
-
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantHearingChannel1",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName1} (Applicant1)",
+    "FieldDisplayOrder": "35",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantName1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel1",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor1} (Applicant1 Solicitor)",
+    "FieldDisplayOrder": "36",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantSolicitor1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantHearingChannel2",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName2} (Applicant2)",
+    "FieldDisplayOrder": "37",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantName2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel2",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor2} (Applicant2 Solicitor)",
+    "FieldDisplayOrder": "38",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantSolicitor2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantHearingChannel3",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName3} (Applicant3)",
+    "FieldDisplayOrder": "39",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantName3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel3",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor3} (Applicant3 Solicitor)",
+    "FieldDisplayOrder": "40",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantSolicitor3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantHearingChannel4",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName4} (Applicant4)",
+    "FieldDisplayOrder": "41",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantName4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel4",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor4} (Applicant4 Solicitor)",
+    "FieldDisplayOrder": "42",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantSolicitor4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantHearingChannel5",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantName5} (Applicant5)",
+    "FieldDisplayOrder": "43",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantName5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "applicantSolicitorHearingChannel5",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.applicantSolicitor5} (Applicant5 Solicitor)",
+    "FieldDisplayOrder": "44",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.applicantSolicitor5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentHearingChannel1",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName1} (Respondent1)",
+    "FieldDisplayOrder": "45",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentName1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentSolicitorHearingChannel1",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor1} (Respondent1 Solicitor)",
+    "FieldDisplayOrder": "46",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentSolicitor1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentHearingChannel2",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName2} (Respondent2)",
+    "FieldDisplayOrder": "47",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentName2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentSolicitorHearingChannel2",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor2} (Respondent2 Solicitor)",
+    "FieldDisplayOrder": "48",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentSolicitor2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentHearingChannel3",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName3} (Respondent3)",
+    "FieldDisplayOrder": "49",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentName3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentSolicitorHearingChannel3",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor3} (Respondent3 Solicitor)",
+    "FieldDisplayOrder": "50",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentSolicitor3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentHearingChannel4",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName4} (Respondent4)",
+    "FieldDisplayOrder": "51",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentName4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentSolicitorHearingChannel4",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor4} (Respondent4 Solicitor)",
+    "FieldDisplayOrder": "52",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentSolicitor4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentHearingChannel5",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentName5} (Respondent5)",
+    "FieldDisplayOrder": "53",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentName5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "respondentSolicitorHearingChannel5",
+    "EventElementLabel": "${solicitorOrdersHearingDetails.respondentSolicitor5} (Respondent5 Solicitor)",
+    "FieldDisplayOrder": "54",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "solicitorOrdersHearingDetails.respondentSolicitor5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+  },
   {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
@@ -227,7 +443,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND solicitorOrdersHearingDetails.isCafcassCymru=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -239,7 +455,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\""
+    "FieldShowCondition": "solicitorOrdersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND solicitorOrdersHearingDetails.isCafcassCymru=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -339,9 +555,9 @@
     "ID": "HearingData",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "additionalHearingDetails",
-    "EventElementLabel": "Additional hearing details",
-    "FieldDisplayOrder": "47",
+    "ListElementCode": "instructionsForRemoteHearing",
+    "EventElementLabel": "Insert joining instructions for remote hearing",
+    "FieldDisplayOrder": "49",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -350,9 +566,9 @@
     "ID": "HearingData",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
-    "ListElementCode": "instructionsForRemoteHearing",
-    "EventElementLabel": "Insert joining instructions for remote hearing",
-    "FieldDisplayOrder": "49",
+    "ListElementCode": "additionalHearingDetails",
+    "EventElementLabel": "Additional hearing details",
+    "FieldDisplayOrder": "47",
     "DisplayContext": "OPTIONAL"
   }
 ]
