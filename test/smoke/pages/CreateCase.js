@@ -88,8 +88,9 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
-    //await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    I.wait(7);
+    await I.amOnHistoryPageWithSuccessNotification();
+    const caseId = normalizeCaseId(await I.grabTextFrom('.case-field h1'));
     return caseId;
   }
 };
