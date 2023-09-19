@@ -90,7 +90,7 @@ module.exports = {
     await I.submitEvent();
     I.wait('7');
     //await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.case-field h1'));
+    const caseId = normalizeCaseId(await I.grabTextFrom('#undefined h1'));
     return caseId;
   }
 };
