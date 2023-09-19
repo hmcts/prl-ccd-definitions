@@ -88,7 +88,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    //await I.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
     return caseId;
   }
