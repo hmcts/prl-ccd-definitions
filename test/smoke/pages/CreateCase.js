@@ -33,6 +33,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationC100() {
+    I.wait('5');
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
