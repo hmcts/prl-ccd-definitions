@@ -91,7 +91,8 @@ module.exports = {
     await I.submitEvent();
     I.wait('7');
     //await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('//*[@class="markdown"]/h1'));
+    const test = await I.grabTextFrom('//*[@class="markdown"]/h1');
+    const caseId = normalizeCaseId(test);
     let url = await I.grabCurrentUrl();
     console.log(`Current URL is [${url}]`);
     return caseId;
