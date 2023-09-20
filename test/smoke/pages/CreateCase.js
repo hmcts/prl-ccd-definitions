@@ -89,12 +89,16 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
-    I.wait('7');
-    //await I.amOnHistoryPageWithSuccessNotification();
-    const test = await I.grabTextFrom('//*[@class="markdown"]/h1');
-    const caseId = normalizeCaseId(test);
+    I.wait('5');
+    await I.amOnHistoryPageWithSuccessNotification();
+//    const test = await I.grabTextFrom('//*[@class="markdown"]/h1');
+//    const caseId = normalizeCaseId(test);
+    I.wait('5');
     let url = await I.grabCurrentUrl();
-    console.log(`Current URL is [${url}]`);
+    let caseUrl = url.split("/");
+    const caseIdNew = caseUrl[5].split("#");
+    const caseId = caseIdNew[0];
+    console.log(`CaseID is [${caseId}]`);
     return caseId;
   }
 };
