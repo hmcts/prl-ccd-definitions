@@ -44,6 +44,22 @@ module.exports = {
     }
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
+  },
+  async loginAsJudge() {
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+    try {
+      await I.retry(retryCount).click('#cookie-accept-submit');
+      await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
+      await I.runAccessibilityTest();
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.judgeUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.judgeUserOne.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.judgeUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.judgeUserOne.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
   }
 
 };
