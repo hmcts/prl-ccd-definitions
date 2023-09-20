@@ -91,7 +91,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-   // await this.amOnHistoryPageWithSuccessNotification();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createC100CaseByCourtAdmin() {
