@@ -27,7 +27,7 @@ module.exports = {
     I.wait('20');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait(10');
+    I.wait('10');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     I.wait('10');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
