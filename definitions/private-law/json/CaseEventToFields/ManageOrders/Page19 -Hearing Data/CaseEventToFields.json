@@ -1,5 +1,41 @@
 [
   {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "selectedOrderLabel19",
+    "DisplayContext": "READONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR c21OrderOptions=\"c21other\" OR createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"noticeOfProceedings\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "createHearingRequiredLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"noticeOfProceedings\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "createHearingOptionalLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 19,
+    "PageDisplayOrder": 19,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\""
+  },
+  {
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
@@ -7,8 +43,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 19,
     "PageDisplayOrder": 19,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
-    "PageShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR c21OrderOptions=\"c21other\" OR createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"noticeOfProceedings\""
+    "PageFieldDisplayOrder": 4,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
   }
 ]

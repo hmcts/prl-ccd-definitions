@@ -49,7 +49,7 @@
     "ID": "HearingDateTimeOption",
     "ListElementCode": "hearingDateTimeOption",
     "FieldType": "DateTime",
-    "ElementLabel": "Enter a date and Time",
+    "ElementLabel": "Enter date and Time",
     "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -152,15 +152,6 @@
     "FieldType": "Collection",
     "FieldTypeParameter": "HearingDateTimeOption",
     "ElementLabel": " ",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "ID": "HearingData",
-    "ListElementCode": "addNewHearingDateTimesLabel",
-    "FieldType": "Label",
-    "ElementLabel": "## Add new HearingDateTimes",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -298,8 +289,7 @@
     "ID": "HearingData",
     "ListElementCode": "estimatedTimeLabel",
     "FieldType": "Label",
-    "ElementLabel": "\nEstimated time \n\nOnly one input is required",
-    "HintText": "Only one input is required",
+    "ElementLabel": "**Estimated time**\n\nA minimum of one input is required",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -422,7 +412,7 @@
     "ID": "HearingData",
     "ListElementCode": "cafcassHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "Cafcass",
+    "ElementLabel": "CAFCASS",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -431,7 +421,7 @@
     "ID": "HearingData",
     "ListElementCode": "cafcassCymruHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "Cafcass Cymru",
+    "ElementLabel": "CAFCASS Cymru",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -570,7 +560,7 @@
     "ElementLabel": "applicantName1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName1!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -590,7 +580,7 @@
     "ElementLabel": "applicantName2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName2!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -610,7 +600,7 @@
     "ElementLabel": "applicantName3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName3!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -630,7 +620,7 @@
     "ElementLabel": "applicantName4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName4!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -650,7 +640,7 @@
     "ElementLabel": "applicantName5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantName5!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -670,7 +660,7 @@
     "ElementLabel": "applicant Solicitor1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantSolicitor1!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -680,7 +670,7 @@
     "ElementLabel": "respondent Name1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentName1!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -690,7 +680,7 @@
     "ElementLabel": "respondent Solicitor1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor1=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentSolicitor1!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -700,7 +690,7 @@
     "ElementLabel": "applicant Solicitor2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor2=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantSolicitor2!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -710,7 +700,7 @@
     "ElementLabel": "respondent Name2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName2=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentName2!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -720,7 +710,7 @@
     "ElementLabel": "respondent Solicitor2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor2=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentSolicitor2!=\"INVALID_DATA\""
   }
 ,
 
@@ -733,7 +723,7 @@
     "ElementLabel": "applicant Solicitor3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor3=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantSolicitor3!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -743,7 +733,7 @@
     "ElementLabel": "respondent Name3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName3=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentName3!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -753,7 +743,7 @@
     "ElementLabel": "respondent Solicitor3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor3=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentSolicitor3!=\"INVALID_DATA\""
   },
 
   {
@@ -764,7 +754,7 @@
     "ElementLabel": "applicant Solicitor4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor4=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantSolicitor4!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -774,7 +764,7 @@
     "ElementLabel": "respondent Name4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName4=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentName4!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -784,7 +774,7 @@
     "ElementLabel": "respondent Solicitor4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor4=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentSolicitor4!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -794,7 +784,7 @@
     "ElementLabel": "applicant Solicitor5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor5=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "applicantSolicitor5!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -804,7 +794,7 @@
     "ElementLabel": "respondent Name5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName5=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentName5!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -814,7 +804,7 @@
     "ElementLabel": "respondent Solicitor5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor5=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "respondentSolicitor5!=\"INVALID_DATA\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -960,5 +950,58 @@
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "dateIsConfirmedInTheHearingsTabNote",
+    "FieldType": "Label",
+    "ElementLabel": "**This is test note, note to be confirmed service team or UCD**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "infoToBeDisplayedFor3And4OptionsLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**This is test note, note to be confirmed service team or UCD**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "ListElementCode": "isCafcassCymru",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is CAFCASS or CAFCASS Cymru?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "isCafcassCymru=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedDaysText",
+    "FieldType": "Text",
+    "ElementLabel": "Days",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedHoursText",
+    "FieldType": "Text",
+    "ElementLabel": "Hours",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "ID": "HearingData",
+    "ListElementCode": "hearingEstimatedMinutesText",
+    "FieldType": "Text",
+    "ElementLabel": "Minutes",
+    "SecurityClassification": "Public"
   }
 ]
