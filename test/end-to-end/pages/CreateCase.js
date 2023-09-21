@@ -17,9 +17,9 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('7');
+    I.wait('10');
     await I.waitForText('Create case');
-    I.wait('7');
+    I.wait('10');
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
