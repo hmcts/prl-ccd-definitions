@@ -36,13 +36,11 @@ module.exports = {
   async happensNext() {
     await I.wait('12');
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('6');
-    await I.retry(retryCount).waitForElement(this.fields.caseStatus);
-    await I.wait('4');
-    await I.retry(retryCount).waitForText('Pending');
   },
 
   async runDummyPayment() {
+    await I.wait('4');
+    await I.retry(retryCount).waitForText('Pending');
     await I.wait('4');
     await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
     await I.wait('4');
@@ -52,8 +50,6 @@ module.exports = {
 
   async caseSubmittedCA() {
     await I.wait('4');
-    await I.retry(retryCount).waitForElement(this.fields.caseStatus);
-    await I.wait('2');
     await I.retry(retryCount).waitForText('Submitted');
   },
 
