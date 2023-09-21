@@ -50,6 +50,18 @@ module.exports = {
     await I.wait('3');
   },
 
+  async fillFormAndSubmit_CourtAdmin() {
+    I.wait('5');
+    await I.waitForElement(this.fields.jurisdiction);
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.event, 'Court admin application');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('3');
+  },
+
   async selectTypeOfApplicationC100() {
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
@@ -92,6 +104,15 @@ module.exports = {
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createC100UrgentCaseByCourtAdmin() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_CourtAdmin();
+    await this.selectTypeOfApplicationC100();
+    await this.fillSolicitorApplicationPageC100();
+    await this.submitEvent();
+    await I.wait('10');
   },
 
   async createC100CaseByCourtAdmin() {

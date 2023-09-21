@@ -52,6 +52,9 @@ module.exports = () => {
     createCase() {
       return CreateCasePage.createNewCaseC100();
     },
+    createC100UrgentCaseByCourtAdmin() {
+      return CreateCasePage.createC100UrgentCaseByCourtAdmin();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
@@ -162,6 +165,9 @@ module.exports = () => {
     },
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
+    },
+    submitAndPayCourtAdmin() {
+      return submitAndPay.submitAndPayCourtAdmin();
     },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
