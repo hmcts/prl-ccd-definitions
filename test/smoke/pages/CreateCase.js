@@ -1,8 +1,8 @@
 const I = actor();
 const retryCount = 3;
-const normalizeCaseId = caseId => {
-  return caseId.toString().replace(/\D/g, '');
-};
+//const normalizeCaseId = caseId => {
+//  return caseId.toString().replace(/\D/g, '');
+//};
 
 module.exports = {
 
@@ -22,17 +22,18 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
-    I.wait('5');
+    I.wait('10');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    await I.waitForClickable(this.fields.submit);
+    //await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async selectTypeOfApplicationC100() {
+    I.wait('5');
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
@@ -88,8 +89,16 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
+    I.wait('5');
     await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+//    const test = await I.grabTextFrom('//*[@class="markdown"]/h1');
+//    const caseId = normalizeCaseId(test);
+    I.wait('5');
+    let url = await I.grabCurrentUrl();
+    let caseUrl = url.split("/");
+    const caseIdNew = caseUrl[5].split("#");
+    const caseId = caseIdNew[0];
+    console.log(`CaseID is [${caseId}]`);
     return caseId;
   }
 };

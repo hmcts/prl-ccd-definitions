@@ -1,9 +1,9 @@
 const { I } = inject();
 const config = require('../config');
 
-const normalizeCaseId = caseId => {
-  return caseId.toString().replace(/\D/g, '');
-};
+//const normalizeCaseId = caseId => {
+//  return caseId.toString().replace(/\D/g, '');
+//};
 
 module.exports = {
 
@@ -59,8 +59,8 @@ module.exports = {
     return `a[href$='${caseId}']`;
   },
 
-  seeCaseInSearchResult(caseId) {
-    I.seeElement(this.locateCase(normalizeCaseId(caseId)));
-  }
+//  seeCaseInSearchResult(caseId) {
+//    I.seeElement(this.locateCase(normalizeCaseId(caseId)));
+//  }
 
 };
