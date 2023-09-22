@@ -21,6 +21,7 @@ module.exports = {
   },
   async selectOrder() {
     await I.retry(retryCount).triggerEvent('Manage orders');
+    await I.wait('3');
     await I.retry(retryCount).click('Create an order');
     await I.retry(retryCount).click('Continue');
   },
