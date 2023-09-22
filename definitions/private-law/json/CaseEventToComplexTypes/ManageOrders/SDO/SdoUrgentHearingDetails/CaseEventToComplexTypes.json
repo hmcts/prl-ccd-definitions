@@ -503,7 +503,7 @@
     "EventElementLabel": "Additional hearing details",
     "FieldDisplayOrder": "46",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum!=\"\""
+    "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -526,7 +526,7 @@
     "ListElementCode": "infoToBeDisplayedFor3And4OptionsLabel",
     "EventElementLabel": "**This is test note, note to be confirmed service team or UCD**",
     "FieldDisplayOrder": "49",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   }
 ]
