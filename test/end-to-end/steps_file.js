@@ -32,6 +32,7 @@ const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
+const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 
 module.exports = () => {
   return actor({
@@ -58,6 +59,9 @@ module.exports = () => {
     },
     createCase() {
       return CreateCasePage.createNewCaseC100();
+    },
+    createCase_TS() {
+      return CreateCasePage.createNewCaseC100_TS();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -176,6 +180,12 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPayHappyPath_HWF_Yes() {
+      return submitAndPay.submitAndPay_HWF_Yes();
+    },
+    runSubmitAndPay_TS() {
+      return submitAndPay.dummyPaymentConfirmation();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -185,8 +195,20 @@ module.exports = () => {
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
     },
+    issueAndSendToLocalCourt() {
+      return caseList.issueAndSendToLocalCourt();
+    },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    selectApplication() {
+      return UploadAdditionalApplications.selectApplication();
+    },
+    uploadApplication() {
+      return UploadAdditionalApplications.uploadApplication();
+    },
+    awpCAOtherOrders() {
+      return UploadAdditionalApplications.awpCAOtherOrders();
     }
   });
 };
