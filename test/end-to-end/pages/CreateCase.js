@@ -5,7 +5,6 @@ const normalizeCaseId = caseId => {
 };
 
 module.exports = {
-
   fields: {
     jurisdiction: 'select[id="cc-jurisdiction"]',
     caseType: 'select[id="cc-case-type"]',
@@ -26,33 +25,60 @@ module.exports = {
   async fillFormAndSubmit() {
     I.wait('30');
     await I.waitForElement(this.fields.jurisdiction);
-    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
     I.wait('15');
-    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
     I.wait('15');
-    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'Solicitor application'
+    );
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS_Solicitor() {
     I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
-    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
     I.wait('5');
-    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
     I.wait('5');
-    await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'TS-Solicitor application'
+    );
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
     I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
-    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
     I.wait('5');
-    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
     I.wait('5');
-    await I.retry(retryCount).selectOption(this.fields.event, 'TS-Admin application-Noc');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'TS-Admin application-Noc'
+    );
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('3');
   },
@@ -73,23 +99,33 @@ module.exports = {
 
   async fillSolicitorApplicationPageC100() {
     await I.waitForText('Confidentiality Statement');
-    await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.retry(retryCount).click(
+      '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
+    );
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Case C100');
+    await I.retry(retryCount).fillField(
+      '//input[@id="applicantCaseName"]',
+      'Test Case C100'
+    );
     await I.retry(retryCount).click('Continue');
   },
 
   async fillSolicitorApplicationPageFL401() {
     await I.waitForText('Confidentiality Statement');
-    await I.retry(retryCount).click('#confidentialityStatementDisclaimer-confidentialityStatementUnderstood');
+    await I.retry(retryCount).click(
+      '#confidentialityStatementDisclaimer-confidentialityStatementUnderstood'
+    );
     await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField('#applicantOrRespondentCaseName', 'Test Case 1 DA 31');
+    await I.retry(retryCount).fillField(
+      '#applicantOrRespondentCaseName',
+      'Test Case 1 DA 31'
+    );
     await I.retry(retryCount).click('Continue');
   },
 
@@ -99,7 +135,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    //await this.amOnHistoryPageWithSuccessNotification();
+    // await this.amOnHistoryPageWithSuccessNotification();
   },
   async createNewCaseC100_TS() {
     await this.clickCreateCase();
