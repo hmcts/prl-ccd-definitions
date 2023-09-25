@@ -32,6 +32,8 @@ const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const solicitorWithdrawApplication = require('./pages/withDrawApplication');
+const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
+const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 
 module.exports = () => {
   return actor({
@@ -40,6 +42,12 @@ module.exports = () => {
     },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
+    },
+    loginAsJudge() {
+      return LoginPage.loginAsJudge();
+    },
+    selectOrderForReview() {
+      return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -53,6 +61,9 @@ module.exports = () => {
     createCase() {
       return CreateCasePage.createNewCaseC100();
     },
+    createCase_TS() {
+      return CreateCasePage.createNewCaseC100_TS();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
@@ -61,6 +72,12 @@ module.exports = () => {
     },
     submitManageOrder() {
       return manageOrders.submitManageOrder();
+    },
+    manageOrderUploadOrderServeNowPersonally() {
+      return manageOrders.manageOrderUploadOrderServeNowPersonally();
+    },
+    manageOrderUploadOrderForJudgeReview() {
+      return manageOrders.manageOrderUploadOrderForJudgeReview();
     },
     fillHearingDetails() {
       return manageOrderHearing.fillHearingDetails();
@@ -164,6 +181,12 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPayHappyPath_HWF_Yes() {
+      return submitAndPay.submitAndPay_HWF_Yes();
+    },
+    runSubmitAndPay_TS() {
+      return submitAndPay.dummyPaymentConfirmation();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -172,6 +195,9 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
+    },
+    issueAndSendToLocalCourt() {
+      return caseList.issueAndSendToLocalCourt();
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
@@ -185,5 +211,14 @@ module.exports = () => {
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
+    selectApplication() {
+      return UploadAdditionalApplications.selectApplication();
+    },
+    uploadApplication() {
+      return UploadAdditionalApplications.uploadApplication();
+    },
+    awpCAOtherOrders() {
+      return UploadAdditionalApplications.awpCAOtherOrders();
+    }
   });
 };
