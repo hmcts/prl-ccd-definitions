@@ -4,7 +4,9 @@ const retryCount = 3;
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-    caseStatus: '.text-16'
+    caseStatus: '.text-16',
+    helpWithFeesNo: '#helpWithFees_No'
+
   },
 
   async triggerEvent() {
@@ -54,6 +56,12 @@ module.exports = {
     await I.retry(retryCount).waitForText('Submitted');
   },
 
+  async answerHelpWithFeesNo(){
+    await I.wait('4');
+    await I.retry(retryCount).click(this.fields.helpWithFeesNo);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
   async submitAndPay() {
     await this.triggerEvent();
     await this.confidentialityStatement();
@@ -63,5 +71,16 @@ module.exports = {
     await this.runDummyPayment();
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await this.caseSubmittedCA();
-  }
+  },
+
+  async submitAndPayForDummySolicitorApplication() {
+      await this.triggerEvent();
+      await this.confidentialityStatement();
+      await this.declaration();
+      await this.answerHelpWithFeesNo();
+      await this.happensNext();
+      await this.happensNext();
+      await this.runDummyPayment();
+      await this.caseSubmittedCA();
+    }
 };

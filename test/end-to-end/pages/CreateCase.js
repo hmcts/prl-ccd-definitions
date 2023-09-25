@@ -131,5 +131,24 @@ module.exports = {
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
+  },
+
+  async fillFormAndSubmit_TSSolicitorApplication() {
+    I.wait('30');
+    await I.waitForElement(this.fields.jurisdiction);
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('15');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('15');
+    await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
+    await I.waitForClickable(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+  async createNewSolicitorDummyC100Case(){
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TSSolicitorApplication();
+    await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
   }
 };
