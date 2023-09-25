@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/CAManageOrderUploadOrder.js',
+  tests: './tests/*.js',
   output: './output',
   helpers: {
     Puppeteer: {
