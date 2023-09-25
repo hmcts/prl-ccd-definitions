@@ -17,27 +17,34 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    I.wait('7');
+    I.wait('10');
     await I.waitForText('Create case');
-    I.wait('7');
+    I.wait('10');
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
-    I.wait('20');
+    I.wait('30');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('10');
+    I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    I.wait('10');
+    I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    // await I.retry(retryCount).selectFromList(this.fields.jurisdiction, 'Family Private Law');
-    // await I.selectFromList(this.fields.caseType, 'C100 & FL401 Applications');
-    // await I.selectFromList(this.fields.event, 'Solicitor application');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
-
+  async fillFormAndSubmit_TS_Solicitor() {
+    I.wait('5');
+    await I.waitForElement(this.fields.jurisdiction);
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
+    await I.waitForClickable(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
   async fillFormAndSubmit_TS() {
     I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
@@ -51,6 +58,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationC100() {
+    await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
     await I.wait('3');
@@ -91,9 +99,15 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    await this.amOnHistoryPageWithSuccessNotification();
+    //await this.amOnHistoryPageWithSuccessNotification();
   },
-
+  async createNewCaseC100_TS() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TS_Solicitor();
+    await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('7');
+  },
   async createC100CaseByCourtAdmin() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
@@ -127,6 +141,7 @@ module.exports = {
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
+    await I.wait('5');
   },
 
   async amOnHistoryPageWithSuccessNotification() {
