@@ -6958,7 +6958,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantCaseName",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -13446,7 +13446,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "id",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15606,7 +15606,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantAge",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15662,7 +15662,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "specialCourtName",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15718,7 +15718,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseOrigin",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15781,7 +15781,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "courtNavApproved",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15844,7 +15844,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "hasDraftOrder",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -15893,7 +15893,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "numberOfAttachments",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "02/12/2021",
@@ -16846,6 +16846,58 @@
           "courtnav",
           "caseworker-wa-task-configuration"
         ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "helpWithFees",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "helpWithFeesNotAvailable",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen"
+          ],
         "CRUD": "R"
       }
     ]
