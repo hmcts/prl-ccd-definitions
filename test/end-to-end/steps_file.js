@@ -31,6 +31,7 @@ const manageOrders = require('./pages/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
+const solicitorWithdrawApplication = require('./pages/withDrawApplication');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 
@@ -200,6 +201,15 @@ module.exports = () => {
     },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    createSolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyC100Case();
+    },
+    payAndSubmitDummySolicitorCase() {
+      return submitAndPay.submitAndPayForDummySolicitorApplication();
+    },
+    solicitorWithdrawApplication() {
+      return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
     selectApplication() {
       return UploadAdditionalApplications.selectApplication();
