@@ -1,6 +1,6 @@
 Feature('Withdraw application as a Solicitor');
 
-Scenario('Withdraw application as Solicitor @cross-browser @master', async I => {
+Scenario('Withdraw application as Solicitor @cross-browser', async I => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
