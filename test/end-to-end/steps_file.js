@@ -33,7 +33,7 @@ const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
-const solicitorWithdrawApplication = require('./pages/withDrawApplication');
+const solicitorWithdrawApplication = require('./pages/WithDrawApplication');
 
 module.exports = () => {
   return actor({
