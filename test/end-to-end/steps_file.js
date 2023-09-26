@@ -33,6 +33,7 @@ const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
+const solicitorWithdrawApplication = require('./pages/withDrawApplication');
 
 module.exports = () => {
   return actor({
@@ -209,6 +210,15 @@ module.exports = () => {
     },
     awpCAOtherOrders() {
       return UploadAdditionalApplications.awpCAOtherOrders();
+    },
+    createSolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyC100Case();
+    },
+    payAndSubmitDummySolicitorCase() {
+      return submitAndPay.submitAndPayForDummySolicitorApplication();
+    },
+    solicitorWithdrawApplication() {
+      return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     }
   });
 };
