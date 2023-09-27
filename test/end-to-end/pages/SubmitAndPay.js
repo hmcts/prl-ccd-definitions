@@ -96,6 +96,12 @@ module.exports = {
     await I.retry(retryCount).waitForText('Submitted');
   },
 
+  async answerHelpWithFeesNo(){
+    await I.wait('4');
+    await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
   async submitAndPay() {
     await this.triggerEvent();
     await this.confidentialityStatement();
@@ -114,5 +120,16 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.helpWithFeeYes();
+  },
+
+  async submitAndPayForDummySolicitorApplication() {
+      await this.triggerEvent();
+      await this.confidentialityStatement();
+      await this.declaration();
+      await this.answerHelpWithFeesNo();
+      await this.happensNext();
+      await this.happensNext();
+      await this.runDummyPayment();
+      await this.caseSubmittedCA();
   }
 };
