@@ -64,6 +64,9 @@ module.exports = () => {
     createCase_TS() {
       return CreateCasePage.createNewCaseC100_TS();
     },
+    createNewCaseFL401_TS() {
+      return CreateCasePage.createNewCaseFL401_TS();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
@@ -180,6 +183,9 @@ module.exports = () => {
     },
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
+    },
+    statementOfTruthAndSubmit() {
+      return submitAndPay.statementOfTruthAndSubmit();
     },
     runSubmitAndPayHappyPath_HWF_Yes() {
       return submitAndPay.submitAndPay_HWF_Yes();
