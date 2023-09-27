@@ -9,8 +9,10 @@ module.exports = {
     helpWithFees_No: '#helpWithFees_No',
     helpWithFeesReferenceNumber_text: '#helpWithFeesReferenceNumber',
     HWFQuestion: 'Has the applicant applied for Help with Fees?',
-    prlNoHWFText: 'Help with Fees is not yet available in the Family Private Law digital service.',
-    HWFYesErrorMsg: 'Help with Fees is not yet available in Family Private Law digital ' +
+    prlNoHWFText:
+      'Help with Fees is not yet available in the Family Private Law digital service.',
+    HWFYesErrorMsg:
+      'Help with Fees is not yet available in Family Private Law digital ' +
       'service. Select \'No\' to continue with your application',
     HWFRefNum: 'ABC-123-DEF'
   },
@@ -27,7 +29,9 @@ module.exports = {
     await I.wait('10');
     await I.retry(retryCount).waitForText('Confidentiality Statement');
     await I.wait('1');
-    await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
+    await I.retry(retryCount).click(
+      '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
+    );
     await I.retry(retryCount).click('Continue');
   },
 
@@ -59,7 +63,10 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_Yes);
     await I.wait('1');
-    await I.retry(retryCount).fillField(this.fields.helpWithFeesReferenceNumber_text, this.fields.HWFRefNum);
+    await I.retry(retryCount).fillField(
+      this.fields.helpWithFeesReferenceNumber_text,
+      this.fields.HWFRefNum
+    );
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).waitForText(this.fields.HWFYesErrorMsg);
@@ -71,8 +78,8 @@ module.exports = {
   },
 
   async happensNext() {
-    await I.wait('15')
-    //await I.waitForClickable(this.fields.submit);
+    await I.wait('15');
+    // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -87,6 +94,12 @@ module.exports = {
   async caseSubmittedCA() {
     await I.wait('4');
     await I.retry(retryCount).waitForText('Submitted');
+  },
+
+  async answerHelpWithFeesNo(){
+    await I.wait('4');
+    await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async submitAndPay() {
@@ -107,5 +120,16 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.helpWithFeeYes();
+  },
+
+  async submitAndPayForDummySolicitorApplication() {
+      await this.triggerEvent();
+      await this.confidentialityStatement();
+      await this.declaration();
+      await this.answerHelpWithFeesNo();
+      await this.happensNext();
+      await this.happensNext();
+      await this.runDummyPayment();
+      await this.caseSubmittedCA();
   }
 };
