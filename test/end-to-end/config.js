@@ -3,7 +3,7 @@ const judgeDefaultPassword = 'Hmcts1234';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-e2etestsolicitor@mailinator.com',
+    email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
     password: defaultPassword
   },
   legalProfessionalUserTwo: {

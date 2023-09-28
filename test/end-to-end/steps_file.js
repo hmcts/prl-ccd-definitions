@@ -34,6 +34,7 @@ const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
+const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 
 module.exports = () => {
   return actor({
@@ -186,6 +187,9 @@ module.exports = () => {
     },
     statementOfTruthAndSubmit() {
       return submitAndPay.statementOfTruthAndSubmit();
+    },
+    solicitorDraftAnOrderPowerOfArrestFL406() {
+      return solicitorDraftOrder.solicitorDraftAnOrderPowerOfArrestFL406();
     },
     runSubmitAndPayHappyPath_HWF_Yes() {
       return submitAndPay.submitAndPay_HWF_Yes();
