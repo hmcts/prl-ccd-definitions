@@ -191,6 +191,9 @@ module.exports = () => {
     solicitorDraftAnOrderPowerOfArrestFL406() {
       return solicitorDraftOrder.solicitorDraftAnOrderPowerOfArrestFL406();
     },
+    solicitorDraftAnOrderBlankOrderFL404B() {
+      return solicitorDraftOrder.solicitorDraftAnOrderBlankOrderFL404B();
+    },
     runSubmitAndPayHappyPath_HWF_Yes() {
       return submitAndPay.submitAndPay_HWF_Yes();
     },
