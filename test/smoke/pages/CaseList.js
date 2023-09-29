@@ -30,7 +30,7 @@ module.exports = {
     I.click(this.fields.search);
   },
 
-  searchForCasesWithId(caseId, state = 'Any') {
+  async searchForCasesWithId(caseId, state = 'Any') {
     I.click(this.fields.reset);
     this.setInitialSearchFields(state);
     I.fillField(this.fields.caseId, caseId);

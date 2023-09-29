@@ -1,6 +1,5 @@
 const { I } = inject();
 const config = require('../config');
-
 const retryCount = 3;
 
 const normalizeCaseId = caseId => {
@@ -13,7 +12,7 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: 'CCD Case Number',
+    caseId: '//input[@id="[CASE_REFERENCE]"]',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
@@ -78,6 +77,12 @@ module.exports = {
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
-  }
+  },
 
+  async searchForCaseAndOpenCase(caseId) {
+        await I.wait('30');
+        await this.searchForCasesWithId(caseId);
+        await I.wait('10');
+        await this.seeCaseInSearchResult(caseId);
+  }
 };

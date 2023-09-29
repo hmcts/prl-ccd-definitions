@@ -219,6 +219,15 @@ module.exports = () => {
     },
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
-    }
+    },
+    saveTheCaseIdAndSignout() {
+       return CreateCasePage.saveTheCaseIdAndSignout();
+    },
+    logInAsSolicitorNoCookies() {
+        return loginPage.loginAsSolicitorNoCookiesDisplayed();
+    },
+    searchForCaseAndOpenCase() {
+        return caseList.searchForCaseAndOpenCase();
+    },
   });
 };
