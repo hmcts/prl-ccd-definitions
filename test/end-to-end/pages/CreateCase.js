@@ -212,7 +212,7 @@ module.exports = {
   },
 
   async saveTheCaseIdAndSignout(){
-    I.wait('20');
+    //I.wait('20');
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);

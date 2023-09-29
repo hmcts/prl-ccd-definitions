@@ -29,7 +29,7 @@ module.exports = {
     I.click(this.fields.search);
   },
 
-  searchForCasesWithId(caseId, state = 'Any') {
+  async searchForCasesWithId(caseId, state = 'Any') {
     this.setInitialSearchFields(state);
     I.grabCurrentUrl();
     I.fillField(this.fields.caseId, caseId);
@@ -79,10 +79,9 @@ module.exports = {
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
 
-  async searchForCaseAndOpenCase(caseId) {
-        await I.wait('30');
-        await this.searchForCasesWithId(caseId);
-        await I.wait('10');
-        await this.seeCaseInSearchResult(caseId);
+  async searchForCaseAndOpenCase() {
+    await I.wait('15');
+    await I.retry(retryCount).click("//a[@class='govuk-link ng-star-inserted']");
+    await I.wait('10');
   }
 };
