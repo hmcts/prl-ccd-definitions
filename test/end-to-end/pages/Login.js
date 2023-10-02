@@ -2,11 +2,9 @@ const I = actor();
 const config = require('../config');
 
 const retryCount = 3;
-// const normalizeCaseId = caseId => {
-//   return caseId.toString().replace(/\D/g, '');
-// };
-// eslint-disable-next-line no-unused-vars
-// const baseUrl = config.baseUrl;
+const normalizeCaseId = caseId => {
+  return caseId.toString().replace(/\D/g, '');
+};
 
 module.exports = {
 
@@ -64,14 +62,15 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
   },
-  async loginAsCourtAdminTSSolicitorCreate() {
+  async loginAsCourtAdminTSSolicitorApplication() {
     await I.wait('2');
-    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
-    await I.retry(retryCount).click('Sign out');
-    // await I.retry(retryCount).amOnPage(`${`${process.env.XUI_WEB_URL}` + '/case-details/'}${caseId}`);
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));'1696262331763139'
+    const caseId = '1696269921358857';
+    // await I.retry(retryCount).click('Sign out');
+    await I.wait('5');
+    const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+    await I.retry(retryCount).amOnPage(pageUrl);
     try {
-      // await I.retry(retryCount).click('#cookie-accept-submit');
-      // await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.retry(retryCount).seeElement('#authorizeCommand');
       await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);

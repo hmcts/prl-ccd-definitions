@@ -33,6 +33,7 @@ const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
+const amendRespondent = require('./pages/AmendRespondentDetails');
 
 module.exports = () => {
   return actor({
@@ -41,6 +42,12 @@ module.exports = () => {
     },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
+    },
+    loginAsCourtAdminTSSolicitorApplication() {
+      return LoginPage.loginAsCourtAdminTSSolicitorApplication();
+    },
+    updateRespondentsDetailsConfidential() {
+      return amendRespondent.updateRespondentsDetailsConfidential();
     },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
