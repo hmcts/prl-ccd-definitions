@@ -59,5 +59,31 @@
     "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "sendReplyJudgeName.idamId",
+    "EventElementLabel": "Enter name of Judge",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "sendReplyJudgeName.personalCode",
+    "EventElementLabel": "Enter name of Judge",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
+    "ShowSummaryChangeOption": "Yes"
   }
 ]
