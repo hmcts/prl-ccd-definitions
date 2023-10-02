@@ -19,7 +19,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
 
     await I.retry(retryCount).waitForText('Further evidence - further application document');
-    await I.retry(retryCount).click('Add new');
+    await I.retry(retryCount).click('Add new1');
     I.wait('1');
     await I.retry(retryCount).waitForElement('#mainApplicationDocument_0_typeOfDocumentFurtherEvidence');
     await I.retry(retryCount).selectOption(this.fields.typeOfDocument, 'Consent order');
@@ -37,7 +37,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
 
     await I.retry(retryCount).waitForText('Correspondence');
-    await I.retry(retryCount).click('Add new');
+    await I.retry(retryCount).click('Add new2');
     I.wait('3');
     await I.retry(retryCount).waitForElement('#correspondence_0_documentName');
     await I.retry(retryCount).fillField('#correspondence_0_documentName', 'DocumentName');
@@ -55,7 +55,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
 
     await I.retry(retryCount).waitForText('Other documents');
-    await I.retry(retryCount).click('Add new');
+    await I.retry(retryCount).click('Add new3');
     I.wait('1');
     await I.retry(retryCount).waitForElement('#otherDocuments_0_documentName');
     await I.retry(retryCount).fillField('#otherDocuments_0_documentName', 'DocumentName');
