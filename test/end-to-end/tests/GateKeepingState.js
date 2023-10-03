@@ -1,6 +1,6 @@
 Feature('Move case to Gatekeeping State');
 
-Scenario('Move case to Gatekeeping State @master', async I => {
+Scenario('Move case to Gatekeeping State @master @nightly', async I => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
