@@ -31,11 +31,11 @@ module.exports = {
   },
 
   async searchForCasesWithId(caseId, state = 'Any') {
-    I.click(this.fields.reset);
+    await I.click(this.fields.reset);
     this.setInitialSearchFields(state);
-    I.fillField(this.fields.caseId, caseId);
-    I.click(this.fields.applicationType);
-    I.click(this.fields.search);
+    await I.fillField(this.fields.caseId, caseId);
+    await I.click(this.fields.applicationType);
+    await I.click(this.fields.search);
   },
 
   searchForCasesWithName(caseName, state = 'Any') {

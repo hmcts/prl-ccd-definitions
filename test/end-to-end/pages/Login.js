@@ -85,15 +85,15 @@ module.exports = {
   },
 
   async loginAsSolicitorNoCookiesDisplayed() {
-     try {
-        await I.retry(retryCount).seeElement('#authorizeCommand');
-        await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
-        await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
-      } catch {
-        await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
-        await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
-      }
-      await I.retry(retryCount).click(this.fields.submit);
-      await I.wait('10');
-    },
+    try {
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
+  }
 };

@@ -1,5 +1,6 @@
 const { I } = inject();
 const config = require('../config');
+
 const retryCount = 3;
 
 const normalizeCaseId = caseId => {
@@ -17,7 +18,8 @@ module.exports = {
     search: 'Apply',
     caseList: 'Case list',
     spinner: 'xuilib-loading-spinner',
-    listofcourts: 'select[id="courtList"]'
+    listofcourts: 'select[id="courtList"]',
+    searchResult: '//a/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span'
   },
 
   navigate() {
@@ -30,12 +32,15 @@ module.exports = {
   },
 
   async searchForCasesWithId(caseId, state = 'Any') {
+    await I.navigationInWAEnvs(this.fields.caseList);
     this.setInitialSearchFields(state);
-    I.grabCurrentUrl();
-    I.fillField(this.fields.caseId, caseId);
-    I.grabCurrentUrl();
-    I.click(this.fields.search);
-    I.grabCurrentUrl();
+    await I.grabCurrentUrl();
+    await I.fillField(this.fields.caseId, caseId);
+    await I.grabCurrentUrl();
+    await I.click(this.fields.search);
+    await I.grabCurrentUrl();
+    await I.waitForElement(this.fields.searchResult);
+    await I.click(this.fields.searchResult);
   },
 
   searchForCasesWithName(caseName, state = 'Any') {
@@ -81,7 +86,7 @@ module.exports = {
 
   async searchForCaseAndOpenCase() {
     await I.wait('15');
-    await I.retry(retryCount).click("//a[@class='govuk-link ng-star-inserted']");
+    await I.retry(retryCount).click('//a[@class=\'govuk-link ng-star-inserted\']');
     await I.wait('10');
   }
 };

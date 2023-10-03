@@ -35,7 +35,7 @@ const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
-const IssueCase = require('./pages/IssueCase');
+const issueCasePage = require('./pages/IssueCase');
 
 
 module.exports = () => {
@@ -224,22 +224,22 @@ module.exports = () => {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
     saveTheCaseIdAndSignout() {
-       return CreateCasePage.saveTheCaseIdAndSignout();
+      return CreateCasePage.saveTheCaseIdAndSignout();
     },
     logInAsSolicitorNoCookies() {
-        return loginPage.loginAsSolicitorNoCookiesDisplayed();
+      return LoginPage.loginAsSolicitorNoCookiesDisplayed();
     },
     searchForCaseAndOpenCase() {
-        return caseList.searchForCaseAndOpenCase();
+      return caseList.searchForCaseAndOpenCase();
     },
     searchForCasesWithId(caseId) {
-        return caseList.searchForCasesWithId(caseId, 'Any');
+      return caseList.searchForCasesWithId(caseId, 'Any');
     },
     issueCase() {
-        return MoveCaseToGateKeeping.MoveCaseToGateKeeping();
+      return issueCasePage.issueCase();
     },
     moveCaseToGateKeeping() {
-        return moveCaseToGateKeeping.moveCaseToGateKeeping();
+      return moveCaseToGateKeeping.moveCaseToGateKeeping();
     }
   });
 };

@@ -1,25 +1,38 @@
+
 const I = actor();
 const retryCount = 3;
+const longWait = 30;
+const medWait = 10;
+
 
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-
+    returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
+    assignToMe: '//a[@id="action_claim"]',
+    issueTaskName: '//a[contains(.,"Issue and send to local Court")]',
+    courtListDropdown: '//select[@id="courtList"]'
   },
+
   async issueCase() {
     await I.retry(retryCount).triggerEvent('Issue and send to local court');
-    I.wait('3');
-    await I.retry(retryCount).click("//a[contains(.,'Return to tasks tab to assign a task')]");
-    I.wait('3');
-    await I.retry(retryCount).click("//a[@id='action_claim']");
-    I.wait('3');
-    await I.retry(retryCount).click("//a[contains(.,'Issue and send to local Court')]");
-    I.wait('10');
-    I.selectOption("//select[@id='courtList']","Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP");
+    await I.wait(longWait);
+    await I.retry(retryCount).click(this.fields.returnToTaskTab);
+
+    await I.wait(medWait);
+    await I.reloadPage(this.fields.assignToMe);
+    await I.retry(retryCount).click(this.fields.assignToMe);
+
+    await I.waitForElement(this.fields.issueTaskName, medWait);
+    await I.reloadPage(this.fields.issueTaskName);
+    await I.retry(retryCount).click(this.fields.issueTaskName);
+
+    await I.waitForElement(this.fields.courtListDropdown, medWait);
+    await I.selectOption(this.fields.courtListDropdown, 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
     await I.retry(retryCount).click(this.fields.submit);
-    I.wait('3');
+    await I.wait('3');
     await I.retry(retryCount).click(this.fields.submit);
-    I.wait('15');
+    await I.wait('15');
     await I.see('Case Issued');
   }
 };

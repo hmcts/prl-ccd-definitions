@@ -1,25 +1,41 @@
+// eslint-disable-next-line no-magic-numbers
 const I = actor();
 const retryCount = 3;
+const longWait = 30;
+const medWait = 10;
+const shortWait = 3;
 
 module.exports = {
   fields: {
     submit: 'button[type="submit"]',
-
+    returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
+    assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Send to Gatekeeper")]/../../dl/div[4]//dd/a',
+    gateKeeperTask: '//a[contains(.,"Send To Gatekeeper")]',
+    selectGateKeeperOption: '#isSpecificGateKeeperNeeded_No'
   },
+
   async moveCaseToGateKeeping() {
     await I.retry(retryCount).triggerEvent('Send to gate keeper');
-    I.wait('3');
-    await I.retry(retryCount).click("//a[contains(.,'Return to tasks tab to assign a task')]");
-    I.wait('3');
-    await I.retry(retryCount).click("//p[contains(.,'Send to Gatekeeper')]//..//div[4]//a[@id='action_claim']");
-    I.wait('3');
-    await I.retry(retryCount).click("//a[contains(.,'Send To Gatekeeper')]");
-    I.wait('10');
-    await I.retry(retryCount).click("#isSpecificGateKeeperNeeded_No");
+
+    await I.wait(longWait);
+    await I.retry(retryCount).click(this.fields.returnToTaskTab);
+
+    await I.wait(medWait);
+    await I.reloadPage(this.fields.assignTaskToMe);
+    await I.retry(retryCount).click(this.fields.assignTaskToMe);
+
+    await I.wait(medWait);
+    await I.retry(retryCount).click(this.fields.gateKeeperTask);
+
+    await I.wait(medWait);
+    await I.retry(retryCount).click(this.fields.selectGateKeeperOption);
     await I.retry(retryCount).click(this.fields.submit);
-    I.wait('3');
+
+    await I.wait(shortWait);
     await I.retry(retryCount).click(this.fields.submit);
-    I.wait('3');
-    await I.seeElement("//span[contains(.,'success')]");
+
+    await I.wait(shortWait);
+    await I.seeElement('//span[contains(.,"success")]');
+    await I.see('Gatekeeping');
   }
 };
