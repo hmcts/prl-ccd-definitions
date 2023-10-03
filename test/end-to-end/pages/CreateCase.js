@@ -200,7 +200,7 @@ module.exports = {
   },
 
   async fillFormAndSubmit_TSSolicitorApplication() {
-    I.wait('15');
+    await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     I.wait('15');
@@ -216,7 +216,7 @@ module.exports = {
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
-    I.wait('10');
+    await I.wait('10');
     try {
       await I.retry(retryCount).seeElement('#authorizeCommand');
       await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
