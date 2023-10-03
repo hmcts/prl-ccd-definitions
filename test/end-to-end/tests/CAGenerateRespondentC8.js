@@ -8,3 +8,23 @@ Scenario(
     await I.updateRespondentsDetailsConfidential();
   }
 ).retry({ retries: 3, minTimeout: 30000 });
+
+Scenario(
+  'Judge - Amend Respondent Email, Address, Phone number as Confidential @nightly',
+  async I => {
+    await I.loginAsCourtAdmin();
+    await I.createC100CaseByCourtAdmin();
+    await I.loginAsJudge();
+    await I.updateRespondentsDetailsConfidential();
+  }
+).retry({ retries: 3, minTimeout: 30000 });
+
+Scenario(
+  'Legal Adviser - Amend Respondent Email, Address, Phone number as Confidential @nightly',
+  async I => {
+    await I.loginAsCourtAdmin();
+    await I.createC100CaseByCourtAdmin();
+    await I.loginAsLegalAdviser();
+    await I.updateRespondentsDetailsConfidential();
+  }
+).retry({ retries: 3, minTimeout: 30000 });

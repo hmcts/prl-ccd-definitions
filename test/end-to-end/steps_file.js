@@ -52,6 +52,9 @@ module.exports = () => {
     loginAsJudge() {
       return LoginPage.loginAsJudge();
     },
+    loginAsLegalAdviser() {
+      return LoginPage.loginAsLegalAdviser();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },

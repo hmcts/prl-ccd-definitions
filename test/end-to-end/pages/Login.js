@@ -47,10 +47,13 @@ module.exports = {
     await I.wait('10');
   },
   async loginAsJudge() {
-    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.wait('2');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    await I.retry(retryCount).click('Sign out');
+    await I.wait('5');
+    const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+    await I.retry(retryCount).amOnPage(pageUrl);
     try {
-      await I.retry(retryCount).click('#cookie-accept-submit');
-      await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.retry(retryCount).seeElement('#authorizeCommand');
       await I.retry(retryCount).fillField(this.fields.email, config.judgeUserOne.email);
@@ -58,6 +61,25 @@ module.exports = {
     } catch {
       await I.retry(retryCount).fillField(this.fields.email, config.judgeUserOne.email);
       await I.retry(retryCount).fillField(this.fields.password, config.judgeUserOne.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
+  },
+  async loginAsLegalAdviser() {
+    await I.wait('2');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    await I.retry(retryCount).click('Sign out');
+    await I.wait('5');
+    const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+    await I.retry(retryCount).amOnPage(pageUrl);
+    try {
+      await I.runAccessibilityTest();
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.legalAdviserUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalAdviserUserOne.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.legalAdviserUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalAdviserUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
