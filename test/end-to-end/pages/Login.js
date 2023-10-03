@@ -2,9 +2,9 @@ const I = actor();
 const config = require('../config');
 
 const retryCount = 3;
-const normalizeCaseId = caseId => {
-  return caseId.toString().replace(/\D/g, '');
-};
+// const normalizeCaseId = caseId => {
+//   return caseId.toString().replace(/\D/g, '');
+// };
 
 module.exports = {
 
