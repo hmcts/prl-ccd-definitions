@@ -47,7 +47,7 @@ module.exports = {
     await I.wait('10');
   },
   async loginAsJudge() {
-    await I.wait('2');
+    await I.wait('10');
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
     await I.retry(retryCount).click('Sign out');
     await I.wait('5');
@@ -66,7 +66,7 @@ module.exports = {
     await I.wait('10');
   },
   async loginAsLegalAdviser() {
-    await I.wait('2');
+    await I.wait('10');
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
     await I.retry(retryCount).click('Sign out');
     await I.wait('5');
