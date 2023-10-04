@@ -28,11 +28,22 @@
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "orderNameHearingLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 15,
+    "PageDisplayOrder": 15,
+    "PageFieldDisplayOrder": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND isOrderCreatedBySolicitor=\"No\" AND isHearingPageNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "22/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "ordersHearingDetails",
     "DisplayContext": "COMPLEX",
     "PageID": 15,
     "PageDisplayOrder": 15,
-    "PageFieldDisplayOrder": 4,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc"
+    "PageFieldDisplayOrder": 4
   }
 ]
