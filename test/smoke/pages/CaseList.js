@@ -1,6 +1,8 @@
 const { I } = inject();
 const config = require('../config');
 
+const medWait = 10;
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -33,16 +35,11 @@ module.exports = {
   async searchForCasesWithId(caseId, state = 'Any') {
     await I.click(this.fields.reset);
     this.setInitialSearchFields(state);
+    await I.grabCurrentUrl();
     await I.fillField(this.fields.caseId, caseId);
-    await I.click(this.fields.applicationType);
+    await I.grabCurrentUrl();
+    await I.wait(medWait);
     await I.click(this.fields.search);
-  },
-
-  searchForCasesWithName(caseName, state = 'Any') {
-    this.setInitialSearchFields(state);
-    // wait for our filters to load
-    I.fillField(this.fields.caseName, caseName);
-    I.click(this.fields.search);
   },
 
   setInitialSearchFields(state = 'Any') {
