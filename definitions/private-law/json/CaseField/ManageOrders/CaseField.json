@@ -115,7 +115,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "judgeOrMagistrateTitle",
-    "Label": "Select or amend title of judge or magistrate",
+    "Label": "Select or amend the title of the Judge or magistrate",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
     "SecurityClassification": "Public",
@@ -125,7 +125,16 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "orderMadeByLabel",
-    "Label": "**Order made by Judge or Magistrate's title**",
+    "Label": "Order made by",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeLabel",
+    "Label": "**Judge or Magistrate's title**",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -134,7 +143,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "judgeOrMagistratesLastName",
-    "Label": "Full name",
+    "Label": "Judge or magistrate's last name",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -143,7 +152,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "justiceLegalAdviserFullName",
-    "Label": "Justice's Legal Adviser's full name",
+    "Label": "Full name of Justices' Legal Advisor",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -354,7 +363,43 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "selectedOrder",
     "Label": " ",
-    "FieldType": "TextArea",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderLabel",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderHearingLabel",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderSummaryLabel",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderSolicitorLabel",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -470,7 +515,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel10",
-    "Label": "${manageOrderHeader1}",
+    "Label": "${selectedOrder}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -597,7 +642,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "magistrateLastName",
-    "Label": "Full name",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "MagistrateLastName",
     "Max":3,
@@ -1193,7 +1238,97 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "orderName",
     "Label": " ",
-    "FieldType": "TextArea",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel7",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel8",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel9",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel10",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel11",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel13",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameSolicitorLabel",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameSummaryLabel",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameHearingLabel",
+    "Label": "${orderName}",
+    "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
