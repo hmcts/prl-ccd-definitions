@@ -1,5 +1,17 @@
 [
   {
+    "LiveFrom": "22/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "orderNameHearingLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 15,
+    "PageDisplayOrder": 15,
+    "PageFieldDisplayOrder": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND isOrderCreatedBySolicitor=\"No\" AND isHearingPageNeeded=\"Yes\""
+  },
+  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
@@ -9,8 +21,7 @@
     "PageDisplayOrder": 15,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "orderType=\"noticeOfProceedingsParties\" OR orderType=\"noticeOfProceedingsNonParties\" OR orderType=\"noticeOfProceedings\"",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND isOrderCreatedBySolicitor=\"No\" AND isHearingPageNeeded=\"Yes\""
+    "FieldShowCondition": "orderType=\"noticeOfProceedingsParties\" OR orderType=\"noticeOfProceedingsNonParties\" OR orderType=\"noticeOfProceedings\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -23,18 +34,6 @@
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
-  },
-  {
-    "LiveFrom": "22/10/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "orderNameHearingLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 15,
-    "PageDisplayOrder": 15,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND isOrderCreatedBySolicitor=\"No\" AND isHearingPageNeeded=\"Yes\""
   },
   {
     "LiveFrom": "22/10/2022",
