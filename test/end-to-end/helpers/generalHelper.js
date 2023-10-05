@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
-const { Helper } = codeceptjs;
+let Helper = codecept_helper;
+
 
 const fields = {
   eventList: 'select[id="next-step"]',
@@ -95,4 +96,5 @@ class GeneralHelper extends Helper {
   }
 }
 
+// export default GeneralHelper;
 module.exports = GeneralHelper;
