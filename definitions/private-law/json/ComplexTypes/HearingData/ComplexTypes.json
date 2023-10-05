@@ -64,6 +64,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "03/10/2023",
+    "ID": "DateTimePicker",
+    "ListElementCode": "selectedDateTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Expiry date of undertaking",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "16/02/2022",
     "ID": "HearingData",
     "ListElementCode": "addNewHearingLabel",
@@ -243,7 +253,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingMustTakePlaceAtHour",
-    "FieldType": "Number",
+    "FieldType": "Text",
     "ElementLabel": "Hour",
     "SecurityClassification": "Public"
   },
@@ -251,7 +261,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingMustTakePlaceAtMinute",
-    "FieldType": "Number",
+    "FieldType": "Text",
     "ElementLabel": "Minute",
     "SecurityClassification": "Public"
   },
@@ -306,7 +316,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedDays",
-    "FieldType": "Number",
+    "FieldType": "Text",
     "ElementLabel": "Days",
     "SecurityClassification": "Public"
   },
@@ -314,7 +324,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedHours",
-    "FieldType": "Number",
+    "FieldType": "Text",
     "ElementLabel": "Hours",
     "SecurityClassification": "Public"
   },
@@ -322,7 +332,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "hearingEstimatedMinutes",
-    "FieldType": "Number",
+    "FieldType": "Text",
     "ElementLabel": "Minutes",
     "SecurityClassification": "Public"
   },
@@ -385,7 +395,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "(Applicant)",
+    "ElementLabel": "${applicantName}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -394,7 +404,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor}  (Applicant Solicitor)",
+    "ElementLabel": "${applicantSolicitor}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -403,7 +413,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName}  (Respondent)",
+    "ElementLabel": "${respondentName}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -412,7 +422,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor}  (Respondent Solicitor)",
+    "ElementLabel": "${respondentSolicitor}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -560,7 +570,6 @@
     "Searchable": "N",
     "FieldShowCondition": "respondentSolicitor=\"DO_NOT_SHOW\""
   },
-
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -569,7 +578,7 @@
     "ElementLabel": "applicantName1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName1!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantName1=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -580,7 +589,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -589,7 +597,7 @@
     "ElementLabel": "applicantName2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName2!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantName2=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -600,7 +608,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -609,7 +616,7 @@
     "ElementLabel": "applicantName3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName3!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantName3=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -620,7 +627,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -629,7 +635,7 @@
     "ElementLabel": "applicantName4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName4!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantName4=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -640,7 +646,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -649,7 +654,7 @@
     "ElementLabel": "applicantName5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantName5!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantName5=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -669,7 +674,7 @@
     "ElementLabel": "applicant Solicitor1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor1!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantSolicitor1=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -679,7 +684,7 @@
     "ElementLabel": "respondent Name1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName1!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentName1=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -689,7 +694,7 @@
     "ElementLabel": "respondent Solicitor1",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor1!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentSolicitor1=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -699,7 +704,7 @@
     "ElementLabel": "applicant Solicitor2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor2!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantSolicitor2=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -709,7 +714,7 @@
     "ElementLabel": "respondent Name2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName2!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentName2=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -719,11 +724,8 @@
     "ElementLabel": "respondent Solicitor2",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor2!=\"INVALID_DATA\""
-  }
-,
-
-
+    "FieldShowCondition": "respondentSolicitor2=\"DO_NOT_SHOW\""
+  },
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
@@ -732,7 +734,7 @@
     "ElementLabel": "applicant Solicitor3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor3!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantSolicitor3=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -742,7 +744,7 @@
     "ElementLabel": "respondent Name3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName3!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentName3=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -752,7 +754,7 @@
     "ElementLabel": "respondent Solicitor3",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor3!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentSolicitor3=\"DO_NOT_SHOW\""
   },
 
   {
@@ -763,7 +765,7 @@
     "ElementLabel": "applicant Solicitor4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor4!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantSolicitor4=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -773,7 +775,7 @@
     "ElementLabel": "respondent Name4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName4!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentName4=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -783,7 +785,7 @@
     "ElementLabel": "respondent Solicitor4",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor4!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentSolicitor4=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -793,7 +795,7 @@
     "ElementLabel": "applicant Solicitor5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "applicantSolicitor5!=\"INVALID_DATA\""
+    "FieldShowCondition": "applicantSolicitor5=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -803,7 +805,7 @@
     "ElementLabel": "respondent Name5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentName5!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentName5=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -813,14 +815,14 @@
     "ElementLabel": "respondent Solicitor5",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "respondentSolicitor5!=\"INVALID_DATA\""
+    "FieldShowCondition": "respondentSolicitor5=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel1",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor1}  (Applicant Solicitor1)",
+    "ElementLabel": "${applicantSolicitor1}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -829,7 +831,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel1",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName1}  (Respondent1)",
+    "ElementLabel": "${respondentName1}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -838,7 +840,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel1",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor1}  (Respondent Solicitor1)",
+    "ElementLabel": "${respondentSolicitor1}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -847,7 +849,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel2",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor2}  (Applicant Solicitor2)",
+    "ElementLabel": "${applicantSolicitor2}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -856,7 +858,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel2",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName2}  (Respondent2)",
+    "ElementLabel": "${respondentName2}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -865,7 +867,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel2",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor2}  (Respondent Solicitor2)",
+    "ElementLabel": "${respondentSolicitor2}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -874,7 +876,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel3",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor3}  (Applicant Solicitor3)",
+    "ElementLabel": "${applicantSolicitor3}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -883,7 +885,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel3",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName3}  (Respondent3)",
+    "ElementLabel": "${respondentName3}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -892,7 +894,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel3",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor3}  (Respondent Solicitor3)",
+    "ElementLabel": "${respondentSolicitor3}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -901,7 +903,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel4",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor4}  (Applicant Solicitor4)",
+    "ElementLabel": "${applicantSolicitor4}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -910,7 +912,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel4",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName4}  (Respondent4)",
+    "ElementLabel": "${respondentName4}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -919,7 +921,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel4",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor4}  (Respondent Solicitor4)",
+    "ElementLabel": "${respondentSolicitor4}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -928,7 +930,7 @@
     "ID": "HearingData",
     "ListElementCode": "applicantSolicitorHearingChannel5",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.applicantSolicitor5}  (Applicant Solicitor5)",
+    "ElementLabel": "${applicantSolicitor5}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -937,7 +939,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentHearingChannel5",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentName5}  (Respondent5)",
+    "ElementLabel": "${respondentName5}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -946,7 +948,7 @@
     "ID": "HearingData",
     "ListElementCode": "respondentSolicitorHearingChannel5",
     "FieldType": "DynamicList",
-    "ElementLabel": "${listWithoutNoticeHearingDetails.respondentSolicitor5}  (Respondent Solicitor5)",
+    "ElementLabel": "${respondentSolicitor5}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -980,7 +982,6 @@
   },
   {
     "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "ListElementCode": "isCafcassCymru",
     "FieldType": "YesOrNo",
@@ -988,29 +989,5 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "isCafcassCymru=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "ID": "HearingData",
-    "ListElementCode": "hearingEstimatedDaysText",
-    "FieldType": "Text",
-    "ElementLabel": "Days",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "ID": "HearingData",
-    "ListElementCode": "hearingEstimatedHoursText",
-    "FieldType": "Text",
-    "ElementLabel": "Hours",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "ID": "HearingData",
-    "ListElementCode": "hearingEstimatedMinutesText",
-    "FieldType": "Text",
-    "ElementLabel": "Minutes",
-    "SecurityClassification": "Public"
   }
 ]

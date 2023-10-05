@@ -897,7 +897,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "judgeOrMagistrateTitle",
-    "ElementLabel": "Select or amend title of judge or magistrate",
+    "ElementLabel": "Select or amend the title of the Judge or magistrate",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
     "SecurityClassification": "Public",
@@ -1330,6 +1330,16 @@
     "ListElementCode": "underTakingExpiryTime",
     "FieldType": "Text",
     "ElementLabel": "Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "03/10/2023",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingExpiryDateTime",
+    "FieldType": "DateTimePicker",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
