@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-let Helper = codecept_helper;
+const Helper = codecept_helper;
 
 
 const fields = {

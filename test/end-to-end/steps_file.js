@@ -199,9 +199,9 @@ module.exports = () => {
     issueAndSendToLocalCourt() {
       return caseList.issueAndSendToLocalCourt();
     },
-    amOnHistoryPageWithSuccessNotification() {
-      return generalHelper.amOnHistoryPageWithSuccessNotification();
-    },
+    // amOnHistoryPageWithSuccessNotification() {
+    //   return generalHelper.amOnHistoryPageWithSuccessNotification();
+    // },
     selectApplication() {
       return UploadAdditionalApplications.selectApplication();
     },

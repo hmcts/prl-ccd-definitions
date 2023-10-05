@@ -13,7 +13,7 @@ module.exports = {
     submit: 'button[type="submit"]',
     caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
     caseFromCourtNav_No: '#caseFromCourtNav_No',
-    helpWithFees_No: '#helpWithFees_No',
+    helpWithFees_No: '#helpWithFees_No'
   },
 
   async clickCreateCase() {
@@ -185,7 +185,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('History');
   },
 
-  async createNewSolicitorDummyC100Case(){
+  async createNewSolicitorDummyC100Case() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TSSolicitorApplication();
     await this.selectTypeOfApplicationC100();
