@@ -1,9 +1,18 @@
 const defaultPassword = 'Nagoya0102';
+const judgeDefaultPassword = 'Hmcts1234';
 
 module.exports = {
   legalProfessionalUserOne: {
     email: 'prl-e2etestsolicitor@mailinator.com',
     password: defaultPassword
+  },
+  legalProfessionalUserTwo: {
+    email: 'prl_ctscadmin11_stoke@justice.gov.uk',
+    password: defaultPassword
+  },
+  judgeUserOne: {
+    email: '4923952EMP-@ejudiciary.net',
+    password: judgeDefaultPassword
   },
   definition: {
     jurisdiction: 'PRIVATELAW',

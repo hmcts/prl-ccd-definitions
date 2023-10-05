@@ -27,11 +27,27 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
+const manageOrders = require('./pages/ManageOrders');
+const manageOrderHearing = require('./pages/ManageOrderHearing');
+const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
+const ChildrenRelationships = require('./pages/ChildrenRelationships');
+const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
+const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
+const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 
 module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsCourtAdmin() {
+      return LoginPage.loginAsCourtAdmin();
+    },
+    loginAsJudge() {
+      return LoginPage.loginAsJudge();
+    },
+    selectOrderForReview() {
+      return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -44,6 +60,27 @@ module.exports = () => {
     },
     createCase() {
       return CreateCasePage.createNewCaseC100();
+    },
+    createCase_TS() {
+      return CreateCasePage.createNewCaseC100_TS();
+    },
+    createC100CaseByCourtAdmin() {
+      return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    manageOrderCreateOrderC21() {
+      return manageOrders.createAnOrderC21();
+    },
+    submitManageOrder() {
+      return manageOrders.submitManageOrder();
+    },
+    manageOrderUploadOrderServeNowPersonally() {
+      return manageOrders.manageOrderUploadOrderServeNowPersonally();
+    },
+    manageOrderUploadOrderForJudgeReview() {
+      return manageOrders.manageOrderUploadOrderForJudgeReview();
+    },
+    fillHearingDetails() {
+      return manageOrderHearing.fillHearingDetails();
     },
     createCaseFL401() {
       return CreateCasePage.createNewCaseFL401();
@@ -65,6 +102,18 @@ module.exports = () => {
     },
     childDetails() {
       return ChildDetails.runChildDetailsEventHappyPath();
+    },
+    runOtherChildDetailsEvent() {
+      return OtherChildrenNotInCase.runOtherChildDetailsEvent();
+    },
+    runChildrenAndApplicant() {
+      return ChildrenRelationships.runChildrenAndApplicant();
+    },
+    runChildrenAndRespondent() {
+      return ChildrenRelationships.runChildrenAndRespondent();
+    },
+    runChildrenAndOtherPeople() {
+      return ChildrenRelationships.runChildrenAndOtherPeople();
     },
     applicantDetailsC100() {
       return ApplicantDetails.runApplicantDetailsEventHappyPath();
@@ -132,6 +181,12 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    runSubmitAndPayHappyPath_HWF_Yes() {
+      return submitAndPay.submitAndPay_HWF_Yes();
+    },
+    runSubmitAndPay_TS() {
+      return submitAndPay.dummyPaymentConfirmation();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -141,8 +196,29 @@ module.exports = () => {
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
     },
+    issueAndSendToLocalCourt() {
+      return caseList.issueAndSendToLocalCourt();
+    },
     amOnHistoryPageWithSuccessNotification() {
       return generalHelper.amOnHistoryPageWithSuccessNotification();
+    },
+    selectApplication() {
+      return UploadAdditionalApplications.selectApplication();
+    },
+    uploadApplication() {
+      return UploadAdditionalApplications.uploadApplication();
+    },
+    awpCAOtherOrders() {
+      return UploadAdditionalApplications.awpCAOtherOrders();
+    },
+    createSolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyC100Case();
+    },
+    payAndSubmitDummySolicitorCase() {
+      return submitAndPay.submitAndPayForDummySolicitorApplication();
+    },
+    solicitorWithdrawApplication() {
+      return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     }
   });
 };

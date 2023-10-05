@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=18.16.1"
   },
   "scripts": {
     "envs": "node json-env.js",
@@ -21,8 +21,8 @@
     "test:crossbrowser-e2e": "MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test:uploadFile": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
-    "test:functional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
-    "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
+    "test:functional": "codeceptjs run --steps --grep \"@master\" -c test/end-to-end/codecept.conf.js",
+    "test:fullfunctional": "codeceptjs run --steps --grep \"@nightly\" -c test/end-to-end/codecept.conf.js",
     "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
