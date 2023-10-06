@@ -34,6 +34,9 @@ const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
+const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
+const issueCasePage = require('./pages/IssueCase');
+
 
 module.exports = () => {
   return actor({
@@ -219,6 +222,24 @@ module.exports = () => {
     },
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
+    },
+    saveTheCaseIdAndSignout() {
+      return CreateCasePage.saveTheCaseIdAndSignout();
+    },
+    logInAsSolicitorNoCookies() {
+      return LoginPage.loginAsSolicitorNoCookiesDisplayed();
+    },
+    searchForCaseAndOpenCase() {
+      return caseList.searchForCaseAndOpenCase();
+    },
+    searchForCasesWithId(caseId) {
+      return caseList.searchForCasesWithId(caseId, 'Any');
+    },
+    issueCase() {
+      return issueCasePage.issueCase();
+    },
+    moveCaseToGateKeeping() {
+      return moveCaseToGateKeeping.moveCaseToGateKeeping();
     }
   });
 };
