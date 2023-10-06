@@ -78,7 +78,7 @@ module.exports = {
   },
 
   async happensNext() {
-    await I.wait('15');
+    await I.wait('20');
     // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },

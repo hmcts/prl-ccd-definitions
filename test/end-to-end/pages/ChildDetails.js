@@ -18,6 +18,7 @@ module.exports = {
   },
   async fillChildrenPage() {
     await I.waitForText('Child details');
+    await I.wait('5');
     await I.retry(retryCount).click('Add new');
     I.wait('2');
     await I.retry(retryCount).fillField(this.fields.child1FirstName, 'Test Firstname1');

@@ -94,6 +94,29 @@ class GeneralHelper extends Helper {
     await Puppeteer.see(title);
     await Puppeteer.see(documentName);
   }
+
+  async clickTillElementFound(tabSelector, nextBtnSelector) {
+    const helper = this.helpers.Puppeteer;
+    try {
+      const eleVisible = await helper.grabNumberOfVisibleElements(tabSelector);
+      /* eslint-disable no-await-in-loop */
+      for (let i = 1; i < 3; i++) {
+        if (eleVisible === 0) {
+          console.log(`loop ${i}`);
+          return helper.click(nextBtnSelector);
+        }
+
+        if (eleVisible === 1) {
+          return helper.click(tabSelector);
+          // break;
+        }
+      }
+      // eslint-disable-next-line id-blacklist
+    } catch (err) {
+      console.log('Skipping operation as element is not visible');
+    }
+    return null;
+  }
 }
 
 // export default GeneralHelper;
