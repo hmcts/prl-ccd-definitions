@@ -10,6 +10,10 @@ module.exports = {
     email: 'prl_ctscadmin11_stoke@justice.gov.uk',
     password: defaultPassword
   },
+  courtAdminUser: {
+    email: 'prl_aat_swansea_courtadmin@justice.gov.uk',
+    password: defaultPassword
+  },
   judgeUserOne: {
     email: '4923952EMP-@ejudiciary.net',
     password: judgeDefaultPassword
