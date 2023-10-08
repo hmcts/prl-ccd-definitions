@@ -5,4 +5,4 @@ Scenario('Withdraw application as Solicitor @nightly', async({ I }) => {
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
   await I.solicitorWithdrawApplication();
-}).retry({ retries: 3, minTimeout: 30000 });
+}).retry(1);

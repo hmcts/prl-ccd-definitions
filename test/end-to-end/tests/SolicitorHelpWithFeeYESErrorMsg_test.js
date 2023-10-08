@@ -7,4 +7,4 @@ Scenario(
     await I.createCase_TS();
     await I.runSubmitAndPayHappyPath_HWF_Yes();
   }
-).retry({ retries: 3, minTimeout: 30000 });
+).retry(1);

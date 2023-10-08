@@ -14,4 +14,4 @@ Scenario(
     await I.runRespondentBehaviour();
     await I.runTheHomeHappyPath();
   }
-).retry({ retries: 3, minTimeout: 30000 });
+).retry(1);

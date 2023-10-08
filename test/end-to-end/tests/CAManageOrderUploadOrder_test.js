@@ -7,7 +7,7 @@ Scenario(
     await I.createC100CaseByCourtAdmin();
     await I.manageOrderUploadOrderServeNowPersonally();
   }
-).retry(2);
+).retry(1);
 
 Scenario(
   'CA Manage Order Upload Order - For Judge review - @nightly',
@@ -16,4 +16,4 @@ Scenario(
     await I.createC100CaseByCourtAdmin();
     await I.manageOrderUploadOrderForJudgeReview();
   }
-).retry({ retries: 3, minTimeout: 30000 });
+).retry(1);

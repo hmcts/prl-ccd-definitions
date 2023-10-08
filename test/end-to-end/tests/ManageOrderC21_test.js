@@ -6,4 +6,4 @@ Scenario('Create Order C21 @nightly', async({ I }) => {
   await I.manageOrderCreateOrderC21();
   await I.fillHearingDetails();
   await I.submitManageOrder();
-}).retry(2);
+}).retry(1);

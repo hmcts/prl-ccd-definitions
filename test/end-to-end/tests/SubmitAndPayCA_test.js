@@ -1,6 +1,6 @@
 Feature('CA Submit and Pay');
 
-Scenario('Create a Case and Submit/Pay @master', async({ I }) => {
+Scenario('Create a Case and Submit/Pay @master @nightly', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.typeOfApplicationEventC100();
@@ -21,4 +21,4 @@ Scenario('Create a Case and Submit/Pay @master', async({ I }) => {
   await I.litigationCapacity();
   await I.welshLanguageRequirement();
   await I.runSubmitAndPayHappyPath();
-}).retry({ retries: 3, minTimeout: 30000 });
+}).retry(1);

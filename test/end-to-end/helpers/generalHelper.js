@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-undef
 const Helper = codecept_helper;
-
+// const { Helper } = codeceptjs;
+const longWait = 30;
+const loopMax = 3;
 
 const fields = {
   eventList: 'select[id="next-step"]',
@@ -24,8 +26,6 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     await Puppeteer.wait(historyResponseTime);
     await Puppeteer.waitForText('History');
-    // console.log(await Puppeteer.grabTextFrom('div.alert-message'));
-    // await Puppeteer.waitForElement('i.icon-tick');
     await Puppeteer.wait(historyResponseTime);
   }
 
@@ -100,7 +100,7 @@ class GeneralHelper extends Helper {
     try {
       const eleVisible = await helper.grabNumberOfVisibleElements(tabSelector);
       /* eslint-disable no-await-in-loop */
-      for (let i = 1; i < 3; i++) {
+      for (let i = 1; i < loopMax; i++) {
         if (eleVisible === 0) {
           console.log(`loop ${i}`);
           return helper.click(nextBtnSelector);
@@ -109,6 +109,45 @@ class GeneralHelper extends Helper {
         if (eleVisible === 1) {
           return helper.click(tabSelector);
           // break;
+        }
+      }
+      // eslint-disable-next-line id-blacklist
+    } catch (err) {
+      console.log('Skipping operation as element is not visible');
+    }
+    return null;
+  }
+
+  async navigationInWAEnvs(selector, ...options) {
+    const helper = this.helpers.Puppeteer;
+    try {
+      const waVisible = await helper.grabCurrentUrl();
+      console.log(`WA current url is ### ${waVisible}`);
+
+      if (waVisible.includes('https://manage-case.aat.platform.hmcts.net')) {
+        return helper.click(selector, ...options);
+      }
+      // eslint-disable-next-line id-blacklist
+    } catch (err) {
+      console.log('Skipping operation as element is not visible');
+    }
+    return null;
+  }
+
+  async reloadPage(selector) {
+    const helper = this.helpers.Puppeteer;
+    try {
+      const numVisible = await helper.grabNumberOfVisibleElements(selector);
+      /* eslint-disable no-await-in-loop */
+      for (let i = 1; i < longWait; i++) {
+        if (numVisible === 0) {
+          await helper.wait(i);
+          return helper.refreshPage();
+        }
+
+        if (numVisible === 1) {
+          await helper.click(selector);
+          break;
         }
       }
       // eslint-disable-next-line id-blacklist
