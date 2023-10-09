@@ -1,5 +1,7 @@
 const I = actor();
 const retryCount = 3;
+const config = require('../config');
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -12,7 +14,12 @@ module.exports = {
     createCaseLink: '//a[contains(.,"Create case")]',
     submit: 'button[type="submit"]',
     caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
-    caseFromCourtNav_No: '#caseFromCourtNav_No'
+    caseFromCourtNav_No: '#caseFromCourtNav_No',
+    helpWithFees_No: '#helpWithFees_No',
+    signOut: '//a[contains(.,"Sign out")]',
+    email: '#username',
+    password: '#password',
+    submitOther: 'input[type="submit"]'
   },
 
   async clickCreateCase() {
@@ -84,7 +91,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationC100() {
-    await I.waitForText('Type of application');
+    // await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
     await I.wait('3');
@@ -182,5 +189,45 @@ module.exports = {
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
+  },
+
+  async createNewSolicitorDummyC100Case() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TSSolicitorApplication();
+    await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async fillFormAndSubmit_TSSolicitorApplication() {
+    await I.wait('15');
+    await I.waitForElement(this.fields.jurisdiction);
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    I.wait('15');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    I.wait('15');
+    await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
+    await I.waitForClickable(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
+  async saveTheCaseIdAndSignout() {
+    // I.wait('20');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    await I.retry(retryCount).click(this.fields.signOut);
+    await I.wait('10');
+    try {
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+    }
+    await I.wait('5');
+    await I.retry(retryCount).click(this.fields.submitOther);
+    await I.wait('10');
+    return caseId;
   }
 };
