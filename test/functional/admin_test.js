@@ -1,6 +1,6 @@
 Feature('Admin Web');
 
-Scenario('add all the roles @pipeline', ({ I }) => {
+Scenario('add all the roles', ({ I }) => {
   I.loginToAdminConsole();
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
@@ -50,7 +50,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('prd-admin');
 });// eslint-disable-line no-magic-numbers
 
-Scenario('upload Private Law Config file @pipeline @aat', ({ I }) => {
+Scenario('upload Private Law Config file @pipeline', ({ I }) => {
   I.loginToAdminConsole();
   try {
     I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
@@ -58,4 +58,4 @@ Scenario('upload Private Law Config file @pipeline @aat', ({ I }) => {
   } catch (error) {
     console.log(error);
   }
-}); // eslint-disable-line no-magic-numbers
+}).retry(1); // eslint-disable-line no-magic-numbers

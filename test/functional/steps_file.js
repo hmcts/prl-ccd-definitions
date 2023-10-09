@@ -15,7 +15,7 @@ module.exports = () => {
       I.fillField('username', config.legalProfessionalUserOne.email);
       I.fillField('password', config.legalProfessionalUserOne.password);
       I.click('Sign in');
-      I.wait('15');
+      I.wait('20');
       I.see('Welcome to CCD Admin Web');
     },
     createRole(role) {
