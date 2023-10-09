@@ -1,6 +1,7 @@
 
 // in this file you can append custom step methods to 'I' object
 const config = require('./config');
+
 const I = actor();
 
 module.exports = () => {
@@ -16,7 +17,6 @@ module.exports = () => {
       I.click('Sign in');
       I.wait('15');
       I.see('Welcome to CCD Admin Web');
-      
     },
     createRole(role) {
       I.click('Manage User Roles');
