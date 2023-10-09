@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 const { Helper } = codeceptjs;
+const longWait = 30;
 
 const fields = {
   eventList: 'select[id="next-step"]',
@@ -92,6 +93,44 @@ class GeneralHelper extends Helper {
     const { Puppeteer } = this.helpers;
     await Puppeteer.see(title);
     await Puppeteer.see(documentName);
+  }
+
+  async navigationInWAEnvs(selector, ...options) {
+    const helper = this.helpers.Puppeteer;
+    try {
+      const waVisible = await helper.grabCurrentUrl();
+      console.log(`WA current url is ### ${waVisible}`);
+
+      if (waVisible.includes('https://manage-case.aat.platform.hmcts.net')) {
+        return helper.click(selector, ...options);
+      }
+      // eslint-disable-next-line id-blacklist
+    } catch (err) {
+      console.log('Skipping operation as element is not visible');
+    }
+    return null;
+  }
+
+  async reloadPage(selector) {
+    const helper = this.helpers.Puppeteer;
+    try {
+      const numVisible = await helper.grabNumberOfVisibleElements(selector);
+      /* eslint-disable no-await-in-loop */
+      for (let i = 1; i < longWait; i++) {
+        if (numVisible === 0) {
+          await helper.wait(i);
+          return helper.refreshPage(selector);
+        }
+
+        if (numVisible === 1) {
+          break;
+        }
+      }
+      // eslint-disable-next-line id-blacklist
+    } catch (err) {
+      console.log('Skipping operation as element is not visible');
+    }
+    return null;
   }
 }
 
