@@ -33,6 +33,7 @@ module.exports = {
 
   async otherPeopleInTheCase() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
+    await I.wait('5');
     await I.retry(retryCount).click('Add new');
     await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.opFirstName, 'Other Firstname');
