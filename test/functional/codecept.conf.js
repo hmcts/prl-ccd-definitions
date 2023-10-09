@@ -4,8 +4,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
-      chrome: { ignoreHTTPSErrors: true },
-      show: true
+      chrome: { ignoreHTTPSErrors: true }
     }
   },
   include: { I: './steps_file.js' },
