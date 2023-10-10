@@ -2,21 +2,21 @@ exports.config = {
   tests: './tests/*_test.js',
   output: './output',
   helpers: {
-    Puppeteer: {
-      // headless mode
+    Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
       // show: true,
       url: 'http://localhost:3000',
-      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
-      waitForTimeout: 180000,
-      ignoreHTTPSErrors: true,
+      waitForTimeout: 60000,
+      getPageTimeout: 60000,
+      waitForAction: 1000,
+      waitForNavigation: 'domcontentloaded',
       chrome: {
         ignoreHTTPSErrors: true,
-        args: ['--no-sandbox']
+        args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
       },
       windowSize: '1280x960'
     },
-    PuppeteerHelpers: { require: './helpers/puppeterHelper.js' },
+    PlaywrightHelpers: { require: './helpers/playwrightHelper.js' },
     GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
@@ -28,7 +28,7 @@ exports.config = {
     }
   },
   include: { I: './steps_file.js' },
-  bootstrap: null,
+  // bootstrap: null,
   mocha: {},
   multiple: {
     parallel: {

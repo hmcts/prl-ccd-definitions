@@ -47,11 +47,11 @@ module.exports = {
   },
   async selectOrder(modeOfOrder) {
     await I.retry(retryCount).triggerEvent('Manage orders');
-    await I.wait('2');
-    await I.retry(retryCount).waitForText('What do you want to do?');
+    // await I.wait('2');
+    // await I.retry(retryCount).waitForText('What do you want to do?');
     await I.retry(retryCount).click(modeOfOrder);
     await I.retry(retryCount).click('Continue');
-    await I.wait('2');
+    // await I.wait('2');
   },
   async selectTypeOfOrderForUpload(orderName) {
     await I.retry(retryCount).waitForText('Upload an order');
@@ -59,26 +59,26 @@ module.exports = {
     await I.retry(retryCount).click(orderName);
     await I.retry(retryCount).click(this.fields.isTheOrderUploadedByConsent_Yes);
     await I.retry(retryCount).click('Continue');
-    await I.wait('5');
+    // await I.wait('5');
   },
   async uploadOrder() {
     await I.retry(retryCount).waitForText('Approval Date (Optional)');
     // await I.retry(retryCount).waitForText('Date order made (Optional)');
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_day, '11');
-    await I.wait('2');
+    // await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_month, '11');
-    await I.wait('2');
+    // await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_year, '2022');
-    await I.wait('2');
+    // await I.wait('2');
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.retry(retryCount).attachFile(this.fields.uploadOrderDoc, '../resource/dummy.pdf');
-    await I.wait('6');
+    // await I.wait('6');
     await I.retry(retryCount).click('Continue');
-    await I.wait('4');
+    // await I.wait('4');
   },
   async checkOrderBy(checkBy, judgeOrLA) {
     await I.retry(retryCount).click(checkBy);
-    await I.wait('1');
+    // await I.wait('1');
     if (checkBy === 'A judge or legal adviser needs to check the order') {
       await this.checkByJudgeorLA(judgeOrLA);
     }
@@ -90,10 +90,11 @@ module.exports = {
     await I.wait('3');
   },
   async checkByJudgeorLA(judgeOrLA) {
-    await I.wait('2');
+    // await I.wait('2');
     await I.retry(retryCount).click(judgeOrLA);
-    await I.wait('2');
+    // await I.wait('2');
     if (judgeOrLA === 'Judge') {
+      await I.wait('2');
       await I.retry(retryCount).fillField(this.fields.nameOfJudgeToReviewOrder, 'Raja Main');
       await I.wait('5');
       await I.getElementById('#mat-option-4').click();
@@ -105,7 +106,7 @@ module.exports = {
   async serveOrderType(orderType, serveNow, draftOrFinalise) {
     await I.retry(retryCount).waitForText('When do you want to serve the order?');
     await I.retry(retryCount).selectOption(this.fields.typeOfOrder, orderType);
-    await I.wait('2');
+    // await I.wait('2');
     if (orderType === 'Final') {
       await I.retry(retryCount).click(this.fields.doesOrderClosesCase_Yes);
     }
@@ -113,7 +114,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
     await this.doYouWantToServeOrderNow(serveNow, draftOrFinalise);
     await I.retry(retryCount).click('Continue');
-    await I.wait('5');
+    // await I.wait('5');
   },
   async doYouWantToServeOrderNow(serveNow, draftOrFinalise) {
     if (serveNow === 'Yes') {
@@ -127,26 +128,26 @@ module.exports = {
     }
   },
   async selectOrderToServe() {
-    await I.retry(retryCount).waitForText('Serve saved orders');
+    // await I.retry(retryCount).waitForText('Serve saved orders');
     await I.retry(retryCount).click(this.fields.selectOrderToServe);
     await I.retry(retryCount).click('Continue');
-    await I.wait('5');
+    // await I.wait('5');
   },
   async servePersonalOrNonPersonal(personal, responsible) {
     if (personal === 'Yes') {
       await I.retry(retryCount).click(this.fields.servePersonallyOptions_Yes);
-      await I.wait('1');
+      // await I.wait('1');
       await I.retry(retryCount).click(responsible);
     }
     await I.retry(retryCount).click(this.fields.otherPartiesToServe);
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
     await I.retry(retryCount).click('Continue');
-    await I.wait('8');
+    // await I.wait('8');
   },
   async checkYourAnswersAndSubmit() {
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click('Submit');
-    await I.wait('5');
+    // await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   async createAnOrderC21() {
