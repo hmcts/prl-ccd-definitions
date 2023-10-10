@@ -9,6 +9,13 @@ exports.config = {
   },
   include: { I: './steps_file.js' },
   bootstrap: null,
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+      retries: 2,
+      minTimeout: 2000
+    }
+  },
   mocha: {
     reporterOptions: {
       'codeceptjs-cli-reporter': {
@@ -32,6 +39,12 @@ exports.config = {
           attachments: 'true'
         }
       }
+    }
+  },
+  multiple: {
+    parallel: {
+      chunks: 2,
+      browsers: ['chrome']
     }
   },
   name: 'prl-ccd-definitions'

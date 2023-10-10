@@ -78,17 +78,17 @@ module.exports = {
   },
 
   async happensNext() {
-    await I.wait('15');
+    await I.wait('20');
     // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async runDummyPayment() {
-    await I.wait('4');
+    await I.wait('20');
     await this.triggerDummyPaymentEvent();
-    await I.wait('4');
-    await I.retry(retryCount).click('Make the payment');
-    await I.wait('6');
+    await I.wait('20');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('20');
   },
 
   async caseSubmittedCA() {
