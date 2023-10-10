@@ -47,11 +47,9 @@ module.exports = {
   },
   async selectOrder(modeOfOrder) {
     await I.retry(retryCount).triggerEvent('Manage orders');
-    // await I.wait('2');
-    // await I.retry(retryCount).waitForText('What do you want to do?');
+    await I.retry(retryCount).waitForText('What do you want to do?');
     await I.retry(retryCount).click(modeOfOrder);
     await I.retry(retryCount).click('Continue');
-    // await I.wait('2');
   },
   async selectTypeOfOrderForUpload(orderName) {
     await I.retry(retryCount).waitForText('Upload an order');
@@ -59,40 +57,34 @@ module.exports = {
     await I.retry(retryCount).click(orderName);
     await I.retry(retryCount).click(this.fields.isTheOrderUploadedByConsent_Yes);
     await I.retry(retryCount).click('Continue');
-    // await I.wait('5');
   },
   async uploadOrder() {
     await I.retry(retryCount).waitForText('Approval Date (Optional)');
-    // await I.retry(retryCount).waitForText('Date order made (Optional)');
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_day, '11');
-    // await I.wait('2');
+
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_month, '11');
-    // await I.wait('2');
+
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_year, '2022');
-    // await I.wait('2');
+
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.retry(retryCount).attachFile(this.fields.uploadOrderDoc, '../resource/dummy.pdf');
-    // await I.wait('6');
+    await I.wait('6');
     await I.retry(retryCount).click('Continue');
-    // await I.wait('4');
   },
   async checkOrderBy(checkBy, judgeOrLA) {
+    await I.retry(retryCount).waitForText(checkBy);
     await I.retry(retryCount).click(checkBy);
-    // await I.wait('1');
     if (checkBy === 'A judge or legal adviser needs to check the order') {
       await this.checkByJudgeorLA(judgeOrLA);
     }
     if (checkBy === 'A manager needs to check the order') {
-      await I.wait('1');
       await I.retry(retryCount).waitForText('This will go to a manager to be checked');
     }
     await I.retry(retryCount).click('Continue');
     await I.wait('3');
   },
   async checkByJudgeorLA(judgeOrLA) {
-    // await I.wait('2');
     await I.retry(retryCount).click(judgeOrLA);
-    // await I.wait('2');
     if (judgeOrLA === 'Judge') {
       await I.wait('2');
       await I.retry(retryCount).fillField(this.fields.nameOfJudgeToReviewOrder, 'Raja Main');

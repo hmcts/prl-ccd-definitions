@@ -1,7 +1,7 @@
 Feature('CA Manage Order Upload Order - TS Court Admin');
 
 Scenario(
-  'CA Manage Order Upload Order Serve order Personally @nightly @playwright',
+  'CA Manage Order Upload Order Serve order Personally @nightly',
   async({ I }) => {
     await I.loginAsCourtAdmin();
     await I.createC100CaseByCourtAdmin();
@@ -10,7 +10,7 @@ Scenario(
 );
 
 Scenario(
-  'CA Manage Order Upload Order - For Judge review - @nightly',
+  'CA Manage Order Upload Order - For Judge review - @nightly @playwright',
   async({ I }) => {
     await I.loginAsCourtAdmin();
     await I.createC100CaseByCourtAdmin();
