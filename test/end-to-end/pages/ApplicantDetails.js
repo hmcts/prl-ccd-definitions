@@ -26,7 +26,7 @@ module.exports = {
   },
 
   async fillApplicantsPage() {
-    I.wait('2');
+    await I.wait('5');
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
     I.wait('2');
@@ -59,9 +59,9 @@ module.exports = {
   },
 
   async fillApplicantsPageFL401() {
-    I.wait('2');
+    await I.waitForElement('//input[@id="applicantsFL401_firstName"]');
     await I.retry(retryCount).fillField('//input[@id="applicantsFL401_firstName"]', 'Applicant Firstname');
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="applicantsFL401_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '21');
     await I.wait('1');

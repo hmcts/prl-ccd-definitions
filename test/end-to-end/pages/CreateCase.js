@@ -90,8 +90,15 @@ module.exports = {
     await I.wait('3');
   },
 
+  async selectTypeOfAdminNocApplicationC100() {
+    await I.waitForText('TS-Admin application-Noc');
+    await I.retry(retryCount).click('#caseTypeOfApplication-C100');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('3');
+  },
+
   async selectTypeOfApplicationC100() {
-    // await I.waitForText('Type of application');
+    await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
     await I.wait('3');
@@ -154,7 +161,7 @@ module.exports = {
   async createC100CaseByCourtAdmin() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
-    await this.selectTypeOfApplicationC100();
+    await this.selectTypeOfAdminNocApplicationC100();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('10');
   },
