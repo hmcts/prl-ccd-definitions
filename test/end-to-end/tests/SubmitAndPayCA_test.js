@@ -21,4 +21,4 @@ Scenario('Create a Case and Submit/Pay @master @nightly', async({ I }) => {
   await I.litigationCapacity();
   await I.welshLanguageRequirement();
   await I.runSubmitAndPayHappyPath();
-}).retry(1);
+});

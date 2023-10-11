@@ -65,7 +65,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Do you have a draft consent order?');
     await I.retry(retryCount).click(this.fields.consentOrderYes);
     await I.retry(retryCount).attachDocument('draftConsentOrderFile');
-    // await I.retry(retryCount).wait('8');
+    await I.retry(retryCount).wait('5');
     await I.retry(retryCount).click('Continue');
   },
 
@@ -77,7 +77,6 @@ module.exports = {
   },
 
   async briefDetailsPageC100() {
-    // await I.retry(retryCount).wait('2');
     await I.retry(retryCount).waitForText('Provide brief details of:');
     await I.retry(retryCount).fillField(this.fields.appDetailsTextArea, 'Test Text');
     await I.retry(retryCount).click(this.fields.submit);
