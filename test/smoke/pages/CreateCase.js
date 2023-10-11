@@ -56,6 +56,7 @@ module.exports = {
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    console.log(`case Id is ${caseId}`);
     return caseId;
   }
 };
