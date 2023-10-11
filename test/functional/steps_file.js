@@ -2,29 +2,37 @@
 // in this file you can append custom step methods to 'I' object
 const config = require('./config');
 
+const I = actor();
+
 module.exports = () => {
   return actor({
 
     // Define custom steps here, use 'this' to access default methods of I.
     // It is recommended to place a general 'login' function here.
     loginToAdminConsole() {
-      this.amOnPage(`${process.env.CCD_ADMIN_URL}`);
-      this.see('Sign in');
-      this.fillField('username', config.legalProfessionalUserOne.email);
-      this.fillField('password', config.legalProfessionalUserOne.password);
-      this.click('Sign in');
-      this.see('Welcome to CCD Admin Web');
+      I.amOnPage(`${process.env.CCD_ADMIN_URL}`);
+      I.see('Sign in');
+      I.fillField('username', config.legalProfessionalUserOne.email);
+      I.fillField('password', config.legalProfessionalUserOne.password);
+      I.click('Sign in');
+      I.wait('20');
+      I.see('Welcome to CCD Admin Web');
     },
     createRole(role) {
-      this.click('Manage User Roles');
-      this.click('Create User Role');
-      this.fillField('role', role);
-      this.click('Create');
+      I.click('Manage User Roles');
+      I.wait('5');
+      I.click('Create User Role');
+      I.wait('5');
+      I.fillField('role', role);
+      I.click('Create');
+      I.wait('5');
     },
     uploadConfig(path) {
-      this.click('Import Case Definition');
-      this.attachFile('file', path);
-      this.click('Submit');
+      I.click('Import Case Definition');
+      I.wait('10');
+      I.attachFile('file', path);
+      I.wait('10');
+      I.click('Submit');
     }
   });
 };

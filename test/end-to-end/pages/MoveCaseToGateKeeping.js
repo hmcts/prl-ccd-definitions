@@ -16,15 +16,17 @@ module.exports = {
 
   async moveCaseToGateKeeping() {
     await I.retry(retryCount).triggerEvent('Send to gate keeper');
-
     await I.wait(longWait);
     await I.retry(retryCount).click(this.fields.returnToTaskTab);
 
     await I.wait(medWait);
     await I.reloadPage(this.fields.assignTaskToMe);
+    await I.waitForElement(this.fields.assignTaskToMe);
     await I.retry(retryCount).click(this.fields.assignTaskToMe);
 
-    await I.wait(medWait);
+    await I.waitForElement(this.fields.gateKeeperTask, medWait);
+    await I.reloadPage(this.fields.gateKeeperTask);
+    await I.waitForElement(this.fields.gateKeeperTask);
     await I.retry(retryCount).click(this.fields.gateKeeperTask);
 
     await I.wait(medWait);
@@ -34,7 +36,7 @@ module.exports = {
     await I.wait(shortWait);
     await I.retry(retryCount).click(this.fields.submit);
 
-    await I.wait(shortWait);
+    await I.wait(medWait);
     await I.seeElement('//span[contains(.,"success")]');
     await I.see('Gatekeeping');
   }
