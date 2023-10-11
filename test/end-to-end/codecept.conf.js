@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/*.js',
+  tests: './tests/*_test.js',
   output: './output',
   helpers: {
     Puppeteer: {
@@ -30,5 +30,11 @@ exports.config = {
   include: { I: './steps_file.js' },
   bootstrap: null,
   mocha: {},
+  multiple: {
+    parallel: {
+      chunks: 2,
+      browsers: ['chrome']
+    }
+  },
   name: 'prl-ccd-definitions'
 };
