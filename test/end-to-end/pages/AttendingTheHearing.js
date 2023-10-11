@@ -33,7 +33,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.isWelshNeeded);
     await I.retry(retryCount).see('Welsh needs');
     await I.retry(retryCount).click('#welshNeeds > div > button');
-    I.wait('1');
+    // I.wait('1');
     await I.retry(retryCount).fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
     await I.retry(retryCount).click(this.fields.welshSpoken);
     await I.retry(retryCount).click(this.fields.welshWritten);
@@ -49,25 +49,25 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.interpreterNeedsLanguage, 'Polish');
     await I.retry(retryCount).fillField(this.fields.otherAssistance, 'None');
 
-    await I.retry(retryCount).wait('1');
+    // await I.retry(retryCount).wait('1');
     await I.retry(retryCount).click(this.fields.isDisabilityPresent);
-    await I.retry(retryCount).wait('1');
+    // await I.retry(retryCount).wait('1');
     // Needs to uncomment the below line once description added back in screen
     // await I.retry(retryCount).see('Describe the adjustments that the court needs to make.');
     await I.retry(retryCount).fillField(this.fields.adjustmentsRequired, 'Example text - adjustment');
 
     await I.retry(retryCount).click(this.fields.isSpecialArrangementsRequired);
-    await I.retry(retryCount).wait('1');
+    // await I.retry(retryCount).wait('1');
     // Needs to uncomment the below line once description added back in screen
     // await I.retry(retryCount).see('Give details of the special arrangements that are required.');
     await I.retry(retryCount).fillField(this.fields.specialArrangementsRequired, 'Example text - arrangements');
 
     await I.retry(retryCount).click(this.fields.isIntermediaryNeeded);
-    await I.retry(retryCount).wait('1');
+    // await I.retry(retryCount).wait('1');
     await I.retry(retryCount).see('Set out the reasons that an intermediary is required.');
     await I.retry(retryCount).fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
 
-    await I.retry(retryCount).wait('2');
+    // await I.retry(retryCount).wait('2');
     await I.retry(retryCount).click('Continue');
 
     await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');

@@ -157,7 +157,6 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherInformation, 'TEST FURTHER INFORMATION');
     await I.retry(retryCount).click('Continue');
-    await I.wait('7');
   },
   async manageOrderUploadOrderServeNowPersonally() {
     await this.selectOrder('Upload an order');
@@ -186,23 +185,16 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.judgeLastName, 'JUDGE FULL NAME');
     await I.retry(retryCount).fillField(this.fields.legalAdviserFullName, 'JUDGE LEGAL ADV FULL NAME');
     await I.retry(retryCount).fillField(this.fields.orderMade_day, '17');
-    await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.orderMade_month, '10');
-    await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.orderMade_year, '2022');
-    await I.wait('1');
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
   },
   async submitManageOrder() {
-    await I.wait('5');
     await I.retry(retryCount).click('Continue');
     await I.waitForElement('#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck');
     await I.retry(retryCount).click('#amendOrderSelectCheckOptions-managerCheck');
-    await I.wait('10');
     await I.retry(retryCount).click('Continue');
-    await I.wait('2');
     await I.retry(retryCount).click('Submit');
-    await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await I.wait('4');
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);

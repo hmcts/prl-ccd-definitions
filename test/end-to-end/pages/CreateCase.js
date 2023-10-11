@@ -44,23 +44,23 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS_Solicitor() {
-    I.wait('5');
+    // I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    I.wait('5');
+    // I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
     );
-    I.wait('5');
+    // I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.event,
       'TS-Solicitor application'
     );
-    await I.waitForClickable(this.fields.submit);
+    //await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
