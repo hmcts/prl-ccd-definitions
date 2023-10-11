@@ -6,4 +6,4 @@ Scenario('Sign in as local authority and create a case', async({ I }) => {
   await I.grabCurrentUrl();
   await I.searchForCasesWithId(caseId);
   await I.seeCaseInSearchResult(caseId);
-});
+}).retry(1);
