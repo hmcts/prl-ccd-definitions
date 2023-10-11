@@ -60,7 +60,7 @@ module.exports = {
       this.fields.event,
       'TS-Solicitor application'
     );
-    //await I.waitForClickable(this.fields.submit);
+    // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
