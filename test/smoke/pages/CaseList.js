@@ -1,7 +1,7 @@
 const { I } = inject();
 const config = require('../config');
 
-const medWait = 10;
+const medWait = 20;
 
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
