@@ -137,12 +137,12 @@ class GeneralHelper extends Helper {
 
   async reloadPage(selector) {
     const helper = this.helpers.Playwright;
-    try {  
+    try {
       /* eslint-disable no-await-in-loop */
       for (let i = 1; i < longWait; i++) {
         const numVisible = await helper.grabNumberOfVisibleElements(selector);
         if (numVisible === 0) {
-          console.log(`Going to refresh page as ele is not visible`);
+          console.log('Going to refresh page as ele is not visible');
           await helper.wait(i);
           return helper.refreshPage();
         }

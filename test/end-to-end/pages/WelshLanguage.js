@@ -19,7 +19,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.runAccessibilityTest();
     await I.wait('1');
-    await I.retry(retryCount).waitForText('Save and continue', 30);
+    await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
   }
 

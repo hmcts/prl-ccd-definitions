@@ -33,7 +33,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.isWelshNeeded);
     await I.retry(retryCount).see('Welsh needs');
     await I.retry(retryCount).click('#welshNeeds > div > button');
-   
+
     await I.retry(retryCount).fillField(this.fields.whoNeedsWelsh, 'Joe Doe');
     await I.retry(retryCount).click(this.fields.welshSpoken);
     await I.retry(retryCount).click(this.fields.welshWritten);
@@ -60,9 +60,9 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
 
     await I.retry(retryCount).click('Continue');
-    
+
     await I.retry(retryCount).waitForText('Check your answers');
-    await I.retry(retryCount).waitForText('Save and continue', 10);
+    await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');
   },
 

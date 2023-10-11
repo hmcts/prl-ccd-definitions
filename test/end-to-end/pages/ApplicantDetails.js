@@ -47,7 +47,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicants_0_representativeLastName"]', 'Robinson');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
-    
+
     await I.runAccessibilityTest();
     await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
