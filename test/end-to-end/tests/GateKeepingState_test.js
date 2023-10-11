@@ -1,6 +1,6 @@
 Feature('Move case to Gatekeeping State');
 
-Scenario('Move case to Gatekeeping State @nightly', async I => {
+Scenario('Move case to Gatekeeping State @nightly', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
@@ -8,4 +8,4 @@ Scenario('Move case to Gatekeeping State @nightly', async I => {
   await I.searchForCasesWithId(caseId);
   await I.issueCase();
   await I.moveCaseToGateKeeping();
-}).retry({ retries: 3, minTimeout: 30000 });
+}).retry(1);
