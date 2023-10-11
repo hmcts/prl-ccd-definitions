@@ -111,10 +111,13 @@ module.exports = {
   },
 
   async checkYourAnswersPageFL401() {
-    I.wait('5');
-    await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    // I.wait('5');
+    await I.waitForText(this.fields.checkYourAnswersPageHeader);
+    // await I.waitForText('Non-molestation order');
     // await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Save and continue');
+    await I.amOnHistoryPageWithSuccessNotification();
+    // await I.wait('20');
   },
 
   async typeOfApplicationEventC100() {

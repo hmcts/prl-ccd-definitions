@@ -137,18 +137,19 @@ class GeneralHelper extends Helper {
 
   async reloadPage(selector) {
     const helper = this.helpers.Playwright;
-    try {
-      const numVisible = await helper.grabNumberOfVisibleElements(selector);
+    try {  
       /* eslint-disable no-await-in-loop */
       for (let i = 1; i < longWait; i++) {
+        const numVisible = await helper.grabNumberOfVisibleElements(selector);
         if (numVisible === 0) {
+          console.log(`Going to refresh page as ele is not visible`);
           await helper.wait(i);
           return helper.refreshPage();
         }
 
         if (numVisible === 1) {
           await helper.click(selector);
-          break;
+          // break;
         }
       }
       // eslint-disable-next-line id-blacklist

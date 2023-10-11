@@ -28,9 +28,7 @@ module.exports = {
   },
 
   async confidentialityStatement() {
-    // await I.wait('10');
     await I.retry(retryCount).waitForText('Confidentiality Statement');
-    // await I.wait('1');
     await I.retry(retryCount).click(
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
@@ -38,20 +36,15 @@ module.exports = {
   },
 
   async declaration() {
-    // await I.wait('2');
     await I.retry(retryCount).waitForText('Declaration');
-    // await I.retry(retryCount).wait('1');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
-    // await I.wait('1');
     await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
     await I.retry(retryCount).click('Continue');
   },
 
   async helpWithFeeNo() {
-    // await I.wait('2');
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
-    // await I.wait('1');
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).waitForText('Check your answers');
@@ -76,26 +69,20 @@ module.exports = {
   },
 
   async payNow() {
-    // await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async happensNext() {
-    // await I.wait('20');
     await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async runDummyPayment() {
-    // await I.wait('20');
     await this.triggerDummyPaymentEvent();
-    // await I.wait('20');
     await I.retry(retryCount).click(this.fields.submit);
-    // await I.wait('20');
   },
 
   async caseSubmittedCA() {
-    // await I.wait('4');
     await I.retry(retryCount).waitForText('Submitted');
   },
 
@@ -110,9 +97,6 @@ module.exports = {
     await this.confidentialityStatement();
     await this.declaration();
     await this.helpWithFeeNo();
-    // await this.payNow();
-    // await I.wait('3');
-    // await this.happensNext();
     await this.runDummyPayment();
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await this.caseSubmittedCA();

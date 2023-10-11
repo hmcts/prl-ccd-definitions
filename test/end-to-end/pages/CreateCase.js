@@ -199,14 +199,14 @@ module.exports = {
   },
 
   async fillFormAndSubmit_TSSolicitorApplication() {
-    await I.wait('15');
+    // await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('15');
+    // I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    I.wait('15');
+    // I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
-    await I.waitForClickable(this.fields.submit);
+    // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -215,7 +215,7 @@ module.exports = {
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
-    await I.wait('10');
+    // await I.wait('10');
     try {
       await I.retry(retryCount).seeElement('#authorizeCommand');
       await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
