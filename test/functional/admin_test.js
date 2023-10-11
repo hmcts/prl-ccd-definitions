@@ -1,6 +1,6 @@
 Feature('Admin Web');
 
-Scenario('add all the roles', ({ I }) => {
+Scenario('add all the roles @pipeline', ({ I }) => {
   I.loginToAdminConsole();
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
@@ -26,6 +26,7 @@ Scenario('add all the roles', ({ I }) => {
   I.createRole('caseworker-privatelaw-cafcass');
   I.createRole('prd-admin');
   I.click('Manage User Roles');
+  I.wait('10');
   I.see('citizen');
   I.see('caseworker-privatelaw-solicitor');
   I.see('caseworker-privatelaw-courtadmin');

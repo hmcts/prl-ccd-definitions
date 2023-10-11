@@ -20,9 +20,9 @@ module.exports = () => {
     },
     createRole(role) {
       I.click('Manage User Roles');
-      I.wait('10');
+      I.wait('5');
       I.click('Create User Role');
-      I.wait('10');
+      I.wait('5');
       I.fillField('role', role);
       I.click('Create');
       I.wait('5');
