@@ -41,7 +41,9 @@ module.exports = {
     nameOfJudgeToReviewOrder: '#nameOfJudgeToReviewOrder',
     otherPartiesToServe: '//input[contains(@id,\'otherParties_\')]',
     judgeNamePopup: '//div/div/div/div/mat-option[@id="mat-option-4"]/span[contains(text(), \'Raja Main\')]',
-    legalAdviserListToReviewOrder: '#nameOfLaToReviewOrder'
+    legalAdviserListToReviewOrder: '#nameOfLaToReviewOrder',
+    tabSelector: '//div[contains(text(), "Draft orders")]',
+    nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron'
   },
   async selectOrder(modeOfOrder) {
     await I.retry(retryCount).triggerEvent('Manage orders');
@@ -149,8 +151,10 @@ module.exports = {
   },
   async createAnOrderC21() {
     await this.selectOrder('Create an order');
+    await I.waitForElement('#createSelectOrderOptions-blankOrderOrDirections');
     await I.retry(retryCount).click('Blank order or directions (C21)');
     await I.retry(retryCount).click('Continue');
+    await I.waitForElement('#c21OrderOptions-c21other');
     await I.retry(retryCount).click('Blank order or directions (C21): Other');
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
@@ -182,6 +186,7 @@ module.exports = {
   },
 
   async fillGenericScreen() {
+    await I.waitForElement(this.fields.orderByConsent_Yes);
     await I.retry(retryCount).click(this.fields.orderByConsent_Yes);
     await I.retry(retryCount).click(this.fields.orderApprovedAtHearing_No);
     await I.retry(retryCount).click(this.fields.judgeTitle_HerHonourJudge);
@@ -196,18 +201,19 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
   },
   async submitManageOrder() {
-    await I.wait('2');
+    await I.wait('5');
     await I.retry(retryCount).click('Continue');
-    await I.wait('2');
-    await I.retry(retryCount).click('A judge or legal adviser needs to check the order');
-    await I.retry(retryCount).click('Judge');
+    await I.waitForElement('#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck');
+    await I.retry(retryCount).click('#amendOrderSelectCheckOptions-managerCheck');
+    await I.wait('10');
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await I.wait('4');
-    await I.retry(retryCount).click('Draft orders');
+    await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
+    await I.retry(retryCount).click(this.fields.tabSelector);
     await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
   }
 };
