@@ -26,9 +26,7 @@ exports.config = {
       retries: 2,
       minTimeout: 2000
     },
-    autoDelay: {
-      enabled: true
-    }
+    autoDelay: { enabled: true }
   },
   include: { I: './steps_file.js' },
   // bootstrap: null,
