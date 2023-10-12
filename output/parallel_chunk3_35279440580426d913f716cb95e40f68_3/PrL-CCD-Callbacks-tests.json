@@ -1,0 +1,408 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-12T10:56:03.469Z",
+    "end": "2023-10-12T11:35:20.853Z",
+    "duration": 2357384,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8e010a5-9a20-4490-9269-02e2dda65594",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+          "title": "Help with Fee in AWP - TS Solicitor application",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/SolicitorHWFinAWP_test.js",
+          "file": "/test/end-to-end/tests/SolicitorHWFinAWP_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee in AWP - TS Solicitor application\"",
+              "fullTitle": "Help with Fee in AWP - TS Solicitor application \"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee in AWP - TS Solicitor application\"",
+              "timedOut": false,
+              "duration": 635,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "3cac31ed-6820-49a1-93fc-844d10e7795a",
+              "parentUUID": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Help with Fee in AWP - TS Solicitor application\"",
+              "fullTitle": "Help with Fee in AWP - TS Solicitor application \"before each\" hook: codeceptjs.before in \"Help with Fee in AWP - TS Solicitor application\"",
+              "timedOut": false,
+              "duration": 670,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "b1cbaa08-a74e-407d-96b1-54a441e3398b",
+              "parentUUID": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Help with Fee in AWP - TS Solicitor application\"",
+              "fullTitle": "Help with Fee in AWP - TS Solicitor application \"after all\" hook: codeceptjs.afterSuite in \"Help with Fee in AWP - TS Solicitor application\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "91bc666d-22a5-4fd1-924a-cb71bf7a8e02",
+              "parentUUID": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Help with Fee in AWP - TS Solicitor application\"",
+              "fullTitle": "Help with Fee in AWP - TS Solicitor application \"after each\" hook: finalize codeceptjs in \"Help with Fee in AWP - TS Solicitor application\"",
+              "timedOut": false,
+              "duration": 15,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "e258e107-6a43-4465-82ec-350350331783",
+              "parentUUID": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Solicitor Help With Fee in AWP @nightly",
+              "fullTitle": "Help with Fee in AWP - TS Solicitor application Solicitor Help With Fee in AWP @nightly",
+              "timedOut": false,
+              "duration": 156641,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "recorder.errHandler((err) => {\n  recorder.session.start('teardown');\n  recorder.cleanAsyncErr();\n  if (test.throws) { // check that test should actually fail\n    try {\n      assertThrown(err, test.throws);\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done());\n      return;\n    } catch (newErr) {\n      err = newErr;\n    }\n  }\n  event.emit(event.test.failed, test, err);\n  event.emit(event.test.finished, test);\n  recorder.add(() => done(err));\n});\nif (isAsyncFunction(testFn)) {\n  event.emit(event.test.started, test);\n  const catchError = e => {\n    recorder.throw(e);\n    recorder.catch((e) => {\n      const err = (recorder.getAsyncErr() === null) ? e : recorder.getAsyncErr();\n      recorder.session.start('teardown');\n      recorder.cleanAsyncErr();\n      event.emit(event.test.failed, test, err);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done(err));\n    });\n  };\n  let injectedArguments;\n  try {\n    injectedArguments = getInjectedArguments(testFn, test);\n  } catch (e) {\n    catchError(e);\n    return;\n  }\n  testFn.call(test, injectedArguments).then(() => {\n    recorder.add('fire test.passed', () => {\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n    });\n    recorder.add('finish test', () => done());\n    recorder.catch();\n  }).catch(catchError);\n  return;\n}\ntry {\n  event.emit(event.test.started, test);\n  testFn.call(test, getInjectedArguments(testFn, test));\n} catch (err) {\n  recorder.throw(err);\n} finally {\n  recorder.add('fire test.passed', () => {\n    event.emit(event.test.passed, test);\n    event.emit(event.test.finished, test);\n  });\n  recorder.add('finish test', () => done());\n  recorder.catch();\n}",
+              "err": {},
+              "uuid": "eb157b02-230a-4f6c-85af-bb2e5fbe67d2",
+              "parentUUID": "0eb7dfe9-92a0-4ac4-863c-d157b4154c41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb157b02-230a-4f6c-85af-bb2e5fbe67d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 156641,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+          "title": "CA Submit and Pay",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/SubmitAndPayCA_test.js",
+          "file": "/test/end-to-end/tests/SubmitAndPayCA_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"CA Submit and Pay\"",
+              "fullTitle": "CA Submit and Pay \"before all\" hook: codeceptjs.beforeSuite in \"CA Submit and Pay\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "730505d9-6bc1-4a50-b9ca-4c140df0d570",
+              "parentUUID": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"CA Submit and Pay\"",
+              "fullTitle": "CA Submit and Pay \"before each\" hook: codeceptjs.before in \"CA Submit and Pay\"",
+              "timedOut": false,
+              "duration": 435,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "f5b0ffdb-b7a0-4117-b9d0-52a6d3176533",
+              "parentUUID": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"CA Submit and Pay\"",
+              "fullTitle": "CA Submit and Pay \"after all\" hook: codeceptjs.afterSuite in \"CA Submit and Pay\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "609c36e1-cdd5-4c5a-a6cb-a6c251083113",
+              "parentUUID": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"CA Submit and Pay\"",
+              "fullTitle": "CA Submit and Pay \"after each\" hook: finalize codeceptjs in \"CA Submit and Pay\"",
+              "timedOut": false,
+              "duration": 15,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "def7330e-1244-49ed-8615-65c018e6e5b7",
+              "parentUUID": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Create a Case and Submit/Pay @master @nightly",
+              "fullTitle": "CA Submit and Pay: Create a Case and Submit/Pay @master @nightly",
+              "timedOut": false,
+              "duration": 1066350,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  await I.loginAsSolicitor();\n  await I.createCase();\n  await I.typeOfApplicationEventC100();\n  await I.hearingUrgency();\n  await I.childDetails();\n  await I.applicantDetailsC100();\n  await I.respondentDetailsC100();\n  await I.otherPeopleInTheCase();\n  await I.runOtherChildDetailsEvent();\n  await I.runChildrenAndApplicant();\n  await I.runChildrenAndRespondent();\n  await I.runChildrenAndOtherPeople();\n  await I.allegationsOfHarmEvent();\n  await I.runMIAMEventHappyPath();\n  await I.otherProceedingsEventC100();\n  await I.runAttendingTheHearingEvent();\n  await I.internationalElement();\n  await I.litigationCapacity();\n  await I.welshLanguageRequirement();\n  await I.runSubmitAndPayHappyPath();",
+              "err": {},
+              "uuid": "bb485682-1932-4eee-a1c7-a94e5d97b4f2",
+              "parentUUID": "01a8fe47-f121-4bd7-9f01-dbd1f49a04cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb485682-1932-4eee-a1c7-a94e5d97b4f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1066350,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+          "title": "Submit and Pay - DO",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/SubmitAndPayDO_test.js",
+          "file": "/test/end-to-end/tests/SubmitAndPayDO_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Submit and Pay - DO\"",
+              "fullTitle": "Submit and Pay - DO \"before all\" hook: codeceptjs.beforeSuite in \"Submit and Pay - DO\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "1bda6b1e-673a-4e64-9091-e7072619ffbe",
+              "parentUUID": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Submit and Pay - DO\"",
+              "fullTitle": "Submit and Pay - DO \"before each\" hook: codeceptjs.before in \"Submit and Pay - DO\"",
+              "timedOut": false,
+              "duration": 261,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "a2279923-f0de-4f60-8a31-ee72cc4abd5e",
+              "parentUUID": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Submit and Pay - DO\"",
+              "fullTitle": "Submit and Pay - DO \"after all\" hook: codeceptjs.afterSuite in \"Submit and Pay - DO\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "b994f264-662b-4996-98d3-02dbc94fd6c9",
+              "parentUUID": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Submit and Pay - DO\"",
+              "fullTitle": "Submit and Pay - DO \"after each\" hook: finalize codeceptjs in \"Submit and Pay - DO\"",
+              "timedOut": false,
+              "duration": 8,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "0f53854b-3f2e-41ae-93f9-e334403a175a",
+              "parentUUID": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Submit and Pay - basic journey for FL401 Casetype @nightly",
+              "fullTitle": "Submit and Pay - DO Submit and Pay - basic journey for FL401 Casetype @nightly",
+              "timedOut": false,
+              "duration": 636270,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "recorder.errHandler((err) => {\n  recorder.session.start('teardown');\n  recorder.cleanAsyncErr();\n  if (test.throws) { // check that test should actually fail\n    try {\n      assertThrown(err, test.throws);\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done());\n      return;\n    } catch (newErr) {\n      err = newErr;\n    }\n  }\n  event.emit(event.test.failed, test, err);\n  event.emit(event.test.finished, test);\n  recorder.add(() => done(err));\n});\nif (isAsyncFunction(testFn)) {\n  event.emit(event.test.started, test);\n  const catchError = e => {\n    recorder.throw(e);\n    recorder.catch((e) => {\n      const err = (recorder.getAsyncErr() === null) ? e : recorder.getAsyncErr();\n      recorder.session.start('teardown');\n      recorder.cleanAsyncErr();\n      event.emit(event.test.failed, test, err);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done(err));\n    });\n  };\n  let injectedArguments;\n  try {\n    injectedArguments = getInjectedArguments(testFn, test);\n  } catch (e) {\n    catchError(e);\n    return;\n  }\n  testFn.call(test, injectedArguments).then(() => {\n    recorder.add('fire test.passed', () => {\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n    });\n    recorder.add('finish test', () => done());\n    recorder.catch();\n  }).catch(catchError);\n  return;\n}\ntry {\n  event.emit(event.test.started, test);\n  testFn.call(test, getInjectedArguments(testFn, test));\n} catch (err) {\n  recorder.throw(err);\n} finally {\n  recorder.add('fire test.passed', () => {\n    event.emit(event.test.passed, test);\n    event.emit(event.test.finished, test);\n  });\n  recorder.add('finish test', () => done());\n  recorder.catch();\n}",
+              "err": {},
+              "uuid": "f6188961-177a-41b7-941c-b20f678cf44a",
+              "parentUUID": "a8d67d48-e09f-4934-b8e5-47a99f378b55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6188961-177a-41b7-941c-b20f678cf44a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 636270,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "includeScreenshots": true,
+        "reportDir": "output/parallel_chunk3_35279440580426d913f716cb95e40f68_3",
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "reportTitle": "PrL CCD Callbacks Tests",
+        "inline": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

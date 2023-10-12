@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-12T10:56:03.466Z",
+    "end": "2023-10-12T10:58:19.348Z",
+    "duration": 135882,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2421a87-3c60-4720-bd3f-02ede115b50a",
+      "title": "",
+      "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/WithdrawApplicationAsASolicitor_test.js",
+      "file": "/test/end-to-end/tests/WithdrawApplicationAsASolicitor_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "000da925-fa5c-4c89-9f35-6653e023c577",
+          "title": "Withdraw application as a Solicitor",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/WithdrawApplicationAsASolicitor_test.js",
+          "file": "/test/end-to-end/tests/WithdrawApplicationAsASolicitor_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Withdraw application as a Solicitor\"",
+              "fullTitle": "Withdraw application as a Solicitor \"before all\" hook: codeceptjs.beforeSuite in \"Withdraw application as a Solicitor\"",
+              "timedOut": false,
+              "duration": 639,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "434d7c80-2cf8-496f-af53-00fbb35a4f54",
+              "parentUUID": "000da925-fa5c-4c89-9f35-6653e023c577",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Withdraw application as a Solicitor\"",
+              "fullTitle": "Withdraw application as a Solicitor \"before each\" hook: codeceptjs.before in \"Withdraw application as a Solicitor\"",
+              "timedOut": false,
+              "duration": 289,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "494329b5-9f56-45bc-bf8e-24a5dc2e9343",
+              "parentUUID": "000da925-fa5c-4c89-9f35-6653e023c577",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Withdraw application as a Solicitor\"",
+              "fullTitle": "Withdraw application as a Solicitor \"after all\" hook: codeceptjs.afterSuite in \"Withdraw application as a Solicitor\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "51ed2789-1223-4059-91ef-afd40ab2fddf",
+              "parentUUID": "000da925-fa5c-4c89-9f35-6653e023c577",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Withdraw application as a Solicitor\"",
+              "fullTitle": "Withdraw application as a Solicitor \"after each\" hook: finalize codeceptjs in \"Withdraw application as a Solicitor\"",
+              "timedOut": false,
+              "duration": 12,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "5ee44550-05f2-4633-be9e-34898a3e018a",
+              "parentUUID": "000da925-fa5c-4c89-9f35-6653e023c577",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Withdraw application as Solicitor @nightly",
+              "fullTitle": "Withdraw application as a Solicitor: Withdraw application as Solicitor @nightly",
+              "timedOut": false,
+              "duration": 134935,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n  await I.loginAsSolicitor();\n  await I.createSolicitorDummyCase();\n  await I.payAndSubmitDummySolicitorCase();\n  await I.solicitorWithdrawApplication();",
+              "err": {},
+              "uuid": "e521558f-bc5e-429e-b241-fd65aebce147",
+              "parentUUID": "000da925-fa5c-4c89-9f35-6653e023c577",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e521558f-bc5e-429e-b241-fd65aebce147"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 134935,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "includeScreenshots": true,
+        "reportDir": "output/parallel_chunk4_35279440580426d913f716cb95e40f68_4",
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "reportTitle": "PrL CCD Callbacks Tests",
+        "inline": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

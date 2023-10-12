@@ -1,0 +1,408 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-12T10:56:03.471Z",
+    "end": "2023-10-12T11:09:36.141Z",
+    "duration": 812670,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9d1aa81f-e830-46ea-87f2-0cf0638170e0",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+          "title": "Court Admin Create Dummy case - Create Order C21",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/ManageOrderC21_test.js",
+          "file": "/test/end-to-end/tests/ManageOrderC21_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Court Admin Create Dummy case - Create Order C21\"",
+              "fullTitle": "Court Admin Create Dummy case - Create Order C21 \"before all\" hook: codeceptjs.beforeSuite in \"Court Admin Create Dummy case - Create Order C21\"",
+              "timedOut": false,
+              "duration": 629,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "63ad884a-f952-4922-a670-a305f7086416",
+              "parentUUID": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Court Admin Create Dummy case - Create Order C21\"",
+              "fullTitle": "Court Admin Create Dummy case - Create Order C21 \"before each\" hook: codeceptjs.before in \"Court Admin Create Dummy case - Create Order C21\"",
+              "timedOut": false,
+              "duration": 329,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "af2a46fa-8e90-49d4-9f1b-9e6da585fa66",
+              "parentUUID": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Court Admin Create Dummy case - Create Order C21\"",
+              "fullTitle": "Court Admin Create Dummy case - Create Order C21 \"after all\" hook: codeceptjs.afterSuite in \"Court Admin Create Dummy case - Create Order C21\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "a414ea8c-fe25-4f83-9081-57d0d2d03b50",
+              "parentUUID": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Court Admin Create Dummy case - Create Order C21\"",
+              "fullTitle": "Court Admin Create Dummy case - Create Order C21 \"after each\" hook: finalize codeceptjs in \"Court Admin Create Dummy case - Create Order C21\"",
+              "timedOut": false,
+              "duration": 26,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "e6a9a52d-3d3d-46f6-b3e7-5d5bc3449797",
+              "parentUUID": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Create Order C21 @nightly",
+              "fullTitle": "Court Admin Create Dummy case - Create Order C21 Create Order C21 @nightly",
+              "timedOut": false,
+              "duration": 199798,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "recorder.errHandler((err) => {\n  recorder.session.start('teardown');\n  recorder.cleanAsyncErr();\n  if (test.throws) { // check that test should actually fail\n    try {\n      assertThrown(err, test.throws);\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done());\n      return;\n    } catch (newErr) {\n      err = newErr;\n    }\n  }\n  event.emit(event.test.failed, test, err);\n  event.emit(event.test.finished, test);\n  recorder.add(() => done(err));\n});\nif (isAsyncFunction(testFn)) {\n  event.emit(event.test.started, test);\n  const catchError = e => {\n    recorder.throw(e);\n    recorder.catch((e) => {\n      const err = (recorder.getAsyncErr() === null) ? e : recorder.getAsyncErr();\n      recorder.session.start('teardown');\n      recorder.cleanAsyncErr();\n      event.emit(event.test.failed, test, err);\n      event.emit(event.test.finished, test);\n      recorder.add(() => done(err));\n    });\n  };\n  let injectedArguments;\n  try {\n    injectedArguments = getInjectedArguments(testFn, test);\n  } catch (e) {\n    catchError(e);\n    return;\n  }\n  testFn.call(test, injectedArguments).then(() => {\n    recorder.add('fire test.passed', () => {\n      event.emit(event.test.passed, test);\n      event.emit(event.test.finished, test);\n    });\n    recorder.add('finish test', () => done());\n    recorder.catch();\n  }).catch(catchError);\n  return;\n}\ntry {\n  event.emit(event.test.started, test);\n  testFn.call(test, getInjectedArguments(testFn, test));\n} catch (err) {\n  recorder.throw(err);\n} finally {\n  recorder.add('fire test.passed', () => {\n    event.emit(event.test.passed, test);\n    event.emit(event.test.finished, test);\n  });\n  recorder.add('finish test', () => done());\n  recorder.catch();\n}",
+              "err": {},
+              "uuid": "cbb9972c-a48d-4b40-a35e-675e2fcd3dea",
+              "parentUUID": "0254fd02-6beb-49c7-ac98-797eb94d9771",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cbb9972c-a48d-4b40-a35e-675e2fcd3dea"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 199798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "04b47be8-b585-43e7-98d3-d3f203033169",
+          "title": "Help with Fee - Solicitor - CA Submit and Pay - TS",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/SolicitorHelpWithFeeSubmitAndPayCA_TS_test.js",
+          "file": "/test/end-to-end/tests/SolicitorHelpWithFeeSubmitAndPayCA_TS_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit and Pay - TS \"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "c4a78b91-8b44-4b00-91c7-9b1705088884",
+              "parentUUID": "04b47be8-b585-43e7-98d3-d3f203033169",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit and Pay - TS \"before each\" hook: codeceptjs.before in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "timedOut": false,
+              "duration": 639,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "0056f8ff-158e-4875-9e49-92e1247e1c2b",
+              "parentUUID": "04b47be8-b585-43e7-98d3-d3f203033169",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit and Pay - TS \"after all\" hook: codeceptjs.afterSuite in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "648bf070-d17c-45c4-b97b-2da2eb688d50",
+              "parentUUID": "04b47be8-b585-43e7-98d3-d3f203033169",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit and Pay - TS \"after each\" hook: finalize codeceptjs in \"Help with Fee - Solicitor - CA Submit and Pay - TS\"",
+              "timedOut": false,
+              "duration": 7,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "040e2735-7828-4e2e-8320-17dd83522d0c",
+              "parentUUID": "04b47be8-b585-43e7-98d3-d3f203033169",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Solicitor Help With Fee - No option- Create CA Submit and Pay-TS @nightly",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit and Pay - TS: Solicitor Help With Fee - No option- Create CA Submit and Pay-TS @nightly",
+              "timedOut": false,
+              "duration": 86510,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n    await I.loginAsSolicitor();\n    await I.createCase_TS();\n    await I.runSubmitAndPayHappyPath();",
+              "err": {},
+              "uuid": "6bd49f2c-e2ba-45ab-b8ed-c1e98f512f8e",
+              "parentUUID": "04b47be8-b585-43e7-98d3-d3f203033169",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6bd49f2c-e2ba-45ab-b8ed-c1e98f512f8e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 86510,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+          "title": "Help with Fee - Solicitor - CA Submit - Error message",
+          "fullFile": "/Users/rentaluser/Desktop/prl-project/prl-ccd-definitions/test/end-to-end/tests/SolicitorHelpWithFeeYESErrorMsg_test.js",
+          "file": "/test/end-to-end/tests/SolicitorHelpWithFeeYESErrorMsg_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit - Error message \"before all\" hook: codeceptjs.beforeSuite in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteSetup(suite)",
+              "err": {},
+              "uuid": "953f7821-95e7-44f5-b6b4-833e05091e75",
+              "parentUUID": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook: codeceptjs.before in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit - Error message \"before each\" hook: codeceptjs.before in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "timedOut": false,
+              "duration": 286,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.setup(suite)",
+              "err": {},
+              "uuid": "9fbd269a-f044-4e64-80de-1f92c060135c",
+              "parentUUID": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: codeceptjs.afterSuite in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit - Error message \"after all\" hook: codeceptjs.afterSuite in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.suiteTeardown(suite)",
+              "err": {},
+              "uuid": "6d02f299-60d0-40d6-8198-6bcde50f6dd1",
+              "parentUUID": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook: finalize codeceptjs in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit - Error message \"after each\" hook: finalize codeceptjs in \"Help with Fee - Solicitor - CA Submit - Error message\"",
+              "timedOut": false,
+              "duration": 9,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "scenario.teardown(suite)",
+              "err": {},
+              "uuid": "575c2621-2755-415a-9a4e-2c9b6dc59338",
+              "parentUUID": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Solicitor Help With Fee - YES option - Create CA Submit -  Error message @nightly",
+              "fullTitle": "Help with Fee - Solicitor - CA Submit - Error message: Solicitor Help With Fee - YES option - Create CA Submit -  Error message @nightly",
+              "timedOut": false,
+              "duration": 59627,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "I }) => {\n    await I.loginAsSolicitor();\n    await I.createCase_TS();\n    await I.runSubmitAndPayHappyPath_HWF_Yes();",
+              "err": {},
+              "uuid": "1b90f038-2537-4698-ae29-a8cdc8f9bcdf",
+              "parentUUID": "9a29808c-1f4d-4eb5-a455-3d5cf05ecf7b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b90f038-2537-4698-ae29-a8cdc8f9bcdf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 59627,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "includeScreenshots": true,
+        "reportDir": "output/parallel_chunk2_35279440580426d913f716cb95e40f68_2",
+        "reportFilename": "PrL-CCD-Callbacks-tests",
+        "reportTitle": "PrL CCD Callbacks Tests",
+        "inline": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
