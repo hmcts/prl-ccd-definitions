@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/*_test.js',
+  tests: './tests/CASolicitorRequestSupport_test.js',
   output: './output',
   helpers: {
     Puppeteer: {

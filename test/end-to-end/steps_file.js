@@ -35,6 +35,7 @@ const UploadAdditionalApplications = require('./pages/UploadAdditionalApplicatio
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const solicitorReasonableAdjustment = require('./pages/SolicitorReasonableAdjustment')
 
 
 module.exports = () => {
@@ -62,6 +63,9 @@ module.exports = () => {
     },
     createCase_TS() {
       return CreateCasePage.createNewCaseC100_TS();
+    },
+    createNewSolicitorDummyFL401Case() {
+      return CreateCasePage.createNewSolicitorDummyFL401Case();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -233,6 +237,12 @@ module.exports = () => {
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    selectRA() {
+      return solicitorReasonableAdjustment.selectRA();
+    },
+    verifyRequestSupportLinkAppear() {
+      return solicitorReasonableAdjustment.verifyRequestSupportLinkAppear();
     }
   });
 };
