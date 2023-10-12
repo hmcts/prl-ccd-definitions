@@ -4,7 +4,7 @@ exports.config = {
   helpers: {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
-      // show: true,
+      // show: false,
       url: 'http://localhost:3000',
       waitForTimeout: 60000,
       getPageTimeout: 60000,
@@ -25,6 +25,9 @@ exports.config = {
       enabled: true,
       retries: 2,
       minTimeout: 2000
+    },
+    autoDelay: {
+      enabled: true
     }
   },
   include: { I: './steps_file.js' },
@@ -40,10 +43,10 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: './functional-output/console.log',
+        stdout: './output/console.log',
         options: {
           includeScreenshots: true,
-          reportDir: './functional-output',
+          reportDir: './output',
           reportFilename: 'PrL-CCD-Callbacks-tests',
           reportTitle: 'PrL CCD Callbacks Tests',
           inline: true,
@@ -55,7 +58,7 @@ exports.config = {
   },
   multiple: {
     parallel: {
-      chunks: 2,
+      chunks: 4,
       browsers: ['chrome']
     }
   },
