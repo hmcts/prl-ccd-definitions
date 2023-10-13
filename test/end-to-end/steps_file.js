@@ -238,8 +238,14 @@ module.exports = () => {
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
     },
-    selectRA() {
-      return solicitorReasonableAdjustment.selectRA();
+    raiseSupportRequestForDocInAlternateType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateType();
+    },
+    raiseSupportRequestForOtherType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForOtherType();
+    },
+    raiseSupportRequestForGetIntoInandAroundBuilding() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
     },
     verifyRequestSupportLinkAppear() {
       return solicitorReasonableAdjustment.verifyRequestSupportLinkAppear();
