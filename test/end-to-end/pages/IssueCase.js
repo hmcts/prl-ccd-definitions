@@ -29,7 +29,7 @@ module.exports = {
     await I.waitForElement(this.fields.issueTaskName);
     await I.retry(retryCount).click(this.fields.issueTaskName);
 
-    await I.waitForElement(this.fields.courtListDropdown, medWait);
+    await I.waitForElement(this.fields.courtListDropdown, longWait);
     await I.selectOption(this.fields.courtListDropdown, 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('3');
