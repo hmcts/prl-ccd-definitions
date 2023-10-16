@@ -10,11 +10,8 @@ module.exports = {
   },
 
   async triggerWithDrawApplicationEvent() {
-    await I.wait('4');
     await I.retry(retryCount).waitForText('Submitted');
-    await I.wait('4');
     await I.retry(retryCount).triggerEvent('Withdraw application');
-    await I.wait('4');
   },
   async confirmWithdrawApplication() {
     await I.wait('4');
