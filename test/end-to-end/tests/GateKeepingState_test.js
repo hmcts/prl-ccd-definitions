@@ -1,5 +1,6 @@
-Feature('Move case to Gatekeeping State');
+const testConfig = require('../config');
 
+Feature('Move case to Gatekeeping State');
 Scenario('Move case to Gatekeeping State @nightly', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
@@ -8,4 +9,4 @@ Scenario('Move case to Gatekeeping State @nightly', async({ I }) => {
   await I.searchForCasesWithId(caseId);
   await I.issueCase();
   await I.moveCaseToGateKeeping();
-}).retry(1);
+}).retry(testConfig.TestRetryScenarios);

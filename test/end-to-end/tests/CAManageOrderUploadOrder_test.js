@@ -1,5 +1,6 @@
-Feature('CA Manage Order Upload Order - TS Court Admin');
+const testConfig = require('../config');
 
+Feature('CA Manage Order Upload Order - TS Court Admin');
 Scenario(
   'CA Manage Order Upload Order Serve order Personally @nightly',
   async({ I }) => {
@@ -7,7 +8,7 @@ Scenario(
     await I.createC100CaseByCourtAdmin();
     await I.manageOrderUploadOrderServeNowPersonally();
   }
-).retry(1);
+).retry(testConfig.TestRetryScenarios);
 
 Scenario(
   'CA Manage Order Upload Order - For Judge review - @nightly',
@@ -16,4 +17,4 @@ Scenario(
     await I.createC100CaseByCourtAdmin();
     await I.manageOrderUploadOrderForJudgeReview();
   }
-).retry(1);
+).retry(testConfig.TestRetryScenarios);
