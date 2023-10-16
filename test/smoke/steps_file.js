@@ -1,7 +1,5 @@
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
-const generalHelper = require('./helpers/generalHelper');
-
 const caseList = require('./pages/CaseList');
 
 module.exports = () => {
@@ -23,9 +21,6 @@ module.exports = () => {
     },
     navigateToCaseList() {
       return caseList.navigate();
-    },
-    triggerEvent(eventName) {
-      return generalHelper.triggerEvent(eventName);
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
