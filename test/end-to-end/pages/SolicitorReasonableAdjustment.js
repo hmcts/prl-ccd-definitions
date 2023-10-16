@@ -12,7 +12,11 @@ module.exports = {
     raTypeOtherTextbox: '#other-flag-type-description',
     raSubType: '#flag-type-0',
     docAlternateFormatType: '#flag-type-0',
-    moreAboutTextbox: '#flagComments'
+    moreAboutTextbox: '#flagComments',
+    moreAboutRATextDocInAlternateFormat: 'I need documents in an alternative format',
+    moreAboutRATextOther: 'Other',
+    moreAboutRATextInAndAroundBuilding: 'I need adjustments to get to, into and around our buildings',
+    tabLocator: '//*[@role="tab"]/div[text() = '
   },
   async raiseSupportRequestForDocInAlternateType() {
     await I.retry(retryCount)
@@ -20,6 +24,13 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).waitForText('Who is the support for?');
     await this.selectRADocInAlternateType();
+  },
+  async raiseSupportRequestForDocInAlternateTypeDA() {
+    await I.retry(retryCount)
+      .triggerEvent('Request support');
+    await I.wait('2');
+    await I.retry(retryCount).waitForText('Who is the support for?');
+    await this.selectRADocInAlternateTypeDA();
   },
   async raiseSupportRequestForOtherType() {
     await I.retry(retryCount)
@@ -29,7 +40,6 @@ module.exports = {
     await this.selectRAOther();
   },
   async raiseSupportRequestForGetIntoInandAroundBuilding() {
-    await this.checkDetailsInSupportTab();
     await I.retry(retryCount)
       .triggerEvent('Request support');
     await I.wait('2');
@@ -39,13 +49,26 @@ module.exports = {
   async selectRADocInAlternateType() {
     const partyEle = this.fields.partyNameRadio.concat(`${0}`);
     const raEle = this.fields.reasonableAdjustmentRadio.concat(`${0}`);
-    const raSubTypeEle  = this.fields.reasonableAdjustmentRadio.concat(`${0}`);
+    const raSubTypeEle = this.fields.reasonableAdjustmentRadio.concat(`${0}`);
     await this.selectPartySupportFor(partyEle);
     await this.selectSupportType();
     await this.selectReasonableAdjustment(raEle);
     await this.selectReasonableAdjustmentSubType(raSubTypeEle);
-    await this.enterTellUsMore();
+    await this.enterTellUsMore(this.fields.moreAboutRATextDocInAlternateFormat);
     await this.checkYourAnswer();
+    await this.checkDetailsInSupportTab(this.fields.moreAboutRATextDocInAlternateFormat);
+  },
+  async selectRADocInAlternateTypeDA() {
+    const partyEle = this.fields.partyNameRadio.concat(`${0}`);
+    const raEle = this.fields.reasonableAdjustmentRadio.concat(`${0}`);
+    const raSubTypeEle = this.fields.reasonableAdjustmentRadio.concat(`${0}`);
+    await this.selectPartySupportForDA(partyEle);
+    await this.selectSupportType();
+    await this.selectReasonableAdjustment(raEle);
+    await this.selectReasonableAdjustmentSubType(raSubTypeEle);
+    await this.enterTellUsMore(this.fields.moreAboutRATextDocInAlternateFormat);
+    await this.checkYourAnswer();
+    await this.checkDetailsInSupportTab(this.fields.moreAboutRATextDocInAlternateFormat);
   },
   async selectRAOther() {
     // eslint-disable-next-line no-magic-numbers
@@ -55,8 +78,9 @@ module.exports = {
     await this.selectPartySupportFor(partyEle);
     await this.selectSupportType();
     await this.selectReasonableAdjustment(raEle);
-    await this.enterTellUsMore();
+    await this.enterTellUsMore(this.fields.moreAboutRATextOther);
     await this.checkYourAnswer();
+    await this.checkDetailsInSupportTab(this.fields.moreAboutRATextOther);
   },
   async selectRAGetIntoInandAroundBuilding() {
     // eslint-disable-next-line no-magic-numbers
@@ -68,10 +92,11 @@ module.exports = {
     await this.selectSupportType();
     await this.selectReasonableAdjustment(raEle);
     await this.selectReasonableAdjustmentSubType(raSubTypeEle);
-    await this.enterTellUsMore();
+    await this.enterTellUsMore(this.fields.moreAboutRATextInAndAroundBuilding);
     await this.checkYourAnswer();
+    await this.checkDetailsInSupportTab(this.fields.moreAboutRATextInAndAroundBuilding);
   },
-  async verifyRequestSupportLinkAppear() {
+  async verifyRequestSupportLinkAppearUnderAdditionalInfo() {
     await I.wait('3');
     await I.retry(retryCount).waitForElement(this.fields.requestSupportLink);
   },
@@ -84,17 +109,31 @@ module.exports = {
     await I.retry(retryCount).click('Next');
     await I.wait('5');
   },
+  async selectPartySupportForDA(partID) {
+    await I.waitForText('Who is the support for?');
+    await this.verifyListOfPartiesDA();
+    await I.wait('5');
+    await I.retry(retryCount).click(partID);
+    await I.wait('1');
+    await I.retry(retryCount).click('Next');
+    await I.wait('5');
+  },
   async verifyListOfParties() {
     await I.waitForText('Mary Richards (Respondent)');
     await I.waitForText('Elise Lynn (Respondent)');
     await I.waitForText('David Carman (Respondent)');
     await I.waitForText('John Doe (Applicant)');
+    await I.waitForText('Legal Solicitor');
     await I.waitForText('Jeremy Anderson (Applicant)');
+    await I.waitForText('Legal Solicitor Jr');
     await I.waitForText('Martina Graham (Applicant)');
-    // await I.waitForText('');
-    // await I.waitForText('');
-    // await I.waitForText('');
-
+    await I.waitForText('Sr Legal Solicitor');
+    await I.waitForText('Sam Nolan');
+  },
+  async verifyListOfPartiesDA() {
+    await I.waitForText('Elise Lynn (Respondent)');
+    await I.waitForText('John Smith (Applicant)');
+    await I.waitForText('Legal Solicitor');
   },
   async selectSupportType() {
     await I.waitForText('Select support type');
@@ -123,10 +162,14 @@ module.exports = {
     await I.retry(retryCount).click('Next');
     await I.wait('5');
   },
-  async enterTellUsMore() {
-    await I.waitForText('Tell us more about the request (optional)');
+  async enterTellUsMore(aboutRARequest) {
+    if (aboutRARequest === 'Other') {
+      await I.waitForText('Tell us more about the request');
+    } else {
+      await I.waitForText('Tell us more about the request (optional)');
+    }
     await I.wait('2');
-    await I.retry(retryCount).fillField(this.fields.moreAboutTextbox, 'MORE ABOUT THE RA REQUEST');
+    await I.retry(retryCount).fillField(this.fields.moreAboutTextbox, 'MORE ABOUT THE RA REQUEST - '.concat(aboutRARequest));
     await I.wait('3');
     await I.retry(retryCount).click('Next');
     await I.wait('5');
@@ -137,12 +180,14 @@ module.exports = {
     await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
-  async checkDetailsInSupportTab() {
+  async checkDetailsInSupportTab(moreAboutText) {
     await I.wait('3');
     const tab = 'Support';
-    const tabSelector = `//*[@role="tab"]/div[text() = "${tab}"]`;
+    // const postcodeInputLocator = `//input[@id="${locator}_postcodeInput"]`;
+    // const tabSelector = `//*[@role="tab"]/div[text() = "${tab}"]`;
+    const tabSelector = this.fields.tabLocator.concat(` "${tab}"]`);
     await I.retry(retryCount).click(tabSelector);
-    await I.waitForText('MORE ABOUT THE RA REQUEST');
+    await I.waitForText(moreAboutText);
     await I.wait('2');
   }
 

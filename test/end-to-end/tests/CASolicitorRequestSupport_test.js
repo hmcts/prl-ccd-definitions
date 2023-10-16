@@ -5,7 +5,7 @@ Scenario(
   async({ I }) => {
     await I.loginAsSolicitor();
     await I.createCase_TS();
-    await I.verifyRequestSupportLinkAppear();
+    await I.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     await I.raiseSupportRequestForDocInAlternateType();
   }
 ).retry(1);
@@ -15,7 +15,7 @@ Scenario(
   async({ I }) => {
     await I.loginAsSolicitor();
     await I.createCase_TS();
-    await I.verifyRequestSupportLinkAppear();
+    await I.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     await I.runSubmitAndPayHappyPath();
     await I.raiseSupportRequestForOtherType();
   }
@@ -26,7 +26,7 @@ Scenario(
   async({ I }) => {
     await I.loginAsSolicitor();
     await I.createCase_TS();
-    await I.verifyRequestSupportLinkAppear();
+    await I.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     await I.runSubmitAndPayHappyPath();
     await I.raiseSupportRequestForGetIntoInandAroundBuilding();
   }
@@ -37,7 +37,7 @@ Scenario(
   async({ I }) => {
     await I.loginAsSolicitor();
     await I.createNewSolicitorDummyFL401Case();
-    await I.verifyRequestSupportLinkAppear();
-    await I.raiseSupportRequestForDocInAlternateType();
+    await I.verifyRequestSupportLinkAppearUnderAdditionalInfo();
+    await I.raiseSupportRequestForDocInAlternateTypeDA();
   }
 ).retry(1);

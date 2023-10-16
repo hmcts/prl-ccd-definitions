@@ -241,6 +241,9 @@ module.exports = () => {
     raiseSupportRequestForDocInAlternateType() {
       return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateType();
     },
+    raiseSupportRequestForDocInAlternateTypeDA() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateTypeDA();
+    },
     raiseSupportRequestForOtherType() {
       return solicitorReasonableAdjustment.raiseSupportRequestForOtherType();
     },
@@ -248,7 +251,7 @@ module.exports = () => {
       return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
     },
     verifyRequestSupportLinkAppear() {
-      return solicitorReasonableAdjustment.verifyRequestSupportLinkAppear();
+      return solicitorReasonableAdjustment.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     }
   });
 };
