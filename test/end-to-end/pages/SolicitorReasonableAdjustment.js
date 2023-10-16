@@ -183,8 +183,6 @@ module.exports = {
   async checkDetailsInSupportTab(moreAboutText) {
     await I.wait('3');
     const tab = 'Support';
-    // const postcodeInputLocator = `//input[@id="${locator}_postcodeInput"]`;
-    // const tabSelector = `//*[@role="tab"]/div[text() = "${tab}"]`;
     const tabSelector = this.fields.tabLocator.concat(` "${tab}"]`);
     await I.retry(retryCount).click(tabSelector);
     await I.waitForText(moreAboutText);

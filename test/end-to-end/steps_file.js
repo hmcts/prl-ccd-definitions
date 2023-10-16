@@ -250,7 +250,7 @@ module.exports = () => {
     raiseSupportRequestForGetIntoInandAroundBuilding() {
       return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
     },
-    verifyRequestSupportLinkAppear() {
+    verifyRequestSupportLinkAppearUnderAdditionalInfo() {
       return solicitorReasonableAdjustment.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     }
   });
