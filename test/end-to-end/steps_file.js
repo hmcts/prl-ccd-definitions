@@ -2,6 +2,7 @@ const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
+const UploadFLDocuments = require('./pages/UploadFLDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const Miam = require('./pages/Miam.js');
@@ -17,6 +18,7 @@ const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
+const statementOfTruth = require('./pages/StatementOfTruth');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
@@ -90,6 +92,9 @@ module.exports = () => {
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
     },
+    uploadFLDocuments() {
+      return UploadFLDocuments.uploadFLDocuments();
+    },
     typeOfApplicationEventC100() {
       return TypeOfApplicationEvent.typeOfApplicationEventC100();
     },
@@ -155,6 +160,9 @@ module.exports = () => {
     },
     viewPDFApplicationEvent() {
       return viewPDFApplication.runViewPDFApplicationEvent();
+    },
+    statementOfTruthEvent() {
+      return statementOfTruth.runStatementOfTruthEvent();
     },
     runManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();

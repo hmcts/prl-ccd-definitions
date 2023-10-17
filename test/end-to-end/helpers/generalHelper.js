@@ -13,7 +13,7 @@ const fields = {
 class GeneralHelper extends Helper {
   async addNewDocument(field) {
     const { Playwright } = this.helpers;
-    await Playwright.click('Add new', { css: `#${field}>div>button` });
+    await Playwright.click('Add new');
     await Playwright.attachFile(`input[id="${field}_value"]`, '../resource/dummy.pdf');
   }
 
