@@ -1,8 +1,9 @@
-Feature('Submit and Pay - DO');
+const testConfig = require('../config');
 
+Feature('Submit and Pay - DO');
 Scenario(
   'Submit and Pay - basic journey for FL401 Casetype @nightly',
-  async I => {
+  async({ I }) => {
     await I.loginAsSolicitor();
     await I.createCaseFL401();
     await I.typeOfApplicationEventFL401();
@@ -14,4 +15,4 @@ Scenario(
     await I.runRespondentBehaviour();
     await I.runTheHomeHappyPath();
   }
-).retry({ retries: 3, minTimeout: 30000 });
+).retry(testConfig.TestRetryScenarios);
