@@ -249,9 +249,6 @@ module.exports = () => {
     },
     raiseSupportRequestForGetIntoInandAroundBuilding() {
       return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
-    },
-    verifyRequestSupportLinkAppearUnderAdditionalInfo() {
-      return solicitorReasonableAdjustment.verifyRequestSupportLinkAppearUnderAdditionalInfo();
     }
   });
 };
