@@ -5,7 +5,7 @@
     "CaseEventID": "c100CreateFlags",
     "CaseFieldID": "flagLauncher",
     "DisplayContext": "MANDATORY",
-    "DisplayContextParameter": "#ARGUMENT(CREATE,EXTERNAL)",
+    "DisplayContextParameter": "#ARGUMENT(CREATE)",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -332,6 +332,19 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 26,
+    "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100CreateFlags",
+    "CaseFieldID": "caseFlags",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 27,
     "FieldShowCondition": "flagLauncher=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
     "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "Yes"
