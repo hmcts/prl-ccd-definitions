@@ -3,17 +3,17 @@ const retryCount = 3;
 
 module.exports = {
 
-  fields: { 
-      submit: 'button[type="submit"]',
-      flTruthConsent: '#fl401StmtOfTruth_applicantConsent-fl401Consent',
-      dobDay: '#date-day',
-      dobMonth: '#date-month',
-      dobYear: '#date-year',
-      fname: '#fl401StmtOfTruth_fullname',
-      firmName: '#fl401StmtOfTruth_nameOfFirm',
-      signName: '#fl401StmtOfTruth_signOnBehalf',
-      confidentialConsent: '#fl401ConfidentialityCheck_confidentialityConsent',
-      selectCourt: 'select[id="submitCountyCourtSelection"]'
+  fields: {
+    submit: 'button[type="submit"]',
+    flTruthConsent: '#fl401StmtOfTruth_applicantConsent-fl401Consent',
+    dobDay: '#date-day',
+    dobMonth: '#date-month',
+    dobYear: '#date-year',
+    fname: '#fl401StmtOfTruth_fullname',
+    firmName: '#fl401StmtOfTruth_nameOfFirm',
+    signName: '#fl401StmtOfTruth_signOnBehalf',
+    confidentialConsent: '#fl401ConfidentialityCheck_confidentialityConsent',
+    selectCourt: 'select[id="submitCountyCourtSelection"]'
   },
 
   async triggerEvent() {
@@ -32,10 +32,10 @@ module.exports = {
   },
 
   async selectConfidentialConsent() {
-      await I.click(this.fields.confidentialConsent);
-      await I.click('Continue');
-      await I.selectOption(this.fields.selectCourt, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
-      await I.click('Submit');
+    await I.click(this.fields.confidentialConsent);
+    await I.click('Continue');
+    await I.selectOption(this.fields.selectCourt, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
+    await I.click('Submit');
   },
 
   async runStatementOfTruthEvent() {
