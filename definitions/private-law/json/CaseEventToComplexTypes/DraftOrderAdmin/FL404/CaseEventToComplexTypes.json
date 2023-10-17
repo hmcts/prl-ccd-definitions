@@ -280,7 +280,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddressAppliedFor.AddressLine1",
     "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "orderType=\"occupation\""
   },
   {
@@ -335,7 +335,7 @@
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddressAppliedFor.PostCode",
     "FieldDisplayOrder": "30",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "orderType=\"occupation\""
   },
   {
@@ -404,7 +404,7 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bAddressOfProperty",
-    "EventElementLabel": "Add address of the property",
+    "EventElementLabel": "Add the address of the property",
     "FieldDisplayOrder": "36",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "orderType=\"nonMolestation\" AND fl404CustomFields.fl404bMentionedProperty=\"Yes\""
@@ -646,7 +646,7 @@
     "ListElementCode": "orderEndDateAndTimeOptions",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "56",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "orderType=\"nonMolestation\""
   },
   {
@@ -827,7 +827,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "71",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
+    "FieldShowCondition": "  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -851,7 +851,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "73",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"mustNotOccupyAddress\""
+    "FieldShowCondition": "  fl404CustomFields.fl404bRespondentMustNotOccupyAddress=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1031,7 +1031,7 @@
     "EventElementLabel": "Time",
     "FieldDisplayOrder": "88",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "orderType=\"powerOfArrest\" OR orderType=\"occupation\""
+    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
