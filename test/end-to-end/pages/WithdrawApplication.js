@@ -10,13 +10,10 @@ module.exports = {
   },
 
   async triggerWithDrawApplicationEvent() {
-    await I.wait('4');
     await I.retry(retryCount).waitForText('Submitted');
-    await I.wait('4');
     await I.retry(retryCount).triggerEvent('Withdraw application');
-    await I.wait('4');
-    },
-  async confirmWithdrawApplication(){
+  },
+  async confirmWithdrawApplication() {
     await I.wait('4');
     await I.retry(retryCount).click(this.fields.withdrawApplicationConfirmYes);
     await I.retry(retryCount).fillField(this.fields.withdrawApplicationConfirmReason, this.fields.textareaText);
@@ -30,9 +27,9 @@ module.exports = {
     await I.retry(retryCount).see('Withdrawn');
   },
 
-  async solicitorWithdrawApplicationFlow(){
+  async solicitorWithdrawApplicationFlow() {
     await this.triggerWithDrawApplicationEvent();
     await this.confirmWithdrawApplication();
   }
 
- };
+};
