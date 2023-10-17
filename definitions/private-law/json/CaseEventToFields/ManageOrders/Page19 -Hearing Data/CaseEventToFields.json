@@ -8,8 +8,9 @@
     "PageID": 19,
     "PageDisplayOrder": 19,
     "PageFieldDisplayOrder": 1,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
     "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\"",
-    "PageShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR c21OrderOptions=\"c21other\" OR createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"noticeOfProceedings\""
+    "PageShowCondition": "createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR c21OrderOptions=\"c21other\" OR createSelectOrderOptions=\"noticeOfProceedings\" OR createSelectOrderOptions=\"blank\""
   },
   {
     "LiveFrom": "22/10/2022",
@@ -380,6 +381,7 @@
     "PageID": 19,
     "PageDisplayOrder": 19,
     "PageFieldDisplayOrder": 10,
+    "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/validate-populate-hearing-data"
   }
 ]

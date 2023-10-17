@@ -16,6 +16,13 @@ def secrets = [
                 secret('microservicekey-ccd-ps', 'PRINT_S2S_KEY'),
                 secret('microservicekey-ccd-admin', 'ADMIN_S2S_KEY')
         ],
+        'prl-${env}'      : [
+                secret('legalprofessional-testuser-one', 'LEGALPROFESSIONAL_TESTUSER_ONE'),
+                secret('legalprofessional-testpassword-one', 'LEGALPROFESSIONAL_TESTPASSWORD_ONE'),
+                secret('courtadmin-testuser-one', 'COURTADMIN_TESTUSER_ONE'),
+                secret('judge-testuser-one', 'JUDGE_TESTUSER_ONE'),
+                secret('judge-testpassword', 'JUDGE_TESTPASSWORD')
+        ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
                 secret('ccd-api-gateway-oauth2-client-secret', 'API_GATEWAY_IDAM_SECRET'),
@@ -49,16 +56,7 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  afterAlways('test') {
-    // enable yarn audit and send message on master branch only
-    try {
-      yarnBuilder.yarn('audit')
-    } catch (error) {
-      onMaster {
-        slackSend(channel: '#prl-tech-notifications', color: 'warning', message: "Yarn Audit has detected vulnerabilities in ${env.JOB_NAME}. You can check if there are patches for them in the full report, build details here: <${env.RUN_DISPLAY_URL}|Build ${env.BUILD_DISPLAY_NAME}>.")
-      }
-    }
-  }
+  afterAlways('test') {}
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
