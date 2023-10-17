@@ -17,7 +17,7 @@ module.exports = {
     await I.triggerEvent('Child details');
   },
   async fillChildrenPage() {
-    await I.waitForText('Child details', '5');
+    await I.waitForText('Child details', '10');
     await I.retry(retryCount).click('Add new');
     await I.retry(retryCount).fillField(this.fields.child1FirstName, 'Test Firstname1');
     await I.retry(retryCount).fillField(this.fields.child1LastName, 'Test Lastname1');
