@@ -238,11 +238,17 @@ module.exports = () => {
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
     },
-    selectRA() {
-      return solicitorReasonableAdjustment.selectRA();
+    raiseSupportRequestForDocInAlternateType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateType();
     },
-    verifyRequestSupportLinkAppear() {
-      return solicitorReasonableAdjustment.verifyRequestSupportLinkAppear();
+    raiseSupportRequestForDocInAlternateTypeDA() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateTypeDA();
+    },
+    raiseSupportRequestForOtherType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForOtherType();
+    },
+    raiseSupportRequestForGetIntoInandAroundBuilding() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
     }
   });
 };
