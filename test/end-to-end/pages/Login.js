@@ -28,7 +28,7 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('10');
+    // await I.wait('10');
   },
   async loginAsCourtAdmin() {
     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -44,7 +44,7 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('10');
+    // await I.wait('10');
   },
   async loginAsJudge() {
     await I.wait('10');
@@ -100,6 +100,19 @@ module.exports = {
     } catch {
       await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
+    }
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('10');
+  },
+
+  async loginAsSolicitorNoCookiesDisplayed() {
+    try {
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
