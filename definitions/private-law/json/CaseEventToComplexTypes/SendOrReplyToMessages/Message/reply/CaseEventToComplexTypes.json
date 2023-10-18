@@ -54,10 +54,32 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "messageContent",
-    "EventElementLabel": "Your message",
-    "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
+    "ListElementCode": "yourMessageLabel",
+    "EventElementLabel": "**Your message**",
     "FieldDisplayOrder": "5",
+    "DisplayContext": "READONLY"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "submittedDocumentsList",
+    "EventElementLabel": "Add document",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "messageContent",
+    "EventElementLabel": "Enter your message",
+    "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
   }
 ]
