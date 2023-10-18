@@ -1,15 +1,5 @@
 [
   {
-    "LiveFrom": "31/03/2023",
-    "ID": "ReplyDocument",
-    "ListElementCode": "submittedDocsRefList",
-    "ElementLabel": "Document",
-    "HintText": "Select the document",
-    "FieldType": "DynamicList",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
     "LiveFrom": "01/10/2023",
     "ID": "MessageHistory",
     "ListElementCode": "updatedTime",
@@ -133,6 +123,16 @@
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "documents",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -525,6 +525,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "documents",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "selectedFutureHearingCode",
@@ -645,34 +655,6 @@
     "ListElementCode": "yourMessageLabel",
     "FieldType": "Label",
     "ElementLabel": "**Your message**",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/10/2023",
-    "ID": "SendReplyTempDoc",
-    "ListElementCode": "attachedTime",
-    "FieldType": "DateTime",
-    "ElementLabel": "Attached date & time",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/10/2023",
-    "ID": "SendReplyTempDoc",
-    "ListElementCode": "document",
-    "FieldType": "Document",
-    "ElementLabel": "Document",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "replyDocuments",
-    "ElementLabel": "Document",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "ReplyDocument",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
