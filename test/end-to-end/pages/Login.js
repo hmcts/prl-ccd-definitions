@@ -106,5 +106,5 @@ module.exports = {
     await I.fillField(this.fields.email, config.courtAdminUser.email);
     await I.fillField(this.fields.password, config.courtAdminUser.password);
     await I.click(this.fields.submit);
-  },
+  }
 };
