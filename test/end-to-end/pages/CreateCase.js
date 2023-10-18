@@ -84,6 +84,23 @@ module.exports = {
     // await I.wait('3');
   },
 
+  async fillFormAndSubmitCourtNav_TS() {
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
+    await I.wait('5');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'TS-CourtNav application'
+    );
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
   async selectTypeOfAdminNocApplicationC100() {
     // await I.waitForText('TS-Admin application-Noc');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
@@ -156,6 +173,12 @@ module.exports = {
     await this.selectTypeOfAdminNocApplicationC100();
     await I.retry(retryCount).click('Create my dummy case');
     // await I.wait('10');
+  },
+
+  async createFLCaseByCourtAdmin() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmitCourtNav_TS();
+    await I.retry(retryCount).click('Create my dummy case');
   },
 
   async createNewCaseFL401() {

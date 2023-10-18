@@ -50,6 +50,9 @@ module.exports = () => {
     loginAsJudge() {
       return LoginPage.loginAsJudge();
     },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -67,6 +70,9 @@ module.exports = () => {
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    createFLCaseByCourtAdmin() {
+      return CreateCasePage.createFLCaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
