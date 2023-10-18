@@ -14,5 +14,8 @@ Scenario(
     await I.runRelationshipToRespondent();
     await I.runRespondentBehaviour();
     await I.runTheHomeHappyPath();
+    await I.uploadFLDocuments();
+    await I.viewPDFApplicationEvent();
+    await I.statementOfTruthEvent();
   }
 ).retry(testConfig.TestRetryScenarios);
