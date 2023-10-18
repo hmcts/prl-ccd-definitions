@@ -1,5 +1,15 @@
 [
   {
+    "LiveFrom": "31/03/2023",
+    "ID": "ReplyDocument",
+    "ListElementCode": "submittedDocsRefList",
+    "ElementLabel": "Document",
+    "HintText": "Select the document",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "01/10/2023",
     "ID": "MessageHistory",
     "ListElementCode": "updatedTime",
@@ -634,7 +644,7 @@
     "ID": "Message",
     "ListElementCode": "yourMessageLabel",
     "FieldType": "Label",
-    "ElementLabel": "Your message",
+    "ElementLabel": "**Your message**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -653,6 +663,16 @@
     "ListElementCode": "document",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "replyDocuments",
+    "ElementLabel": "Document",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ReplyDocument",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
