@@ -10,6 +10,10 @@ module.exports = {
     email: 'prl_ctscadmin11_stoke@justice.gov.uk',
     password: defaultPassword
   },
+  courtAdminUser: {
+    email: 'prl_aat_swansea_courtadmin@justice.gov.uk',
+    password: defaultPassword
+  },
   judgeUserOne: {
     email: '4923952EMP-@ejudiciary.net',
     password: judgeDefaultPassword
@@ -22,6 +26,7 @@ module.exports = {
   },
 
   baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
-  TestOutputDir: process.env.E2E_OUTPUT_DIR || './output',
-  TestForAccessibility: process.env.TESTS_FOR_ACCESSIBILITY || false
+  TestOutputDir: process.env.E2E_OUTPUT_DIR || './functional-output',
+  TestForAccessibility: process.env.TESTS_FOR_ACCESSIBILITY || false,
+  TestRetryScenarios: 3
 };
