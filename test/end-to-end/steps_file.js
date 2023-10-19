@@ -37,6 +37,7 @@ const UploadAdditionalApplications = require('./pages/UploadAdditionalApplicatio
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const hearingRequestPage = require('./pages/HearingRequest');
 
 
 module.exports = () => {
@@ -247,6 +248,12 @@ module.exports = () => {
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    requestANewHearing() {
+      return hearingRequestPage.submitHearing();
+    },
+    cancelHearing() {
+      return hearingRequestPage.cancelHearing();
     }
   });
 };

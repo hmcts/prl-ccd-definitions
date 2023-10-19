@@ -171,14 +171,16 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
     await this.selectTypeOfAdminNocApplicationC100();
-    await I.retry(retryCount).click('Create my dummy case');
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
     // await I.wait('10');
   },
 
   async createFLCaseByCourtAdmin() {
     await this.clickCreateCase();
     await this.fillFormAndSubmitCourtNav_TS();
-    await I.retry(retryCount).click('Create my dummy case');
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
