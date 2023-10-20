@@ -263,6 +263,7 @@ module.exports = () => {
     },
     raiseSupportRequestForGetIntoInandAroundBuilding() {
       return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
+    }
     requestANewHearing() {
       return hearingRequestPage.submitHearing();
     },
