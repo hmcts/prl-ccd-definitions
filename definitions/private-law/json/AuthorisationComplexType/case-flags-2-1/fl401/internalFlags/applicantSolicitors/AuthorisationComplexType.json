@@ -1,0 +1,26 @@
+[
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "daApplicantSolicitorFlags",
+    "ListElementCode": "partyInternalFlags",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "[FL401APPLICANTSOLICITOR]"
+        ],
+        "CRUD": "D"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  }
+]
