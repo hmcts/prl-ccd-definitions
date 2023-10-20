@@ -252,6 +252,9 @@ module.exports = () => {
     requestANewHearing() {
       return hearingRequestPage.submitHearing();
     },
+    updateAHearing() {
+      return hearingRequestPage.updateHearing();
+    },
     cancelHearing() {
       return hearingRequestPage.cancelHearing();
     }
