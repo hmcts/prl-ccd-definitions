@@ -129,8 +129,8 @@ module.exports = {
     await I.click('Continue');
     await I.see('High Court Judge, Deputy Circuit Judge');
     await I.see('AMENDED');
-    
-    
+
+
     await I.click(this.fields.updateHearingLength);
     await I.waitForText('Length of hearing');
     await I.clearField(this.fields.hearingDuration);
@@ -138,7 +138,6 @@ module.exports = {
     await I.click(this.fields.noSpecificDate);
     await I.click('Continue');
     await I.see('3 Hours');
-
   },
 
   async submitUpdatedValues() {
@@ -165,7 +164,7 @@ module.exports = {
     await I.see('High Court Judge, Deputy Circuit Judge');
     await I.see('3 Hours');
     await I.click('Back');
-  }, 
+  },
 
   async clickCanceHearing() {
     await I.seeElement(this.fields.cancelEle);
@@ -204,8 +203,7 @@ module.exports = {
     await this.updateHearingValues();
     await this.submitUpdatedValues();
     await this.verifyUpdatedHearingStatus();
-    await this.verifyUpdatedHearingDetails
-
+    await this.verifyUpdatedHearingDetails;
   },
 
   async cancelHearing() {
