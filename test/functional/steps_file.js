@@ -27,9 +27,9 @@ module.exports = () => {
       I.click('Import Case Definition');
       I.wait('10');
       I.attachFile('file', path);
-      I.usePlaywrightTo('force a click on element', async ({ page }) => {
+      I.usePlaywrightTo('force a click on element', async({ page }) => {
         await page.locator('//button[@type="submit"]').dispatchEvent('click');
-      });    
+      });
     }
   });
 };
