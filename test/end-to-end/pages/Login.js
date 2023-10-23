@@ -30,7 +30,7 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('10');
+    // await I.wait('10');
   },
   async loginAsCourtAdmin() {
     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -46,7 +46,7 @@ module.exports = {
       await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     }
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('10');
+    // await I.wait('10');
   },
   async loginAsJudge() {
     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -95,5 +95,16 @@ module.exports = {
     }
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
+  },
+
+  async loginAsSwanseaCourtAdmin() {
+    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.click('#cookie-accept-submit');
+    await I.click('#cookie-accept-all-success-banner-hide');
+    await I.runAccessibilityTest();
+    await I.seeElement('#authorizeCommand');
+    await I.fillField(this.fields.email, config.courtAdminUser.email);
+    await I.fillField(this.fields.password, config.courtAdminUser.password);
+    await I.click(this.fields.submit);
   }
 };
