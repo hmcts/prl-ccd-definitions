@@ -1,6 +1,8 @@
 const { I } = inject();
 const config = require('../config');
 
+const retryCount = 3;
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -11,11 +13,13 @@ module.exports = {
     jurisdiction: '#wb-jurisdiction',
     caseType: '#wb-case-type',
     caseState: '#wb-case-state',
-    caseId: 'CCD Case Number',
+    caseId: '//input[@id="[CASE_REFERENCE]"]',
     caseName: '#applicantCaseName',
     search: 'Apply',
     caseList: 'Case list',
-    spinner: 'xuilib-loading-spinner'
+    spinner: 'xuilib-loading-spinner',
+    listofcourts: 'select[id="courtList"]',
+    searchResult: '//a/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span'
   },
 
   navigate() {
@@ -27,13 +31,16 @@ module.exports = {
     I.click(this.fields.search);
   },
 
-  searchForCasesWithId(caseId, state = 'Any') {
+  async searchForCasesWithId(caseId, state = 'Any') {
+    await I.navigationInWAEnvs(this.fields.caseList);
     this.setInitialSearchFields(state);
-    I.grabCurrentUrl();
-    I.fillField(this.fields.caseId, caseId);
-    I.grabCurrentUrl();
-    I.click(this.fields.search);
-    I.grabCurrentUrl();
+    await I.grabCurrentUrl();
+    await I.fillField(this.fields.caseId, caseId);
+    await I.grabCurrentUrl();
+    await I.click(this.fields.search);
+    await I.grabCurrentUrl();
+    await I.waitForElement(this.fields.searchResult);
+    await I.click(this.fields.searchResult);
   },
 
   searchForCasesWithName(caseName, state = 'Any') {
@@ -58,6 +65,28 @@ module.exports = {
 
   seeCaseInSearchResult(caseId) {
     I.seeElement(this.locateCase(normalizeCaseId(caseId)));
-  }
+  },
 
+  async issueAndSendToLocalCourt() {
+    await I.wait('3');
+    await I.refreshPage();
+    await I.retry(retryCount).click('Assign to me');
+    await I.wait('5');
+    await I.retry(retryCount).waitForText('Issue and send to local Court');
+    await I.retry(retryCount).triggerEvent('Issue and send to local court');
+    await I.wait('5');
+    await I.waitForElement(this.fields.listofcourts);
+    await I.retry(retryCount).selectOption(this.fields.listofcourts, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+    await I.retry(retryCount).click('Submit');
+    await I.wait('5');
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+
+  async searchForCaseAndOpenCase() {
+    await I.wait('15');
+    await I.retry(retryCount).click('//a[@class=\'govuk-link ng-star-inserted\']');
+    await I.wait('10');
+  }
 };
