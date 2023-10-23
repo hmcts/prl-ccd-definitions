@@ -38,6 +38,7 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const hearingRequestPage = require('./pages/HearingRequest');
 
 module.exports = () => {
   return actor({
@@ -49,6 +50,9 @@ module.exports = () => {
     },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
@@ -70,6 +74,9 @@ module.exports = () => {
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    createFLCaseByCourtAdmin() {
+      return CreateCasePage.createFLCaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
@@ -253,6 +260,12 @@ module.exports = () => {
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    requestANewHearing() {
+      return hearingRequestPage.submitHearing();
+    },
+    cancelHearing() {
+      return hearingRequestPage.cancelHearing();
     }
   });
 };

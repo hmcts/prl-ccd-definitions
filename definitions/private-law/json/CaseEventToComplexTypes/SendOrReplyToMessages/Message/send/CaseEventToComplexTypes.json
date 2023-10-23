@@ -156,5 +156,29 @@
     "FieldDisplayOrder": "13",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "selectedDocument=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "sendReplyJudgeName.idamId",
+    "EventElementLabel": "Enter name of Judge",
+    "FieldDisplayOrder": "14",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "sendReplyJudgeName.personalCode",
+    "EventElementLabel": "Enter name of Judge",
+    "FieldDisplayOrder": "15",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   }
 ]
