@@ -25,6 +25,9 @@ module.exports = {
     cancelEle: 'a[id^="link-cancel"]',
     cancelOption: '#withdraw',
     viewDetails: 'a[id^="link-view-details"]',
+    updateJudgeType: '#judgeTypes',
+    updateHearingLength: '#hearingLength',
+    amendReason: '#partyreq',
     cancellationReason: '//div[5]/div[@class="govuk-summary-list__key"]',
     cancellationValue: '//div[5]/div[@class="govuk-summary-list__value"]'
   },
@@ -113,6 +116,56 @@ module.exports = {
     await I.click('Back');
   },
 
+  async clickOnUpdateHearing() {
+    await I.click(this.fields.viewEle);
+    await I.waitForText('View or edit hearing');
+    await I.see('WAITING TO BE LISTED');
+  },
+
+  async updateHearingValues() {
+    await I.click(this.fields.updateJudgeType);
+    await I.waitForText('Do you want a specific judge?');
+    await I.click('//input[@value="30"]');
+    await I.click('Continue');
+    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('AMENDED');
+
+
+    await I.click(this.fields.updateHearingLength);
+    await I.waitForText('Length of hearing');
+    await I.clearField(this.fields.hearingDuration);
+    await I.fillField(this.fields.hearingDuration, '3');
+    await I.click(this.fields.noSpecificDate);
+    await I.click('Continue');
+    await I.see('3 Hours');
+  },
+
+  async submitUpdatedValues() {
+    await I.click('Submit updated request');
+    await I.click(this.fields.amendReason);
+    await I.click('Submit change request');
+    await I.see('Hearing request submitted');
+    await I.click('view the status of this hearing in the hearings tab');
+    await I.waitForText('History');
+  },
+
+  async verifyUpdatedHearingStatus() {
+    await I.waitForText('UPDATE REQUESTED ');
+    await I.see('UPDATE REQUESTED');
+    await I.see('First Hearing');
+    await I.seeElement(this.fields.viewEle);
+    await I.seeElement(this.fields.cancelEle);
+  },
+
+  async verifyUpdatedHearingDetails() {
+    await I.click(this.fields.viewEle);
+    await I.waitForText('View or edit hearing');
+    await I.see('UPDATE REQUESTED');
+    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('3 Hours');
+    await I.click('Back');
+  },
+
   async clickCanceHearing() {
     await I.seeElement(this.fields.cancelEle);
     await I.click(this.fields.cancelEle);
@@ -143,6 +196,14 @@ module.exports = {
     await this.submitVenueAndJudgeDetails();
     await this.submitDurationAndAdditionalInfo();
     await this.submitAndVerifyHearingRequest();
+  },
+
+  async updateHearing() {
+    await this.clickOnUpdateHearing();
+    await this.updateHearingValues();
+    await this.submitUpdatedValues();
+    await this.verifyUpdatedHearingStatus();
+    await this.verifyUpdatedHearingDetails;
   },
 
   async cancelHearing() {
