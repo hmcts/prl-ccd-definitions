@@ -2,13 +2,13 @@ const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
+const UploadFLDocuments = require('./pages/UploadFLDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const Miam = require('./pages/Miam.js');
 const ChildDetails = require('./pages/ChildDetails');
 const ApplicantDetails = require('./pages/ApplicantDetails');
 const CaseName = require('./pages/CaseName');
-const generalHelper = require('./helpers/generalHelper');
 const HearingUrgency = require('./pages/HearingUrgency');
 const LitigationCapacity = require('./pages/LitigationCapacity');
 const OtherPeopleInTheCase = require('./pages/OtherPeopleInTheCase');
@@ -18,6 +18,7 @@ const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
+const statementOfTruth = require('./pages/StatementOfTruth');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
@@ -33,6 +34,11 @@ const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
+const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
+const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
+const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
+const issueCasePage = require('./pages/IssueCase');
+const hearingRequestPage = require('./pages/HearingRequest');
 
 module.exports = () => {
   return actor({
@@ -45,6 +51,9 @@ module.exports = () => {
     loginAsJudge() {
       return LoginPage.loginAsJudge();
     },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -54,17 +63,20 @@ module.exports = () => {
     runPeopleInTheCaseEvent() {
       return PeopleInTheCasePage.runEventHappyPath();
     },
-    triggerEvent(eventName) {
-      return generalHelper.triggerEvent(eventName);
-    },
     createCase() {
       return CreateCasePage.createNewCaseC100();
     },
     createCase_TS() {
       return CreateCasePage.createNewCaseC100_TS();
     },
+    createNewCaseFL401_TS() {
+      return CreateCasePage.createNewCaseFL401_TS();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    createFL401CaseByCourtAdmin() {
+      return CreateCasePage.createFL401CaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
@@ -89,6 +101,9 @@ module.exports = () => {
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
+    },
+    uploadFLDocuments() {
+      return UploadFLDocuments.uploadFLDocuments();
     },
     typeOfApplicationEventC100() {
       return TypeOfApplicationEvent.typeOfApplicationEventC100();
@@ -156,6 +171,9 @@ module.exports = () => {
     viewPDFApplicationEvent() {
       return viewPDFApplication.runViewPDFApplicationEvent();
     },
+    statementOfTruthEvent() {
+      return statementOfTruth.runStatementOfTruthEvent();
+    },
     runManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
@@ -180,6 +198,15 @@ module.exports = () => {
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
     },
+    statementOfTruthAndSubmit() {
+      return submitAndPay.statementOfTruthAndSubmit();
+    },
+    solicitorDraftAnOrderPowerOfArrestFL406() {
+      return solicitorDraftOrder.solicitorDraftAnOrderPowerOfArrestFL406();
+    },
+    solicitorDraftAnOrderBlankOrderFL404B() {
+      return solicitorDraftOrder.solicitorDraftAnOrderBlankOrderFL404B();
+    },
     runSubmitAndPayHappyPath_HWF_Yes() {
       return submitAndPay.submitAndPay_HWF_Yes();
     },
@@ -198,9 +225,6 @@ module.exports = () => {
     issueAndSendToLocalCourt() {
       return caseList.issueAndSendToLocalCourt();
     },
-    amOnHistoryPageWithSuccessNotification() {
-      return generalHelper.amOnHistoryPageWithSuccessNotification();
-    },
     selectApplication() {
       return UploadAdditionalApplications.selectApplication();
     },
@@ -209,6 +233,42 @@ module.exports = () => {
     },
     awpCAOtherOrders() {
       return UploadAdditionalApplications.awpCAOtherOrders();
+    },
+    createSolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyC100Case();
+    },
+    payAndSubmitDummySolicitorCase() {
+      return submitAndPay.submitAndPayForDummySolicitorApplication();
+    },
+    solicitorWithdrawApplication() {
+      return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
+    },
+    saveTheCaseIdAndSignout() {
+      return CreateCasePage.saveTheCaseIdAndSignout();
+    },
+    logInAsSolicitorNoCookies() {
+      return LoginPage.loginAsSolicitorNoCookiesDisplayed();
+    },
+    searchForCaseAndOpenCase() {
+      return caseList.searchForCaseAndOpenCase();
+    },
+    searchForCasesWithId(caseId) {
+      return caseList.searchForCasesWithId(caseId, 'Any');
+    },
+    issueCase() {
+      return issueCasePage.issueCase();
+    },
+    moveCaseToGateKeeping() {
+      return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    requestANewHearing() {
+      return hearingRequestPage.submitHearing();
+    },
+    updateAHearing() {
+      return hearingRequestPage.updateHearing();
+    },
+    cancelHearing() {
+      return hearingRequestPage.cancelHearing();
     }
   });
 };

@@ -3,7 +3,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "orderName",
+    "CaseFieldID": "orderNameLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 5,
@@ -52,7 +52,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "hearingsType",
     "PageFieldDisplayOrder": 8,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
@@ -63,6 +63,17 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "orderMadeByLabel",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "judgeLabel",
     "PageFieldDisplayOrder": 10,
     "DisplayContext": "READONLY",
     "PageID": 5,
@@ -75,7 +86,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "judgeOrMagistrateTitle",
     "PageFieldDisplayOrder": 11,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
@@ -86,7 +97,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "judgeOrMagistratesLastName",
     "PageFieldDisplayOrder": 12,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
@@ -121,7 +132,7 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "dateOrderMade",
     "PageFieldDisplayOrder": 15,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
@@ -195,7 +206,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType=\"blankOrderOrDirections\" OR orderType=\"other\" OR orderType=\"blank\""
+    "FieldShowCondition": "orderType=\"blankOrderOrDirections\" OR orderType=\"other\" OR orderType=\"blank\" OR orderType=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",

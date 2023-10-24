@@ -111,8 +111,8 @@ module.exports = {
     await this.triggerEvent();
     await this.fillHasAttendedMIAMPage();
     await this.fillMIAMCertificationPage();
-    await I.retry(retryCount).submitEvent();
-    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+    await I.submitEvent();
+    await I.amOnHistoryPageWithSuccessNotification();
     await this.triggerEvent();
     await this.fillHasAttendedMIAMPageDifferentFlow();
     await this.fillMIAMExemptions();
@@ -121,7 +121,7 @@ module.exports = {
     await this.fillMIAMEvidencePreviousMiamAttendance();
     await this.fillMIAMEvidenceWhatGroundsOfExemption();
     await this.fillMIAMEvidenceChildProtectionConcerns();
-    await I.retry(retryCount).submitEvent();
-    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+    await I.submitEvent();
+    await I.amOnHistoryPageWithSuccessNotification();
   }
 };
