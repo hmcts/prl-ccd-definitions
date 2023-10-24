@@ -75,8 +75,8 @@ module.exports = () => {
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
-    createFLCaseByCourtAdmin() {
-      return CreateCasePage.createFLCaseByCourtAdmin();
+    createFL401CaseByCourtAdmin() {
+      return CreateCasePage.createFL401CaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
@@ -263,6 +263,9 @@ module.exports = () => {
     },
     requestANewHearing() {
       return hearingRequestPage.submitHearing();
+    },
+    updateAHearing() {
+      return hearingRequestPage.updateHearing();
     },
     cancelHearing() {
       return hearingRequestPage.cancelHearing();
