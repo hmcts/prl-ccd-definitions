@@ -174,7 +174,7 @@ module.exports = {
     await this.amOnHistoryPageWithSuccessNotification();
   },
 
-  async createFLCaseByCourtAdmin() {
+  async createFL401CaseByCourtAdmin() {
     await this.clickCreateCase();
     await this.fillFormAndSubmitCourtNav_TS();
     await I.click('Create my dummy case');
