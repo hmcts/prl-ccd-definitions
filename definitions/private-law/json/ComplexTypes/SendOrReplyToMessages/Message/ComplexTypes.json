@@ -1,5 +1,15 @@
 [
   {
+    "LiveFrom": "01/10/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "updatedTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Updated Time",
+    "FieldShowCondition": "updatedTime=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
     "ListElementCode": "messageDate",
@@ -113,6 +123,16 @@
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "documents",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -505,6 +525,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "documents",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "selectedFutureHearingCode",
@@ -618,5 +648,14 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "hearingsLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "yourMessageLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Your message**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
