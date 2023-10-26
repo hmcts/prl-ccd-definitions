@@ -235,6 +235,9 @@ module.exports = () => {
     saveTheCaseIdAndSignout() {
       return CreateCasePage.saveTheCaseIdAndSignout();
     },
+    saveTheCaseId() {
+      return CreateCasePage.saveTheCaseId();
+    },
     logInAsSolicitorNoCookies() {
       return LoginPage.loginAsSolicitorNoCookiesDisplayed();
     },
@@ -267,6 +270,12 @@ module.exports = () => {
     },
     serveAnOrder() {
       return manageOrders.serveDraftOrderByCourtAdmin();
+    },
+    adminServeAnOrder() {
+      return manageOrders.createAndServeOrderByCourtAdmin();
+    },
+    manageOrderCreateOrderC43() {
+      return manageOrders.createAnOrderC43();
     }
   });
 };
