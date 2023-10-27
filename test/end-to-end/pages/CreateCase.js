@@ -1,5 +1,7 @@
 const I = actor();
 const retryCount = 3;
+const config = require('../config');
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -14,81 +16,93 @@ module.exports = {
     caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
     caseFromCourtNav_No: '#caseFromCourtNav_No',
     helpWithFees_No: '#helpWithFees_No',
+    signOut: '//a[contains(.,"Sign out")]',
+    email: '#username',
+    password: '#password',
+    submitOther: 'input[type="submit"]'
   },
 
   async clickCreateCase() {
-    I.wait('10');
-    await I.waitForText('Create case');
-    I.wait('10');
+    await I.wait('10');
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
-    I.wait('30');
-    await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    I.wait('15');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
     );
-    I.wait('15');
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.event,
       'Solicitor application'
     );
-    await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS_Solicitor() {
-    I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
     );
-    I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.event,
       'TS-Solicitor application'
     );
-    await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
-    I.wait('5');
-    await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
     );
-    I.wait('5');
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.event,
       'TS-Admin application-Noc'
     );
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('3');
+  },
+
+  async fillFormAndSubmitCourtNav_TS() {
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
+    await I.wait('5');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'TS-CourtNav application'
+    );
+    await I.retry(retryCount).click(this.fields.submit);
+  },
+
+  async selectTypeOfAdminNocApplicationC100() {
+    // await I.waitForText('TS-Admin application-Noc');
+    await I.retry(retryCount).click('#caseTypeOfApplication-C100');
+    await I.retry(retryCount).click('Continue');
+    // await I.wait('3');
   },
 
   async selectTypeOfApplicationC100() {
-    await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
-    await I.wait('3');
   },
 
   async selectTypeOfApplicationFL401() {
@@ -99,13 +113,13 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPageC100() {
-    await I.waitForText('Confidentiality Statement');
+    // await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click(
       '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
     await I.retry(retryCount).click('Continue');
 
-    await I.waitForElement('#applicantCaseName');
+    // await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField(
       '//input[@id="applicantCaseName"]',
@@ -136,7 +150,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    // await this.amOnHistoryPageWithSuccessNotification();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
   async createNewCaseC100_TS() {
     await this.clickCreateCase();
@@ -148,9 +162,16 @@ module.exports = {
   async createC100CaseByCourtAdmin() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
-    await this.selectTypeOfApplicationC100();
-    await I.retry(retryCount).click('Create my dummy case');
-    await I.wait('10');
+    await this.selectTypeOfAdminNocApplicationC100();
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createFL401CaseByCourtAdmin() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmitCourtNav_TS();
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -174,18 +195,18 @@ module.exports = {
   },
 
   async submitEvent() {
-    I.wait('2');
-    await I.retry(retryCount).waitForElement('h2');
+    // I.wait('2');
+    // await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
-    await I.wait('5');
+    // await I.wait('5');
   },
 
   async amOnHistoryPageWithSuccessNotification() {
     await I.retry(retryCount).waitForText('History');
   },
 
-  async createNewSolicitorDummyC100Case(){
+  async createNewSolicitorDummyC100Case() {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TSSolicitorApplication();
     await this.selectTypeOfApplicationC100();
@@ -194,14 +215,34 @@ module.exports = {
   },
 
   async fillFormAndSubmit_TSSolicitorApplication() {
-    I.wait('30');
+    // await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    I.wait('15');
+    // I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    I.wait('15');
+    // I.wait('15');
     await I.retry(retryCount).selectOption(this.fields.event, 'TS-Solicitor application');
-    await I.waitForClickable(this.fields.submit);
+    // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
+  },
+
+  async saveTheCaseIdAndSignout() {
+    // I.wait('20');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    await I.retry(retryCount).click(this.fields.signOut);
+    // await I.wait('10');
+    try {
+      await I.retry(retryCount).seeElement('#authorizeCommand');
+      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+    } catch {
+      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+    }
+    await I.wait('5');
+    await I.retry(retryCount).click(this.fields.submitOther);
+    await I.wait('10');
+    return caseId;
   }
 };

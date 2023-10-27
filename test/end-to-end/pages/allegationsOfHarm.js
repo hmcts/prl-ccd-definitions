@@ -69,9 +69,9 @@ module.exports = {
   },
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
-    await I.wait('4');
+    // await I.wait('4');
     await I.retry(retryCount).click('//*[@id="newAllegationsOfHarmYesNo_Yes"]');
-    await I.wait('4');
+    // await I.wait('4');
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
   },
