@@ -1,3 +1,5 @@
+
+'use strict';
 const I = actor();
 const retryCount = 3;
 const date = new Date();

@@ -1,3 +1,5 @@
+'use strict';
+
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
