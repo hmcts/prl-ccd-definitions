@@ -3,6 +3,7 @@ const config = require('../config');
 const { expect } = require('chai');
 
 const retryCount = 3;
+const totSearchResults = 25;
 
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
@@ -95,7 +96,7 @@ module.exports = {
   },
 
   async searchForCaseWithoutId() {
-    await I.waitForVisible(this.fields.jurisdiction, 30);
+    await I.waitForVisible(this.fields.jurisdiction, '30');
     await I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     await I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     await I.selectOption(this.fields.caseState, config.definition.caseState);
@@ -110,33 +111,33 @@ module.exports = {
 
   async verifySearchResultsFilteredByState() {
     let stateResults = [];
-    await I.waitNumberOfVisibleElements(this.fields.stateSearchResults, 25);
+    await I.waitNumberOfVisibleElements(this.fields.stateSearchResults, totSearchResults);
     await I.wait('20');
 
     stateResults = await I.grabTextFromAll(this.fields.stateSearchResults);
-    stateResults.forEach(function(entry) {
+    stateResults.forEach(entry => {
       expect(entry).to.equal(config.definition.caseState);
-    }); 
+    });
   },
 
   async verifySearchResultsFilteredByStateAndApplicationType() {
     let stateResults = [], typeResults = [];
-    await I.waitNumberOfVisibleElements(this.fields.stateSearchResults, 25);
+    await I.waitNumberOfVisibleElements(this.fields.stateSearchResults, totSearchResults);
     await I.wait('20');
-    
+
     stateResults = await I.grabTextFromAll(this.fields.stateSearchResults);
-    stateResults.forEach(function(entry) {
+    stateResults.forEach(entry => {
       expect(entry).to.equal(config.definition.caseState);
-    }); 
+    });
 
     typeResults = await I.grabTextFromAll(this.fields.typeSearchResults);
-    typeResults.forEach(function(entry) {
+    typeResults.forEach(entry => {
       expect(entry).to.equal(config.definition.applicationType);
     });
   },
 
   async searchForInvalidCase() {
-    await I.waitForVisible(this.fields.jurisdiction, 30);
+    await I.waitForVisible(this.fields.jurisdiction, '30');
     await I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     await I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     await I.selectOption(this.fields.caseState, config.definition.caseState);
