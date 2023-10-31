@@ -464,7 +464,8 @@
     "ListElementCode": "hearingJudgeNameAndEmail",
     "EventElementLabel": "",
     "FieldDisplayOrder": "40",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -534,5 +535,29 @@
     "EventElementLabel": "Additional hearing details",
     "FieldDisplayOrder": "46",
     "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.idamId",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "47",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "solicitorOrdersHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "48",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\""
   }
 ]

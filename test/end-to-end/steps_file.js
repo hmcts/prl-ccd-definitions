@@ -2,6 +2,7 @@ const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
 const UploadDocuments = require('./pages/UploadDocuments');
+const UploadFLDocuments = require('./pages/UploadFLDocuments');
 const TypeOfApplicationEvent = require('./pages/TypeOfApplication');
 const AttendingTheHearing = require('./pages/AttendingTheHearing');
 const Miam = require('./pages/Miam.js');
@@ -17,6 +18,7 @@ const WelshLanguage = require('./pages/WelshLanguage');
 const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
+const statementOfTruth = require('./pages/StatementOfTruth');
 const manageDocuments = require('./pages/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
@@ -36,6 +38,7 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const hearingRequestPage = require('./pages/HearingRequest');
 
 module.exports = () => {
   return actor({
@@ -47,6 +50,9 @@ module.exports = () => {
     },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
@@ -68,6 +74,9 @@ module.exports = () => {
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    createFL401CaseByCourtAdmin() {
+      return CreateCasePage.createFL401CaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
@@ -92,6 +101,9 @@ module.exports = () => {
     },
     uploadDocuments() {
       return UploadDocuments.uploadDocuments();
+    },
+    uploadFLDocuments() {
+      return UploadFLDocuments.uploadFLDocuments();
     },
     typeOfApplicationEventC100() {
       return TypeOfApplicationEvent.typeOfApplicationEventC100();
@@ -158,6 +170,9 @@ module.exports = () => {
     },
     viewPDFApplicationEvent() {
       return viewPDFApplication.runViewPDFApplicationEvent();
+    },
+    statementOfTruthEvent() {
+      return statementOfTruth.runStatementOfTruthEvent();
     },
     runManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
@@ -245,6 +260,15 @@ module.exports = () => {
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    requestANewHearing() {
+      return hearingRequestPage.submitHearing();
+    },
+    updateAHearing() {
+      return hearingRequestPage.updateHearing();
+    },
+    cancelHearing() {
+      return hearingRequestPage.cancelHearing();
     }
   });
 };
