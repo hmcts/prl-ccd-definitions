@@ -38,6 +38,7 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
+const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
@@ -294,6 +295,12 @@ module.exports = () => {
     },
     verifySearchResultsFilteredByStateAndApplicationType() {
       return caseList.verifySearchResultsFilteredByStateAndApplicationType();
+    },
+    amendMiamDetails() {
+      return amendMiamDetailsPage.updateApplicationInfo();
+    },
+    verifyUpdatedMiamDetails() {
+      return amendMiamDetailsPage.verifyUpdatedMiamDetails();
     }
   });
 };
