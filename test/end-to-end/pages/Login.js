@@ -1,3 +1,4 @@
+'use strict';
 const I = actor();
 const config = require('../config');
 
