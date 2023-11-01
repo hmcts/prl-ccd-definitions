@@ -37,11 +37,11 @@ const ChildrenRelationships = require('./pages/ChildrenRelationships');
 const editAndApproveDraftOrder = require('./pages/EditAndApproveDraftOrder');
 const UploadAdditionalApplications = require('./pages/UploadAdditionalApplications');
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
+const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
-
 
 module.exports = () => {
   return actor({
@@ -71,6 +71,9 @@ module.exports = () => {
     },
     createCase_TS() {
       return CreateCasePage.createNewCaseC100_TS();
+    },
+    createNewCaseFL401_TS() {
+      return CreateCasePage.createNewCaseFL401_TS();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -197,6 +200,15 @@ module.exports = () => {
     },
     runSubmitAndPayHappyPath() {
       return submitAndPay.submitAndPay();
+    },
+    statementOfTruthAndSubmit() {
+      return submitAndPay.statementOfTruthAndSubmit();
+    },
+    solicitorDraftAnOrderPowerOfArrestFL406() {
+      return solicitorDraftOrder.solicitorDraftAnOrderPowerOfArrestFL406();
+    },
+    solicitorDraftAnOrderBlankOrderFL404B() {
+      return solicitorDraftOrder.solicitorDraftAnOrderBlankOrderFL404B();
     },
     runSubmitAndPayHappyPath_HWF_Yes() {
       return submitAndPay.submitAndPay_HWF_Yes();
