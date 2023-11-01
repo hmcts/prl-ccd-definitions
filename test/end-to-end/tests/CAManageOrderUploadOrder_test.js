@@ -2,7 +2,7 @@ const testConfig = require('../config');
 
 Feature('CA Manage Order Upload Order - TS Court Admin');
 Scenario(
-  'CA Manage Order Upload Order Serve order Personally @nightly @master',
+  'CA Manage Order Upload Order Serve order Personally @nightly',
   async({ I }) => {
     await I.loginAsCourtAdmin();
     await I.createC100CaseByCourtAdmin();
