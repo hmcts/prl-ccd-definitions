@@ -1,5 +1,10 @@
+
+'use strict';
 const I = actor();
 const retryCount = 3;
+const date = new Date();
+const moConfig = require('./manageOrderConfig');
+
 
 module.exports = {
 
@@ -8,6 +13,7 @@ module.exports = {
     orderByConsent_No: '#isTheOrderByConsent_No',
     orderApprovedAtHearing_No: '#wasTheOrderApprovedAtHearing_No',
     judgeTitle_HerHonourJudge: '#judgeOrMagistrateTitle-herHonourJudge',
+    judgeTitle_DistrictJudge: '#judgeOrMagistrateTitle-districtJudge',
     judgeLastName: '#judgeOrMagistratesLastName',
     legalAdviserFullName: '#justiceLegalAdviserFullName',
     orderMade_day: '#dateOrderMade-day',
@@ -43,14 +49,157 @@ module.exports = {
     judgeNamePopup: '//div/div/div/div/mat-option[@id="mat-option-4"]/span[contains(text(), \'Raja Main\')]',
     legalAdviserListToReviewOrder: '#nameOfLaToReviewOrder',
     tabSelector: '//div[contains(text(), "Draft orders")]',
-    nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron'
+    ordersTabSelector: '//div[contains(text(), "Orders")]',
+    nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
+    selectDraftOrder: '#draftOrderOptions-draftAnOrder',
+    selectC43AOrder: '#createSelectOrderOptions-specialGuardianShip',
+    successElement: 'div.alert-message',
+    selectDraftOrderForEditing: '#draftOrdersDynamicList',
+    editOrder_yes: '#doYouWantToEditTheOrder_Yes',
+    editOrder_no: '#doYouWantToEditTheOrder_No',
+    judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
+    isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
+    selectOrderType: '#selectTypeOfOrder'
   },
+
   async selectOrder(modeOfOrder) {
     await I.retry(retryCount).triggerEvent('Manage orders');
     await I.retry(retryCount).waitForText('What do you want to do?');
     await I.retry(retryCount).click(modeOfOrder);
     await I.retry(retryCount).click('Continue');
   },
+
+  async selectDraftOrder(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.draftOrderText);
+    await I.click(this.fields.selectDraftOrder);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.selectOrderText);
+    await I.click(this.fields.selectC43AOrder);
+    await I.click(moConfig.continueText);
+  },
+
+  async includeOrderDetails() {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.click(this.fields.orderByConsent_Yes);
+    await I.click(this.fields.orderApprovedAtHearing_No);
+    await I.click(this.fields.judgeTitle_HerHonourJudge);
+    await I.fillField(this.fields.judgeLastName, moConfig.judgeNameText);
+    await I.fillField(this.fields.legalAdviserFullName, moConfig.legalAdvisorNameText);
+    await I.fillField(this.fields.orderMade_day, day);
+    await I.fillField(this.fields.orderMade_month, month);
+    await I.fillField(this.fields.orderMade_year, year);
+    await I.click(this.fields.orderAboutAllChildren_No);
+
+    await I.waitForText(moConfig.c43OrderChildText);
+    await I.click('#childOption_ccd99bd3-29b8-4df5-93d6-b0a622ce033a');
+    await I.click('#childOption_cbb66702-223f-42eb-93a0-b2146bc039e0');
+    await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
+    await I.click(moConfig.continueText);
+
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.previewOrderText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.cyaText);
+    await I.click(moConfig.submitText);
+    await I.waitForElement(this.fields.successElement);
+  },
+
+  async selectEditDraftOrder(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.click(moConfig.continueText);
+
+    await I.click(this.fields.editOrder_yes);
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.orderConsentText);
+    await I.click(this.fields.judgeTitle_DistrictJudge);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.specialGuardingText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.previewOrderText);
+    await I.click(moConfig.continueText);
+  },
+
+  async selectEditServeOrder(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.click(moConfig.continueText);
+
+    await I.click(this.fields.editOrder_no);
+    await I.click(moConfig.continueText);
+  },
+
+  async performServeOrder() {
+    await I.waitForText(moConfig.orderTypeQuestionText);
+    await I.selectOption(this.fields.selectOrderType, moConfig.orderTypeText);
+    await I.click(this.fields.cafcassOrCymruNeedToProvideReport_No);
+    await I.click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
+    await I.click(this.fields.doYouWantToServeOrder_Yes);
+    await I.click(moConfig.continueText);
+
+    // await I.waitForText('Special guardianship order (C43A) - 24 Oct 2023');
+    await I.waitForText(`${moConfig.c43AOrderText} - 24 Oct 2023`);
+    await I.click(this.fields.selectOrderToServe);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.servingToRespondentText);
+    await I.click(this.fields.servePersonallyOptions_Yes);
+    await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
+    await I.click(this.fields.cafcassCymruServedOptions_No);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.cyaText);
+    await I.click(moConfig.submitText);
+    await I.waitForElement(this.fields.successElement);
+  },
+
+  async verifyOrderSubmission() {
+    await I.clickTillElementFound(this.fields.ordersTabSelector, this.fields.nextBtnSelector);
+    await I.click(this.fields.ordersTabSelector);
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForText(moConfig.directionsText);
+    await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.expChildrenText);
+    await I.waitForText(moConfig.orderTypeText);
+  },
+
+  async sendToAdmin() {
+    await I.waitForText(moConfig.directionsToAdminText);
+    await I.fillField(this.fields.judgeDirectionsToAdmin, moConfig.directionsText);
+    await I.click(this.fields.isOrderCompleteToServe_Yes);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.cyaText);
+    await I.click(moConfig.sendToAdminText);
+    await I.waitForElement(this.fields.successElement);
+  },
+
+  async verifyDraftOrderSubmission() {
+    await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
+    await I.click(this.fields.tabSelector);
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForText(moConfig.directionsText);
+    await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.expChildrenText);
+  },
+
   async selectTypeOfOrderForUpload(orderName) {
     await I.retry(retryCount).waitForText('Upload an order');
     await I.retry(retryCount).waitForText('Select an order');
@@ -120,26 +269,21 @@ module.exports = {
     }
   },
   async selectOrderToServe() {
-    // await I.retry(retryCount).waitForText('Serve saved orders');
     await I.retry(retryCount).click(this.fields.selectOrderToServe);
     await I.retry(retryCount).click('Continue');
-    // await I.wait('5');
   },
   async servePersonalOrNonPersonal(personal, responsible) {
     if (personal === 'Yes') {
       await I.retry(retryCount).click(this.fields.servePersonallyOptions_Yes);
-      // await I.wait('1');
       await I.retry(retryCount).click(responsible);
     }
     await I.retry(retryCount).click(this.fields.otherPartiesToServe);
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
     await I.retry(retryCount).click('Continue');
-    // await I.wait('8');
   },
   async checkYourAnswersAndSubmit() {
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click('Submit');
-    // await I.wait('5');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   async createAnOrderC21() {
@@ -200,5 +344,24 @@ module.exports = {
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.retry(retryCount).click(this.fields.tabSelector);
     await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
+  },
+
+  async composeDraftOrder() {
+    await this.selectDraftOrder(moConfig.doText);
+    await this.includeOrderDetails();
+  },
+
+  async editDraftOrderByJudge() {
+    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.sendToAdmin();
+    await this.verifyDraftOrderSubmission();
+  },
+
+  async serveDraftOrderByCourtAdmin() {
+    await this.selectEditServeOrder(moConfig.editAndServeOrderText);
+    await this.performServeOrder();
+    await this.verifyOrderSubmission();
   }
+
+
 };

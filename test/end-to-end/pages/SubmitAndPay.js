@@ -83,7 +83,7 @@ module.exports = {
   },
 
   async caseSubmittedCA() {
-    await I.retry(retryCount).waitForText('Submitted');
+    await I.waitForText('Submitted');
   },
 
   async answerHelpWithFeesNo() {
