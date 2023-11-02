@@ -1,3 +1,5 @@
+'use strict';
+
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
@@ -28,7 +30,7 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
-const manageOrders = require('./pages/Manageorders/ManageOrders');
+const manageOrders = require('./pages/MOScreens/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
