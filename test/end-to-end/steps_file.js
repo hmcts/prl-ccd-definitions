@@ -1,3 +1,5 @@
+'use strict';
+
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
@@ -28,7 +30,7 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
-const manageOrders = require('./pages/ManageOrders');
+const manageOrders = require('./pages/MOScreens/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
@@ -38,6 +40,7 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
+// const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
 module.exports = () => {
@@ -234,6 +237,9 @@ module.exports = () => {
     saveTheCaseIdAndSignout() {
       return CreateCasePage.saveTheCaseIdAndSignout();
     },
+    saveTheCaseId() {
+      return CreateCasePage.saveTheCaseId();
+    },
     logInAsSolicitorNoCookies() {
       return LoginPage.loginAsSolicitorNoCookiesDisplayed();
     },
@@ -257,6 +263,21 @@ module.exports = () => {
     },
     cancelHearing() {
       return hearingRequestPage.cancelHearing();
+    },
+    draftAnOrder() {
+      return manageOrders.composeDraftOrder();
+    },
+    editAnDraftOrder() {
+      return manageOrders.editDraftOrderByJudge();
+    },
+    serveAnOrder() {
+      return manageOrders.serveDraftOrderByCourtAdmin();
+    },
+    adminServeAnOrder() {
+      return manageOrders.createAndServeOrderByCourtAdmin();
+    },
+    manageOrderCreateOrderC43() {
+      return manageOrders.createAnOrderC43();
     }
   });
 };
