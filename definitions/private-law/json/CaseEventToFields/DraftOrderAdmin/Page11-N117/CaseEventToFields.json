@@ -10,8 +10,7 @@
     "PageDisplayOrder": 11,
     "ShowSummaryChangeOption": "Y",
     "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType=\"generalForm\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -173,12 +172,23 @@
     "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "manageOrdersDateOfUnderTaking",
+    "DisplayContext": "MANDATORY",
+    "PageID": 11,
+    "PageDisplayOrder": 11,
+    "PageFieldDisplayOrder": 17,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "underTakingExpiryDateTime",
     "DisplayContext": "MANDATORY",
     "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "PageID": 11,
     "PageDisplayOrder": 11,
-    "PageFieldDisplayOrder": 17,
+    "PageFieldDisplayOrder": 18,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -189,7 +199,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 11,
     "PageDisplayOrder": 11,
-    "PageFieldDisplayOrder": 18,
+    "PageFieldDisplayOrder": 19,
     "ShowSummaryChangeOption": "Yes"
   }
 ]
