@@ -259,5 +259,13 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submitOther);
     await I.wait('10');
     return caseId;
+  },
+
+  async saveTheCaseId() {
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    return caseId;
   }
+
+
 };
