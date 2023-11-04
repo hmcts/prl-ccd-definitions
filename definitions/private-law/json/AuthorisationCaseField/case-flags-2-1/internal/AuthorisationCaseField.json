@@ -1,0 +1,31 @@
+[
+  {
+    "LiveFrom": "01/08/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "flagLauncherInternal",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+]
