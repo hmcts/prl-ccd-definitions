@@ -41,6 +41,7 @@ const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const solicitorReasonableAdjustment = require('./pages/SolicitorReasonableAdjustment')
 const hearingRequestPage = require('./pages/HearingRequest');
+const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -252,6 +253,12 @@ module.exports = () => {
     searchForCasesWithId(caseId) {
       return caseList.searchForCasesWithId(caseId, 'Any');
     },
+    searchForCaseWithoutId() {
+      return caseList.searchForCaseWithoutId();
+    },
+    verifySearchResultsFilteredByState() {
+      return caseList.verifySearchResultsFilteredByState();
+    },
     issueCase() {
       return issueCasePage.issueCase();
     },
@@ -293,6 +300,24 @@ module.exports = () => {
     },
     manageOrderCreateOrderC43() {
       return manageOrders.createAnOrderC43();
+    },
+    searchForInvalidCase() {
+      return caseList.searchForInvalidCase();
+    },
+    verifyInvalidSearchResults() {
+      return caseList.verifyInvalidSearchResults();
+    },
+    additionFilteringByApplicationType() {
+      return caseList.additionFilteringByApplicationType();
+    },
+    verifySearchResultsFilteredByStateAndApplicationType() {
+      return caseList.verifySearchResultsFilteredByStateAndApplicationType();
+    },
+    amendMiamDetails() {
+      return amendMiamDetailsPage.updateApplicationInfo();
+    },
+    verifyUpdatedMiamDetails() {
+      return amendMiamDetailsPage.verifyUpdatedMiamDetails();
     }
   });
 };
