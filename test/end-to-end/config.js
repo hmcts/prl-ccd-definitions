@@ -22,7 +22,9 @@ module.exports = {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',
     caseType: 'PRLAPPS',
-    caseTypeFullDesc: 'C100 & FL401 Applications'
+    caseTypeFullDesc: 'C100 & FL401 Applications',
+    caseState: 'Submitted',
+    applicationType: 'C100'
   },
 
   baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
