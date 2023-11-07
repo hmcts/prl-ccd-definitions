@@ -44,33 +44,26 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS_Solicitor() {
-    // I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    // I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
     );
-    // I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.event,
       'TS-Solicitor application'
     );
-    // await I.waitForClickable(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
-    // I.wait('5');
-    // await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
-    // I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
@@ -81,7 +74,23 @@ module.exports = {
       'TS-Admin application-Noc'
     );
     await I.retry(retryCount).click(this.fields.submit);
-    // await I.wait('3');
+  },
+
+  async fillFormAndSubmitCourtNav_TS() {
+    await I.retry(retryCount).selectOption(
+      this.fields.jurisdiction,
+      'Family Private Law'
+    );
+    await I.retry(retryCount).selectOption(
+      this.fields.caseType,
+      'C100 & FL401 Applications'
+    );
+    await I.wait('5');
+    await I.retry(retryCount).selectOption(
+      this.fields.event,
+      'TS-CourtNav application'
+    );
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async selectTypeOfAdminNocApplicationC100() {
@@ -141,7 +150,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.submitEvent();
-    // await this.amOnHistoryPageWithSuccessNotification();
+    await this.amOnHistoryPageWithSuccessNotification();
   },
   async createNewCaseC100_TS() {
     await this.clickCreateCase();
@@ -154,8 +163,15 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
     await this.selectTypeOfAdminNocApplicationC100();
-    await I.retry(retryCount).click('Create my dummy case');
-    // await I.wait('10');
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createFL401CaseByCourtAdmin() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmitCourtNav_TS();
+    await I.click('Create my dummy case');
+    await this.amOnHistoryPageWithSuccessNotification();
   },
 
   async createNewCaseFL401() {
@@ -228,5 +244,13 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submitOther);
     await I.wait('10');
     return caseId;
+  },
+
+  async saveTheCaseId() {
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    return caseId;
   }
+
+
 };
