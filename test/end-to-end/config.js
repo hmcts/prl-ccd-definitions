@@ -1,5 +1,5 @@
 
-module.exports = {
+module.exports => {
   legalProfessionalUserOne: {
     email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
