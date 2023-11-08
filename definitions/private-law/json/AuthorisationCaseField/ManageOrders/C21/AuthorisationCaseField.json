@@ -202,5 +202,30 @@
         "CRUD": "R"
       }
     ]
-  }
+  },
+  {
+      "LiveFrom": "02/12/2021",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "selectedC21OrderLabel",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate",
+            "caseworker-privatelaw-solicitor",
+            "caseworker-wa-task-configuration"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "citizen",
+            "caseworker-privatelaw-superuser"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    }
 ]

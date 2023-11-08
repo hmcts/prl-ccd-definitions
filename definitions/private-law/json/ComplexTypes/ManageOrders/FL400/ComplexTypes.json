@@ -794,7 +794,7 @@
     "ListElementCode": "magistrateLastName",
     "FieldType": "Collection",
     "FieldTypeParameter": "MagistrateLastName",
-    "ElementLabel": "Last name",
+    "ElementLabel": "Magistrate's full name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -844,7 +844,8 @@
     "FieldType": "Text",
     "ElementLabel": "Add further directions if these are required",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1032,7 +1033,8 @@
     "FieldTypeParameter": "appointedGuardianFullName",
     "ElementLabel": "Guardian Full Name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1341,7 +1343,8 @@
     "LiveFrom": "03/10/2023",
     "ID": "DraftOrder",
     "ListElementCode": "underTakingExpiryDateTime",
-    "FieldType": "DateTimePicker",
+    "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",

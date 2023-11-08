@@ -1848,6 +1848,13 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "selectedOrderLabel1",
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedOrderLabel1",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRU"
   },
@@ -3151,7 +3158,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "magistrateLastName",
     "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "7/05/2022",
@@ -3228,14 +3235,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "magistrateLastName",
     "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "7/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentEndTime",
     "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "7/05/2022",
@@ -5021,6 +5028,32 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "judgeLaReviewRequired",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderNameForWA",
     "AccessControl": [
       {
         "UserRoles": [

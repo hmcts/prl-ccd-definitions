@@ -200,18 +200,6 @@
     "ListElementCode": "hearingEstimatedDays",
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "sdoSettlementHearingDetails",
-    "ListElementCode": "hearingEstimatedDaysText",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -224,18 +212,6 @@
     "ListElementCode": "hearingEstimatedHours",
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "sdoSettlementHearingDetails",
-    "ListElementCode": "hearingEstimatedHoursText",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -246,18 +222,6 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "hearingEstimatedMinutes",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "sdoSettlementHearingDetails",
-    "ListElementCode": "hearingEstimatedMinutesText",
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL",
@@ -342,10 +306,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantHearingChannel1",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName1} (Applicant1)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName1}",
     "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName1!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -354,10 +318,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel1",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor1} (Applicant1 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor1}",
     "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor1!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -366,10 +330,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantHearingChannel2",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName2} (Applicant2)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName2}",
     "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName2!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -378,10 +342,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel2",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor2} (Applicant2 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor2}",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor2!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -390,10 +354,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantHearingChannel3",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName3} (Applicant3)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName3}",
     "FieldDisplayOrder": "39",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName3!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -402,10 +366,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel3",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor3} (Applicant3 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor3}",
     "FieldDisplayOrder": "40",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor3!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -414,10 +378,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantHearingChannel4",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName4} (Applicant4)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName4}",
     "FieldDisplayOrder": "41",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName4!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -426,10 +390,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel4",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor4} (Applicant4 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor4}",
     "FieldDisplayOrder": "42",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor4!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -438,10 +402,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantHearingChannel5",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName5} (Applicant5)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantName5}",
     "FieldDisplayOrder": "43",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantName5!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -450,10 +414,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel5",
-    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor5} (Applicant5 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.applicantSolicitor5}",
     "FieldDisplayOrder": "44",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.applicantSolicitor5!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -462,10 +426,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentHearingChannel1",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName1} (Respondent1)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName1}",
     "FieldDisplayOrder": "45",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName1!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -474,10 +438,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel1",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor1} (Respondent1 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor1}",
     "FieldDisplayOrder": "46",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor1!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor1!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -486,10 +450,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentHearingChannel2",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName2} (Respondent2)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName2}",
     "FieldDisplayOrder": "47",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName2!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -498,10 +462,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel2",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor2} (Respondent2 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor2}",
     "FieldDisplayOrder": "48",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor2!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor2!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -510,10 +474,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentHearingChannel3",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName3} (Respondent3)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName3}",
     "FieldDisplayOrder": "49",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName3!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -522,10 +486,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel3",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor3} (Respondent3 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor3}",
     "FieldDisplayOrder": "50",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor3!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor3!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -534,10 +498,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentHearingChannel4",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName4} (Respondent4)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName4}",
     "FieldDisplayOrder": "51",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName4!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -546,10 +510,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel4",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor4} (Respondent4 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor4}",
     "FieldDisplayOrder": "52",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor4!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor4!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -558,10 +522,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentHearingChannel5",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName5} (Respondent5)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentName5}",
     "FieldDisplayOrder": "53",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentName5!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\"  AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -570,10 +534,10 @@
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "sdoSettlementHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel5",
-    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor5} (Respondent5 Solicitor)",
+    "EventElementLabel": "${sdoSettlementHearingDetails.respondentSolicitor5}",
     "FieldDisplayOrder": "54",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor5!=\"INVALID_DATA\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "FieldShowCondition": "sdoSettlementHearingDetails.respondentSolicitor5!=\"\" AND caseTypeOfApplication=\"C100\" AND sdoSettlementHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
