@@ -1,10 +1,10 @@
 const testConfig = require('../config');
 
-Feature('Create hearings for a case');
-Scenario('Create manual hearing for a case @wip', async({ I }) => {
+Feature('Create, update & Cancel hearings for a case');
+Scenario('Create, update & Cancel manual hearing for a case @nightly', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
-  await I.createFLCaseByCourtAdmin();
-  await I.manageOrderCreateOrderC21();
-//   await I.fillHearingDetails();
-//   await I.submitManageOrder();
+  await I.createC100CaseByCourtAdmin();
+  await I.requestANewHearing();
+  await I.updateAHearing();
+  await I.cancelHearing();
 }).retry(testConfig.TestRetryScenarios);

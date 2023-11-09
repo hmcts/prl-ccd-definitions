@@ -1,3 +1,5 @@
+'use strict';
+
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const PeopleInTheCasePage = require('./pages/PeopleInTheCase');
@@ -28,7 +30,7 @@ const withOutNoticeOrder = require('./pages/DOScreens/DaWithoutNoticeOrder');
 const theHome = require('./pages/DOScreens/TheHome');
 const submitAndPay = require('./pages/SubmitAndPay');
 const caseList = require('./pages/CaseList');
-const manageOrders = require('./pages/ManageOrders');
+const manageOrders = require('./pages/MOScreens/ManageOrders');
 const manageOrderHearing = require('./pages/ManageOrderHearing');
 const OtherChildrenNotInCase = require('./pages/OtherChildrenNotInCase');
 const ChildrenRelationships = require('./pages/ChildrenRelationships');
@@ -37,6 +39,11 @@ const UploadAdditionalApplications = require('./pages/UploadAdditionalApplicatio
 const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const hearingRequestPage = require('./pages/HearingRequest');
+const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
+const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
+const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
+// const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
 module.exports = () => {
@@ -44,11 +51,17 @@ module.exports = () => {
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
     },
+    loginAsRespondentSolicitor() {
+      return LoginPage.loginAsRespondentSolicitor();
+    },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
     },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
@@ -67,6 +80,9 @@ module.exports = () => {
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
+    },
+    createFL401CaseByCourtAdmin() {
+      return CreateCasePage.createFL401CaseByCourtAdmin();
     },
     manageOrderCreateOrderC21() {
       return manageOrders.createAnOrderC21();
@@ -227,6 +243,9 @@ module.exports = () => {
     saveTheCaseIdAndSignout() {
       return CreateCasePage.saveTheCaseIdAndSignout();
     },
+    saveTheCaseId() {
+      return CreateCasePage.saveTheCaseId();
+    },
     logInAsSolicitorNoCookies() {
       return LoginPage.loginAsSolicitorNoCookiesDisplayed();
     },
@@ -236,11 +255,71 @@ module.exports = () => {
     searchForCasesWithId(caseId) {
       return caseList.searchForCasesWithId(caseId, 'Any');
     },
+    searchForCaseWithoutId() {
+      return caseList.searchForCaseWithoutId();
+    },
+    verifySearchResultsFilteredByState() {
+      return caseList.verifySearchResultsFilteredByState();
+    },
     issueCase() {
       return issueCasePage.issueCase();
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    requestANewHearing() {
+      return hearingRequestPage.submitHearing();
+    },
+    updateAHearing() {
+      return hearingRequestPage.updateHearing();
+    },
+    cancelHearing() {
+      return hearingRequestPage.cancelHearing();
+    },
+    draftAnOrder() {
+      return manageOrders.composeDraftOrder();
+    },
+    editAnDraftOrder() {
+      return manageOrders.editDraftOrderByJudge();
+    },
+    serveAnOrder() {
+      return manageOrders.serveDraftOrderByCourtAdmin();
+    },
+    adminServeAnOrder() {
+      return manageOrders.createAndServeOrderByCourtAdmin();
+    },
+    manageOrderCreateOrderC43() {
+      return manageOrders.createAnOrderC43();
+    },
+    searchForInvalidCase() {
+      return caseList.searchForInvalidCase();
+    },
+    verifyInvalidSearchResults() {
+      return caseList.verifyInvalidSearchResults();
+    },
+    additionFilteringByApplicationType() {
+      return caseList.additionFilteringByApplicationType();
+    },
+    verifySearchResultsFilteredByStateAndApplicationType() {
+      return caseList.verifySearchResultsFilteredByStateAndApplicationType();
+    },
+    amendMiamDetails() {
+      return amendMiamDetailsPage.updateApplicationInfo();
+    },
+    verifyUpdatedMiamDetails() {
+      return amendMiamDetailsPage.verifyUpdatedMiamDetails();
+    },
+    submitAndVerifyNOCForCaseWithId(caseId) {
+      return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
+    },
+    sendAMessage() {
+      return sendMessagePage.sendInternalMsgToJudge();
+    },
+    reviewTheMessage() {
+      return sendMessagePage.reviewMessageAsJudge();
+    },
+    replyToMessageAsJudge() {
+      return sendMessagePage.respondToMessageAsJudge();
     }
   });
 };

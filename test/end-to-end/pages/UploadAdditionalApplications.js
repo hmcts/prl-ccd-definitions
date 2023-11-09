@@ -24,7 +24,8 @@ module.exports = {
     prlNoHWFText: 'Help with Fees is not yet available in the Family Private Law digital service.',
     HWFYesErrorMsg: 'Help with Fees is not yet available in Family Private Law digital ' +
       'service. Select \'No\' to continue with your application',
-    HWFRefNum: 'ABC-123-DEF'
+    HWFRefNum: 'ABC-123-DEF',
+    serviceTab: '//div[contains(text(), "Service Request")]'
   },
 
   async triggerEvent() {
@@ -71,9 +72,12 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('12');
-    await I.retry(retryCount).click('Service request');
+    await I.waitForText('Application submitted');
+    await I.click('Close and Return to case details');
+    await I.click(this.fields.serviceTab);
     await I.wait('10');
-    await I.retry(retryCount).waitForText('£167.00');
+    await I.waitForText('£232.00');
+    await I.see('John Doe Vs Mary Richards v2');
   },
   async submitAndPay_HWF_Yes() {
     await this.triggerEvent();
