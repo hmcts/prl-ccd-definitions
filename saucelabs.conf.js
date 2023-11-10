@@ -36,7 +36,7 @@ function getBrowserConfig(browserGroup) {
 }
 
 const setupConfig = {
-  tests: './test/end-to-end/tests/*.js',
+  tests: './test/end-to-end/tests/*_test.js',
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
     Puppeteer: {
@@ -71,8 +71,8 @@ const setupConfig = {
     GeneralHelper: {
       require: './test/end-to-end/helpers/generalHelper.js',
     },
-    PuppeteerHelpers: {
-      require: './test/end-to-end/helpers/puppeterHelper.js',
+    PlaywrightHelpers: {
+      require: './test/end-to-end/helpers/playwrightHelper.js',
     },
     GenerateReportHelper: {
       require: './test/end-to-end/helpers/generateReportHelper.js'
