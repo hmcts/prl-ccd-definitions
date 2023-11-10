@@ -113,12 +113,12 @@ const setupConfig = {
     // microsoft: {
     //   browsers: getBrowserConfig('microsoft'),
     // },
-    // chrome: {
-    //   browsers: getBrowserConfig('chromium'),
-    // },
-    // firefox: {
-    //   browsers: getBrowserConfig('firefox'),
-    // },
+    chrome: {
+      browsers: getBrowserConfig('chromium'),
+    },
+    firefox: {
+      browsers: getBrowserConfig('firefox'),
+    },
     webkit: {
       browsers: getBrowserConfig('webkit'),
     },
