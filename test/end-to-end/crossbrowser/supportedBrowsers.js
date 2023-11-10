@@ -4,7 +4,7 @@ const LATEST_WINDOWS = 'Windows 10';
 const supportedBrowsers = {
   microsoft: {
     edge_win_latest: {
-      browserName: 'MicrosoftEdge',
+      browserName: 'msedge',
       platformName: LATEST_WINDOWS,
       browserVersion: 'latest-1',
       'sauce:options': {
