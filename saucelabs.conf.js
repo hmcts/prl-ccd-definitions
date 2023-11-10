@@ -109,14 +109,18 @@ const setupConfig = {
     },
   },
   multiple: {
-    microsoft: {
-      browsers: getBrowserConfig('microsoft'),
-    },
+    //Codeceptjs does not support Microsoft browser with playwright helper
+    // microsoft: {
+    //   browsers: getBrowserConfig('microsoft'),
+    // },
     chrome: {
       browsers: getBrowserConfig('chromium'),
     },
     firefox: {
       browsers: getBrowserConfig('firefox'),
+    },
+    webkit: {
+      browsers: getBrowserConfig('webkit'),
     },
     // safari: {
     //   browsers: getBrowserConfig('safari'),
