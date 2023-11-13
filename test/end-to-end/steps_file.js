@@ -41,6 +41,8 @@ const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
 const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
+const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
+const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
@@ -48,6 +50,9 @@ module.exports = () => {
   return actor({
     loginAsSolicitor() {
       return LoginPage.loginAsSolicitor();
+    },
+    loginAsRespondentSolicitor() {
+      return LoginPage.loginAsRespondentSolicitor();
     },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
@@ -303,6 +308,18 @@ module.exports = () => {
     },
     verifyUpdatedMiamDetails() {
       return amendMiamDetailsPage.verifyUpdatedMiamDetails();
+    },
+    submitAndVerifyNOCForCaseWithId(caseId) {
+      return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
+    },
+    sendAMessage() {
+      return sendMessagePage.sendInternalMsgToJudge();
+    },
+    reviewTheMessage() {
+      return sendMessagePage.reviewMessageAsJudge();
+    },
+    replyToMessageAsJudge() {
+      return sendMessagePage.respondToMessageAsJudge();
     }
   });
 };
