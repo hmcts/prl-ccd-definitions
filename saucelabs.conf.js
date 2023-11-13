@@ -39,21 +39,7 @@ const setupConfig = {
   tests: './test/end-to-end/tests/*_test.js',
   output: `${process.cwd()}/${testConfig.TestOutputDir}`,
   helpers: {
-    Puppeteer: {
-      // headless mode
-      show: process.env.SHOW_BROWSER_WINDOW || false,
-      // show: true,
-      url: 'http://localhost:3000',
-      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
-      waitForTimeout: 180000,
-      ignoreHTTPSErrors: true,
-      chrome: {
-        ignoreHTTPSErrors: true,
-        args: ['--no-sandbox']
-      },
-      windowSize: '1280x960'
-    },
-    WebDriver: {
+    Playwright: {
       url: process.env.TEST_URL,
       keepCookies: true,
       browser,
@@ -123,14 +109,18 @@ const setupConfig = {
     },
   },
   multiple: {
-    microsoft: {
-      browsers: getBrowserConfig('microsoft'),
-    },
+    //Codeceptjs does not support Microsoft browser with playwright helper
+    // microsoft: {
+    //   browsers: getBrowserConfig('microsoft'),
+    // },
     chrome: {
-      browsers: getBrowserConfig('chrome'),
+      browsers: getBrowserConfig('chromium'),
     },
     firefox: {
       browsers: getBrowserConfig('firefox'),
+    },
+    webkit: {
+      browsers: getBrowserConfig('webkit'),
     },
     // safari: {
     //   browsers: getBrowserConfig('safari'),
