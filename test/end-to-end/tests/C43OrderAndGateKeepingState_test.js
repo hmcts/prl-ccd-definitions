@@ -3,7 +3,7 @@ const testConfig = require('../config');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
-Feature('Solicitor - Manage order & Gatekeeping tests');
+Feature('Solicitor - Manage order, Gatekeeping & Service of application tests');
 
 Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @nightly', async({ I }) => {
   await I.loginAsSolicitor();
@@ -20,15 +20,17 @@ Scenario('As a Judge edit & change a draft order @nightly', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.editAnDraftOrder();
-});
+}).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
+Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {  
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.serveAnOrder();
+  await I.performServiceOfApplication();
 });
 
 Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
   await I.loginAsRespondentSolicitor();
   await I.submitAndVerifyNOCForCaseWithId(caseId);
 }).retry(testConfig.TestRetryScenarios);
+
