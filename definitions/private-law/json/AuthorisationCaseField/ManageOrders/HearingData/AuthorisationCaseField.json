@@ -129,7 +129,60 @@
   {
     "LiveFrom": "01/09/2023",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "solicitorCreateHearingRequiredLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-la",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "createHearingOptionalLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-la",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "solicitorCreateHearingOptionalLabel",
     "AccessControl": [
       {
         "UserRoles": [
