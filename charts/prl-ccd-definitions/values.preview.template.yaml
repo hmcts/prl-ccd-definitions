@@ -110,6 +110,8 @@ ccd:
         am:
           secrets:
             - role-assignment-service-LD-SDK-KEY
+      environment:
+        LD_SDK_KEY: ${LD_SDK_AM_KEY}
 
   ccd-definition-store-api:
     java:
