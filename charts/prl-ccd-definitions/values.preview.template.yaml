@@ -109,7 +109,8 @@ ccd:
       keyVaults:
         am:
           secrets:
-            - role-assignment-service-LD-SDK-KEY
+            - name: role-assignment-service-LD-SDK-KEY
+              alias: LD_SDK_KEY
       environment:
         LD_SDK_KEY: ${LD_SDK_AM_KEY}
 
