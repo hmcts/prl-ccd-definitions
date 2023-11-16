@@ -106,13 +106,13 @@ ccd:
 
   am-role-assignment-service:
     java:
+      environment:
+        LD_SDK_KEY: ${LD_SDK_AM_KEY}
       keyVaults:
         am:
           secrets:
-            - name: role-assignment-service-LD-SDK-KEY
-              alias: LD_SDK_KEY
-      environment:
-        LD_SDK_KEY: ${LD_SDK_AM_KEY}
+          - name: role-assignment-service-LD-SDK-KEY
+            alias: LD_SDK_KEY
 
   ccd-definition-store-api:
     java:
