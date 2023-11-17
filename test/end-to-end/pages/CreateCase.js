@@ -28,10 +28,12 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
