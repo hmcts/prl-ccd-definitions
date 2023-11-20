@@ -1933,7 +1933,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "orderCollection",
     "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
+    "CRUD": "CRUD"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -4850,6 +4850,26 @@
           "citizen"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "07/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isSdoSelected",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "CRU"
       }
     ]
   }
