@@ -548,7 +548,7 @@
     "ListElementCode": "cafcassHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "55",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND sdoUrgentHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND sdoUrgentHearingDetails.isCafcassCymru=\"No\""
   },
   {
@@ -560,7 +560,7 @@
     "ListElementCode": "cafcassCymruHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "56",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND sdoUrgentHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND sdoUrgentHearingDetails.isCafcassCymru=\"Yes\""
   },
   {
@@ -572,7 +572,7 @@
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "57",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sdoUrgentHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND  sdoUrgentHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -719,5 +719,29 @@
     "FieldDisplayOrder": "69",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "sdoUrgentHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.idamId",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "70",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "sdoUrgentHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "71",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoUrgentHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   }
 ]
