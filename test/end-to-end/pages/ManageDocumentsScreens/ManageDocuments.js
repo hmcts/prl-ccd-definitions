@@ -5,8 +5,6 @@ const manageDocConfig = require('./manageDocConfig');
 
 const date = new Date();
 const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
-let pdfDocFilePath = '../resource/dummy.pdf';
-let audioDocFilePath = '../resource/test_av.mp3';
 
 module.exports = {
 
@@ -28,13 +26,13 @@ module.exports = {
     noticeOfHearingFolderEle: '//*[@aria-level="2"]/button/span[contains(text(), "Notice of Hearing")]',
     noticeOfHearingFileEle: '//*[@aria-level="3"]/button/span[contains(text(), "dummy.pdf")]',
     nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
-    
+
     // add new fields
     additionalSelectParty: '#manageDocuments_1_documentParty',
     additionalDocCategoryField: '#manageDocuments_1_documentCategories',
     additionalDocUploadField: '#manageDocuments_1_document',
     additionalDocDetailsField: '#manageDocuments_1_documentDetails',
-    additionalSelectRestrictAccess: '#manageDocuments_1_documentRestrictCheckbox-restrictToGroup',
+    additionalSelectRestrictAccess: '#manageDocuments_1_documentRestrictCheckbox-restrictToGroup'
   },
 
   async triggerEvent() {
@@ -93,7 +91,7 @@ module.exports = {
     await I.see(manageDocConfig.docDetailsText);
     await I.see(formattedDate);
 
-    //verify audio file submission
+    // verify audio file submission
     await I.see(manageDocConfig.audioFileName);
     await I.see('Court staff uploaded documents 2');
   },
@@ -127,7 +125,7 @@ module.exports = {
     await I.see(manageDocConfig.partyType);
     await I.see(formattedDate);
 
-    //verify audio files
+    // verify audio files
     await I.see('Court staff uploaded confidential documents 2');
     await I.see(manageDocConfig.audioFileName);
   },
