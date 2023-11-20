@@ -31,7 +31,7 @@
     "PageDisplayOrder": 14,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "orderType=\"noticeOfProceedingsParties\" OR orderType=\"noticeOfProceedingsNonParties\" OR orderType=\"noticeOfProceedings\""
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND (orderType=\"noticeOfProceedingsParties\" OR orderType=\"noticeOfProceedingsNonParties\" OR orderType=\"noticeOfProceedings\")"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -43,7 +43,7 @@
     "PageDisplayOrder": 14,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
   },
   {
     "LiveFrom": "22/10/2022",
