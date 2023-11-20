@@ -28,7 +28,7 @@ xui-webapp:
   nodejs:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
-    image: hmctspublic.azurecr.io/xui/webapp:pr-3353-e44bda8-20231106181906
+    image: hmctspublic.azurecr.io/xui/webapp:pr-3353-b717b03-20231117165501
     ingressHost: xui-${SERVICE_FQDN}
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
@@ -275,6 +275,10 @@ ccd-case-document-am-api:
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
       S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
+      CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      CASE_DOCUMENT_AM_API_S2S_SECRET: ${CCD_CASE_DOCUMENT_AM_API_SECRET}
+
 aac-manage-case-assignment:
   enabled: true
   java:
@@ -305,5 +309,4 @@ aac-manage-case-assignment:
       IDAM_NOC_APPROVER_PASSWORD: ${IDAM_NOC_APPROVER_PASSWORD}
       NOTIFY_MCA_API_KEY: ${NOTIFY_MCA_API_KEY}
       autoscaling:
-          enabled: false
-
+        enabled: false
