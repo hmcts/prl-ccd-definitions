@@ -28,9 +28,9 @@ module.exports = {
   async runEventApplicantsFamily() {
     await this.triggerEvent();
     await this.applicantFamily();
-    I.wait('2');
+    // I.wait('2');
     await I.click('Save and continue');
-    await I.submitEvent();
+    // await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
 };

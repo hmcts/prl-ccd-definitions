@@ -53,10 +53,6 @@ Scenario('add all the roles @pipeline', ({ I }) => {
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
   I.loginToAdminConsole();
-  try {
-    I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
-    I.wait('40');
-  } catch (error) {
-    console.log(error);
-  }
+  I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
+  I.wait('40');
 }).retry(1); // eslint-disable-line no-magic-numbers
