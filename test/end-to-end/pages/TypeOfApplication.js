@@ -58,7 +58,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.specificIssueOrder);
     await I.retry(retryCount).click(this.fields.typeOfChildArrangementsOrder);
     await I.retry(retryCount).fillField('#natureOfOrder', 'Test text');
-    await I.runAccessibilityTest(); 
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
