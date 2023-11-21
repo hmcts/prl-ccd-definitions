@@ -33,6 +33,7 @@ module.exports = {
     await I.retry(retryCount).click(
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
@@ -40,12 +41,14 @@ module.exports = {
     await I.retry(retryCount).waitForText('Declaration');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
     await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
   async helpWithFeeNo() {
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).waitForText('Check your answers');
@@ -75,6 +78,7 @@ module.exports = {
 
   async happensNext() {
     await I.waitForClickable(this.fields.submit);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
