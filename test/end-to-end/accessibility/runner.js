@@ -45,7 +45,6 @@ async function runAccessibility(url, page) {
         })
         .map(processIssue);
     });
-
     return messages;
   });
 
@@ -67,7 +66,7 @@ function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityEr
   accessibilityErrorsOnThePage.forEach(test => {
     console.log(`analyzing the accessibilityErrorsOnThePage: ${test.code} -  ${test.message}`);
   });
-  
+
   let isPageAccessible = null;
   if (accessibilityErrorsOnThePage) {
     isPageAccessible = accessibilityErrorsOnThePage.length === 0 ? result.PASSED : result.FAILED;
