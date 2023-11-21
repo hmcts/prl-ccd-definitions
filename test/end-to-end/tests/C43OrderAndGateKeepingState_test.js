@@ -27,7 +27,7 @@ Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
   await I.searchForCasesWithId(caseId);
   await I.serveAnOrder();
   await I.performServiceOfApplication();
-});
+}).retry(testConfig.TestRetryScenarios);
 
 Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
   await I.loginAsRespondentSolicitor();

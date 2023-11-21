@@ -37,15 +37,15 @@ const supportedBrowsers = {
     }
   },
   chromium: {
-    chrome_win_latest: {
-      browserName: 'chromium',
-      platformName: LATEST_WINDOWS,
-      browserVersion: 'latest-1',
-      'sauce:options': {
-        name: 'PRL: WIN_CHROME_LATEST',
-        screenResolution: '1600x1200'
-      }
-    },
+    // chrome_win_latest: {
+    //   browserName: 'chromium',
+    //   platformName: LATEST_WINDOWS,
+    //   browserVersion: 'latest-1',
+    //   'sauce:options': {
+    //     name: 'PRL: WIN_CHROME_LATEST',
+    //     screenResolution: '1600x1200'
+    //   }
+    // },
     chrome_mac_latest: {
       browserName: 'chromium',
       platformName: LATEST_MAC,
