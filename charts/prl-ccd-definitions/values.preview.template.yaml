@@ -272,13 +272,13 @@ ccd-case-document-am-api:
     image: hmctspublic.azurecr.io/ccd/case-document-am-api:latest
     ingressHost: ccd-case-document-am-api-${SERVICE_FQDN}
     environment:
-      DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
-      CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
-      CASE_DOCUMENT_AM_API_S2S_SECRET: ${CCD_CASE_DOCUMENT_AM_API_SECRET}
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
       OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
       S2S_URL: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      DM_STORE_BASE_URL: http://dm-store-aat.service.core-compute-aat.internal
+      CCD_DATA_STORE_API_BASE_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      CASE_DOCUMENT_AM_API_S2S_SECRET: ${CCD_CASE_DOCUMENT_AM_API_SECRET}
 
 aac-manage-case-assignment:
   enabled: true
@@ -311,4 +311,3 @@ aac-manage-case-assignment:
       NOTIFY_MCA_API_KEY: ${NOTIFY_MCA_API_KEY}
       autoscaling:
           enabled: false
-
