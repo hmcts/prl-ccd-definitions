@@ -21,7 +21,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -32,7 +33,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -182,7 +184,8 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -206,7 +209,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "c21OrderOptions=\"c21other\""
+    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"generalForm\" OR c21OrderOptions=\"c21other\""
   },
   {
     "LiveFrom": "31/03/2022",

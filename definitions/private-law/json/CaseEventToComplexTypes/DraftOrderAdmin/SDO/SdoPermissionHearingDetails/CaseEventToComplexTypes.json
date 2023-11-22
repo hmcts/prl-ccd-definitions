@@ -56,8 +56,7 @@
     "ListElementCode": "hearingDateTimes.hearingDateTimeOption",
     "EventElementLabel": "",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -548,7 +547,7 @@
     "ListElementCode": "cafcassHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "55",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND sdoPermissionHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND sdoPermissionHearingDetails.isCafcassCymru=\"No\""
   },
   {
@@ -560,7 +559,7 @@
     "ListElementCode": "cafcassCymruHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "56",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND sdoPermissionHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" AND sdoPermissionHearingDetails.isCafcassCymru=\"Yes\""
   },
   {
@@ -572,7 +571,7 @@
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
     "FieldDisplayOrder": "57",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sdoPermissionHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND  sdoPermissionHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -719,5 +718,29 @@
     "FieldDisplayOrder": "69",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "sdoPermissionHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.idamId",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "70",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "sdoPermissionHearingDetails",
+    "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "71",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoPermissionHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   }
 ]
