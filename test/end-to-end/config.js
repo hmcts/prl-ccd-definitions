@@ -1,10 +1,7 @@
-const defaultPassword = 'Nagoya0102';
-const judgeDefaultPassword = 'Hmcts1234';
-
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-e2etestsolicitor@mailinator.com',
-    password: defaultPassword
+    email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
   legalProfessionalUserTwo: {
     email: process.env.COURTADMIN_TESTUSER_ONE,
@@ -19,8 +16,8 @@ module.exports = {
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
   judgeUserOne: {
-    email: '4923952EMP-@ejudiciary.net',
-    password: judgeDefaultPassword
+    email: process.env.JUDGE_TESTUSER_ONE,
+    password: process.env.JUDGE_TESTPASSWORD
   },
   definition: {
     jurisdiction: 'PRIVATELAW',
