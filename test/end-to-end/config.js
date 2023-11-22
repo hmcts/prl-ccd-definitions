@@ -1,3 +1,4 @@
+
 module.exports = {
   legalProfessionalUserOne: {
     email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
