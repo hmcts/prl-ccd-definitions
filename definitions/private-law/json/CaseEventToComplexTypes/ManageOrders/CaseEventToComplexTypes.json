@@ -50,9 +50,10 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOptionsCaDaOther",
     "ListElementCode": "emailInformation",
+    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"email\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "COMPLEX"
   },
   {
     "LiveFrom": "22/11/2023",
@@ -60,9 +61,10 @@
     "ID": "ServeOther",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOptionsCaDaOther",
+    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
     "ListElementCode": "postalInformation",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "COMPLEX"
   }
 ]
