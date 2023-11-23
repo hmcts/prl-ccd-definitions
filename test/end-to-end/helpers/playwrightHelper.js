@@ -1,14 +1,14 @@
 const testConfig = require('../config.js');
 const { runAccessibility } = require('../accessibility/runner');
 
-module.exports = class PuppeteerHelpers extends Helper {
+module.exports = class PlaywrightHelpers extends Helper {
   clickBrowserBack() {
-    const page = this.helpers.Puppeteer.page;
+    const page = this.helpers.Playwright.page;
     return page.goBack();
   }
 
   reloadPage() {
-    const page = this.helpers.Puppeteer.page;
+    const page = this.helpers.Playwright.page;
     return page.reload();
   }
 
@@ -22,7 +22,7 @@ module.exports = class PuppeteerHelpers extends Helper {
   // eslint-disable-next-line require-await
   async locateSelector(selector) {
     // eslint-disable-next-line no-return-await
-    return this.helpers.Puppeteer._locate(selector);
+    return this.helpers.Playwright._locate(selector);
   }
 
   async hasSelector(selector) {
@@ -40,8 +40,8 @@ module.exports = class PuppeteerHelpers extends Helper {
    */
   async waitForSelector(locator, sec) {
     const calc = 1000;
-    const waitTimeout = sec ? sec * calc : this.helpers.Puppeteer.options.waitForTimeout;
-    const context = await this.helpers.Puppeteer._getContext();
+    const waitTimeout = sec ? sec * calc : this.helpers.Playwright.options.waitForTimeout;
+    const context = await this.helpers.Playwright._getContext();
     try {
       return await context.waitForSelector(locator, { timeout: waitTimeout });
     } catch (error) {
@@ -57,7 +57,7 @@ module.exports = class PuppeteerHelpers extends Helper {
 
   async canSee(selector) {
     try {
-      const numVisible = await this.helpers.Puppeteer.grabNumberOfVisibleElements(selector);
+      const numVisible = await this.helpers.Playwright.grabNumberOfVisibleElements(selector);
       return Boolean(numVisible);
       // eslint-disable-next-line id-blacklist
     } catch (err) {
@@ -92,11 +92,11 @@ module.exports = class PuppeteerHelpers extends Helper {
   }
 
   getHelper() {
-    return this.helpers.Puppeteer || this.helpers.WebDriver;
+    return this.helpers.Playwright || this.helpers.WebDriver;
   }
 
-  isPuppeteer() {
-    return this.helpers.Puppeteer;
+  isPlaywright() {
+    return this.helpers.Playwright;
   }
 
   async runAccessibilityTest() {

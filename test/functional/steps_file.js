@@ -15,24 +15,21 @@ module.exports = () => {
       I.fillField('username', config.legalProfessionalUserOne.email);
       I.fillField('password', config.legalProfessionalUserOne.password);
       I.click('Sign in');
-      I.wait('20');
       I.see('Welcome to CCD Admin Web');
     },
     createRole(role) {
       I.click('Manage User Roles');
-      I.wait('5');
       I.click('Create User Role');
-      I.wait('5');
       I.fillField('role', role);
       I.click('Create');
-      I.wait('5');
     },
     uploadConfig(path) {
       I.click('Import Case Definition');
       I.wait('10');
       I.attachFile('file', path);
-      I.wait('10');
-      I.click('Submit');
+      I.usePlaywrightTo('force a click on element', async({ page }) => {
+        await page.locator('//button[@type="submit"]').dispatchEvent('click');
+      });
     }
   });
 };

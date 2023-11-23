@@ -1,5 +1,6 @@
-Feature('Help with Fee - Solicitor - CA Submit - Error message');
+const testConfig = require('../config');
 
+Feature('Help with Fee - Solicitor - CA Submit - Error message');
 Scenario(
   'Solicitor Help With Fee - YES option - Create CA Submit -  Error message @nightly',
   async({ I }) => {
@@ -7,4 +8,4 @@ Scenario(
     await I.createCase_TS();
     await I.runSubmitAndPayHappyPath_HWF_Yes();
   }
-).retry(1);
+).retry(testConfig.TestRetryScenarios);
