@@ -38,6 +38,7 @@ module.exports = {
 
   async searchForCasesWithId(caseId, state = 'Any') {
     await I.navigationInWAEnvs(this.fields.caseList);
+    await I.click(this.fields.caseList);
     this.setInitialSearchFields(state);
     await I.grabCurrentUrl();
     await I.fillField(this.fields.caseId, caseId);
