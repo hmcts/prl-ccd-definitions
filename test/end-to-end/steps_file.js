@@ -21,7 +21,7 @@ const otherProceedings = require('./pages/OtherProceedings');
 const allegationsOfHarm = require('./pages/allegationsOfHarm');
 const viewPDFApplication = require('./pages/ViewPDFApplication');
 const statementOfTruth = require('./pages/StatementOfTruth');
-const manageDocuments = require('./pages/ManageDocuments');
+const manageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
 const respondentBehaviour = require('./pages/DOScreens/RespondentBehaviour');
 const relationshipToRespondent = require('./pages/DOScreens/RelationshipToRespondent');
 const DOAttendingTheHearing = require('./pages/DOScreens/AttendingTheHearing');
@@ -42,6 +42,9 @@ const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
 const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
 const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
+const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
+const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
+const ManageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
@@ -179,9 +182,6 @@ module.exports = () => {
     statementOfTruthEvent() {
       return statementOfTruth.runStatementOfTruthEvent();
     },
-    runManageDocuments() {
-      return manageDocuments.runManageDocumentsHappyPath();
-    },
     runRespondentBehaviour() {
       return respondentBehaviour.runEventRespondentBehaviour();
     },
@@ -310,6 +310,30 @@ module.exports = () => {
     },
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
+    },
+    sendAMessage() {
+      return sendMessagePage.sendInternalMsgToJudge();
+    },
+    reviewTheMessage() {
+      return sendMessagePage.reviewMessageAsJudge();
+    },
+    replyToMessageAsJudge() {
+      return sendMessagePage.respondToMessageAsJudge();
+    },
+    performServiceOfApplication() {
+      return soaPage.performServiceOfApplication();
+    },
+    performManageDocuments() {
+      return manageDocuments.runManageDocumentsHappyPath();
+    },
+    reviewManageDocuments() {
+      return manageDocuments.reviewDocuments();
+    },
+    performNonRestrictedManageDocuments() {
+      return ManageDocuments.addNonRestrictedDocuments();
+    },
+    reviewNonRestManageDocuments() {
+      return manageDocuments.nonRestReviewDocuments();
     }
   });
 };
