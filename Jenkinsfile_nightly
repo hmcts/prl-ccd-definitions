@@ -1,11 +1,11 @@
 #!groovy
 
 properties([
-    pipelineTriggers([cron('H 07 * * 1-5')]),
-    parameters([
-        string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
-        string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
-    ])
+        pipelineTriggers([cron('H 07 * * 1-5')]),
+        parameters([
+                string(name: 'RUNNING_ENV', defaultValue: 'aat', description: 'Environment to test'),
+                string(name: 'XUI_WEB_URL', defaultValue: 'https://manage-case.aat.platform.hmcts.net', description: 'The URL you want to run solicitor tests against'),
+        ])
 ])
 
 @Library("Infrastructure")
@@ -48,12 +48,12 @@ def secrets = [
 ]
 
 static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
-  [ $class: 'AzureKeyVaultSecret',
-    secretType: 'Secret',
-    name: secretName,
-    version: '',
-    envVariable: envVar
-  ]
+    [ $class: 'AzureKeyVaultSecret',
+      secretType: 'Secret',
+      name: secretName,
+      version: '',
+      envVariable: envVar
+    ]
 }
 
 withNightlyPipeline("nodejs", product, component) {
@@ -75,6 +75,6 @@ withNightlyPipeline("nodejs", product, component) {
     before('crossBrowserTest') {}
 
     afterAlways('crossBrowserTest') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 }
