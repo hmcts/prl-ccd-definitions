@@ -47,6 +47,8 @@ const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
 const ManageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
 const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
 const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
+const createFlags = require('./pages/CreateFlagScreens/createFlags');
+const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 
@@ -342,6 +344,12 @@ module.exports = () => {
     },
     reviewSupportForHearingRequest() {
       return manageFlags.reviewSupportRequestForParties();
+    },
+    addCAFlags() {
+      return createFlags.createFlags();
+    },
+    reviewCAAddedFlags() {
+      return verifyFlags.verifySolicitorOnlyFlags();
     }
   });
 };
