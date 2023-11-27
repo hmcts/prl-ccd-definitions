@@ -721,39 +721,21 @@
     "CRUD": "CRU"
   },
   {
-    "LiveFrom": "24/11/2023",
+    "LiveFrom": "17/05/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "ordersFromOtherProceedings",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "24/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ordersFromOtherProceedings",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "24/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ordersFromOtherProceedings",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "24/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ordersFromOtherProceedings",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "24/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "ordersFromOtherProceedings",
-    "UserRole": "ctsc-team-leader",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-cafcass",
+          "ctsc-team-leader"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   },
   {
     "LiveFrom": "24/11/2022",
