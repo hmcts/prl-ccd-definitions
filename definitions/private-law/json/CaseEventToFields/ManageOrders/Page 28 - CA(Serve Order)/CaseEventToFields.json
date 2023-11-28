@@ -45,7 +45,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "serveToRespondentOptions=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\" AND displayLegalRepOption=\"No\"",
+    "FieldShowCondition": "(serveToRespondentOptions=\"Yes\" OR serveToRespondentOptionsOnlyC47a=\"Yes\" OR caseTypeOfApplication=\"FL401\") AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -189,7 +189,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -273,7 +273,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "serveToRespondentOptionsOnlyC47a=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"Yes\"",
+    "FieldShowCondition": "serveToRespondentOptionsOnlyC47a=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"Yes\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
