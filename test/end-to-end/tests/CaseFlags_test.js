@@ -26,8 +26,7 @@ Scenario('As a court admin - Add a Non-RA & RA flags @ithc-tests', async({ I }) 
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a Solicitor - I should only see RA flags @ithc-tests', async({ I }) => {
-    await I.loginAsSolicitor();
-    await I.searchForCasesWithId(caseId);
-    await I.reviewCAAddedFlags();
-  }).retry(testConfig.TestRetryScenarios);
-  
+  await I.loginAsSolicitor();
+  await I.searchForCasesWithId(caseId);
+  await I.reviewCAAddedFlags();
+}).retry(testConfig.TestRetryScenarios);

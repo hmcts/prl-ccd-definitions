@@ -1,6 +1,7 @@
 'use strict';
 const I = actor();
 const createFlagsConfig = require('./createFlagsConfig');
+
 const date = new Date();
 
 module.exports = {
@@ -18,19 +19,13 @@ module.exports = {
 
     await I.click(this.fields.supportTabSelector);
 
-    // // verify applicant request details
-    // await I.seeInField(this.fields.nonRAFlagEleForSolicitorApplicant, createFlagsConfig.nonRAFlagType);
-    // await I.seeInField(this.fields.nonRACommentEleForSolicitorApplicant, createFlagsConfig.nonRAFlagCommentsText);
-    // await I.seeInField(this.fields.nonRAflagStatusEleForFirstApplicant, 'ACTIVE');
-    // await I.see(formattedDate);
-
     // verify applicant solicitor request details
     await I.seeInField(this.fields.raFlagEleForSolicitorApplicant, createFlagsConfig.raFlagSubChildValue);
     await I.seeInField(this.fields.raCommentEleForSolicitorApplicant, createFlagsConfig.raFlagCommentsText);
     await I.seeInField(this.fields.raflagStatusEleForFirstApplicant, 'ACTIVE');
-    await I.see(formattedDate); 
+    await I.see(formattedDate);
 
     await I.dontSee(createFlagsConfig.nonRAFlagType);
     await I.dontSee(createFlagsConfig.nonRAFlagCommentsText);
   }
-}
+};

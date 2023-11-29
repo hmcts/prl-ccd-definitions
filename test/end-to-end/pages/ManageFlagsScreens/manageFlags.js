@@ -1,6 +1,7 @@
 'use strict';
 const I = actor();
 const manageFlagConfig = require('./manageFlagsConfig');
+
 const date = new Date();
 
 module.exports = {

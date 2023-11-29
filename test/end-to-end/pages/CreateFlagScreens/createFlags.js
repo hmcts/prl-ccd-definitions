@@ -1,6 +1,7 @@
 'use strict';
 const I = actor();
 const createFlagsConfig = require('./createFlagsConfig');
+
 const date = new Date();
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
     sixthRaFlagChildEle: '#flag-type-6',
     secondRaFlagSubChildEle: '#flag-type-1',
     activeStatusEle: '#flag-status-1',
-    flagComments: "#flagComments",
+    flagComments: '#flagComments',
     caseFlagsTabSelector: '//div[contains(text(), "Case Flags")]',
     supportTabSelector: '//div[contains(text(), "Support")]',
     nonRAFlagEleForSolicitorApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[1]/td[1]/div[1]',
@@ -21,7 +22,7 @@ module.exports = {
     nonRAflagStatusEleForFirstApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[1]/td[5]/strong',
     raFlagEleForSolicitorApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[2]/td[1]/div[1]',
     raCommentEleForSolicitorApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[2]/td[2]/div[1]',
-    raflagStatusEleForFirstApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[2]/td[5]/strong',
+    raflagStatusEleForFirstApplicant: '//table/caption[contains(text(), "Sr Legal Solicitor")]/../tbody[2]/tr[2]/td[5]/strong'
   },
 
   async selectCreateFlags() {
@@ -36,12 +37,12 @@ module.exports = {
     await I.click(this.fields.nextBtn);
     await I.waitForText(createFlagsConfig.flagCommentsTitle);
     await I.fillField(this.fields.flagComments, createFlagsConfig.nonRAFlagCommentsText);
-    
-    //Active status pre-selected
+
+    // Active status pre-selected
     await I.click(this.fields.nextBtn);
 
-     //Active status pre-selected
-     await I.click(this.fields.nextBtn);
+    // Active status pre-selected
+    await I.click(this.fields.nextBtn);
 
     await I.waitForText(createFlagsConfig.cyaTextTitle);
     await I.see(createFlagsConfig.legalSolicitorName);
@@ -94,14 +95,14 @@ module.exports = {
   },
 
   async createFlags() {
-      await this.selectCreateFlags();
-      await this.selectNonReasonableFlagType();
+    await this.selectCreateFlags();
+    await this.selectNonReasonableFlagType();
 
-      await this.selectCreateFlags();
-      await this.selectReasonableFlagType();
+    await this.selectCreateFlags();
+    await this.selectReasonableFlagType();
 
-      await I.amOnHistoryPageWithSuccessNotification();
-      await this.verifyCaseFlagsCreated();
+    await I.amOnHistoryPageWithSuccessNotification();
+    await this.verifyCaseFlagsCreated();
   }
 
-}
+};
