@@ -35,9 +35,9 @@
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "serveByPostOrEmail",
     "EventElementLabel": "Served by",
     "FieldDisplayOrder": "1",
@@ -46,11 +46,11 @@
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "emailInformation",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"email\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"email\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "COMPLEX"
@@ -58,34 +58,34 @@
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "emailInformation.emailAddress",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"email\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"email\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "emailInformation.emailName",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"email\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"email\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "CaseFieldID": "serveOrgDetailsList",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "ListElementCode": "postalInformation",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "3",
@@ -94,23 +94,23 @@
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalName",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "2",
     "DisplayContext": "COMPLEX"
@@ -118,85 +118,85 @@
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.AddressLine1",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.AddressLine2",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.AddressLine3",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.PostTown",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "6",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.County",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "7",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.PostCode",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "8",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOther",
+    "ID": "ServeOrgDetails",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "serveOptionsCaDaOther",
+    "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.Country",
-    "FieldShowCondition": "serveOptionsCaDaOther.serveByPostOrEmail=\"post\"",
+    "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "9",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "OPTIONAL"
   }
 ]
