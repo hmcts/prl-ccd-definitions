@@ -59,7 +59,12 @@ module.exports = {
     editOrder_no: '#doYouWantToEditTheOrder_No',
     judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
     isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
-    selectOrderType: '#selectTypeOfOrder'
+    selectOrderType: '#selectTypeOfOrder',
+    guardianInputBox: '#guardianTextBox',
+    judgeCheckOrderEle: '#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck',
+    selectJudgeForOrderReview: '#amendOrderSelectJudgeOrLa-judge',
+    judgeNameField: '#nameOfJudgeToReviewOrder',
+    judgeAutoCompEle: 'span.mat-option-text'
   },
 
   async selectOrder(modeOfOrder) {
@@ -150,8 +155,7 @@ module.exports = {
     await I.click(this.fields.doYouWantToServeOrder_Yes);
     await I.click(moConfig.continueText);
 
-    // await I.waitForText('Special guardianship order (C43A) - 24 Oct 2023');
-    await I.waitForText(`${moConfig.c43AOrderText} - 24 Oct 2023`);
+    await I.waitForElement(this.fields.selectOrderToServe);
     await I.click(this.fields.selectOrderToServe);
     await I.click(moConfig.continueText);
 
@@ -178,6 +182,17 @@ module.exports = {
     await I.waitForText(moConfig.orderTypeText);
   },
 
+  async verifyCourtAdminOrderSubmission() {
+    await I.clickTillElementFound(this.fields.ordersTabSelector, this.fields.nextBtnSelector);
+    await I.click(this.fields.ordersTabSelector);
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.expChildrenText);
+    await I.waitForText(moConfig.orderTypeText);
+  },
+
   async sendToAdmin() {
     await I.waitForText(moConfig.directionsToAdminText);
     await I.fillField(this.fields.judgeDirectionsToAdmin, moConfig.directionsText);
@@ -197,7 +212,6 @@ module.exports = {
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
     await I.waitForText(moConfig.reviewedByText);
-    await I.waitForText(moConfig.expChildrenText);
   },
 
   async selectTypeOfOrderForUpload(orderName) {
@@ -361,7 +375,75 @@ module.exports = {
     await this.selectEditServeOrder(moConfig.editAndServeOrderText);
     await this.performServeOrder();
     await this.verifyOrderSubmission();
-  }
+  },
 
+  async createAndServeOrderByCourtAdmin() {
+    await this.selectEditServeOrder(moConfig.editAndServeOrderText);
+    await this.performServeOrder();
+    await this.verifyCourtAdminOrderSubmission();
+  },
+
+  async includeGuardianAndJudgeDetails() {
+    await I.waitForText(moConfig.specialGuardianQuestion);
+    await I.fillField(this.fields.guardianInputBox, moConfig.guardianName);
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.previewOrderText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.reviewOrderQuestion);
+    await I.click(this.fields.judgeCheckOrderEle);
+    await I.waitForText(moConfig.selectJudiciaryQuestion);
+    await I.click(this.fields.selectJudgeForOrderReview);
+    await I.fillField(this.fields.judgeNameField, 'raj');
+    await I.waitForElement(this.fields.judgeAutoCompEle);
+    await I.click(this.fields.judgeAutoCompEle);
+    await I.click(moConfig.continueText);
+  },
+
+  async includeAdminOrderDetails() {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.click(this.fields.orderByConsent_Yes);
+    await I.click(this.fields.orderApprovedAtHearing_No);
+    await I.click(this.fields.judgeTitle_HerHonourJudge);
+    await I.fillField(this.fields.judgeLastName, moConfig.judgeNameText);
+    await I.fillField(this.fields.legalAdviserFullName, moConfig.legalAdvisorNameText);
+    await I.fillField(this.fields.orderMade_day, day);
+    await I.fillField(this.fields.orderMade_month, month);
+    await I.fillField(this.fields.orderMade_year, year);
+    await I.click(this.fields.orderAboutAllChildren_No);
+
+    await I.waitForText(moConfig.c43OrderChildText);
+    await I.click('#childOption_ccd99bd3-29b8-4df5-93d6-b0a622ce033a');
+    await I.click('#childOption_cbb66702-223f-42eb-93a0-b2146bc039e0');
+    await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
+    await I.click(moConfig.continueText);
+
+    await this.includeGuardianAndJudgeDetails();
+    await I.waitForText(moConfig.cyaText);
+    await I.click(moConfig.submitText);
+    await I.waitForElement(this.fields.successElement);
+  },
+
+  async verifyAdminDraftOrderSubmission() {
+    await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
+    await I.click(this.fields.tabSelector);
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(moConfig.orderCreatedByText);
+  },
+
+  async createAnOrderC43() {
+    await this.selectOrder('Create an order');
+    // await I.waitForText(moConfig.draftOrderText);
+    await I.click(this.fields.selectC43AOrder);
+    await I.click(moConfig.continueText);
+    await this.includeAdminOrderDetails();
+    await this.verifyAdminDraftOrderSubmission();
+  }
 
 };

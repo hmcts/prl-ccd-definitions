@@ -1,5 +1,6 @@
 const I = actor();
 const retryCount = 3;
+const medWait = 20;
 
 module.exports = {
   fields: {
@@ -28,7 +29,7 @@ module.exports = {
   },
 
   async confidentialityStatement() {
-    await I.retry(retryCount).waitForText('Confidentiality Statement');
+    await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
     await I.retry(retryCount).click(
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
