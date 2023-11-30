@@ -28,7 +28,7 @@ xui-webapp:
   nodejs:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
-    image: hmctspublic.azurecr.io/xui/webapp:pr-3353-b717b03-20231117165501
+    image: hmctspublic.azurecr.io/xui/webapp:pr-3353-038cc35-20231130104258
     ingressHost: xui-${SERVICE_FQDN}
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
@@ -310,4 +310,3 @@ aac-manage-case-assignment:
       NOTIFY_MCA_API_KEY: ${NOTIFY_MCA_API_KEY}
       autoscaling:
           enabled: false
-
