@@ -791,29 +791,6 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "hearingOptions3Label",
-    "EventElementLabel": "**The date needs to be confirmed by the listing team before service (Optional)**",
-    "FieldDisplayOrder": "71",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "hearingOptions4Label",
-    "EventElementLabel": "**This order will be served with the 'date to be fixed' (Optional)**",
-    "FieldDisplayOrder": "72",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
-  },
-  {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
@@ -821,7 +798,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeNameAndEmail.idamId",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "73",
+    "FieldDisplayOrder": "71",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -833,9 +810,33 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "74",
+    "FieldDisplayOrder": "72",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersHearingDetails",
+    "ListElementCode": "hearingOptions3Label",
+    "EventElementLabel": "**The date needs to be confirmed by the listing team before service (Optional)**",
+    "FieldDisplayOrder": "73",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersHearingDetails",
+    "ListElementCode": "hearingOptions4Label",
+    "EventElementLabel": "**This order will be served with the 'date to be fixed' (Optional)**",
+    "FieldDisplayOrder": "74",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
     "LiveFrom": "01/09/2023",
