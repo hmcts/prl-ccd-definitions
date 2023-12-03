@@ -74,7 +74,7 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('12');
-    await I.waitForText('Application submitted');
+    await I.waitForText('Continue to payment');
     await I.runAccessibilityTest();
     await I.click('Close and Return to case details');
     await I.click(this.fields.serviceTab);
