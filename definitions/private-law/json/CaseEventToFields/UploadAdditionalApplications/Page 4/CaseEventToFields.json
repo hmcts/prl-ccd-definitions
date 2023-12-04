@@ -1,0 +1,51 @@
+[
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "additionalApplicationFeesToPay",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "additionalApplicationFeesToPay != \"\"",
+    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "additionalApplicationFeesToPayText",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "additionalApplicationFeesToPay != \"\""
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "additionalApplicationsHelpWithFees",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "additionalApplicationsHelpWithFeesNumber",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "additionalApplicationsHelpWithFees=\"Yes\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/validate-help-with-fees"
+  }
+]

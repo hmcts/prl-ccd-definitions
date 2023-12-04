@@ -11,45 +11,6 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "OtherApplicationsBundle",
-    "ListElementCode": "document",
-    "FieldType": "Document",
-    "ElementLabel": "File",
-    "RegularExpression": ".doc,.docx,.pdf",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "OtherApplicationsBundle",
-    "ListElementCode": "applicationType",
-    "FieldType": "FixedList",
-    "ElementLabel": "Application type",
-    "FieldTypeParameter": "OtherApplicationType",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "OtherApplicationsBundle",
-    "ListElementCode": "parentalResponsibilityType",
-    "FieldType": "FixedRadioList",
-    "ElementLabel": "Who's seeking parental responsibility?",
-    "FieldTypeParameter": "ParentalResponsibilityType",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "OtherApplicationsBundle",
-    "ListElementCode": "uploadedDateTime",
-    "FieldType": "Text",
-    "ElementLabel": "Date and time of upload",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "OtherApplicationsBundle",
     "ListElementCode": "author",
     "FieldType": "Text",
     "ElementLabel": "Uploaded by",
@@ -59,10 +20,80 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "OtherApplicationsBundle",
-    "ListElementCode": "othersNotified",
-    "Comment": "Deprecated",
+    "ListElementCode": "caApplicantApplicationType",
+    "FieldType": "FixedList",
+    "ElementLabel": "Application type",
+    "FieldTypeParameter": "CaOtherApplicationType",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "caRespondentApplicationType",
+    "FieldType": "FixedList",
+    "ElementLabel": "Application type",
+    "FieldTypeParameter": "CaOtherApplicationType",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "daApplicantApplicationType",
+    "FieldType": "FixedList",
+    "ElementLabel": "Application type",
+    "FieldTypeParameter": "DaApplicantOtherApplicationType",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "daRespondentApplicationType",
+    "FieldType": "FixedList",
+    "ElementLabel": "Application type",
+    "FieldTypeParameter": "DaRespondentOtherApplicationType",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "applicationType",
+    "FieldType": "FixedList",
+    "ElementLabel": "Reason for application",
+    "FieldTypeParameter": "OtherApplicationType",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "uploadedDateTime",
     "FieldType": "Text",
-    "ElementLabel": "People notified",
+    "ElementLabel": "Date submitted",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "document",
+    "FieldType": "Document",
+    "ElementLabel": " ",
+    "RegularExpression": ".doc,.docx,.pdf",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "finalDocument",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "ElementLabel": "Application",
+    "RegularExpression": ".doc,.docx,.pdf",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -117,6 +148,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "urgency",
+    "FieldType": "Urgency",
+    "ElementLabel": "How soon does the judge need to consider the application?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "20/11/2022",
     "ID": "OtherApplicationsBundle",
     "ListElementCode": "documentAcknowledgeLabel",
@@ -132,7 +172,26 @@
     "ListElementCode": "documentAcknowledge",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "DocumentAcknowledge",
-    "ElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD",
+    "ElementLabel": "Tick to confirm this document is related to this case",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "documentRelatedToCase",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Document is related to Familyman Case number/Names/CCD",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "documentAcknowledge=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "OtherApplicationsBundle",
+    "ListElementCode": "applicationStatus",
+    "FieldType": "Text",
+    "ElementLabel": "Application status",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

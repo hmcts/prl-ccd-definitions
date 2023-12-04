@@ -1536,6 +1536,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "helpWithFeesNotAvailable",
+    "Label": "If the applicant has applied for Help with Fees, you should email or post this application to the court instead.\n\nIf you continue online, you will still have to pay the fee. You can apply for a refund by contacting the court and providing the applicant's Help with Fees reference.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "applicantCaseName",
@@ -2613,7 +2622,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayNextPage",
-    "Label": "### Next step - payment",
+    "Label": "### Next step - Submit the application \n\n After you have submitted your application, you will be asked to pay the application fee.\n\n### Help with Fees is not yet available in the Family Private Law digital service.\n\n### If the applicant has applied for Help with Fees, you should email or post this application to the court instead.\n\n### If you continue online, you will still have to pay the fee. You can apply for a refund by contacting the court and providing the applicant's Help with Fees reference.\n\n### Application fee due to be paid",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2622,7 +2631,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayNextPageDesc",
-    "Label": "Now that you have filled out your application and signed it, you must pay or submit your help with fees, to have it considered by the courts.",
+    "Label": "When you submit the application you will be asked to pay the application fee.\n\n If you have applied to get help with court fees, you will be asked to provide your Help with Fees reference number.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2631,7 +2640,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayFee",
-    "Label": "### Application fee to pay",
+    "Label": "### Application fee due to be paid",
     "HintText": "£${feeAmount}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
@@ -2651,7 +2660,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplication",
-    "Label": "### Download Application",
+    "Label": "### Final checks \n\n Download and check the application before you proceed. Make sure that all details are correct. \n\n ### C100 draft",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2660,7 +2669,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLinkLabel",
-    "Label": "Use this link to download and check the application before sending:",
+    "Label": "Download and check the application before you proceed. Make sure that all details are correct.",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2671,6 +2680,16 @@
     "ID": "c100submitAndPayDownloadApplicationLinkLabel",
     "Label": "### C100 draft",
     "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "helpWithFees",
+    "Label": "Has the applicant applied for Help with Fees?",
+    "HintText": "You must select 'No' to continue with your application.",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -2696,7 +2715,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": "Draft application",
+    "Label": " ",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
@@ -3138,7 +3157,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
     "ID": "courtEmailAddress",
-    "Label": "Court Email Address",
+    "Label": "Enter email address",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -3434,6 +3453,61 @@
     "ID": "isAddCaseNumberAdded",
     "Label": " ",
     "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationFeesToPay",
+    "Label": "Application fee to pay",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationFeesToPayText",
+    "FieldType": "Label",
+    "Label": "### Next step - Submit the application \n\n After you have submitted your application, you will be asked to pay the application fee.\n\n### Help with Fees is not yet available in the Family Private Law digital service.\n\n### If the applicant has applied for Help with Fees, you should email or post this application to the court instead.\n\n### If you continue online, you will still have to pay the fee. You can apply for a refund by contacting the court and providing the applicant's Help with Fees reference.\n\n### Application fee\n\n ${additionalApplicationFeesToPay}",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsHelpWithFees",
+    "Label": "Has the applicant applied for Help with Fees?",
+    "HintText": "You must select 'No' to continue with your application.",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "additionalApplicationsHelpWithFeesNumber",
+    "Label": "Enter the Help with Fees reference number",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hwfRequestedForAdditionalApplications",
+    "Label": "HEF Requested For Additional Applications",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "representedPartyType",
+    "Label": "Solicitor Representing Party Type",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
