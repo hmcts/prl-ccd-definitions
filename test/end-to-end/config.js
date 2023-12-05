@@ -1,3 +1,4 @@
+const defaultPassword = 'Nagoya0102';
 
 module.exports = {
   legalProfessionalUserOne: {
