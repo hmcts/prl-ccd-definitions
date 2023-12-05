@@ -28,6 +28,7 @@ module.exports = {
     await I.retry(retryCount).click('Magistrates');
     await I.retry(retryCount).fillField(this.fields.additionalHearingDetails, 'ADDITIONAL HEARING DETAILS');
     await I.retry(retryCount).fillField(this.fields.instructionsForRemoteHearing, 'JOINING INSTRUCTIONS');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
   }
