@@ -15,7 +15,19 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "previewDraftOrderLabel",
+    "CaseFieldID": "orderNameEditScreenLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "05/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "checkTheOrderLabel",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "READONLY",
     "PageID": 4,
@@ -31,7 +43,7 @@
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
     "PageID": 4,
-    "PageDisplayOrder": 2,
+    "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -49,9 +61,20 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "orderNameEditScreenLabel",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "READONLY",
+    "CaseFieldID": "whatToDoWithOrderSolicitor",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "whatToDoWithOrderCourtAdmin",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
@@ -66,7 +89,6 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields"
   },
   {
     "LiveFrom": "31/03/2022",
