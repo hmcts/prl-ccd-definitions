@@ -16,7 +16,8 @@ module.exports = {
     respondentsAwareOfProceedings: 'input[id="areRespondentsAwareOfProceedings_Yes"]'
   },
 
-  async  hearingUrgency() {
+  async hearingUrgency() {
+    // await I.wait('15');
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
     await I.retry(retryCount).click(this.fields.appUrgentInput);
@@ -30,6 +31,7 @@ module.exports = {
     await I.retry(retryCount).waitForEnabled(this.fields.hearingWithReducedNoticeReason);
     await I.retry(retryCount).fillField(this.fields.hearingWithReducedNoticeReason, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.respondentsAwareOfProceedings);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', 'retryCount0');
     await I.retry(retryCount).click('Save and continue');

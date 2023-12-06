@@ -127,8 +127,9 @@
     "LiveFrom": "20/08/2021",
     "ID": "FL400",
     "ListElementCode": "fl404bDateOrderEnd",
-    "FieldType": "Date",
+    "FieldType": "DateTime",
     "ElementLabel": "Date order ends",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -155,7 +156,7 @@
     "ID": "FL400",
     "ListElementCode": "fl404bAddressOfProperty",
     "FieldType": "TextArea",
-    "ElementLabel": "Add address of the property",
+    "ElementLabel": "Add the address of the property",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -589,8 +590,9 @@
     "LiveFrom": "20/08/2021",
     "ID": "FL400",
     "ListElementCode": "fl404bOccupationDate1",
-    "FieldType": "Date",
+    "FieldType": "DateTime",
     "ElementLabel": "between",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -607,8 +609,9 @@
     "LiveFrom": "20/08/2021",
     "ID": "FL400",
     "ListElementCode": "fl404bOccupationDate2",
-    "FieldType": "Date",
+    "FieldType": "DateTime",
     "ElementLabel": "and",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -777,11 +780,21 @@
   },
   {
     "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "isJudgeApprovalNeeded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Draft Order Approval Status",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isJudgeApprovalNeeded=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "magistrateLastName",
     "FieldType": "Collection",
     "FieldTypeParameter": "MagistrateLastName",
-    "ElementLabel": "Last name",
+    "ElementLabel": "Magistrate's full name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -831,7 +844,8 @@
     "FieldType": "Text",
     "ElementLabel": "Add further directions if these are required",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -886,7 +900,7 @@
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
     "ListElementCode": "judgeOrMagistrateTitle",
-    "ElementLabel": "Select or amend title of judge or magistrate",
+    "ElementLabel": "Select or amend the title of the Judge or magistrate",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "JudgeOrMagistrateTitleEnum",
     "SecurityClassification": "Public",
@@ -941,6 +955,7 @@
     "FieldTypeParameter": "C21OrderOptionsEnum",
     "ElementLabel": "Type of c21 order",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -1018,7 +1033,8 @@
     "FieldTypeParameter": "appointedGuardianFullName",
     "ElementLabel": "Guardian Full Name",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1319,6 +1335,17 @@
     "ListElementCode": "underTakingExpiryTime",
     "FieldType": "Text",
     "ElementLabel": "Time",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "03/10/2023",
+    "ID": "DraftOrder",
+    "ListElementCode": "underTakingExpiryDateTime",
+    "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""

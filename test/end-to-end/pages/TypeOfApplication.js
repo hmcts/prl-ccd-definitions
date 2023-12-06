@@ -56,9 +56,9 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.childArrangementsOrder);
     await I.retry(retryCount).click(this.fields.prohibitedStepsOrder);
     await I.retry(retryCount).click(this.fields.specificIssueOrder);
-    await I.retry(retryCount).wait('5');
     await I.retry(retryCount).click(this.fields.typeOfChildArrangementsOrder);
     await I.retry(retryCount).fillField('#natureOfOrder', 'Test text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -67,6 +67,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.consentOrderYes);
     await I.retry(retryCount).attachDocument('draftConsentOrderFile');
     await I.retry(retryCount).wait('5');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
@@ -74,18 +75,20 @@ module.exports = {
     await I.retry(retryCount).waitForText('Have you applied to the court for permission to make this application?');
     await I.retry(retryCount).click(this.fields.permissionRequiredRadioButton);
     await I.retry(retryCount).fillField(this.fields.appPermissionRequiredReason, 'Test Text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async briefDetailsPageC100() {
-    await I.retry(retryCount).wait('2');
     await I.retry(retryCount).waitForText('Provide brief details of:');
     await I.retry(retryCount).fillField(this.fields.appDetailsTextArea, 'Test Text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async checkYourAnswersPageC100() {
     await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Save and continue');
   },
 
@@ -109,17 +112,22 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
   async checkYourAnswersPageFL401() {
-    I.wait('5');
-    await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    // I.wait('5');
+    await I.waitForText(this.fields.checkYourAnswersPageHeader);
+    // await I.waitForText('Non-molestation order');
     // await I.retry(retryCount).waitForText(this.fields.childArrangementsCaseNumberText);
     await I.retry(retryCount).click('Save and continue');
+    await I.amOnHistoryPageWithSuccessNotification();
+    // await I.wait('20');
   },
 
   async typeOfApplicationEventC100() {
+    await I.wait('5');
     await this.actionTypeOfApplicationEvent();
     await this.whatOrdersPageC100();
     await this.draftConsentOrderC100();
