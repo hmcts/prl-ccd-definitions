@@ -106,6 +106,8 @@ ccd:
 
   am-role-assignment-service:
     java:
+      environment:
+        CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
       keyVaults:
         am:
           secrets:
