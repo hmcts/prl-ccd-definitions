@@ -52,13 +52,6 @@ module.exports = {
     await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
     await I.retry(retryCount).click('Continue');
   },
-  async confidentialityStatementFL401() {
-    await I.wait('10');
-    await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
-    await I.wait('1');
-    await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
-    await I.retry(retryCount).click('Continue');
-  },
 
   async declaration() {
     await I.retry(retryCount).waitForText('Declaration');
