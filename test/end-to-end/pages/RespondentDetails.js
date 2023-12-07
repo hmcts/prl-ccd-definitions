@@ -55,6 +55,7 @@ module.exports = {
     await this.searchAndSelectGivenRegisteredOrganisation();
     // I.wait('2');
     await I.retry(retryCount).waitForText('Continue', '30');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
@@ -81,6 +82,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="respondentsFL401_canYouProvidePhoneNumber_Yes"]');
     await I.retry(retryCount).fillField('//input[@id="respondentsFL401_phoneNumber"]', '0712234667');
     I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
