@@ -41,6 +41,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.app1AndChild2, 'Father');
     // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.app1C2LiveWith);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async childrenAndRespondent() {
@@ -56,6 +57,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.resp1AndChild2, 'Mother');
     // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.resp1C2LiveWith);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async childrenAndOtherPeople() {
@@ -75,6 +77,7 @@ module.exports = {
     await I.retry(retryCount).checkOption(this.fields.op1C2LiveWith);
     // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.op1C2Confidential);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async runChildrenAndApplicant() {
