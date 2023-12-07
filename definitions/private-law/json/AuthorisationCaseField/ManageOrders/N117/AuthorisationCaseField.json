@@ -950,5 +950,31 @@
     "CaseFieldID": "selectedOrder2",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRU"
-  }
+  },
+ {
+   "LiveFrom": "01/10/2023",
+   "CaseTypeID": "PRLAPPS",
+   "CaseFieldID": "underTakingExpiryDateTime",
+   "AccessControl": [
+     {
+       "UserRoles": [
+         "caseworker-privatelaw-la",
+         "caseworker-privatelaw-judge",
+         "caseworker-privatelaw-courtadmin",
+         "caseworker-privatelaw-systemupdate",
+         "citizen",
+         "caseworker-privatelaw-solicitor",
+         "caseworker-privatelaw-superuser",
+         "caseworker-wa-task-configuration"
+       ],
+       "CRUD": "CRUD"
+     },
+     {
+         "UserRoles": [
+           "caseworker-privatelaw-readonly"
+         ],
+         "CRUD": "R"
+     }
+   ]
+ }
 ]

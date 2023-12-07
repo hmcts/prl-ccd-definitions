@@ -39,6 +39,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.applyingForQuestion);
     await I.retry(retryCount).click(this.fields.otherOrderCheckbox);
     await I.retry(retryCount).click(this.fields.applicantCheckbox);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
   },
@@ -53,6 +54,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.tickToConfirmCheckbox);
     await I.retry(retryCount).click(this.fields.within2DaysRadio);
     await I.wait('5');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
   },
@@ -72,7 +74,8 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('12');
-    await I.waitForText('Application submitted');
+    await I.waitForText('Continue to payment');
+    await I.runAccessibilityTest();
     await I.click('Close and Return to case details');
     await I.click(this.fields.serviceTab);
     await I.wait('10');
