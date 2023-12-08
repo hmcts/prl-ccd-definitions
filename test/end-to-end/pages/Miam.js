@@ -16,6 +16,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('#claimingExemptionMiam_Yes');
     await I.retry(retryCount).waitForElement('#familyMediatorMiam_Yes');
     await I.retry(retryCount).checkOption('#familyMediatorMiam_Yes');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -27,6 +28,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="soleTraderName1"]', 'Test sole trader');
     await I.retry(retryCount).attachFile('//input[@id="miamCertificationDocumentUpload1"]', '../resource/dummy.pdf');
     await I.retry(retryCount).wait(uploadTime);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -37,6 +39,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('#claimingExemptionMiam_Yes');
     await I.retry(retryCount).waitForElement('#familyMediatorMiam_No');
     await I.retry(retryCount).checkOption('#familyMediatorMiam_No');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -47,6 +50,7 @@ module.exports = {
     await I.retry(retryCount).click('#miamExemptionsChecklist-urgency');
     await I.retry(retryCount).click('#miamExemptionsChecklist-previousMIAMattendance');
     await I.retry(retryCount).click('#miamExemptionsChecklist-other');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -73,6 +77,7 @@ module.exports = {
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_3');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_2');
     await I.retry(retryCount).click('#miamDomesticViolenceChecklist-miamDomesticViolenceChecklistEnum_Value_1');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -83,18 +88,21 @@ module.exports = {
     await I.retry(retryCount).click('#miamUrgencyReasonChecklist-miamUrgencyReasonChecklistEnum_Value_3');
     await I.retry(retryCount).click('#miamUrgencyReasonChecklist-miamUrgencyReasonChecklistEnum_Value_2');
     await I.retry(retryCount).click('#miamUrgencyReasonChecklist-miamUrgencyReasonChecklistEnum_Value_1');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async fillMIAMEvidencePreviousMiamAttendance() {
     await I.retry(retryCount).waitForText('MIAM Evidence : Previous MIAM attendance or MIAM exemption');
     await I.retry(retryCount).click('#miamPreviousAttendanceChecklist-miamPreviousAttendanceChecklistEnum_Value_3');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async fillMIAMEvidenceWhatGroundsOfExemption() {
     await I.retry(retryCount).waitForText('MIAM Evidence : What other grounds of exemption apply?');
     await I.retry(retryCount).click('#miamOtherGroundsChecklist-miamOtherGroundsChecklistEnum_Value_6');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -104,6 +112,7 @@ module.exports = {
     // await I.retry(retryCount).waitForText('MIAM Evidence: What reason does the applicant have for child protection concerns?');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_1');
     await I.retry(retryCount).click('#miamChildProtectionConcernList-MIAMChildProtectionConcernChecklistEnum_value_2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
