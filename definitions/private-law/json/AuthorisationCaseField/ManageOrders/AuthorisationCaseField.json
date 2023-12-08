@@ -5329,5 +5329,31 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderNameForJudgeCreatedOrder",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
