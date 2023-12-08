@@ -40,6 +40,7 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const solicitorReasonableAdjustment = require('./pages/SolicitorReasonableAdjustment');
 const hearingRequestPage = require('./pages/HearingRequest');
 const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
 const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
@@ -277,6 +278,18 @@ module.exports = () => {
     },
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
+    },
+    raiseSupportRequestForDocInAlternateType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateType();
+    },
+    raiseSupportRequestForDocInAlternateTypeDA() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateTypeDA();
+    },
+    raiseSupportRequestForOtherType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForOtherType();
+    },
+    raiseSupportRequestForGetIntoInandAroundBuilding() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
     },
     requestANewHearing() {
       return hearingRequestPage.submitHearing();
