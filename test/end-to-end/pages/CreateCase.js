@@ -111,6 +111,12 @@ module.exports = {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).click('Continue');
+  },
+  async selectTypeOfApplicationFL401_TS() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click('Continue');
   },
   async selectTypeOfApplicationFL401_TS() {
