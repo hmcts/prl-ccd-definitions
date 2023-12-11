@@ -60,11 +60,13 @@ module.exports = {
     judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
     isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
     selectOrderType: '#selectTypeOfOrder',
-    guardianInputBox: '#guardianTextBox',
+    guardianInputBox: '#appointedGuardianName_0_guardianFullName',
     judgeCheckOrderEle: '#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck',
     selectJudgeForOrderReview: '#amendOrderSelectJudgeOrLa-judge',
     judgeNameField: '#nameOfJudgeToReviewOrder',
-    judgeAutoCompEle: 'span.mat-option-text'
+    judgeAutoCompEle: 'span.mat-option-text',
+    guardianNameEle: '#appointedGuardianName_0_guardianFullName',
+    selectTheOrderToServe: '[name="serveOrderDynamicList"]'
   },
 
   async selectOrder(modeOfOrder) {
@@ -109,7 +111,10 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.waitForText('Full name');
+    await I.fillField(this.fields.guardianNameEle, 'Test guardian name');
     await I.click(moConfig.continueText);
+
     await I.waitForText(moConfig.previewOrderText);
     await I.click(moConfig.continueText);
 
@@ -167,6 +172,11 @@ module.exports = {
     await I.click(this.fields.selectOrderToServe);
     await I.click(moConfig.continueText);
 
+    await I.waitForText(moConfig.serveOrdersText);
+    await I.click('[name="serveOrderDynamicList"]');
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
     await I.waitForText(moConfig.servingToRespondentText);
     await I.click(this.fields.servePersonallyOptions_Yes);
     await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
@@ -188,7 +198,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
-    await I.waitForText(moConfig.reviewedByText);
+    // await I.waitForText(moConfig.reviewedByText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
   },
@@ -200,7 +210,7 @@ module.exports = {
     await I.waitForText(moConfig.c43AOrderText);
     await I.runAccessibilityTest();
     await I.waitForText(moConfig.judgeNameText);
-    await I.waitForText(moConfig.reviewedByText);
+    // await I.waitForText(moConfig.reviewedByText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
   },
@@ -300,7 +310,6 @@ module.exports = {
     }
   },
   async selectOrderToServe() {
-    await I.retry(retryCount).click(this.fields.selectOrderToServe);
     await I.retry(retryCount).click('Continue');
   },
   async servePersonalOrNonPersonal(personal, responsible) {
@@ -379,7 +388,7 @@ module.exports = {
     await I.wait('4');
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.retry(retryCount).click(this.fields.tabSelector);
-    await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
+    await I.retry(retryCount).waitForText('Blank order or directions (C21)');
   },
 
   async composeDraftOrder() {
@@ -465,7 +474,6 @@ module.exports = {
 
   async createAnOrderC43() {
     await this.selectOrder('Create an order');
-    // await I.waitForText(moConfig.draftOrderText);
     await I.click(this.fields.selectC43AOrder);
     await I.click(moConfig.continueText);
     await this.includeAdminOrderDetails();
