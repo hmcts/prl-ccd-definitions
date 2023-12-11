@@ -1,44 +1,26 @@
 [
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "01/12/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "04/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "hearing-centre-team-leader"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
