@@ -15,7 +15,7 @@ module.exports = {
     instructionsForRemoteHearing: '#ordersHearingDetails_0_instructionsForRemoteHearing',
     calendarLink: '[aria-label = "Open calendar"]',
     selectDate: 'td.mat-calendar-body-cell.mat-calendar-body-active.ng-star-inserted > div.mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-selected',
-    confirmDate: '//*[@id="cdk-overlay-0"]/ngx-mat-datetime-content/div[2]/button/span[1]'
+    confirmDate: '.datepicker-container input'
 
   },
   async fillHearingDetails() {
@@ -24,7 +24,8 @@ module.exports = {
     await I.retry(retryCount).click('The date is reserved with List Assist');
     await I.retry(retryCount).click('Add new');
     await I.click(this.fields.calendarLink);
-    await I.click(this.fields.confirmDate);
+    await I.wait('2');
+    await I.fillField(this.fields.confirmDate, '20-04-2024');
     await I.retry(retryCount).fillField(this.fields.hearingEstimatedDays, '5');
     await I.retry(retryCount).click('Telephone');
     await I.retry(retryCount).click(this.fields.allPartiesAttendHearingSameWayYesOrNo_Yes);
