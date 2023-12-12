@@ -45,15 +45,6 @@ const supportedBrowsers = {
         name: 'PRL: WIN_CHROME_LATEST',
         screenResolution: '1600x1200'
       }
-    },
-    chrome_mac_latest: {
-      browserName: 'chromium',
-      platformName: LATEST_MAC,
-      browserVersion: 'latest-1',
-      'sauce:options': {
-        name: 'PRL: MAC_CHROME_LATEST',
-        screenResolution: '1600x1200'
-      }
     }
   },
   firefox: {
