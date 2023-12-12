@@ -63,10 +63,6 @@ async function runAccessibility(url, page) {
 
 function updateResultObject(url, pageTitle, screenshotReportRef, accessibilityErrorsOnThePage) {
   console.log(`Accessbility Errors on this page is ########### ${accessibilityErrorsOnThePage.length}`);
-  accessibilityErrorsOnThePage.forEach(test => {
-    console.log(`analyzing the accessibilityErrorsOnThePage: ${test.code} -  ${test.message}`);
-  });
-
   let isPageAccessible = null;
   if (accessibilityErrorsOnThePage) {
     isPageAccessible = accessibilityErrorsOnThePage.length === 0 ? result.PASSED : result.FAILED;
