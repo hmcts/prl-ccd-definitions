@@ -1,26 +1,24 @@
-const defaultPassword = 'Nagoya0102';
-const judgeDefaultPassword = 'Hmcts1234';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-e2etestsolicitor@mailinator.com',
-    password: defaultPassword
+    email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE || 'prl-e2etestsolicitor@mailinator.com',
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE || 'Nagoya0102'
   },
   legalProfessionalUserTwo: {
-    email: 'prl_ctscadmin11_stoke@justice.gov.uk',
-    password: defaultPassword
+    email: process.env.COURTADMIN_TESTUSER_ONE || 'prl_ctscadmin11_stoke@justice.gov.uk',
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE || 'Nagoya0102'
   },
   respondentSolicitor: {
-    email: 'prl_aat_res_solicitor_2@mailinator.com',
-    password: defaultPassword
+    email: process.env.LEGALPROFESSIONAL_RESPONDENT_TESTUSER || 'prl_aat_res_solicitor_2@mailinator.com',
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE || 'Nagoya0102'
   },
   courtAdminUser: {
-    email: 'prl_aat_swansea_courtadmin@justice.gov.uk',
-    password: defaultPassword
+    email: process.env.COURTADMIN_SWANSEA_TESTUSER || 'prl_aat_swansea_courtadmin@justice.gov.uk',
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE || 'Nagoya0102'
   },
   judgeUserOne: {
-    email: '4923952EMP-@ejudiciary.net',
-    password: judgeDefaultPassword
+    email: process.env.JUDGE_TESTUSER_ONE || '4923952EMP-@ejudiciary.net',
+    password: process.env.JUDGE_TESTPASSWORD || 'Hmcts1234'
   },
   definition: {
     jurisdiction: 'PRIVATELAW',

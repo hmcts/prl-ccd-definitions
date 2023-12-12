@@ -4,7 +4,7 @@ const testConfig = require('../config');
 let caseId;
 
 Feature('Court Admin Create Dummy case - Create Order & send message journeys');
-Scenario('Create Order C21 @nightly', async({ I }) => {
+Scenario('Create Order C21 @nightly-wip', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.createC100CaseByCourtAdmin();
   await I.manageOrderCreateOrderC21();
