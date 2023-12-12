@@ -55,4 +55,4 @@ module.exports = {
     await I.wait('9');
   }
 
-}
+};
