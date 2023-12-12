@@ -24,8 +24,7 @@ module.exports = {
     await I.retry(retryCount).click('The date is reserved with List Assist');
     await I.retry(retryCount).click('Add new');
     await I.click(this.fields.calendarLink);
-    await I.click(this.fields.selectDate);
-    await I.click(this.fields.confirmDate);
+    await I.click('Confirm');
     await I.retry(retryCount).fillField(this.fields.hearingEstimatedDays, '5');
     await I.retry(retryCount).click('Telephone');
     await I.retry(retryCount).click(this.fields.allPartiesAttendHearingSameWayYesOrNo_Yes);
