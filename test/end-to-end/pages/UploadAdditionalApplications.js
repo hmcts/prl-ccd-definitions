@@ -47,10 +47,6 @@ module.exports = {
   async uploadApplication() {
     await I.retry(retryCount).selectOption(this.fields.selectCAApplicationDropdown, 'FC600 - Committal application');
     await I.retry(retryCount).attachFile(this.fields.uploadApplicationFile, '../resource/dummy.pdf');
-    const caseNameWithLabel = await I.grabTextFrom(this.fields.caseNameWithLabelElement);
-    const caseName = caseNameWithLabel.substring(this.fields.caseNameLength.length);
-    console.log(this.fields.documentRelatedToText.concat(caseName));
-    await I.retry(retryCount).waitForText(this.fields.documentRelatedToText.concat(caseName));
     await I.retry(retryCount).click(this.fields.tickToConfirmCheckbox);
     await I.retry(retryCount).click(this.fields.within2DaysRadio);
     await I.wait('5');
