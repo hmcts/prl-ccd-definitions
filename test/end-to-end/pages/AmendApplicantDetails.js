@@ -26,7 +26,7 @@ module.exports = {
 
     await I.click(this.fields.attendMianYes);
     await I.dontSee('*Is the applicant claiming exemption from the requirement to attend a MIAM ?');
-
+    await I.runAccessibilityTest();
     await I.click(this.fields.submit);
   },
 
@@ -37,6 +37,7 @@ module.exports = {
     await I.fillField(this.fields.soleTraderName, 'Test sole trader name');
     await I.attachFile(this.fields.uploadCertificate, '../resource/dummy.pdf');
     await I.wait('10');
+    await I.runAccessibilityTest();
     await I.click('Continue');
 
     await I.waitForText('Check your answers');
@@ -46,6 +47,7 @@ module.exports = {
   async verifyUpdatedMiamDetails() {
     await I.click(this.fields.applicationTab);
     await I.waitForText('Has the applicant attended MIAM?');
+    await I.runAccessibilityTest();
     await I.see('12345678');
     await I.see('Test mediator name');
     await I.see('Test sole trader name');
