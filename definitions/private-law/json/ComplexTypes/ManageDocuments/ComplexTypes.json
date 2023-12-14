@@ -2,6 +2,16 @@
   {
     "LiveFrom": "01/05/2023",
     "ID": "ManageDocuments",
+    "ListElementCode": "relatedDocument",
+    "ElementLabel": "Confirm the document is related to the case",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "RestrictToCafcassHmcts",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "ManageDocuments",
     "ListElementCode": "documentParty",
     "ElementLabel": "Submitting document on behalf of",
     "HintText": "Select a party",
@@ -24,27 +34,41 @@
     "ID": "ManageDocuments",
     "ListElementCode": "document",
     "ElementLabel": "Document",
+    "HintText": "File size must be under 50",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
-    "LiveFrom": "01/05/2023",
+    "LiveFrom": "20/08/2021",
     "ID": "ManageDocuments",
-    "ListElementCode": "documentDetails",
-    "ElementLabel": "Details",
-    "FieldType": "TextArea",
+    "ListElementCode": "doesContainsConfidentialDetails",
+    "ElementLabel":"Does the document contain confidential information?",
+    "HintText": "Only HMCTS staff and the judiciary will be able to see it.",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
-    "LiveFrom": "01/05/2023",
+    "LiveFrom": "20/08/2021",
     "ID": "ManageDocuments",
-    "ListElementCode": "documentRestrictCheckbox",
-    "ElementLabel": "Do you need to restrict access to the document?",
-    "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "RestrictToCafcassHmcts",
+    "ListElementCode": "doesContainsRestrictedDetails",
+    "CaseFieldID": "manageDocument",
+    "ElementLabel":"Do you want to request this document is restricted?",
+    "HintText": "The court will only restrict a document if there is a very good reason.Only court staff and the judiciary will be able to see it.",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "ManageDocuments",
+    "ListElementCode": "documentDetails",
+    "CaseFieldID": "manageDocument",
+    "ElementLabel": "Details",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "manageDocument.doesContainsRestrictedDetails=\"Yes\""
   }
 ]
