@@ -58,6 +58,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.specificIssueOrder);
     await I.retry(retryCount).click(this.fields.typeOfChildArrangementsOrder);
     await I.retry(retryCount).fillField('#natureOfOrder', 'Test text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -66,6 +67,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.consentOrderYes);
     await I.retry(retryCount).attachDocument('draftConsentOrderFile');
     await I.retry(retryCount).wait('5');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
@@ -73,17 +75,20 @@ module.exports = {
     await I.retry(retryCount).waitForText('Have you applied to the court for permission to make this application?');
     await I.retry(retryCount).click(this.fields.permissionRequiredRadioButton);
     await I.retry(retryCount).fillField(this.fields.appPermissionRequiredReason, 'Test Text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async briefDetailsPageC100() {
     await I.retry(retryCount).waitForText('Provide brief details of:');
     await I.retry(retryCount).fillField(this.fields.appDetailsTextArea, 'Test Text');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async checkYourAnswersPageC100() {
     await I.retry(retryCount).waitForText(this.fields.checkYourAnswersPageHeader);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Save and continue');
   },
 
@@ -107,6 +112,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 

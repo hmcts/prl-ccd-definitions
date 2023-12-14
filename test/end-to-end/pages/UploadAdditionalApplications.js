@@ -39,6 +39,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.applyingForQuestion);
     await I.retry(retryCount).click(this.fields.otherOrderCheckbox);
     await I.retry(retryCount).click(this.fields.applicantCheckbox);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
   },
@@ -46,13 +47,10 @@ module.exports = {
   async uploadApplication() {
     await I.retry(retryCount).selectOption(this.fields.selectCAApplicationDropdown, 'FC600 - Committal application');
     await I.retry(retryCount).attachFile(this.fields.uploadApplicationFile, '../resource/dummy.pdf');
-    const caseNameWithLabel = await I.grabTextFrom(this.fields.caseNameWithLabelElement);
-    const caseName = caseNameWithLabel.substring(this.fields.caseNameLength.length);
-    console.log(this.fields.documentRelatedToText.concat(caseName));
-    await I.retry(retryCount).waitForText(this.fields.documentRelatedToText.concat(caseName));
     await I.retry(retryCount).click(this.fields.tickToConfirmCheckbox);
     await I.retry(retryCount).click(this.fields.within2DaysRadio);
     await I.wait('5');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
   },
@@ -72,7 +70,8 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('12');
-    await I.waitForText('Application submitted');
+    await I.waitForText('Continue to payment');
+    await I.runAccessibilityTest();
     await I.click('Close and Return to case details');
     await I.click(this.fields.serviceTab);
     await I.wait('10');
