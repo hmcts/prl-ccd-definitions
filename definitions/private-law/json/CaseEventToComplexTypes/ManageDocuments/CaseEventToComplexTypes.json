@@ -218,10 +218,21 @@
     "ID": "ManageDocuments",
     "CaseEventID": "manageDocumentsNew",
     "CaseFieldID": "manageDocuments",
+    "ListElementCode": "relatedDocument",
+    "EventElementLabel": "Confirm the document is related to the case",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ManageDocuments",
+    "CaseEventID": "manageDocumentsNew",
+    "CaseFieldID": "manageDocuments",
     "ListElementCode": "documentParty",
     "EventElementLabel": "Submitting document on behalf of",
     "EventHintText": "Select a party",
-    "FieldDisplayOrder": "1",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -233,7 +244,7 @@
     "ListElementCode": "documentCategories",
     "EventElementLabel": "Document category",
     "EventHintText": "Select a document category",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -244,7 +255,32 @@
     "CaseFieldID": "manageDocuments",
     "ListElementCode": "document",
     "EventElementLabel": "Document",
-    "FieldDisplayOrder": "3",
+    "HintText": "File size must be under 50",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ManageDocuments",
+    "CaseEventID": "manageDocumentsNew",
+    "CaseFieldID": "manageDocuments",
+    "ListElementCode": "doesContainsConfidentialDetails",
+    "ElementLabel":"Does the document contain confidential information?",
+    "HintText": "Only HMCTS staff and the judiciary will be able to see it.",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ManageDocuments",
+    "CaseEventID": "manageDocumentsNew",
+    "CaseFieldID": "manageDocuments",
+    "ListElementCode": "doesContainsRestrictedDetails",
+    "ElementLabel":"Do you want to request this document is restricted?",
+    "HintText": "The court will only restrict a document if there is a very good reason.Only court staff and the judiciary will be able to see it.",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -254,21 +290,8 @@
     "CaseEventID": "manageDocumentsNew",
     "CaseFieldID": "manageDocuments",
     "ListElementCode": "documentDetails",
-    "EventElementLabel": "Details",
-    "EventHintText": "Give further details. For example, why you may need to restrict access to the document.",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "01/05/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ManageDocuments",
-    "CaseEventID": "manageDocumentsNew",
-    "CaseFieldID": "manageDocuments",
-    "ListElementCode": "documentRestrictCheckbox",
-    "EventElementLabel": "Do you need to restrict access to the document?",
-    "EventHintText": "You may need to restrict access because it is a sensitive document, or because it contains confidential details. Once it is restricted the file can only be viewed by Cafcass or Cafcass Cymru, HMCTS staff and the Judiciary.",
-    "FieldDisplayOrder": "5",
+    "EventElementLabel": "Explain why you want to restrict access to the document (Optional)",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "OPTIONAL"
   }
 ]
