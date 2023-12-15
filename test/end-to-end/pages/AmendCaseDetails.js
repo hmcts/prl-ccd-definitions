@@ -3,8 +3,8 @@ const I = actor();
 module.exports = {
 
   amendRespondentEvent: {
-    legalRepQuestionText: "*Do they have legal representation? (Optional)",
-    repFirstNameQuestionText: "*Representative's first name (Optional)",
+    legalRepQuestionText: '*Do they have legal representation? (Optional)',
+    repFirstNameQuestionText: '*Representative\'s first name (Optional)',
     repFirstName: 'Resp rep fname',
     repLastName: 'Resp rep lname',
     repEmail: 'rep@test.com',
@@ -25,7 +25,6 @@ module.exports = {
     textareaText: 'Respondent details',
     respondentAddress: 'respondents_0_address_address',
     respondentAddressFL401: 'respondentsFL401_address_address',
-    submit: 'button[type="submit"]',
     organisation: 'AAT',
     tabSelector: '//div[contains(text(), "Parties_")]',
     nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
