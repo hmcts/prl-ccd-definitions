@@ -2,10 +2,20 @@
   {
     "LiveFrom": "01/05/2023",
     "ID": "ManageDocuments",
-    "ListElementCode": "relatedDocument",
-    "ElementLabel": "Confirm the document is related to the case",
+    "ListElementCode": "documentRelatedToCaseLabel",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "documentRelatedToCaseLabel=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "ManageDocuments",
+    "ListElementCode": "documentRelatedToCaseCheckbox",
+    "ElementLabel": "${documentRelatedToCaseLabel}",
     "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "RestrictToCafcassHmcts",
+    "FieldTypeParameter": "DocumentRelatedToCase",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -34,7 +44,7 @@
     "ID": "ManageDocuments",
     "ListElementCode": "document",
     "ElementLabel": "Document",
-    "HintText": "File size must be under 50",
+    "HintText": "File size must be under 500MB.",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -42,7 +52,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ManageDocuments",
-    "ListElementCode": "doesContainsConfidentialDetails",
+    "ListElementCode": "isConfidential",
     "ElementLabel":"Does the document contain confidential information?",
     "HintText": "Only HMCTS staff and the judiciary will be able to see it.",
     "FieldType": "YesOrNo",
@@ -52,8 +62,7 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "ManageDocuments",
-    "ListElementCode": "doesContainsRestrictedDetails",
-    "CaseFieldID": "manageDocument",
+    "ListElementCode": "isRestricted",
     "ElementLabel":"Do you want to request this document is restricted?",
     "HintText": "The court will only restrict a document if there is a very good reason.Only court staff and the judiciary will be able to see it.",
     "FieldType": "YesOrNo",
@@ -63,12 +72,12 @@
   {
     "LiveFrom": "03/02/2022",
     "ID": "ManageDocuments",
-    "ListElementCode": "documentDetails",
-    "CaseFieldID": "manageDocument",
-    "ElementLabel": "Explain why you want to restrict access to the document (Optional)",
+    "ListElementCode": "restrictedDetails",
+    "ElementLabel": "Explain why you want to restrict access to the document",
     "FieldType": "TextArea",
+    "DisplayContext": "OPTIONAL",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "manageDocument.doesContainsRestrictedDetails=\"Yes\""
+    "FieldShowCondition": "isRestricted=\"Yes\""
   }
 ]
