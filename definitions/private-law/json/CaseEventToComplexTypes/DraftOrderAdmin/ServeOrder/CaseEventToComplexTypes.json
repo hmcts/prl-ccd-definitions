@@ -372,8 +372,8 @@
     "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "emailInformation.emailAddress",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "2",
-    "DisplayContext": "COMPLEX"
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
@@ -383,8 +383,8 @@
     "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "emailInformation.emailName",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "1",
-    "DisplayContext": "COMPLEX"
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
@@ -395,7 +395,7 @@
     "FieldShowCondition": "serveOrgDetailsList.serveByPostOrEmail=\"post\"",
     "ListElementCode": "postalInformation",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "COMPLEX"
   },
   {
@@ -406,8 +406,8 @@
     "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalName",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "1",
-    "DisplayContext": "COMPLEX"
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
@@ -416,61 +416,6 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "2",
-    "DisplayContext": "COMPLEX"
-  },
-  {
-    "LiveFrom": "22/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrgDetails",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.AddressLine1",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "3",
-    "DisplayContext": "COMPLEX"
-  },
-  {
-    "LiveFrom": "22/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrgDetails",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.AddressLine2",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "COMPLEX"
-  },
-  {
-    "LiveFrom": "22/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrgDetails",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.AddressLine3",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "COMPLEX"
-  },
-  {
-    "LiveFrom": "22/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrgDetails",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.PostTown",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "COMPLEX"
-  },
-  {
-    "LiveFrom": "22/11/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "ServeOrgDetails",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.County",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "7",
     "DisplayContext": "COMPLEX"
@@ -481,10 +426,65 @@
     "ID": "ServeOrgDetails",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "serveOrgDetailsList",
-    "ListElementCode": "postalInformation.postalAddress.PostCode",
+    "ListElementCode": "postalInformation.postalAddress.AddressLine1",
     "EventElementLabel": " ",
     "FieldDisplayOrder": "8",
-    "DisplayContext": "COMPLEX"
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "22/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ServeOrgDetails",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrgDetailsList",
+    "ListElementCode": "postalInformation.postalAddress.AddressLine2",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "9",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "22/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ServeOrgDetails",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrgDetailsList",
+    "ListElementCode": "postalInformation.postalAddress.AddressLine3",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "10",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "22/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ServeOrgDetails",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrgDetailsList",
+    "ListElementCode": "postalInformation.postalAddress.PostTown",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "11",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "22/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ServeOrgDetails",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrgDetailsList",
+    "ListElementCode": "postalInformation.postalAddress.County",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "22/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ServeOrgDetails",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrgDetailsList",
+    "ListElementCode": "postalInformation.postalAddress.PostCode",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "22/11/2023",
@@ -494,7 +494,7 @@
     "CaseFieldID": "serveOrgDetailsList",
     "ListElementCode": "postalInformation.postalAddress.Country",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "9",
-    "DisplayContext": "COMPLEX"
+    "FieldDisplayOrder": "14",
+    "DisplayContext": "OPTIONAL"
   }
 ]
