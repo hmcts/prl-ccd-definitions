@@ -41,7 +41,7 @@ const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const hearingRequestPage = require('./pages/HearingRequest');
-const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
+const amendCaseDetailsPage = require('./pages/AmendCaseDetails');
 const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
 const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
@@ -315,10 +315,16 @@ module.exports = () => {
       return caseList.verifySearchResultsFilteredByStateAndApplicationType();
     },
     amendMiamDetails() {
-      return amendMiamDetailsPage.updateApplicationInfo();
+      return amendCaseDetailsPage.updateApplicantMIAMInfo();
     },
     verifyUpdatedMiamDetails() {
-      return amendMiamDetailsPage.verifyUpdatedMiamDetails();
+      return amendCaseDetailsPage.verifyUpdatedMiamDetails();
+    },
+    amendDARespondentDetails() {
+      return amendCaseDetailsPage.updateDARespondentDetails();
+    },
+    verifyUpdatedRespondentDetails() {
+      return amendCaseDetailsPage.verifyUpdatedRespondentDetails();
     },
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
