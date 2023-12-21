@@ -103,6 +103,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationC100() {
+    await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
   },
@@ -111,6 +112,12 @@ module.exports = {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).click('Continue');
+  },
+  async selectTypeOfApplicationFL401_TS() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click('Continue');
   },
 
@@ -158,6 +165,13 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('7');
+  },
+  async createNewCaseFL401_TS() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TS_Solicitor();
+    await this.selectTypeOfApplicationFL401_TS();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');
   },
