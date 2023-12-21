@@ -79,6 +79,58 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "typeOfC21OrderLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedOrderC21HearingLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "selectedC21Order",
     "AccessControl": [
       {
@@ -137,6 +189,7 @@
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor",
           "caseworker-wa-task-configuration"
         ],
         "CRUD": "CRU"
@@ -144,11 +197,35 @@
       {
         "UserRoles": [
           "citizen",
-          "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
     ]
-  }
+  },
+  {
+      "LiveFrom": "02/12/2021",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "selectedC21OrderLabel",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate",
+            "caseworker-privatelaw-solicitor",
+            "caseworker-wa-task-configuration"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "citizen",
+            "caseworker-privatelaw-superuser"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    }
 ]
