@@ -48,10 +48,10 @@
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "reviewDecisionYesOrNo",
-    "Label": "Does the document need to be restricted?",
+    "Label": "Do you want to restrict access to this document?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "YesNoDontKnow",
-    "HintText": "Documents that are marked as restricted can only be seen by court staff, Cafcass and the \n judiciary. They are visible in case file view and the confidential details tab.",
+    "FieldTypeParameter": "YesNoNotSure",
+    "HintText": "Restricted documents can only be seen by court staff and the judiciary. They can be found in case file view and the confidential details tab.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -68,7 +68,7 @@
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "docToBeReviewedLabel",
-    "Label": "${docToBeReviewed}",
+    "Label": "<div class='govuk-inset-text'>${docToBeReviewed}</div>",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -85,8 +85,17 @@
   {
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
-    "ID": "reviewDoc",
+    "ID": "showLabel",
     "Label": "${docLabel}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "reviewDoc",
+    "Label": " ",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
