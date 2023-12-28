@@ -184,7 +184,7 @@ module.exports = {
     await I.click(moConfig.continueText);
 
     await I.waitForElement(this.fields.selectOrderToServe);
-    // await I.click(this.fields.selectOrderToServe);
+    await I.click(this.fields.selectOrderToServe);
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.serveOrdersText);
@@ -221,7 +221,7 @@ module.exports = {
     await I.waitForText(moConfig.orderCreatedUserBySolicitorText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
-    await I.waitForText("Legal Solicitor (Applicant's legal representative)");
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
     await I.waitForText(moConfig.emailName);
   },
 
@@ -235,7 +235,7 @@ module.exports = {
     await I.waitForText(moConfig.orderCreatedUserByAdminText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
-    await I.waitForText("Legal Solicitor (Applicant's legal representative)");
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
     await I.waitForText(moConfig.emailName);
   },
 
