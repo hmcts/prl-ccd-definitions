@@ -49,6 +49,16 @@ module.exports = {
     await I.fillField(this.fields.docDetailsField, documentDetails);
   },
 
+  async mainCourtDocuments(documentCategory, documentDetails) {
+    const uploadTime = 5;
+    await I.waitForElement(this.fields.selectParty);
+    await I.selectOption(this.fields.selectParty, manageDocConfig.courtPartyType);
+    await I.selectOption(this.fields.docCategoryField, documentCategory);
+    await I.attachFile(this.fields.docUploadField, '../resource/dummy.pdf');
+    await I.wait(uploadTime);
+    await I.fillField(this.fields.docDetailsField, documentDetails);
+  },
+
   async applyRestrictAccess() {
     await I.click(this.fields.selectRestrictAccess);
   },
@@ -79,6 +89,10 @@ module.exports = {
 
     await I.waitForText(manageDocConfig.submissionText);
     await I.click(manageDocConfig.returnToCaseDetails);
+  },
+
+  async submitDocumentScreen() {
+    await I.click(this.fields.submit);
   },
 
   async verifyDocumentSubmission() {
@@ -183,6 +197,16 @@ module.exports = {
     await this.submitDocuments();
     await I.amOnHistoryPageWithSuccessNotification();
     await this.verifyNonRestrictedDocumentSubmission();
+  },
+
+  async addNonRestrictedCourtDocuments() {
+    await this.triggerEvent();
+    await this.mainCourtDocuments(manageDocConfig.nonRestDocCategory, manageDocConfig.nonRestrictedDocDetailsText);
+    await this.submitDocumentScreen();
+  },
+
+  async verifyErrorMessageOnDocScreen() {
+    await I.see(manageDocConfig.errMsg);
   },
 
   async nonRestReviewDocuments() {

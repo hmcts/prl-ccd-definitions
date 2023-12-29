@@ -19,3 +19,10 @@ Scenario('As a court admin I want to manage and review non restricted docs @nigh
   await I.performNonRestrictedManageDocuments();
   await I.reviewNonRestManageDocuments();
 }).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a Solicitor I should not be able to upload court documents @nightly', async({ I }) => {
+    await I.loginAsSolicitor();
+    await I.searchForCasesWithId(caseId);
+    await I.uploadCourtDocument();
+    await I.verifyErrorMessageOnDocScreen();
+  }).retry(testConfig.TestRetryScenarios);

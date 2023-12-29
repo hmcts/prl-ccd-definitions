@@ -352,6 +352,12 @@ module.exports = () => {
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    uploadCourtDocument() {
+      return manageDocuments.addNonRestrictedCourtDocuments();
+    },
+    verifyErrorMessageOnDocScreen() {
+      return manageDocuments.verifyErrorMessageOnDocScreen();
     }
   });
 };
