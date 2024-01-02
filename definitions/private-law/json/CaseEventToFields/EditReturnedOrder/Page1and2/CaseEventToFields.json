@@ -12,6 +12,19 @@
         "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/edit-returned-order/mid-event/populate-instructions"
     },
     {
+        "LiveFrom": "31/03/2022",
+        "CaseTypeID": "PRLAPPS",
+        "CaseEventID": "editAndApproveAnOrder",
+        "CaseFieldID": "orderType",
+        "PageFieldDisplayOrder": 14,
+        "DisplayContext": "READONLY",
+        "PageID": 2,
+        "PageDisplayOrder": 1,
+        "ShowSummaryChangeOption": "Y",
+        "RetainHiddenValue": "Y",
+        "FieldShowCondition": "rejectedOrdersDynamicList=\"DO_NOT_SHOW\""
+    },
+    {
         "LiveFrom": "28/12/2023",
         "CaseTypeID": "PRLAPPS",
         "CaseEventID": "editReturnedOrder",
@@ -62,7 +75,7 @@
         "CaseTypeID": "PRLAPPS",
         "CaseEventID": "editReturnedOrder",
         "CaseFieldID": "editOrderTextInstructionsLabel",
-        "DisplayContext": "MANDATORY",
+        "DisplayContext": "READONLY",
         "PageID": 2,
         "PageDisplayOrder": 2,
         "PageFieldDisplayOrder": 5,
