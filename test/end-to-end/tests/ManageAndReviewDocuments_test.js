@@ -10,7 +10,7 @@ Scenario('As a court admin I want to manage and review restricted docs @nightly'
   caseId = await I.saveTheCaseId();
   await I.searchForCasesWithId(caseId);
   await I.performManageDocuments();
-  await I.reviewManageDocuments();
+  await I.reviewCAManageDocuments();
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin I want to manage and review non restricted docs @nightly', async({ I }) => {
@@ -21,8 +21,8 @@ Scenario('As a court admin I want to manage and review non restricted docs @nigh
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a Solicitor I should not be able to upload court documents @nightly', async({ I }) => {
-    await I.loginAsSolicitor();
-    await I.searchForCasesWithId(caseId);
-    await I.uploadCourtDocument();
-    await I.verifyErrorMessageOnDocScreen();
-  }).retry(testConfig.TestRetryScenarios);
+  await I.loginAsSolicitor();
+  await I.searchForCasesWithId(caseId);
+  await I.uploadCourtDocument();
+  await I.verifyErrorMessageOnDocScreen();
+}).retry(testConfig.TestRetryScenarios);

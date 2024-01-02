@@ -23,8 +23,9 @@ module.exports = {
     confidentialDetailsTab: '//div[contains(text(), "Confidential details")]',
     cfvTab: '//div[contains(text(), "Case File View")]',
     confFileEle: '//span[contains(text(), "dummy.pdf")]',
-    noticeOfHearingFolderEle: '//*[@aria-level="2"]/button/span[contains(text(), "Notice of Hearing")]',
+    noticeOfHearingFolderEle: '//*[@aria-level="2"]/button/span[contains(text(), "Notice of hearing")]',
     noticeOfHearingFileEle: '//*[@aria-level="3"]/button/span[contains(text(), "dummy.pdf")]',
+    confidentialFolderFileEle: '//*[@aria-level="2"]/button/span[contains(text(), "dummy.pdf")]',
     nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
 
     // add new fields
@@ -98,7 +99,8 @@ module.exports = {
   async verifyDocumentSubmission() {
     // const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
 
-    await I.click(this.fields.documentReviewTab);
+    await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.confidentialDetailsTab);
     await I.see('Yes, restrict access.');
     await I.see(manageDocConfig.pdfFileName);
     await I.see(manageDocConfig.docCategory);
@@ -107,7 +109,7 @@ module.exports = {
 
     // verify audio file submission
     await I.see(manageDocConfig.audioFileName);
-    await I.see('Court staff uploaded documents 2');
+    await I.see('Court staff uploaded confidential documents 2');
   },
 
   async triggerReviewDocEventForFiles(fileName) {
@@ -158,7 +160,7 @@ module.exports = {
     await I.waitForText('Attending the Hearing');
     await I.click('Attending the Hearing');
     await I.seeElement(this.fields.noticeOfHearingFolderEle);
-    await I.click('Notice of Hearing');
+    await I.click('Notice of hearing');
     await I.seeElement(this.fields.noticeOfHearingFileEle);
   },
 
@@ -207,6 +209,14 @@ module.exports = {
 
   async verifyErrorMessageOnDocScreen() {
     await I.see(manageDocConfig.errMsg);
+  },
+
+  async verifyCaseFileViewOfAdminRestDoc() {
+    await I.clickTillElementFound(this.fields.cfvTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.cfvTab);
+    await I.waitForText('Confidential');
+    await I.click('Confidential');
+    await I.seeElement(this.fields.confidentialFolderFileEle);
   },
 
   async nonRestReviewDocuments() {
