@@ -69,9 +69,10 @@ module.exports = {
   },
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
-    await I.wait('4');
+    // await I.wait('4');
     await I.retry(retryCount).click('//*[@id="newAllegationsOfHarmYesNo_Yes"]');
-    await I.wait('4');
+    // await I.wait('4');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
   },
@@ -109,6 +110,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.ordersOtherInjunctiveNo);
     await I.retry(retryCount).click(this.fields.ordersUndertakingNo);
     await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
@@ -122,6 +124,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.behaviourDAStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviourDAApplicantSoughtHelp);
     await I.retry(retryCount).fillField('//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
@@ -137,6 +140,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.behaviourCAApplicantSoughtHelp);
     await I.retry(retryCount).fillField(this.fields.behaviourCAWhoHelpFromDescription, this.fields.textareaText);
     await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
@@ -155,6 +159,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
     await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionFather);
     await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
@@ -167,6 +172,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.otherConcernsSupervisedTime);
     await I.retry(retryCount).click(this.fields.otherConcernsOtherFormsOfContact);
     await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },

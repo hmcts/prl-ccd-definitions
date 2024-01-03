@@ -21,18 +21,20 @@ module.exports = {
 
     await I.wait(medWait);
     await I.reloadPage(this.fields.assignToMe);
+    await I.waitForElement(this.fields.assignToMe);
     await I.retry(retryCount).click(this.fields.assignToMe);
 
     await I.waitForElement(this.fields.issueTaskName, medWait);
     await I.reloadPage(this.fields.issueTaskName);
+    await I.waitForElement(this.fields.issueTaskName);
     await I.retry(retryCount).click(this.fields.issueTaskName);
 
-    await I.waitForElement(this.fields.courtListDropdown, medWait);
+    await I.waitForElement(this.fields.courtListDropdown, longWait);
     await I.selectOption(this.fields.courtListDropdown, 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('3');
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('15');
+    await I.wait(longWait);
     await I.see('Case Issued');
   }
 };
