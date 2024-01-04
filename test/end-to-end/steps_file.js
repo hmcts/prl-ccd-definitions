@@ -347,11 +347,20 @@ module.exports = () => {
     reviewManageDocuments() {
       return manageDocuments.reviewDocuments();
     },
+    reviewCAManageDocuments() {
+      return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
+    },
     performNonRestrictedManageDocuments() {
       return ManageDocuments.addNonRestrictedDocuments();
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    uploadCourtDocument() {
+      return manageDocuments.addNonRestrictedCourtDocuments();
+    },
+    verifyErrorMessageOnDocScreen() {
+      return manageDocuments.verifyErrorMessageOnDocScreen();
     }
   });
 };
