@@ -19,7 +19,7 @@ Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @nightly', a
 Scenario('As a Judge edit & change a draft order @nightly', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
-  await I.editAnDraftOrder();
+  await I.editAnDraftOrderCreatedBySolicitor();
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
