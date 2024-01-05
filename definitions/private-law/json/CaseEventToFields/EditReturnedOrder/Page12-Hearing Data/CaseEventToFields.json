@@ -6,10 +6,10 @@
     "CaseFieldID": "orderNameSolicitorLabel",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
-    "PageID": 14,
-    "PageDisplayOrder": 14,
+    "PageID": 12,
+    "PageDisplayOrder": 12,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "isOrderCreatedBySolicitor=\"Yes\" AND isHearingPageNeeded=\"Yes\""
+    "PageShowCondition": "isHearingPageNeeded=\"Yes\""
   },
   {
     "LiveFrom": "22/10/2022",
@@ -17,8 +17,8 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "hasJudgeProvidedHearingDetails",
     "DisplayContext": "MANDATORY",
-    "PageID": 14,
-    "PageDisplayOrder": 14,
+    "PageID": 12,
+    "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 3
   },
   {
@@ -27,8 +27,8 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "solicitorCreateHearingRequiredLabel",
     "DisplayContext": "READONLY",
-    "PageID": 14,
-    "PageDisplayOrder": 14,
+    "PageID": 12,
+    "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND (orderType=\"noticeOfProceedingsParties\" OR orderType=\"noticeOfProceedingsNonParties\" OR orderType=\"noticeOfProceedings\")"
@@ -39,8 +39,8 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "solicitorCreateHearingOptionalLabel",
     "DisplayContext": "READONLY",
-    "PageID": 14,
-    "PageDisplayOrder": 14,
+    "PageID": 12,
+    "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
@@ -51,8 +51,8 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "solicitorOrdersHearingDetails",
     "DisplayContext": "COMPLEX",
-    "PageID": 14,
-    "PageDisplayOrder": 14,
+    "PageID": 12,
+    "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",

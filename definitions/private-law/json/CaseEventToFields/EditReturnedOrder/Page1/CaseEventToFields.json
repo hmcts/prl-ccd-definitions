@@ -10,5 +10,18 @@
         "PageFieldDisplayOrder": 1,
         "ShowSummaryChangeOption": "Yes",
         "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/edit-returned-order/mid-event/populate-instructions"
+    },
+    {
+        "LiveFrom": "28/12/2023",
+        "CaseTypeID": "PRLAPPS",
+        "CaseEventID": "editReturnedOrder",
+        "CaseFieldID": "isHearingPageNeeded",
+        "DisplayContext": "OPTIONAL",
+        "PageID": 1,
+        "PageDisplayOrder": 1,
+        "PageFieldDisplayOrder": 1,
+        "ShowSummaryChangeOption": "N",
+        "RetainHiddenValue": "Y",
+        "FieldShowCondition": "rejectedOrdersDynamicList=\"DO_NOT_SHOW\""
     }
 ]
