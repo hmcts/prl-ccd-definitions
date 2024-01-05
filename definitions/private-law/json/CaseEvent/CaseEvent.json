@@ -1125,8 +1125,9 @@
     "Description": "Delete application",
     "DisplayOrder": 110,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "READY_FOR_DELETION",
+    "PostConditionState": "REQUESTED_FOR_DELETION",
     "SecurityClassification": "Public",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/callback/case-deletion/about-to-submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Delete"
