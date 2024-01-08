@@ -29,6 +29,11 @@ module.exports = {
     furtherInformation: '#furtherInformationIfRequired',
     typeOfOrder: '#selectTypeOfOrder',
     doesOrderClosesCase_Yes: '#doesOrderClosesCase_Yes',
+    cafcassOrCymruNeedToProvideReport_Yes: '#cafcassOrCymruNeedToProvideReport_Yes',
+    cafcassDocSelection: '#cafcassCymruDocuments-section7Report',
+    reportFillDay: '#whenReportsMustBeFiled-day',
+    reportFillMonth: '#whenReportsMustBeFiled-month',
+    reportFillYear: '#whenReportsMustBeFiled-year',
     cafcassOrCymruNeedToProvideReport_No: '#cafcassOrCymruNeedToProvideReport_No',
     orderEndsInvolvementOfCafcassOrCymru_No: '#orderEndsInvolvementOfCafcassOrCymru_No',
     doYouWantToServeOrder_Yes: '#doYouWantToServeOrder_Yes',
@@ -37,6 +42,11 @@ module.exports = {
     servePersonallyOptions_Yes: '#serveToRespondentOptions_Yes',
     servingRespondentsOptionsCA_applicantLegalRepresentative: '#servingRespondentsOptionsCA-applicantLegalRepresentative',
     cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No',
+    cafcassCymruServedOptions_Yes: '#cafcassCymruServedOptions_Yes',
+    addOtherOrg: '#serveOtherPartiesCA-anotherOrganisation',
+    deliverByEmail: '#deliveryByOptionsCA-email',
+    emailName: '#emailInformationCA_0_emailName',
+    emailAddress: '#emailInformationCA_0_emailAddress',
     hearingOutcomeTxtBoxDA: '#fl404CustomFields_fl404bHearingOutcome',
     draftOrderLink: '//a[contains(text(),\'raft.pdf\')]',
     isTheOrderUploadedByConsent_Yes: '#isTheOrderUploadedByConsent_Yes',
@@ -162,7 +172,12 @@ module.exports = {
   async performServeOrder() {
     await I.waitForText(moConfig.orderTypeQuestionText);
     await I.selectOption(this.fields.selectOrderType, moConfig.orderTypeText);
-    await I.click(this.fields.cafcassOrCymruNeedToProvideReport_No);
+    await I.click(this.fields.cafcassOrCymruNeedToProvideReport_Yes);
+    await I.waitForText('Section 7 report');
+    await I.click(this.fields.cafcassDocSelection);
+    await I.fillField(this.fields.reportFillDay, '20');
+    await I.fillField(this.fields.reportFillMonth, '3');
+    await I.fillField(this.fields.reportFillYear, '2024');
     await I.click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
     await I.click(this.fields.doYouWantToServeOrder_Yes);
     await I.runAccessibilityTest();
@@ -180,7 +195,12 @@ module.exports = {
     await I.waitForText(moConfig.servingToRespondentText);
     await I.click(this.fields.servePersonallyOptions_Yes);
     await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
-    await I.click(this.fields.cafcassCymruServedOptions_No);
+    await I.click(this.fields.cafcassCymruServedOptions_Yes);
+    await I.click(this.fields.addOtherOrg);
+    await I.click(this.fields.deliverByEmail);
+    await I.click('Add new');
+    await I.fillField(this.fields.emailName, moConfig.emailName);
+    await I.fillField(this.fields.emailAddress, 'test@gov.uk');
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
@@ -198,9 +218,11 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
-    // await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.orderCreatedUserBySolicitorText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
+    await I.waitForText(moConfig.emailName);
   },
 
   async verifyCourtAdminOrderSubmission() {
@@ -210,9 +232,11 @@ module.exports = {
     await I.waitForText(moConfig.c43AOrderText);
     await I.runAccessibilityTest();
     await I.waitForText(moConfig.judgeNameText);
-    // await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.orderCreatedUserByAdminText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
+    await I.waitForText(moConfig.emailName);
   },
 
   async sendToAdmin() {
@@ -227,7 +251,7 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
-  async verifyDraftOrderSubmission() {
+  async verifyDraftOrderSubmission(orderCreatedUserByText) {
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.click(this.fields.tabSelector);
 
@@ -235,6 +259,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(orderCreatedUserByText);
     await I.waitForText(moConfig.reviewedByText);
   },
 
@@ -396,10 +421,16 @@ module.exports = {
     await this.includeOrderDetails();
   },
 
-  async editDraftOrderByJudge() {
+  async editDraftOrderCreatedByAdmin() {
     await this.selectEditDraftOrder(moConfig.editOrderText);
     await this.sendToAdmin();
-    await this.verifyDraftOrderSubmission();
+    await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserByAdminText);
+  },
+
+  async editAnDraftOrderCreatedBySolicitor() {
+    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.sendToAdmin();
+    await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserBySolicitorText);
   },
 
   async serveDraftOrderByCourtAdmin() {
