@@ -22,7 +22,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -34,7 +34,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -69,8 +69,7 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -81,8 +80,7 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -90,11 +88,10 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "judgeOrMagistrateTitle",
     "PageFieldDisplayOrder": 11,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -102,11 +99,11 @@
     "CaseEventID": "editReturnedOrder",
     "CaseFieldID": "judgeOrMagistratesLastName",
     "PageFieldDisplayOrder": 12,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\" AND orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -129,8 +126,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"uploadAnOrder\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -189,7 +185,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -201,7 +197,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderType!=\"generalForm\" AND orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderType!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -213,7 +209,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "(orderType=\"blank\" OR orderType=\"generalForm\" OR c21OrderOptions=\"c21other\") AND orderType!=\"uploadAnOrder\""
+    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"generalForm\" OR c21OrderOptions=\"c21other\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -225,18 +221,6 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "c21OrderOptions=\"c21other\" AND orderType!=\"uploadAnOrder\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editReturnedOrder",
-    "CaseFieldID": "uploadOrderDoc",
-    "PageFieldDisplayOrder":27,
-    "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType=\"uploadAnOrder\""
+    "FieldShowCondition": "c21OrderOptions=\"c21other\""
   }
 ]
