@@ -25,6 +25,9 @@ module.exports = {
     cancelEle: 'a[id^="link-cancel"]',
     cancelOption: '#withdraw',
     viewDetails: 'a[id^="link-view-details"]',
+    updateJudgeType: '#judgeTypes',
+    updateHearingLength: '#hearingLength',
+    amendReason: '#partyreq',
     cancellationReason: '//div[5]/div[@class="govuk-summary-list__key"]',
     cancellationValue: '//div[5]/div[@class="govuk-summary-list__value"]'
   },
@@ -35,6 +38,7 @@ module.exports = {
     await I.waitForText('Current and upcoming');
     await I.click('Request a hearing');
     await I.waitForText('Hearing requirements');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -44,6 +48,7 @@ module.exports = {
     await I.click('Continue');
     await I.waitForText('What stage is this hearing at?');
     await I.click(this.fields.selectHearingStage);
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -61,6 +66,7 @@ module.exports = {
     await I.selectOption('#partyChannel8', 'In Person');
     await I.clearField(this.fields.noOfAttendees);
     await I.fillField(this.fields.noOfAttendees, '9');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -74,6 +80,7 @@ module.exports = {
     await I.click(this.fields.noSpecificJudge);
     await I.waitForText('Select all judge types that apply');
     await I.click(this.fields.judgeTypeEle);
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -88,6 +95,7 @@ module.exports = {
 
     await I.waitForText('Enter any additional instructions for the hearing');
     await I.fillField(this.fields.hearingInstructions, 'This is a test. Please ignore.');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 
@@ -95,9 +103,11 @@ module.exports = {
     await I.waitForText('Check your answers before sending your request');
     await I.click('Submit request');
     await I.see('Hearing request submitted');
+    await I.runAccessibilityTest();
     await I.click('view the status of this hearing in the hearings tab');
     await I.waitForText('History');
 
+    await I.runAccessibilityTest();
     await I.waitForText('WAITING TO BE LISTED');
     await I.see('WAITING TO BE LISTED');
     await I.see('First Hearing');
@@ -106,6 +116,7 @@ module.exports = {
 
     await I.click(this.fields.viewEle);
     await I.waitForText('View or edit hearing');
+    await I.runAccessibilityTest();
     await I.see('WAITING TO BE LISTED');
     await I.see('Projector');
     await I.see('Swansea Civil And Family Justice Centre');
@@ -113,10 +124,65 @@ module.exports = {
     await I.click('Back');
   },
 
+  async clickOnUpdateHearing() {
+    await I.click(this.fields.viewEle);
+    await I.waitForText('View or edit hearing');
+    await I.runAccessibilityTest();
+    await I.see('WAITING TO BE LISTED');
+  },
+
+  async updateHearingValues() {
+    await I.click(this.fields.updateJudgeType);
+    await I.waitForText('Do you want a specific judge?');
+    await I.click('//input[@value="30"]');
+    await I.runAccessibilityTest();
+    await I.click('Continue');
+    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('AMENDED');
+
+
+    await I.click(this.fields.updateHearingLength);
+    await I.waitForText('Length of hearing');
+    await I.clearField(this.fields.hearingDuration);
+    await I.fillField(this.fields.hearingDuration, '3');
+    await I.click(this.fields.noSpecificDate);
+    await I.click('Continue');
+    await I.see('3 Hours');
+  },
+
+  async submitUpdatedValues() {
+    await I.click('Submit updated request');
+    await I.click(this.fields.amendReason);
+    await I.runAccessibilityTest();
+    await I.click('Submit change request');
+    await I.see('Hearing request submitted');
+    await I.click('view the status of this hearing in the hearings tab');
+    await I.waitForText('History');
+  },
+
+  async verifyUpdatedHearingStatus() {
+    await I.waitForText('UPDATE REQUESTED ');
+    await I.runAccessibilityTest();
+    await I.see('UPDATE REQUESTED');
+    await I.see('First Hearing');
+    await I.seeElement(this.fields.viewEle);
+    await I.seeElement(this.fields.cancelEle);
+  },
+
+  async verifyUpdatedHearingDetails() {
+    await I.click(this.fields.viewEle);
+    await I.waitForText('View or edit hearing');
+    await I.see('UPDATE REQUESTED');
+    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('3 Hours');
+    await I.click('Back');
+  },
+
   async clickCanceHearing() {
     await I.seeElement(this.fields.cancelEle);
     await I.click(this.fields.cancelEle);
     await I.waitForText('Are you sure you want to cancel this hearing?');
+    await I.runAccessibilityTest();
     await I.seeNumberOfElements('//input[@type="checkbox"]', eleCount);
     await I.click(this.fields.cancelOption);
     await I.click('Continue');
@@ -124,6 +190,7 @@ module.exports = {
 
   async verifyHearingCancellation() {
     await I.waitForText('Current and upcoming');
+    await I.runAccessibilityTest();
     await I.see('CANCELLATION REQUESTED');
     await I.dontSeeElement(this.fields.cancelEle);
     await I.click(this.fields.viewDetails);
@@ -143,6 +210,14 @@ module.exports = {
     await this.submitVenueAndJudgeDetails();
     await this.submitDurationAndAdditionalInfo();
     await this.submitAndVerifyHearingRequest();
+  },
+
+  async updateHearing() {
+    await this.clickOnUpdateHearing();
+    await this.updateHearingValues();
+    await this.submitUpdatedValues();
+    await this.verifyUpdatedHearingStatus();
+    await this.verifyUpdatedHearingDetails;
   },
 
   async cancelHearing() {

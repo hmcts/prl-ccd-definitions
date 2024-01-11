@@ -29,9 +29,10 @@ def secrets = [
         ],
         'prl-${env}'      : [
                 secret('legalprofessional-testuser-one', 'LEGALPROFESSIONAL_TESTUSER_ONE'),
+                secret('legalprofessional-respondent-testuser', 'LEGALPROFESSIONAL_RESPONDENT_TESTUSER'),
                 secret('legalprofessional-testpassword-one', 'LEGALPROFESSIONAL_TESTPASSWORD_ONE'),
                 secret('courtadmin-testuser-one', 'COURTADMIN_TESTUSER_ONE'),
-                secret('legaladviser-testuser-one', 'LEGALADVISER_TESTUSER_ONE'),
+                secret('courtadmin-swansea-testuser', 'COURTADMIN_SWANSEA_TESTUSER'),
                 secret('judge-testuser-one', 'JUDGE_TESTUSER_ONE'),
                 secret('judge-testpassword', 'JUDGE_TESTPASSWORD')
         ],
@@ -41,7 +42,8 @@ def secrets = [
                 secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
                 secret('idam-data-store-client-secret','IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
                 secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
-                secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD')
+                secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
+                secret('ccd-case-document-am-api-s2s-secret', 'CCD_CASE_DOCUMENT_AM_API_SECRET')
         ]
 ]
 
@@ -76,4 +78,3 @@ withNightlyPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 }
-

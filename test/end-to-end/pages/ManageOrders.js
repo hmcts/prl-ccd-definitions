@@ -152,6 +152,7 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await this.fillGenericScreen();
+    await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).fillField(this.fields.orderDirections, 'TEST ORDER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
@@ -187,7 +188,8 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.orderMade_day, '17');
     await I.retry(retryCount).fillField(this.fields.orderMade_month, '10');
     await I.retry(retryCount).fillField(this.fields.orderMade_year, '2022');
-    await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
+    await I.wait('1');
+    // await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
   },
   async submitManageOrder() {
     await I.retry(retryCount).click('Continue');
