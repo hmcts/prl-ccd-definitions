@@ -39,8 +39,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-documents/mid-event"
+    "PageFieldDisplayOrder": 1
   },
   {
     "LiveFrom": "10/05/2023",
@@ -114,5 +113,18 @@
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
     "PageFieldDisplayOrder": 7
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewDocuments",
+    "CaseFieldID": "tempQuarantineDocumentList",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "reviewDocsDynamicList=\"DO_NOT_SHOW\"",
+    "RetainHiddenValue": "Y"
   }
 ]
