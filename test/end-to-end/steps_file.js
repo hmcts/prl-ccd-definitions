@@ -303,8 +303,11 @@ module.exports = () => {
     draftAnOrder() {
       return manageOrders.composeDraftOrder();
     },
-    editAnDraftOrder() {
-      return manageOrders.editDraftOrderByJudge();
+    editAnDraftOrderCreatedBySolicitor() {
+      return manageOrders.editAnDraftOrderCreatedBySolicitor();
+    },
+    editAnDraftOrderCreatedByAdmin() {
+      return manageOrders.editDraftOrderCreatedByAdmin();
     },
     serveAnOrder() {
       return manageOrders.serveDraftOrderByCourtAdmin();
