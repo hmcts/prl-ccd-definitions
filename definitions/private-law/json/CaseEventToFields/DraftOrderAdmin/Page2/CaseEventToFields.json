@@ -12,11 +12,23 @@
     "PageShowCondition": "orderUploadedAsDraftFlag=\"Yes\""
   },
   {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "judgeNotesEmptyUploadJourney",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "downloadOrderLabel=\"DO_NOT_SHOW\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
   "LiveFrom": "31/03/2022",
   "CaseTypeID": "PRLAPPS",
   "CaseEventID": "adminEditAndApproveAnOrder",
   "CaseFieldID": "previewUploadedOrder",
-  "PageFieldDisplayOrder": 2,
+  "PageFieldDisplayOrder": 3,
   "DisplayContext": "READONLY",
   "PageID": 2,
   "PageDisplayOrder": 2,
@@ -27,7 +39,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "makeChangesToUploadedOrder",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -38,10 +50,11 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "uploadOrAmendDirectionsFromJudge",
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
+    "FieldShowCondition": "judgeNotesEmptyUploadJourney!=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -52,7 +65,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition" : "makeChangesToUploadedOrder=\"DO_NOT_SHOW\""
   },

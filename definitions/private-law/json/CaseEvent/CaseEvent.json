@@ -1125,9 +1125,8 @@
     "Description": "Delete application",
     "DisplayOrder": 110,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "REQUESTED_FOR_DELETION",
+    "PostConditionState": "READY_FOR_DELETION",
     "SecurityClassification": "Public",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/callback/case-deletion/about-to-submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Delete"
@@ -1146,6 +1145,7 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/resubmit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/updateTaskListOnly",
     "Publish": "True"
   },
   {
@@ -1162,6 +1162,7 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401/resubmit-application",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/updateTaskListOnly",
     "EndButtonLabel": "Save and continue",
     "Publish": "True"
   },
@@ -1417,7 +1418,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2021",

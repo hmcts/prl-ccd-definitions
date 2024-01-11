@@ -708,18 +708,6 @@
     "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "sdoSettlementHearingDetails",
-    "ListElementCode": "infoToBeDisplayedFor3And4OptionsLabel",
-    "EventElementLabel": "**This is test note, note to be confirmed service team or UCD**",
-    "FieldDisplayOrder": "69",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
-  },
-  {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
@@ -742,5 +730,42 @@
     "FieldDisplayOrder": "71",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "sdoSettlementHearingDetails",
+    "ListElementCode": "hearingDateToBeConfirmedLabel",
+    "EventElementLabel": "**The date needs to be confirmed by the listing team before service (Optional)**",
+    "FieldDisplayOrder": "72",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "sdoSettlementHearingDetails",
+    "ListElementCode": "hearingDateToBeFixedLabel",
+    "EventElementLabel": "**This order will be served with the 'date to be fixed' (Optional)**",
+    "FieldDisplayOrder": "73",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "sdoSettlementHearingDetails",
+    "ListElementCode": "additionalDetailsForHearingDateOptions",
+    "EventHintText": "Give details of any additional requirements.",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "74",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR sdoSettlementHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   }
 ]
