@@ -5435,7 +5435,33 @@
   {
     "LiveFrom": "08/01/2024",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "isApprovedByJudge",
+    "CaseFieldID": "isOrderApproved",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "08/01/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "whoApprovedTheOrder",
     "AccessControl": [
       {
         "UserRoles": [
