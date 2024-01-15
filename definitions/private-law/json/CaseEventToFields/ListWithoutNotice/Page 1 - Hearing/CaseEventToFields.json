@@ -1,5 +1,31 @@
 [
   {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "caseTypeOfApplication=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "22/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "listWithoutNotice",
+    "CaseFieldID": "listWithoutNoticeHearingDetails",
+    "DisplayContext": "COMPLEX",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition" : "caseTypeOfApplication=\"FL401\""
+  },
+  {
     "LiveFrom": "22/10/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "listWithoutNotice",
@@ -7,8 +33,9 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No"
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "22/10/2022",
@@ -18,7 +45,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition" : "caseTypeOfApplication=\"C100\""
   }
 ]
