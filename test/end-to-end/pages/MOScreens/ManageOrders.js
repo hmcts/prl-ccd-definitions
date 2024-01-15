@@ -65,7 +65,8 @@ module.exports = {
     selectC43AOrder: '#createSelectOrderOptions-specialGuardianShip',
     successElement: 'div.alert-message',
     selectDraftOrderForEditing: '#draftOrdersDynamicList',
-    editOrder_yes: '#doYouWantToEditTheOrder_Yes',
+    editOrderMyselfSolicitor: '#whatToDoWithOrderSolicitor-editTheOrderAndServe',
+    editOrderMyselfCourtAdmin: '#whatToDoWithOrderCourtAdmin-editTheOrderAndServe',
     editOrder_no: '#doYouWantToEditTheOrder_No',
     judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
     isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
@@ -133,7 +134,7 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
-  async selectEditDraftOrder(modeOfOrder) {
+  async selectEditDraftOrderCourtAdmin(modeOfOrder) {
     await I.triggerEvent(modeOfOrder);
     await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
@@ -141,7 +142,31 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
-    await I.click(this.fields.editOrder_yes);
+    await I.click(this.fields.editOrderMyselfCourtAdmin);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.orderConsentText);
+    await I.click(this.fields.judgeTitle_DistrictJudge);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.specialGuardingText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.previewOrderText);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+  },
+
+  async selectEditDraftOrderSolicitor(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.click(this.fields.editOrderMyselfSolicitor);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
     await I.waitForText(moConfig.orderConsentText);
@@ -242,12 +267,11 @@ module.exports = {
   async sendToAdmin() {
     await I.waitForText(moConfig.directionsToAdminText);
     await I.fillField(this.fields.judgeDirectionsToAdmin, moConfig.directionsText);
-    await I.click(this.fields.isOrderCompleteToServe_Yes);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.cyaText);
-    await I.click(moConfig.sendToAdminText);
+    await I.click(moConfig.submitText);
     await I.waitForElement(this.fields.successElement);
   },
 
@@ -422,13 +446,13 @@ module.exports = {
   },
 
   async editDraftOrderCreatedByAdmin() {
-    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.selectEditDraftOrderCourtAdmin(moConfig.editOrderText);
     await this.sendToAdmin();
     await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserByAdminText);
   },
 
   async editAnDraftOrderCreatedBySolicitor() {
-    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.selectEditDraftOrderSolicitor(moConfig.editOrderText);
     await this.sendToAdmin();
     await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserBySolicitorText);
   },
