@@ -179,14 +179,14 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isOrderCompleteToServe",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRU"
+    "CRUD": "R"
   },
   {
     "LiveFrom": "15/02/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isOrderCompleteToServe",
     "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
+    "CRUD": "R"
   },
   {
     "LiveFrom": "14/02/2022",
@@ -214,7 +214,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isOrderCompleteToServe",
     "UserRole": "courtnav",
-    "CRUD": "CRU"
+    "CRUD": "R"
   },
   {
     "LiveFrom": "15/02/2021",
@@ -781,6 +781,44 @@
           },
           {
             "UserRoles": [
+              "caseworker-privatelaw-solicitor",
+              "caseworker-privatelaw-readonly"
+            ],
+            "CRUD": "R"
+          }
+        ]
+      },
+      {
+          "LiveFrom": "05/12/2023",
+          "CaseTypeID": "PRLAPPS",
+          "CaseFieldID": "instructionsToLegalRepresentativeLabel",
+          "AccessControl": [
+            {
+              "UserRoles": [
+                "caseworker-privatelaw-courtadmin",
+                "caseworker-privatelaw-systemupdate",
+                "caseworker-privatelaw-superuser",
+                "caseworker-privatelaw-la",
+                "caseworker-privatelaw-judge",
+                "caseworker-privatelaw-solicitor",
+                "caseworker-privatelaw-readonly"
+              ],
+              "CRUD": "R"
+            }
+          ]
+      },
+      {
+        "LiveFrom": "05/12/2023",
+        "CaseTypeID": "PRLAPPS",
+        "CaseFieldID": "yourInstructionsToLrLabel",
+        "AccessControl": [
+          {
+            "UserRoles": [
+              "caseworker-privatelaw-courtadmin",
+              "caseworker-privatelaw-systemupdate",
+              "caseworker-privatelaw-superuser",
+              "caseworker-privatelaw-la",
+              "caseworker-privatelaw-judge",
               "caseworker-privatelaw-solicitor",
               "caseworker-privatelaw-readonly"
             ],
