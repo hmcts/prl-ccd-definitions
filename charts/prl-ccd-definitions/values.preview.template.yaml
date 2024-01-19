@@ -109,7 +109,7 @@ ccd:
     java:
       disableKeyVaults: true
       environment:
-        CCD_DATA_STORE_URL: http://{{ .Release.Name }}-ccd-data-store-api
+        CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
         RUN_LD_ON_STARTUP: false
 
   ccd-definition-store-api:
