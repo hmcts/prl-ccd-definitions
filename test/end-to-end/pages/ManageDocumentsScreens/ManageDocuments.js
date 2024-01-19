@@ -51,7 +51,7 @@ module.exports = {
     await I.click(this.fields.documentRelatedToCase);
   },
 
-  async mainApplicationDocuments(documentCategory, documentDetails) {
+  async mainApplicationDocuments(documentCategory) {
     const uploadTime = 5;
     await I.waitForElement(this.fields.selectParty);
     await I.selectOption(this.fields.selectParty, manageDocConfig.partyType);
@@ -80,7 +80,7 @@ module.exports = {
     await I.fillField(this.fields.explainRestrictAccess, manageDocConfig.restrictAccessDetails)
   },
 
-  async addAudioDocuments(documentCategory, documentDetails) {
+  async addAudioDocuments(documentCategory) {
     const uploadTime = 5;
     await I.waitForElement(this.fields.additionalSelectParty);
     await I.selectOption(this.fields.additionalSelectParty, manageDocConfig.partyType);
