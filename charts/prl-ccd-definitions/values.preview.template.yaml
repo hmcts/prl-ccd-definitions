@@ -75,7 +75,6 @@ ccd:
     s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
 
   ccd-user-profile-api:
-    disableKeyVaults: true
     java:
       imagePullPolicy: Always
       enviroment:
@@ -86,7 +85,6 @@ ccd:
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   ccd-data-store-api:
-    disableKeyVaults: true
     java:
       imagePullPolicy: Always
       environment:
@@ -109,7 +107,6 @@ ccd:
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
   am-role-assignment-service:
-    disableKeyVaults: true
     java:
       environment:
         CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
@@ -128,7 +125,6 @@ ccd:
               alias: LD_SDK_KEY
 
   ccd-definition-store-api:
-    disableKeyVaults: true
     java:
       imagePullPolicy: Always
       keyVaults: []
@@ -282,7 +278,6 @@ ccd:
 ccd-case-document-am-api:
   enabled: true
   java:
-    disableKeyVaults: true
     releaseNameOverride: ${SERVICE_NAME}-cdam
     imagePullPolicy: Always
     image: hmctspublic.azurecr.io/ccd/case-document-am-api:latest
