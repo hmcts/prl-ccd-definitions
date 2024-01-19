@@ -9,6 +9,7 @@ dependencies:
   - name: ccd
     version: ~8.0.29
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: am-role-assignment-service.disabled
     tags:
       - ccd-pr
   - name: xui-webapp
