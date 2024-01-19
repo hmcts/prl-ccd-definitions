@@ -15,7 +15,7 @@ module.exports = {
     docCategoryField: '#manageDocuments_0_documentCategories',
     docUploadField: '#manageDocuments_0_document',
     docDetailsField: '#manageDocuments_0_documentDetails',
-    selectRestrictAccess: '#manageDocuments_0_documentRestrictCheckbox-restrictToGroup',
+    selectRestrictAccess: '#manageDocuments_0_isRestricted_Yes',
     documentReviewTab: '//div[contains(text(), "Documents to be reviewed")]',
     caseDocsTab: '//div[contains(text(), "Case documents")]',
     selectReviewDoc: '#reviewDocsDynamicList',
@@ -27,17 +27,28 @@ module.exports = {
     noticeOfHearingFileEle: '//*[@aria-level="3"]/button/span[contains(text(), "dummy.pdf")]',
     confidentialFolderFileEle: '//*[@aria-level="2"]/button/span[contains(text(), "dummy.pdf")]',
     nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
+    documentRelatedToCase: '#manageDocuments_0_documentRelatedToCaseCheckbox',
+    documentContainConfidential: '#manageDocuments_0_isConfidential_Yes',
+    explainRestrictAccess: '#manageDocuments_0_restrictedDetails',
 
     // add new fields
+    additionalRelatedToCase: '#manageDocuments_1_documentRelatedToCaseCheckbox',
     additionalSelectParty: '#manageDocuments_1_documentParty',
     additionalDocCategoryField: '#manageDocuments_1_documentCategories',
     additionalDocUploadField: '#manageDocuments_1_document',
     additionalDocDetailsField: '#manageDocuments_1_documentDetails',
-    additionalSelectRestrictAccess: '#manageDocuments_1_documentRestrictCheckbox-restrictToGroup'
+    additionalDocConfidential: '#manageDocuments_1_isConfidential_Yes',
+    additionalSelectRestrictAccess: '#manageDocuments_1_isRestricted_Yes',
+    additionalExplainRestrictAccess: '#manageDocuments_1_restrictedDetails'
   },
 
   async triggerEvent() {
     await I.triggerEvent('Manage documents');
+  },
+
+  async confirmDocumentRelatedCase() {
+    await I.waitForElement(this.fields.documentRelatedToCase);
+    await I.click(this.fields.documentRelatedToCase);
   },
 
   async mainApplicationDocuments(documentCategory, documentDetails) {
@@ -47,7 +58,6 @@ module.exports = {
     await I.selectOption(this.fields.docCategoryField, documentCategory);
     await I.attachFile(this.fields.docUploadField, '../resource/dummy.pdf');
     await I.wait(uploadTime);
-    await I.fillField(this.fields.docDetailsField, documentDetails);
   },
 
   async mainCourtDocuments(documentCategory, documentDetails) {
@@ -59,9 +69,15 @@ module.exports = {
     await I.wait(uploadTime);
     await I.fillField(this.fields.docDetailsField, documentDetails);
   },
+  
+  async applyDocConfidential() {
+    await I.click(this.fields.documentContainConfidential);
+  },
+
 
   async applyRestrictAccess() {
     await I.click(this.fields.selectRestrictAccess);
+    await I.fillField(this.fields.explainRestrictAccess, manageDocConfig.restrictAccessDetails)
   },
 
   async addAudioDocuments(documentCategory, documentDetails) {
@@ -71,16 +87,24 @@ module.exports = {
     await I.selectOption(this.fields.additionalDocCategoryField, documentCategory);
     await I.attachFile(this.fields.additionalDocUploadField, '../resource/test_av.mp3');
     await I.wait(uploadTime);
-    await I.fillField(this.fields.additionalDocDetailsField, documentDetails);
+  },
+
+  async additionalDocConfidential() {
+    await I.click(this.fields.additionalDocConfidential);
   },
 
   async applyRestrictAccessForAudioDoc() {
     await I.click(this.fields.additionalSelectRestrictAccess);
+    await I.fillField(this.fields.additionalExplainRestrictAccess, manageDocConfig.restrictAccessDetails)
   },
 
   async addNewDocuments() {
     await I.click('Add new');
     await I.waitForVisible(this.fields.additionalSelectParty);
+  },
+
+  async additionalConfirmDocRelated() {
+    await I.click(this.fields.additionalRelatedToCase);
   },
 
   async submitDocuments() {
@@ -173,11 +197,15 @@ module.exports = {
 
   async runManageDocumentsHappyPath() {
     await this.triggerEvent();
+    await this.confirmDocumentRelatedCase();
     await this.mainApplicationDocuments(manageDocConfig.docCategory, manageDocConfig.docDetailsText);
+    await this.applyDocConfidential();
     await this.applyRestrictAccess();
 
     await this.addNewDocuments();
+    await this.additionalConfirmDocRelated();
     await this.addAudioDocuments(manageDocConfig.docCategory, manageDocConfig.docDetailsText);
+    await this.additionalDocConfidential();
     await this.applyRestrictAccessForAudioDoc();
 
     await this.submitDocuments();
