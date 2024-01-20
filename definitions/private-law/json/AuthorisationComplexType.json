@@ -326,25 +326,65 @@
   {
     "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "selectedParties",
+    "CaseFieldID": "orderCollection",
+    "ListElementCode": "isTheOrderAboutChildren",
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor",
           "citizen"
         ],
-        "CRUD": "CRUD"
+        "CRUD": "R"
       },
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderCollection",
+    "ListElementCode": "isTheOrderAboutAllChildren",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen"
         ],
         "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderCollection",
+    "ListElementCode": "childrenList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
