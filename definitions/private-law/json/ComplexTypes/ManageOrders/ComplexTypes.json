@@ -54,6 +54,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "28/11/2023",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "orderCreatedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "OtherOrderDetails",
     "ListElementCode": "orderCreatedDate",
@@ -166,6 +175,7 @@
     "FieldTypeParameter": "ServingRespondentsEnum",
     "ElementLabel": "Recipients",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -202,16 +212,6 @@
     "ListElementCode": "cafcassEmail",
     "FieldType": "Text",
     "ElementLabel": "Cafcass email",
-    "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ServeOrderDetails",
-    "ListElementCode": "cafcassCymruServed",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Cafcass cymru been served ?",
     "SecurityClassification": "Public",
     "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
@@ -635,5 +635,60 @@
     "ElementLabel": "Bulk print order details",
     "Searchable": "N",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "serveByPostOrEmail",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DeliveryByEnum",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "emailInformation",
+    "FieldType": "EmailInformation",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "postalInformation",
+    "FieldType": "PostalInformation",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "servingRecipientName",
+    "FieldType": "Text",
+    "ElementLabel": "Recipients",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "cafcassCymruServed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is Cafcass Cymru involved?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "organisationsName",
+    "FieldType": "Text",
+    "ElementLabel": "Other Organisations",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
