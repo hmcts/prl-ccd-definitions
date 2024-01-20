@@ -113,7 +113,7 @@ ccd:
       imagePullPolicy: Always
       image: hmctspublic.azurecr.io/am/role-assignment-service:latest
       environment:
-        CCD_DATA_STORE_URL: https://${SERVICE_NAME}-ccd-data-store-api
+        CCD_DATA_STORE_URL: https://ccd-data-store-api-${SERVICE_FQDN}
         ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
       keyVaults: []
       ingressHost: am-role-assignment-${SERVICE_FQDN}
