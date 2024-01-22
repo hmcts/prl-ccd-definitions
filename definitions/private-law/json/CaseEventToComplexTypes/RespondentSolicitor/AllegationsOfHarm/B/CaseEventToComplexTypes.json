@@ -112,14 +112,12 @@
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "19/06/2023",
+    "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "RespChildAbuse",
     "CaseEventID": "c100ResSolAllegationsOfHarmB",
     "CaseFieldID": "respChildPhysicalAbuse",
-    "ListElementCode": "respTypeOfAbuse",
-    "DefaultValue": "physicalAbuse",
-    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
+    "ListElementCode": "respAbuseNatureDescription",
     "EventElementLabel": "",
     "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
@@ -130,7 +128,7 @@
     "ID": "RespChildAbuse",
     "CaseEventID": "c100ResSolAllegationsOfHarmB",
     "CaseFieldID": "respChildPhysicalAbuse",
-    "ListElementCode": "respAbuseNatureDescription",
+    "ListElementCode": "respBehavioursStartDateAndLength",
     "EventElementLabel": "",
     "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
@@ -141,20 +139,9 @@
     "ID": "RespChildAbuse",
     "CaseEventID": "c100ResSolAllegationsOfHarmB",
     "CaseFieldID": "respChildPhysicalAbuse",
-    "ListElementCode": "respBehavioursStartDateAndLength",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespChildAbuse",
-    "CaseEventID": "c100ResSolAllegationsOfHarmB",
-    "CaseFieldID": "respChildPhysicalAbuse",
     "ListElementCode": "respBehavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -166,20 +153,7 @@
     "ListElementCode": "respBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "respChildPhysicalAbuse.respBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "19/06/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespChildAbuse",
-    "CaseEventID": "c100ResSolAllegationsOfHarmB",
-    "CaseFieldID": "respChildPsychologicalAbuse",
-    "ListElementCode": "respTypeOfAbuse",
-    "DefaultValue": "psychologicalAbuse",
-    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -190,7 +164,7 @@
     "CaseFieldID": "respChildPsychologicalAbuse",
     "ListElementCode": "respAbuseNatureDescription",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -201,7 +175,7 @@
     "CaseFieldID": "respChildPsychologicalAbuse",
     "ListElementCode": "respBehavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -212,7 +186,7 @@
     "CaseFieldID": "respChildPsychologicalAbuse",
     "ListElementCode": "respBehavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -224,20 +198,7 @@
     "ListElementCode": "respBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "respChildPsychologicalAbuse.respBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "19/06/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespChildAbuse",
-    "CaseEventID": "c100ResSolAllegationsOfHarmB",
-    "CaseFieldID": "respChildFinancialAbuse",
-    "ListElementCode": "respTypeOfAbuse",
-    "DefaultValue": "financialAbuse",
-    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -248,7 +209,7 @@
     "CaseFieldID": "respChildFinancialAbuse",
     "ListElementCode": "respAbuseNatureDescription",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -259,7 +220,7 @@
     "CaseFieldID": "respChildFinancialAbuse",
     "ListElementCode": "respBehavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -270,7 +231,7 @@
     "CaseFieldID": "respChildFinancialAbuse",
     "ListElementCode": "respBehavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -282,20 +243,7 @@
     "ListElementCode": "respBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "respChildFinancialAbuse.respBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "19/06/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespChildAbuse",
-    "CaseEventID": "c100ResSolAllegationsOfHarmB",
-    "CaseFieldID": "respChildSexualAbuse",
-    "ListElementCode": "respTypeOfAbuse",
-    "DefaultValue": "sexualAbuse",
-    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -306,7 +254,7 @@
     "CaseFieldID": "respChildSexualAbuse",
     "ListElementCode": "respAbuseNatureDescription",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -317,7 +265,7 @@
     "CaseFieldID": "respChildSexualAbuse",
     "ListElementCode": "respBehavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -328,7 +276,7 @@
     "CaseFieldID": "respChildSexualAbuse",
     "ListElementCode": "respBehavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -340,20 +288,7 @@
     "ListElementCode": "respBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "respChildSexualAbuse.respBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "19/06/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "RespChildAbuse",
-    "CaseEventID": "c100ResSolAllegationsOfHarmB",
-    "CaseFieldID": "respChildEmotionalAbuse",
-    "ListElementCode": "respTypeOfAbuse",
-    "DefaultValue": "emotionalAbuse",
-    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -364,7 +299,7 @@
     "CaseFieldID": "respChildEmotionalAbuse",
     "ListElementCode": "respAbuseNatureDescription",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "2",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -375,7 +310,7 @@
     "CaseFieldID": "respChildEmotionalAbuse",
     "ListElementCode": "respBehavioursStartDateAndLength",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -386,7 +321,7 @@
     "CaseFieldID": "respChildEmotionalAbuse",
     "ListElementCode": "respBehavioursApplicantSoughtHelp",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -398,7 +333,7 @@
     "ListElementCode": "respBehavioursApplicantHelpSoughtWho",
     "FieldShowCondition": "respChildEmotionalAbuse.respBehavioursApplicantSoughtHelp=\"Yes\"",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL"
   }
 ]
