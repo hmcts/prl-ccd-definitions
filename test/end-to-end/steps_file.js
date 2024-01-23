@@ -46,6 +46,7 @@ const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
 const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
 const ManageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
+const returnOrderByJudge = require('./pages/MOScreens/ReturnOrderByJudge');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -355,6 +356,9 @@ module.exports = () => {
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    editAReturnedOrderByJudge() {
+      return returnOrderByJudge.editAReturnedOrderByJudge();
     }
   });
 };
