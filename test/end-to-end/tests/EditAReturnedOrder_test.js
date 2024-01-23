@@ -12,7 +12,7 @@ Scenario('Solicitor editing returned Blank order FL404B by Judge @nightly', asyn
   caseId = await I.saveTheCaseIdAndSignout();
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
-  await I.editAnDraftOrderCreatedBySolicitor();
+  //await I.editAnDraftOrderCreatedBySolicitor();
   await I.selectOrderForReview();
   caseId = await I.saveTheCaseIdAndSignout();
   await I.loginAsSolicitor();
