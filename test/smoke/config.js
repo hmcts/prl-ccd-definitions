@@ -1,9 +1,8 @@
-const defaultPassword = 'Nagoya0102';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-e2etestsolicitor@mailinator.com',
-    password: defaultPassword
+    email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
   definition: {
     jurisdiction: 'PRIVATELAW',

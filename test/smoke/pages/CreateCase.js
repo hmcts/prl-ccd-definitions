@@ -55,7 +55,7 @@ module.exports = {
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h2:nth-child(3)'));
     return caseId;
   }
 };

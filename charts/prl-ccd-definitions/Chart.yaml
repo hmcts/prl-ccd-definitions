@@ -1,10 +1,10 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.17
+version: 0.0.20
 dependencies:
   - name: nodejs
-    version: ~3.0.0
+    version: 3.0.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
   - name: ccd
     version: ~8.0.29
@@ -12,18 +12,18 @@ dependencies:
     tags:
       - ccd-pr
   - name: xui-webapp
-    version: ~1.0.4
+    version: ~1.0.8
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: xui-webapp.enabled
   - name: idam-pr
-    version: 2.2.6
+    version: 2.3.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: idam-pr.enabled
   - name: ccd-case-document-am-api
-    version: 1.7.6
+    version: 1.7.13
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: ccd-case-document-am-api.enabled
   - name: aac-manage-case-assignment
-    version: ~0.2.6
+    version: ~0.2.13
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: aac-manage-case-assignment.enabled
