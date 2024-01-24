@@ -42,7 +42,7 @@ const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
 const solicitorReasonableAdjustment = require('./pages/SolicitorReasonableAdjustment');
 const hearingRequestPage = require('./pages/HearingRequest');
-const amendMiamDetailsPage = require('./pages/AmendApplicantDetails');
+const amendCaseDetailsPage = require('./pages/AmendCaseDetails');
 const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
 const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
@@ -303,8 +303,11 @@ module.exports = () => {
     draftAnOrder() {
       return manageOrders.composeDraftOrder();
     },
-    editAnDraftOrder() {
-      return manageOrders.editDraftOrderByJudge();
+    editAnDraftOrderCreatedBySolicitor() {
+      return manageOrders.editAnDraftOrderCreatedBySolicitor();
+    },
+    editAnDraftOrderCreatedByAdmin() {
+      return manageOrders.editDraftOrderCreatedByAdmin();
     },
     serveAnOrder() {
       return manageOrders.serveDraftOrderByCourtAdmin();
@@ -328,10 +331,16 @@ module.exports = () => {
       return caseList.verifySearchResultsFilteredByStateAndApplicationType();
     },
     amendMiamDetails() {
-      return amendMiamDetailsPage.updateApplicationInfo();
+      return amendCaseDetailsPage.updateApplicantMIAMInfo();
     },
     verifyUpdatedMiamDetails() {
-      return amendMiamDetailsPage.verifyUpdatedMiamDetails();
+      return amendCaseDetailsPage.verifyUpdatedMiamDetails();
+    },
+    amendDARespondentDetails() {
+      return amendCaseDetailsPage.updateDARespondentDetails();
+    },
+    verifyUpdatedRespondentDetails() {
+      return amendCaseDetailsPage.verifyUpdatedRespondentDetails();
     },
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
