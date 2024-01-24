@@ -4,9 +4,9 @@ const LATEST_WINDOWS = 'Windows 10';
 const supportedBrowsers = {
   microsoft: {
     edge_win_latest: {
-      browserName: 'MicrosoftEdge',
+      browserName: 'Microsoft Edge',
       platformName: LATEST_WINDOWS,
-      browserVersion: 'latest',
+      browserVersion: 'latest-1',
       'sauce:options': {
         name: 'PRL: Edge_Win10',
         screenResolution: '1400x1050'
@@ -36,22 +36,13 @@ const supportedBrowsers = {
       }
     }
   },
-  chrome: {
+  chromium: {
     chrome_win_latest: {
-      browserName: 'chrome',
+      browserName: 'chromium',
       platformName: LATEST_WINDOWS,
-      browserVersion: 'latest',
+      browserVersion: 'latest-1',
       'sauce:options': {
         name: 'PRL: WIN_CHROME_LATEST',
-        screenResolution: '1600x1200'
-      }
-    },
-    chrome_mac_latest: {
-      browserName: 'chrome',
-      platformName: LATEST_MAC,
-      browserVersion: 'latest',
-      'sauce:options': {
-        name: 'PRL: MAC_CHROME_LATEST',
         screenResolution: '1600x1200'
       }
     }
@@ -60,7 +51,7 @@ const supportedBrowsers = {
     firefox_win_latest: {
       browserName: 'firefox',
       platformName: LATEST_WINDOWS,
-      browserVersion: 'latest',
+      browserVersion: 'latest-1',
       'sauce:options': {
         name: 'PRL: WIN_FIREFOX_LATEST',
         screenResolution: '1600x1200'
@@ -69,7 +60,7 @@ const supportedBrowsers = {
     firefox_mac_latest: {
       browserName: 'firefox',
       platformName: LATEST_MAC,
-      browserVersion: 'latest',
+      browserVersion: 'latest-1',
       'sauce:options': {
         name: 'PRL: MAC_FIREFOX_LATEST',
         screenResolution: '1600x1200'

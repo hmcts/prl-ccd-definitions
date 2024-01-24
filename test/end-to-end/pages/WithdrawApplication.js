@@ -17,11 +17,13 @@ module.exports = {
     await I.wait('4');
     await I.retry(retryCount).click(this.fields.withdrawApplicationConfirmYes);
     await I.retry(retryCount).fillField(this.fields.withdrawApplicationConfirmReason, this.fields.textareaText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('10');
     await I.retry(retryCount).see('Application withdrawn');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await I.retry(retryCount).see('Withdrawn');

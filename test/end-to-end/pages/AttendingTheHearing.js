@@ -59,6 +59,7 @@ module.exports = {
     await I.retry(retryCount).see('Set out the reasons that an intermediary is required.');
     await I.retry(retryCount).fillField(this.fields.reasonsForIntermediary, 'Example text - intermediary');
 
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
 
     await I.retry(retryCount).waitForText('Check your answers');
