@@ -2,6 +2,16 @@
   {
     "LiveFrom": "01/05/2023",
     "ID": "ManageDocuments",
+    "ListElementCode": "documentRelatedToCaseCheckbox",
+    "ElementLabel": "Confirm the document is related to this case",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "DocumentRelatedToCase",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "ManageDocuments",
     "ListElementCode": "documentParty",
     "ElementLabel": "Submitting document on behalf of",
     "HintText": "Select a party",
@@ -24,9 +34,41 @@
     "ID": "ManageDocuments",
     "ListElementCode": "document",
     "ElementLabel": "Document",
+    "HintText": "File size must be under 500MB.",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ManageDocuments",
+    "ListElementCode": "isConfidential",
+    "ElementLabel":"Does the document contain confidential information?",
+    "HintText": "Only HMCTS staff and the judiciary will be able to see it.",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ManageDocuments",
+    "ListElementCode": "isRestricted",
+    "ElementLabel":"Do you want to request this document is restricted?",
+    "HintText": "The court will only restrict a document if there is a very good reason.Only court staff and the judiciary will be able to see it.",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "ManageDocuments",
+    "ListElementCode": "restrictedDetails",
+    "ElementLabel": "Explain why you want to restrict access to the document",
+    "FieldType": "TextArea",
+    "DisplayContext": "OPTIONAL",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "isRestricted=\"Yes\""
   },
   {
     "LiveFrom": "01/05/2023",
@@ -35,7 +77,8 @@
     "ElementLabel": "Details",
     "FieldType": "TextArea",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "documentDetails=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "01/05/2023",
@@ -45,6 +88,7 @@
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "RestrictToCafcassHmcts",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "documentRestrictCheckbox=\"DO_NOT_SHOW\""
   }
 ]
