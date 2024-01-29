@@ -3,13 +3,11 @@ const judgeDefaultPassword = 'Hmcts1234';
 
 module.exports = {
   legalProfessionalUserOne: {
-    // email: 'prl-e2etestsolicitor@mailinator.com',
-    email: 'prl_ithc_org1_solicitor_2@mailinator.com',
+    email: 'prl-e2etestsolicitor@mailinator.com',
     password: defaultPassword
   },
   legalProfessionalUserTwo: {
-    // email: 'prl_ctscadmin11_stoke@justice.gov.uk',
-    email: 'prl_ithc_ca_swansea@justice.gov.uk',
+    email: 'prl_ctscadmin11_stoke@justice.gov.uk',
     password: defaultPassword
   },
   respondentSolicitor: {
