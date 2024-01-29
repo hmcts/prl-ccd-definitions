@@ -22,7 +22,7 @@ module.exports = {
     await I.waitForElement(this.fields.hearingTypes);
     await I.retry(retryCount).selectOption(this.fields.hearingTypes, 'Allocation');
 
-    await I.retry(retryCount).click("This order will be served with the 'date to be fixed'");
+    await I.retry(retryCount).click('This order will be served with the \'date to be fixed\'');
     await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
