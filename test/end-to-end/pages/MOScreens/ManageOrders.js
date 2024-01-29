@@ -44,9 +44,9 @@ module.exports = {
     cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No',
     cafcassCymruServedOptions_Yes: '#cafcassCymruServedOptions_Yes',
     addOtherOrg: '#serveOtherPartiesCA-anotherOrganisation',
-    deliverByEmail: '#deliveryByOptionsCA-email',
-    emailName: '#emailInformationCA_0_emailName',
-    emailAddress: '#emailInformationCA_0_emailAddress',
+    deliverByEmail: '#serveOrgDetailsList_0_serveByPostOrEmail-email',
+    emailName: '#serveOrgDetailsList_0_emailInformation_emailName',
+    emailAddress: '#serveOrgDetailsList_0_emailInformation_emailAddress',
     hearingOutcomeTxtBoxDA: '#fl404CustomFields_fl404bHearingOutcome',
     draftOrderLink: '//a[contains(text(),\'raft.pdf\')]',
     isTheOrderUploadedByConsent_Yes: '#isTheOrderUploadedByConsent_Yes',
@@ -222,8 +222,11 @@ module.exports = {
     await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
     await I.click(this.fields.cafcassCymruServedOptions_Yes);
     await I.click(this.fields.addOtherOrg);
-    await I.click(this.fields.deliverByEmail);
     await I.click('Add new');
+    await I.wait('5');
+    await I.click(this.fields.deliverByEmail);
+    await I.click(this.fields.deliverByEmail);
+    await I.wait('5');
     await I.fillField(this.fields.emailName, moConfig.emailName);
     await I.fillField(this.fields.emailAddress, 'test@gov.uk');
     await I.runAccessibilityTest();
@@ -494,6 +497,7 @@ module.exports = {
     const year = date.getFullYear();
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForElement(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
     await I.click(this.fields.judgeTitle_HerHonourJudge);
