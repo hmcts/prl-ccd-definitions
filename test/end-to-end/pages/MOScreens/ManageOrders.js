@@ -473,6 +473,7 @@ module.exports = {
     const year = date.getFullYear();
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForElement(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
     await I.click(this.fields.judgeTitle_HerHonourJudge);
