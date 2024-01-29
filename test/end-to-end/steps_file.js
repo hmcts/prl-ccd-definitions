@@ -47,6 +47,10 @@ const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
 const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
 const ManageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
+const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
+const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
+const createFlags = require('./pages/CreateFlagScreens/createFlags');
+const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -368,6 +372,18 @@ module.exports = () => {
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    requestSupportForHearing() {
+      return reqSupport.requestSupportForParties();
+    },
+    reviewSupportForHearingRequest() {
+      return manageFlags.reviewSupportRequestForParties();
+    },
+    addCAFlags() {
+      return createFlags.createFlags();
+    },
+    reviewCAAddedFlags() {
+      return verifyFlags.verifySolicitorOnlyFlags();
     }
   });
 };
