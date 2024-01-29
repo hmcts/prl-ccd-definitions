@@ -25,7 +25,7 @@ Scenario('As a court admin Create Order C43 @nightly', async({ I }) => {
 Scenario('As a Judge edit & draft C43 order @nightly', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
-  await I.editAnDraftOrder();
+  await I.editAnDraftOrderCreatedByAdmin();
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
