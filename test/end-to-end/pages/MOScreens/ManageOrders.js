@@ -275,7 +275,8 @@ module.exports = {
 
     await I.waitForText(moConfig.cyaText);
     await I.click(moConfig.submitText);
-    await I.waitForElement(this.fields.successElement);
+    await I.see('Order approved');
+    await I.click(moConfig.returnToCaseDetails);
   },
 
   async verifyDraftOrderSubmission(orderCreatedUserByText) {
