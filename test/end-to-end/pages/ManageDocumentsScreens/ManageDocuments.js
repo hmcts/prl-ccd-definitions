@@ -16,6 +16,8 @@ module.exports = {
     docUploadField: '#manageDocuments_0_document',
     docDetailsField: '#manageDocuments_0_documentDetails',
     selectRestrictAccess: '#manageDocuments_0_isRestricted_Yes',
+    selectRestrictAccess_No: '#manageDocuments_0_isRestricted_No',
+    selectConfidentialAccess_No: '#manageDocuments_0_isConfidential_No',
     documentReviewTab: '//div[contains(text(), "Documents to be reviewed")]',
     caseDocsTab: '//div[contains(text(), "Case documents")]',
     selectReviewDoc: '#reviewDocsDynamicList',
@@ -25,11 +27,17 @@ module.exports = {
     confFileEle: '//span[contains(text(), "dummy.pdf")]',
     noticeOfHearingFolderEle: '//*[@aria-level="2"]/button/span[contains(text(), "Notice of hearing")]',
     noticeOfHearingFileEle: '//*[@aria-level="3"]/button/span[contains(text(), "dummy.pdf")]',
-    confidentialFolderFileEle: '//*[@aria-level="2"]/button/span[contains(text(), "dummy.pdf")]',
+    confidentialFolderFileEle: '//*[@aria-level="4"]/button/span[contains(text(), "Confidential_dummy.pdf")]',
+    confidentialFolderAudioFileEle: '//*[@aria-level="4"]/button/span[contains(text(), "Confidential_test_av.mp3")]',
+    caseSummaryFileEle: '//*[@aria-level="3"]/button/span[contains(text(), "Confidential_dummy.pdf")]',
     nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron',
     documentRelatedToCase: '#manageDocuments_0_documentRelatedToCaseCheckbox',
     documentContainConfidential: '#manageDocuments_0_isConfidential_Yes',
     explainRestrictAccess: '#manageDocuments_0_restrictedDetails',
+    messageRows: 'tbody .new-table-row',
+    expandEle: '//tr[2]/td[4]/div/a/img',
+    expandSecondEle: '//tr[4]/td[4]/div/a/img',
+    expandThirdEle: '#case-viewer-field-read--confidentialDocuments td:nth-child(4) > div > a > img',
 
     // add new fields
     additionalRelatedToCase: '#manageDocuments_1_documentRelatedToCaseCheckbox',
@@ -60,18 +68,25 @@ module.exports = {
     await I.wait(uploadTime);
   },
 
-  async mainCourtDocuments(documentCategory, documentDetails) {
+  async mainCourtDocuments(documentCategory) {
     const uploadTime = 5;
     await I.waitForElement(this.fields.selectParty);
     await I.selectOption(this.fields.selectParty, manageDocConfig.courtPartyType);
     await I.selectOption(this.fields.docCategoryField, documentCategory);
     await I.attachFile(this.fields.docUploadField, '../resource/dummy.pdf');
     await I.wait(uploadTime);
-    await I.fillField(this.fields.docDetailsField, documentDetails);
   },
   
   async applyDocConfidential() {
     await I.click(this.fields.documentContainConfidential);
+  },
+
+  async doNotApplyRestrictedAccess() {
+    await I.click(this.fields.selectRestrictAccess_No);
+  },
+
+  async doNotApplyConfidentialAccess() {
+    await I.click(this.fields.selectConfidentialAccess_No);
   },
 
 
@@ -125,15 +140,32 @@ module.exports = {
 
     await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
     await I.click(this.fields.confidentialDetailsTab);
-    await I.see('Yes, restrict access.');
-    await I.see(manageDocConfig.pdfFileName);
+    await I.see(manageDocConfig.restrictedLabel);
+    await I.seeNumberOfElements(this.fields.messageRows, 2);
     await I.see(manageDocConfig.docCategory);
-    await I.see(manageDocConfig.docDetailsText);
+    await I.see(manageDocConfig.submittedBy);
     await I.see(formattedDate);
+    await I.click(this.fields.expandEle);
+    await I.click(this.fields.expandSecondEle);
+    await I.see(manageDocConfig.pdfFileName);
+    await I.see(manageDocConfig.restrictAccessDetails);
 
     // verify audio file submission
     await I.see(manageDocConfig.audioFileName);
-    await I.see('Court staff uploaded confidential documents 2');
+    await I.see(manageDocConfig.restrictAccessDetails);
+  },
+
+  async verifyConfidentialDocumentSubmission() {
+    await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.confidentialDetailsTab);
+    await I.see(manageDocConfig.confidentialDocLabel);
+
+    await I.see(manageDocConfig.confDocCategory);
+    await I.see(manageDocConfig.submittedBy);
+    await I.see(formattedDate);
+    await I.click(this.fields.expandThirdEle);
+    await I.see(manageDocConfig.pdfFileName);
+    await I.dontSee(manageDocConfig.restrictAccessDetails);
   },
 
   async triggerReviewDocEventForFiles(fileName) {
@@ -178,6 +210,15 @@ module.exports = {
     await I.seeElement(this.fields.confFileEle);
   },
 
+  async verifyCaseFileViewForConfidentialDocs() {
+    await I.clickTillElementFound(this.fields.cfvTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.cfvTab);
+    await I.waitForText('Attending the Hearing');
+    await I.click('Attending the Hearing');
+    await I.click(manageDocConfig.confDocCategory);
+    await I.seeElement(this.fields.caseSummaryFileEle);
+  },
+
   async verifyCaseFileViewOfNonRestDoc() {
     await I.clickTillElementFound(this.fields.cfvTab, this.fields.nextBtnSelector);
     await I.click(this.fields.cfvTab);
@@ -191,20 +232,20 @@ module.exports = {
   async verifyNonRestrictedDocumentSubmission() {
     await I.click(this.fields.caseDocsTab);
     await I.see(manageDocConfig.nonRestDocCategory);
-    await I.see(manageDocConfig.nonRestrictedDocDetailsText);
+    await I.see(manageDocConfig.partyType);
     await I.see(formattedDate);
   },
 
   async runManageDocumentsHappyPath() {
     await this.triggerEvent();
     await this.confirmDocumentRelatedCase();
-    await this.mainApplicationDocuments(manageDocConfig.docCategory, manageDocConfig.docDetailsText);
+    await this.mainApplicationDocuments(manageDocConfig.docCategory);
     await this.applyDocConfidential();
     await this.applyRestrictAccess();
 
     await this.addNewDocuments();
     await this.additionalConfirmDocRelated();
-    await this.addAudioDocuments(manageDocConfig.docCategory, manageDocConfig.docDetailsText);
+    await this.addAudioDocuments(manageDocConfig.docCategory);
     await this.additionalDocConfidential();
     await this.applyRestrictAccessForAudioDoc();
 
@@ -223,7 +264,10 @@ module.exports = {
 
   async addNonRestrictedDocuments() {
     await this.triggerEvent();
-    await this.mainApplicationDocuments(manageDocConfig.nonRestDocCategory, manageDocConfig.nonRestrictedDocDetailsText);
+    await this.confirmDocumentRelatedCase();
+    await this.mainApplicationDocuments(manageDocConfig.nonRestDocCategory);
+    await this.doNotApplyConfidentialAccess();
+    await this.doNotApplyRestrictedAccess();
     await this.submitDocuments();
     await I.amOnHistoryPageWithSuccessNotification();
     await this.verifyNonRestrictedDocumentSubmission();
@@ -231,23 +275,48 @@ module.exports = {
 
   async addNonRestrictedCourtDocuments() {
     await this.triggerEvent();
-    await this.mainCourtDocuments(manageDocConfig.nonRestDocCategory, manageDocConfig.nonRestrictedDocDetailsText);
+    await this.confirmDocumentRelatedCase();
+    await this.mainCourtDocuments(manageDocConfig.nonRestDocCategory);
+    await this.doNotApplyConfidentialAccess();
+    await this.doNotApplyRestrictedAccess();
     await this.submitDocumentScreen();
+
+    //Solicitor should not be able to upload documents with court type
+    await I.see(manageDocConfig.errMsg);
+    await I.selectOption(this.fields.selectParty, manageDocConfig.partyType);
+    await this.submitDocuments();
+    await I.amOnHistoryPageWithSuccessNotification();
   },
 
-  async verifyErrorMessageOnDocScreen() {
-    await I.see(manageDocConfig.errMsg);
+  async verifySolicitorDocumentSubmission() {
+    await I.dontSee(this.fields.documentReviewTab);
+    await I.dontSee(this.fields.caseDocsTab);
   },
 
   async verifyCaseFileViewOfAdminRestDoc() {
     await I.clickTillElementFound(this.fields.cfvTab, this.fields.nextBtnSelector);
     await I.click(this.fields.cfvTab);
-    await I.waitForText('Confidential');
-    await I.click('Confidential');
+    await I.waitForText('Applications');
+    await I.click('Applications');
+    await I.click('Applicant documents');
+    await I.click('Applicant C1A response');
     await I.seeElement(this.fields.confidentialFolderFileEle);
+    await I.seeElement(this.fields.confidentialFolderAudioFileEle);
   },
 
   async nonRestReviewDocuments() {
     await this.verifyCaseFileViewOfNonRestDoc();
-  }
+  },
+
+  async uploadConfidentialDocs() {
+    await this.triggerEvent();
+    await this.confirmDocumentRelatedCase();
+    await this.mainApplicationDocuments(manageDocConfig.confDocCategory);
+    await this.applyDocConfidential();
+    await this.doNotApplyRestrictedAccess();
+
+    await this.submitDocuments();
+    await I.amOnHistoryPageWithSuccessNotification();
+    await this.verifyConfidentialDocumentSubmission();
+  },
 };
