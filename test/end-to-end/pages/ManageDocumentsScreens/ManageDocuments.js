@@ -76,7 +76,7 @@ module.exports = {
     await I.attachFile(this.fields.docUploadField, '../resource/dummy.pdf');
     await I.wait(uploadTime);
   },
-  
+
   async applyDocConfidential() {
     await I.click(this.fields.documentContainConfidential);
   },
@@ -92,7 +92,7 @@ module.exports = {
 
   async applyRestrictAccess() {
     await I.click(this.fields.selectRestrictAccess);
-    await I.fillField(this.fields.explainRestrictAccess, manageDocConfig.restrictAccessDetails)
+    await I.fillField(this.fields.explainRestrictAccess, manageDocConfig.restrictAccessDetails);
   },
 
   async addAudioDocuments(documentCategory) {
@@ -110,7 +110,7 @@ module.exports = {
 
   async applyRestrictAccessForAudioDoc() {
     await I.click(this.fields.additionalSelectRestrictAccess);
-    await I.fillField(this.fields.additionalExplainRestrictAccess, manageDocConfig.restrictAccessDetails)
+    await I.fillField(this.fields.additionalExplainRestrictAccess, manageDocConfig.restrictAccessDetails);
   },
 
   async addNewDocuments() {
@@ -141,7 +141,7 @@ module.exports = {
     await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
     await I.click(this.fields.confidentialDetailsTab);
     await I.see(manageDocConfig.restrictedLabel);
-    await I.seeNumberOfElements(this.fields.messageRows, 2);
+    await I.seeNumberOfElements(this.fields.messageRows, '2');
     await I.see(manageDocConfig.docCategory);
     await I.see(manageDocConfig.submittedBy);
     await I.see(formattedDate);
@@ -281,7 +281,7 @@ module.exports = {
     await this.doNotApplyRestrictedAccess();
     await this.submitDocumentScreen();
 
-    //Solicitor should not be able to upload documents with court type
+    // Solicitor should not be able to upload documents with court type
     await I.see(manageDocConfig.errMsg);
     await I.selectOption(this.fields.selectParty, manageDocConfig.partyType);
     await this.submitDocuments();
@@ -318,5 +318,5 @@ module.exports = {
     await this.submitDocuments();
     await I.amOnHistoryPageWithSuccessNotification();
     await this.verifyConfidentialDocumentSubmission();
-  },
+  }
 };
