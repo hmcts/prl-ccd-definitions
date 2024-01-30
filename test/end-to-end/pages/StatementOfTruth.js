@@ -28,6 +28,7 @@ module.exports = {
     await I.fillField(this.fields.fname, 'Test name');
     await I.fillField(this.fields.firmName, 'Test firm name');
     await I.fillField(this.fields.signName, 'Test sign');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 

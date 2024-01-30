@@ -22,6 +22,7 @@ module.exports = {
     await I.fillField('#applicantChildDetails_0_applicantChildRelationship', 'Mother');
     await I.click('#applicantChildDetails_0_applicantRespondentShareParental_Yes');
     await I.fillField('#applicantChildDetails_0_respondentChildRelationship', 'Father');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
 

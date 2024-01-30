@@ -3,7 +3,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "draftOrdersDynamicList",
-    "Label": "Select the draft order for editing",
+    "Label": "Select the order",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -55,10 +55,67 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "whatToDoWithOrderSolicitor",
+    "Label": "What do you want to do with this order?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "OrderApprovalDecisionsForSolicitorOrderEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "whatToDoWithOrderCourtAdmin",
+    "Label": "What do you want to do with this order?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "OrderApprovalDecisionsForCourtAdminOrderEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "instructionsToLegalRepresentative",
+    "Label": "Give instructions to the legal representative",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "legalRepInstructionsPlaceHolder",
+    "Label": " ",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "instructionsToLegalRepresentativeLabel",
+    "Label": "${legalRepInstructionsPlaceHolder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/12/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "yourInstructionsToLrLabel",
+    "Label": "### Your instructions to the legal representative",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "judgeDirectionsToAdmin",
     "Label": "Directions to admin:",
+    "HintText": "Give any further directions, for example if special measures are needed",
     "FieldType": "TextArea",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -111,6 +168,24 @@
   {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "checkTheOrderLabel",
+    "Label": "## Check the order ",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "openOrderAndReviewContentLabel",
+    "Label": "### Open the order and review the content",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "makeChangesToUploadedOrder",
     "Label": "Do you want to make changes and upload a new version of the order?",
     "FieldType": "YesOrNo",
@@ -148,7 +223,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "amendedOrderLabel",
-    "Label": "## Amended, discharged or varied order (FL404B)",
+    "Label": "### Amended, discharged or varied order (FL404B)",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -177,6 +252,24 @@
     "ID": "fl404nonMolestationLabel",
     "Label": "## Non-molestation order (FL404A)",
     "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeNotesEmptyUploadJourney",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeNotesEmptyDraftJourney",
+    "Label": " ",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

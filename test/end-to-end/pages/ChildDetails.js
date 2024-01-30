@@ -27,6 +27,7 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_0_gender-female"]');
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_0_orderAppliedFor-childArrangementsOrder"]');
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails, 'Text area field Test');
+    await I.runAccessibilityTest();
     await this.addNewChild2();
   },
 

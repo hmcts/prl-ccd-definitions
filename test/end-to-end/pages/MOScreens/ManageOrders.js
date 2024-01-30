@@ -29,6 +29,11 @@ module.exports = {
     furtherInformation: '#furtherInformationIfRequired',
     typeOfOrder: '#selectTypeOfOrder',
     doesOrderClosesCase_Yes: '#doesOrderClosesCase_Yes',
+    cafcassOrCymruNeedToProvideReport_Yes: '#cafcassOrCymruNeedToProvideReport_Yes',
+    cafcassDocSelection: '#cafcassCymruDocuments-section7Report',
+    reportFillDay: '#whenReportsMustBeFiled-day',
+    reportFillMonth: '#whenReportsMustBeFiled-month',
+    reportFillYear: '#whenReportsMustBeFiled-year',
     cafcassOrCymruNeedToProvideReport_No: '#cafcassOrCymruNeedToProvideReport_No',
     orderEndsInvolvementOfCafcassOrCymru_No: '#orderEndsInvolvementOfCafcassOrCymru_No',
     doYouWantToServeOrder_Yes: '#doYouWantToServeOrder_Yes',
@@ -37,6 +42,11 @@ module.exports = {
     servePersonallyOptions_Yes: '#serveToRespondentOptions_Yes',
     servingRespondentsOptionsCA_applicantLegalRepresentative: '#servingRespondentsOptionsCA-applicantLegalRepresentative',
     cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No',
+    cafcassCymruServedOptions_Yes: '#cafcassCymruServedOptions_Yes',
+    addOtherOrg: '#serveOtherPartiesCA-anotherOrganisation',
+    deliverByEmail: '#serveOrgDetailsList_0_serveByPostOrEmail-email',
+    emailName: '#serveOrgDetailsList_0_emailInformation_emailName',
+    emailAddress: '#serveOrgDetailsList_0_emailInformation_emailAddress',
     hearingOutcomeTxtBoxDA: '#fl404CustomFields_fl404bHearingOutcome',
     draftOrderLink: '//a[contains(text(),\'raft.pdf\')]',
     isTheOrderUploadedByConsent_Yes: '#isTheOrderUploadedByConsent_Yes',
@@ -55,16 +65,19 @@ module.exports = {
     selectC43AOrder: '#createSelectOrderOptions-specialGuardianShip',
     successElement: 'div.alert-message',
     selectDraftOrderForEditing: '#draftOrdersDynamicList',
-    editOrder_yes: '#doYouWantToEditTheOrder_Yes',
+    editOrderMyselfSolicitor: '#whatToDoWithOrderSolicitor-editTheOrderAndServe',
+    editOrderMyselfCourtAdmin: '#whatToDoWithOrderCourtAdmin-editTheOrderAndServe',
     editOrder_no: '#doYouWantToEditTheOrder_No',
     judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
     isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
     selectOrderType: '#selectTypeOfOrder',
-    guardianInputBox: '#guardianTextBox',
+    guardianInputBox: '#appointedGuardianName_0_guardianFullName',
     judgeCheckOrderEle: '#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck',
     selectJudgeForOrderReview: '#amendOrderSelectJudgeOrLa-judge',
     judgeNameField: '#nameOfJudgeToReviewOrder',
-    judgeAutoCompEle: 'span.mat-option-text'
+    judgeAutoCompEle: 'span.mat-option-text',
+    guardianNameEle: '#appointedGuardianName_0_guardianFullName',
+    selectTheOrderToServe: '[name="serveOrderDynamicList"]'
   },
 
   async selectOrder(modeOfOrder) {
@@ -82,6 +95,7 @@ module.exports = {
 
     await I.waitForText(moConfig.selectOrderText);
     await I.click(this.fields.selectC43AOrder);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
   },
 
@@ -105,9 +119,13 @@ module.exports = {
     await I.click('#childOption_ccd99bd3-29b8-4df5-93d6-b0a622ce033a');
     await I.click('#childOption_cbb66702-223f-42eb-93a0-b2146bc039e0');
     await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.waitForText('Full name');
+    await I.fillField(this.fields.guardianNameEle, 'Test guardian name');
     await I.click(moConfig.continueText);
+
     await I.waitForText(moConfig.previewOrderText);
     await I.click(moConfig.continueText);
 
@@ -116,23 +134,51 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
-  async selectEditDraftOrder(modeOfOrder) {
+  async selectEditDraftOrderCourtAdmin(modeOfOrder) {
     await I.triggerEvent(modeOfOrder);
     await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
-    await I.click(this.fields.editOrder_yes);
+    await I.click(this.fields.editOrderMyselfCourtAdmin);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
     await I.waitForText(moConfig.orderConsentText);
     await I.click(this.fields.judgeTitle_DistrictJudge);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.specialGuardingText);
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.previewOrderText);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+  },
+
+  async selectEditDraftOrderSolicitor(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.click(this.fields.editOrderMyselfSolicitor);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.orderConsentText);
+    await I.click(this.fields.judgeTitle_DistrictJudge);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.specialGuardingText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.previewOrderText);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
   },
 
@@ -144,28 +190,50 @@ module.exports = {
     await I.click(moConfig.continueText);
 
     await I.click(this.fields.editOrder_no);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
   },
 
   async performServeOrder() {
     await I.waitForText(moConfig.orderTypeQuestionText);
     await I.selectOption(this.fields.selectOrderType, moConfig.orderTypeText);
-    await I.click(this.fields.cafcassOrCymruNeedToProvideReport_No);
+    await I.click(this.fields.cafcassOrCymruNeedToProvideReport_Yes);
+    await I.waitForText('Section 7 report');
+    await I.click(this.fields.cafcassDocSelection);
+    await I.fillField(this.fields.reportFillDay, '20');
+    await I.fillField(this.fields.reportFillMonth, '3');
+    await I.fillField(this.fields.reportFillYear, '2024');
     await I.click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
     await I.click(this.fields.doYouWantToServeOrder_Yes);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForElement(this.fields.selectOrderToServe);
     await I.click(this.fields.selectOrderToServe);
     await I.click(moConfig.continueText);
 
+    await I.waitForText(moConfig.serveOrdersText);
+    await I.click('[name="serveOrderDynamicList"]');
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
     await I.waitForText(moConfig.servingToRespondentText);
     await I.click(this.fields.servePersonallyOptions_Yes);
     await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
-    await I.click(this.fields.cafcassCymruServedOptions_No);
+    await I.click(this.fields.cafcassCymruServedOptions_Yes);
+    await I.click(this.fields.addOtherOrg);
+    await I.click('Add new');
+    await I.wait('5');
+    await I.click(this.fields.deliverByEmail);
+    await I.click(this.fields.deliverByEmail);
+    await I.wait('5');
+    await I.fillField(this.fields.emailName, moConfig.emailName);
+    await I.fillField(this.fields.emailAddress, 'test@gov.uk');
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.cyaText);
+    await I.runAccessibilityTest();
     await I.click(moConfig.submitText);
     await I.waitForElement(this.fields.successElement);
   },
@@ -175,11 +243,14 @@ module.exports = {
     await I.click(this.fields.ordersTabSelector);
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.runAccessibilityTest();
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
-    await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.orderCreatedUserBySolicitorText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
+    await I.waitForText(moConfig.emailName);
   },
 
   async verifyCourtAdminOrderSubmission() {
@@ -187,30 +258,36 @@ module.exports = {
     await I.click(this.fields.ordersTabSelector);
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.runAccessibilityTest();
     await I.waitForText(moConfig.judgeNameText);
-    await I.waitForText(moConfig.reviewedByText);
+    await I.waitForText(moConfig.orderCreatedUserByAdminText);
     await I.waitForText(moConfig.expChildrenText);
     await I.waitForText(moConfig.orderTypeText);
+    await I.waitForText('Legal Solicitor (Applicant\'s legal representative)');
+    await I.waitForText(moConfig.emailName);
   },
 
   async sendToAdmin() {
     await I.waitForText(moConfig.directionsToAdminText);
     await I.fillField(this.fields.judgeDirectionsToAdmin, moConfig.directionsText);
-    await I.click(this.fields.isOrderCompleteToServe_Yes);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.cyaText);
-    await I.click(moConfig.sendToAdminText);
-    await I.waitForElement(this.fields.successElement);
+    await I.click(moConfig.submitText);
+    await I.see('Order approved');
+    await I.click(moConfig.returnToCaseDetails);
   },
 
-  async verifyDraftOrderSubmission() {
+  async verifyDraftOrderSubmission(orderCreatedUserByText) {
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.click(this.fields.tabSelector);
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.runAccessibilityTest();
     await I.waitForText(moConfig.directionsText);
     await I.waitForText(moConfig.judgeNameText);
+    await I.waitForText(orderCreatedUserByText);
     await I.waitForText(moConfig.reviewedByText);
   },
 
@@ -219,6 +296,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Select an order');
     await I.retry(retryCount).click(orderName);
     await I.retry(retryCount).click(this.fields.isTheOrderUploadedByConsent_Yes);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
   async uploadOrder() {
@@ -232,6 +310,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
     await I.retry(retryCount).attachFile(this.fields.uploadOrderDoc, '../resource/dummy.pdf');
     await I.wait('6');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
   async checkOrderBy(checkBy, judgeOrLA) {
@@ -268,6 +347,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.cafcassOrCymruNeedToProvideReport_No);
     await I.retry(retryCount).click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
     await this.doYouWantToServeOrderNow(serveNow, draftOrFinalise);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     // await I.wait('5');
   },
@@ -283,7 +363,6 @@ module.exports = {
     }
   },
   async selectOrderToServe() {
-    await I.retry(retryCount).click(this.fields.selectOrderToServe);
     await I.retry(retryCount).click('Continue');
   },
   async servePersonalOrNonPersonal(personal, responsible) {
@@ -293,6 +372,7 @@ module.exports = {
     }
     await I.retry(retryCount).click(this.fields.otherPartiesToServe);
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
   async checkYourAnswersAndSubmit() {
@@ -304,9 +384,11 @@ module.exports = {
     await this.selectOrder('Create an order');
     await I.waitForElement('#createSelectOrderOptions-blankOrderOrDirections');
     await I.retry(retryCount).click('Blank order or directions (C21)');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.waitForElement('#c21OrderOptions-c21other');
     await I.retry(retryCount).click('Blank order or directions (C21): Other');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await this.fillGenericScreen();
@@ -314,6 +396,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.orderDirections, 'TEST ORDER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
     await I.retry(retryCount).fillField(this.fields.furtherInformation, 'TEST FURTHER INFORMATION');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
   async manageOrderUploadOrderServeNowPersonally() {
@@ -351,13 +434,14 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
     await I.waitForElement('#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck');
     await I.retry(retryCount).click('#amendOrderSelectCheckOptions-managerCheck');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).click('Submit');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await I.wait('4');
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.retry(retryCount).click(this.fields.tabSelector);
-    await I.retry(retryCount).waitForText('Blank order or directions (C21): Other');
+    await I.retry(retryCount).waitForText('Blank order or directions (C21)');
   },
 
   async composeDraftOrder() {
@@ -365,10 +449,16 @@ module.exports = {
     await this.includeOrderDetails();
   },
 
-  async editDraftOrderByJudge() {
-    await this.selectEditDraftOrder(moConfig.editOrderText);
+  async editDraftOrderCreatedByAdmin() {
+    await this.selectEditDraftOrderCourtAdmin(moConfig.editOrderText);
     await this.sendToAdmin();
-    await this.verifyDraftOrderSubmission();
+    await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserByAdminText);
+  },
+
+  async editAnDraftOrderCreatedBySolicitor() {
+    await this.selectEditDraftOrderSolicitor(moConfig.editOrderText);
+    await this.sendToAdmin();
+    await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserBySolicitorText);
   },
 
   async serveDraftOrderByCourtAdmin() {
@@ -386,6 +476,7 @@ module.exports = {
   async includeGuardianAndJudgeDetails() {
     await I.waitForText(moConfig.specialGuardianQuestion);
     await I.fillField(this.fields.guardianInputBox, moConfig.guardianName);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
     await I.waitForText(moConfig.previewOrderText);
     await I.click(moConfig.continueText);
@@ -397,6 +488,7 @@ module.exports = {
     await I.fillField(this.fields.judgeNameField, 'raj');
     await I.waitForElement(this.fields.judgeAutoCompEle);
     await I.click(this.fields.judgeAutoCompEle);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
   },
 
@@ -406,6 +498,7 @@ module.exports = {
     const year = date.getFullYear();
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForElement(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
     await I.click(this.fields.judgeTitle_HerHonourJudge);
@@ -420,6 +513,7 @@ module.exports = {
     await I.click('#childOption_ccd99bd3-29b8-4df5-93d6-b0a622ce033a');
     await I.click('#childOption_cbb66702-223f-42eb-93a0-b2146bc039e0');
     await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
+    await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await this.includeGuardianAndJudgeDetails();
@@ -433,13 +527,13 @@ module.exports = {
     await I.click(this.fields.tabSelector);
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.runAccessibilityTest();
     await I.waitForText(moConfig.judgeNameText);
     await I.waitForText(moConfig.orderCreatedByText);
   },
 
   async createAnOrderC43() {
     await this.selectOrder('Create an order');
-    // await I.waitForText(moConfig.draftOrderText);
     await I.click(this.fields.selectC43AOrder);
     await I.click(moConfig.continueText);
     await this.includeAdminOrderDetails();
