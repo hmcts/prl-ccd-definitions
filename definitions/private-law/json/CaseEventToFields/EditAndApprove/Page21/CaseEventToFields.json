@@ -3,23 +3,36 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "judgeDirectionsToAdmin",
+    "CaseFieldID": "orderNameDirectionsToAdminLabel",
     "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "whatToDoWithOrderSolicitor!=\"sendToAdminToServe\" AND whatToDoWithOrderCourtAdmin!=\"sendToAdminToServe\" AND whatToDoWithOrderSolicitor!=\"askLegalRepToMakeChanges\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "judgeDirectionsToAdmin",
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "OPTIONAL",
     "PageID": 21,
     "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "LiveFrom": "31/03/2022",
+    "LiveFrom": "17/01/2024",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "isOrderCompleteToServe",
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
-    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "[STATE] = \"JUDICIAL_REVIEW\" OR [STATE] = \"CASE_ISSUED\"",
+    "ShowSummaryChangeOption": "N",
     "Publish" : "True"
   }
 ]
