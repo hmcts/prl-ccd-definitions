@@ -44,9 +44,9 @@ module.exports = {
     cafcassCymruServedOptions_No: '#cafcassCymruServedOptions_No',
     cafcassCymruServedOptions_Yes: '#cafcassCymruServedOptions_Yes',
     addOtherOrg: '#serveOtherPartiesCA-anotherOrganisation',
-    deliverByEmail: '#deliveryByOptionsCA-email',
-    emailName: '#emailInformationCA_0_emailName',
-    emailAddress: '#emailInformationCA_0_emailAddress',
+    deliverByEmail: '#serveOrgDetailsList_0_serveByPostOrEmail-email',
+    emailName: '#serveOrgDetailsList_0_emailInformation_emailName',
+    emailAddress: '#serveOrgDetailsList_0_emailInformation_emailAddress',
     hearingOutcomeTxtBoxDA: '#fl404CustomFields_fl404bHearingOutcome',
     draftOrderLink: '//a[contains(text(),\'raft.pdf\')]',
     isTheOrderUploadedByConsent_Yes: '#isTheOrderUploadedByConsent_Yes',
@@ -65,7 +65,8 @@ module.exports = {
     selectC43AOrder: '#createSelectOrderOptions-specialGuardianShip',
     successElement: 'div.alert-message',
     selectDraftOrderForEditing: '#draftOrdersDynamicList',
-    editOrder_yes: '#doYouWantToEditTheOrder_Yes',
+    editOrderMyselfSolicitor: '#whatToDoWithOrderSolicitor-editTheOrderAndServe',
+    editOrderMyselfCourtAdmin: '#whatToDoWithOrderCourtAdmin-editTheOrderAndServe',
     editOrder_no: '#doYouWantToEditTheOrder_No',
     judgeDirectionsToAdmin: '#judgeDirectionsToAdmin',
     isOrderCompleteToServe_Yes: '#isOrderCompleteToServe_Yes',
@@ -133,7 +134,7 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
-  async selectEditDraftOrder(modeOfOrder) {
+  async selectEditDraftOrderCourtAdmin(modeOfOrder) {
     await I.triggerEvent(modeOfOrder);
     await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
@@ -141,7 +142,31 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
-    await I.click(this.fields.editOrder_yes);
+    await I.click(this.fields.editOrderMyselfCourtAdmin);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.orderConsentText);
+    await I.click(this.fields.judgeTitle_DistrictJudge);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.specialGuardingText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.previewOrderText);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+  },
+
+  async selectEditDraftOrderSolicitor(modeOfOrder) {
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectDraftOrderForEditing, option);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await I.click(this.fields.editOrderMyselfSolicitor);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
     await I.waitForText(moConfig.orderConsentText);
@@ -197,8 +222,11 @@ module.exports = {
     await I.click(this.fields.servingRespondentsOptionsCA_applicantLegalRepresentative);
     await I.click(this.fields.cafcassCymruServedOptions_Yes);
     await I.click(this.fields.addOtherOrg);
-    await I.click(this.fields.deliverByEmail);
     await I.click('Add new');
+    await I.wait('5');
+    await I.click(this.fields.deliverByEmail);
+    await I.click(this.fields.deliverByEmail);
+    await I.wait('5');
     await I.fillField(this.fields.emailName, moConfig.emailName);
     await I.fillField(this.fields.emailAddress, 'test@gov.uk');
     await I.runAccessibilityTest();
@@ -242,13 +270,13 @@ module.exports = {
   async sendToAdmin() {
     await I.waitForText(moConfig.directionsToAdminText);
     await I.fillField(this.fields.judgeDirectionsToAdmin, moConfig.directionsText);
-    await I.click(this.fields.isOrderCompleteToServe_Yes);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
     await I.waitForText(moConfig.cyaText);
-    await I.click(moConfig.sendToAdminText);
-    await I.waitForElement(this.fields.successElement);
+    await I.click(moConfig.submitText);
+    await I.see('Order approved');
+    await I.click(moConfig.returnToCaseDetails);
   },
 
   async verifyDraftOrderSubmission(orderCreatedUserByText) {
@@ -422,13 +450,13 @@ module.exports = {
   },
 
   async editDraftOrderCreatedByAdmin() {
-    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.selectEditDraftOrderCourtAdmin(moConfig.editOrderText);
     await this.sendToAdmin();
     await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserByAdminText);
   },
 
   async editAnDraftOrderCreatedBySolicitor() {
-    await this.selectEditDraftOrder(moConfig.editOrderText);
+    await this.selectEditDraftOrderSolicitor(moConfig.editOrderText);
     await this.sendToAdmin();
     await this.verifyDraftOrderSubmission(moConfig.orderCreatedUserBySolicitorText);
   },
@@ -470,6 +498,7 @@ module.exports = {
     const year = date.getFullYear();
 
     await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForElement(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
     await I.click(this.fields.judgeTitle_HerHonourJudge);
