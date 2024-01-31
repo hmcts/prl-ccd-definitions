@@ -685,10 +685,38 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "additionalRequirementsForHearingReq",
+    "FieldType": "TextArea",
+    "ElementLabel": "Additional requirements for hearing request",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherDraftOrderDetails",
     "ListElementCode": "createdBy",
     "FieldType": "Text",
     "ElementLabel": "Order made by",
     "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "28/11/2023",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "orderCreatedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "28/11/2023",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "orderCreatedByEmailId",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "orderCreatedBy = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -724,6 +752,16 @@
     "ListElementCode": "status",
     "FieldType": "Text",
     "ElementLabel": "Status",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2023",
+    "ID": "OtherDraftOrderDetails",
+    "ListElementCode": "instructionsToLegalRepresentative",
+    "FieldType": "Text",
+    "ElementLabel": "Instructions to legal representative",
+    "FieldShowCondition": "status = \"DO_NOT_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
