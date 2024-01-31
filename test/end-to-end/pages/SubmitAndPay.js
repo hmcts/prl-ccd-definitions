@@ -1,5 +1,6 @@
 const I = actor();
 const retryCount = 3;
+const medWait = 20;
 
 module.exports = {
   fields: {
@@ -14,7 +15,16 @@ module.exports = {
     HWFYesErrorMsg:
       'Help with Fees is not yet available in Family Private Law digital ' +
       'service. Select \'No\' to continue with your application',
-    HWFRefNum: 'ABC-123-DEF'
+    HWFRefNum: 'ABC-123-DEF',
+    fl401StmtOfTruth_applicantConsent: '#fl401StmtOfTruth_applicantConsent-fl401Consent',
+    fl401StmtOfTruth_dateDay: '#date-day',
+    fl401StmtOfTruth_dateMonth: '#date-month',
+    fl401StmtOfTruth_dateYear: '#date-year',
+    fl401StmtOfTruth_fullname: '#fl401StmtOfTruth_fullname',
+    fl401StmtOfTruth_nameOfFirm: '#fl401StmtOfTruth_nameOfFirm',
+    fl401StmtOfTruth_signOnBehalf: '#fl401StmtOfTruth_signOnBehalf',
+    fl401ConfidentialCheck: '#fl401ConfidentialityCheck_confidentialityConsent-fl401ConfidentialConsent',
+    fl401countyCourtSelection: '#submitCountyCourtSelection'
   },
 
   async triggerEvent() {
@@ -28,10 +38,18 @@ module.exports = {
   },
 
   async confidentialityStatement() {
-    await I.retry(retryCount).waitForText('Confidentiality Statement');
+    await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
     await I.retry(retryCount).click(
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).click('Continue');
+  },
+  async confidentialityStatementFL401() {
+    await I.wait('10');
+    await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
+    await I.wait('1');
+    await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
     await I.retry(retryCount).click('Continue');
   },
 
@@ -39,12 +57,14 @@ module.exports = {
     await I.retry(retryCount).waitForText('Declaration');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
     await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
 
   async helpWithFeeNo() {
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
     await I.retry(retryCount).waitForText('Check your answers');
@@ -74,6 +94,7 @@ module.exports = {
 
   async happensNext() {
     await I.waitForClickable(this.fields.submit);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
@@ -83,7 +104,7 @@ module.exports = {
   },
 
   async caseSubmittedCA() {
-    await I.retry(retryCount).waitForText('Submitted');
+    await I.waitForText('Submitted');
   },
 
   async answerHelpWithFeesNo() {
@@ -101,7 +122,44 @@ module.exports = {
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await this.caseSubmittedCA();
   },
-
+  async FL401StatementOfTruth() {
+    await I.retry(retryCount).click(this.fields.fl401StmtOfTruth_applicantConsent);
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_dateDay, '11');
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_dateMonth, '7');
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_dateYear, '2023');
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_fullname, 'Solicitor Full Name');
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_nameOfFirm, 'Solicitor Firm');
+    await I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_signOnBehalf, 'Solicitor');
+    await I.wait('2');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+  },
+  async FL401ConfidentialityCheck() {
+    await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
+    await I.retry(retryCount).click(this.fields.fl401ConfidentialCheck);
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+  },
+  async statementOfTruthAndSubmit() {
+    await I.retry(retryCount).triggerEvent('Statement of Truth and submit');
+    await I.wait('6');
+    await this.FL401StatementOfTruth();
+    await this.FL401ConfidentialityCheck();
+    await this.selectFamilyCourt('Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
+  },
+  async selectFamilyCourt(courtName) {
+    await I.retry(retryCount).waitForText('Select the family court');
+    await I.retry(retryCount).selectOption(this.fields.fl401countyCourtSelection, courtName);
+    await I.wait('2');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('4');
+  },
   async submitAndPay_HWF_Yes() {
     await this.triggerEvent();
     await this.confidentialityStatement();
