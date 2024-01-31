@@ -59,6 +59,9 @@ module.exports = () => {
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
     },
+    loginAsCaseManager() {
+      return LoginPage.loginAsCaseManager();
+    },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
     },
@@ -67,6 +70,9 @@ module.exports = () => {
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
+    },
+    editDratOrderAsManager() {
+      return editAndApproveDraftOrder.editDratOrderAsManager();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -304,6 +310,9 @@ module.exports = () => {
     },
     manageOrderCreateOrderC43() {
       return manageOrders.createAnOrderC43();
+    },
+    createOrderC43AndSendToCaseManager() {
+      return manageOrders.createOrderC43AndSendToCaseManager();
     },
     searchForInvalidCase() {
       return caseList.searchForInvalidCase();

@@ -73,6 +73,7 @@ module.exports = {
     selectOrderType: '#selectTypeOfOrder',
     guardianInputBox: '#appointedGuardianName_0_guardianFullName',
     judgeCheckOrderEle: '#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck',
+    caseManagerCheckOrderEle: '#amendOrderSelectCheckOptions-managerCheck',
     selectJudgeForOrderReview: '#amendOrderSelectJudgeOrLa-judge',
     judgeNameField: '#nameOfJudgeToReviewOrder',
     judgeAutoCompEle: 'span.mat-option-text',
@@ -491,6 +492,20 @@ module.exports = {
     await I.click(moConfig.continueText);
   },
 
+  async includeGuardianAndCaseManagerDetails() {
+    await I.waitForText(moConfig.specialGuardianQuestion);
+    await I.fillField(this.fields.guardianInputBox, moConfig.guardianName);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+    await I.waitForText(moConfig.previewOrderText);
+    await I.click(moConfig.continueText);
+
+    await I.waitForText(moConfig.reviewOrderQuestion);
+    await I.click(this.fields.caseManagerCheckOrderEle);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+  },
+
   async includeAdminOrderDetails() {
     const day = date.getDate();
     const month = date.getMonth() + 1;
@@ -521,6 +536,36 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
+  async includeAdminOrderDetailsToBeReviewedByCM() {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    await I.waitForText(moConfig.c43AOrderText);
+    await I.waitForElement(this.fields.orderByConsent_Yes);
+    await I.click(this.fields.orderByConsent_Yes);
+    await I.click(this.fields.orderApprovedAtHearing_No);
+    await I.click(this.fields.judgeTitle_HerHonourJudge);
+    await I.fillField(this.fields.judgeLastName, moConfig.judgeNameText);
+    await I.fillField(this.fields.legalAdviserFullName, moConfig.legalAdvisorNameText);
+    await I.fillField(this.fields.orderMade_day, day);
+    await I.fillField(this.fields.orderMade_month, month);
+    await I.fillField(this.fields.orderMade_year, year);
+    await I.click(this.fields.orderAboutAllChildren_No);
+
+    await I.waitForText(moConfig.c43OrderChildText);
+    await I.click('#childOption_ccd99bd3-29b8-4df5-93d6-b0a622ce033a');
+    await I.click('#childOption_cbb66702-223f-42eb-93a0-b2146bc039e0');
+    await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
+    await I.runAccessibilityTest();
+    await I.click(moConfig.continueText);
+
+    await this.includeGuardianAndCaseManagerDetails();
+    await I.waitForText(moConfig.cyaText);
+    await I.click(moConfig.submitText);
+    await I.waitForElement(this.fields.successElement);
+  },
+
   async verifyAdminDraftOrderSubmission() {
     await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
     await I.click(this.fields.tabSelector);
@@ -537,6 +582,12 @@ module.exports = {
     await I.click(moConfig.continueText);
     await this.includeAdminOrderDetails();
     await this.verifyAdminDraftOrderSubmission();
-  }
+  },
 
+  async createOrderC43AndSendToCaseManager() {
+    await this.selectOrder('Create an order');
+    await I.click(this.fields.selectC43AOrder);
+    await I.click(moConfig.continueText);
+    await this.includeAdminOrderDetailsToBeReviewedByCM();
+  }
 };
