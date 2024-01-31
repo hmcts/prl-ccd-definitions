@@ -37,12 +37,12 @@ const supportedBrowsers = {
     }
   },
   chromium: {
-    chrome_mac_latest: {
+    chrome_win_latest: {
       browserName: 'chromium',
-      platformName: LATEST_MAC,
+      platformName: LATEST_WINDOWS,
       browserVersion: 'latest-1',
       'sauce:options': {
-        name: 'PRL: MAC_CHROME_LATEST',
+        name: 'PRL: WIN_CHROME_LATEST',
         screenResolution: '1600x1200'
       }
     }

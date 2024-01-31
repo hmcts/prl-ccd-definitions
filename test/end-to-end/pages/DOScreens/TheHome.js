@@ -76,6 +76,7 @@ module.exports = {
     await I.checkOption('#home_familyHome-payOrContributeRent');
     await I.checkOption('#home_familyHome-useHouseholdContents');
     await I.fillField('#home_furtherInformation', 'Text Area');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
   async runTheHomeEventHappyPath() {

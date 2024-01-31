@@ -41,6 +41,7 @@ xui-webapp:
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       JURISDICTIONS: PRIVATELAW
       SERVICES_DOCUMENTS_API_V2: http://${SERVICE_NAME}-cdam
+      FEATURE_JRD_E_LINKS_V2_ENABLED: true
 
 ccd:
   ccd:
@@ -106,10 +107,15 @@ ccd:
 
   am-role-assignment-service:
     java:
-      keyVaults:
-        am:
-          secrets:
-            - role-assignment-service-LD-SDK-KEY
+      autoscaling:
+        enabled: false
+      imagePullPolicy: Always
+      image: hmctspublic.azurecr.io/am/role-assignment-service:latest
+      environment:
+        CCD_DATA_STORE_URL: https://ccd-data-store-api-${SERVICE_FQDN}
+        ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
+      keyVaults: []
+      ingressHost: am-role-assignment-${SERVICE_FQDN}
 
   ccd-definition-store-api:
     java:
