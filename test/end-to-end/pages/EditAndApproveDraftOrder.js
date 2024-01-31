@@ -1,4 +1,3 @@
-const { verifyDraftOrderSubmission } = require("./MOScreens/ManageOrders");
 
 const I = actor();
 const retryCount = 3;
@@ -32,7 +31,7 @@ module.exports = {
   },
 
   async assignReviewTask() {
-    await I.click(this.fields.tasksTab); 
+    await I.click(this.fields.tasksTab);
 
     await I.wait(longWait);
     await I.reloadPage(this.fields.assignToMe);
@@ -44,7 +43,6 @@ module.exports = {
   },
 
   async approveTheOrder() {
-
     await I.waitForElement(this.fields.selectDraftOrderForEditing, longWait);
     await I.waitForText('Select the order');
     const option = await I.grabTextFrom('//select/option[2]');
@@ -56,11 +54,10 @@ module.exports = {
 
     await I.waitForText('Check your answers');
     await I.click('Submit');
-    
+
     await I.waitForText('Order approved');
     await I.click('Close and Return to case details');
     await I.waitForElement(this.fields.successElement);
-
   },
 
   async verifyDraftOrderSubmission() {
@@ -73,9 +70,9 @@ module.exports = {
 
 
   async editDratOrderAsManager() {
-     await this.assignReviewTask();
-     await this.approveTheOrder();
-     await this.verifyDraftOrderSubmission();
-  },
+    await this.assignReviewTask();
+    await this.approveTheOrder();
+    await this.verifyDraftOrderSubmission();
+  }
 
 };
