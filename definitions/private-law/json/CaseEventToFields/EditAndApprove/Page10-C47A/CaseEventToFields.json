@@ -8,9 +8,9 @@
     "DisplayContext": "READONLY",
     "PageID": 10,
     "PageDisplayOrder": 10,
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType=\"appointmentOfGuardian\"",
+    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"appointmentOfGuardian\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "31/03/2022",
