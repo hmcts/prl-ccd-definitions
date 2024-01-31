@@ -25,6 +25,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.createRole('ctsc-team-leader');
   I.createRole('caseworker-privatelaw-cafcass');
   I.createRole('prd-admin');
+  I.createRole('hearing-centre-team-leader');
   I.click('Manage User Roles');
   I.wait('10');
   I.see('citizen');
@@ -49,6 +50,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('ctsc-team-leader');
   I.see('caseworker-privatelaw-cafcass');
   I.see('prd-admin');
+  I.see('hearing-centre-team-leader');
 });// eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
