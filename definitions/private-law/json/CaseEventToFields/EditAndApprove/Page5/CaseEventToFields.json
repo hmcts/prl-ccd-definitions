@@ -10,7 +10,7 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-custom-fields",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
+    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -69,7 +69,7 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "31/03/2022",
