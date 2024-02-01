@@ -10,9 +10,11 @@ module.exports = {
     proceedToServing: '#proceedToServing_Yes',
     selectOrder: '[name=\'serviceOfApplicationScreen1\']',
     p63FileUpload: '#pd36qLetter',
+    specialArrangementsUpload: '#specialArrangementsLetter',
     serveToRespondentOption: '#soaServeToRespondentOptions_Yes',
     applicantRep: '#soaServingRespondentsOptionsCA-applicantLegalRepresentative',
     cafcassOption: '#soaCafcassCymruServedOptions_No',
+    localAuthorityOption: '#soaServeLocalAuthorityYesOrNo_No',
     soaTab: '//div[contains(text(), \'Service of application\')]',
     expandEle: '//td/div/a',
     docAttachedField: '//span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-area-field/span'
@@ -20,9 +22,6 @@ module.exports = {
 
   async selectEvent() {
     await I.triggerEvent(soaConfig.soaEvent);
-    await I.waitForText(soaConfig.stillServeQuestion);
-    await I.click(this.fields.proceedToServing);
-    await I.click(soaConfig.continueText);
   },
 
   async uploadDocumentsToBeServed() {
@@ -30,6 +29,7 @@ module.exports = {
     await I.click(this.fields.selectOrder);
     await I.see(soaConfig.c43AOrderText);
     await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
+    await I.attachFile(this.fields.specialArrangementsUpload, '../resource/dummy.pdf');
     await I.wait('3');
     await I.click(soaConfig.continueText);
   },
@@ -40,6 +40,7 @@ module.exports = {
     await I.waitForText(soaConfig.serveToRespondentOptions);
     await I.click(this.fields.applicantRep);
     await I.click(this.fields.cafcassOption);
+    await I.click(this.fields.localAuthorityOption);
     await I.click(soaConfig.continueText);
   },
 
