@@ -39,8 +39,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-documents/mid-event"
+    "PageFieldDisplayOrder": 4
   },
   {
     "LiveFrom": "10/05/2023",
@@ -50,7 +49,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2
+    "PageFieldDisplayOrder": 5
   },
   {
     "LiveFrom": "10/05/2023",
@@ -61,7 +60,7 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "FieldShowCondition": "[STATE]=\"DONT_SHOW\"",
-    "PageFieldDisplayOrder": 3
+    "PageFieldDisplayOrder": 6
   },
   {
     "LiveFrom": "10/05/2023",
@@ -71,7 +70,28 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 4
+    "PageFieldDisplayOrder": 7
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewDocuments",
+    "CaseFieldID": "docLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "[STATE]=\"DONT_SHOW\"",
+    "PageFieldDisplayOrder": 8
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewDocuments",
+    "CaseFieldID": "showLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 9
   },
   {
     "LiveFrom": "10/05/2023",
@@ -81,7 +101,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5
+    "PageFieldDisplayOrder": 10
   },
   {
     "LiveFrom": "10/05/2023",
@@ -92,6 +112,19 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
-    "PageFieldDisplayOrder": 6
+    "PageFieldDisplayOrder": 11
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewDocuments",
+    "CaseFieldID": "tempQuarantineDocumentList",
+    "DisplayContext": "HIDDEN",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "reviewDocsDynamicList=\"DO_NOT_SHOW\"",
+    "RetainHiddenValue": "Y"
   }
 ]

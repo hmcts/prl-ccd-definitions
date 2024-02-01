@@ -350,11 +350,26 @@ module.exports = () => {
     reviewManageDocuments() {
       return manageDocuments.reviewDocuments();
     },
+    performManageDocumentsForConfidentialFiles() {
+      return manageDocuments.uploadConfidentialDocs();
+    },
+    reviewConfidentialManageDocuments() {
+      return manageDocuments.verifyCaseFileViewForConfidentialDocs();
+    },
+    reviewCAManageDocuments() {
+      return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
+    },
     performNonRestrictedManageDocuments() {
       return ManageDocuments.addNonRestrictedDocuments();
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    uploadCourtDocument() {
+      return manageDocuments.addNonRestrictedCourtDocuments();
+    },
+    verifySolicitorDocumentSubmission() {
+      return manageDocuments.verifySolicitorDocumentSubmission();
     }
   });
 };
