@@ -56,7 +56,7 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "soaIsOrderListEmpty=\"No\""
+    "FieldShowCondition": "soaIsOrderListEmpty=\"No\" AND caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "11/05/2022",
@@ -64,7 +64,7 @@
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "serviceOfApplicationScreen1",
     "PageFieldDisplayOrder": 5,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
@@ -80,7 +80,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "11/05/2022",
@@ -92,18 +92,19 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "additionalDocumentsLabel",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "PageFieldDisplayOrder": 10,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "11/05/2022",
@@ -121,21 +122,9 @@
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "noticeOfSafetyLabel",
-    "PageFieldDisplayOrder": 6,
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "DisplayContext": "READONLY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "11/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "noticeOfSafetySupportLetter",
     "PageFieldDisplayOrder": 7,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageID": 2,
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
     "PageDisplayOrder": 2,
@@ -147,7 +136,7 @@
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "specialArrangementsLetter",
     "PageFieldDisplayOrder": 9,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -191,6 +180,18 @@
     "FieldShowCondition": "serveTheseOrdersLabel=\"DO_NOT_SHOW\""
   },
   {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "missingAddressWarningText",
+    "PageFieldDisplayOrder": 14,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "serveTheseOrdersLabel=\"DO_NOT_SHOW\""
+  },
+  {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
@@ -198,7 +199,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 14,
+    "PageFieldDisplayOrder": 15,
     "ShowSummaryChangeOption": "No",
     "RetainHiddenValue": "Y",
     "FieldShowCondition" : "serveTheseOrdersLabel=\"DO_NOT_SHOW\""
