@@ -570,7 +570,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingReportsAlsoSentTo",
-    "Label": "Report also sent to",
+    "Label": "Evidence and/or response to be sent to",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoReportsAlsoSentToEnum",
     "SecurityClassification": "Public",
@@ -580,7 +580,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingMaximumPages",
-    "Label": "Maximum number of pages",
+    "Label": "Maximum number of pages per statement",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -589,7 +589,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingHowManyWitnessEvidence",
-    "Label": "How many witnesses' evidence may each party use?",
+    "Label": "Maximum number of witness statements for each party",
     "FieldType": "Number",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -931,6 +931,54 @@
     "ID": "sdoAllocateDecisionJudgeFullName",
     "Label": " ",
     "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoHearingCourtRequests",
+    "Label": "The court requests",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SdoCourtRequestedEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDraWhoMadeAllegationsText",
+    "Label": "Directions for the party who made the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDraWhoNeedsToRespondAllegationsText",
+    "Label": "Directions for the party who needs to respond to the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDraWhoMadeAllegationsList",
+    "Label": "Select who made the allegations",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDraWhoNeedsToRespondAllegationsList",
+    "Label": "Select who need to responds to the allegations",
+    "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
