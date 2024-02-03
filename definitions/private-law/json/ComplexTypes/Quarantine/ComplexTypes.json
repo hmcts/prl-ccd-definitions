@@ -24,7 +24,7 @@
     "ID": "QuarantineLegalDoc",
     "ListElementCode": "categoryName",
     "FieldType": "Text",
-    "ElementLabel": "Category Name",
+    "ElementLabel": "Document category",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -70,7 +70,7 @@
     "ID": "QuarantineLegalDoc",
     "ListElementCode": "documentParty",
     "FieldType": "Text",
-    "ElementLabel": "Document party",
+    "ElementLabel": "Submitted by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -142,6 +142,16 @@
     "ElementLabel": "Document",
     "SecurityClassification": "Public",
     "CategoryID": "respondentApplication",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "23/11/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "ordersFromOtherProceedingsDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "CategoryID": "ordersFromOtherProceedings",
     "Searchable": "N"
   },
   {
@@ -357,6 +367,16 @@
   {
     "LiveFrom": "01/05/2023",
     "ID": "QuarantineLegalDoc",
+    "ListElementCode": "internalCorrespondenceDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "CategoryID": "internalCorrespondence",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
     "ListElementCode": "medicalReportsDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
@@ -506,15 +526,6 @@
   {
     "LiveFrom": "01/05/2023",
     "ID": "QuarantineLegalDoc",
-    "ListElementCode": "dnaReportsOtherDocsDocument",
-    "FieldType": "Document",
-    "ElementLabel": "Document",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/05/2023",
-    "ID": "QuarantineLegalDoc",
     "ListElementCode": "privacyNoticeDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
@@ -613,6 +624,26 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "localAuthorityOtherDocDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "CategoryID": "localAuthorityOtherDoc",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "pathfinderDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "CategoryID": "pathfinder",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "09/05/2023",
     "ID": "QuarantineLegalDoc",
     "ListElementCode": "cafcassQuarantineDocument",
@@ -637,7 +668,7 @@
     "ID": "QuarantineLegalDoc",
     "ListElementCode": "documentUploadedDate",
     "FieldType": "DateTime",
-    "ElementLabel": "Uploaded Date",
+    "ElementLabel": "Submitted date",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -712,5 +743,73 @@
     "ElementLabel": "Delivery Date",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "isConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is confidential?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "uploadedByIdamId=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "isRestricted",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is restricted?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "uploadedByIdamId=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "uploadedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Uploaded by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "restrictedDetails",
+    "FieldType": "Text",
+    "ElementLabel": "Reason for restricted access",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "uploadedByIdamId",
+    "FieldType": "Text",
+    "ElementLabel": "Uploaded by IdamId",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "uploadedByIdamId=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "uploaderRole",
+    "FieldType": "Text",
+    "ElementLabel": "uploader user role",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "uploaderRole=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "ID": "QuarantineLegalDoc",
+    "ListElementCode": "hasTheConfidentialDocumentBeenRenamed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "uploader user role",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "hasTheConfidentialDocumentBeenRenamed=\"DO_NOT_SHOW\""
   }
 ]

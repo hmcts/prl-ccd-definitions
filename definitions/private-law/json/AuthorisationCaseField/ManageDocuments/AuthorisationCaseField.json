@@ -775,6 +775,8 @@
           "citizen",
           "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
           "caseworker-wa-task-configuration",
           "caseworker-privatelaw-externaluser-viewonly"
         ],
@@ -788,8 +790,37 @@
       },
       {
         "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "manageDocumentsWarningText2",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -831,6 +862,37 @@
     "LiveFrom": "01/05/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "manageDocumentsRestrictedFlag",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isC8DocumentPresent",
     "AccessControl": [
       {
         "UserRoles": [
