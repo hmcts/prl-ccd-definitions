@@ -65,9 +65,6 @@ module.exports = () => {
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
     },
-     loginAsCaseManager() {
-      return LoginPage.loginAsCaseManager();
-    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -346,12 +343,6 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
-    },
-    confidentialServiceOfApplication() {
-      return soaPage.confidentialServiceOfApplication();
-    },
-    confidentialCaseManager() {
-      return soaPage.confidentialCaseManager();
     },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
