@@ -8,7 +8,7 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -20,7 +20,7 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType=\"parentalResponsibility\"",
+    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"parentalResponsibility\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc"
   },
   {
