@@ -21,18 +21,8 @@ module.exports = {
   async fillHearingDetails() {
     await I.waitForElement(this.fields.hearingTypes);
     await I.retry(retryCount).selectOption(this.fields.hearingTypes, 'Allocation');
-    await I.retry(retryCount).click('The date is reserved with List Assist');
-    await I.retry(retryCount).click('Add new');
-    await I.click(this.fields.calendarLink);
-    await I.wait('2');
-    await I.fillField(this.fields.confirmDate, '20-04-2024');
-    await I.retry(retryCount).fillField(this.fields.hearingEstimatedDays, '5');
-    await I.retry(retryCount).click('Telephone');
-    await I.retry(retryCount).click(this.fields.allPartiesAttendHearingSameWayYesOrNo_Yes);
-    await I.retry(retryCount).selectOption(this.fields.courtList, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
-    await I.retry(retryCount).click('Magistrates');
-    await I.retry(retryCount).fillField(this.fields.additionalHearingDetails, 'ADDITIONAL HEARING DETAILS');
-    await I.retry(retryCount).fillField(this.fields.instructionsForRemoteHearing, 'JOINING INSTRUCTIONS');
+
+    await I.retry(retryCount).click('This order will be served with the \'date to be fixed\'');
     await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
