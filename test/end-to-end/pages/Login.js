@@ -118,17 +118,5 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.email, config.respondentSolicitor.email);
     await I.retry(retryCount).fillField(this.fields.password, config.respondentSolicitor.password);
     await I.click(this.fields.submit);
-  },
-
-  async loginAsCaseManager() {
-    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
-    await I.runAccessibilityTest();
-    await I.seeElement('#authorizeCommand');
-    await I.fillField(this.fields.email, config.caseManagerUser.email);
-    await I.fillField(this.fields.password, config.caseManagerUser.password);
-    await I.click(this.fields.submit);
-    await I.wait('10');
   }
 };

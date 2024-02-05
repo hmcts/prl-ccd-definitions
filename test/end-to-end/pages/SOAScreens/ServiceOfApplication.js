@@ -21,59 +21,11 @@ module.exports = {
     doesLANeedsToBeServed_Yes: '#soaServeLocalAuthorityYesOrNo_Yes',
     laEmailAddress: '#soaLaEmailAddress',
     selectDocument: '#soaDocumentDynamicListForLa_0_documentsListForLa',
-    c8Served_No: '#soaServeC8ToLocalAuthorityYesOrNo_No',
-    serveToRespondentNoOption: '#soaServeToRespondentOptions_No',
-    doesLANeedsToBeServed_No: '#soaServeLocalAuthorityYesOrNo_No',
-    applicationServed: '#applicationServedYesNo_No',
-    rejectionReason: '#rejectionReason',
-    nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron',
-    specialArrangementsLetter: "#specialArrangementsLetter",
+    c8Served_No: '#soaServeC8ToLocalAuthorityYesOrNo_No'
   },
 
   async selectEvent() {
     await I.triggerEvent(soaConfig.soaEvent);
-  },
-
-  async uploadSpecialDocumentsToBeServed() {
-    await I.triggerEvent(soaConfig.soaEvent);
-    await I.attachFile(this.fields.specialArrangementsLetter, '../resource/dummy.pdf');
-    await I.click(soaConfig.continueText);
-  },
-
-  async serveNonPersonalOrderType() {
-    await I.waitForText(soaConfig.serveType);
-    await I.click(this.fields.serveToRespondentNoOption);
-    await I.click(soaConfig.applicant);
-    await I.click(this.fields.cafcassOption);
-    await I.click(this.fields.doesLANeedsToBeServed_No);
-    await I.click(soaConfig.continueText);
-  },
-
-
-  async submitConfidentialService() {
-    await I.waitForText(soaConfig.cyaText);
-    await I.click(soaConfig.saveAndContinue);
-    await I.waitForText(soaConfig.confidServeText);
-    await I.click(soaConfig.returnToCaseDetails);
-  },
-
-  async confidentilalityCheck() {
-    await I.triggerEvent(soaConfig.confidentialityCheck);
-    await I.waitForText(soaConfig.applicationServedText);
-    await I.click(this.fields.applicationServed);
-    await I.fillField(this.fields.rejectionReason, 'Checking option No');
-    await I.click(soaConfig.continueText);
-  },
-
-
-  async submitCheck() {
-    await I.waitForText(soaConfig.cyaText);
-    await I.click(soaConfig.saveAndContinue);
-    await I.waitForText(soaConfig.applicationcannotbeserved);
-    await I.click(soaConfig.returnToCaseDetails);
-    await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
-    await I.click(this.fields.soaTab);
-    await I.waitForText('Confidential check failed');
   },
 
   async uploadDocumentsToBeServed() {
@@ -113,11 +65,7 @@ module.exports = {
   },
 
   async verifyServiceOfApplicationSubmission() {
-    const formattedDate = date.toLocaleDateString('en-GB', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric'
-    }).replace(/ /g, ' ');
+    const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
 
     await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
     await I.click(this.fields.soaTab);
@@ -144,16 +92,5 @@ module.exports = {
     await this.serveOrderType();
     await this.submitOrderService();
     await this.verifyServiceOfApplicationSubmission();
-  },
-
-  async confidentialServiceOfApplication() {
-    await this.uploadSpecialDocumentsToBeServed();
-    await this.serveNonPersonalOrderType();
-    await this.submitConfidentialService();
-  },
-
-  async confidentialCaseManager() {
-    await this.confidentilalityCheck();
-    await this.submitCheck();
   }
 };
