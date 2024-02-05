@@ -17,7 +17,11 @@ module.exports = {
     localAuthorityOption: '#soaServeLocalAuthorityYesOrNo_No',
     soaTab: '//div[contains(text(), \'Service of application\')]',
     expandEle: '//td/div/a',
-    docAttachedField: '//span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-area-field/span'
+    docAttachedField: '//tbody/tr[1]/td/ccd-field-read/div/ccd-field-read-label/div/ccd-read-complex-field/ccd-read-complex-field-table/div/table/tbody/tr[1]/td/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-area-field/span',
+    doesLANeedsToBeServed_Yes: '#soaServeLocalAuthorityYesOrNo_Yes',
+    laEmailAddress: '#soaLaEmailAddress',
+    selectDocument: '#soaDocumentDynamicListForLa_0_documentsListForLa',
+    c8Served_No: '#soaServeC8ToLocalAuthorityYesOrNo_No'
   },
 
   async selectEvent() {
@@ -40,7 +44,14 @@ module.exports = {
     await I.waitForText(soaConfig.serveToRespondentOptions);
     await I.click(this.fields.applicantRep);
     await I.click(this.fields.cafcassOption);
-    await I.click(this.fields.localAuthorityOption);
+
+    // Serve Local authority
+    await I.click(this.fields.doesLANeedsToBeServed_Yes);
+    await I.fillField(this.fields.laEmailAddress, 'test@gov.uk');
+
+    const option = await I.grabTextFrom('//select[@id="soaDocumentDynamicListForLa_0_documentsListForLa"]/option[3]');
+    await I.selectOption(this.fields.selectDocument, option);
+    await I.click(this.fields.c8Served_No);
     await I.click(soaConfig.continueText);
   },
 
@@ -63,10 +74,16 @@ module.exports = {
     await I.click(this.fields.expandEle);
     await I.waitForText('Legal Solicitor');
     await I.waitForText('By email');
-    await I.seeInField(this.fields.docAttachedField, soaConfig.docsAttached);
+    // await I.seeInField(this.fields.docAttachedField, soaConfig.docsAttached);
+    await I.see('C100FinalDocument.pdf');
+    await I.see('C1A_Document.pdf');
     await I.see(soaConfig.recpEmail);
     await I.see(formattedDate);
     await I.see(soaConfig.servedParty);
+
+    await I.see('Email notification details 2');
+    await I.see('Local Authority');
+    await I.see('test@gov.uk');
   },
 
   async performServiceOfApplication() {
