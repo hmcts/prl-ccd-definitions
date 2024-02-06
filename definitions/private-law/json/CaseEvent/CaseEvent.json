@@ -1304,16 +1304,6 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "testingSupportDummyCase",
-    "Name": "Case created by Test support",
-    "PostConditionState": "JUDICIAL_REVIEW",
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
     "ID": "courtnav-document-upload",
     "Name": "Document uploaded by courtnav",
     "PreConditionState(s)": "*",
@@ -1698,6 +1688,7 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-list-on-notice",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listOnNotice",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/send-listOnNotice-notification",
     "Publish": "Y"
   },
   {
