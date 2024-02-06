@@ -10,7 +10,8 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/mark-as-restricted",
-    "EndButtonLabel": "Mark case as restricted"
+    "EndButtonLabel": "Mark case as restricted",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "30/06/2023",
@@ -23,13 +24,14 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/mark-as-restricted",
-    "EndButtonLabel": "Mark case as restricted"
+    "EndButtonLabel": "Mark case as restricted",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "30/06/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "restrictedCaseAccessSysUpdate",
-    "Name": "Mark restricted by sys update",
+    "Name": "Mark case as restricted",
     "DisplayOrder": 202,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
@@ -42,7 +44,7 @@
     "LiveFrom": "30/06/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "restrictedCaseAccessSysUpdate2",
-    "Name": "Mark restricted by sys update 2",
+    "Name": "Mark case as restricted 2",
     "DisplayOrder": 202,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
@@ -62,6 +64,7 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/mark-as-restricted-sys-update",
-    "EndButtonLabel": "Mark case as restricted"
+    "EndButtonLabel": "Mark case as restricted",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
