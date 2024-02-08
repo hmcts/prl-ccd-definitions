@@ -364,16 +364,13 @@ module.exports = () => {
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
     },
-    nonPersonalConfidentialCheck() {
-      return soaPage.nonPersonalConfidentialCheck();
+    nonPersonalServiceOfApplication() {
+      return soaPage.nonPersonalServiceOfApplication();
     },
-    confidentialOptionNo() {
-      return soaPage.confidentialOptionNo();
+    confidentalityCheckOptionNo() {
+      return soaPage.confidentalityCheckOptionNo();
     },
-    personalServcieConfidentialCheck() {
-      return soaPage.personalServiceConfidentialCheck();
-    },
-     confidentialConfirmationYes() {
+    confidentialConfirmationYes() {
        return soaPage.confidentialConfirmationYes();
     },
     performManageDocuments() {
