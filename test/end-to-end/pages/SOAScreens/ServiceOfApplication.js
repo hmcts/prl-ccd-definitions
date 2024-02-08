@@ -26,8 +26,7 @@ module.exports = {
     doesLANeedsToBeServed_No: '#soaServeLocalAuthorityYesOrNo_No',
     applicationServed: '#applicationServedYesNo_No',
     rejectionReason: '#rejectionReason',
-    nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron',
-    specialArrangementsLetter: "#specialArrangementsLetter",
+    nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron'
   },
 
   async selectEvent() {
@@ -36,7 +35,7 @@ module.exports = {
 
   async uploadSpecialDocumentsToBeServed() {
     await I.triggerEvent(soaConfig.soaEvent);
-    await I.attachFile(this.fields.specialArrangementsLetter, '../resource/dummy.pdf');
+    await I.attachFile(this.fields.specialArrangementsUpload, '../resource/dummy.pdf');
     await I.click(soaConfig.continueText);
   },
 
