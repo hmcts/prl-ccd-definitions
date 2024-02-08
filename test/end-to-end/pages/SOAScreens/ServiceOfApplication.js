@@ -25,6 +25,7 @@ module.exports = {
     serveToRespondentNoOption: '#soaServeToRespondentOptions_No',
     doesLANeedsToBeServed_No: '#soaServeLocalAuthorityYesOrNo_No',
     applicationServed: '#applicationServedYesNo_No',
+    applicationServedYes: '#applicationServedYesNo_Yes',
     rejectionReason: '#rejectionReason',
     nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron'
   },
@@ -56,7 +57,7 @@ module.exports = {
     await I.click(soaConfig.returnToCaseDetails);
   },
 
-  async confidentilalityCheck() {
+  async noOptionConfidentialityCheck() {
     await I.triggerEvent(soaConfig.confidentialityCheck);
     await I.waitForText(soaConfig.applicationServedText);
     await I.click(this.fields.applicationServed);
@@ -65,7 +66,7 @@ module.exports = {
   },
 
 
-  async submitCheck() {
+  async noConfirmationScreenAndVerification() {
     await I.waitForText(soaConfig.cyaText);
     await I.click(soaConfig.saveAndContinue);
     await I.waitForText(soaConfig.applicationcannotbeserved);
@@ -73,6 +74,23 @@ module.exports = {
     await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
     await I.click(this.fields.soaTab);
     await I.waitForText('Confidential check failed');
+  },
+
+  async yesConfidentialityCheck() {
+    await I.triggerEvent(soaConfig.confidentialityCheck);
+    await I.waitForText(soaConfig.applicationServedText);
+    await I.click(this.fields.applicationServedYes);
+    await I.click(soaConfig.continueText);
+  },
+
+  async yesConfirmationScreenAndVerification() {
+    await I.waitForText(soaConfig.cyaText);
+    await I.click(soaConfig.saveAndContinue);
+    await I.waitForText(soaConfig.personalServiceText);
+    await I.click(soaConfig.returnToCaseDetails);
+    await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.soaTab);
+    await I.waitForText('Served pack');
   },
 
   async uploadDocumentsToBeServed() {
@@ -84,6 +102,8 @@ module.exports = {
     await I.wait('3');
     await I.click(soaConfig.continueText);
   },
+
+
 
   async serveOrderType() {
     await I.waitForText(soaConfig.serveType);
@@ -145,14 +165,22 @@ module.exports = {
     await this.verifyServiceOfApplicationSubmission();
   },
 
-  async confidentialServiceOfApplication() {
+  async nonPersonalServiceOfApplication() {
     await this.uploadSpecialDocumentsToBeServed();
     await this.serveNonPersonalOrderType();
     await this.submitConfidentialService();
   },
+  async confidentalityCheckOptionNo() {
+    await this.noOptionConfidentialityCheck();
+    await this.noConfirmationScreenAndVerification();
+  },
 
-  async confidentialCaseManager() {
-    await this.confidentilalityCheck();
-    await this.submitCheck();
+
+  async confidentialConfirmationYes() {
+    await this.uploadSpecialDocumentsToBeServed();
+    await this.submitOrderService();
+    await this.yesConfidentialityCheck();
+    await this.yesConfirmationScreenAndVerification();
   }
 };
+
