@@ -49,7 +49,6 @@ module.exports = {
     await I.click(soaConfig.continueText);
   },
 
-
   async submitConfidentialService() {
     await I.waitForText(soaConfig.cyaText);
     await I.click(soaConfig.saveAndContinue);
@@ -102,8 +101,6 @@ module.exports = {
     await I.wait('3');
     await I.click(soaConfig.continueText);
   },
-
-
 
   async serveOrderType() {
     await I.waitForText(soaConfig.serveType);
@@ -170,11 +167,11 @@ module.exports = {
     await this.serveNonPersonalOrderType();
     await this.submitConfidentialService();
   },
+
   async confidentalityCheckOptionNo() {
     await this.noOptionConfidentialityCheck();
     await this.noConfirmationScreenAndVerification();
   },
-
 
   async confidentialConfirmationYes() {
     await this.uploadSpecialDocumentsToBeServed();
@@ -183,4 +180,3 @@ module.exports = {
     await this.yesConfirmationScreenAndVerification();
   }
 };
-
