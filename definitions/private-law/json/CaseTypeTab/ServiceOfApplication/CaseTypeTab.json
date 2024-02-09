@@ -6,10 +6,109 @@
     "TabID": "ServiceOfApplication",
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
-    "CaseFieldID": "finalServedApplicationDetailsList",
+    "CaseFieldID": "serviceOfApplicationLabel",
     "TabFieldDisplayOrder": 1,
-    "DisplayContextParameter": "#TABLE(servedBy,servedAt,modeOfService,whoIsResponsible)",
-    "TabShowCondition": "finalServedApplicationDetailsList!=\"\""
+    "TabShowCondition": "finalServedApplicationDetailsList!=\"\" OR unServedRespondentPack!=\"\" OR unServedOthersPack!=\"\" OR unServedApplicantPack!=\"\" OR unServedLaPack!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedPackLabel",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "unServedRespondentPack.packDocument!=\"\" OR unServedOthersPack.packDocument!=\"\" OR unServedApplicantPack.packDocument!=\"\" OR unServedLaPack.packDocument!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedApplicantPack",
+    "TabFieldDisplayOrder": 3,
+    "FieldShowCondition": "unServedApplicantPack.packDocument!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedRespondentPack",
+    "TabFieldDisplayOrder": 4,
+    "FieldShowCondition": "unServedRespondentPack.packDocument!=\"\""
+
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedOthersPack",
+    "TabFieldDisplayOrder": 5,
+    "FieldShowCondition": "unServedOthersPack.packDocument!=\"\""
+  },
+  {
+    "LiveFrom": "16/08/2023",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedLaPack",
+    "TabFieldDisplayOrder": 6,
+    "FieldShowCondition": "unServedLaPack.packDocument!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "servedPackLabel",
+    "TabFieldDisplayOrder": 7,
+    "FieldShowCondition": "finalServedApplicationDetailsList!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "finalServedApplicationDetailsList",
+    "TabFieldDisplayOrder": 8,
+    "DisplayContextParameter": "#TABLE(servedBy,servedAt,modeOfService,whoIsResponsible)"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "confidentialCheckFailedLabel",
+    "TabFieldDisplayOrder": 9,
+    "FieldShowCondition": "confidentialCheckFailed!=\"\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "confidentialCheckFailed",
+    "TabFieldDisplayOrder": 10,
+    "DisplayContextParameter": "#TABLE(confidentialityCheckRejectReason,dateRejected)"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -19,8 +118,8 @@
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
     "CaseFieldID": "stmtOfServiceLabel",
-    "TabFieldDisplayOrder": 2,
-    "FieldShowCondition": "stmtOfServiceAddRecipient!=\"\""
+    "FieldShowCondition": "stmtOfServiceAddRecipient!=\"\"",
+    "TabFieldDisplayOrder": 11
   },
   {
     "LiveFrom": "01/01/2018",
@@ -30,6 +129,6 @@
     "TabLabel": "Service of application",
     "TabDisplayOrder": 27,
     "CaseFieldID": "stmtOfServiceAddRecipient",
-    "TabFieldDisplayOrder": 3
+    "TabFieldDisplayOrder": 12
   }
 ]
