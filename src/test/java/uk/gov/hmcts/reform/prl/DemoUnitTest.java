@@ -8,6 +8,7 @@ public class DemoUnitTest {
     @Test
     public void exampleOfTest() {
         int dummyVar = 100;
+        
         assertNotNull(dummyVar);
     }
 }
