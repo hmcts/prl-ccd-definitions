@@ -50,7 +50,7 @@ module.exports = {
     additionalSelectRestrictAccess: '#manageDocuments_1_isRestricted_Yes',
     additionalExplainRestrictAccess: '#manageDocuments_1_restrictedDetails',
 
-    //WA Task elements
+    // WA Task elements
     tasksTab: '//div[contains(text(), "Tasks")]',
     assignToMe: '//exui-case-task[2]/dl/div[4]/dd/a[@id="action_claim"]',
     reviewTaskName: '//a[contains(.,"Review Documents")]'
@@ -147,6 +147,7 @@ module.exports = {
     await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
     await I.click(this.fields.confidentialDetailsTab);
     await I.see(manageDocConfig.restrictedLabel);
+    // eslint-disable-next-line no-magic-numbers
     await I.seeNumberOfElements(this.fields.messageRows, 2);
     await I.see(manageDocConfig.docCategory);
     await I.see(manageDocConfig.submittedBy);
@@ -233,9 +234,9 @@ module.exports = {
     await I.waitForText(manageDocConfig.reviewSubmissionText);
     await I.click(manageDocConfig.returnToCaseDetails);
   },
-  
 
-  async verifyReviewTasks(){
+
+  async verifyReviewTasks() {
     await I.click(this.fields.tasksTab);
 
     await I.wait(medWait);

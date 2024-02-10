@@ -379,7 +379,7 @@ module.exports = () => {
     reviewCAManageDocuments() {
       return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
     },
-    reviewDocumentsCreatedViaTask(){
+    reviewDocumentsCreatedViaTask() {
       return manageDocuments.verifyCAManageReviewViaTasks();
     },
     performNonRestrictedManageDocuments() {
