@@ -29,17 +29,29 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "c100ResSolResponseToAllegationsOfHarmE",
-    "CaseFieldID": "responseToAllegationsOfHarm",
-    "DisplayContext": "COMPLEX",
+    "CaseFieldID": "responseToAllegationsOfHarmYesOrNo",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100ResSolResponseToAllegationsOfHarmE",
+    "CaseFieldID": "responseToAllegationsOfHarmDoc",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "responseToAllegationsOfHarmYesOrNo=\"Yes\"",
+    "ShowSummaryChangeOption": "Yes"
   }
 ]
