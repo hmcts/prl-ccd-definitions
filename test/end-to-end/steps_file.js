@@ -364,6 +364,9 @@ module.exports = () => {
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
+    performManageDocumentsAsaSolicitor() {
+      return manageDocuments.runSolicitorManageDocumentsHappyPath();
+    },
     reviewManageDocuments() {
       return manageDocuments.reviewDocuments();
     },
@@ -375,6 +378,9 @@ module.exports = () => {
     },
     reviewCAManageDocuments() {
       return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
+    },
+    reviewDocumentsCreatedViaTask(){
+      return manageDocuments.verifyCAManageReviewViaTasks();
     },
     performNonRestrictedManageDocuments() {
       return ManageDocuments.addNonRestrictedDocuments();

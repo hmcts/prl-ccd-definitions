@@ -1,5 +1,6 @@
 'use strict';
 const I = actor();
+const medWait = 10;
 
 const manageDocConfig = require('./manageDocConfig');
 
@@ -47,7 +48,12 @@ module.exports = {
     additionalDocDetailsField: '#manageDocuments_1_documentDetails',
     additionalDocConfidential: '#manageDocuments_1_isConfidential_Yes',
     additionalSelectRestrictAccess: '#manageDocuments_1_isRestricted_Yes',
-    additionalExplainRestrictAccess: '#manageDocuments_1_restrictedDetails'
+    additionalExplainRestrictAccess: '#manageDocuments_1_restrictedDetails',
+
+    //WA Task elements
+    tasksTab: '//div[contains(text(), "Tasks")]',
+    assignToMe: '//exui-case-task[2]/dl/div[4]/dd/a[@id="action_claim"]',
+    reviewTaskName: '//a[contains(.,"Review Documents")]'
   },
 
   async triggerEvent() {
@@ -141,7 +147,7 @@ module.exports = {
     await I.clickTillElementFound(this.fields.confidentialDetailsTab, this.fields.nextBtnSelector);
     await I.click(this.fields.confidentialDetailsTab);
     await I.see(manageDocConfig.restrictedLabel);
-    await I.seeNumberOfElements(this.fields.messageRows, '2');
+    await I.seeNumberOfElements(this.fields.messageRows, 2);
     await I.see(manageDocConfig.docCategory);
     await I.see(manageDocConfig.submittedBy);
     await I.see(formattedDate);
@@ -210,6 +216,39 @@ module.exports = {
     await I.seeElement(this.fields.confFileEle);
   },
 
+  async triggerReviewDocEventForWATasks(fileName) {
+    await I.waitForText(manageDocConfig.reviewDocText);
+
+    const option = await I.grabTextFrom('//select/option[2]');
+    await I.selectOption(this.fields.selectReviewDoc, option);
+    await I.click(this.fields.submit);
+    await I.waitForText(manageDocConfig.docCategory);
+    await I.waitForText(fileName);
+    await I.click(this.fields.restrictDocEle);
+    await I.click(this.fields.submit);
+
+    await I.waitForText(manageDocConfig.cyaText);
+    await I.click(this.fields.submit);
+
+    await I.waitForText(manageDocConfig.reviewSubmissionText);
+    await I.click(manageDocConfig.returnToCaseDetails);
+  },
+  
+
+  async verifyReviewTasks(){
+    await I.click(this.fields.tasksTab);
+
+    await I.wait(medWait);
+    await I.reloadPage(this.fields.assignToMe);
+    await I.waitForElement(this.fields.assignToMe);
+    await I.click(this.fields.assignToMe);
+
+    await I.waitForElement(this.fields.reviewTaskName, medWait);
+    await I.reloadPage(this.fields.reviewTaskName);
+    await I.waitForElement(this.fields.reviewTaskName);
+    await I.click(this.fields.reviewTaskName);
+  },
+
   async verifyCaseFileViewForConfidentialDocs() {
     await I.clickTillElementFound(this.fields.cfvTab, this.fields.nextBtnSelector);
     await I.click(this.fields.cfvTab);
@@ -254,12 +293,29 @@ module.exports = {
     await this.verifyDocumentSubmission();
   },
 
-  async reviewDocuments() {
-    await this.triggerReviewDocEventForFiles(manageDocConfig.pdfFileName);
+  async runSolicitorManageDocumentsHappyPath() {
+    await this.triggerEvent();
+    await this.confirmDocumentRelatedCase();
+    await this.mainApplicationDocuments(manageDocConfig.docCategory, manageDocConfig.docDetailsText);
+    await this.applyDocConfidential();
+    await this.applyRestrictAccess();
+
+    await this.submitDocuments();
     await I.amOnHistoryPageWithSuccessNotification();
-    await this.triggerReviewDocEventForFiles(manageDocConfig.audioFileName);
+  },
+
+  async reviewDocuments() {
+    await this.triggerReviewDocEventForFiles(manageDocConfig.nonConfPdfFileName);
+    await I.amOnHistoryPageWithSuccessNotification();
+    await this.triggerReviewDocEventForFiles(manageDocConfig.nonConfAudioFileName);
     await this.verifyReviewDocSubmission();
     await this.verifyCaseFileView();
+  },
+
+  async verifyCAManageReviewViaTasks() {
+    await this.verifyReviewTasks();
+    await this.triggerReviewDocEventForWATasks(manageDocConfig.nonConfPdfFileName);
+    await I.amOnHistoryPageWithSuccessNotification();
   },
 
   async addNonRestrictedDocuments() {
