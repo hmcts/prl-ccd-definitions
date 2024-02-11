@@ -40,12 +40,17 @@ const solicitorWithdrawApplication = require('./pages/WithdrawApplication');
 const solicitorDraftOrder = require('./pages/SolicitorDraftOrder');
 const moveCaseToGateKeeping = require('./pages/MoveCaseToGateKeeping');
 const issueCasePage = require('./pages/IssueCase');
+const solicitorReasonableAdjustment = require('./pages/SolicitorReasonableAdjustment');
 const hearingRequestPage = require('./pages/HearingRequest');
 const amendCaseDetailsPage = require('./pages/AmendCaseDetails');
 const nocDetailsPage = require('./pages/NOCScreens/NocDetails');
 const sendMessagePage = require('./pages/SendMsgScreens/SendMsg');
 const soaPage = require('./pages/SOAScreens/ServiceOfApplication');
 const ManageDocuments = require('./pages/ManageDocumentsScreens/ManageDocuments');
+const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
+const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
+const createFlags = require('./pages/CreateFlagScreens/createFlags');
+const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -287,6 +292,18 @@ module.exports = () => {
     moveCaseToGateKeeping() {
       return moveCaseToGateKeeping.moveCaseToGateKeeping();
     },
+    raiseSupportRequestForDocInAlternateType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateType();
+    },
+    raiseSupportRequestForDocInAlternateTypeDA() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForDocInAlternateTypeDA();
+    },
+    raiseSupportRequestForOtherType() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForOtherType();
+    },
+    raiseSupportRequestForGetIntoInandAroundBuilding() {
+      return solicitorReasonableAdjustment.raiseSupportRequestForGetIntoInandAroundBuilding();
+    },
     requestANewHearing() {
       return hearingRequestPage.submitHearing();
     },
@@ -364,6 +381,18 @@ module.exports = () => {
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    requestSupportForHearing() {
+      return reqSupport.requestSupportForParties();
+    },
+    reviewSupportForHearingRequest() {
+      return manageFlags.reviewSupportRequestForParties();
+    },
+    addCAFlags() {
+      return createFlags.createFlags();
+    },
+    reviewCAAddedFlags() {
+      return verifyFlags.verifySolicitorOnlyFlags();
     }
   });
 };
