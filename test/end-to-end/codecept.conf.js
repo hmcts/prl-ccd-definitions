@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/CAGenerateRespondentC8.js',
+  tests: './tests/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
