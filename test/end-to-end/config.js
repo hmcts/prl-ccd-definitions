@@ -20,6 +20,10 @@ module.exports = {
     email: process.env.JUDGE_TESTUSER_ONE,
     password: process.env.JUDGE_TESTPASSWORD
   },
+  caseManagerUser: {
+    email: process.env.CASEMANAGER_TESTUSER,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',

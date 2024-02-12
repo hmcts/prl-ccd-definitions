@@ -70,6 +70,9 @@ module.exports = () => {
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
     },
+     loginAsCaseManager() {
+      return LoginPage.loginAsCaseManager();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -360,6 +363,15 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    nonPersonalServiceOfApplication() {
+      return soaPage.nonPersonalServiceOfApplication();
+    },
+    confidentalityCheckOptionNo() {
+      return soaPage.confidentalityCheckOptionNo();
+    },
+    confidentialConfirmationYes() {
+       return soaPage.confidentialConfirmationYes();
     },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();

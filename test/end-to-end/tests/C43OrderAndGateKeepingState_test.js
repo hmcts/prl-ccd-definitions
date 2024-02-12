@@ -33,3 +33,19 @@ Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
   await I.loginAsRespondentSolicitor();
   await I.submitAndVerifyNOCForCaseWithId(caseId);
 }).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a Case Manager - confidentiality check event @nightly', async({ I }) => {
+  await I.loginAsCaseManager();
+  await I.createC100CaseByCourtAdmin();
+  await I.nonPersonalServiceOfApplication();
+  await I.confidentalityCheckOptionNo();
+}).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a Case Manager - personal service - confidentiality check event with yes flow @nightly', async({ I }) => {
+  await I.loginAsCaseManager();
+  await I.createC100CaseByCourtAdmin();
+  await I.performServiceOfApplication();
+  await I.confidentialConfirmationYes();
+}).retry(testConfig.TestRetryScenarios);
+
+
