@@ -121,6 +121,13 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
   },
 
+  async selectTypeOfApplicationFL401DummyCase() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+  },
+
   async fillSolicitorApplicationPageC100() {
     // await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click(
@@ -228,6 +235,14 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await I.retry(retryCount).click('Create my dummy case');
     await this.amOnHistoryPageWithSuccessNotification();
+  },
+
+  async createNewSolicitorDummyFL401Case() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TSSolicitorApplication();
+    await this.selectTypeOfApplicationFL401DummyCase();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('3');
   },
 
   async fillFormAndSubmit_TSSolicitorApplication() {
