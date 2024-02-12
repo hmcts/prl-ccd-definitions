@@ -9,6 +9,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "16/02/2022",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "selectedPartyName",
+    "FieldType": "Text",
+    "ElementLabel": "Who was served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "13/07/2023",
     "ID": "StmtOfServiceAddRecipient",
     "ListElementCode": "citizenPartiesServedList",
@@ -53,6 +62,7 @@
     "FieldType": "Document",
     "ElementLabel": "Upload document(PDF, .doc) ",
     "SecurityClassification": "Public",
+    "CategoryID": "anyOtherDoc",
     "Searchable": "N"
   },
   {
@@ -64,5 +74,15 @@
     "ElementLabel": "Upload document(PDF, .doc) ",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "selectedPartyId",
+    "FieldType": "Text",
+    "ElementLabel": "Selected Party Id",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "servedDateTimeOption = \"DO_NOT_SHOW\""
   }
 ]
