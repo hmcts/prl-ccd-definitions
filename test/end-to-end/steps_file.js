@@ -364,11 +364,23 @@ module.exports = () => {
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
+    performManageDocumentsAsaSolicitor() {
+      return manageDocuments.runSolicitorManageDocumentsHappyPath();
+    },
     reviewManageDocuments() {
       return manageDocuments.reviewDocuments();
     },
+    performManageDocumentsForConfidentialFiles() {
+      return manageDocuments.uploadConfidentialDocs();
+    },
+    reviewConfidentialManageDocuments() {
+      return manageDocuments.verifyCaseFileViewForConfidentialDocs();
+    },
     reviewCAManageDocuments() {
       return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
+    },
+    reviewDocumentsCreatedViaTask() {
+      return manageDocuments.verifyCAManageReviewViaTasks();
     },
     performNonRestrictedManageDocuments() {
       return ManageDocuments.addNonRestrictedDocuments();
@@ -378,6 +390,9 @@ module.exports = () => {
     },
     uploadCourtDocument() {
       return manageDocuments.addNonRestrictedCourtDocuments();
+    },
+    verifySolicitorDocumentSubmission() {
+      return manageDocuments.verifySolicitorDocumentSubmission();
     },
     verifyErrorMessageOnDocScreen() {
       return manageDocuments.verifyErrorMessageOnDocScreen();

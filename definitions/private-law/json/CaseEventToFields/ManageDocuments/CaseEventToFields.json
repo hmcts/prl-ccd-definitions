@@ -126,7 +126,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-documents/validate-court-user"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-documents/mid-event"
   },
   {
     "LiveFrom": "01/05/2023",
@@ -137,7 +137,20 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "isC8DocumentPresent=\"No\""
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageDocumentsNew",
+    "CaseFieldID": "manageDocumentsWarningText2",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "isC8DocumentPresent=\"Yes\""
   },
   {
     "LiveFrom": "01/05/2023",
@@ -170,6 +183,19 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageDocumentsNew",
     "CaseFieldID": "manageDocumentsRestrictedFlag",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "manageDocumentsWarningText = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageDocumentsNew",
+    "CaseFieldID": "isC8DocumentPresent",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
