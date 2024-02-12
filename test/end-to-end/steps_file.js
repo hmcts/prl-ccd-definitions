@@ -64,8 +64,17 @@ module.exports = () => {
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
     },
+    loginAsCourtAdminTSSolicitorApplication() {
+      return LoginPage.loginAsCourtAdminTSSolicitorApplication();
+    },
+    updateRespondentsDetailsConfidential() {
+      return RespondentDetails.updateRespondentsDetailsConfidential();
+    },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
+    },
+    loginAsLegalAdviser() {
+      return LoginPage.loginAsLegalAdviser();
     },
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
