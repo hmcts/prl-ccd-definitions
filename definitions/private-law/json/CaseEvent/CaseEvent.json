@@ -1604,7 +1604,25 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100listWithoutNotice",
+    "Name": "List Without Notice",
+    "Description": "List Without Notice",
+    "DisplayOrder": 36,
+    "PreConditionState(s)": "JUDICIAL_REVIEW",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice-confirmation",
+    "Publish": "Y",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/03/2023",
@@ -1856,12 +1874,11 @@
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-submit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}//Statement-of-service-confirmation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/Statement-of-service-confirmation",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "Publish": "True"
   },
   {
     "LiveFrom": "05/11/2021",
