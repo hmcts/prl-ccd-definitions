@@ -64,8 +64,17 @@ module.exports = () => {
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
     },
+    loginAsCourtAdminTSSolicitorApplication() {
+      return LoginPage.loginAsCourtAdminTSSolicitorApplication();
+    },
+    updateRespondentsDetailsConfidential() {
+      return RespondentDetails.updateRespondentsDetailsConfidential();
+    },
     loginAsJudge() {
       return LoginPage.loginAsJudge();
+    },
+    loginAsLegalAdviser() {
+      return LoginPage.loginAsLegalAdviser();
     },
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
@@ -364,14 +373,38 @@ module.exports = () => {
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
+    performManageDocumentsAsaSolicitor() {
+      return manageDocuments.runSolicitorManageDocumentsHappyPath();
+    },
     reviewManageDocuments() {
       return manageDocuments.reviewDocuments();
+    },
+    performManageDocumentsForConfidentialFiles() {
+      return manageDocuments.uploadConfidentialDocs();
+    },
+    reviewConfidentialManageDocuments() {
+      return manageDocuments.verifyCaseFileViewForConfidentialDocs();
+    },
+    reviewCAManageDocuments() {
+      return manageDocuments.verifyCaseFileViewOfAdminRestDoc();
+    },
+    reviewDocumentsCreatedViaTask() {
+      return manageDocuments.verifyCAManageReviewViaTasks();
     },
     performNonRestrictedManageDocuments() {
       return ManageDocuments.addNonRestrictedDocuments();
     },
     reviewNonRestManageDocuments() {
       return manageDocuments.nonRestReviewDocuments();
+    },
+    uploadCourtDocument() {
+      return manageDocuments.addNonRestrictedCourtDocuments();
+    },
+    verifySolicitorDocumentSubmission() {
+      return manageDocuments.verifySolicitorDocumentSubmission();
+    },
+    verifyErrorMessageOnDocScreen() {
+      return manageDocuments.verifyErrorMessageOnDocScreen();
     },
     requestSupportForHearing() {
       return reqSupport.requestSupportForParties();
