@@ -63,6 +63,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "18/12/2023",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "orderCreatedByEmailId",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderMadeDate=\"DO_NOT_SHOW\""
+  },
+  {
     "LiveFrom": "20/08/2021",
     "ID": "OtherOrderDetails",
     "ListElementCode": "orderCreatedDate",
@@ -141,6 +151,16 @@
     "ID": "ServedParties",
     "ListElementCode": "partyName",
     "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "servedDateTime",
+    "FieldType": "DateTime",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
@@ -403,7 +423,7 @@
     "ElementLabel": "Welsh document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -448,7 +468,7 @@
     "ElementLabel": "English document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -688,6 +708,16 @@
     "ListElementCode": "organisationsName",
     "FieldType": "Text",
     "ElementLabel": "Other Organisations",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "courtPersonalService",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "ElementLabel": "Who is responsible for serving the respondent?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
