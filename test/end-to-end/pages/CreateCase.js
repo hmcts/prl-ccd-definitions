@@ -28,10 +28,12 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
     );
+    await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.caseType,
       'C100 & FL401 Applications'
@@ -101,6 +103,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationC100() {
+    await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
   },
@@ -109,7 +112,20 @@ module.exports = {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
+  },
+  async selectTypeOfApplicationFL401_TS() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
+  },
+
+  async selectTypeOfApplicationFL401DummyCase() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
   },
 
   async fillSolicitorApplicationPageC100() {
@@ -156,6 +172,13 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationC100();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('7');
+  },
+  async createNewCaseFL401_TS() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TS_Solicitor();
+    await this.selectTypeOfApplicationFL401_TS();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');
   },
@@ -214,6 +237,14 @@ module.exports = {
     await this.amOnHistoryPageWithSuccessNotification();
   },
 
+  async createNewSolicitorDummyFL401Case() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TSSolicitorApplication();
+    await this.selectTypeOfApplicationFL401DummyCase();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('3');
+  },
+
   async fillFormAndSubmit_TSSolicitorApplication() {
     // await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
@@ -244,5 +275,13 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submitOther);
     await I.wait('10');
     return caseId;
+  },
+
+  async saveTheCaseId() {
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    return caseId;
   }
+
+
 };
