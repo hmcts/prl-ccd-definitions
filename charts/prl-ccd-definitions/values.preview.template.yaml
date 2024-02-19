@@ -114,7 +114,6 @@ ccd:
       environment:
         CCD_DATA_STORE_URL: https://ccd-data-store-api-${SERVICE_FQDN}
         ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
-        ROLE_ASSIGNMENT_S2S_AUTHORISED_SERVICES: ccd_gw,am_role_assignment_service,am_org_role_mapping_service,am_role_assignment_refresh_batch,wa_task_management_api,wa_task_configuration_api,xui_webapp,aac_manage_case_assignment,ccd_data,wa_workflow_api,wa_task_monitor,wa_case_event_handler,iac,hmc_cft_hearing_service,ccd_case_disposer,sscs,fis_hmc_api,fpl_case_service,disposer-idam-user,civil_service,prl_cos_api
       keyVaults: []
       ingressHost: am-role-assignment-${SERVICE_FQDN}
 
