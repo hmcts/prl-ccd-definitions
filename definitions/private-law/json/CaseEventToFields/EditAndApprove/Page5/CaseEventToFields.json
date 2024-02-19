@@ -10,7 +10,7 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-custom-fields",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -22,7 +22,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\""
+    "FieldShowCondition": "orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -69,7 +69,8 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -80,7 +81,8 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -91,7 +93,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -103,7 +106,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\""
+    "FieldShowCondition": "judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -126,7 +129,8 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -137,7 +141,8 @@
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -149,7 +154,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -161,7 +166,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -173,7 +178,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "isTheOrderAboutChildren=\"Yes\" OR isTheOrderAboutAllChildren=\"No\""
+    "FieldShowCondition": "(isTheOrderAboutChildren=\"Yes\" OR isTheOrderAboutAllChildren=\"No\") AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -185,7 +190,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\""
+    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -197,7 +202,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderType!=\"generalForm\""
+    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderType!=\"generalForm\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -209,7 +214,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"generalForm\" OR c21OrderOptions=\"c21other\""
+    "FieldShowCondition": "orderType=\"generalForm\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -221,6 +226,30 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "c21OrderOptions=\"c21other\""
+    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "uploadAmendedOrderLabel",
+    "PageFieldDisplayOrder": 22,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"\" AND orderUploadedAsDraftFlag=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "editedUploadOrderDoc",
+    "PageFieldDisplayOrder": 23,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"\" AND orderUploadedAsDraftFlag=\"Yes\""
   }
 ]
