@@ -1970,6 +1970,19 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "21/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "listHearing",
+    "Name": "List Hearing",
+    "Description": "Callback coming from HMC to PRL after Hearing is listed. This will not change case State",
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
 
