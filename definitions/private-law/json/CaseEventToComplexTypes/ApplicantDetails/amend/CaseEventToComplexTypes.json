@@ -247,23 +247,24 @@
     "DisplayContext": "MANDATORY"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicants",
+    "ListElementCode": "contactPreferences",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
+    "FieldShowCondition": "applicants.canYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
     "ListElementCode": "phoneNumber",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicants",
-    "ListElementCode": "isPhoneNumberConfidential",
     "EventElementLabel": "",
     "FieldDisplayOrder": "24",
     "DisplayContext": "MANDATORY"
@@ -274,10 +275,10 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "contactPreferenceType",
+    "ListElementCode": "isPhoneNumberConfidential",
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "10/11/2021",

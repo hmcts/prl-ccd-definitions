@@ -195,22 +195,24 @@
     "DisplayContext": "MANDATORY"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "contactPreferences",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "20",
+    "FieldShowCondition": "applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "phoneNumber",
-    "FieldDisplayOrder": "20",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "isPhoneNumberConfidential",
     "FieldDisplayOrder": "21",
     "DisplayContext": "MANDATORY"
   },
@@ -220,10 +222,9 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "contactPreferenceType",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL"
+    "ListElementCode": "isPhoneNumberConfidential",
+    "FieldDisplayOrder": "22",
+    "DisplayContext": "MANDATORY"
   },
   {
     "LiveFrom": "10/11/2021",
@@ -232,7 +233,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorDetails",
-    "FieldDisplayOrder": "26",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "READONLY"
   },
   {
@@ -242,7 +243,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "representativeFirstName",
-    "FieldDisplayOrder": "27",
+    "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -252,7 +253,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "representativeLastName",
-    "FieldDisplayOrder": "28",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -262,7 +263,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorEmail",
-    "FieldDisplayOrder": "29",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -272,7 +273,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorTelephone",
-    "FieldDisplayOrder": "30",
+    "FieldDisplayOrder": "27",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -282,7 +283,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorReference",
-    "FieldDisplayOrder": "31",
+    "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -292,7 +293,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorOrg.OrganisationID",
-    "FieldDisplayOrder": "32",
+    "FieldDisplayOrder": "29",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -302,7 +303,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorOrg",
-    "FieldDisplayOrder": "33",
+    "FieldDisplayOrder": "30",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -312,7 +313,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorOrg.OrganisationName",
-    "FieldDisplayOrder": "34",
+    "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -322,7 +323,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "dxNumber",
-    "FieldDisplayOrder": "35",
+    "FieldDisplayOrder": "32",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -332,7 +333,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress",
-    "FieldDisplayOrder": "36",
+    "FieldDisplayOrder": "33",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -342,7 +343,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.AddressLine1",
-    "FieldDisplayOrder": "37",
+    "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -352,7 +353,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.AddressLine2",
-    "FieldDisplayOrder": "38",
+    "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -362,7 +363,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.AddressLine3",
-    "FieldDisplayOrder": "39",
+    "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -372,7 +373,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.PostTown",
-    "FieldDisplayOrder": "40",
+    "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -382,7 +383,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.County",
-    "FieldDisplayOrder": "41",
+    "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -392,7 +393,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.PostCode",
-    "FieldDisplayOrder": "42",
+    "FieldDisplayOrder": "39",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -402,7 +403,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorAddress.Country",
-    "FieldDisplayOrder": "43",
+    "FieldDisplayOrder": "40",
     "DisplayContext": "OPTIONAL"
   }
 ]
