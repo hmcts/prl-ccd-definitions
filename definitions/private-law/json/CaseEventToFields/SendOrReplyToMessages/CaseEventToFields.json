@@ -96,18 +96,18 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "messageReplyTable",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
+    "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\""
   },
@@ -146,7 +146,6 @@
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
     "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
   },
   {
