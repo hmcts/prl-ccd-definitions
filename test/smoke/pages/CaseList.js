@@ -46,7 +46,7 @@ module.exports = {
     await I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     await I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     await I.selectOption(this.fields.caseState, state);
-    await I.fillField(this.fields.caseNameXpath, config.definition.caseName);
+    // await I.fillField(this.fields.caseNameXpath, config.definition.caseName);
     await I.fillField(this.fields.caseId, caseId);
   },
 
