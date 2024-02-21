@@ -8,7 +8,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No",
+    "ShowSummaryChangeOption": "Yes",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
   {
@@ -17,11 +17,11 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "messageReplyDynamicList",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -43,11 +43,11 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendingMessagesLabel",
     "DisplayContext": "READONLY",
-    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "No",
+    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
   },
   {
@@ -56,11 +56,11 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendingMessagesHint",
     "DisplayContext": "READONLY",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No"
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -68,11 +68,11 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
     "DisplayContext": "COMPLEX",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -80,36 +80,11 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "messageContent",
     "DisplayContext": "MANDATORY",
-    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "messageReplyTable",
-    "DisplayContext": "READONLY",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "messageReplyTableLabel",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No"
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"SEND\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -117,23 +92,48 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "respondToMessage",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\"",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes"
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "messageReplyTableLabel2",
+    "CaseFieldID": "messageReplyTable",
     "DisplayContext": "READONLY",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No"
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "messageReplyTableLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendReplyTempDocs4",
+    "DisplayContext": "COMPLEX",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -141,11 +141,48 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
     "DisplayContext": "COMPLEX",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
     "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyDocuments",
+    "DisplayContext": "COMPLEX",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "messageReplyTableLabel2",
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendReplyTempDocs5",
+    "DisplayContext": "COMPLEX",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   }
 ]
