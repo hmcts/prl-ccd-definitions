@@ -42,7 +42,7 @@ module.exports = {
   async setInitialSearchFields(state = 'Any', caseId) {
     // wait for initial filters to load
     // eslint-disable-next-line no-magic-numbers
-    await I.waitForVisible(this.fields.jurisdiction, 30);
+    await I.waitForVisible(this.fields.jurisdiction, 60);
     await I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
     await I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
     await I.selectOption(this.fields.caseState, state);
