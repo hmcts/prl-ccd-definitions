@@ -48,12 +48,13 @@ module.exports = {
     // await I.wait('10');
   },
   async loginAsJudge() {
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     await I.wait('10');
-    const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
-    await I.retry(retryCount).click('Sign out');
-    await I.wait('5');
-    const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
-    await I.retry(retryCount).amOnPage(pageUrl);
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
+    // await I.retry(retryCount).click('Sign out');
+    // await I.wait('5');
+    // const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+    // await I.retry(retryCount).amOnPage(pageUrl);
     try {
       await I.runAccessibilityTest();
       await I.retry(retryCount).seeElement('#authorizeCommand');
