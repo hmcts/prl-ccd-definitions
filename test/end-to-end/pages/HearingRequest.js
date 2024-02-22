@@ -137,7 +137,7 @@ module.exports = {
     await I.click('//input[@value="30"]');
     await I.runAccessibilityTest();
     await I.click('Continue');
-    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('Deputy Circuit Judge, High Court Judge');
     await I.see('AMENDED');
 
 
@@ -161,7 +161,7 @@ module.exports = {
   },
 
   async verifyUpdatedHearingStatus() {
-    await I.waitForText('UPDATE REQUESTED ');
+    await I.waitForText('UPDATE REQUESTED');
     await I.runAccessibilityTest();
     await I.see('UPDATE REQUESTED');
     await I.see('First Hearing');
@@ -173,7 +173,7 @@ module.exports = {
     await I.click(this.fields.viewEle);
     await I.waitForText('View or edit hearing');
     await I.see('UPDATE REQUESTED');
-    await I.see('High Court Judge, Deputy Circuit Judge');
+    await I.see('Deputy Circuit Judge, High Court Judge');
     await I.see('3 Hours');
     await I.click('Back');
   },

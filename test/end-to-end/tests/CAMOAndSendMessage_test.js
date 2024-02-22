@@ -34,13 +34,13 @@ Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
   await I.adminServeAnOrder();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin Send an Internal message to Judge @nightly', async({ I }) => {
+Scenario('As a court admin Send an Internal message to Judge - These are still under MVP and tests will be changing', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.sendAMessage();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a Judge reply to the Internal message sent by Admin @nightly', async({ I }) => {
+Scenario('As a Judge reply to the Internal message sent by Admin - These are still under MVP and tests will be changing', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.reviewTheMessage();
