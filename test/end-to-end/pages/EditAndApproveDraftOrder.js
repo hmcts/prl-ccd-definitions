@@ -38,6 +38,7 @@ module.exports = {
     await I.waitForElement(this.fields.assignToMe);
     await I.click(this.fields.assignToMe);
 
+    await I.reloadPage(this.fields.issueTaskName);
     await I.waitForElement(this.fields.issueTaskName, medWait);
     await I.click(this.fields.issueTaskName);
   },
