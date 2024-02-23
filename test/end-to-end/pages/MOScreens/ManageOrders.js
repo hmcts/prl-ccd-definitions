@@ -276,6 +276,7 @@ module.exports = {
 
     await I.waitForText(moConfig.cyaText);
     await I.click(moConfig.submitText);
+    await I.wait('10');
     await I.see('Order approved');
     await I.click(moConfig.returnToCaseDetails);
   },
@@ -302,6 +303,7 @@ module.exports = {
   },
   async uploadOrder() {
     await I.retry(retryCount).waitForText('Approval Date (Optional)');
+    await I.click(this.fields.orderApprovedAtHearing_No);
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_day, '11');
 
     await I.retry(retryCount).fillField(this.fields.dateOrderMade_month, '11');
@@ -335,7 +337,7 @@ module.exports = {
       await I.getElementById('#mat-option-4').click();
     }
     if (judgeOrLA === 'Legal advisor') {
-      await I.retry(retryCount).selectOption(this.fields.legalAdviserListToReviewOrder, 'Ahir(crd_func_test_2.0_rdcc_3831_74@justice.gov.uk)');
+      await I.retry(retryCount).selectOption(this.fields.legalAdviserListToReviewOrder, 'Legal ops(prl_legalops11_swansea@justice.gov.uk)');
     }
   },
   async serveOrderType(orderType, serveNow, draftOrFinalise) {
@@ -371,7 +373,7 @@ module.exports = {
       await I.retry(retryCount).click(this.fields.servePersonallyOptions_Yes);
       await I.retry(retryCount).click(responsible);
     }
-    await I.retry(retryCount).click(this.fields.otherPartiesToServe);
+    // await I.retry(retryCount).click(this.fields.otherPartiesToServe);
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
     await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
@@ -395,8 +397,6 @@ module.exports = {
     await this.fillGenericScreen();
     await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).fillField(this.fields.orderDirections, 'TEST ORDER DIRECTIONS');
-    await I.retry(retryCount).fillField(this.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
-    await I.retry(retryCount).fillField(this.fields.furtherInformation, 'TEST FURTHER INFORMATION');
     await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
   },
@@ -486,7 +486,7 @@ module.exports = {
     await I.click(this.fields.judgeCheckOrderEle);
     await I.waitForText(moConfig.selectJudiciaryQuestion);
     await I.click(this.fields.selectJudgeForOrderReview);
-    await I.fillField(this.fields.judgeNameField, 'raj');
+    await I.fillField(this.fields.judgeNameField, 'emma');
     await I.waitForElement(this.fields.judgeAutoCompEle);
     await I.click(this.fields.judgeAutoCompEle);
     await I.runAccessibilityTest();
