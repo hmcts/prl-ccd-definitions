@@ -12,10 +12,13 @@ Scenario('Solicitor editing returned Blank order FL404B by Judge @nightly', asyn
   caseId = await I.saveTheCaseIdAndSignout();
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
-  //await I.editAnDraftOrderCreatedBySolicitor();
   await I.selectOrderForReview();
+  caseId = await I.saveTheCaseIdAndSignout();
+  await I.loginAsSwanseaCourtAdmin();
+  await I.searchForCasesWithId(caseId);
+  await I.moveCaseToGateKeeping();
   caseId = await I.saveTheCaseIdAndSignout();
   await I.loginAsSolicitor();
   await I.searchForCasesWithId(caseId);
   await I.editAReturnedOrderByJudge();
-});
+}).retry(testConfig.TestRetryScenarios);
