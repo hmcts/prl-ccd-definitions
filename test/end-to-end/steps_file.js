@@ -52,6 +52,8 @@ const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
 const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 const returnOrderByJudge = require('./pages/MOScreens/ReturnOrderByJudge');
+const editAndApproveDraftOrder = require('./pages/MOScreens/EditAndApproveDraftOrder');
+
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -421,6 +423,9 @@ module.exports = () => {
     },
     editAReturnedOrderByJudge() {
       return returnOrderByJudge.editAReturnedOrderByJudge();
+    },
+    selectOrderForReview() {
+      return editAndApproveDraftOrder.selectOrderForJudgeReview();
     }
   });
 };
