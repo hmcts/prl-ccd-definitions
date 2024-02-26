@@ -47,6 +47,18 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
     // await I.wait('10');
   },
+  async loginAsCaseManager() {
+    await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
+    await I.retry(retryCount).click('#cookie-accept-submit');
+    await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).seeElement('#authorizeCommand');
+    await I.retry(retryCount).fillField(this.fields.email, config.caseManagerUser.email);
+    await I.retry(retryCount).fillField(this.fields.password, config.caseManagerUser.password);
+
+    await I.retry(retryCount).click(this.fields.submit);
+    // await I.wait('10');
+  },
   async loginAsJudge() {
     await I.retry(retryCount).amOnPage(`${process.env.XUI_WEB_URL}`);
     await I.wait('10');
