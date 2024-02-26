@@ -53,7 +53,7 @@ module.exports = {
   },
 
   async fillDetailsWithoutNoticeOrderHappyPath() {
-    await this.triggerEvent();
+    // await this.triggerEvent();
     await this.fillDetailsWithoutNoticeOrder();
     await I.wait('5');
     await I.submitEvent();

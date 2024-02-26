@@ -1,3 +1,5 @@
+const testConfig = require('../config');
+
 Feature('Withdraw application as a Solicitor');
 
 Scenario('Withdraw application as Solicitor @nightly', async({ I }) => {
@@ -5,4 +7,4 @@ Scenario('Withdraw application as Solicitor @nightly', async({ I }) => {
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
   await I.solicitorWithdrawApplication();
-}).retry(1);
+}).retry(testConfig.TestRetryScenarios);

@@ -15,7 +15,7 @@ module.exports = {
   },
 
   async moveCaseToGateKeeping() {
-    await I.retry(retryCount).triggerEvent('Send to gate keeper');
+    await I.retry(retryCount).triggerEvent('Send to gatekeeper');
     await I.wait(longWait);
     await I.retry(retryCount).click(this.fields.returnToTaskTab);
 
@@ -29,7 +29,7 @@ module.exports = {
     await I.waitForElement(this.fields.gateKeeperTask);
     await I.retry(retryCount).click(this.fields.gateKeeperTask);
 
-    await I.wait(medWait);
+    await I.wait(longWait);
     await I.retry(retryCount).click(this.fields.selectGateKeeperOption);
     await I.retry(retryCount).click(this.fields.submit);
 

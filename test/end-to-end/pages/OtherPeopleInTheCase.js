@@ -33,11 +33,9 @@ module.exports = {
 
   async otherPeopleInTheCase() {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
-    await I.wait('5');
+    await I.waitForText('Add new');
     await I.retry(retryCount).click('Add new');
-    await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.opFirstName, 'Other Firstname');
-    await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.opLastName, 'Other Lastname');
     await I.retry(retryCount).fillField(this.fields.opPreviousName, 'Other PreviousName');
     await I.retry(retryCount).checkOption(this.fields.opDateOfBirthKnown);
@@ -58,6 +56,7 @@ module.exports = {
     await I.retry(retryCount).checkOption(this.fields.opProvidePhoneNoYes);
     await I.retry(retryCount).fillField(this.fields.opPhoneNo, '07122884667');
     await I.retry(retryCount).checkOption(this.fields.opPhoneNoConfidentialYes);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');

@@ -2,19 +2,20 @@ exports.config = {
   tests: './tests/smoke_test.js',
   output: './output',
   helpers: {
-    Puppeteer: {
-      // headless mode
+    Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
-      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
-      waitForTimeout: 180000,
-      ignoreHTTPSErrors: true,
+      // show: true,
+      waitForTimeout: 60000,
+      getPageTimeout: 60000,
+      waitForAction: 1000,
+      waitForNavigation: 'domcontentloaded',
       chrome: {
         ignoreHTTPSErrors: true,
-        args: ['--no-sandbox']
+        args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
       },
       windowSize: '1280x960'
     },
-    GeneralHelper: { require: '../smoke/helpers/generalHelper.js' }
+    GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {
     retryFailedStep: {

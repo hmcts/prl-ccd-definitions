@@ -1,6 +1,7 @@
-Feature('CA Submit and Pay');
+const testConfig = require('../config');
 
-Scenario('Create a Case and Submit/Pay @master @nightly', async({ I }) => {
+Feature('CA Submit and Pay');
+Scenario('Create a Case and Submit/Pay @nightly @master', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.typeOfApplicationEventC100();
@@ -21,4 +22,4 @@ Scenario('Create a Case and Submit/Pay @master @nightly', async({ I }) => {
   await I.litigationCapacity();
   await I.welshLanguageRequirement();
   await I.runSubmitAndPayHappyPath();
-}).retry(1);
+}).retry(testConfig.TestRetryScenarios);

@@ -1,5 +1,6 @@
-Feature('Help with Fee - Solicitor - CA Submit and Pay - TS');
+const testConfig = require('../config');
 
+Feature('Help with Fee - Solicitor - CA Submit and Pay - TS');
 Scenario(
   'Solicitor Help With Fee - No option- Create CA Submit and Pay-TS @nightly',
   async({ I }) => {
@@ -7,4 +8,4 @@ Scenario(
     await I.createCase_TS();
     await I.runSubmitAndPayHappyPath();
   }
-).retry(1);
+).retry(testConfig.TestRetryScenarios);

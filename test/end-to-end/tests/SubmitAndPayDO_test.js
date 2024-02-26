@@ -1,5 +1,6 @@
-Feature('Submit and Pay - DO');
+const testConfig = require('../config');
 
+Feature('Submit and Pay - DO');
 Scenario(
   'Submit and Pay - basic journey for FL401 Casetype @nightly',
   async({ I }) => {
@@ -13,5 +14,8 @@ Scenario(
     await I.runRelationshipToRespondent();
     await I.runRespondentBehaviour();
     await I.runTheHomeHappyPath();
+    await I.uploadFLDocuments();
+    await I.viewPDFApplicationEvent();
+    await I.statementOfTruthEvent();
   }
-).retry(1);
+).retry(testConfig.TestRetryScenarios);
