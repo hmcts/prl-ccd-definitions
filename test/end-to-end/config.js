@@ -16,12 +16,16 @@ module.exports = {
     email: process.env.COURTADMIN_SWANSEA_TESTUSER,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
+  caseManagerUser: {
+    email: process.env.CASEMANAGER_TESTUSER,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   judgeUserOne: {
     email: process.env.JUDGE_TESTUSER_ONE,
     password: process.env.JUDGE_TESTPASSWORD
   },
-  caseManagerUser: {
-    email: process.env.CASEMANAGER_TESTUSER,
+  legalAdviserUserOne: {
+    email: process.env.LEGALADVISER_TESTUSER_ONE,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
   definition: {

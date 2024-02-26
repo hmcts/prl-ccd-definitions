@@ -106,6 +106,22 @@
     ]
   },
   {
+      "LiveFrom": "12/02/2024",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "unServedCafcassCymruPack",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRUD"
+        }
+      ]
+    },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "confidentialCheckFailed",
@@ -134,6 +150,28 @@
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
+      }
+    ]
+  },
+    {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isC8CheckApproved",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
       }
     ]
   }
