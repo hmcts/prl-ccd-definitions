@@ -34,6 +34,10 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).waitForText('Preview the order');
     await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).waitForText('Edit a returned order');
+    await I.retry(retryCount).click('Save and continue');
+    await I.retry(retryCount).waitForText('Draft order resubmitted');
+    await I.retry(retryCount).click('Close and Return to case details');
   }
 
 };
