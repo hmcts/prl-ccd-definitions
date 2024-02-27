@@ -2,10 +2,11 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentAohYesNo",
+    "CaseFieldID": "respAohHint",
     "AccessControl": [
       {
         "UserRoles": [
+          "citizen",
           "[C100RESPONDENTSOLICITOR1]",
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
@@ -17,12 +18,6 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -32,98 +27,11 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentAllegationsOfHarm",
+    "CaseFieldID": "respAohYesOrNo",
     "AccessControl": [
       {
         "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]",
           "citizen",
-          "caseworker-privatelaw-systemupdate"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentDomesticAbuseLabel",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentDomesticAbuseDescLabel",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentDomesticAbuseBehaviour",
-    "AccessControl": [
-      {
-        "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
@@ -135,12 +43,6 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -150,68 +52,11 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentChildAbuseLabel",
+    "CaseFieldID": "respAohLabel",
     "AccessControl": [
       {
         "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
           "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentChildAbuseDescLabel",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentChildAbuseBehaviour",
-    "AccessControl": [
-      {
-        "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
@@ -223,12 +68,6 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -238,39 +77,11 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentChildAbductionLabel",
+    "CaseFieldID": "respAohDomesticAbuseYesNo",
     "AccessControl": [
       {
         "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
           "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentChildAbduction",
-    "AccessControl": [
-      {
-        "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
@@ -282,12 +93,6 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -297,39 +102,11 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentOtherConcernsLabel",
+    "CaseFieldID": "respAohChildAbuseYesNo",
     "AccessControl": [
       {
         "UserRoles": [
-          "[C100RESPONDENTSOLICITOR1]",
-          "[C100RESPONDENTSOLICITOR2]",
-          "[C100RESPONDENTSOLICITOR3]",
-          "[C100RESPONDENTSOLICITOR4]",
-          "[C100RESPONDENTSOLICITOR5]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
           "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "respondentOtherConcerns",
-    "AccessControl": [
-      {
-        "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
           "[C100RESPONDENTSOLICITOR2]",
           "[C100RESPONDENTSOLICITOR3]",
@@ -341,12 +118,2406 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohChildAbductionYesNo",
+    "AccessControl": [
+      {
+        "UserRoles": [
           "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohSubstanceAbuseYesNo",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohSubstanceAbuseDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohOtherConcerns",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohOtherConcernsDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohOrdersLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohOrdersLabelDetail",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestation",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersNonMolestationDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupation",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOccupationDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtection",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersForcedMarriageProtectionDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestraining",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersRestrainingDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctive",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersOtherInjunctiveDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlace",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceDateIssued",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceEndDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceCurrent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceCourtName",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceCaseNumber",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOrdersUndertakingInPlaceDocument",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respDomesticAbuseBehavioursLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respDomesticAbuseBehavioursSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respDomesticBehaviours",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildAbuseBehavioursLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildAbuseBehavioursSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildAbuses",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPhysicalAbuseLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPhysicalAbuseSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllChildrenAreRiskPhysicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respWhichChildrenAreRiskPhysicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPhysicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPsychologicalAbuseLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPsychologicalAbuseSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllChildrenAreRiskPsychologicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respWhichChildrenAreRiskPsychologicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPsychologicalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildSexualAbuseLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildSexualAbuseSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllChildrenAreRiskSexualAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respWhichChildrenAreRiskSexualAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildSexualAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildEmotionalAbuseLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildEmotionalAbuseSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllChildrenAreRiskEmotionalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respWhichChildrenAreRiskEmotionalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildEmotionalAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildFinancialAbuseLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildFinancialAbuseSubLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllChildrenAreRiskFinancialAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respWhichChildrenAreRiskFinancialAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildFinancialAbuse",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildAbductionLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildAbductionReasons",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respPreviousAbductionThreats",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respPreviousAbductionThreatsDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildrenLocationNow",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAbductionPassportOfficeNotified",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAbductionPreviousPoliceInvolvement",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAbductionPreviousPoliceInvolvementDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAbductionChildHasPassport",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respChildPassportDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respOthersConcernsLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAohOtherConcernsCourtActions",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAllegationsOfHarmChildContactLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAgreeChildUnsupervisedTime",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAgreeChildSupervisedTime",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respAgreeChildOtherContact",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
@@ -354,4 +2525,3 @@
     ]
   }
 ]
-
