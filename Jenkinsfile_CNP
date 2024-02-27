@@ -103,6 +103,11 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
 
+  before('functionaltest:preview') {
+    env.ENVIRONMENT="preview"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+  }
+
   before('smoketest:aat') {
     yarnBuilder.yarn('setup')
     yarnBuilder.yarn('generate-excel-all')
@@ -113,6 +118,11 @@ withPipeline("nodejs", product, component) {
     env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
 
     yarnBuilder.yarn('test:uploadFile')
+  }
+
+  before('functionaltest:aat') {
+    env.ENVIRONMENT="aat"
+    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
   }
 
   afterAlways('smoketest:aat') {
