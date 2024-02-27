@@ -60,12 +60,12 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  onPR{
-    env.ENVIRONMENT="preview"
-  }
-  onMaster{
-    env.ENVIRONMENT="aat"
-  }
+  // onPR{
+  //   env.ENVIRONMENT="preview"
+  // }
+  // onMaster{
+  //   env.ENVIRONMENT="aat"
+  // }
 
   afterAlways('test') {}
 
@@ -77,6 +77,7 @@ withPipeline("nodejs", product, component) {
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
+    env.ENVIRONMENT="preview"
   }
 
   before('highleveldatasetup:aat') {
@@ -85,6 +86,7 @@ withPipeline("nodejs", product, component) {
     stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
+    env.ENVIRONMENT="aat"
   }
 
   before('smoketest:preview') {
