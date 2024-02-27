@@ -1,22 +1,22 @@
 exports.config = {
-  tests: './tests/*.js',
+  tests: './tests/*_test.js',
   output: './output',
   helpers: {
-    Puppeteer: {
-      // headless mode
+    Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
-      // show: true,
+      // show: false,
       url: 'http://localhost:3000',
-      waitForNavigation: ['load', 'domcontentloaded', 'networkidle0'],
-      waitForTimeout: 180000,
-      ignoreHTTPSErrors: true,
+      waitForTimeout: 60000,
+      getPageTimeout: 60000,
+      waitForAction: 1000,
+      waitForNavigation: 'domcontentloaded',
       chrome: {
         ignoreHTTPSErrors: true,
-        args: ['--no-sandbox']
+        args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
       },
       windowSize: '1280x960'
     },
-    PuppeteerHelpers: { require: './helpers/puppeterHelper.js' },
+    PlaywrightHelpers: { require: './helpers/playwrightHelper.js' },
     GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
@@ -25,10 +25,40 @@ exports.config = {
       enabled: true,
       retries: 2,
       minTimeout: 2000
-    }
+    },
+    autoDelay: { enabled: true }
   },
   include: { I: './steps_file.js' },
-  bootstrap: null,
-  mocha: {},
+  // bootstrap: null,
+  mocha: {
+    reporterEnabled: 'codeceptjs-cli-reporter, mochawesome',
+    reporterOptions: {
+      'codeceptjs-cli-reporter': {
+        stdout: '-',
+        options: {
+          verbose: false,
+          steps: true
+        }
+      },
+      mochawesome: {
+        stdout: './output/console.log',
+        options: {
+          includeScreenshots: true,
+          reportDir: './output',
+          reportFilename: 'PrL-CCD-Callbacks-tests',
+          reportTitle: 'PrL CCD Callbacks Tests',
+          inline: true,
+          html: true,
+          json: true
+        }
+      }
+    }
+  },
+  multiple: {
+    parallel: {
+      chunks: 4,
+      browsers: ['chrome']
+    }
+  },
   name: 'prl-ccd-definitions'
 };

@@ -35,14 +35,15 @@
   "FieldType": "DateTime",
   "ElementLabel": "Date and time uploaded",
   "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "name=\"DO NOT SHOW\""
   },
   {
   "LiveFrom": "20/11/2022",
   "ID": "Supplement",
   "ListElementCode": "document",
   "FieldType": "Document",
-  "ElementLabel": "File",
+  "ElementLabel": "Document",
   "RegularExpression": ".doc,.docx,.pdf",
   "SecurityClassification": "Public",
     "Searchable": "N"
@@ -54,7 +55,8 @@
   "FieldType": "Text",
   "ElementLabel": "Uploaded by",
   "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "name=\"DO NOT SHOW\""
   },
   {
   "LiveFrom": "20/11/2022",
@@ -72,8 +74,19 @@
   "ListElementCode": "documentAcknowledge",
   "FieldType": "MultiSelectList",
   "FieldTypeParameter": "DocumentAcknowledge",
-  "ElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD",
+  "ElementLabel": "Tick to confirm this document is related to this case",
   "SecurityClassification": "Public",
   "Searchable": "N"
+  },
+  {
+  "LiveFrom": "20/11/2022",
+  "ID": "Supplement",
+  "ListElementCode": "documentRelatedToCase",
+  "FieldType": "YesOrNo",
+  "ElementLabel": "Document is related to Familyman Case number/Names/CCD",
+  "SecurityClassification": "Public",
+  "Searchable": "N",
+  "FieldShowCondition": "documentAcknowledge=\"DO_NOT_SHOW\""
   }
+
 ]

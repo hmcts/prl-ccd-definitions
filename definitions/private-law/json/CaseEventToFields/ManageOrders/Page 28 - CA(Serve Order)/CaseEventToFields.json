@@ -3,23 +3,63 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "manageOrderHeaderLabel22",
+    "CaseFieldID": "displayLegalRepOption",
     "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 28,
+    "PageDisplayOrder": 28,
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue":"Yes",
+    "FieldShowCondition": "caseTypeOfApplication=\"DO_NOT-SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel22",
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 28,
     "PageDisplayOrder": 28,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "ordersNeedToBeServed=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\""
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/recipients-validations",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "PageShowCondition": "doYouWantToServeOrder=\"Yes\" OR manageOrdersOptions=\"servedSavedOrders\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "manageOrderHeaderLabel23",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 28,
+    "PageDisplayOrder": 28,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveToRespondentOptions",
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "servingRespondentsOptionsDA",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "MANDATORY",
+    "PageID": 28,
+    "PageDisplayOrder": 28,
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -27,11 +67,23 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "servingRespondentsOptionsCA",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "serveToRespondentOptions=\"Yes\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"Yes\" AND caseTypeOfApplication=\"C100\" AND displayLegalRepOption=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "28/11/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "servingOptionsForNonLegalRep",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 28,
+    "PageDisplayOrder": 28,
+    "FieldShowCondition": "(serveToRespondentOptions=\"Yes\" OR caseTypeOfApplication=\"FL401\") AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -39,11 +91,11 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "recipientsOptions",
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 8,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "serveToRespondentOptions=\"No\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"No\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -51,35 +103,35 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "otherParties",
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 9,
     "DisplayContext": "OPTIONAL",
     "PageID": 28,
     "PageDisplayOrder": 28,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "otherPeoplePresentInCaseFlag=\"Yes\""
+    "FieldShowCondition": "otherPeoplePresentInCaseFlag=\"Yes\" AND caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "cafcassServedOptions",
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 10,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "isCafcass=\"Yes\"",
-    "ShowSummaryChangeOption": "N"
+    "FieldShowCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\"",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "cafcassCymruServedOptions",
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 11,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "isCafcass=\"No\"",
+    "FieldShowCondition": "isCafcass=\"No\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -87,11 +139,11 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "cafcassCymruEmail",
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 12,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "cafcassCymruServedOptions=\"Yes\"",
+    "FieldShowCondition": "cafcassCymruServedOptions=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -99,11 +151,11 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "cafcassEmailId",
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 13,
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "cafcassServedOptions=\"Yes\"",
+    "FieldShowCondition": "cafcassServedOptions=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isOnlyC47aOrderSelectedToServe=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -111,46 +163,35 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "serveOtherPartiesCA",
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 14,
     "DisplayContext": "OPTIONAL",
     "PageID": 28,
     "PageDisplayOrder": 28,
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "deliveryByOptionsCA",
-    "PageFieldDisplayOrder": 10,
-    "DisplayContext": "MANDATORY",
+    "CaseFieldID": "serveOtherPartiesDA",
+    "PageFieldDisplayOrder": 15,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 28,
+    "PageDisplayOrder": 28,
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "serveOrgDetailsList",
+    "PageFieldDisplayOrder": 16,
+    "DisplayContext": "COMPLEX",
     "PageID": 28,
     "PageDisplayOrder": 28,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\""
-  },
-  {
-  "LiveFrom": "01/12/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseEventID": "manageOrders",
-  "CaseFieldID": "postalInformationCA",
-  "PageID": 28,
-  "PageDisplayOrder": 28,
-  "PageFieldDisplayOrder": 11,
-  "DisplayContext": "COMPLEX",
-  "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\" AND deliveryByOptionsCA=\"post\"",
-  "ShowSummaryChangeOption": "Y"
-  },
-  {
-  "LiveFrom": "01/12/2022",
-  "CaseTypeID": "PRLAPPS",
-  "CaseEventID": "manageOrders",
-  "CaseFieldID": "emailInformationCA",
-  "PageID": 28,
-  "PageDisplayOrder": 28,
-  "PageFieldDisplayOrder": 12,
-  "DisplayContext": "COMPLEX",
-  "FieldShowCondition": "serveOtherPartiesCA=\"anotherOrganisation\" AND deliveryByOptionsCA=\"email\"",
-  "ShowSummaryChangeOption": "Y"
+    "FieldShowCondition": "serveOtherPartiesDA=\"other\" OR serveOtherPartiesCA=\"anotherOrganisation\""
   }
 ]

@@ -116,195 +116,236 @@
     "CRUD": "CRUD"
   },
   {
-    "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "ListElementCode": "c2DocumentBundle",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "c2DocumentBundle",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "c2DocumentBundle",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "OrgPolicyCaseAssignedRole",
     "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
+    "CRUD": "CRUD"
   },
   {
-    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "OrgPolicyReference",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "Organisation",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "Organisation.OrganisationID",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "Organisation.OrganisationName",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "PreviousOrganisations",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "05/08/2020",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "PrepopulateToUsersOrganisation",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "05/08/2020",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "ListElementCode": "LastNoCRequestedBy",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
     "ListElementCode": "c2DocumentBundle",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "c2DocumentBundle",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "c2DocumentBundle",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "ListElementCode": "otherApplicationsBundle",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
     "ListElementCode": "otherApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "otherApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "otherApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "otherApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "otherApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "ListElementCode": "uploadedDateTime",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
     "ListElementCode": "uploadedDateTime",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "uploadedDateTime",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "uploadedDateTime",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "uploadedDateTime",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "uploadedDateTime",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "ListElementCode": "author",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
     "ListElementCode": "author",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "author",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "R"
+    "ListElementCode": "payment",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "author",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "ListElementCode": "partyType",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "05/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "author",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "additionalApplicationsBundle",
-    "ListElementCode": "author",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "ListElementCode": "selectedParties",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

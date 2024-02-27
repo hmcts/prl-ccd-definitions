@@ -38,11 +38,39 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "OtherOrderDetails",
+    "ListElementCode": "additionalRequirementsForHearingReq",
+    "FieldType": "TextArea",
+    "ElementLabel": "Additional requirements for hearing request",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OtherOrderDetails",
     "ListElementCode": "createdBy",
     "FieldType": "Text",
     "ElementLabel": "Order made by",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "28/11/2023",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "orderCreatedBy",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "18/12/2023",
+    "ID": "OtherOrderDetails",
+    "ListElementCode": "orderCreatedByEmailId",
+    "FieldType": "Text",
+    "ElementLabel": "Order created by",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderMadeDate=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -105,6 +133,37 @@
     "FieldType": "Text",
     "ElementLabel": "Order status",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "orderMadeDate=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "partyId",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "partyName",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServedParties",
+    "ListElementCode": "servedDateTime",
+    "FieldType": "DateTime",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "partyId=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -134,9 +193,9 @@
     "ListElementCode": "servingRespondent",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ServingRespondentsEnum",
-    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
-    "ElementLabel": " ",
+    "ElementLabel": "Recipients",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -153,9 +212,8 @@
     "ID": "ServeOrderDetails",
     "ListElementCode": "otherParties",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Other people",
     "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -174,16 +232,6 @@
     "ListElementCode": "cafcassEmail",
     "FieldType": "Text",
     "ElementLabel": "Cafcass email",
-    "SecurityClassification": "Public",
-    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "ServeOrderDetails",
-    "ListElementCode": "cafcassCymruServed",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Cafcass cymru been served ?",
     "SecurityClassification": "Public",
     "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
     "Searchable": "N"
@@ -225,6 +273,17 @@
     "ListElementCode": "emailInformation",
     "FieldType": "Collection",
     "FieldTypeParameter": "EmailInformation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "servedParties",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServedParties",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
     "FieldShowCondition": "additionalDocuments=\"DO_NOT_SHOW\"",
@@ -294,12 +353,22 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "OrderDetails",
+    "ListElementCode": "isOrderUploaded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Order uploaded ?",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
     "ListElementCode": "orderTypeId",
     "FieldType": "Text",
     "ElementLabel": "Type of order",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+    "FieldShowCondition": "isOrderUploaded = \"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -308,7 +377,8 @@
     "FieldType": "Text",
     "ElementLabel": "Order",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "isOrderUploaded != \"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -353,7 +423,7 @@
     "ElementLabel": "Welsh document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -398,7 +468,7 @@
     "ElementLabel": "English document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "approvedOrders"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -436,6 +506,7 @@
     "FieldTypeParameter": "HearingData",
     "ElementLabel": " ",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "dateCreated=\"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -471,7 +542,7 @@
     "ID": "MagistrateLastName",
     "ListElementCode": "lastName",
     "FieldType": "Text",
-    "ElementLabel": "Last name",
+    "ElementLabel": "Magistrate's full name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -521,5 +592,133 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "typeOfChildArrangementsOrder",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "c21OrderOptions",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "C21OrderOptionsEnum",
+    "ElementLabel": "Type of c21 order",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "childArrangementsOrdersToIssue",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "OrderTypeEnum",
+    "ElementLabel": "Select orders to issue",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "OrderDetails",
+    "ListElementCode": "selectChildArrangementsOrder",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "childArrangementOrderTypeEnum",
+    "ElementLabel": "Select type of child arrangements order",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "17/05/2022",
+    "ID": "OrderDetails",
+    "ListElementCode": "childOption",
+    "ElementLabel": " ",
+    "FieldType": "DynamicMultiSelectList",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "OrderDetails",
+    "ListElementCode": "bulkPrintOrderDetails",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "BulkPrintOrderDetail",
+    "ElementLabel": "Bulk print order details",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "serveByPostOrEmail",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DeliveryByEnum",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "emailInformation",
+    "FieldType": "EmailInformation",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/08/2023",
+    "ID": "ServeOrgDetails",
+    "ListElementCode": "postalInformation",
+    "FieldType": "PostalInformation",
+    "ElementLabel": " ",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "servingRecipientName",
+    "FieldType": "Text",
+    "ElementLabel": "Recipients",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "cafcassCymruServed",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Is Cafcass Cymru involved?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/11/2023",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "organisationsName",
+    "FieldType": "Text",
+    "ElementLabel": "Other Organisations",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ServeOrderDetails",
+    "ListElementCode": "courtPersonalService",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServingRespondentsEnum",
+    "ElementLabel": "Who is responsible for serving the respondent?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]

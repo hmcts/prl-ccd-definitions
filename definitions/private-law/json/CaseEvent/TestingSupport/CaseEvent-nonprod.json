@@ -11,6 +11,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/about-to-submit-case-creation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/solicitor-submitted-case-creation-solicitor",
+    "EndButtonLabel": "Create my dummy case"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportDummySolicitorCreateCourtNav",
+    "Name": "TS-CourtNav application",
+    "Description": "Create an application via testing support",
+    "DisplayOrder": 178,
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/about-to-submit-case-creation-courtNav",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Create my dummy case"
   },
@@ -20,7 +35,7 @@
     "ID": "testingSupportDummyAdminCreateNoc",
     "Name": "TS-Admin application-Noc",
     "Description": "Create an application via testing support",
-    "DisplayOrder": 109,
+    "DisplayOrder": 52,
     "PostConditionState": "JUDICIAL_REVIEW",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -34,6 +49,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "testingSupportPaymentSuccessCallback",
     "Name": "Dummy Payment confirmation",
+    "DisplayOrder": 29,
     "PreConditionState(s)": "SUBMITTED_NOT_PAID",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -45,8 +61,21 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
+    "ID": "tsDummyPaymentAwP",
+    "Name": "Dummy Payment for AwP",
+    "DisplayOrder": 30,
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/additional-application-payment"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
     "ID": "testingSupportRespondentTaskListA",
     "Name": "TS-Fill Respondent TaskList A",
+    "DisplayOrder": 53,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -61,6 +90,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "testingSupportRespondentTaskListB",
     "Name": "TS-Fill Respondent TaskList B",
+    "DisplayOrder": 54,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -75,6 +105,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "testingSupportRespondentTaskListC",
     "Name": "TS-Fill Respondent TaskList C",
+    "DisplayOrder": 55,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -83,5 +114,15 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/submittedRespondentTaskList",
     "EventEnablingCondition": "respondentTaskListC!=\"\"",
     "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportDummyCase",
+    "Name": "Case created by Test support",
+    "PostConditionState": "JUDICIAL_REVIEW",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]

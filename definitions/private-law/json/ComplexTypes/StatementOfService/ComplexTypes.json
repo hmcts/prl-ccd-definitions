@@ -1,0 +1,88 @@
+[
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "respondentDynamicList",
+    "FieldType": "DynamicList",
+    "ElementLabel": "Who was served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "selectedPartyName",
+    "FieldType": "Text",
+    "ElementLabel": "Who was served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/07/2023",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "citizenPartiesServedList",
+    "FieldType": "Text",
+    "ElementLabel": "Who was served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "servedDateTimeOption",
+    "FieldType": "DateTime",
+    "ElementLabel": "When were they served?",
+    "HintText": "For example: 16 4 2021, 10:09",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/07/2023",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "citizenPartiesServedDate",
+    "FieldType": "Text",
+    "ElementLabel": "When were they served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "stmtOfServiceDocumentLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Statement of service document**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "stmtOfServiceDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Upload document(PDF, .doc) ",
+    "SecurityClassification": "Public",
+    "CategoryID": "anyOtherDoc",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "citizenSosDocs",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "ElementLabel": "Upload document(PDF, .doc) ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "selectedPartyId",
+    "FieldType": "Text",
+    "ElementLabel": "Selected Party Id",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "servedDateTimeOption = \"DO_NOT_SHOW\""
+  }
+]

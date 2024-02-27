@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=18.16.1"
   },
   "scripts": {
     "envs": "node json-env.js",
@@ -18,23 +18,23 @@
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
-    "test:crossbrowser-e2e": "MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
+    "test:crossbrowser-e2e": "yarn install && MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
-    "test:uploadFile": "MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps -c test/functional/codecept.conf.js --reporter mocha-multi",
-    "test:functional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
-    "test:fullfunctional": "codeceptjs run --steps -c test/end-to-end/codecept.conf.js",
-    "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
+    "test:uploadFile": "yarn install && MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps --grep \"@pipeline\" -c test/functional/codecept.conf.js --reporter mocha-multi",
+    "test:functional": "yarn install && codeceptjs run --steps --grep \"@master\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
+    "test:fullfunctional": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@nightly\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
+    "test:smoke": "yarn install && MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "generate-json": "cd ccd-definition-processor && yarn xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
-    "generate-excel-local": "yarn envs local generate-excel -e '*-prod.json'",
-    "generate-excel-preview": "yarn envs preview generate-excel -e '*-prod.json'",
-    "generate-excel-demo": "yarn envs demo generate-excel -e '*-prod.json'",
-    "generate-excel-aat": "yarn envs aat generate-excel -e '*-prod.json'",
-    "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json'",
-    "generate-excel-ithc": "yarn envs ithc generate-excel -e '*-prod.json'",
-    "generate-excel-prod": "yarn envs prod generate-excel -e '*-nonprod.json'",
+    "generate-excel-local": "yarn envs local generate-excel -e '*-prod.json,*-sublive.json,*-ignore.json'",
+    "generate-excel-preview": "yarn envs preview generate-excel -e '*-prod.json,*-sublive.json,*-ignore.json'",
+    "generate-excel-demo": "yarn envs demo generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
+    "generate-excel-aat": "yarn envs aat generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
+    "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
+    "generate-excel-ithc": "yarn envs ithc generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
+    "generate-excel-prod": "yarn envs prod generate-excel -e '*-nonprod.json,*-sublive.json,*-preview.json,*-ignore.json'",
     "generate-excel": "cd ccd-definition-processor && yarn json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
     "generate-excel-all": "yarn generate-excel-local && yarn generate-excel-preview && yarn generate-excel-aat && yarn generate-excel-demo && yarn generate-excel-ithc && yarn generate-excel-perftest && yarn generate-excel-prod"
   },
@@ -44,7 +44,8 @@
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "1.7.0",
     "@hmcts/properties-volume": "0.0.13",
-    "codeceptjs": "^2.6.11",
+    "assert": "^2.1.0",
+    "codeceptjs": "^3.5.5",
     "config": "^3.0.1",
     "eslint-plugin-codeceptjs": "^1.0.0",
     "express": "^4.16.4",
@@ -52,11 +53,13 @@
     "json-schema": "^0.4.0",
     "left-pad": "^1.0.0",
     "minimist": "^1.2.3",
+    "playwright": "1.37.0",
     "puppeteer": "^5.5.0",
     "ws": "^7.4.6"
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
+    "@playwright/test": "1.37.0",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-mocha": "^5.3.0",
@@ -72,7 +75,8 @@
     "pretty-quick": "^1.10.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
-    "sonar-scanner": "^3.1.0"
+    "sonar-scanner": "^3.1.0",
+    "webdriverio": "^6.12.1"
   },
   "resolutions": {
     "flat": "^5.0.1",
@@ -81,7 +85,8 @@
     "follow-redirects": "^1.14.7",
     "axios": "^0.21.2",
     "codeceptjs/mocha-junit-reporter": ">=2.1.1",
-    "cookiejar": ">=2.1.4"
+    "cookiejar": ">=2.1.4",
+    "jackspeak": "2.1.1"
   },
   "packageManager": "yarn@3.5.0"
 }

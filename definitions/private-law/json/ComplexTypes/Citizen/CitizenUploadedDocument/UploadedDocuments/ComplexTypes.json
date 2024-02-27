@@ -4,7 +4,7 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "parentDocumentType",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Parent document type",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -13,7 +13,7 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "documentType",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Document type",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -22,7 +22,7 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "partyName",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -31,7 +31,8 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "isApplicant",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Uploaded by applicant",
+    "FieldShowCondition": "[STATE]=\"NEVER_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -40,7 +41,8 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "uploadedBy",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "party id",
+    "FieldShowCondition": "[STATE]=\"NEVER_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -49,7 +51,7 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "dateCreated",
     "FieldType": "Date",
-    "ElementLabel": " ",
+    "ElementLabel": "Creation date",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -58,7 +60,7 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "documentDetails",
     "FieldType": "DocumentDetails",
-    "ElementLabel": " ",
+    "ElementLabel": "Document details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -67,17 +69,17 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "citizenDocument",
     "FieldType": "Document",
-    "ElementLabel": " ",
+    "ElementLabel": "Uploaded document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "anyOtherDoc"
+    "CategoryID": "citizenQuarantine"
   },
   {
     "LiveFrom": "20/08/2021",
     "ID": "UploadedDocuments",
     "ListElementCode": "cafcassDocument",
     "FieldType": "Document",
-    "ElementLabel": " ",
+    "ElementLabel": "Cafcass document",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "CategoryID": "safeguardingLetter"
@@ -87,7 +89,8 @@
     "ID": "UploadedDocuments",
     "ListElementCode": "documentRequestedByCourt",
     "FieldType": "YesOrNo",
-    "ElementLabel": " ",
+    "ElementLabel": "Is document requested by court to upload?",
+    "FieldShowCondition": "[STATE]=\"NEVER_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

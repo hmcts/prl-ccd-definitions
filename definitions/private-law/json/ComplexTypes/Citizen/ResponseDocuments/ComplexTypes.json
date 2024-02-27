@@ -4,7 +4,7 @@
     "ID": "ResponseDocuments",
     "ListElementCode": "partyName",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Responding party name",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -13,7 +13,7 @@
     "ID": "ResponseDocuments",
     "ListElementCode": "createdBy",
     "FieldType": "Text",
-    "ElementLabel": " ",
+    "ElementLabel": "Submitted by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -22,7 +22,7 @@
     "ID": "ResponseDocuments",
     "ListElementCode": "dateCreated",
     "FieldType": "Date",
-    "ElementLabel": " ",
+    "ElementLabel": "Submitted on",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -40,9 +40,38 @@
     "ID": "ResponseDocuments",
     "ListElementCode": "citizenDocument",
     "FieldType": "Document",
-    "ElementLabel": " ",
+    "ElementLabel": "Document",
     "SecurityClassification": "Public",
-    "Searchable": "N",
-    "CategoryID": "anyOtherDoc"
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ResponseDocuments",
+    "ListElementCode": "respondentC8Document",
+    "FieldType": "Document",
+    "ElementLabel": "C8 document english",
+    "SecurityClassification": "Public",
+    "CategoryID": "confidential",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ResponseDocuments",
+    "ListElementCode": "respondentC8DocumentWelsh",
+    "FieldType": "Document",
+    "ElementLabel": "C8 document welsh",
+    "SecurityClassification": "Public",
+    "CategoryID": "confidential",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "ResponseDocuments",
+    "ListElementCode": "dateTimeCreated",
+    "FieldType": "DateTime",
+    "ElementLabel": "Date created",
+    "FieldShowCondition": "dateCreated=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]

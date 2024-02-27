@@ -11,18 +11,9 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "UploadApplicationDraftOrder",
-    "ListElementCode": "dateTimeUploaded",
-    "FieldType": "DateTime",
-    "ElementLabel": "Date and time uploaded",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "UploadApplicationDraftOrder",
     "ListElementCode": "document",
     "FieldType": "Document",
-    "ElementLabel": "File",
+    "ElementLabel": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -42,8 +33,18 @@
     "ListElementCode": "documentAcknowledge",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "DocumentAcknowledge",
-    "ElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD",
+    "ElementLabel": "Tick to confirm this document is related to this case",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "UploadApplicationDraftOrder",
+    "ListElementCode": "documentRelatedToCase",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Document is related to Familyman Case number/Names/CCD",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "documentAcknowledge=\"DO_NOT_SHOW\""
   }
 ]

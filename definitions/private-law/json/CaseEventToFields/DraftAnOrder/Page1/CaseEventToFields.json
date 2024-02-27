@@ -10,5 +10,20 @@
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-draft-order-fields"
+  },
+  {
+    "LiveFrom": "02/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "draftOrderOptions=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
   }
 ]
+

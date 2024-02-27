@@ -27,35 +27,35 @@ module.exports = {
     const retryCount = 3;
     await I.triggerEvent(this.fields.headerText);
     await I.waitForPage('h1', this.fields.headerText);
-    I.wait('2');
+    await I.wait('2');
     await I.runAccessibilityTest();
     await I.retry(retryCount).checkOption(this.fields.orderWithoutNoticeSelectYes);
     await I.click(this.fields.submit);
-    I.wait('3');
+    await I.wait('3');
     await I.retry(retryCount).checkOption(this.fields.harmToApplicantOrChild);
     await I.retry(retryCount).checkOption(this.fields.deferringApplicationIfNotImmediate);
     await I.retry(retryCount).checkOption(this.fields.reasonForOrderWithoutGivingNotice);
     await I.fillField(this.fields.reasonForOrderWithoutGivingNoticeFurtherDetails, 'Further Optional Details');
-    I.wait('5');
+    await I.wait('5');
     await I.click(this.fields.submit);
-    I.wait('3');
+    await I.wait('3');
     await I.retry(retryCount).checkOption(this.fields.selectBailConditionYes);
-    I.wait('2');
+    await I.wait('2');
     await I.fillField(this.fields.bailConditionEndDay, '21');
     await I.fillField(this.fields.bailConditionEndMonth, '2');
     await I.fillField(this.fields.bailConditionEndYear, '2021');
-    I.wait('3');
+    await I.wait('3');
     await I.click(this.fields.submit);
-    I.wait('3');
+    await I.waitForElement(this.fields.otherDetails);
     await I.fillField(this.fields.otherDetails, 'Other Details');
-    I.wait('3');
+    await I.waitForElement(this.fields.submit);
     await I.click(this.fields.submit);
   },
 
   async fillDetailsWithoutNoticeOrderHappyPath() {
-    await this.triggerEvent();
+    // await this.triggerEvent();
     await this.fillDetailsWithoutNoticeOrder();
-    I.wait('5');
+    await I.wait('5');
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
