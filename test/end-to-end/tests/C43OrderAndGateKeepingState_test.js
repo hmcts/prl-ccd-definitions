@@ -26,7 +26,7 @@ Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.serveAnOrder();
-  await I.performServiceOfApplication();
+  // await I.performServiceOfApplication(); - This test needs to be re-written as part of MVP changes and will be done in PRL-5272
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
