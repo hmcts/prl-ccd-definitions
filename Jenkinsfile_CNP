@@ -77,7 +77,6 @@ withPipeline("nodejs", product, component) {
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
-    env.ENVIRONMENT="preview"
   }
 
   before('highleveldatasetup:aat') {
@@ -86,7 +85,6 @@ withPipeline("nodejs", product, component) {
     stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
-    env.ENVIRONMENT="aat"
   }
 
   before('smoketest:preview') {
@@ -106,6 +104,7 @@ withPipeline("nodejs", product, component) {
   before('functionaltest:preview') {
     env.ENVIRONMENT="preview"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    echo "Environment variable set is {env.ENVIRONMENT}"
   }
 
   before('smoketest:aat') {
