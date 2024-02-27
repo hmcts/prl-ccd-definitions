@@ -3,8 +3,7 @@ set -ex
 
 echo "Running Functional tests on ${ENVIRONMENT} env"
 
-if [[ ${ENVIRONMENT} == "preview" ]] 
-then
+if [ ${ENVIRONMENT} == "preview" ]; then
   yarn test:preview
 else
   yarn test:master
