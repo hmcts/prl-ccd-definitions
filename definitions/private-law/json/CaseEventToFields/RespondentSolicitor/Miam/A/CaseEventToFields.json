@@ -39,6 +39,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
+    "RetainHiddenValue": "Y",
     "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam=\"DO NOT SHOW\""
   },
   {
@@ -60,6 +61,18 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "respondentNameForResponseLabel=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100ResSolMiamA",
+    "CaseFieldID": "hasRespondentAttendedMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -70,7 +83,8 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "hasRespondentAttendedMiam = \"No\""
   },
   {
     "LiveFrom": "11/05/2022",
@@ -80,8 +94,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
-    "PageShowCondition": "respondentSolicitorHaveYouAttendedMiam.attendedMiam=\"No\""
+    "PageFieldDisplayOrder": 2
   },
   {
     "LiveFrom": "11/05/2022",
@@ -92,6 +105,7 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
+    "RetainHiddenValue": "Y",
     "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam=\"DO NOT SHOW\""
   },
   {
@@ -103,5 +117,28 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 4
+  },
+  {
+    "LiveFrom": "01/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100ResSolMiamA",
+    "CaseFieldID": "respondentWillingToAttendMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "c100ResSolMiamA",
+    "CaseFieldID": "respondentReasonNotAttendingMiam",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "respondentWillingToAttendMiam = \"No\""
   }
 ]
