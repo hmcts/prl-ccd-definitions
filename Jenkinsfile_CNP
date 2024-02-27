@@ -60,12 +60,12 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  // onPR{
-  //   env.ENVIRONMENT="preview"
-  // }
-  // onMaster{
-  //   env.ENVIRONMENT="aat"
-  // }
+  onPR{
+    env.ENVIRONMENT="preview"
+  }
+  onMaster{
+    env.ENVIRONMENT="aat"
+  }
 
   afterAlways('test') {}
 
