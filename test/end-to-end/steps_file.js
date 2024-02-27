@@ -391,6 +391,9 @@ module.exports = () => {
     completeStatementOfService() {
       return statementOfService.completeStatementOfService();
     },
+    verifyPostStatementOfService() {
+      return statementOfService.verifyPostStatementOfService();
+    },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },

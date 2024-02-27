@@ -9,8 +9,10 @@ module.exports = {
     applicationPackOption: '#stmtOfServiceWhatWasServed-statementOfServiceApplicationPack',
     whoWasServed: '//select[@id="stmtOfServiceAddRecipient_0_respondentDynamicList"]',
     whenServed: '.mat-datepicker-input',
-    sosDoc: '#stmtOfServiceAddRecipient_0_stmtOfServiceDocument'
-
+    sosDoc: '#stmtOfServiceAddRecipient_0_stmtOfServiceDocument',
+    signOut: '//a[contains(.,"Sign out")]',
+    soaTab: '//div[contains(text(), \'Service of application\')]',
+    nextBtnSelector: '.mat-tab-header-pagination-after  .mat-tab-header-pagination-chevron'
   },
 
   async completeStatementOfService() {
@@ -33,5 +35,13 @@ module.exports = {
     await I.retry(retryCount).click(soaConfig.returnToCaseDetails);
     await I.wait('3');
     await I.amOnHistoryPageWithSuccessNotification();
+    await I.retry(retryCount).click(this.fields.signOut);
+  },
+  async verifyPostStatementOfService() {
+    await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
+    await I.click(this.fields.soaTab);
+    await I.see(sosConfig.sosEvent);
+    await I.see(sosConfig.respondent1);
+    await I.see('dummy.pdf');
   }
 };

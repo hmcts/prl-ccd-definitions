@@ -48,6 +48,13 @@ Scenario('As an Applicant Solicitor execute Statement of service  @nightly', asy
   await I.completeStatementOfService();
 }).retry(testConfig.TestRetryScenarios);
 
+Scenario('As a court admin Verify Statement of service in SOA tab @nightly', async({ I }) => {
+  await I.loginAsCourtAdmin();
+  await I.searchForCasesWithId(caseId);
+  await I.verifyPostStatementOfService();
+}).retry(testConfig.TestRetryScenarios);
+
+
 Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
   await I.loginAsRespondentSolicitor();
   await I.submitAndVerifyNOCForCaseWithId(caseId);
