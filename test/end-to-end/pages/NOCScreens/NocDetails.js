@@ -14,7 +14,8 @@ module.exports = {
     submitEvent: '//p/a[contains(text(), \'Submit\')]',
     caseDocTab: '//div[contains(text(), \'Case documents\')]',
     confEle: '#resSolConfidentialityDisclaimerSubmit_confidentialityChecksChecked-confidentialityChecksChecked',
-    decEle: '#respondentAgreeStatement-agree'
+    decEle: '#respondentAgreeStatement-agree',
+    respondentMiam: '//a[contains(.,"MIAM")]'
   },
 
   async addNocDetails(caseId) {
@@ -49,6 +50,10 @@ module.exports = {
     await I.click(nocConfig.submitText);
     await I.amOnHistoryPageWithSuccessNotification();
 
+    await I.click(this.fields.respondentTab);
+    await I.click(this.fields.respondentMiam);
+    await I.fillRespondentMiamNoOption();
+    await I.amOnHistoryPageWithSuccessNotification();
     await I.click(this.fields.respondentTab);
     await I.click(this.fields.submitEvent);
 
