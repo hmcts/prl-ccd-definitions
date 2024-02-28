@@ -1,5 +1,5 @@
 exports.config = {
-  tests: './tests/C43OrderAndGateKeepingState_test.js',
+  tests: './tests/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
