@@ -51,6 +51,7 @@ const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
 const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
 const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
+const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -426,6 +427,9 @@ module.exports = () => {
     },
     reviewCAAddedFlags() {
       return verifyFlags.verifySolicitorOnlyFlags();
+    },
+    fillRespondentMiamNoOption() {
+      return respondentSolicitorMiam.fillRespondentMiamNoOption();
     }
   });
 };
