@@ -60,6 +60,13 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
+  onPR{
+    env.ENVIRONMENT="preview"
+  }
+  onMaster{
+    env.ENVIRONMENT="aat"
+  }
+
   afterAlways('test') {}
 
   before('highleveldatasetup:preview') {
@@ -105,7 +112,7 @@ withPipeline("nodejs", product, component) {
 
     yarnBuilder.yarn('test:uploadFile')
   }
-
+  
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
