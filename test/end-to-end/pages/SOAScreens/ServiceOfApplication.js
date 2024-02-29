@@ -1,6 +1,9 @@
 'use strict';
 const I = actor();
-
+const retryCount = 3;
+const longWait = 30;
+const medWait = 10;
+const shortWait = 3;
 const soaConfig = require('./soaConfig');
 
 const date = new Date();
@@ -27,7 +30,11 @@ module.exports = {
     applicationServed: '#applicationServedYesNo_No',
     applicationServedYes: '#applicationServedYesNo_Yes',
     rejectionReason: '#rejectionReason',
-    nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron'
+    nextBtnSelector: '.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron',
+    returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
+    assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "C8 - Confidential details check")]/../../dl/div[4]//dd/a',
+    assignToMe: '#action_claim',
+    confidentialCheck : '//a[contains(.,"Confidential Check")]'
   },
 
   async selectEvent() {
@@ -57,7 +64,6 @@ module.exports = {
   },
 
   async noOptionConfidentialityCheck() {
-    await I.triggerEvent(soaConfig.confidentialityCheck);
     await I.waitForText(soaConfig.applicationServedText);
     await I.click(this.fields.applicationServed);
     await I.fillField(this.fields.rejectionReason, 'Checking option No');
@@ -75,8 +81,22 @@ module.exports = {
     await I.waitForText('Confidential check failed');
   },
 
+  async wAConfidentialityCheck() {
+   await I.triggerEvent(soaConfig.confidentialityCheck);
+   await I.wait(longWait);
+   await I.click(this.fields.returnToTaskTab);
+   await I.wait(medWait);
+   await I.reloadPage(this.fields.assignTaskToMe);
+   await I.waitForElement(this.fields.assignTaskToMe);
+   await I.click(this.fields.assignToMe);
+   await I.waitForElement(this.fields.confidentialCheck , medWait);
+   await I.reloadPage(this.fields.confidentialCheck);
+   await I.waitForElement(this.fields.confidentialCheck);
+   await I.retry(retryCount).click(this.fields.confidentialCheck);
+   await I.wait(longWait);
+    },
+
   async yesConfidentialityCheck() {
-    await I.triggerEvent(soaConfig.confidentialityCheck);
     await I.waitForText(soaConfig.applicationServedText);
     await I.click(this.fields.applicationServedYes);
     await I.click(soaConfig.continueText);
@@ -169,13 +189,16 @@ module.exports = {
   },
 
   async confidentalityCheckOptionNo() {
+    await this.wAConfidentialityCheck();
     await this.noOptionConfidentialityCheck();
     await this.noConfirmationScreenAndVerification();
   },
 
   async confidentialConfirmationYes() {
     await this.uploadSpecialDocumentsToBeServed();
+    await this.serveOrderType(); 
     await this.submitOrderService();
+    await this.wAConfidentialityCheck();
     await this.yesConfidentialityCheck();
     await this.yesConfirmationScreenAndVerification();
   }
