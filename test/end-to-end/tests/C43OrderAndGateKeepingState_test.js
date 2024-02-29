@@ -26,8 +26,34 @@ Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.serveAnOrder();
-  // await I.performServiceOfApplication(); - This test needs to be re-written as part of MVP changes and will be done in PRL-5272
+  await I.performServiceOfApplication();
 }).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a Case Manager Confidentiality Check @nightly', async({ I }) => {
+  await I.loginAsCaseManager();
+  await I.searchForCasesWithId(caseId);
+  await I.caseManagerConfidentialityCheck();
+
+}).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a court admin Verify SOA and Task tab after Confidentiality check @nightly', async({ I }) => {
+  await I.loginAsCourtAdmin();
+  await I.searchForCasesWithId(caseId);
+  await I.verifyPostConfidentialityCheck_Yes();
+}).retry(testConfig.TestRetryScenarios);
+
+Scenario('As an Applicant Solicitor execute Statement of service  @nightly', async({ I }) => {
+  await I.loginAsSolicitor();
+  await I.searchForCasesWithId(caseId);
+  await I.completeStatementOfService();
+}).retry(testConfig.TestRetryScenarios);
+
+Scenario('As a court admin Verify Statement of service in SOA tab @nightly', async({ I }) => {
+  await I.loginAsCourtAdmin();
+  await I.searchForCasesWithId(caseId);
+  await I.verifyPostStatementOfService();
+}).retry(testConfig.TestRetryScenarios);
+
 
 Scenario('Solicitor - Notice of change journey test @nightly', async({ I }) => {
   await I.loginAsRespondentSolicitor();
