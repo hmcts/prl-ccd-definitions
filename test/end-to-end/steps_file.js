@@ -52,7 +52,6 @@ const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
 const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 const returnOrderByJudge = require('./pages/MOScreens/ReturnOrderByJudge');
-const editAndApproveDraftOrder = require('./pages/MOScreens/EditAndApproveDraftOrder');
 const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
 const statementOfService = require('./pages/SOAScreens/StatementOfService');
 const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
