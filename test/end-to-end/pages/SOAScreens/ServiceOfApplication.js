@@ -3,7 +3,7 @@ const I = actor();
 const retryCount = 3;
 const longWait = 30;
 const medWait = 10;
-const shortWait = 3;
+//const shortWait = 3;
 const soaConfig = require('./soaConfig');
 const date = new Date();
 
