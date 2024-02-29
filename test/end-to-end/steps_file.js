@@ -53,8 +53,10 @@ const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 const returnOrderByJudge = require('./pages/MOScreens/ReturnOrderByJudge');
 const editAndApproveDraftOrder = require('./pages/MOScreens/EditAndApproveDraftOrder');
+const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
+const statementOfService = require('./pages/SOAScreens/StatementOfService');
+const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
 
-// const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
   return actor({
@@ -382,6 +384,18 @@ module.exports = () => {
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
     },
+    verifyServiceOfApplicationSubmission() {
+      return soaPage.verifyServiceOfApplicationSubmission();
+    },
+    verifyPostConfidentialityCheck_Yes() {
+      return soaPage.verifyPostConfidentialityCheck_Yes();
+    },
+    completeStatementOfService() {
+      return statementOfService.completeStatementOfService();
+    },
+    verifyPostStatementOfService() {
+      return statementOfService.verifyPostStatementOfService();
+    },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
@@ -435,6 +449,13 @@ module.exports = () => {
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
+      
+    caseManagerConfidentialityCheck() {
+      return caseManagerConfidentialityCheck.confidentialityCheck();
+    },
+    fillRespondentMiamNoOption() {
+      return respondentSolicitorMiam.fillRespondentMiamNoOption();
+
     }
   });
 };
