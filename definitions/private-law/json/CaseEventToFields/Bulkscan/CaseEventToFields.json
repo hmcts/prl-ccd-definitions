@@ -22,5 +22,44 @@
     "PageLabel": "BulkScanning",
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "manageDocumentsRestrictedFlag",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "scannedDocuments = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "manageDocumentsTriggeredBy",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "scannedDocuments = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "scannedDocuments = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
   }
 ]
