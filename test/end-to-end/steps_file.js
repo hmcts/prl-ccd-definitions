@@ -67,9 +67,6 @@ module.exports = () => {
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
     },
-    loginAsCaseManager() {
-      return LoginPage.loginAsCaseManager();
-    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },
