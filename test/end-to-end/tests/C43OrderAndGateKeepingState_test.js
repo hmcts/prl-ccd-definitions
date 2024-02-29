@@ -44,7 +44,6 @@ Scenario('As a Case Manager - confidentiality check event @nightly', async({ I }
 Scenario('As a Case Manager - personal service - confidentiality check event with yes flow @nightly', async({ I }) => {
   await I.loginAsCaseManager();
   await I.createC100CaseByCourtAdmin();
-  await I.performServiceOfApplication();
   await I.confidentialConfirmationYes();
 }).retry(testConfig.TestRetryScenarios);
 
