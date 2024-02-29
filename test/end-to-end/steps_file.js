@@ -51,6 +51,9 @@ const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
 const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
 const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
+const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
+const statementOfService = require('./pages/SOAScreens/StatementOfService');
+const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -391,6 +394,18 @@ module.exports = () => {
     confidentialConfirmationYes() {
        return soaPage.confidentialConfirmationYes();
     },
+    verifyServiceOfApplicationSubmission() {
+      return soaPage.verifyServiceOfApplicationSubmission();
+    },
+    verifyPostConfidentialityCheck_Yes() {
+      return soaPage.verifyPostConfidentialityCheck_Yes();
+    },
+    completeStatementOfService() {
+      return statementOfService.completeStatementOfService();
+    },
+    verifyPostStatementOfService() {
+      return statementOfService.verifyPostStatementOfService();
+    },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
     },
@@ -438,6 +453,12 @@ module.exports = () => {
     },
     reviewCAAddedFlags() {
       return verifyFlags.verifySolicitorOnlyFlags();
+    },
+    caseManagerConfidentialityCheck() {
+      return caseManagerConfidentialityCheck.confidentialityCheck();
+    },
+    fillRespondentMiamNoOption() {
+      return respondentSolicitorMiam.fillRespondentMiamNoOption();
     }
   });
 };

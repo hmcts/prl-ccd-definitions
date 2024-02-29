@@ -6,7 +6,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "internalOrExternalMessage",
-    "EventElementLabel": "Are you sending an internal message?",
+    "EventElementLabel": "Who are you sending the message to?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -33,7 +33,7 @@
     "EventElementLabel": "Select a judicial tier or enter a judge's name manually",
     "EventHintText": "Select Judicial tier",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
   {
