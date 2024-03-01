@@ -359,7 +359,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmDomesticAbuseTable",
-    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 33
   },
   {
@@ -381,7 +381,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "behaviours",
-    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 35
   },
   {
@@ -447,7 +447,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedDATable",
-    "FieldShowCondition": "newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 41
   },
   {
@@ -458,7 +458,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedCATable",
-    "FieldShowCondition": "newAllegationsOfHarmChildAbuseYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 42
   },
   {
@@ -469,7 +469,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedChildAbductionTable",
-    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmChildAbductionYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 43
   },
   {
