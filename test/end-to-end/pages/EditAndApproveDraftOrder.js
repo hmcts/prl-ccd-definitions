@@ -22,15 +22,6 @@ module.exports = {
     prevBtnSelector: '.mat-tab-header-pagination-before  .mat-tab-header-pagination-chevron'
   },
 
-  async verifyDraftOrderSubmission() {
-    await I.wait('2');
-    await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
-    await I.click(this.fields.tabSelector);
-    await I.runAccessibilityTest();
-    await I.waitForText('Rejected by Judge');
-  },
-
-
   async selectOrderForJudgeReview() {
     await I.retry(retryCount).triggerEvent('Edit and approve a draft order');
     await I.wait('2');
@@ -94,6 +85,14 @@ module.exports = {
 
     await I.waitForText('Special guardianship order (C43A)');
     await I.waitForText('Reviewed by Manager');
+  },
+
+  async verifyRejectDraftOrderSubmission() {
+    await I.wait('2');
+    await I.clickTillElementFound(this.fields.tabSelector, this.fields.nextBtnSelector);
+    await I.click(this.fields.tabSelector);
+    await I.runAccessibilityTest();
+    await I.waitForText('Rejected by Judge');
   },
 
 
