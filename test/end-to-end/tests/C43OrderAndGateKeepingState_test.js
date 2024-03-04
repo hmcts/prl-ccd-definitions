@@ -72,5 +72,3 @@ Scenario('As a Case Manager - personal service - confidentiality check event wit
   await I.createC100CaseByCourtAdmin();
   await I.confidentialConfirmationYes();
 }).retry(testConfig.TestRetryScenarios);
-
-
