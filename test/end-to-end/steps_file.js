@@ -446,9 +446,6 @@ module.exports = () => {
     editAReturnedOrderByJudge() {
       return returnOrderByJudge.editAReturnedOrderByJudge();
     },
-    selectOrderForReview() {
-      return editAndApproveDraftOrder.selectOrderForJudgeReview();
-    },
     caseManagerConfidentialityCheck() {
       return caseManagerConfidentialityCheck.confidentialityCheck();
     },
