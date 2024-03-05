@@ -113,10 +113,23 @@ ccd:
       imagePullPolicy: Always
       image: hmctspublic.azurecr.io/am/role-assignment-service:latest
       environment:
-        CCD_DATA_STORE_URL: https://ccd-data-store-api-${SERVICE_FQDN}
+        CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
         ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults: []
+      keyVaults:
+        am:
+          secrets:
+            - name: am-role-assignment-service-s2s-secret
+              alias: AM_ROLE_ASSIGNMENT_SERVICE_SECRET
+            - name: app-insights-connection-string
+              alias: app-insights-connection-string
+            - name: role-assignment-service-IDAM-CLIENT-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_CLIENT_SECRET
+            - name: role-assignment-service-IDAM-ADMIN-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_ADMIN_PASSWORD
+            - name: role-assignment-service-LD-SDK-KEY
+              alias: LD_SDK_KEY
       ingressHost: am-role-assignment-${SERVICE_FQDN}
+
 
   ccd-definition-store-api:
     java:

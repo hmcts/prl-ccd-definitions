@@ -1,7 +1,7 @@
 const testConfig = require('../config');
 
 Feature('As a Court admin filter cases');
-Scenario('Filter case by state and application type @nightly', async({ I }) => {
+Scenario('Filter case by state and application type', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.navigateToCaseList();
   await I.searchForCaseWithoutId();
