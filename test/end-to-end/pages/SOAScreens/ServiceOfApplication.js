@@ -1,5 +1,7 @@
 'use strict';
 const I = actor();
+const retryCount = 3;
+const medWait = 10;
 
 const soaConfig = require('./soaConfig');
 
@@ -21,7 +23,12 @@ module.exports = {
     doesLANeedsToBeServed_Yes: '#soaServeLocalAuthorityYesOrNo_Yes',
     laEmailAddress: '#soaLaEmailAddress',
     selectDocument: '#soaDocumentDynamicListForLa_0_documentsListForLa',
-    c8Served_No: '#soaServeC8ToLocalAuthorityYesOrNo_No'
+    c8Served_No: '#soaServeC8ToLocalAuthorityYesOrNo_No',
+    tasksTab: '//div[contains(text(), \'Tasks\')]',
+    previousBtnSelector: '.mat-ripple.mat-tab-header-pagination.mat-tab-header-pagination-before.mat-elevation-z4',
+    applicationSoSDueAssignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Application statement of service due")]/../../dl/div[4]//dd/a',
+    waitingForSolicitorSoSText: 'Waiting for Applicant\'s Solicitor to upload Statement of Service'
+
   },
 
   async selectEvent() {
@@ -72,11 +79,17 @@ module.exports = {
 
     await I.waitForText(soaConfig.notificationText);
     await I.click(this.fields.expandEle);
-    await I.waitForText('Legal Solicitor');
+    await I.waitForText('Applicant solicitor');
     await I.waitForText('By email');
     // await I.seeInField(this.fields.docAttachedField, soaConfig.docsAttached);
     await I.see('C100FinalDocument.pdf');
     await I.see('C1A_Document.pdf');
+    await I.see('cover_letter_re6.pdf');
+    await I.see('Privacy_Notice.pdf');
+    await I.see('Mediation-voucher.pdf');
+    await I.see('Blank_C7.pdf');
+    await I.see('C9_personal_service.pdf');
+    await I.see('C1A_Blank.pdf');
     await I.see(soaConfig.recpEmail);
     await I.see(formattedDate);
     await I.see(soaConfig.servedParty);
@@ -91,6 +104,15 @@ module.exports = {
     await this.uploadDocumentsToBeServed();
     await this.serveOrderType();
     await this.submitOrderService();
+  },
+  async verifyPostConfidentialityCheck_Yes() {
+    await I.clickTillElementFound(this.fields.tasksTab, this.fields.previousBtnSelector);
+    await I.click(this.fields.tasksTab);
+    await I.wait(medWait);
+    await I.reloadPage(this.fields.applicationSoSDueAssignTaskToMe);
+    await I.waitForElement(this.fields.applicationSoSDueAssignTaskToMe);
+    await I.retry(retryCount).click(this.fields.applicationSoSDueAssignTaskToMe);
+    await I.waitForText(this.fields.waitingForSolicitorSoSText);
     await this.verifyServiceOfApplicationSubmission();
   }
 };
