@@ -33,7 +33,6 @@ Scenario('As a Case Manager Confidentiality Check @nightly', async({ I }) => {
   await I.loginAsCaseManager();
   await I.searchForCasesWithId(caseId);
   await I.caseManagerConfidentialityCheck();
-
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin Verify SOA and Task tab after Confidentiality check @nightly', async({ I }) => {
