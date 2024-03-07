@@ -18,8 +18,6 @@ module.exports = {
   async loginAsSolicitor() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-      // await I.click('#cookie-accept-submit');
-      // await I.click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.seeElement('#authorizeCommand');
       await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
@@ -29,13 +27,10 @@ module.exports = {
       await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
     }
     await I.click(this.fields.submit);
-    // await I.wait('10');
   },
   async loginAsCourtAdmin() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-      // await I.click('#cookie-accept-submit');
-      // await I.click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.seeElement('#authorizeCommand');
       await I.fillField(this.fields.email, config.legalProfessionalUserTwo.email);
@@ -45,28 +40,19 @@ module.exports = {
       await I.fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     }
     await I.click(this.fields.submit);
-    // await I.wait('10');
   },
   async loginAsCaseManager() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    // await I.click('#cookie-accept-submit');
-    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.caseManagerUser.email);
     await I.fillField(this.fields.password, config.caseManagerUser.password);
 
     await I.click(this.fields.submit);
-    // await I.wait('10');
   },
   async loginAsJudge() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     await I.wait('10');
-    // const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h1:first-child'));
-    // await I.retry(retryCount).click('Sign out');
-    // await I.wait('5');
-    // const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
-    // await I.retry(retryCount).amOnPage(pageUrl);
     try {
       await I.runAccessibilityTest();
       await I.seeElement('#authorizeCommand');
@@ -134,8 +120,6 @@ module.exports = {
 
   async loginAsSwanseaCourtAdmin() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    // await I.click('#cookie-accept-submit');
-    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.courtAdminUser.email);
@@ -145,8 +129,6 @@ module.exports = {
 
   async loginAsRespondentSolicitor() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    // await I.click('#cookie-accept-submit');
-    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.respondentSolicitor.email);
