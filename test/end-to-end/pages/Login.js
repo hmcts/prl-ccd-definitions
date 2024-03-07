@@ -18,8 +18,8 @@ module.exports = {
   async loginAsSolicitor() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-      await I.click('#cookie-accept-submit');
-      await I.click('#cookie-accept-all-success-banner-hide');
+      // await I.click('#cookie-accept-submit');
+      // await I.click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.seeElement('#authorizeCommand');
       await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
@@ -34,8 +34,8 @@ module.exports = {
   async loginAsCourtAdmin() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     try {
-      await I.click('#cookie-accept-submit');
-      await I.click('#cookie-accept-all-success-banner-hide');
+      // await I.click('#cookie-accept-submit');
+      // await I.click('#cookie-accept-all-success-banner-hide');
       await I.runAccessibilityTest();
       await I.seeElement('#authorizeCommand');
       await I.fillField(this.fields.email, config.legalProfessionalUserTwo.email);
@@ -49,8 +49,8 @@ module.exports = {
   },
   async loginAsCaseManager() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
+    // await I.click('#cookie-accept-submit');
+    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.caseManagerUser.email);
@@ -134,8 +134,8 @@ module.exports = {
 
   async loginAsSwanseaCourtAdmin() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
+    // await I.click('#cookie-accept-submit');
+    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.courtAdminUser.email);
@@ -145,8 +145,8 @@ module.exports = {
 
   async loginAsRespondentSolicitor() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.click('#cookie-accept-submit');
-    await I.click('#cookie-accept-all-success-banner-hide');
+    // await I.click('#cookie-accept-submit');
+    // await I.click('#cookie-accept-all-success-banner-hide');
     await I.runAccessibilityTest();
     await I.seeElement('#authorizeCommand');
     await I.fillField(this.fields.email, config.respondentSolicitor.email);
