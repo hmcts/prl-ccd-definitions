@@ -22,6 +22,7 @@ module.exports = {
     ordersForcedMarriageProtectionNo: '//*[@id="newOrdersForcedMarriageProtection_No"]',
     ordersRestrainingNo: '//*[@id="newOrdersRestraining_No"]',
     ordersOtherInjunctiveNo: '//*[@id="newOrdersOtherInjunctive_No"]',
+    ordersUndertakingNo: '//*[@id="newOrdersUndertakingInPlace_No"]',
 
     // Domestic Abuse - Behaviours
     behaviourDAPhysicalAbuse: '//*[@id="domesticBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
@@ -31,12 +32,12 @@ module.exports = {
     behaviourDAWhoHelpFromDescription: '//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
 
     // Child Abuse - Behaviours
-    behaviourCAPhysicalAbuse: '//*[@id="childAbuseBehaviours_0_typeOfAbuse-TypeOfAbuseEnum_value_1"]',
-    behaviourCARisk: '//*[@id="childAbuseBehaviours_0_allChildrenAreRisk_Yes"]',
-    behaviourCANatureWhatWhoDescription: '//*[@id="childAbuseBehaviours_0_newAbuseNatureDescription"]',
-    behaviourCAStartDateAndLength: '//*[@id="childAbuseBehaviours_0_newBehavioursStartDateAndLength"]',
-    behaviourCAApplicantSoughtHelp: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantSoughtHelp_Yes"]',
-    behaviourCAWhoHelpFromDescription: '//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]',
+    caTypeOfAbuse: '//*[@id="childAbuses-physicalAbuse"]',
+    behaviourCARisk: '//*[@id="allChildrenAreRiskPhysicalAbuse_Yes"]',
+    behaviourCANatureWhatWhoDescription: '//*[@id="childPhysicalAbuse_abuseNatureDescription"]',
+    behaviourCAStartDateAndLength: '//*[@id="childPhysicalAbuse_behavioursStartDateAndLength"]',
+    behaviourCAApplicantSoughtHelp: '//*[@id="childPhysicalAbuse_behavioursApplicantSoughtHelp_Yes"]',
+    behaviourCAWhoHelpFromDescription: '//*[@id="childPhysicalAbuse_behavioursApplicantHelpSoughtWho"]',
 
     // Child Abduction Page
     abductionWhyDescription: '//*[@id="newChildAbductionReasons"]',
@@ -62,17 +63,18 @@ module.exports = {
   async triggerEvent(eventName) {
     await I.retry(retryCount).waitForElement(this.fields.eventList);
     await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
-    I.wait('4');
+    await I.wait('4');
     await I.retry(retryCount).click(this.fields.submit);
-    I.wait('7');
+    await I.wait('7');
   },
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
-    I.wait('4');
+    // await I.wait('4');
     await I.retry(retryCount).click('//*[@id="newAllegationsOfHarmYesNo_Yes"]');
-    I.wait('4');
+    // await I.wait('4');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('4');
+    await I.wait('4');
   },
   async allegationsOfHarmInformation() {
     await I.retry(retryCount).click(this.fields.domesticAbuse);
@@ -80,10 +82,10 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.childAbduction);
     await I.retry(retryCount).click(this.fields.substanceAbuse);
     await I.retry(retryCount).fillField(this.fields.substanceAbuseReason, this.fields.textareaText);
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.otherSafetyConcerns);
     await I.retry(retryCount).fillField(this.fields.otherSafetyConcernsReason, this.fields.textareaText);
-    I.wait('2');
+    await I.wait('2');
 
     // Orders
     const uploadTime = 5;
@@ -94,7 +96,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationEndDate-day"]', '1');
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationEndDate-month"]', '1');
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationEndDate-year"]', '2022');
-    I.wait('1');
+    await I.wait('1');
     await I.retry(retryCount).checkOption('//*[@id="newOrdersNonMolestationCurrent_Yes"]');
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationCourtName"]', 'Court Name');
     await I.retry(retryCount).fillField('//*[@id="newOrdersNonMolestationCaseNumber"]', '1669-9873-4742-9548');
@@ -104,77 +106,78 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.ordersOccupationNo);
     await I.retry(retryCount).click(this.fields.ordersForcedMarriageProtectionNo);
     await I.retry(retryCount).click(this.fields.ordersRestrainingNo);
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.ordersOtherInjunctiveNo);
-    await I.retry(retryCount).click('//*[@id="newOrdersUndertakingInPlace_No"]');
-    I.wait('2');
+    await I.retry(retryCount).click(this.fields.ordersUndertakingNo);
+    await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    await I.wait('2');
   },
   async domesticAbuseBehaviour() {
-    // Domestic Abuse
     await I.retry(retryCount).waitForText('Domestic abuse - Behaviours');
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).click('Add new');
-    I.wait('2');
-    // eslint-disable-next-line max-len
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.behaviourDAPhysicalAbuse);
     await I.retry(retryCount).fillField(this.fields.behaviourDANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourDAStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviourDAApplicantSoughtHelp);
     await I.retry(retryCount).fillField('//*[@id="domesticBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    await I.wait('2');
   },
   async childAbuseBehaviour() {
-    // Child Abuse
     await I.retry(retryCount).waitForText('Child abuse - Behaviours');
-    I.wait('2');
-    await I.retry(retryCount).click('Add new');
-    I.wait('2');
-    // eslint-disable-next-line max-len
-    await I.retry(retryCount).click(this.fields.behaviourCAPhysicalAbuse);
+    await I.retry(retryCount).click(this.fields.caTypeOfAbuse);
+    await I.retry(retryCount).click('Continue');
+  },
+  async childAbusePhysicalAbuse() {
     await I.retry(retryCount).click(this.fields.behaviourCARisk);
     await I.retry(retryCount).fillField(this.fields.behaviourCANatureWhatWhoDescription, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.behaviourCAStartDateAndLength, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.behaviourCAApplicantSoughtHelp);
-    await I.retry(retryCount).fillField('//*[@id="childAbuseBehaviours_0_newBehavioursApplicantHelpSoughtWho"]', this.fields.textareaText);
-    I.wait('2');
+    await I.retry(retryCount).fillField(this.fields.behaviourCAWhoHelpFromDescription, this.fields.textareaText);
+    await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    await I.wait('2');
   },
   async childAbductionAOH() {
     await I.retry(retryCount).waitForText('Child abduction');
     await I.retry(retryCount).fillField(this.fields.abductionWhyDescription, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.abductionPreviousThreats);
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.abductionPreviousThreatsDetails, this.fields.textareaText);
     await I.retry(retryCount).fillField(this.fields.abductionChildrenNowDescription, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.abductionPassportNotified);
     await I.retry(retryCount).click(this.fields.abductionPoliceInvolced);
     await I.retry(retryCount).fillField(this.fields.abductionPoliceInvolvedDetails, this.fields.textareaText);
     await I.retry(retryCount).click(this.fields.abductionChildrenHavePassport);
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).click(this.fields.abductionChildrenMorethanOnePassport);
     await I.retry(retryCount).click(this.fields.abductionChildPassportPossessionFather);
-    I.wait('2');
+    await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    await I.wait('2');
   },
   async otherConcerns() {
     await I.retry(retryCount).waitForText('Other concerns');
     await I.retry(retryCount).fillField(this.fields.otherConcernsWhatSteps, this.fields.textareaText);
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).waitForText('Child contact');
     await I.retry(retryCount).click(this.fields.otherConcernsUnsupervisedTime);
     await I.retry(retryCount).click(this.fields.otherConcernsSupervisedTime);
     await I.retry(retryCount).click(this.fields.otherConcernsOtherFormsOfContact);
-    I.wait('2');
+    await I.wait('2');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click('Continue');
-    I.wait('2');
+    await I.wait('2');
   },
   async submitEvent() {
-    I.wait('2');
+    await I.wait('2');
     await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
     await I.retry(retryCount).click('Save and continue');
@@ -185,6 +188,7 @@ module.exports = {
     await this.allegationsOfHarmInformation();
     await this.domesticAbuseBehaviour();
     await this.childAbuseBehaviour();
+    await this.childAbusePhysicalAbuse();
     await this.childAbductionAOH();
     await this.otherConcerns();
     await this.submitEvent();

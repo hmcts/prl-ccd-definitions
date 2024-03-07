@@ -40,7 +40,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoFhdraLabel",
     "FieldType": "Label",
-    "Label": "**First hearing dispute resolution (FHDRA)**",
+    "Label": "**First hearing dispute resolution appointment (FHDRA)**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -58,7 +58,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoMiamAttendanceLabel",
     "FieldType": "Label",
-    "Label": "**MIAM attendance**",
+    "Label": "**Mediation Information and Assessment Meeting (MIAM) attendance**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -374,7 +374,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoMiamAttendingPerson",
-    "Label": "Name of the person to attend MIAM",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "MiamAttendingPersonName",
     "SecurityClassification": "Public",
@@ -544,6 +544,7 @@
     "ID": "sdoAllegationsDeadlineDate",
     "FieldType": "Date",
     "Label": "List of allegations deadline",
+    "HintText": "When the party must provide the list of allegation by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -553,6 +554,7 @@
     "ID": "sdoWrittenResponseDeadlineDate",
     "FieldType": "Date",
     "Label": "List of Written response deadline",
+    "HintText": "When the parties must provide their statements by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -570,7 +572,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingReportsAlsoSentTo",
-    "Label": "Report also sent to",
+    "Label": "Evidence and/or response to be sent to",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoReportsAlsoSentToEnum",
     "SecurityClassification": "Public",
@@ -580,7 +582,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingMaximumPages",
-    "Label": "Maximum number of pages",
+    "Label": "Maximum number of pages per statement",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -589,7 +591,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingHowManyWitnessEvidence",
-    "Label": "How many witnesses' evidence may each party use?",
+    "Label": "Maximum number of witness statements for each party",
     "FieldType": "Number",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -609,7 +611,7 @@
     "ID": "sdoInterpreterDialectRequired",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoLanguageDialect",
-    "Label": "Court to arrange interpreters",
+    "Label": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -637,7 +639,7 @@
     "ID": "sdoAllocateOrReserveJudge",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "AllocateOrReserveJudgeEnum",
-    "Label": "Allocate or reserve to a named judge",
+    "Label": "The case is to be",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -691,7 +693,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoReservedToLabel",
     "FieldType": "Label",
-    "Label": "**Reserved To**",
+    "Label": "**Reserved to**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -700,7 +702,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoAllocatedToLabel",
     "FieldType": "Label",
-    "Label": "**Allocated To**",
+    "Label": "**Allocated to**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -727,7 +729,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoPositionStatementOtherDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -737,7 +739,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoMiamOtherDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -795,7 +797,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoFactFindingOtherDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -805,7 +807,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoInterpreterOtherDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -834,7 +836,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoCafcassFileAndServeDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -855,7 +857,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoCafcassFileAndServeDetailsLabel",
     "FieldType": "Label",
-    "Label": "**Other direction for safeguarding next steps (Cafcass)**",
+    "Label": "**Other direction for safeguarding next steps Cafcass**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -863,7 +865,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "safeguardingCafcassCymruDetails",
-    "Label": "Give details",
+    "Label": " ",
     "FieldType": "Collection",
     "FieldTypeParameter": "SdoDioProvideOtherDetails",
     "SecurityClassification": "Public",
@@ -884,7 +886,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "safeguardingCafcassCymruDetailsLabel",
     "FieldType": "Label",
-    "Label": "**Other direction for safeguarding next steps (Cafcass Cymru)**",
+    "Label": "**Other direction for safeguarding next steps Cafcass Cymru**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -902,8 +904,119 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoNextStepsAfterGatekeeping",
-    "Label": "Next steps after second gatekeeping appointment",
+    "Label": " ",
     "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocateOrReserveJudgeLabel",
+    "FieldType": "Label",
+    "Label": "**Allocate or reserve to a named judge**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNextStepsAfterGatekeepingLabel",
+    "FieldType": "Label",
+    "Label": "**Next steps after second gatekeeping appointment**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "23/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoAllocateDecisionJudgeFullName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoHearingCourtRequests",
+    "Label": "The court requests",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SdoCourtRequestedEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsText",
+    "Label": "Directions for the party who made the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsText",
+    "Label": "Directions for the party who needs to respond to the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsList",
+    "Label": "Select who has made the allegations",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsList",
+    "Label": "Select who needs to respond to the allegations",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDirectionsForFactFindingHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDirectionsForFactFindingHearingLabel2",
+    "Label": "If a fact-finding hearing is needed, include details to go in the order.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsListText",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsListText",
+    "Label": " ",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

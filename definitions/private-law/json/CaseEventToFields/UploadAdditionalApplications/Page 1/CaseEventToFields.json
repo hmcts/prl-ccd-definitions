@@ -32,5 +32,45 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "representedPartyType",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/upload-additional-application/mid-event"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "applicantCaseName",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
   }
 ]

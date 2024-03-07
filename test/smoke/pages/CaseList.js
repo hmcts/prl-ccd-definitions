@@ -1,6 +1,8 @@
 const { I } = inject();
 const config = require('../config');
 
+const medWait = 20;
+
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
 };
@@ -30,29 +32,22 @@ module.exports = {
     I.click(this.fields.search);
   },
 
-  searchForCasesWithId(caseId, state = 'Any') {
-    I.click(this.fields.reset);
-    this.setInitialSearchFields(state);
-    I.fillField(this.fields.caseId, caseId);
-    I.click(this.fields.applicationType);
-    I.click(this.fields.search);
+  async searchForCasesWithId(caseId, state = 'Any') {
+    await this.setInitialSearchFields(state, caseId);
+    await I.wait(medWait);
+    await I.click(this.fields.search);
+    await I.wait(medWait);
   },
 
-  searchForCasesWithName(caseName, state = 'Any') {
-    this.setInitialSearchFields(state);
-    // wait for our filters to load
-    I.fillField(this.fields.caseName, caseName);
-    I.click(this.fields.search);
-  },
-
-  setInitialSearchFields(state = 'Any') {
+  async setInitialSearchFields(state = 'Any', caseId) {
     // wait for initial filters to load
     // eslint-disable-next-line no-magic-numbers
-    I.waitForVisible(this.fields.jurisdiction, 30);
-    I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
-    I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
-    I.selectOption(this.fields.caseState, state);
-    I.fillField(this.fields.caseNameXpath, config.definition.caseName);
+    await I.waitForVisible(this.fields.jurisdiction, 60);
+    await I.selectOption(this.fields.jurisdiction, config.definition.jurisdictionFullDesc);
+    await I.selectOption(this.fields.caseType, config.definition.caseTypeFullDesc);
+    await I.selectOption(this.fields.caseState, state);
+    // await I.fillField(this.fields.caseNameXpath, config.definition.caseName);
+    await I.fillField(this.fields.caseId, caseId);
   },
 
   locateCase(caseId) {

@@ -11,6 +11,7 @@ module.exports = {
 
   async downloadApplication() {
     await I.retry(retryCount).waitForText('Download Application', '30');
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 

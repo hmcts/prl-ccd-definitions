@@ -5,10 +5,11 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "applicationType",
+    "ListElementCode": "caApplicantApplicationType",
     "EventElementLabel": "Select application",
     "FieldDisplayOrder": "1",
-    "DisplayContext": "MANDATORY"
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"CAAPPLICANT\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -16,11 +17,35 @@
     "ID": "OtherDocumentBundleComplexType",
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "temporaryOtherApplicationsBundle",
-    "ListElementCode": "parentalResponsibilityType",
-    "EventElementLabel": "Who's seeking parental responsibility?",
-    "FieldDisplayOrder": "2",
+    "ListElementCode": "caRespondentApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "temporaryOtherApplicationsBundle.applicationType=\"C1_PARENTAL_RESPONSIBILITY\""
+    "FieldShowCondition": "representedPartyType=\"CARESPONDENT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daApplicantApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"DAAPPLICANT\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "OtherDocumentBundleComplexType",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "temporaryOtherApplicationsBundle",
+    "ListElementCode": "daRespondentApplicationType",
+    "EventElementLabel": "Select application",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "representedPartyType=\"DARESPONDENT\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -42,7 +67,7 @@
     "ListElementCode": "documentAcknowledgeLabel",
     "FieldDisplayOrder": "4",
     "DisplayContext": "READONLY",
-    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to Familyman Case number/Names/CCD</strong></div><br>"
+    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to ${applicantCaseName}</strong></div><br>"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -53,7 +78,7 @@
     "ListElementCode": "documentAcknowledge",
     "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY",
-    "EventElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD"
+    "EventElementLabel": "Tick to confirm this document is related to this case"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -75,7 +100,8 @@
     "EventElementLabel": "Supplements",
     "ListElementCode": "supplementsBundle",
     "FieldDisplayOrder": "7",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -129,7 +155,7 @@
     "ListElementCode": "supplementsBundle.documentAcknowledgeLabel",
     "FieldDisplayOrder": "12",
     "DisplayContext": "READONLY",
-    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to Familyman Case number/Names/CCD</strong></div><br>"
+    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to ${applicantCaseName}</strong></div><br>"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -140,7 +166,7 @@
     "ListElementCode": "supplementsBundle.documentAcknowledge",
     "FieldDisplayOrder": "13",
     "DisplayContext": "MANDATORY",
-    "EventElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD"
+    "EventElementLabel": "Tick to confirm this document is related to this case"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -194,7 +220,7 @@
     "ListElementCode": "supportingEvidenceBundle.documentAcknowledgeLabel",
     "FieldDisplayOrder": "18",
     "DisplayContext": "READONLY",
-    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to Familyman Case number/Names/CCD</strong></div><br>"
+    "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if this document is related to ${applicantCaseName}</strong></div><br>"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -205,6 +231,6 @@
     "ListElementCode": "supportingEvidenceBundle.documentAcknowledge",
     "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY",
-    "EventElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD"
+    "EventElementLabel": "Tick to confirm this document is related to this case"
   }
 ]
