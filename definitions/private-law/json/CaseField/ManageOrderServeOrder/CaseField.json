@@ -31,7 +31,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "serveOrderAdditionalDocuments",
-    "Label": " ",
+    "Label": "Serve order additional documents",
     "FieldType": "Collection",
     "HintText": "Upload additional documents that you plan to serve",
     "FieldTypeParameter": "Document",
@@ -62,7 +62,17 @@
     "ID": "servingRespondentsOptionsCA",
     "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "ServingRespondentsEnum",
+    "FieldTypeParameter": "SoaServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "servingOptionsForNonLegalRep",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SoaCitizenServingRespondentsEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -128,6 +138,16 @@
     "FieldType": "MultiSelectList",
     "HintText": "For example, DWP or the local authority",
     "FieldTypeParameter": "OtherOrganisationOptions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serveOrgDetailsList",
+    "Label": "Organisation",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServeOrgDetails",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -207,7 +227,16 @@
     "ID": "servingRespondentsOptionsDA",
     "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "ServingRespondentsEnum",
+    "FieldTypeParameter": "SoaServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "displayLegalRepOption",
+    "Label": " ",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -262,7 +291,7 @@
     "ID": "servingRespondentsOptionsCaOnlyC47a",
     "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "ServingRespondentsEnum",
+    "FieldTypeParameter": "SoaServingRespondentsEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },

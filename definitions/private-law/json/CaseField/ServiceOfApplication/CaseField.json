@@ -12,8 +12,8 @@
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "serviceOfApplicationScreen1",
-    "Label": " ",
-    "HintText": "Select the orders and notices that you want  to serve on parties",
+    "Label": "Select orders",
+    "HintText": "Select the orders and notices that you want to serve on parties.",
     "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -59,7 +59,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "pd36qLetterLabel",
     "FieldType": "Label",
-    "Label": "### Upload PD36Y letter",
+    "Label": "### Upload PD36ZE letter",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -67,18 +67,9 @@
     "LiveFrom": "17/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "pd36qLetter",
-    "Label": "PD36Y letter",
+    "Label": "PD36ZE letter",
     "FieldType": "Document",
-    "HintText": "Upload the PD36Y letter that is used by your court. The letter explains how the court manages child arrangements order cases",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "11/05/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "noticeOfSafetyLabel",
-    "FieldType": "Label",
-    "Label": "### Upload notice of safety, protection and support needs",
+    "HintText": "Upload the PD36ZE letter that is used by your court. This letter explains how the court manages child arrangements order cases",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -86,9 +77,9 @@
     "LiveFrom": "17/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "noticeOfSafetySupportLetter",
-    "Label": "Notice of safety letter",
+    "Label": "Upload notice of safety letter",
     "FieldType": "Document",
-    "HintText": "Upload the version that is used by your court",
+    "HintText": "Upload the version that is used by your court.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -127,7 +118,7 @@
     "ID": "additionalDocuments",
     "Label": "Additional documents",
     "FieldType": "Document",
-    "HintText": "Upload any additional documents in your service pack that are due to be sent to both applicant and respondent.",
+    "HintText": "Upload any additional documents in your service pack that are due to be sent to both the applicant and the respondent.",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "CategoryID": "anyOtherDoc"
@@ -136,10 +127,10 @@
     "LiveFrom": "17/05/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalDocumentsList",
-    "Label": "Additional documents",
+    "Label": "Upload additional documents",
     "FieldType": "Collection",
     "FieldTypeParameter": "Document",
-    "HintText": "Upload any additional documents in your service pack that are due to be sent to both applicant and respondent.",
+    "HintText": "Upload any additional documents in your service pack that are due to be sent to both the applicant and the respondent.",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "CategoryID": "anyOtherDoc"
@@ -185,7 +176,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "soaServeToRespondentOptions",
-    "Label": "Does this order need to be personally served on the respondent?",
+    "Label": "Does this application need to be personally served on the respondent?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -213,7 +204,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "soaOtherParties",
-    "Label": "Which other people in the case should the order be sent to?",
+    "Label": "Which other people should the notice of proceedings be sent to?",
     "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -327,6 +318,106 @@
     "ID": "confidentialDetailsArePresentBanner",
     "FieldType": "Label",
     "Label": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Confidential details are present in this case, documents needs to be reviewed before serving</strong></div>",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServeLocalAuthorityYesOrNo",
+    "FieldType": "YesOrNo",
+    "Label": "Does the local Authority need to be served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaServeC8ToLocalAuthorityYesOrNo",
+    "FieldType": "YesOrNo",
+    "Label": "Does the C8 need to be served on the local authority?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "addDocumentsForLaLabel",
+    "Label": "### Choose the documents to be served on the local authority",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaDocumentDynamicListForLa",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "DocumentListForLa",
+    "Label": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "soaLaEmailAddress",
+    "FieldType": "Email",
+    "Label": "Email address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "missingAddressWarningText",
+    "FieldType": "Text",
+    "Label": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "missingAddressWarningTextCA",
+    "FieldType": "Label",
+    "Label": "${missingAddressWarningText}",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "missingAddressWarningTextDA",
+    "FieldType": "Label",
+    "Label": "${missingAddressWarningText}",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isC8CheckNeeded",
+    "FieldType": "TextArea",
+    "Label": "Confidential check needed?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "responsibleForService",
+    "FieldType": "TextArea",
+    "Label": "Responsible for serving respondent",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isOccupationOrderSelected",
+    "FieldType": "TextArea",
+    "Label": "Is occupation order selected?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
