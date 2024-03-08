@@ -5,10 +5,12 @@ module.exports = {
 
   fields: {
     hasRespondentAttendedQone: 'Has the respondent attended a Mediation Information and Assessment Meeting (MIAM)?',
+    hasRespondentHaveAllegations: '*Are there allegations of harm?',
     hasRespondentAttendedMiam_No: '#hasRespondentAttendedMiam_No',
     willingToAttendMiam: 'Would they be willing to attend a MIAM?',
     respondentWillingToAttendMiam_No: '#respondentWillingToAttendMiam_No',
     respondentReasonNotAttendingMiam: '#respondentReasonNotAttendingMiam',
+    respondentAOH_No: '#respAohYesOrNo_No',
     respondentReasonNotAttendingMiamText: 'TEST REASON',
     cyaText: 'Check your answers'
   },
@@ -35,6 +37,14 @@ module.exports = {
   async fillRespondentMiamNoOption() {
     await this.fillIsRespondentAttendedMiam_NoOption();
     await this.fillWillingToAttendedMiam_NoOption();
+  },
+  async fillRespondentAOHNoOption() {
+    await I.wait('10');
+    await I.waitForText(this.fields.hasRespondentHaveAllegations);
+    await I.click(this.fields.respondentAOH_No);
+    await I.click('Continue');
+    await I.waitForText(this.fields.cyaText);
+    await I.click('Save and continue');
   }
 
 };

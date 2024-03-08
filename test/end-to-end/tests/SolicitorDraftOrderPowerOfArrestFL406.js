@@ -1,6 +1,6 @@
 Feature('Solicitor Draft order Power of Arrest FL406 - TS Solicitor application');
 
-Scenario('Solicitor Draft order Power of Arrest FL406 @nightly', async I => {
+Scenario('Solicitor Draft order Power of Arrest FL406 @regression-suite', async I => {
   await I.loginAsSolicitor();
   await I.createNewCaseFL401_TS();
   await I.statementOfTruthAndSubmit();
