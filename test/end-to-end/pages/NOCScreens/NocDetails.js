@@ -10,12 +10,17 @@ module.exports = {
     respSecondName: '#NoCChallengeQ2',
     affirmation: '#affirmation',
     notifyParty: '#notifyEveryParty',
-    respondentTab: '//div[contains(text(), \'Respondent tasks A\')]',
+    respondentTab: '//div[contains(text(), \'Respondent 1 tasks\')]',
     submitEvent: '//p/a[contains(text(), \'Submit\')]',
     caseDocTab: '//div[contains(text(), \'Case documents\')]',
     confEle: '#resSolConfidentialityDisclaimerSubmit_confidentialityChecksChecked-confidentialityChecksChecked',
     decEle: '#respondentAgreeStatement-agree',
-    respondentMiam: '//a[contains(.,"MIAM")]'
+    respondentMiam: '//a[contains(.,"MIAM")]',
+    respondentAOH: '//a[contains(.,"Allegations of harm")]',
+    hasRespondentHaveAllegations: '*Are there allegations of harm?',
+    respondentAOH_No: '#respAohYesOrNo_No',
+    cyaText: 'Check your answers'
+
   },
 
   async addNocDetails(caseId) {
@@ -45,6 +50,15 @@ module.exports = {
     await I.amOnHistoryPageWithSuccessNotification();
   },
 
+  async fillRespondentAOHNoOption() {
+    await I.wait('10');
+    await I.waitForText(this.fields.hasRespondentHaveAllegations);
+    await I.click(this.fields.respondentAOH_No);
+    await I.click('Continue');
+    await I.waitForText(this.fields.cyaText);
+    await I.click('Save and continue');
+  },
+
   async fillRespondentTasks() {
     await I.triggerEvent(nocConfig.tsEvent);
     await I.click(nocConfig.submitText);
@@ -54,6 +68,9 @@ module.exports = {
     await I.click(this.fields.respondentMiam);
     await I.fillRespondentMiamNoOption();
     await I.amOnHistoryPageWithSuccessNotification();
+    await I.click(this.fields.respondentTab);
+    await I.click(this.fields.respondentAOH);
+    await this.fillRespondentAOHNoOption();
     await I.click(this.fields.respondentTab);
     await I.click(this.fields.submitEvent);
 
