@@ -277,6 +277,9 @@ module.exports = () => {
     saveTheCaseIdAndSignout() {
       return CreateCasePage.saveTheCaseIdAndSignout();
     },
+    saveTheCaseIdAndSignoutAsSwanseaCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignoutAsSwanseaCourtAdmin();
+    },
     saveTheCaseId() {
       return CreateCasePage.saveTheCaseId();
     },
