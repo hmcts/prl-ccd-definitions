@@ -228,7 +228,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND daOrderForCaCase=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND (createSelectOrderOptions!=\"nonMolestation\" OR createSelectOrderOptions!=\"occupation\")"
   },
   {
     "LiveFrom": "01/01/2023",
@@ -240,7 +240,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" OR daOrderForCaCase=\"Yes\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" OR (createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\")"
   },
   {
     "LiveFrom": "31/03/2022",
