@@ -16,6 +16,10 @@ module.exports = {
     email: process.env.COURTADMIN_SWANSEA_TESTUSER,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
+  caseManagerUser: {
+    email: process.env.CASEMANAGER_TESTUSER,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   judgeUserOne: {
     email: process.env.JUDGE_TESTUSER_ONE,
     password: process.env.JUDGE_TESTPASSWORD
@@ -36,5 +40,6 @@ module.exports = {
   baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
   TestOutputDir: process.env.E2E_OUTPUT_DIR || './functional-output',
   TestForAccessibility: process.env.TESTS_FOR_ACCESSIBILITY || false,
+  runningEnv: process.env.ENVIRONMENT,
   TestRetryScenarios: 3
 };
