@@ -9,8 +9,7 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
-    "RetainHiddenValue": "Y",
-    "Publish" : "True"
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -227,7 +226,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND (createSelectOrderOptions!=\"powerOfArrest\" OR createSelectOrderOptions!=\"nonMolestation\" OR createSelectOrderOptions!=\"occupation\" OR createSelectOrderOptions!=\"blank\")"
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND daOrderForCaCase=\"No\""
   },
   {
     "LiveFrom": "01/01/2023",
@@ -239,7 +238,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" OR (createSelectOrderOptions=\"powerOfArrest\" OR createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"blank\")"
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" OR daOrderForCaCase=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
