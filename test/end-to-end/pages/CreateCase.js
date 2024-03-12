@@ -265,12 +265,27 @@ module.exports = {
     // await I.wait('10');
     try {
       await I.retry(retryCount).seeElement('#authorizeCommand');
-      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     } catch {
-      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+      await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
+      await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     }
+    await I.wait('5');
+    await I.retry(retryCount).click(this.fields.submitOther);
+    await I.wait('10');
+    return caseId;
+  },
+
+  async saveTheCaseIdAndSignoutAsSwanseaCourtAdmin() {
+    // I.wait('20');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    await I.retry(retryCount).click(this.fields.signOut);
+    // await I.wait('10');
+    await I.retry(retryCount).seeElement('#authorizeCommand');
+    await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+    await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
     await I.wait('5');
     await I.retry(retryCount).click(this.fields.submitOther);
     await I.wait('10');
