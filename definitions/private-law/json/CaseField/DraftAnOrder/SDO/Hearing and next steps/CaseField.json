@@ -544,6 +544,7 @@
     "ID": "sdoAllegationsDeadlineDate",
     "FieldType": "Date",
     "Label": "List of allegations deadline",
+    "HintText": "When the party must provide the list of allegation by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -553,6 +554,7 @@
     "ID": "sdoWrittenResponseDeadlineDate",
     "FieldType": "Date",
     "Label": "List of Written response deadline",
+    "HintText": "When the parties must provide their statements by",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -570,7 +572,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingReportsAlsoSentTo",
-    "Label": "Report also sent to",
+    "Label": "Evidence and/or response to be sent to",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "SdoReportsAlsoSentToEnum",
     "SecurityClassification": "Public",
@@ -580,7 +582,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingMaximumPages",
-    "Label": "Maximum number of pages",
+    "Label": "Maximum number of pages per statement",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -589,7 +591,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoHearingHowManyWitnessEvidence",
-    "Label": "How many witnesses' evidence may each party use?",
+    "Label": "Maximum number of witness statements for each party",
     "FieldType": "Number",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -929,6 +931,90 @@
     "LiveFrom": "23/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoAllocateDecisionJudgeFullName",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoHearingCourtRequests",
+    "Label": "The court requests",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SdoCourtRequestedEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsText",
+    "Label": "Directions for the party who made the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsText",
+    "Label": "Directions for the party who needs to respond to the allegations",
+    "FieldType": "TextArea",
+    "HintText": "Edit the clauses you need",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsList",
+    "Label": "Select who has made the allegations",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsList",
+    "Label": "Select who needs to respond to the allegations",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDirectionsForFactFindingHearingDetails",
+    "Label": " ",
+    "FieldType": "HearingData",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoDirectionsForFactFindingHearingLabel2",
+    "Label": "If a fact-finding hearing is needed, include details to go in the order.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoNeedsToRespondAllegationsListText",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoWhoMadeAllegationsListText",
     "Label": " ",
     "FieldType": "Text",
     "SecurityClassification": "Public",

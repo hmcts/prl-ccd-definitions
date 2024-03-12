@@ -3,13 +3,35 @@
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "returnApplication",
-    "CaseFieldID": "rejectReasonLabel",
+    "CaseFieldID": "returningAnApplicationLabel",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y",
+    "ShowSummaryChangeOption": "N",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/return-application-return-message"
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "returnApplication",
+    "CaseFieldID": "returningAnApplicationText",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "returnApplication",
+    "CaseFieldID": "rejectReasonLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "08/11/2021",
@@ -19,7 +41,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition" : "caseTypeOfApplication=\"C100\""
   },
@@ -31,7 +53,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition" : "caseTypeOfApplication=\"FL401\""
   },
