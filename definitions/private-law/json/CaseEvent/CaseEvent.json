@@ -1301,7 +1301,8 @@
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1311,7 +1312,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1536,7 +1538,7 @@
     "Name": "Prepare for Hearing",
     "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
-    "PostConditionState": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
