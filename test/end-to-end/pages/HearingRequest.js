@@ -74,7 +74,7 @@ module.exports = {
     await I.waitForText('What are the hearing venue details?');
     await I.seeElement(this.fields.hearingLocationEle);
     await I.click('Continue');
-    await I.waitForText('Does this hearing need to be in Welsh?');
+    await I.waitForText('Does this hearing need to be in Welsh?'); 
     await I.click('Continue');
     await I.waitForText('Do you want a specific judge?');
     await I.click(this.fields.noSpecificJudge);
