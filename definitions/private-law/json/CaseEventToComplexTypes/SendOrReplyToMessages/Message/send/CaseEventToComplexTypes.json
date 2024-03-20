@@ -29,6 +29,19 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "externalMessageWhoToSendTo",
+    "EventElementLabel": "Select who to send the message to",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
     "ListElementCode": "judicialOrMagistrateTierList",
     "EventElementLabel": "Select a judicial tier or enter a judge's name manually",
     "EventHintText": "Select Judicial tier",
@@ -72,7 +85,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\" OR sendMessageObject.externalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
