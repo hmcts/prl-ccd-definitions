@@ -1,5 +1,8 @@
 const testConfig = require('../config');
 
+/* eslint init-declarations: ["error", "never"]*/
+let caseId;
+
 Feature('Create, update & Cancel hearings for a case');
 Scenario('Create, update & Cancel manual hearing for a case @regression-suite', async({ I }) => {
   await I.loginAsOldCourtAdmin();

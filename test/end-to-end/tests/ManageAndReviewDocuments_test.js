@@ -1,8 +1,9 @@
 const testConfig = require('../config');
 
 /* eslint init-declarations: ["error", "never"]*/
-let secondCaseIdcaseId;
 let secondCaseId;
+let caseId;
+
 
 Feature('Court Admin - Manage and review documents');
 Scenario('As a court admin I want to manage and review restricted docs @regression-suite', async({ I }) => {

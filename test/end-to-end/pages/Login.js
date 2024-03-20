@@ -135,7 +135,7 @@ module.exports = {
     await I.fillField(this.fields.password, config.respondentSolicitor.password);
     await I.click(this.fields.submit);
   },
-  
+
   async loginAsOldCourtAdmin() {
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
     await I.runAccessibilityTest();
@@ -143,5 +143,5 @@ module.exports = {
     await I.fillField(this.fields.email, config.oldCourtAdminUser.email);
     await I.fillField(this.fields.password, config.oldCourtAdminUser.password);
     await I.click(this.fields.submit);
-  },
+  }
 };
