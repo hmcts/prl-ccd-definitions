@@ -1,7 +1,7 @@
 const testConfig = require('../config');
 
 Feature('Create, update & Cancel hearings for a case');
-Scenario('Create, update & Cancel manual hearing for a case @nightly', async({ I }) => {
+Scenario('Create, update & Cancel manual hearing for a case @regression-suite', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
   await I.createC100CaseByCourtAdmin();
   await I.requestANewHearing();

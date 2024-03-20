@@ -4,7 +4,7 @@ const testConfig = require('../config');
 let caseId;
 
 Feature('Court Admin Create Dummy case - Create Order & send message journeys');
-Scenario('Create Order C21 @nightly', async({ I }) => {
+Scenario('Create Order C21 @regression-suite', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.createC100CaseByCourtAdmin();
   await I.manageOrderCreateOrderC21();
@@ -13,7 +13,7 @@ Scenario('Create Order C21 @nightly', async({ I }) => {
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('As a court admin Create Order C43 @nightly', async({ I }) => {
+Scenario('As a court admin Create Order C43 @regression-suite', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.createC100CaseByCourtAdmin();
   caseId = await I.saveTheCaseId();
@@ -22,13 +22,13 @@ Scenario('As a court admin Create Order C43 @nightly', async({ I }) => {
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('As a Judge edit & draft C43 order @nightly', async({ I }) => {
+Scenario('As a Judge edit & draft C43 order @regression-suite', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.editAnDraftOrderCreatedByAdmin();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
+Scenario('As a court admin edit & serve an order @regression-suite', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.adminServeAnOrder();
