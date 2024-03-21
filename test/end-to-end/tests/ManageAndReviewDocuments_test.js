@@ -37,7 +37,7 @@ Scenario('As a Solicitor I should not be able to upload court documents @regress
   await I.verifySolicitorDocumentSubmission();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('Verify WA task generated for Court admin to review the documents @regression-suite', async({ I }) => {
+Scenario('Verify WA task generated for Court admin to review the documents @flaky-test', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
