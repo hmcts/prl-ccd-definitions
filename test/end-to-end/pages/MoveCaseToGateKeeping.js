@@ -9,7 +9,7 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
-    assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Send to Gatekeeper")]/../../dl/div[4]//dd/a',
+    assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Send to Gatekeeper")]/../../dl/div[4]//dd/a[3]',
     gateKeeperTask: '//a[contains(.,"Send To Gatekeeper")]',
     selectGateKeeperOption: '#isSpecificGateKeeperNeeded_No'
   },

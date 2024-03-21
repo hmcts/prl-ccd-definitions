@@ -28,6 +28,10 @@ module.exports = {
     email: process.env.LEGALADVISER_TESTUSER_ONE,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
+  oldCourtAdminUser: {
+    email: process.env.OLDCOURTADMIN_TESTUSER_ONE,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',

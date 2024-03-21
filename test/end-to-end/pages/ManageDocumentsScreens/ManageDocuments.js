@@ -1,6 +1,7 @@
 'use strict';
 const I = actor();
 const medWait = 10;
+const longWait = 30;
 
 const manageDocConfig = require('./manageDocConfig');
 
@@ -52,7 +53,7 @@ module.exports = {
 
     // WA Task elements
     tasksTab: '//div[contains(text(), "Tasks")]',
-    assignToMe: '//exui-case-task[2]/dl/div[4]/dd/a[@id="action_claim"]',
+    assignToMe: '//exui-case-task/dl/div[4]/dd/a[@id="action_claim"]',
     reviewTaskName: '//a[contains(.,"Review Documents")]'
   },
 
@@ -239,7 +240,7 @@ module.exports = {
   async verifyReviewTasks() {
     await I.click(this.fields.tasksTab);
 
-    await I.wait(medWait);
+    await I.wait(longWait);
     await I.reloadPage(this.fields.assignToMe);
     await I.waitForElement(this.fields.assignToMe);
     await I.click(this.fields.assignToMe);

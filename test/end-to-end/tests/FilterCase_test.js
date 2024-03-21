@@ -11,7 +11,7 @@ Scenario('Filter case by state and application type', async({ I }) => {
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('Filter case with invalid ccd number @regression-suite', async({ I }) => {
-  await I.loginAsCourtAdmin();
+  await I.loginAsSwanseaCourtAdmin();
   await I.navigateToCaseList();
   await I.searchForInvalidCase();
   await I.verifyInvalidSearchResults();
