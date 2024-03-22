@@ -85,6 +85,9 @@ module.exports = () => {
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
     },
+    loginAsOldCourtAdmin() {
+      return LoginPage.loginAsOldCourtAdmin();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -268,17 +271,20 @@ module.exports = () => {
     createSolicitorDummyCase() {
       return CreateCasePage.createNewSolicitorDummyC100Case();
     },
+    createDASolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyFL401Case();
+    },
     payAndSubmitDummySolicitorCase() {
       return submitAndPay.submitAndPayForDummySolicitorApplication();
     },
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
-    saveTheCaseIdAndSignout() {
-      return CreateCasePage.saveTheCaseIdAndSignout();
+    saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
     },
-    saveTheCaseIdAndSignoutAsSwanseaCourtAdmin() {
-      return CreateCasePage.saveTheCaseIdAndSignoutAsSwanseaCourtAdmin();
+    saveTheCaseIdAndSignInAsStokeCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsStokeCourtAdmin();
     },
     saveTheCaseId() {
       return CreateCasePage.saveTheCaseId();
