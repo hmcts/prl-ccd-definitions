@@ -31,15 +31,6 @@
   {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "sendMessageAdditionalDocumentsList",
-    "Label": "Select Document",
-    "FieldType": "DynamicList",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "03/02/2022",
-    "CaseTypeID": "PRLAPPS",
     "ID": "openMessages",
     "Label": "Message",
     "FieldType": "Collection",
@@ -54,6 +45,16 @@
     "Label": "Message",
     "FieldType": "Collection",
     "FieldTypeParameter": "Message",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendMessageExternalAttachDocumentsList",
+    "Label": "Document",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SendAndReplyDynamicDoc",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -75,5 +76,14 @@
     "FieldType": "Message",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendAndReplyDynamicDoc",
+    "Label": "Select a document ",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "Y"
   }
 ]
