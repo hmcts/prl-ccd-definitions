@@ -1,5 +1,11 @@
 # prl-ccd-definitions
 
+## Notes - combined branch for SOA, Manage docs, Orders combined
+
+Round 1 -  Contact Pref + SOA
+
+
+
 Project creating Family Private Law (PRL) CCD config files...
 
 Updated with Release 4.0 and Solicitor upload journey
