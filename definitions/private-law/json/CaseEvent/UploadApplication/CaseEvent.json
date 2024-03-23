@@ -15,6 +15,30 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/upload-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/upload-additional-application/submitted",
     "EndButtonLabel": "Save and continue",
-    "Publish" : "False"
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "awpPaymentSuccessCallback",
+    "Name": "Add appl payment confirmation",
+    "DisplayOrder": 43,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "awpPaymentFailureCallback",
+    "Name": "Add appl payment failure",
+    "DisplayOrder": 44,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
   }
 ]
