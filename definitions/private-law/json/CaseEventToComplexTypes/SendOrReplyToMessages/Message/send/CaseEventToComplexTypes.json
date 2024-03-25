@@ -84,7 +84,7 @@
     "EventElementLabel": "Enter Cafcass or Cafcass Cymru email address",
     "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.externalMessageWhoToSendTo=\"cafcassOrCafcassCymru\""
+    "FieldShowCondition": "sendMessageObject.externalMessageWhoToSendTo CONTAINS \"cafcassOrCafcassCymru\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -97,7 +97,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\" OR sendMessageObject.externalMessageWhoToSendTo=\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\" OR sendMessageObject.externalMessageWhoToSendTo CONTAINS\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -211,9 +211,9 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "SendAndReplyDynamicDoc",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "sendMessageExternalAttachDocumentsList",
+    "CaseFieldID": "externalMessageAttachDocsList",
     "ListElementCode": "submittedDocsRefList",
-    "EventElementLabel": "Select the document",
+    "EventElementLabel": "Select a document",
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
   }

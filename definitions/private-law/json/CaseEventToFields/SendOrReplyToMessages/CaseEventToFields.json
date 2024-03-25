@@ -66,6 +66,18 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "externalMessagesHint",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
     "DisplayContext": "COMPLEX",
     "FieldShowCondition": "chooseSendOrReply=\"SEND\"",
@@ -78,12 +90,12 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "sendMessageExternalAttachDocumentsList",
+    "CaseFieldID": "externalMessageAttachDocsList",
     "DisplayContext": "COMPLEX",
-    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -94,8 +106,9 @@
     "DisplayContext": "MANDATORY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes"
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"SEND\""
   },
   {
     "LiveFrom": "31/03/2023",
