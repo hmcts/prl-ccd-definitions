@@ -19,6 +19,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "externalMessageAttachDocs",
+    "ElementLabel": "Attached documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
     "ListElementCode": "senderName",
@@ -40,6 +50,15 @@
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
     "ListElementCode": "senderRole",
+    "FieldType": "Text",
+    "ElementLabel": "Sender role",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalOrExternalSentTo",
     "FieldType": "Text",
     "ElementLabel": "Sender role",
     "SecurityClassification": "Public",
@@ -165,6 +184,16 @@
     "FieldShowCondition": "internalMessageWhoToSendTo=\"DO_NOT_SHOW\""
   },
   {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "externalMessageWhoToSendTo",
+    "ElementLabel": "Who to send to",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "externalMessageWhoToSendTo=\"DO_NOT_SHOW\""
+  },
+  {
     "LiveFrom": "10/11/2021",
     "ID": "MessageHistory",
     "ListElementCode": "selectedCtscEmail",
@@ -257,6 +286,15 @@
     "ListElementCode": "senderRole",
     "FieldType": "Text",
     "ElementLabel": "From",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "internalOrExternalSentTo",
+    "FieldType": "Text",
+    "ElementLabel": "To",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -432,6 +470,15 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
+    "ListElementCode": "externalMessageWhoToSendTo",
+    "ElementLabel": "To",
+    "FieldType": "DynamicMultiSelectList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
     "ListElementCode": "internalMessageReplyTo",
     "ElementLabel": "To",
     "FieldType": "FixedRadioList",
@@ -463,6 +510,15 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "recipientEmailAddresses",
+    "FieldType": "Text",
+    "ElementLabel": "Recipient email addresses",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "cafcassOrCafcasscCymruEmail",
     "FieldType": "Text",
     "ElementLabel": "Recipient email addresses",
     "SecurityClassification": "Public",
@@ -610,6 +666,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "externalMessageAttachDocs",
+    "ElementLabel": "Attached documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "otherApplicationLink",
@@ -628,5 +694,14 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "hearingsLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/10/2023",
+    "ID": "SendAndReplyDynamicDoc",
+    "ListElementCode": "submittedDocsRefList",
+    "ElementLabel": "Document",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]

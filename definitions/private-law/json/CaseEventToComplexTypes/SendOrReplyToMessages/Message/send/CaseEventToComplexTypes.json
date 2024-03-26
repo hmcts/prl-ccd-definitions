@@ -29,6 +29,19 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "externalMessageWhoToSendTo",
+    "EventElementLabel": "Select who to send the message to",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
     "ListElementCode": "judicialOrMagistrateTierList",
     "EventElementLabel": "Select a judicial tier or enter a judge's name manually",
     "EventHintText": "Select Judicial tier",
@@ -67,12 +80,24 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "cafcassOrCafcasscCymruEmail",
+    "EventElementLabel": "Enter Cafcass or Cafcass Cymru email address",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.externalMessageWhoToSendTo CONTAINS \"cafcassOrCafcassCymru\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
     "ListElementCode": "recipientEmailAddresses",
     "EventElementLabel": "Enter email address",
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\" OR sendMessageObject.externalMessageWhoToSendTo CONTAINS\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -82,7 +107,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "internalMessageUrgent",
     "EventElementLabel": "Is this urgent?",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"INTERNAL\""
   },
@@ -94,7 +119,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "messageAbout",
     "EventElementLabel": "What is this message about?",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -105,7 +130,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "messageSubject",
     "EventElementLabel": "Enter the message subject",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout!=\"\""
   },
@@ -117,7 +142,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "applicationsList",
     "EventElementLabel": "Select the application",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"APPLICATION\""
   },
@@ -129,7 +154,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "futureHearingsList",
     "EventElementLabel": "Select hearing",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"HEARING\""
   },
@@ -141,7 +166,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "submittedDocumentsList",
     "EventElementLabel": "Select file",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "13",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"REVIEW_SUBMITTED_DOCUMENTS\""
   },
@@ -153,7 +178,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "selectedDocument",
     "EventElementLabel": "Document",
-    "FieldDisplayOrder": "13",
+    "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "selectedDocument=\"DO_NOT_SHOW\""
   },
@@ -165,7 +190,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "sendReplyJudgeName.idamId",
     "EventElementLabel": "Enter name of Judge",
-    "FieldDisplayOrder": "14",
+    "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
@@ -177,8 +202,19 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "sendReplyJudgeName.personalCode",
     "EventElementLabel": "Enter name of Judge",
-    "FieldDisplayOrder": "15",
+    "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
+  },
+  {
+    "LiveFrom": "01/10/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SendAndReplyDynamicDoc",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "externalMessageAttachDocsList",
+    "ListElementCode": "submittedDocsRefList",
+    "EventElementLabel": "Select a document",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
   }
 ]
