@@ -9,7 +9,7 @@
     "PageID": 16,
     "PageDisplayOrder": 16,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"standardDirectionsOrder\"",
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"standardDirectionsOrder\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/pre-populate-standard-direction-order-other-fields"
   },
   {
