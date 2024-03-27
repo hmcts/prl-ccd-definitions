@@ -6,7 +6,8 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-externaluser-viewonly"
         ],
         "CRUD": "CRU"
       }
@@ -32,7 +33,22 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "restrictedCaseAccessSysUpdate2",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
       }
