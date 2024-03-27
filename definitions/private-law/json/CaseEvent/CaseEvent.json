@@ -1246,45 +1246,6 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "legalRepresentation",
-    "Name": "Legal Representation",
-    "Description": "Citizen confirming legal representation",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "consentToTheApplication",
-    "Name": "Consent To The Application",
-    "Description": "Consent provided by Respondent",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "citizenSafetyConcerns",
-    "Name": "Safety Concerns",
-    "Description": "Safety Concerns provided by Respondent",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
     "ID": "respondentMiam",
     "Name": "MIAM Citizen Respondent",
     "Description": "MIAM information submitted by Citizen Respondent",
@@ -1433,6 +1394,18 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "Publish": "Y"
+  }
+,
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenSaveC100DraftInternal",
+    "Name": "Citizen saving C100 draft",
+    "Description": "Citizen saving draft internally while drafting",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2021",
