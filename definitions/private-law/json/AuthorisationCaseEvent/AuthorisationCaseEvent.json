@@ -73,22 +73,43 @@
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "citizen-case-submit",
-    "UserRole": "citizen",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "citizen-case-submit",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "citizen-case-submit",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CaseEventID": "citizenSaveC100DraftInternal",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "01/01/2023",
