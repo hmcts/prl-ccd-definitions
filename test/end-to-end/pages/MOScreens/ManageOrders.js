@@ -2,6 +2,8 @@
 'use strict';
 const I = actor();
 const retryCount = 3;
+const longWait = 30;
+const medWait = 10;
 const date = new Date();
 const moConfig = require('./manageOrderConfig');
 
@@ -78,7 +80,10 @@ module.exports = {
     judgeNameField: '#nameOfJudgeToReviewOrder',
     judgeAutoCompEle: 'span.mat-option-text',
     guardianNameEle: '#appointedGuardianName_0_guardianFullName',
-    selectTheOrderToServe: '[name="serveOrderDynamicList"]'
+    selectTheOrderToServe: '[name="serveOrderDynamicList"]',
+    returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
+    assignToMe: '//exui-case-task/p/strong[contains(text(), "Review and Approve Legal rep Order")]/../../dl/div/dd/a',
+    issueTaskName: '//a[contains(.,"Review and Approve Legal rep Order")]'
   },
 
   async selectOrder(modeOfOrder) {
@@ -135,8 +140,26 @@ module.exports = {
     await I.waitForElement(this.fields.successElement);
   },
 
+  async editOrderTask() {
+    await I.wait(longWait);
+    await I.click(this.fields.returnToTaskTab);
+
+    await I.wait(medWait);
+    await I.reloadPage(this.fields.assignToMe);
+    await I.waitForElement(this.fields.assignToMe);
+    await I.click(this.fields.assignToMe);
+
+    await I.waitForElement(this.fields.issueTaskName, medWait);
+    await I.reloadPage(this.fields.issueTaskName);
+    await I.waitForElement(this.fields.issueTaskName);
+    await I.click(this.fields.issueTaskName);
+
+    await I.waitForText(moConfig.selectEditOrderText);
+  },
+
   async selectEditDraftOrderCourtAdmin(modeOfOrder) {
     await I.triggerEvent(modeOfOrder);
+    // await this.editOrderTask();
     await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
@@ -161,6 +184,7 @@ module.exports = {
 
   async selectEditDraftOrderSolicitor(modeOfOrder) {
     await I.triggerEvent(modeOfOrder);
+    await this.editOrderTask();
     await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
@@ -486,8 +510,9 @@ module.exports = {
     await I.click(this.fields.judgeCheckOrderEle);
     await I.waitForText(moConfig.selectJudiciaryQuestion);
     await I.click(this.fields.selectJudgeForOrderReview);
-    await I.fillField(this.fields.judgeNameField, 'emma');
+    await I.fillField(this.fields.judgeNameField, 'yolanda');
     await I.waitForElement(this.fields.judgeAutoCompEle);
+    await I.wait(medWait);
     await I.click(this.fields.judgeAutoCompEle);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
