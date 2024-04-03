@@ -342,7 +342,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
   },
   {
     "LiveFrom": "11/08/2021",
@@ -1972,6 +1972,22 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+  },
+  {
+    "LiveFrom": "03/04/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamPolicyUpgrade",
+    "Name": "MIAM",
+    "Description": "MIAM",
+    "DisplayOrder": 8,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
   }
 ]
 
