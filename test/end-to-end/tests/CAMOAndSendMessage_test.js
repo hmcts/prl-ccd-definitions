@@ -4,32 +4,32 @@ const testConfig = require('../config');
 let caseId;
 
 Feature('Court Admin Create Dummy case - Create Order & send message journeys');
-Scenario('Create Order C21 @nightly', async({ I }) => {
-  await I.loginAsCourtAdmin();
+Scenario('Create Order C21 @regression-suite', async({ I }) => {
+  await I.loginAsOldCourtAdmin();
   await I.createC100CaseByCourtAdmin();
+  caseId = await I.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
+  await I.searchForCasesWithId(caseId);
   await I.manageOrderCreateOrderC21();
   await I.fillHearingDetails();
   await I.submitManageOrder();
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('As a court admin Create Order C43 @nightly', async({ I }) => {
-  await I.loginAsCourtAdmin();
-  await I.createC100CaseByCourtAdmin();
-  caseId = await I.saveTheCaseId();
+Scenario('As a court admin Create Order C43 @regression-suite', async({ I }) => {
+  await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.manageOrderCreateOrderC43();
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('As a Judge edit & draft C43 order @nightly', async({ I }) => {
+Scenario('As a Judge edit & draft C43 order @regression-suite', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.editAnDraftOrderCreatedByAdmin();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin edit & serve an order @nightly', async({ I }) => {
-  await I.loginAsCourtAdmin();
+Scenario('As a court admin edit & serve an order @regression-suite', async({ I }) => {
+  await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.adminServeAnOrder();
 }).retry(testConfig.TestRetryScenarios);
