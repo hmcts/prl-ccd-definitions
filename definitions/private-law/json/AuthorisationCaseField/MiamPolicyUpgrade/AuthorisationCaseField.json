@@ -279,7 +279,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamExemptionLabel2",
+    "CaseFieldID": "miamExemptionLabel9",
     "AccessControl": [
       {
         "UserRoles": [
@@ -300,6 +300,52 @@
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "miamPolicyUpgradeChildProtectionConcernList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-systemupdate",
+          "courtnav"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamExemptionLabel2",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamPolicyUpgradeUrgencyReasonChecklist",
     "AccessControl": [
       {
         "UserRoles": [
