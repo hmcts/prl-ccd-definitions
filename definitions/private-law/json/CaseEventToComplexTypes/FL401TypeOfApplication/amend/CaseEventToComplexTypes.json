@@ -1,0 +1,48 @@
+[
+  {
+    "LiveFrom": "26/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "TypeOfApplicationOrders",
+    "CaseEventID": "fl401AmendTypeOfApplication",
+    "CaseFieldID": "typeOfApplicationOrders",
+    "ListElementCode": "orderType",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "LinkToCA",
+    "CaseEventID": "fl401AmendTypeOfApplication",
+    "CaseFieldID": "typeOfApplicationLinkToCA",
+    "ListElementCode": "linkToCaApplication",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "LinkToCA",
+    "CaseEventID": "fl401AmendTypeOfApplication",
+    "CaseFieldID": "typeOfApplicationLinkToCA",
+    "ListElementCode": "linkToCaYes",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCaApplication=\"Yes\""
+  },
+  {
+    "LiveFrom": "26/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "LinkToCA",
+    "CaseEventID": "fl401AmendTypeOfApplication",
+    "CaseFieldID": "typeOfApplicationLinkToCA",
+    "ListElementCode": "caApplicationNumber",
+    "EventElementLabel": " ",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "typeOfApplicationLinkToCA.linkToCaApplication=\"Yes\""
+  }
+]

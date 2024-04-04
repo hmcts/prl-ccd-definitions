@@ -1,0 +1,83 @@
+[
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "allocatedJudeLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "allocatedJudgeInfo",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "isSpecificJudgeOrLegalAdviserNeeded",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "isJudgeOrLegalAdviser",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "judgeNameAndEmail",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"judge\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "legalAdviserList",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allocatedJudge",
+    "CaseFieldID": "tierOfJudiciary",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"No\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Yes"
+  }
+]

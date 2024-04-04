@@ -1,0 +1,35 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "c100ResSolMiamE",
+    "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
+    "ListElementCode": "attendedMiam",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "c100ResSolMiamE",
+    "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
+    "ListElementCode": "willingToAttendMiam",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.attendedMiam=\"No\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "SolicitorMiam",
+    "CaseEventID": "c100ResSolMiamE",
+    "CaseFieldID": "respondentSolicitorHaveYouAttendedMiam",
+    "ListElementCode": "reasonNotAttendingMiam",
+    "FieldShowCondition": "respondentSolicitorHaveYouAttendedMiam.attendedMiam=\"No\" AND respondentSolicitorHaveYouAttendedMiam.willingToAttendMiam=\"No\"",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "MANDATORY"
+  }
+]
+

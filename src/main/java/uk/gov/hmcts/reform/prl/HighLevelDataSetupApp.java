@@ -22,14 +22,17 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("caseworker-privatelaw-solicitor", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-superuser", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-systemupdate", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-readonly", PUBLIC),
             new CcdRoleConfig("payments", PUBLIC),
             new CcdRoleConfig("pui-case-manager", PUBLIC),
             new CcdRoleConfig("courtnav", PUBLIC),
             new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
             new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
+            new CcdRoleConfig("caseworker-privatelaw-externaluser-viewonly", PUBLIC),
             new CcdRoleConfig("GS_profile", PUBLIC),
             new CcdRoleConfig("ctsc-team-leader", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-cafcass", PUBLIC),
+            new CcdRoleConfig("prd-admin", PUBLIC)
     };
 
     private final CcdEnvironment environment;

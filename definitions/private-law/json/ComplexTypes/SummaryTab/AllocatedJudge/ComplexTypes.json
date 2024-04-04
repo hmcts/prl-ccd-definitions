@@ -2,11 +2,19 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "AllocatedJudge",
-    "ListElementCode": "judgeTitle",
+    "ListElementCode": "judgePersonalCode",
     "FieldType": "Text",
-    "ElementLabel": "Judge or magistrate's title",
+    "ElementLabel": "judgePersonalCode",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "FieldShowCondition": "judgePersonalCode=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "AllocatedJudge",
+    "ListElementCode": "tierOfJudiciaryType",
+    "FieldType": "Text",
+    "ElementLabel": "Tier of judiciary",
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -34,5 +42,24 @@
     "ElementLabel": "Court name",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "AllocatedJudge",
+    "ListElementCode": "isSpecificJudgeOrLegalAdviserNeeded",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "is SpecificJudge Or LegalAdviserNeeded",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "AllocatedJudge",
+    "ListElementCode": "isJudgeOrLegalAdviser",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "AllocatedJudgeTypeEnum",
+    "ElementLabel": "is Judge Or LegalAdviser",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "isJudgeOrLegalAdviser=\"DO_NOT_SHOW\""
   }
 ]

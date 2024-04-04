@@ -120,7 +120,7 @@
     "LiveFrom": "05/11/2021",
     "ID": "Respondent",
     "ListElementCode": "email",
-    "FieldType": "Email",
+    "FieldType": "Text",
     "ElementLabel": "*Email address",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -148,7 +148,6 @@
     "ID": "Respondent",
     "ListElementCode": "phoneNumber",
     "FieldType": "Text",
-    "RegularExpression": "^[0-9 +().-]{9,}$",
     "ElementLabel": "*Contact number",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -214,6 +213,33 @@
     "ListElementCode": "solicitorOrg",
     "FieldType": "Organisation",
     "ElementLabel": "*Organisation Search",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Respondent",
+    "ListElementCode": "isAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the address confidential?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Respondent",
+    "ListElementCode": "isEmailAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the email address confidential?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "ID": "Respondent",
+    "ListElementCode": "isPhoneNumberConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you need to keep the contact number confidential?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

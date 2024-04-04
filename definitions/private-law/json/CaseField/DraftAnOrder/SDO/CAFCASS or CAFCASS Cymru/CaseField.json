@@ -38,6 +38,15 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSafeGuardingNewPartnerCymruLabel",
+    "FieldType": "Label",
+    "Label": "**Party to provide details of new partner to Cafcass Cymru**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoSectionReportOrChildImpactLabel",
     "FieldType": "Label",
     "Label": "**Section 7 report/ Child impact analysis**",
@@ -56,6 +65,15 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCafcassNextStepEditContent",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoCafcassCymruFileAndServe",
     "FieldType": "Date",
     "Label": "Cafcass Cymru shall file and serve by 4pm on",
@@ -65,9 +83,82 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCafcassCymruNextStepEditContent",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoNewPartnersToCafcass",
     "FieldType": "Date",
     "Label": "Cafcass are directed to undertake safeguarding checks by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNewPartnersToCafcassCymru",
+    "FieldType": "Date",
+    "Label": "Cafcass are directed to undertake safeguarding checks by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7EditContent",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7ImpactAnalysisOptions",
+    "FieldType": "MultiSelectList",
+    "Label": " ",
+    "FieldTypeParameter": "SdoSection7ImpactAnalysisEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7FactsLabel",
+    "FieldType": "Label",
+    "Label": "For interim orders before determination of facts",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7FactsEditContent",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7daOccuredLabel",
+    "FieldType": "Label",
+    "Label": "In all cases where domestic abuse has been found to have occurred",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7daOccuredEditContent",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -86,7 +177,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoNameOfCouncil",
     "FieldType": "Text",
-    "Label": "Name of council",
+    "Label": "Name of local authority",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -95,7 +186,94 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoCafcassCymruReportSentByDate",
     "FieldType": "Date",
-    "Label": "Sent by date",
+    "Label": "To be filed and served by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPartyToProvideDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPartyToProvideDetailsCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoPartyToProvideDetailsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoPartyToProvideDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for party to provide details of new partner to Cafcass**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNewPartnersToCafcassDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNewPartnersToCafcassCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoNewPartnersToCafcassEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoNewPartnersToCafcassLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for Party to provide details of new partner to Cafcass Cymru**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7CheckDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7Check",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoSection7CheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoSection7CheckLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for Section 7 report/ Child impact analysis**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

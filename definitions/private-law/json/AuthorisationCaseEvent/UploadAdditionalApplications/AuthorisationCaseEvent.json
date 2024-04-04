@@ -3,49 +3,37 @@
     "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "[APPLICANTSOLICITOR]",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "[CREATOR]",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "citizen",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "uploadAdditionalApplications",
-    "UserRole": "caseworker-privatelaw-superuser",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "[C100APPLICANTSOLICITOR1]",
+          "[C100APPLICANTSOLICITOR2]",
+          "[C100APPLICANTSOLICITOR3]",
+          "[C100APPLICANTSOLICITOR4]",
+          "[C100APPLICANTSOLICITOR5]",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "[FL401APPLICANTSOLICITOR]",
+          "[FL401RESPONDENTSOLICITOR]",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

@@ -21,7 +21,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoTransferApplicationCourtDynamicList",
-    "Label": "Select from the list of courts",
+    "Label": "Court location",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -57,6 +57,15 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationEditContent",
+    "Label": "Edit selection",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoCrossExaminationSittingBeforeOptions",
     "Label": "Sitting before a",
     "FieldType": "FixedRadioList",
@@ -79,6 +88,7 @@
     "ID": "sdoCrossExaminationStartDateTime",
     "Label": "Start date and time",
     "FieldType": "DateTime",
+    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm)",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -122,6 +132,82 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoCrossExaminationQualifiedLegal",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoTransferCourtDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoTransferCourtDetailsCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "DioTransferCourtDirectionEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoTransferCourtDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for transfer application to another family court**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationCourtDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationCourtCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoCrossExaminationCourtCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationCourtCheckLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for Cross examination prohibition applies**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationEx741Label",
+    "FieldType": "Label",
+    "Label": "**Cross examination prohibition:EX741**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoCrossExaminationEx741",
     "FieldType": "TextArea",
     "Label": "Edit your selection",
     "SecurityClassification": "Public",

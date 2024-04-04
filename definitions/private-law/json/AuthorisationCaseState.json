@@ -13,8 +13,6 @@
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
           "caseworker-caa",
           "caseworker-approver"
         ],
@@ -25,7 +23,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -62,7 +61,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -95,7 +95,8 @@
         "UserRoles": [
           "caseworker-privatelaw-superuser",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -128,7 +129,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -136,7 +138,7 @@
   },
   {
     "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "CASE_ISSUE",
+    "CaseStateID": "CASE_ISSUED",
     "AccessControl": [
       {
         "UserRoles": [
@@ -162,7 +164,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -197,7 +200,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -205,7 +209,7 @@
   },
   {
     "CaseTypeID": "PRLAPPS",
-    "CaseStateID": "GATE_KEEPING",
+    "CaseStateID": "JUDICIAL_REVIEW",
     "AccessControl": [
       {
         "UserRoles": [
@@ -230,7 +234,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -255,6 +260,7 @@
           "caseworker-privatelaw-judge",
           "caseworker-caa",
           "caseworker-approver",
+          "caseworker-privatelaw-externaluser-viewonly",
           "ctsc-team-leader",
           "caseworker-privatelaw-cafcass"
         ],
@@ -265,7 +271,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -290,8 +297,11 @@
           "caseworker-privatelaw-judge",
           "caseworker-caa",
           "caseworker-approver",
+          "caseworker-privatelaw-externaluser-viewonly",
           "ctsc-team-leader",
-          "caseworker-privatelaw-cafcass"
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-bulkscan",
+          "caseworker-privatelaw-bulkscansystemupdate"
         ],
         "CRUD": "CRUD"
       },
@@ -300,7 +310,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -324,8 +335,10 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-caa",
+          "caseworker-approver",
           "ctsc-team-leader",
-          "caseworker-privatelaw-cafcass"
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-externaluser-viewonly"
         ],
         "CRUD": "CRUD"
       },
@@ -334,7 +347,8 @@
           "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
           "caseworker-ras-validation",
-          "GS_profile"
+          "GS_profile",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }

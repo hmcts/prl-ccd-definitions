@@ -16,6 +16,13 @@
   {
     "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseLinks",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseLinksTabTitle",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
@@ -25,6 +32,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseLinksTabTitle",
     "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseLinksTabTitle",
+    "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRUD"
   },
   {
@@ -44,6 +58,13 @@
   {
     "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "maintainCaseLinksFlag",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseLinksFlag",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
@@ -56,17 +77,32 @@
     "CRUD": "CRUD"
   },
   {
-    "LiveFrom": "10/02/2023",
+    "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "LinkedCasesComponentLauncher",
-    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CaseFieldID": "caseLinksFlag",
+    "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRUD"
   },
   {
     "LiveFrom": "10/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "LinkedCasesComponentLauncher",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

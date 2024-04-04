@@ -5,7 +5,7 @@
     "ListElementCode": "otherPeopleKnowYourContactDetails",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "YesNoDontKnow",
-    "ElementLabel": "*Do the other people named in this application (the applicants) \nknow any of your contact details?\n",
+    "ElementLabel": "Do the other people named in this application (the applicants) \nknow any of your contact details?\n",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -14,7 +14,7 @@
     "ID": "KeepDetailsPrivate",
     "ListElementCode": "confidentialityHeading",
     "FieldType": "Label",
-    "ElementLabel": "* ### Do you want to keep your contact details private from the other people named in the application (the applicants)? ",
+    "ElementLabel": "Do you want to keep your contact details private from the other people named in the application (the applicants)? ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -41,9 +41,19 @@
     "ID": "KeepDetailsPrivate",
     "ListElementCode": "confidentiality",
     "FieldType": "YesOrNo",
-    "ElementLabel": " ",
+    "ElementLabel": "Do you want to keep your contact details private from the other people named in the application (the applicants)?  \nThe answers you give in your response will be shared with the other people named in this application (the applicants). This will include your contact details.  \nFor example, if you believe the other people in the case pose a risk to you or the children, you can ask the court to keep your contact details private. ",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "KeepDetailsPrivate",
+    "ListElementCode": "confidentialityListLabel",
+    "FieldType": "Label",
+    "ElementLabel": "### Specify which contact details you want to keep private.  \nMake sure you only select details the applicants do not already know.",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "confidentiality=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",

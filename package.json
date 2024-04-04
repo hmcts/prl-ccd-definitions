@@ -9,41 +9,10 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "config": {
-    "local": {
-      "cosUrl": "http://localhost:4044",
-      "ccdUrl": "http://localhost:4452",
-      "aacUrl": "http://localhost:4454"
-    },
-    "demo": {
-      "cosUrl": "http://prl-cos-demo.service.core-compute-demo.internal",
-      "ccdUrl": "http://ccd-data-store-api-demo.service.core-compute-demo.internal",
-      "aacUrl": "http://aac-manage-case-assignment-demo.service.core-compute-demo.internal"
-    },
-    "aat": {
-      "cosUrl": "http://prl-cos-aat.service.core-compute-aat.internal",
-      "ccdUrl": "http://ccd-data-store-api-aat.service.core-compute-aat.internal",
-      "aacUrl": "http://aac-manage-case-assignment-aat.service.core-compute-aat.internal"
-    },
-    "perftest": {
-      "cosUrl": "http://prl-cos-perftest.service.core-compute-perftest.internal",
-      "ccdUrl": "http://ccd-data-store-api-perftest.service.core-compute-perftest.internal",
-      "aacUrl": "http://aac-manage-case-assignment-perftest.service.core-compute-perftest.internal"
-    },
-    "ithc": {
-      "cosUrl": "http://prl-cos-ithc.service.core-compute-ithc.internal",
-      "ccdUrl": "http://ccd-data-store-api-ithc.service.core-compute-ithc.internal",
-      "aacUrl": "http://aac-manage-case-assignment-ithc.service.core-compute-ithc.internal"
-    },
-    "prod": {
-      "cosUrl": "http://prl-cos-prod.service.core-compute-prod.internal",
-      "ccdUrl": "http://ccd-data-store-api-prod.service.core-compute-prod.internal",
-      "aacUrl": "http://aac-manage-case-assignment-prod.service.core-compute-prod.internal"
-    }
-  },
   "scripts": {
-    "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && yarn --cwd ccd-definition-processor install",
-    "setup": "git submodule update --init --recursive && yarn --cwd ccd-definition-processor install",
+    "envs": "node json-env.js",
+    "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && cd ccd-definition-processor && yarn install",
+    "setup": "git submodule update --init --recursive && cd ccd-definition-processor && yarn install",
     "lint": "eslint --fix .",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "test:coverage": "echo test:coverage",
@@ -58,15 +27,16 @@
     "start": "node index.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
-    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
-    "generate-excel-local": "TARGET_ENV=local CCD_DEF_COS_URL=$npm_package_config_local_cosUrl CCD_DEF_CCD_URL=$npm_package_config_local_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_local_aacUrl yarn run generate-excel -e *-prod.json",
-    "generate-excel-demo": "TARGET_ENV=demo CCD_DEF_COS_URL=$npm_package_config_demo_cosUrl CCD_DEF_CCD_URL=$npm_package_config_demo_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_demo_aacUrl yarn run generate-excel -e *-prod.json",
-    "generate-excel-aat": "TARGET_ENV=aat CCD_DEF_COS_URL=$npm_package_config_aat_cosUrl CCD_DEF_CCD_URL=$npm_package_config_aat_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_aat_aacUrl yarn run generate-excel -e *-prod.json",
-    "generate-excel-perftest": "TARGET_ENV=perftest CCD_DEF_COS_URL=$npm_package_config_perftest_cosUrl CCD_DEF_CCD_URL=$npm_package_config_perftest_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_perftest_aacUrl yarn run generate-excel -e *-prod.json",
-    "generate-excel-ithc": "TARGET_ENV=ithc CCD_DEF_COS_URL=$npm_package_config_ithc_cosUrl CCD_DEF_CCD_URL=$npm_package_config_ithc_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_ithc_aacUrl yarn run generate-excel -e *-prod.json",
-    "generate-excel-prod": "TARGET_ENV=prod CCD_DEF_COS_URL=$npm_package_config_prod_cosUrl CCD_DEF_CCD_URL=$npm_package_config_prod_ccdUrl CCD_DEF_AAC_URL=$npm_package_config_prod_aacUrl yarn run generate-excel -e *-nonprod.json",
-    "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
-    "generate-excel-all": "yarn generate-excel-local && yarn generate-excel-aat && yarn generate-excel-demo && yarn generate-excel-ithc && yarn generate-excel-perftest && yarn generate-excel-prod"
+    "generate-json": "cd ccd-definition-processor && yarn xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
+    "generate-excel-local": "yarn envs local generate-excel -e '*-prod.json,*-sublive.json'",
+    "generate-excel-preview": "yarn envs preview generate-excel -e '*-prod.json,*-sublive.json'",
+    "generate-excel-demo": "yarn envs demo generate-excel -e '*-prod.json,*-preview.json'",
+    "generate-excel-aat": "yarn envs aat generate-excel -e '*-prod.json,*-preview.json'",
+    "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json,*-preview.json'",
+    "generate-excel-ithc": "yarn envs ithc generate-excel -e '*-prod.json,*-preview.json'",
+    "generate-excel-prod": "yarn envs prod generate-excel -e '*-nonprod.json,*-sublive.json,*-preview.json'",
+    "generate-excel": "cd ccd-definition-processor && yarn json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
+    "generate-excel-all": "yarn generate-excel-local && yarn generate-excel-preview && yarn generate-excel-aat && yarn generate-excel-demo && yarn generate-excel-ithc && yarn generate-excel-perftest && yarn generate-excel-prod"
   },
   "pre-commit": [
     "lint"
@@ -111,7 +81,7 @@
     "follow-redirects": "^1.14.7",
     "axios": "^1.0.0",
     "codeceptjs/mocha-junit-reporter": ">=2.1.1",
-    "express/body-parser/debug": ">=3.1.0",
     "cookiejar": ">=2.1.4"
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }

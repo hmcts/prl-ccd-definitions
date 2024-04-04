@@ -71,18 +71,18 @@ withPipeline("nodejs", product, component) {
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
-    stageWithAgent('Generate Family Private Law Case config', product) {
-      yarnBuilder.yarn('generate-excel-all')
+    stageWithAgent('Generate Family Private Law Case config - preview', product) {
+      yarnBuilder.yarn('generate-excel-preview')
     }
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
   }
 
-  before('highleveldatasetup') {
+  before('highleveldatasetup:aat') {
     yarnBuilder.yarn('setup')
 
-    stageWithAgent('Generate Family Private Law Case config', product) {
+    stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
   }
@@ -91,25 +91,14 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
     yarnBuilder.yarn('test:uploadFile')
   }
 
   afterAlways('smoketest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
-  }
-
-
-  afterAlways('functionalTest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
-  }
-
-
-
-  afterAlways('functionalTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 
   before('smoketest:aat') {
@@ -126,6 +115,14 @@ withPipeline("nodejs", product, component) {
 
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+  }
+
+  afterAlways('functionalTest:preview') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+  }
+
+  afterAlways('functionalTest:aat') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 }
 

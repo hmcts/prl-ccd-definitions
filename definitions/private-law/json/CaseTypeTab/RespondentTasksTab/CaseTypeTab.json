@@ -5,10 +5,8 @@
     "Channel": "CaseWorker",
     "TabID": "RespondentTasks",
     "TabLabel": "Respondent tasks",
-    "UserRole": "caseworker-privatelaw-solicitor",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "taskListReturnLabel",
-    "TabShowCondition": "caseTypeOfApplication = \"NEVER_SHOW\"",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabel",
     "TabFieldDisplayOrder": 1
   },
   {
@@ -17,20 +15,120 @@
     "Channel": "CaseWorker",
     "TabID": "RespondentTasks",
     "TabLabel": "Respondent tasks",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "respondentTaskListLabel",
-    "TabFieldDisplayOrder": 5
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskList",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskList = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabel is defined as '${respondentTaskList}' thus respondentTaskList must be present on tab"
   },
   {
     "LiveFrom": "25/11/2021",
     "CaseTypeID": "PRLAPPS",
     "Channel": "CaseWorker",
-    "TabID": "RespondentTasks",
-    "TabLabel": "Respondent tasks",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "respondentTaskList",
-    "TabFieldDisplayOrder": 6,
-    "FieldShowCondition": "respondentTaskList = \"DO_NOT_SHOW\"",
-    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
+    "TabID": "RespondentTasksA",
+    "TabLabel": "Respondent tasks A",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelA",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksA",
+    "TabLabel": "Respondent tasks A",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListA",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListA = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelA is defined as '${respondentTaskListA}' thus respondentTaskListA must be present on tab"
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksB",
+    "TabLabel": "Respondent tasks B",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelB",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksB",
+    "TabLabel": "Respondent tasks B",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListB",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListB = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelB is defined as '${respondentTaskListB}' thus respondentTaskListB must be present on tab"
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksC",
+    "TabLabel": "Respondent tasks C",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelC",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksC",
+    "TabLabel": "Respondent tasks C",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListC",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListC = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelC is defined as '${respondentTaskListC}' thus respondentTaskListC must be present on tab"
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksD",
+    "TabLabel": "Respondent tasks D",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelD",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksD",
+    "TabLabel": "Respondent tasks D",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListD",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListC = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelD is defined as '${respondentTaskListD}' thus respondentTaskListD must be present on tab"
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksE",
+    "TabLabel": "Respondent tasks E",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListLabelE",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "RespondentTasksE",
+    "TabLabel": "Respondent tasks E",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondentTaskListE",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "respondentTaskListE = \"DO_NOT_SHOW\"",
+    "Comment": "respondentTaskListLabelE is defined as '${respondentTaskListE}' thus respondentTaskListE must be present on tab"
   }
 ]

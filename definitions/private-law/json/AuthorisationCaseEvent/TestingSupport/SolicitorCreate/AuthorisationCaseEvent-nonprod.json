@@ -1,0 +1,57 @@
+[
+  {
+    "LiveFrom": "07/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "testingSupportDummySolicitorCreate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "testingSupportPaymentSuccessCallback",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+]

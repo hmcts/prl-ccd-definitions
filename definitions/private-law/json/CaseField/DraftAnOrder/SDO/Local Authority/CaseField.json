@@ -4,7 +4,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoLocalAuthorityLabel",
     "FieldType": "Label",
-    "Label": "## Local authority",
+    "Label": "## Local Authority",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -13,7 +13,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "sdoLocalAuthorityLetterLabel",
     "FieldType": "Label",
-    "Label": "**Local authority letter**",
+    "Label": "**Local Authority letter**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -29,9 +29,47 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "sdoLocalAuthorityTextArea",
+    "FieldType": "TextArea",
+    "Label": "Edit your selection",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "sdoLocalAuthorityReportSubmitByDate",
     "FieldType": "Date",
-    "Label": "Deadline to submit the report",
+    "Label": "Deadline to submit the letter",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoLocalAuthorityDetails",
+    "Label": "Give details",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "SdoDioProvideOtherDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoLocalAuthorityCheck",
+    "Label": " ",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "SdoLocalAuthorityCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sdoLocalAuthorityDetailsLabel",
+    "FieldType": "Label",
+    "Label": "**Other direction for Local Authority letter**",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

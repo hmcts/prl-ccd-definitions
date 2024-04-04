@@ -3,13 +3,82 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "fl404CustomFields",
+    "CaseFieldID": "previewDraftOrderLabel",
     "PageFieldDisplayOrder": 1,
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "PageShowCondition": "doYouWantToEditTheOrder=\"Yes\" AND orderType!=\"childArrangementsSpecificProhibitedOrder\" AND orderType!=\"parentalResponsibility\" AND orderType!=\"specialGuardianShip\" AND orderType!=\"appointmentOfGuardian\" AND orderType!=\"generalForm\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"blankOrderOrDirections\" AND orderType!=\"blankOrderOrDirectionsWithdraw\""
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "previewDraftOrderWelsh",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+  "LiveFrom": "31/03/2022",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "editAndApproveAnOrder",
+  "CaseFieldID": "previewDraftOrder",
+  "PageFieldDisplayOrder": 3,
+  "DisplayContext": "READONLY",
+  "PageID": 4,
+  "PageDisplayOrder": 4,
+  "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "doYouWantToEditTheOrder",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "orderType",
+    "PageFieldDisplayOrder": 22,
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "isOrderCreatedBySolicitor",
+    "PageFieldDisplayOrder": 27,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "isHearingPageNeeded",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 28,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "doYouWantToEditTheOrder=\"DO_NOT_SHOW\""
   }
 ]

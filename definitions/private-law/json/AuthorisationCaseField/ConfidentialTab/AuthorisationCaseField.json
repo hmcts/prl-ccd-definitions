@@ -45,6 +45,20 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "fl401ChildrenConfidentialDetails",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fl401ChildrenConfidentialDetails",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fl401ChildrenConfidentialDetails",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
   },
@@ -72,6 +86,20 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsConfidentialDetails",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantsConfidentialDetails",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "childrenConfidentialDetails",
     "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRUD"
@@ -82,5 +110,22 @@
     "CaseFieldID": "childrenConfidentialDetails",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "respondentConfidentialDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]

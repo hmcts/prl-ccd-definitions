@@ -81,7 +81,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "scannedDocuments",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "27/08/2018",
@@ -105,11 +105,18 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "scannedDocuments",
+    "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "27/08/2018",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "evidenceHandled",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -124,5 +131,31 @@
     "CaseFieldID": "evidenceHandled",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "bulkScanEnvelopes",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-bulkscan",
+          "caseworker-privatelaw-bulkscansystemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   }
 ]

@@ -3,7 +3,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "amendOrderDynamicList",
-    "Label": "Select order to amend",
+    "Label": "Select the order",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -12,7 +12,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "amendOrderDownloadOrderLabel",
-    "Label": "## Download order",
+    "Label": "## Download the order",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -40,7 +40,7 @@
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "amendOrderReplaceOrderLabel",
-    "Label": "## Replace old order",
+    "Label": "## Upload amended order",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -64,5 +64,88 @@
     "RegularExpression": ".pdf",
     "Searchable": "N",
     "CategoryID": "ordersSubmittedWithApplication"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendOrderSelectCheckOptions",
+    "Label": "Does someone need to check the order?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "AmendOrderCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendOrderSelectJudgeOrLa",
+    "Label": "Select judge or legal advisor",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "JudgeOrLegalAdvisorCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfJudgeAmendOrder",
+    "Label": "Name of judge",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfLaAmendOrder",
+    "Label": "Name of legal adviser",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfJudgeToReviewOrder",
+    "Label": "Name of judge",
+    "FieldType": "JudicialUser",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "nameOfLaToReviewOrder",
+    "Label": "Name of legal adviser",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "managerCheckAmendOrder",
+    "Label": "This will go to a manager to be checked",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeDirectionsToAdminAmendOrder",
+    "Label": "Directions to admin:",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isOrderCompleteToServeAmendOrder",
+    "Label": "Once this order is complete, can the application be served?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]

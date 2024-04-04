@@ -1,0 +1,68 @@
+[
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "letGateKeepersKnowLabel",
+    "Label": "### Let the gatekeepers know there’s a new case",
+    "HintText": "This will send the case to the gatekeepers for your court or area, or to a specific gatekeeper.",
+    "FieldType": "Label",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendToGateKeeperHint",
+    "Label": "This will send the case to the gatekeepers for your court or area, or to a specific gatekeeper.",
+    "FieldType": "Label",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isSpecificGateKeeperNeeded",
+    "Label": "*Do you want to send this case to a specific gatekeeper?",
+    "FieldType": "YesOrNo",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "18/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isJudgeOrLegalAdviserGatekeeping",
+    "Label": "*Judge or legal adviser?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SendToGatekeeperTypeEnum",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "judgeName",
+    "Label": "Name of the judge",
+    "FieldType": "JudicialUser",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "legalAdvisorList",
+    "Label": "Name of the legal adviser",
+    "FieldType": "DynamicList",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "16/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "gatekeepingDetails",
+    "Label": "Gatekeeper",
+    "FieldType": "GatekeepingDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "gatekeepingDetails = \"DO_NOT_SHOW\""
+  }
+]

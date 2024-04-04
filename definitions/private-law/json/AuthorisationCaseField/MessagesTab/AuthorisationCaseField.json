@@ -23,13 +23,6 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sendAndReplyEventLink",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "13/08/2021",
-    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "messagesLabel",
     "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "R"
@@ -51,13 +44,6 @@
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sendAndReplyEventLink",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "13/08/2021",
-    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "messagesLabel",
     "UserRole": "caseworker-privatelaw-la",
     "CRUD": "R"
@@ -67,6 +53,20 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "messagesLabel",
     "UserRole": "caseworker-wa-task-configuration",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "messagesLabel",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "messagesLabel",
+    "UserRole": "caseworker-approver",
     "CRUD": "R"
   },
   {
@@ -84,6 +84,20 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "openMessageLabel",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "openMessageLabel",
+    "UserRole": "caseworker-approver",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "closedMessageLabel",
@@ -98,17 +112,34 @@
     "CRUD": "R"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sendAndReplyEventLink",
-    "UserRole": "caseworker-privatelaw-la",
+    "CaseFieldID": "closedMessageLabel",
+    "UserRole": "caseworker-caa",
     "CRUD": "R"
   },
   {
-    "LiveFrom": "13/08/2021",
+    "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "sendAndReplyEventLink",
-    "UserRole": "caseworker-wa-task-configuration",
+    "CaseFieldID": "closedMessageLabel",
+    "UserRole": "caseworker-approver",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "sendOrReplyEventLink",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
