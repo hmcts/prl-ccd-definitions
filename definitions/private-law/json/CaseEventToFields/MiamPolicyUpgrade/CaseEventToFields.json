@@ -131,7 +131,7 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseLabel",
+    "CaseFieldID": "miamExemptionLabel1",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 3,
@@ -283,6 +283,40 @@
     "DisplayContext": "MANDATORY",
     "PageID": 7,
     "PageDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "submissionRequiredFieldsInfo9",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "miamPolicyUpgradeExemptionsChecklist  CONTAINS \"childProtectionConcern\""
+  },
+  {
+    "LiveFrom": "05/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miam",
+    "CaseFieldID": "miamExemptionLabel2",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "05/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miam",
+    "CaseFieldID": "miamPolicyUpgradeChildProtectionConcernList",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
     "ShowSummaryChangeOption": "Y"
   }
 ]
