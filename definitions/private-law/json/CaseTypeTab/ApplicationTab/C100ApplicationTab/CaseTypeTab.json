@@ -314,8 +314,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmOverviewTable",
-    "FieldShowCondition": "allegationsOfHarmYesNo!=\"\"",
+    "CaseFieldID": "allegationsOfHarmYesNo",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"No\"",
     "TabFieldDisplayOrder": 29
   },
   {
@@ -325,7 +325,7 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "applicationTabAllegationsOfHarmDetailsLabel",
+    "CaseFieldID": "allegationsOfHarmOverviewTable",
     "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 30
   },
@@ -336,7 +336,7 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmOrdersTable",
+    "CaseFieldID": "applicationTabAllegationsOfHarmDetailsLabel",
     "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 31
   },
@@ -347,7 +347,7 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmDomesticAbuseTable",
+    "CaseFieldID": "allegationsOfHarmOrdersTable",
     "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 32
   },
@@ -358,8 +358,8 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmChildAbductionTable",
-    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
+    "CaseFieldID": "allegationsOfHarmDomesticAbuseTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 33
   },
   {
@@ -369,8 +369,20 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "behaviours",
+    "CaseFieldID": "allegationsOfHarmChildAbductionTable",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmChildAbductionYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 34
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "behaviours",
+    "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\" AND allegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 35
   },
   {
     "LiveFrom": "08/11/2021",
@@ -381,7 +393,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmOtherConcernsTable",
     "FieldShowCondition": "allegationsOfHarmYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 35
+    "TabFieldDisplayOrder": 36
   },
   {
     "LiveFrom": "08/11/2021",
@@ -392,7 +404,18 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabAllegationsOfHarmRevisedLabel",
     "FieldShowCondition": "newAllegationsOfHarmYesNo!=\"\"",
-    "TabFieldDisplayOrder": 36
+    "TabFieldDisplayOrder": 37
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "newAllegationsOfHarmYesNo",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"No\"",
+    "TabFieldDisplayOrder": 38
   },
   {
     "LiveFrom": "08/11/2021",
@@ -402,8 +425,8 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedOverviewTable",
-    "FieldShowCondition": "newAllegationsOfHarmYesNo!=\"\"",
-    "TabFieldDisplayOrder": 37
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 39
   },
   {
     "LiveFrom": "08/11/2021",
@@ -414,28 +437,6 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedOrdersTable",
     "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 38
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
-    "TabLabel": "Application",
-    "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmRevisedDATable",
-    "FieldShowCondition": "newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 39
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
-    "TabLabel": "Application",
-    "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmRevisedCATable",
-    "FieldShowCondition": "newAllegationsOfHarmChildAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 40
   },
   {
@@ -445,9 +446,31 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmRevisedChildAbductionTable",
-    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
+    "CaseFieldID": "allegationsOfHarmRevisedDATable",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmDomesticAbuseYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 41
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "allegationsOfHarmRevisedCATable",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmChildAbuseYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 42
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "allegationsOfHarmRevisedChildAbductionTable",
+    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\" AND newAllegationsOfHarmChildAbductionYesNo=\"Yes\"",
+    "TabFieldDisplayOrder": 43
   },
   {
     "LiveFrom": "08/11/2021",
@@ -458,7 +481,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedOtherConcernsTable",
     "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 42
+    "TabFieldDisplayOrder": 44
   },
   {
     "LiveFrom": "08/11/2021",
@@ -469,7 +492,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedChildContactTable",
     "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
-    "TabFieldDisplayOrder": 43
+    "TabFieldDisplayOrder": 45
   },
   {
     "LiveFrom": "08/11/2021",
@@ -480,7 +503,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabMiamLabel",
     "FieldShowCondition": "applicantAttendedMiam!=\"\"",
-    "TabFieldDisplayOrder": 44
+    "TabFieldDisplayOrder": 46
   },
   {
     "LiveFrom": "08/11/2021",
@@ -491,7 +514,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "miamTable",
     "FieldShowCondition": "applicantAttendedMiam!=\"\"",
-    "TabFieldDisplayOrder": 45
+    "TabFieldDisplayOrder": 47
   },
   {
     "LiveFrom": "08/11/2021",
@@ -502,7 +525,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "miamExemptionsTable",
     "FieldShowCondition": "claimingExemptionMiam=\"Yes\"",
-    "TabFieldDisplayOrder": 46
+    "TabFieldDisplayOrder": 48
   },
   {
     "LiveFrom": "08/11/2021",
@@ -513,7 +536,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabOtherPeopleInTheCaseLabel",
     "FieldShowCondition": "othersToNotify!=\"\"",
-    "TabFieldDisplayOrder": 47
+    "TabFieldDisplayOrder": 49
   },
   {
     "LiveFrom": "08/11/2021",
@@ -524,7 +547,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "otherPeopleInTheCaseTable",
     "FieldShowCondition": "othersToNotify!=\"\"",
-    "TabFieldDisplayOrder": 48
+    "TabFieldDisplayOrder": 50
   },
   {
     "LiveFrom": "08/11/2021",
@@ -535,7 +558,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabOtherProceedingsLabel",
     "FieldShowCondition": "existingProceedings!=\"\"",
-    "TabFieldDisplayOrder": 49
+    "TabFieldDisplayOrder": 51
   },
   {
     "LiveFrom": "08/11/2021",
@@ -546,7 +569,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "otherProceedingsTable",
     "FieldShowCondition": "existingProceedings!=\"\"",
-    "TabFieldDisplayOrder": 50
+    "TabFieldDisplayOrder": 52
   },
   {
     "LiveFrom": "08/11/2021",
@@ -557,7 +580,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "otherProceedingsDetailsTable",
     "FieldShowCondition": "existingProceedings!=\"\"",
-    "TabFieldDisplayOrder": 51
+    "TabFieldDisplayOrder": 53
   },
   {
     "LiveFrom": "08/11/2021",
@@ -568,7 +591,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabAttendingTheHearingLabel",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
-    "TabFieldDisplayOrder": 52
+    "TabFieldDisplayOrder": 54
   },
   {
     "LiveFrom": "08/11/2021",
@@ -579,7 +602,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "attendingTheHearingTable",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
-    "TabFieldDisplayOrder": 53
+    "TabFieldDisplayOrder": 55
   },
   {
     "LiveFrom": "08/11/2021",
@@ -590,7 +613,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabInternationalElementLabel",
     "FieldShowCondition": "habitualResidentInOtherState!=\"\"",
-    "TabFieldDisplayOrder": 54
+    "TabFieldDisplayOrder": 56
   },
   {
     "LiveFrom": "08/11/2021",
@@ -601,7 +624,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "internationalElementTable",
     "FieldShowCondition": "habitualResidentInOtherState!=\"\"",
-    "TabFieldDisplayOrder": 55
+    "TabFieldDisplayOrder": 57
   },
   {
     "LiveFrom": "08/11/2021",
@@ -612,7 +635,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabLitigationCapacityLabel",
     "FieldShowCondition": "litigationCapacityFactors!=\"\"",
-    "TabFieldDisplayOrder": 56
+    "TabFieldDisplayOrder": 58
   },
   {
     "LiveFrom": "08/11/2021",
@@ -623,7 +646,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "litigationCapacityTable",
     "FieldShowCondition": "litigationCapacityFactors!=\"\"",
-    "TabFieldDisplayOrder": 57
+    "TabFieldDisplayOrder": 59
   },
   {
     "LiveFrom": "08/11/2021",
@@ -634,7 +657,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "welshNeeds",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
-    "TabFieldDisplayOrder": 58
+    "TabFieldDisplayOrder": 60
   },
   {
     "LiveFrom": "08/11/2021",
@@ -645,7 +668,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "interpreterNeeds",
     "FieldShowCondition": "isWelshNeeded!=\"\"",
-    "TabFieldDisplayOrder": 59
+    "TabFieldDisplayOrder": 61
   },
   {
     "LiveFrom": "08/11/2021",
@@ -656,7 +679,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabWelshLanguageRequirementsLabel",
     "FieldShowCondition": "welshLanguageRequirement!=\"\"",
-    "TabFieldDisplayOrder": 60
+    "TabFieldDisplayOrder": 62
   },
   {
     "LiveFrom": "08/11/2021",
@@ -667,7 +690,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "welshLanguageRequirementsTable",
     "FieldShowCondition": "welshLanguageRequirement!=\"\"",
-    "TabFieldDisplayOrder": 61
+    "TabFieldDisplayOrder": 63
   },
   {
     "LiveFrom": "08/11/2021",
@@ -678,7 +701,7 @@
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabDeclarationLabel",
     "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
-    "TabFieldDisplayOrder": 62
+    "TabFieldDisplayOrder": 64
   },
   {
     "LiveFrom": "08/11/2021",
@@ -689,18 +712,7 @@
     "TabDisplayOrder": 7,
     "FieldShowCondition": "[STATE] != \"AWAITING_SUBMISSION_TO_HMCTS\"",
     "CaseFieldID": "declarationTable",
-    "TabFieldDisplayOrder": 63
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
-    "TabLabel": "Application",
-    "TabDisplayOrder": 7,
-    "CaseFieldID": "allegationsOfHarmYesNo",
-    "FieldShowCondition": "allegationsOfHarmYesNo = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 1
+    "TabFieldDisplayOrder": 65
   },
   {
     "LiveFrom": "08/11/2021",
@@ -929,17 +941,6 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
-    "CaseFieldID": "newAllegationsOfHarmYesNo",
-    "FieldShowCondition": "newAllegationsOfHarmYesNo = \"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "ApplicationDetails",
-    "TabLabel": "Application",
-    "TabDisplayOrder": 7,
     "CaseFieldID": "newAllegationsOfHarmChildAbuseYesNo",
     "FieldShowCondition": "newAllegationsOfHarmChildAbuseYesNo = \"DO_NOT_SHOW\"",
     "TabFieldDisplayOrder": 1
@@ -998,5 +999,50 @@
     "CaseFieldID": "familymanCaseNumber",
     "TabFieldDisplayOrder": 1,
     "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "allegationsOfHarmDomesticAbuseYesNo",
+    "FieldShowCondition": "allegationsOfHarmDomesticAbuseYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "allegationsOfHarmChildAbuseYesNo",
+    "FieldShowCondition": "allegationsOfHarmChildAbuseYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "allegationsOfHarmChildAbductionYesNo",
+    "FieldShowCondition": "allegationsOfHarmChildAbductionYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "newAllegationsOfHarmChildAbductionYesNo",
+    "FieldShowCondition": "newAllegationsOfHarmChildAbductionYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 1
   }
+
 ]
