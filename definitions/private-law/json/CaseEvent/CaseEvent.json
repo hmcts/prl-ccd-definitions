@@ -128,7 +128,8 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "05/11/2021",
@@ -391,7 +392,8 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-data",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -1244,45 +1246,6 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
-    "ID": "legalRepresentation",
-    "Name": "Legal Representation",
-    "Description": "Citizen confirming legal representation",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "consentToTheApplication",
-    "Name": "Consent To The Application",
-    "Description": "Consent provided by Respondent",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "citizenSafetyConcerns",
-    "Name": "Safety Concerns",
-    "Description": "Safety Concerns provided by Respondent",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
     "ID": "respondentMiam",
     "Name": "MIAM Citizen Respondent",
     "Description": "MIAM information submitted by Citizen Respondent",
@@ -1302,7 +1265,7 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1313,7 +1276,7 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1339,7 +1302,8 @@
     "ShowSummary": "N",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1429,7 +1393,18 @@
     "PostConditionState": "SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "Publish": "Y"
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenSaveC100DraftInternal",
+    "Name": "Citizen saving C100 draft",
+    "Description": "Citizen saving draft internally while drafting",
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2021",
@@ -1487,7 +1462,7 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Create Case Link",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "03/11/2022",
@@ -1502,7 +1477,7 @@
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Maintain Case Links",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "10/11/2022",
@@ -1589,7 +1564,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/allocateJudge/allocatedJudgeDetails",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1606,7 +1581,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
-    "Publish": "Y",
+    "Publish": "True",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
@@ -1623,7 +1598,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice-confirmation",
-    "Publish": "Y",
+    "Publish": "True",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
   {
@@ -1655,7 +1630,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-list-on-notice",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listOnNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/send-listOnNotice-notification",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "19/10/22",
@@ -1714,7 +1689,7 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-screen-and-hearing-data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-list-on-notice/about-to-submit",
-    "Publish": "Y"
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/08/2021",

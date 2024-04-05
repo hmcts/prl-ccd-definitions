@@ -152,6 +152,41 @@
     ]
   },
   {
+    "LiveFrom": "25/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalC7WelshResponseDoc",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
       "LiveFrom": "07/06/2023",
       "CaseTypeID": "PRLAPPS",
       "CaseFieldID": "finalC1AResponseDoc",
@@ -186,6 +221,41 @@
         }
       ]
     },
+  {
+    "LiveFrom": "21/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalC1AResponseDocWelsh",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "citizen",
+          "[C100RESPONDENTSOLICITOR5]"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
