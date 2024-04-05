@@ -3,22 +3,26 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "CRUD"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   },
   {
     "LiveFrom": "02/12/2021",
@@ -65,37 +69,9 @@
   {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "childrenConfidentialDetails",
     "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "CRUD"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-caa",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "02/12/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantsConfidentialDetails",
-    "UserRole": "caseworker-approver",
-    "CRUD": "R"
   },
   {
     "LiveFrom": "02/12/2021",
