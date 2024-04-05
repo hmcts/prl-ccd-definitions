@@ -31,7 +31,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "externalMessageWhoToSendTo",
     "EventElementLabel": "Select who to send the message to",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
     "Publish": "True"
@@ -45,7 +45,7 @@
     "ListElementCode": "judicialOrMagistrateTierList",
     "EventElementLabel": "Select a judicial tier or enter a judge's name manually",
     "EventHintText": "Select Judicial tier",
-    "FieldDisplayOrder": "3",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
@@ -57,7 +57,7 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "sendReplyJudgeName",
     "EventElementLabel": "Enter name of Judge",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
   },
@@ -70,21 +70,9 @@
     "ListElementCode": "ctscEmailList",
     "EventElementLabel": "Select where you're sending it from",
     "EventHintText": "Depending on your selection, the email template will change",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "Message",
-    "CaseEventID": "sendOrReplyToMessages",
-    "CaseFieldID": "sendMessageObject",
-    "ListElementCode": "cafcassOrCafcasscCymruEmail",
-    "EventElementLabel": "Enter Cafcass or Cafcass Cymru email address",
     "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.externalMessageWhoToSendTo CONTAINS \"cafcassOrCafcassCymru\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -97,7 +85,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients.",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\" OR sendMessageObject.externalMessageWhoToSendTo CONTAINS\"OTHER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"OTHER\""
   },
   {
     "LiveFrom": "31/03/2023",
