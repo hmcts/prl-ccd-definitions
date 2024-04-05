@@ -217,7 +217,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "miamPolicyUpgradeExemptionsChecklist  CONTAINS \"urgency\""
+    "PageShowCondition": "miamPolicyUpgradeExemptionsChecklist CONTAINS \"urgency\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -240,6 +240,88 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "submissionRequiredFieldsInfo5",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "miamPolicyUpgradeExemptionsChecklist CONTAINS \"previousMIAMattendance\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "miamExemptionLabel3",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "miamPolicyUpgradePreviousAttendanceChecklist",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "evidenceFromDisputeResolutionProvider",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist CONTAINS \"miamPolicyUpgradePreviousAttendance_Value_1\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "typeOfMiamAttendanceEvidence",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist CONTAINS \"miamPolicyUpgradePreviousAttendance_Value_2\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "miamCertificateDocument",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "typeOfMiamAttendanceEvidence CONTAINS \"miamCertificate\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "CaseFieldID": "miamAttendanceDetails",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "typeOfMiamAttendanceEvidence CONTAINS \"miamAttendanceDetails\""
   },
   {
     "LiveFrom": "03/11/2021",
