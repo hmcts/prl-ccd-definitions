@@ -129,7 +129,7 @@
     "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -1952,7 +1952,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -1994,7 +1994,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2036,7 +2036,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2078,7 +2078,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2120,7 +2120,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "18/11/2021",
@@ -2162,7 +2162,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
 
   },
   {
@@ -2288,7 +2288,7 @@
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
-    "CategoryID": "ordersSubmittedWithApplication"
+    "CategoryID": "draftOrders"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -2440,7 +2440,7 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "submitAndPayDownloadApplicationLink",
-    "Label": " ",
+    "Label": "Draft Document",
     "FieldType": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N",
@@ -2498,9 +2498,27 @@
     "LiveFrom": "17/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "rejectReasonLabel",
-    "Label": "### Reason for rejection",
+    "Label": "### Select the reason for rejection",
     "FieldType": "Label",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "returningAnApplicationLabel",
+    "Label": "### Returning an application",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "14/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "returningAnApplicationText",
+    "Label": "Select the reason(s) for the return of the application, this will generate a letter with instructions.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "17/11/2021",
@@ -2852,7 +2870,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
     "ID": "courtEmailAddress",
-    "Label": "Court Email Address",
+    "Label": "Enter email address",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -2937,6 +2955,7 @@
     "HintText": "Petitioner solicitor's firm",
     "FieldType": "OrganisationPolicy",
     "SecurityClassification": "Public",
+    "RetainHiddenValue": "Y",
     "Searchable": "N"
   },
   {
@@ -3045,7 +3064,7 @@
     "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalApplicantsList",
-    "Label": "Select applicant",
+    "Label": "Select party(s)",
     "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -3074,15 +3093,6 @@
     "ID": "caseFlags",
     "Label": "Case level Flags",
     "FieldType": "Flags",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "flagLauncher",
-    "Label": "Launch the Flags screen",
-    "FieldType": "FlagLauncher",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },

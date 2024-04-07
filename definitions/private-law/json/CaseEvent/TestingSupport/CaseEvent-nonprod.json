@@ -11,6 +11,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/about-to-submit-case-creation",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/solicitor-submitted-case-creation-solicitor",
+    "EndButtonLabel": "Create my dummy case"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportDummySolicitorCreateCourtNav",
+    "Name": "TS-CourtNav application",
+    "Description": "Create an application via testing support",
+    "DisplayOrder": 178,
+    "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/testing-support/about-to-submit-case-creation-courtNav",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Create my dummy case"
   },
@@ -99,5 +114,15 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/testing-support/submittedRespondentTaskList",
     "EventEnablingCondition": "respondentTaskListC!=\"\"",
     "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "testingSupportDummyCase",
+    "Name": "Case created by Test support",
+    "PostConditionState": "JUDICIAL_REVIEW",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]

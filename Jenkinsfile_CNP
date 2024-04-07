@@ -16,13 +16,25 @@ def secrets = [
                 secret('microservicekey-ccd-ps', 'PRINT_S2S_KEY'),
                 secret('microservicekey-ccd-admin', 'ADMIN_S2S_KEY')
         ],
+        'prl-${env}'      : [
+                secret('legalprofessional-testuser-one', 'LEGALPROFESSIONAL_TESTUSER_ONE'),
+                secret('legalprofessional-respondent-testuser', 'LEGALPROFESSIONAL_RESPONDENT_TESTUSER'),
+                secret('legalprofessional-testpassword-one', 'LEGALPROFESSIONAL_TESTPASSWORD_ONE'),
+                secret('courtadmin-testuser-one', 'COURTADMIN_TESTUSER_ONE'),
+                secret('courtadmin-swansea-testuser', 'COURTADMIN_SWANSEA_TESTUSER'),
+                secret('judge-testuser-one', 'JUDGE_TESTUSER_ONE'),
+                secret('judge-testpassword', 'JUDGE_TESTPASSWORD'),
+                secret('casemanager-testuser', 'CASEMANAGER_TESTUSER'),
+                secret('old-courtadmin-testuser', 'OLDCOURTADMIN_TESTUSER_ONE')
+        ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
                 secret('ccd-api-gateway-oauth2-client-secret', 'API_GATEWAY_IDAM_SECRET'),
                 secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
                 secret('idam-data-store-client-secret','IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
                 secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
-                secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD')
+                secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
+                secret('ccd-case-document-am-api-s2s-secret', 'CCD_CASE_DOCUMENT_AM_API_SECRET')
         ],
         'aac-${env}': [
                 secret('aac-manage-case-s2s-secret', 'MANAGE_CASE_S2S_KEY'),
@@ -31,7 +43,7 @@ def secrets = [
                 secret('notify-mca-api-key-secret', 'NOTIFY_MCA_API_KEY'),
                 secret('idam-mca-client-secret', 'IDAM_MCA_CLIENT_SECRET'),
                 secret('idam-mca-system-user-username', 'IDAM_CAA_USERNAME'),
-                secret('idam-mca-system-user-password', 'IDAM_CAA_PASSWORD',)
+                secret('idam-mca-system-user-password', 'IDAM_CAA_PASSWORD')
         ]
 ]
 
@@ -49,16 +61,14 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
 
-  afterAlways('test') {
-    // enable yarn audit and send message on master branch only
-    try {
-      yarnBuilder.yarn('audit')
-    } catch (error) {
-      onMaster {
-        slackSend(channel: '#prl-tech-notifications', color: 'warning', message: "Yarn Audit has detected vulnerabilities in ${env.JOB_NAME}. You can check if there are patches for them in the full report, build details here: <${env.RUN_DISPLAY_URL}|Build ${env.BUILD_DISPLAY_NAME}>.")
-      }
-    }
+  onPR{
+    env.ENVIRONMENT="preview"
   }
+  onMaster{
+    env.ENVIRONMENT="aat"
+  }
+
+  afterAlways('test') {}
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
@@ -103,7 +113,7 @@ withPipeline("nodejs", product, component) {
 
     yarnBuilder.yarn('test:uploadFile')
   }
-
+  
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
   }
@@ -116,4 +126,3 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
   }
 }
-

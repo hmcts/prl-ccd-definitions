@@ -14,7 +14,7 @@ module.exports = {
   async theHomeDetails() {
     await I.waitForText('To what address do you want the occupation order to apply?');
     await I.selectPostCodeLookupAddress('home_address_address', 'B11LS');
-    I.wait('2');
+    await I.wait('2');
     await I.waitForText('Who currently lives at the above address (please select all that apply)? (Optional)');
     await I.runAccessibilityTest();
     await I.click('#home_peopleLivingAtThisAddress-applicant');
@@ -28,15 +28,18 @@ module.exports = {
 
     /* Child Details */
     await I.click('Add new');
-    I.wait('2');
+    await I.wait('2');
     await I.click('#home_children_0_keepChildrenInfoConfidential_Yes');
     await I.fillField('#home_children_0_childFullName', 'Child Name');
     await I.fillField('#home_children_0_childsAge', '6');
     await I.click('#home_children_0_isRespondentResponsibleForChild_Yes');
-    await I.fillField('#home_howIsThePropertyAdapted', 'Text Area');
+    // await I.waitForElement('#home_howIsThePropertyAdapted');
+    // await I.fillField('#home_howIsThePropertyAdapted', 'Text Area');
 
     /* Mortgage Details */
+    await I.waitForElement('#home_isPropertyAdapted_Yes');
     await I.click('#home_isPropertyAdapted_Yes');
+    await I.waitForElement('#home_howIsThePropertyAdapted');
     await I.fillField('#home_howIsThePropertyAdapted', 'Text Area');
     await I.click('#home_isThereMortgageOnProperty_Yes');
     await I.checkOption('#home_mortgages_mortgageNamedAfter-applicant');
@@ -45,11 +48,11 @@ module.exports = {
     await I.fillField('#home_mortgages_textAreaSomethingElse', 'Text Area');
     await I.fillField('#home_mortgages_mortgageNumber', '4545');
     await I.fillField('#home_mortgages_mortgageLenderName', 'Lender Name');
-    // I.wait('2');
+    await I.wait('2');
     await I.selectPostCodeLookupAddress('home_mortgages_address_address', 'SE1 1LB');
-    I.wait('2');
 
     /* Landlord Details */
+    await I.waitForElement('#home_isPropertyRented_Yes');
     await I.click('#home_isPropertyRented_Yes');
     await I.checkOption('#home_landlords_mortgageNamedAfterList-applicant');
     await I.checkOption('#home_landlords_mortgageNamedAfterList-respondent');
@@ -59,8 +62,9 @@ module.exports = {
     // I.wait('5');
     await I.selectPostCodeLookupAddress('home_landlords_address_address', 'B11LS');
     // await I.click(this.fields.landlordFindAddressBtn);
-    I.wait('2');
+    // await I.wait('2');
 
+    await I.waitForElement('#home_doesApplicantHaveHomeRights_Yes');
     await I.click('#home_doesApplicantHaveHomeRights_Yes');
     await I.checkOption('#home_livingSituation-ableToStayInHome');
     await I.checkOption('#home_livingSituation-ableToReturnHome');
@@ -72,6 +76,7 @@ module.exports = {
     await I.checkOption('#home_familyHome-payOrContributeRent');
     await I.checkOption('#home_familyHome-useHouseholdContents');
     await I.fillField('#home_furtherInformation', 'Text Area');
+    await I.runAccessibilityTest();
     await I.click('Continue');
   },
   async runTheHomeEventHappyPath() {

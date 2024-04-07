@@ -9,6 +9,7 @@ module.exports = {
   },
 
   async relationshipToRespondent() {
+    await I.triggerEvent('Relationship to respondent');
     await I.waitForText('Select the applicant\'s relationship to the respondent:');
     await I.click('#respondentRelationObject_applicantRelationship-engagedOrProposed');
     await I.click('Continue');
@@ -42,7 +43,7 @@ module.exports = {
   },
 
   async runEventrelationshipToRespondent() {
-    await this.triggerEvent();
+    // await this.triggerEvent();
     await this.relationshipToRespondent();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();

@@ -31,50 +31,53 @@ module.exports = {
   async childrenAndApplicant() {
     await I.retry(retryCount).triggerEvent('Children and applicants');
     await I.retry(retryCount).waitForText('Children and applicants');
-    await I.wait('1');
+    // await I.wait('1');
     await I.waitForElement(this.fields.app1AndChild1);
     await I.retry(retryCount).selectOption(this.fields.app1AndChild1, 'Father');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.app1C1LiveWith);
-    await I.wait('1');
+    // await I.wait('1');
     await I.waitForElement(this.fields.app1AndChild2);
     await I.retry(retryCount).selectOption(this.fields.app1AndChild2, 'Father');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.app1C2LiveWith);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async childrenAndRespondent() {
     await I.retry(retryCount).triggerEvent('Children and respondents');
     await I.retry(retryCount).waitForText('Children and respondents');
-    await I.wait('1');
+    // await I.wait('1');
     await I.waitForElement(this.fields.resp1AndChild1);
     await I.retry(retryCount).selectOption(this.fields.resp1AndChild1, 'Mother');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.resp1C1LiveWith);
-    await I.wait('1');
+    // await I.wait('1');
     await I.waitForElement(this.fields.resp1AndChild2);
     await I.retry(retryCount).selectOption(this.fields.resp1AndChild2, 'Mother');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.resp1C2LiveWith);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async childrenAndOtherPeople() {
     await I.retry(retryCount).triggerEvent('Children and other people');
     await I.retry(retryCount).waitForText('Children and other people');
-    await I.wait('1');
+    // await I.wait('1');
     await I.waitForElement(this.fields.op1AndChild1);
     await I.retry(retryCount).selectOption(this.fields.op1AndChild1, 'Grandparent');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.op1C1LiveWith);
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.op1C1Confidential);
-    await I.wait('2');
+    // await I.wait('2');
     await I.waitForElement(this.fields.op1AndChild2);
     await I.retry(retryCount).selectOption(this.fields.op1AndChild2, 'Grandparent');
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.op1C2LiveWith);
-    await I.wait('1');
+    // await I.wait('1');
     await I.retry(retryCount).checkOption(this.fields.op1C2Confidential);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
   async runChildrenAndApplicant() {

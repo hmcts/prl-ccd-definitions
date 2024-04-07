@@ -15,6 +15,7 @@ module.exports = {
   async noOtherChildren() {
     await I.waitForText('Do you or respondents have other children who are not part of this application?');
     await I.retry(retryCount).checkOption(this.fields.otherChildrenNo);
+    await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
