@@ -2,18 +2,23 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "childInvolvedInMIAMLabel",
+    "CaseFieldID": "mpuChildInvolved",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
           "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
           "caseworker-privatelaw-superuser",
-          "caseworker-privatelaw-externaluser-viewonly",
-          "courtnav"
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly"
         ],
         "CRUD": "R"
       }
@@ -22,7 +27,32 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "childInvolvedInMiam",
+    "CaseFieldID": "mpuApplicantAttended",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "mpuClaimingExemption",
     "AccessControl": [
       {
         "UserRoles": [
@@ -67,7 +97,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamExemptionReasons",
+    "CaseFieldID": "mpuExemptionReasons",
     "AccessControl": [
       {
         "UserRoles": [
@@ -111,26 +141,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseSelectAll",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-solicitor",
-          "citizen",
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser",
-          "caseworker-privatelaw-externaluser-viewonly"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "23/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseEvidences",
+    "CaseFieldID": "mpuDomesticAbuseEvidences",
     "AccessControl": [
       {
         "UserRoles": [
@@ -155,7 +166,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseEvidenceOptions",
+    "CaseFieldID": "mpuIsDomesticAbuseEvidenceProvided",
     "AccessControl": [
       {
         "UserRoles": [
@@ -180,7 +191,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseEvidenceLabel",
+    "CaseFieldID": "mpuAddEvidenceLabel",
     "AccessControl": [
       {
         "UserRoles": [
@@ -199,7 +210,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseEvidenceDocument",
+    "CaseFieldID": "mpuDomesticAbuseEvidenceDocument",
     "AccessControl": [
       {
         "UserRoles": [
@@ -224,7 +235,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamDomesticAbuseNoEvidenceReason",
+    "CaseFieldID": "mpuNoDomesticAbuseEvidenceReason",
     "AccessControl": [
       {
         "UserRoles": [
@@ -287,7 +298,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamChildProtectionConcernReason",
+    "CaseFieldID": "mpuChildProtectionConcernReason",
     "AccessControl": [
       {
         "UserRoles": [
@@ -331,7 +342,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamUrgencyReasons",
+    "CaseFieldID": "mpuUrgencyReason",
     "AccessControl": [
       {
         "UserRoles": [
@@ -375,7 +386,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamPreviousAttendanceOptions",
+    "CaseFieldID": "mpuPreviousMiamAttendanceReason",
     "AccessControl": [
       {
         "UserRoles": [
@@ -400,7 +411,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "documentFromDisputeResolutionProvider",
+    "CaseFieldID": "mpuDocFromDisputeResolutionProvider",
     "AccessControl": [
       {
         "UserRoles": [
@@ -425,7 +436,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "typeOfMiamAttendanceEvidence",
+    "CaseFieldID": "mpuTypeOfPreviousMiamAttendanceEvidence",
     "AccessControl": [
       {
         "UserRoles": [
@@ -450,7 +461,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamCertificateByMediator",
+    "CaseFieldID": "mpuCertificateByMediator",
     "AccessControl": [
       {
         "UserRoles": [
@@ -475,7 +486,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamAttendanceDetails",
+    "CaseFieldID": "mpuMediatorDetails",
     "AccessControl": [
       {
         "UserRoles": [
@@ -519,7 +530,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "miamOtherExemptionReasons",
+    "CaseFieldID": "mpuOtherExemptionReasons",
     "AccessControl": [
       {
         "UserRoles": [
@@ -544,7 +555,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantUnableToAttendMiamReason1",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason1",
     "AccessControl": [
       {
         "UserRoles": [
@@ -569,7 +580,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantUnableToAttendMiamReason2",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason2",
     "AccessControl": [
       {
         "UserRoles": [

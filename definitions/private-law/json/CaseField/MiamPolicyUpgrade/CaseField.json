@@ -2,16 +2,24 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "childInvolvedInMIAMLabel",
-    "Label": "## *Are the children involved in any emergency protection, care or supervision proceedings (or have they been)?",
-    "FieldType": "Label",
+    "ID": "mpuChildInvolved",
+    "Label": "*Are the children involved in any emergency protection, care or supervision proceedings (or have they been)?",
+    "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "childInvolvedInMiam",
-    "Label": " ",
+    "ID": "mpuApplicantAttended",
+    "Label": "**Has the applicant attended a Mediation Information & Assessment Meeting (MIAM)?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "mpuClaimingExemption",
+    "Label": "*Is the applicant claiming exemption from the requirement to attend a MIAM ?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
   },
@@ -26,7 +34,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamExemptionReasons",
+    "ID": "mpuExemptionReasons",
     "Label": "Why is the applicant not attending a MIAM?",
     "HintText": "*Select all reasons that apply",
     "FieldType": "MultiSelectList",
@@ -44,17 +52,9 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseSelectAll",
+    "ID": "mpuDomesticAbuseEvidences",
     "Label": "*What evidence of domestic abuse does the applicant have?",
     "HintText":  "*Select all evidence that applies",
-    "FieldType": "Label",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "23/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseEvidences",
-    "Label": " ",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "MIAMDomesticAbuseChecklistEnum",
     "SecurityClassification": "Public"
@@ -62,7 +62,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseEvidenceOptions",
+    "ID": "mpuIsDomesticAbuseEvidenceProvided",
     "Label": "*Can you provide evidence?",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public"
@@ -70,7 +70,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseEvidenceLabel",
+    "ID": "mpuAddEvidenceLabel",
     "Label": "## Add evidence",
     "FieldType": "Label",
     "SecurityClassification": "Public"
@@ -78,7 +78,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseEvidenceDocument",
+    "ID": "mpuDomesticAbuseEvidenceDocument",
     "Label": "Evidence",
     "FieldType": "Collection",
     "FieldTypeParameter": "DomesticAbuseEvidenceDocument",
@@ -87,7 +87,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamDomesticAbuseNoEvidenceReason",
+    "ID": "mpuNoDomesticAbuseEvidenceReason",
     "Label": "Tell us why you cannot provide evidence",
     "FieldType": "TextArea",
     "SecurityClassification": "Public"
@@ -113,7 +113,7 @@
   {
     "LiveFrom": "05/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamChildProtectionConcernReason",
+    "ID": "mpuChildProtectionConcernReason",
     "Label": "*The applicant confirms that a child who would be the subject of the application or another child of the family who is living with that child is currently",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "MiamChildProtectionConcernChecklistEnum",
@@ -131,7 +131,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamUrgencyReasons",
+    "ID": "mpuUrgencyReason",
     "Label": "Why must the application be made urgently?",
     "HintText": "*Select one",
     "FieldType": "FixedRadioList",
@@ -150,7 +150,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamPreviousAttendanceOptions",
+    "ID": "mpuPreviousMiamAttendanceReason",
     "Label": "Has, there been previous attendance of a MIAM or non-court dispute resolution?",
     "HintText": "*Select one",
     "FieldType": "FixedRadioList",
@@ -160,7 +160,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "documentFromDisputeResolutionProvider",
+    "ID": "mpuDocFromDisputeResolutionProvider",
     "Label": "* Upload the MIAM certificate or evidence of participating in non-court dispute resolution",
     "HintText": "These documents must be signed by the mediator or provider",
     "FieldType": "Document",
@@ -170,7 +170,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "typeOfMiamAttendanceEvidence",
+    "ID": "mpuTypeOfPreviousMiamAttendanceEvidence",
     "Label": "*What evidence of MIAM attendance are you submitting?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "TypeOfMiamAttendanceEvidenceEnum",
@@ -179,7 +179,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamCertificateByMediator",
+    "ID": "mpuCertificateByMediator",
     "Label": "*Upload the MIAM certificate signed by the mediator.",
     "FieldType": "Document",
     "SecurityClassification": "Public",
@@ -188,7 +188,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamAttendanceDetails",
+    "ID": "mpuMediatorDetails",
     "Label": "*Provide the mediator details",
     "HintText": "Provide the date of the MIAM, as well as the name and contact details of the MIAM provider",
     "FieldType": "TextArea",
@@ -206,7 +206,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "miamOtherExemptionReasons",
+    "ID": "mpuOtherExemptionReasons",
     "Label": "What other grounds of exemption apply?",
     "HintText": "*Select one",
     "FieldType": "FixedRadioList",
@@ -216,7 +216,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "applicantUnableToAttendMiamReason1",
+    "ID": "mpuApplicantUnableToAttendMiamReason1",
     "Label": "*Explain why the applicant is unable to attend MIAM",
     "HintText": "Include the names, addresses, telephone numbers or e-mail addresses for the authorised family mediators and when they were contacted.",
     "FieldType": "TextArea",
@@ -225,7 +225,7 @@
   {
     "LiveFrom": "23/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "ID": "applicantUnableToAttendMiamReason2",
+    "ID": "mpuApplicantUnableToAttendMiamReason2",
     "Label": "*Explain why the applicant is unable to attend MIAM",
     "FieldType": "TextArea",
     "SecurityClassification": "Public"

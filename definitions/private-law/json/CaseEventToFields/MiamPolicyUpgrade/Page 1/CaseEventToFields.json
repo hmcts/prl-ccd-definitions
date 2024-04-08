@@ -15,9 +15,9 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "childInvolvedInMIAMLabel",
+    "CaseFieldID": "mpuChildInvolved",
     "PageFieldDisplayOrder": 2,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
@@ -26,59 +26,24 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "childInvolvedInMiam",
+    "CaseFieldID": "mpuApplicantAttended",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuChildInvolved=\"No\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "applicantAttendedMIAMLabel",
+    "CaseFieldID": "mpuClaimingExemption",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "childInvolvedInMiam=\"No\""
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "applicantAttendedMiam",
-    "PageFieldDisplayOrder": 5,
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "childInvolvedInMiam=\"No\""
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "claimingExemptionMIAMLabel",
-    "PageFieldDisplayOrder": 6,
-    "DisplayContext": "READONLY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "FieldShowCondition": "childInvolvedInMiam=\"No\" AND applicantAttendedMiam=\"No\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "claimingExemptionMiam",
-    "PageFieldDisplayOrder": 7,
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "FieldShowCondition": "childInvolvedInMiam=\"No\" AND applicantAttendedMiam=\"No\"",
+    "FieldShowCondition": "mpuChildInvolved=\"No\" AND mpuApplicantAttended=\"No\"",
     "ShowSummaryChangeOption": "Y"
   }
 ]
