@@ -9,7 +9,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMiam=\"No\" AND miamPolicyUpgradeExemptionsChecklist CONTAINS \"previousMIAMattendance\""
+    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMiam=\"No\" AND miamExemptionReasons CONTAINS \"previousMIAMattendance\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -26,7 +26,7 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamPolicyUpgradePreviousAttendanceChecklist",
+    "CaseFieldID": "miamPreviousAttendanceOptions",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "MANDATORY",
     "PageID": 5,
@@ -43,7 +43,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_1\""
+    "FieldShowCondition": "miamPreviousAttendanceOptions=\"miamPolicyUpgradePreviousAttendance_Value_1\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -55,7 +55,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\""
+    "FieldShowCondition": "miamPreviousAttendanceOptions=\"miamPolicyUpgradePreviousAttendance_Value_2\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -67,7 +67,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamCertificate\""
+    "FieldShowCondition": "miamPreviousAttendanceOptions=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamCertificate\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -79,6 +79,6 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamAttendanceDetails\""
+    "FieldShowCondition": "miamPreviousAttendanceOptions=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamAttendanceDetails\""
   }
 ]
