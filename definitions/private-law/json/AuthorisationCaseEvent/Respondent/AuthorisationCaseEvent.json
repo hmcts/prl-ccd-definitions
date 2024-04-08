@@ -52,7 +52,7 @@
   {
     "LiveFrom": "19/04/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "citizenSafetyConcerns",
+    "CaseEventID": "citizenRespondentAoH",
     "AccessControl": [
       {
         "UserRoles": [
@@ -96,6 +96,20 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenInternalFlagUpdates",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
