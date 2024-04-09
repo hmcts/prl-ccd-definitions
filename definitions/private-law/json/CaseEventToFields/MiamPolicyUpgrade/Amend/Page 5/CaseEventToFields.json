@@ -9,7 +9,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMIAM=\"No\" AND miamPolicyUpgradeExemptionsChecklist CONTAINS \"previousMIAMattendance\""
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"previousMiamAttendance\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -20,15 +20,15 @@
     "DisplayContext": "READONLY",
     "PageID": 5,
     "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendMiamUpgrade",
-    "CaseFieldID": "miamPolicyUpgradePreviousAttendanceChecklist",
+    "CaseFieldID": "mpuPreviousMiamAttendanceReason",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
@@ -37,48 +37,48 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendMiamUpgrade",
-    "CaseFieldID": "evidenceFromDisputeResolutionProvider",
+    "CaseFieldID": "mpuDocFromDisputeResolutionProvider",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_1\""
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_1\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendMiamUpgrade",
-    "CaseFieldID": "typeOfMiamAttendanceEvidence",
+    "CaseFieldID": "mpuTypeOfPreviousMiamAttendanceEvidence",
     "PageFieldDisplayOrder": 5,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\""
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendMiamUpgrade",
-    "CaseFieldID": "miamCertificateDocument",
+    "CaseFieldID": "mpuCertificateByMediator",
     "PageFieldDisplayOrder": 6,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamCertificate\""
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND mpuTypeOfPreviousMiamAttendanceEvidence=\"miamCertificate\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendMiamUpgrade",
-    "CaseFieldID": "miamAttendanceDetails",
+    "CaseFieldID": "mpuMediatorDetails",
     "PageFieldDisplayOrder": 7,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradePreviousAttendanceChecklist=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND typeOfMiamAttendanceEvidence=\"miamAttendanceDetails\""
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND mpuTypeOfPreviousMiamAttendanceEvidence=\"miamAttendanceDetails\""
   }
 ]
