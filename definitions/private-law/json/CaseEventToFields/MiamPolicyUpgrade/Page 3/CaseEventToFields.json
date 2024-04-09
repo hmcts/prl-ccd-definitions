@@ -8,7 +8,7 @@
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMiam=\"No\" AND miamExemptionReasons CONTAINS \"domesticAbuse\"",
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"domesticAbuse\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -26,20 +26,20 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseSelectAll",
+    "CaseFieldID": "mpuDomesticAbuseEvidences",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseEvidences",
+    "CaseFieldID": "mpuIsDomesticAbuseEvidenceProvided",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y"
@@ -48,47 +48,36 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseEvidenceOptions",
+    "CaseFieldID": "mpuAddEvidenceLabel",
     "PageFieldDisplayOrder": 5,
-    "DisplayContext": "MANDATORY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseEvidenceLabel",
-    "PageFieldDisplayOrder": 6,
     "DisplayContext": "READONLY",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamDomesticAbuseEvidenceOptions=\"Yes\""
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"Yes\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseEvidenceDocument",
-    "PageFieldDisplayOrder": 7,
+    "CaseFieldID": "mpuDomesticAbuseEvidenceDocument",
+    "PageFieldDisplayOrder": 6,
     "DisplayContext": "COMPLEX",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamDomesticAbuseEvidenceOptions=\"Yes\""
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"Yes\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamDomesticAbuseNoEvidenceReason",
-    "PageFieldDisplayOrder": 8,
+    "CaseFieldID": "mpuNoDomesticAbuseEvidenceReason",
+    "PageFieldDisplayOrder": 7,
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamDomesticAbuseEvidenceOptions=\"No\""
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"No\""
   }
 ]

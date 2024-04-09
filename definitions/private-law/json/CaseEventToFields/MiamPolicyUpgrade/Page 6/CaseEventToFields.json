@@ -9,7 +9,7 @@
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMiam=\"No\" AND miamExemptionReasons CONTAINS \"other\""
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"other\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -20,15 +20,15 @@
     "DisplayContext": "READONLY",
     "PageID": 6,
     "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamPolicyUpgradeOtherGroundsChecklist",
+    "CaseFieldID": "mpuOtherExemptionReasons",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y"
@@ -37,24 +37,24 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "applicantUnableToAttendMiamReason1",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason1",
     "PageFieldDisplayOrder": 4,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradeOtherGroundsChecklist=\"miamPolicyUpgradeOtherGrounds_Value_3\" OR miamPolicyUpgradeOtherGroundsChecklist=\"miamPolicyUpgradeOtherGrounds_Value_4\""
+    "FieldShowCondition": "mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_3\" OR mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_4\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "applicantUnableToAttendMiamReason2",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason2",
     "PageFieldDisplayOrder": 5,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "miamPolicyUpgradeOtherGroundsChecklist=\"miamPolicyUpgradeOtherGrounds_Value_5\""
+    "FieldShowCondition": "mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_5\""
   }
 ]

@@ -9,7 +9,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "claimingExemptionMiam=\"Yes\" AND applicantAttendedMiam=\"No\" AND childInvolvedInMiam=\"No\" AND miamExemptionReasons CONTAINS \"urgency\""
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"urgency\""
   },
   {
     "LiveFrom": "03/11/2021",
@@ -20,15 +20,15 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamUrgencyReasons",
+    "CaseFieldID": "mpuUrgencyReason",
     "PageFieldDisplayOrder": 3,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y"
