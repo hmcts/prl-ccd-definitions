@@ -1,25 +1,22 @@
 [
   {
-    "LiveFrom": "19/04/2022",
+    "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAndSubmit",
+    "CaseEventID": "confidentialityCheck",
     "AccessControl": [
       {
         "UserRoles": [
-          "citizen",
+          "hearing-centre-team-leader",
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
-          "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
