@@ -3,19 +3,19 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "submissionRequiredFieldsInfo7",
+    "CaseFieldID": "submissionRequiredFieldsInfo6",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": 7,
     "PageDisplayOrder": 7,
     "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "mpuApplicantAttendedMiam=\"Yes\" AND mpuChildInvolvedInMiam=\"No\""
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"other\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamCertificationPageLabel",
+    "CaseFieldID": "miamExemptionLabel4",
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 7,
@@ -26,7 +26,7 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "mediatorRegistrationNumber",
+    "CaseFieldID": "mpuOtherExemptionReasons",
     "PageFieldDisplayOrder": 3,
     "DisplayContext": "OPTIONAL",
     "PageID": 7,
@@ -37,44 +37,24 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "familyMediatorServiceName",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason1",
     "PageFieldDisplayOrder": 4,
     "DisplayContext": "OPTIONAL",
     "PageID": 7,
     "PageDisplayOrder": 7,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_3\" OR mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_4\""
   },
   {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "soleTraderName",
+    "CaseFieldID": "mpuApplicantUnableToAttendMiamReason2",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "OPTIONAL",
     "PageID": 7,
     "PageDisplayOrder": 7,
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamCertificationPageMessage",
-    "PageFieldDisplayOrder": 6,
-    "DisplayContext": "READONLY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
-    "ShowSummaryChangeOption": "N"
-  },
-  {
-    "LiveFrom": "03/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "miamPolicyUpgrade",
-    "CaseFieldID": "miamCertificationDocumentUpload",
-    "PageFieldDisplayOrder": 7,
-    "DisplayContext": "OPTIONAL",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuOtherExemptionReasons=\"miamPolicyUpgradeOtherGrounds_Value_5\""
   }
 ]
