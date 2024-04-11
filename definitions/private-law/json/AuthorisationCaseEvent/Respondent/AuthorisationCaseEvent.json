@@ -77,6 +77,36 @@
   {
     "LiveFrom": "19/04/2022",
     "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenContactPreference",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "respondentMiam",
     "AccessControl": [
       {
