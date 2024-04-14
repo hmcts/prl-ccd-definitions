@@ -48,6 +48,29 @@
   {
     "LiveFrom": "05/05/2023",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "citizenQuarantineDocsList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "citizenUploadDocListConfTab",
     "AccessControl": [
       {
