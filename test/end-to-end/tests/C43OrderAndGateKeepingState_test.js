@@ -5,7 +5,7 @@ let caseId;
 
 Feature('Solicitor - Manage order, Gatekeeping & Service of application tests');
 
-Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite', async({ I }) => {
+Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite @ptl-regression', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();

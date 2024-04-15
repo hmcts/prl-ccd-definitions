@@ -110,6 +110,7 @@ module.exports = {
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
+    await I.wait('5');
     await I.waitForText(moConfig.c43AOrderText);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
@@ -127,6 +128,7 @@ module.exports = {
     await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
+    await I.wait('5');
 
     await I.waitForText('Full name');
     await I.fillField(this.fields.guardianNameEle, 'Test guardian name');
