@@ -23,6 +23,29 @@
     ]
   },
   {
+    "LiveFrom": "21/07/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "citizenQuarantineDocsList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "citizen",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
     "LiveFrom": "05/05/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "citizenUploadQuarantineDocsList",
@@ -76,6 +99,7 @@
       {
         "UserRoles": [
           "caseworker-privatelaw-systemupdate",
+          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge"
@@ -84,8 +108,7 @@
       },
       {
         "UserRoles": [
-          "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-externaluser-viewonly"
+          "caseworker-wa-task-configuration"
         ],
         "CRUD": "R"
       }
