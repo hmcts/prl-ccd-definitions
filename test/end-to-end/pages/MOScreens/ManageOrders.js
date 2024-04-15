@@ -4,6 +4,7 @@ const I = actor();
 const retryCount = 3;
 const longWait = 30;
 const medWait = 10;
+const shortWait = 3;
 const date = new Date();
 const moConfig = require('./manageOrderConfig');
 
@@ -193,6 +194,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.click(this.fields.editOrderMyselfSolicitor);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
@@ -201,6 +203,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.waitForText(moConfig.specialGuardingText);
     await I.click(moConfig.continueText);
 
