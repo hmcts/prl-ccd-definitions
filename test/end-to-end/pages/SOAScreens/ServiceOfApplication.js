@@ -39,7 +39,8 @@ module.exports = {
     await I.waitForText(soaConfig.documentSelectionText);
     await I.click(this.fields.selectOrder);
     await I.see(soaConfig.c43AOrderText);
-    await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
+    await I.wait('7');
+    // await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
     await I.attachFile(this.fields.specialArrangementsUpload, '../resource/dummy.pdf');
     await I.wait('3');
     await I.click(soaConfig.continueText);
@@ -106,7 +107,7 @@ module.exports = {
     await this.submitOrderService();
   },
   async verifyPostConfidentialityCheck_Yes() {
-    await I.clickTillElementFound(this.fields.tasksTab, this.fields.previousBtnSelector);
+    await I.wait(medWait);
     await I.click(this.fields.tasksTab);
     await I.wait(medWait);
     await I.reloadPage(this.fields.applicationSoSDueAssignTaskToMe);

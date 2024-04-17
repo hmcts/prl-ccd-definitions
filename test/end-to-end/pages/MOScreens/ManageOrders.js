@@ -219,6 +219,7 @@ module.exports = {
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.click(this.fields.editOrder_no);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
@@ -246,6 +247,7 @@ module.exports = {
     await I.click('[name="serveOrderDynamicList"]');
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
+    await I.wait(shortWait);
 
     await I.waitForText(moConfig.servingToRespondentText);
     await I.click(this.fields.servePersonallyOptions_Yes);
@@ -262,6 +264,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.waitForText(moConfig.cyaText);
     await I.runAccessibilityTest();
     await I.click(moConfig.submitText);
