@@ -27,6 +27,7 @@
     "test:fullfunctional": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@regression-suite\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:smoke": "yarn install && MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
+    "playwrightsetup": "yarn playwright install",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "generate-json": "cd ccd-definition-processor && yarn xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
