@@ -37,6 +37,7 @@ module.exports = {
   },
 
   async searchForCasesWithId(caseId, state = 'Any') {
+    await I.wait('5');
     await I.navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
     await I.click(this.fields.caseList);
