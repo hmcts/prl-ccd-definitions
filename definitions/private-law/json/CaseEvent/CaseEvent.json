@@ -857,7 +857,8 @@
     "SecurityClassification": "Public",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/attach-scan-docs/about-to-submit",
     "ShowSummary": "N",
-    "Publish": "True"
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   },
   {
     "LiveFrom": "27/08/2021",
@@ -1683,12 +1684,13 @@
     "DisplayOrder": 35,
     "PreConditionState(s)": "JUDICIAL_REVIEW",
     "PostConditionState": "*",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-screen-and-hearing-data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-list-on-notice/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/fl401-send-listOnNotice-notification",
     "Publish": "True"
   },
   {

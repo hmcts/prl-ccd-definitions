@@ -4,6 +4,7 @@ const I = actor();
 const retryCount = 3;
 const longWait = 30;
 const medWait = 10;
+const shortWait = 3;
 const date = new Date();
 const moConfig = require('./manageOrderConfig');
 
@@ -110,6 +111,7 @@ module.exports = {
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
+    await I.wait('5');
     await I.waitForText(moConfig.c43AOrderText);
     await I.click(this.fields.orderByConsent_Yes);
     await I.click(this.fields.orderApprovedAtHearing_No);
@@ -127,6 +129,7 @@ module.exports = {
     await I.fillField(this.fields.recticalsOrPreambels, moConfig.preambleText);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
+    await I.wait('5');
 
     await I.waitForText('Full name');
     await I.fillField(this.fields.guardianNameEle, 'Test guardian name');
@@ -191,6 +194,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.click(this.fields.editOrderMyselfSolicitor);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
@@ -199,6 +203,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.waitForText(moConfig.specialGuardingText);
     await I.click(moConfig.continueText);
 
@@ -214,6 +219,7 @@ module.exports = {
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.click(this.fields.editOrder_no);
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
@@ -241,6 +247,7 @@ module.exports = {
     await I.click('[name="serveOrderDynamicList"]');
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
+    await I.wait(shortWait);
 
     await I.waitForText(moConfig.servingToRespondentText);
     await I.click(this.fields.servePersonallyOptions_Yes);
@@ -257,6 +264,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.click(moConfig.continueText);
 
+    await I.wait(shortWait);
     await I.waitForText(moConfig.cyaText);
     await I.runAccessibilityTest();
     await I.click(moConfig.submitText);
