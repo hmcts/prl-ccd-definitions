@@ -87,7 +87,7 @@ module.exports = {
     await I.see('C1A_Document.pdf');
     await I.see('cover_letter_re6.pdf');
     await I.see('Privacy_Notice.pdf');
-    await I.see('Mediation-voucher.pdf');
+    await I.see('Family President\'s letter to parties.pdf);
     await I.see('Blank_C7.pdf');
     await I.see('C9_personal_service.pdf');
     await I.see('C1A_Blank.pdf');
