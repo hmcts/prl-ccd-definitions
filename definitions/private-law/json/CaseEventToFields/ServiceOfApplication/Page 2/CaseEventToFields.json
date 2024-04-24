@@ -11,6 +11,19 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "isConfidential",
+    "PageFieldDisplayOrder": 0,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition": "serviceOfApplicationHeader=\"DO_NOT_SHOW\""
+  },
+  {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
@@ -22,11 +35,23 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "confidentialDetailsArePresentBanner",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "isConfidential=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "sentDocumentPlaceHolder",
-    "PageFieldDisplayOrder": 0,
+    "PageFieldDisplayOrder": 3,
     "DisplayContext": "OPTIONAL",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -39,7 +64,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "sentDocumentsLabel",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -50,7 +75,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "selectOrdersLabel1",
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -62,7 +87,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "serviceOfApplicationScreen1",
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 6,
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -75,7 +100,7 @@
     "CaseEventID": "serviceOfApplication",
     "CaseFieldID": "pd36qLetterLabel",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 7,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -244,18 +269,5 @@
     "RetainHiddenValue": "Y",
     "FieldShowCondition" : "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "Publish" : "True"
-  },
-  {
-    "LiveFrom": "01/12/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "isConfidential",
-    "PageFieldDisplayOrder": 19,
-    "DisplayContext": "MANDATORY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "N",
-    "RetainHiddenValue": "Y",
-    "FieldShowCondition" : "caseTypeOfApplication=\"DO_NOT_SHOW\""
   }
 ]
