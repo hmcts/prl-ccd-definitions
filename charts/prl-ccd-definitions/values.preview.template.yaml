@@ -48,6 +48,9 @@ xui-webapp:
       NODE_OPTIONS: --max-old-space-size=900
       SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service-aat.service.core-compute-aat.internal
       FEATURE_JRD_E_LINKS_V2_ENABLED: true
+      FEATURE_WORKALLOCATION_ENABLED: false
+      FEATURE_UPDATED_TASK_PERMISSIONS_ENABLED: false
+      WA_SUPPORTED_JURISDICTIONS: "IA,CIVIL"
 
 ccd:
   ccd:
@@ -138,6 +141,7 @@ ccd:
               alias: ROLE_ASSIGNMENT_IDAM_ADMIN_PASSWORD
             - name: role-assignment-service-LD-SDK-KEY
               alias: LD_SDK_KEY
+
 
   ccd-definition-store-api:
     java:
