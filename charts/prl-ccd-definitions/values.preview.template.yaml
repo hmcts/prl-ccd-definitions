@@ -30,17 +30,23 @@ xui-webapp:
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctspublic.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
+    devmemoryRequests: 1024Mi
+    devmemoryLimits: 2048Mi
+    devcpuRequests: 500m
+    devcpuLimits: 1
     environment:
-      NODE_TLS_REJECT_UNAUTHORIZED: 0
-      HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
+      HEALTH_CCD_COMPONENT_API: http://gateway-${SERVICE_NAME}/health
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
-      SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
+      SERVICES_CCD_COMPONENT_API: http://{{ .Release.Name }}-ccd-api-gw
       SERVICES_CCD_DATA_STORE_API: https://${SERVICE_NAME}-ccd-data-store-api
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://${SERVICE_NAME}-aac-manage-case-assignment
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       JURISDICTIONS: PRIVATELAW
       SERVICES_DOCUMENTS_API_V2: http://${SERVICE_NAME}-cdam
+      FEATURE_REDIS_ENABLED: false
+      NODE_OPTIONS: --max-old-space-size=900
+      SERVICES_ROLE_ASSIGNMENT_API: http://am-role-assignment-service-aat.service.core-compute-aat.internal
       FEATURE_JRD_E_LINKS_V2_ENABLED: true
       FEATURE_WORKALLOCATION_ENABLED: false
       FEATURE_UPDATED_TASK_PERMISSIONS_ENABLED: false
@@ -89,8 +95,8 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
+      image: hmctspublic.azurecr.io/ccd/data-store-api:latest
       environment:
-        NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
         IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET: ${IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET}
@@ -104,10 +110,38 @@ ccd:
         CCD_S2S_AUTHORISED_SERVICES_CASE_USER_ROLES: aac_manage_case_assignment,prl_cos_api,prl_citizen_frontend
         ELASTIC_SEARCH_DATA_NODES_HOSTS:  http://${SERVICE_NAME}-es-master:9200
         DATA_STORE_DEFAULT_LOG_LEVEL: DEBUG
-        DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend
         ROLE_ASSIGNMENT_URL: http://am-role-assignment-service-aat.service.core-compute-aat.internal
+        ENABLE_ATTRIBUTE_BASED_ACCESS_CONTROL: true
+        ENABLE_PSEUDO_ROLE_ASSIGNMENTS_GENERATION: true
+        ENABLE_PSEUDO_ACCESS_PROFILES_GENERATION: true
+        DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_gateway,ccd_ps,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend
       keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
+
+  am-role-assignment-service:
+    java:
+      autoscaling:
+        enabled: false
+      imagePullPolicy: Always
+      image: hmctspublic.azurecr.io/am/role-assignment-service:latest
+      ingressHost: am-role-assignment-${SERVICE_FQDN}
+      environment:
+        CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
+        ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
+      keyVaults:
+        am:
+          secrets:
+            - name: am-role-assignment-service-s2s-secret
+              alias: AM_ROLE_ASSIGNMENT_SERVICE_SECRET
+            - name: app-insights-connection-string
+              alias: app-insights-connection-string
+            - name: role-assignment-service-IDAM-CLIENT-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_CLIENT_SECRET
+            - name: role-assignment-service-IDAM-ADMIN-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_ADMIN_PASSWORD
+            - name: role-assignment-service-LD-SDK-KEY
+              alias: LD_SDK_KEY
+
 
   ccd-definition-store-api:
     java:
@@ -145,7 +179,6 @@ ccd:
         CCD_ACTIVITY_URL: null
         DM_URL: https://gateway-${SERVICE_FQDN}/documents
         DM_URL_REMOTE: https?://(gateway-${SERVICE_FQDN}:443|dm-store-aat.service.core-compute-aat.internal)/documents
-        NODE_TLS_REJECT_UNAUTHORIZED: 0
         APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}
         APPINSIGHTS_ENABLED: false
       ingressHost: case-management-web-${SERVICE_FQDN}
@@ -158,7 +191,7 @@ ccd:
       keyVaults: []
       environment:
         IDAM_SERVICE_KEY: ${API_GATEWAY_S2S_KEY}
-        IDAM_OAUTH2_CLIENT_SECRET: ${API_GATEWAY_IDAM_SECRET}
+        IDAM_OAUTH2_CLIENT_SECRET: ${CCD_API_GATEWAY_IDAM_CLIENT_SECRET}
         PROXY_DOCUMENT_MANAGEMENT: http://dm-store-aat.service.core-compute-aat.internal
         PROXY_PRINT_SERVICE: http://ccd-case-print-service-${SERVICE_FQDN}
         ADDRESS_LOOKUP_TOKEN: ${ADDRESS_LOOKUP_TOKEN}
