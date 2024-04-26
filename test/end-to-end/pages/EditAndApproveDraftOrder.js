@@ -31,6 +31,7 @@ module.exports = {
   },
 
   async assignReviewTask() {
+    await I.wait(medWait);
     await I.click(this.fields.tasksTab);
 
     await I.wait(longWait);
