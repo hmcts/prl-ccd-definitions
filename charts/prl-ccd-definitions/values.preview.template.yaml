@@ -28,7 +28,7 @@ xui-webapp:
   nodejs:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
-    image: hmctspublic.azurecr.io/xui/webapp:latest
+    image: hmctspublic.azurecr.io/xui/webapp:pr-3655-3e34e74-20240425174044
     ingressHost: xui-${SERVICE_FQDN}
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
