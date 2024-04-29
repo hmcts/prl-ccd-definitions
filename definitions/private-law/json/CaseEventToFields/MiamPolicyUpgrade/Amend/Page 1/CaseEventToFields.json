@@ -1,0 +1,49 @@
+[
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "submissionRequiredFieldsInfo1",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/validate-miam-application-or-exemption",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuChildInvolvedInMiam",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuApplicantAttendedMiam",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuChildInvolvedInMiam=\"No\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuClaimingExemptionMiam",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "mpuChildInvolvedInMiam=\"No\" AND mpuApplicantAttendedMiam=\"No\"",
+    "ShowSummaryChangeOption": "Y"
+  }
+]
