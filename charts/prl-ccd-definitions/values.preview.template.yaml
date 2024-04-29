@@ -52,6 +52,7 @@ xui-webapp:
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
       SERVICES_S2S: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
       SERVICES_ROLE_ASSIGNMENT_API: https://am-role-assignment-prl-ccd-definitions-pr-2167.preview.platform.hmcts.net
+      SERVICES_ROLE_ASSIGNMENT_MAPPING_API: https://am-org-role-mapping-service-${SERVICE_FQDN}
 
 ccd:
   ccd:
@@ -155,15 +156,7 @@ ccd:
         CASE_WORKER_REF_APP_URL: https://rd-caseworker-ref-api-${SERVICE_FQDN}
         ROLE_ASSIGNMENT_APP_URL: https://am-role-assignment-${SERVICE_FQDN}
         LAUNCH_DARKLY_ENV: pr
-        AMQP_SHARED_ACCESS_KEY_NAME: RootManageSharedAccessKey
-        AMQP_HOST: "et-sb-preview.servicebus.windows.net"
-        CRD_SUBSCRIPTION_NAME: "{{ .Release.Name}}-crd-topic"
-        JRD_SUBSCRIPTION_NAME: "{{ .Release.Name}}-jrd-topic"
-        CRD_TOPIC_NAME: "{{ .Release.Name}}-crd-topic"
-        JRD_TOPIC_NAME: "{{ .Release.Name}}-jrd-topic"
-        AMQP_CRD_SHARED_ACCESS_KEY_VALUE: "$(SB_ACCESS_KEY)"
-        AMQP_JRD_SHARED_ACCESS_KEY_VALUE: "$(SB_ACCESS_KEY)"
-        ORG_ROLE_MAPPING_DB_HOST: et-preview.postgres.database.azure.com
+        ORG_ROLE_MAPPING_DB_HOST: ${SERVICE_NAME}-postgresql
         ORG_ROLE_MAPPING_DB_NAME: "pr-${CHANGE_ID}-org_role_mapping"
         ORG_ROLE_MAPPING_DB_USERNAME: hmcts
         ORG_ROLE_MAPPING_DB_PORT: 5432
