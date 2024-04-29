@@ -51,6 +51,7 @@ xui-webapp:
       SERVICES_IDAM_INDEX_URL: /
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
       SERVICES_S2S: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      SERVICES_ROLE_ASSIGNMENT_API: https://am-role-assignment-prl-ccd-definitions-pr-2167.preview.platform.hmcts.net
 
 ccd:
   ccd:
@@ -341,5 +342,6 @@ aac-manage-case-assignment:
       IDAM_NOC_APPROVER_USERNAME: ${IDAM_NOC_APPROVER_USERNAME}
       IDAM_NOC_APPROVER_PASSWORD: ${IDAM_NOC_APPROVER_PASSWORD}
       NOTIFY_MCA_API_KEY: ${NOTIFY_MCA_API_KEY}
+      ROLE_ASSIGNMENT_URL: https://am-role-assignment-prl-ccd-definitions-pr-2167.preview.platform.hmcts.net
       autoscaling:
           enabled: false
