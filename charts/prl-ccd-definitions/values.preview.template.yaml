@@ -123,15 +123,13 @@ ccd:
       ingressHost: am-role-assignment-${SERVICE_FQDN}
 
   am-org-role-mapping-service:
-    enabled: true
     java:
-      image: 'hmctspublic.azurecr.io/am/org-role-mapping-service:latest'
+      autoscaling:
+        enabled: false
+      image: hmctspublic.azurecr.io/am/org-role-mapping-service:latest
+      imagePullPolicy: Always
       ingressHost: am-org-role-mapping-service-${SERVICE_FQDN}
       releaseNameOverride: ${SERVICE_NAME}-am-org-role-mapping-service
-      devmemoryRequests: 1024Mi
-      devcpuRequests: 250m
-      devmemoryLimits: 2048Mi
-      devcpuLimits: 1500m
       keyVaults:
         am:
           secrets:
@@ -153,7 +151,6 @@ ccd:
               alias: AMQP_JRD_SHARED_ACCESS_KEY_VALUE
       environment:
         TEMP_FLAG: 1
-        CASE_WORKER_REF_APP_URL: https://rd-caseworker-ref-api-${SERVICE_FQDN}
         ROLE_ASSIGNMENT_APP_URL: https://am-role-assignment-${SERVICE_FQDN}
         LAUNCH_DARKLY_ENV: pr
         ORG_ROLE_MAPPING_DB_HOST: ${SERVICE_NAME}-postgresql
