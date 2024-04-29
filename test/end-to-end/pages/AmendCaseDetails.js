@@ -14,8 +14,8 @@ module.exports = {
   fields: {
     submit: 'button[type="submit"]',
     applicantName: '#applicants_0_firstName',
-    claimingExceptionNo: '#claimingExemptionMiam_No',
-    attendMianYes: '#applicantAttendedMiam_Yes',
+    claimingExceptionNo: '#mpuChildInvolvedInMiam_No',
+    attendMianYes: '#mpuApplicantAttendedMiam_Yes',
     urn: '#mediatorRegistrationNumber',
     mediatorName: '#familyMediatorServiceName',
     soleTraderName: '#soleTraderName',
@@ -43,11 +43,9 @@ module.exports = {
   },
 
   async updateMiamDetails() {
-    await I.waitForText('*Has the applicant attended a Mediation information & Assessment Meeting (MIAM)?');
-
+    await I.waitForText('*Are the children involved in any emergency protection, care or supervision proceedings (or have the');
     await I.click(this.fields.claimingExceptionNo);
-    await I.dontSee('*Has a family mediator informed the applicant that a mediator’s exemption applies, and they do not need to attend a MIAM ?');
-
+    await I.waitForText('*Has the applicant attended a Mediation Information & Assessment Meeting (MIAM)?');
     await I.click(this.fields.attendMianYes);
     await I.dontSee('*Is the applicant claiming exemption from the requirement to attend a MIAM ?');
     await I.runAccessibilityTest();
@@ -70,7 +68,7 @@ module.exports = {
 
   async verifyUpdatedMiamDetails() {
     await I.click(this.fields.applicationTab);
-    await I.waitForText('Has the applicant attended MIAM?');
+    await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings (or have they');
     await I.runAccessibilityTest();
     await I.see('12345678');
     await I.see('Test mediator name');
@@ -82,6 +80,7 @@ module.exports = {
     await this.updateMiamDetails();
     await this.addMiamCertificationDetails();
     await I.amOnHistoryPageWithSuccessNotification();
+    await this.verifyUpdatedMiamDetails();
   },
 
   async searchAndSelectGivenRegisteredOrganisation() {
