@@ -63,7 +63,6 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('judge');
   I.see('ctsc');
   I.see('senior-tribunal-caseworker');
-
 });// eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
