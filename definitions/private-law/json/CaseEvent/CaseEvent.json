@@ -147,7 +147,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-applicant-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -229,7 +229,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -245,7 +245,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -261,7 +261,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -277,7 +277,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "16/11/2021",
@@ -304,7 +304,7 @@
     "Description": "Details of the respondents in the case",
     "DisplayOrder": 17,
     "SecurityClassification": "Public",
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
@@ -343,7 +343,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "11/08/2021",
@@ -359,7 +359,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -375,7 +375,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -392,7 +392,7 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-data",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\"",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\"",
     "Publish": "True"
   },
   {
@@ -409,7 +409,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "17/11/2021",
@@ -425,7 +425,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -441,7 +441,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -457,7 +457,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -473,7 +473,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -489,7 +489,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -505,7 +505,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -521,7 +521,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "21/11/2021",
@@ -580,6 +580,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/other-proceedings/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -1876,7 +1877,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-applicant-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1894,7 +1895,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-respondent-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1912,7 +1913,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-respondent-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1930,7 +1931,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-other-people-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -1948,7 +1949,40 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/populate-other-people-to-child-relation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"  AND taskListVersion=\"v2\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
+  },
+  {
+    "LiveFrom": "03/04/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamPolicyUpgrade",
+    "Name": "MIAM",
+    "Description": "MIAM",
+    "DisplayOrder": 8,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
+  },
+  {
+    "LiveFrom": "11/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "amendMiamPolicyUpgrade",
+    "Name": "Amend MIAM",
+    "Description": "Amend MIAM",
+    "DisplayOrder": 14,
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-miam-policy-upgrade",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
   }
 ]
 
