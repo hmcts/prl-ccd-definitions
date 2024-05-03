@@ -56,12 +56,17 @@
     "json-schema": "^0.4.0",
     "left-pad": "^1.0.0",
     "minimist": "^1.2.3",
+    "phin": ">=3.7.1",
     "playwright": "1.37.0",
     "puppeteer": "^22.0.0",
     "ws": "^7.4.6"
   },
   "overrides": {
-    "phin": "3.7.1"
+    "codeceptjs": {
+      "dependencies": {
+        "phin": ">=3.7.1"
+      }
+    }
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
