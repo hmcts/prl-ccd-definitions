@@ -65,7 +65,6 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('ctsc');
   I.see('senior-tribunal-caseworker');
   I.see('caseworker-privatelaw-courtadmin-casecreator');
-
 });// eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
