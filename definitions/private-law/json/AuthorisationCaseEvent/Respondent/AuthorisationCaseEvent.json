@@ -142,5 +142,35 @@
         "CRUD": "CRUD"
       }
     ]
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenResponseToAoH",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
