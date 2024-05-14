@@ -478,6 +478,7 @@ module.exports = {
   },
 
   async composeDraftOrder() {
+    global.logCallingFunction();
     await this.selectDraftOrder(moConfig.doText);
     await this.includeOrderDetails();
   },

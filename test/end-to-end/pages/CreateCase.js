@@ -23,7 +23,8 @@ module.exports = {
   },
 
   async clickCreateCase() {
-    await I.wait('10');
+    global.logCallingFunction();
+    await I.waitForSelector(this.fields.createCaseLink);
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
@@ -99,10 +100,15 @@ module.exports = {
     // await I.waitForText('TS-Admin application-Noc');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
+
+    await I.waitForText('TS-Admin application-Noc');
+    await I.fillField('#applicantCaseName', 'auto test C100');
+    await I.retry(retryCount).click('Continue');
     // await I.wait('3');
   },
 
   async selectTypeOfApplicationC100() {
+    global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
@@ -124,6 +130,10 @@ module.exports = {
   async selectTypeOfApplicationFL401DummyCase() {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
+
+    await I.waitForText('TS-Solicitor aplication');
+    await I.fillField('#applicantCaseName', 'auto test C100');
     await I.retry(retryCount).click('Continue');
     await I.wait('2');
   },
@@ -226,13 +236,21 @@ module.exports = {
   },
 
   async amOnHistoryPageWithSuccessNotification() {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText('History');
   },
 
   async createNewSolicitorDummyC100Case() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TSSolicitorApplication();
     await this.selectTypeOfApplicationC100();
+
+    await I.waitForText('TS-Solicitor application');
+    await I.waitForSelector('#applicantCaseName');
+
+    await I.fillField('#applicantCaseName', 'auto test C100');
+    await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).click('Create my dummy case');
     await this.amOnHistoryPageWithSuccessNotification();
   },
@@ -246,6 +264,7 @@ module.exports = {
   },
 
   async fillFormAndSubmit_TSSolicitorApplication() {
+    global.logCallingFunction();
     // await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
@@ -274,6 +293,7 @@ module.exports = {
 
   async saveTheCaseIdAndSignInAsStokeCourtAdmin() {
     // I.wait('20');
+    global.logCallingFunction();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
