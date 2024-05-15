@@ -1,3 +1,17 @@
+global.logCallingFunction = () => {
+  const errorObj = new Error();
+  const frame = errorObj.stack.split('\n')[2];
+  const lineNumber = frame.split(':').reverse()[1];
+  let functionName = frame.split(' ')[5];
+  // const atFile = frame.split(' ')[6];
+
+  if (functionName.includes('/')) {
+    functionName = functionName.split('/').reverse()[0];
+  }
+  functionName += `: ${lineNumber}`;
+  console.log(`==> ${frame}`);
+};
+
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
@@ -5,7 +19,7 @@ exports.config = {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
       // show: false,
-      url: 'http://localhost:3000',
+      url: process.env.URL ? process.env.URL : 'http://localhost:3000',
       waitForTimeout: 60000,
       getPageTimeout: 60000,
       waitForAction: 1000,
@@ -14,7 +28,14 @@ exports.config = {
         ignoreHTTPSErrors: true,
         args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
       },
-      windowSize: '1280x960'
+      windowSize: '1280x960',
+      disableScreenshots: false,
+      video: true,
+      keepVideoForPassedTests: false,
+      keepTraceForPassedTests: false,
+      fullPageScreenshots: true,
+      uniqueScreenshotNames: true
+
     },
     PlaywrightHelpers: { require: './helpers/playwrightHelper.js' },
     GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
@@ -26,7 +47,11 @@ exports.config = {
       retries: 2,
       minTimeout: 2000
     },
-    autoDelay: { enabled: true }
+    autoDelay: { enabled: true },
+    screenshotOnFail: {
+      fullPageScreenshots: true,
+      enabled: true
+    }
   },
   include: { I: './steps_file.js' },
   // bootstrap: null,

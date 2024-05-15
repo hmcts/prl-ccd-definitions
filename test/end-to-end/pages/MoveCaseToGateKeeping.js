@@ -15,6 +15,7 @@ module.exports = {
   },
 
   async moveCaseToGateKeeping() {
+    global.logCallingFunction();
     await I.retry(retryCount).triggerEvent('Send to gatekeeper');
     await I.wait(longWait);
     await I.retry(retryCount).click(this.fields.returnToTaskTab);
