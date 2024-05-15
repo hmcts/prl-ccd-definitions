@@ -15,8 +15,6 @@ String component = "ccd-definitions"
 def channel = '#prl-tech-notifications'
 
 // SAUCELABS config - configured on Jenkins
-env.SAUCE_USERNAME = 'username'
-env.SAUCE_ACCESS_KEY = 'privatekey'
 env.SAUCE_TUNNEL_IDENTIFIER = 'reformtunnel'
 
 def secrets = [
@@ -46,6 +44,10 @@ def secrets = [
                 secret('idam-data-store-system-user-username','IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
                 secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
                 secret('ccd-case-document-am-api-s2s-secret', 'CCD_CASE_DOCUMENT_AM_API_SECRET')
+        ],
+        'test-secrets' :[
+                secret('sauce-lab-username', 'SAUCE_USERNAME'),
+                secret('sauce-lab-access-key', 'SAUCE_ACCESS_KEY'),
         ]
 ]
 

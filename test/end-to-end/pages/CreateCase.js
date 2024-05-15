@@ -29,6 +29,7 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
+    global.logCallingFunction();
     await I.wait('5');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
@@ -47,6 +48,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS_Solicitor() {
+    global.logCallingFunction();
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
@@ -63,6 +65,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillFormAndSubmit_TS() {
+    global.logCallingFunction();
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
@@ -80,6 +83,7 @@ module.exports = {
   },
 
   async fillFormAndSubmitCourtNav_TS() {
+    global.logCallingFunction();
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
@@ -97,6 +101,7 @@ module.exports = {
   },
 
   async selectTypeOfAdminNocApplicationC100() {
+    global.logCallingFunction();
     // await I.waitForText('TS-Admin application-Noc');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
@@ -115,6 +120,7 @@ module.exports = {
   },
 
   async selectTypeOfApplicationFL401() {
+    global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
@@ -122,12 +128,14 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
   },
   async selectTypeOfApplicationFL401_TS() {
+    global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click('Continue');
   },
 
   async selectTypeOfApplicationFL401DummyCase() {
+    global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click('Continue');
@@ -139,6 +147,7 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPageC100() {
+    global.logCallingFunction();
     // await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click(
       '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
@@ -155,6 +164,7 @@ module.exports = {
   },
 
   async fillSolicitorApplicationPageFL401() {
+    global.logCallingFunction();
     await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click(
       '#confidentialityStatementDisclaimer-confidentialityStatementUnderstood'
@@ -171,6 +181,7 @@ module.exports = {
   },
 
   async createNewCaseC100() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
@@ -179,6 +190,7 @@ module.exports = {
     await this.amOnHistoryPageWithSuccessNotification();
   },
   async createNewCaseC100_TS() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationC100();
@@ -186,6 +198,7 @@ module.exports = {
     await I.wait('7');
   },
   async createNewCaseFL401_TS() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationFL401_TS();
@@ -193,6 +206,7 @@ module.exports = {
     await I.wait('7');
   },
   async createC100CaseByCourtAdmin() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS();
     await this.selectTypeOfAdminNocApplicationC100();
@@ -201,6 +215,7 @@ module.exports = {
   },
 
   async createFL401CaseByCourtAdmin() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmitCourtNav_TS();
     await I.click('Create my dummy case');
@@ -208,6 +223,7 @@ module.exports = {
   },
 
   async createNewCaseFL401() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
@@ -217,6 +233,7 @@ module.exports = {
   },
 
   async createNewCaseC100andReturnID() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationC100();
@@ -228,6 +245,7 @@ module.exports = {
   },
 
   async submitEvent() {
+    global.logCallingFunction();
     // I.wait('2');
     // await I.retry(retryCount).waitForElement('h2');
     await I.retry(retryCount).see('Check your answers');
@@ -256,6 +274,7 @@ module.exports = {
   },
 
   async createNewSolicitorDummyFL401Case() {
+    global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TSSolicitorApplication();
     await this.selectTypeOfApplicationFL401DummyCase();
@@ -278,6 +297,7 @@ module.exports = {
 
   async saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
     // I.wait('20');
+    global.logCallingFunction();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
@@ -308,6 +328,7 @@ module.exports = {
   },
 
   async saveTheCaseId() {
+    global.logCallingFunction();
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     return caseId;

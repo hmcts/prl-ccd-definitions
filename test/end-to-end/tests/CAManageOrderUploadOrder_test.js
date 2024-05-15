@@ -6,7 +6,7 @@ let caseId;
 
 Feature('CA Manage Order Upload Order - TS Court Admin');
 Scenario(
-  'CA Manage Order Upload Order Serve order Personally @regression-suite ',
+  'CA Manage Order Upload Order Serve order Personally @regression-suite @debug',
   async({ I }) => {
     await I.loginAsOldCourtAdmin();
     await I.createC100CaseByCourtAdmin();
