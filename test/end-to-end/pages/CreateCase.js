@@ -23,7 +23,6 @@ module.exports = {
   },
 
 
-
   async getCaseIDFromCaseDetailsPage() {
     const h2CaseIdText = await I.grabTextFrom('//ccd-case-header//h2[3]');
     let caseId = h2CaseIdText.split(':')[1];
@@ -310,7 +309,7 @@ module.exports = {
     // I.wait('20');
     global.logCallingFunction();
 
-    const caseId = await this.getCaseIDFromCaseDetailsPage()
+    const caseId = await this.getCaseIDFromCaseDetailsPage();
 
     // const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
