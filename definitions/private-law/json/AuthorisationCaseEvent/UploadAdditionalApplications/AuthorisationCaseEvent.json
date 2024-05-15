@@ -7,7 +7,6 @@
       {
         "UserRoles": [
           "[APPLICANTSOLICITOR]",
-          "[CREATOR]",
           "[C100APPLICANTSOLICITOR1]",
           "[C100APPLICANTSOLICITOR2]",
           "[C100APPLICANTSOLICITOR3]",
@@ -30,7 +29,96 @@
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "awpPaymentSuccessCallback",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[C100APPLICANTSOLICITOR1]",
+          "[C100APPLICANTSOLICITOR2]",
+          "[C100APPLICANTSOLICITOR3]",
+          "[C100APPLICANTSOLICITOR4]",
+          "[C100APPLICANTSOLICITOR5]",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "[FL401APPLICANTSOLICITOR]",
+          "[FL401RESPONDENTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "awpPaymentFailureCallback",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[C100APPLICANTSOLICITOR1]",
+          "[C100APPLICANTSOLICITOR2]",
+          "[C100APPLICANTSOLICITOR3]",
+          "[C100APPLICANTSOLICITOR4]",
+          "[C100APPLICANTSOLICITOR5]",
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "[FL401APPLICANTSOLICITOR]",
+          "[FL401RESPONDENTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "allAwPInReview",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-wa-task-configuration"
         ],
         "CRUD": "R"
       }

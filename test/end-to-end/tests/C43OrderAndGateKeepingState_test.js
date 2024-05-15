@@ -10,9 +10,11 @@ Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
   await I.draftAnOrder();
-  caseId = await I.saveTheCaseIdAndSignoutAsSwanseaCourtAdmin();
+  caseId = await I.saveTheCaseIdAndSignInAsStokeCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.issueCase();
+  await I.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
+  await I.searchForCasesWithId(caseId);
   await I.moveCaseToGateKeeping();
 }).retry(testConfig.TestRetryScenarios);
 
@@ -23,7 +25,7 @@ Scenario('As a Judge edit & change a draft order @regression-suite', async({ I }
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin edit & serve an order @regression-suite', async({ I }) => {
-  await I.loginAsCourtAdmin();
+  await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.serveAnOrder();
   await I.performServiceOfApplication();
@@ -41,7 +43,7 @@ Scenario('As a court admin Verify SOA and Task tab after Confidentiality check @
   await I.verifyPostConfidentialityCheck_Yes();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As an Applicant Solicitor execute Statement of service  @regression-suite', async({ I }) => {
+Scenario('As an Applicant Solicitor execute Statement of service @regression-suite', async({ I }) => {
   await I.loginAsSolicitor();
   await I.searchForCasesWithId(caseId);
   await I.completeStatementOfService();
