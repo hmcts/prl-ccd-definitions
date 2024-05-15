@@ -22,6 +22,17 @@ module.exports = {
     submitOther: 'input[type="submit"]'
   },
 
+
+
+  async getCaseIDFromCaseDetailsPage() {
+    const h2CaseIdText = await I.grabTextFrom('//ccd-case-header//h2[3]');
+    let caseId = h2CaseIdText.split(':')[1];
+    caseId = caseId.trim().split('-');
+    caseId = caseId.join('');
+    console.log(caseId);
+    return caseId;
+  },
+
   async clickCreateCase() {
     global.logCallingFunction();
     await I.waitForSelector(this.fields.createCaseLink);
@@ -298,7 +309,10 @@ module.exports = {
   async saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
     // I.wait('20');
     global.logCallingFunction();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+
+    const caseId = await this.getCaseIDFromCaseDetailsPage()
+
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
     // await I.wait('10');
