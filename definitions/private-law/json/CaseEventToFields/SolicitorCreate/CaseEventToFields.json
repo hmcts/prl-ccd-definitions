@@ -83,10 +83,22 @@
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "helpWithFeesNotAvailable",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "No",
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorCreate",
     "CaseFieldID": "applicantCaseName",
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "PageShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Yes"
   },
@@ -111,6 +123,7 @@
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
+    "RetainHiddenValue": "Y",
     "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\""
   }
 ]

@@ -11,9 +11,99 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
+    "ListElementCode": "author",
+    "FieldType": "Text",
+    "ElementLabel": "Uploaded by",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "caReasonsForC2Application",
+    "ElementLabel": "Reason for application",
+    "HintText": "Select all that apply",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "C2AdditionalOrdersRequestedCa",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "daReasonsForC2Application",
+    "ElementLabel": "Reason for application",
+    "HintText": "Select all that apply",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "C2AdditionalOrdersRequestedDa",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "combinedReasonsForC2Application",
+    "ElementLabel": "Reason for application",
+    "HintText": "Select all that apply",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "CombinedC2AdditionalOrdersRequested",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "otherReasonsFoC2Application",
+    "FieldType": "Text",
+    "ElementLabel": "Other reasons for C2 Application",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "hearingList",
+    "ElementLabel": "Hearing List",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "requestedHearingToAdjourn",
+    "ElementLabel": "Hearing to adjourn",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "uploadedDateTime",
+    "FieldType": "Text",
+    "ElementLabel": "Date submitted",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
     "ListElementCode": "document",
     "FieldType": "Document",
-    "ElementLabel": "File",
+    "ElementLabel": " ",
+    "RegularExpression": ".doc,.docx,.pdf",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/11/2022",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "finalDocument",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "ElementLabel": "Application",
     "RegularExpression": ".doc,.docx,.pdf",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -31,83 +121,20 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "uploadedDateTime",
-    "FieldType": "Text",
-    "ElementLabel": "Date and time of upload",
+    "ListElementCode": "documentAcknowledgeLabel",
+    "FieldType": "Label",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "Comment": "Presentational only - used to display a warning label in the event."
   },
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "author",
-    "FieldType": "Text",
-    "ElementLabel": "Uploaded by",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "othersNotified",
-    "Comment": "Deprecated",
-    "FieldType": "Text",
-    "ElementLabel": "People notified",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "description",
-    "FieldType": "TextArea",
-    "ElementLabel": "Notes",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "nameOfRepresentative",
-    "FieldType": "Text",
-    "ElementLabel": "Name of representative",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "usePbaPayment",
-    "FieldType": "YesOrNo",
-    "ElementLabel": "Paid with PBA",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "pbaNumber",
-    "HintText": "For example, PBA1234567",
-    "FieldType": "Text",
-    "ElementLabel": "Payment by account (PBA) number",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "clientCode",
-    "FieldType": "Text",
-    "ElementLabel": "Client code",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "fileReference",
-    "FieldType": "Text",
-    "ElementLabel": "Customer reference",
+    "ListElementCode": "documentAcknowledge",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "DocumentAcknowledge",
+    "ElementLabel": "Tick to confirm this document is related to this case",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -144,61 +171,13 @@
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "supportingEvidenceLA",
-    "ElementLabel": "Supporting documents",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "SupportingEvidenceBundle",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "supportingEvidenceNC",
-    "ElementLabel": "Supporting documents",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "SupportingEvidenceBundle",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "c2AdditionalOrdersRequested",
-    "ElementLabel": "Additional orders requested",
-    "HintText": "Select all that apply",
-    "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "C2AdditionalOrdersRequested",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
     "ListElementCode": "parentalResponsibilityType",
     "ElementLabel": "Who's seeking parental responsibility?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ParentalResponsibilityType",
     "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "hearingList",
-    "ElementLabel": "Which hearing?",
-    "FieldType": "DynamicList",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "20/11/2022",
-    "ID": "C2DocumentBundle",
-    "ListElementCode": "requestedHearingToAdjourn",
-    "ElementLabel": "Requested hearing to adjourn",
-    "FieldType": "Text",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "applicantName=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/11/2022",
@@ -211,22 +190,39 @@
     "Searchable": "N"
   },
   {
-    "LiveFrom": "20/11/2022",
+    "LiveFrom": "01/01/2017",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "documentAcknowledgeLabel",
-    "FieldType": "Label",
-    "ElementLabel": " ",
+    "ListElementCode": "urgency",
+    "FieldType": "Urgency",
+    "ElementLabel": "How soon does the judge need to consider the application?",
     "SecurityClassification": "Public",
-    "Searchable": "N",
-    "Comment": "Presentational only - used to display a warning label in the event."
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "c2ApplicationDetails",
+    "FieldType": "C2ApplicationDetails",
+    "ElementLabel": "Application details",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   },
   {
     "LiveFrom": "20/11/2022",
     "ID": "C2DocumentBundle",
-    "ListElementCode": "documentAcknowledge",
-    "FieldType": "MultiSelectList",
-    "FieldTypeParameter": "DocumentAcknowledge",
-    "ElementLabel": "Tick to confirm this document is related to Familyman Case number/Names/CCD",
+    "ListElementCode": "documentRelatedToCase",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Document is related to Familyman Case number/Names/CCD",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "documentAcknowledge=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "ID": "C2DocumentBundle",
+    "ListElementCode": "applicationStatus",
+    "FieldType": "Text",
+    "ElementLabel": "Application status",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

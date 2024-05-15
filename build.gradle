@@ -2,14 +2,10 @@ plugins {
     id 'java'
     id 'java-library'
     id 'jacoco'
-    id 'maven'
 }
 
 group 'com.github.hmcts'
 version 'DEV-SNAPSHOT'
-
-sourceCompatibility = 11
-targetCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -25,9 +21,9 @@ task highLevelDataSetup(type: JavaExec) {
 }
 
 dependencies {
-    implementation group: 'com.github.hmcts', name: 'befta-fw', version: '8.7.9'
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.3'
+    implementation group: 'com.github.hmcts', name: 'befta-fw', version: '8.7.11'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.12'
 
-    testCompile group: 'junit', name: 'junit', version: 4.12
-    testCompile 'pl.pragmatists:JUnitParams:1.1.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
 }

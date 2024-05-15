@@ -120,6 +120,17 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabChildRevisedLabel",
+    "Label": "## Child details",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
@@ -159,11 +170,28 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabAllegationsOfHarmRevisedLabel",
+    "Label": "## Allegations of harm",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
     "ID": "allegationsOfHarmOverviewTable",
     "Label": "Allegations of harm",
     "FieldType": "AllegationsOfHarmOverview",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedOverviewTable",
+    "Label": "Allegations of harm",
+    "FieldType": "AllegationsOfHarmRevisedOverview",
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -189,6 +217,24 @@
     "ID": "miamExemptionsTable",
     "Label": "Miam exemption details",
     "FieldType": "MiamExemptions",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamPolicyUpgradeTable",
+    "Label": "MIAM",
+    "FieldType": "MiamPolicyUpgrade",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "miamPolicyUpgradeExemptionsTable",
+    "Label": "Miam exemption details",
+    "FieldType": "MiamPolicyUpgradeExemptions",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -314,6 +360,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedOrdersTable",
+    "Label": "Orders",
+    "FieldType": "AllegationsOfHarmRevisedOrders",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
     "ID": "allegationsOfHarmDomesticAbuseTable",
     "Label": "Any form of domestic abuse",
     "FieldType": "AllegationsOfHarmDomesticAbuse",
@@ -341,11 +395,44 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedChildAbductionTable",
+    "Label": "Child abduction",
+    "FieldType": "AllegationsOfHarmRevisedChildAbduction",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedOtherConcernsTable",
+    "Label": "Other concerns",
+    "FieldType": "AllegationsOfHarmRevisedOtherConcerns",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
     "ID": "applicationTabOtherPeopleInTheCaseLabel",
     "Label": "## Other people in the case",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabOtherPeopleRevisedInTheCaseLabel",
+    "Label": "## Other people in the case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedChildContactTable",
+    "Label": "Child contact",
+    "FieldType": "AllegationsOfHarmRevisedChildContact",
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -355,6 +442,101 @@
     "Min": "1",
     "FieldType": "Collection",
     "FieldTypeParameter": "OtherPersonInTheCase",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeopleInTheCaseRevisedTable",
+    "Label": "Other people in the case",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherPersonInTheCaseRevised",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabOtherChildNotInTheCaseLabel",
+    "Label": "## Other child not in the case",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherChildNotInTheCaseTable",
+    "Label": "Other child not in the case",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherChildNotInTheCase",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabChildAndApplicantsRelationLabel",
+    "Label": "## Applicant relation to child",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childAndApplicantsRelationTable",
+    "Label": "Applicant relation to child",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ChildrenAndApplicants",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabChildAndRespondentRelationLabel",
+    "Label": "## Respondent relation to child",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childAndRespondentRelationsTable",
+    "Label": "Respondent relation to child",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ChildrenAndRespondents",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "applicationTabChildAndOtherPeopleRelationLabel",
+    "Label": "## Other people in the application's relation to child",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childAndOtherPeopleRelationsTable",
+    "Label": "Other people in the application's relation to child",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ChildrenAndOtherPeople",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -369,6 +551,28 @@
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childDetailsRevisedTable",
+    "Label": "Child",
+    "Min": "1",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ChildDetailsRevised",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "childDetailsRevisedExtraTable",
+    "Label": "Additional questions",
+    "FieldType": "ChildDetailsRevisedExtraInfo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -593,9 +797,27 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "PRLAPPS",
     "ID": "helpWithFeesDetails",
-    "Label": "## Help with Fees details-----",
+    "Label": "## Help with Fees details",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedDATable",
+    "Label": "Domestic abuse",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "AllegationsOfHarmRevisedDA",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "allegationsOfHarmRevisedCATable",
+    "Label": "Behaviour",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "AllegationsOfHarmRevisedCA",
+    "SecurityClassification": "Public"
   }
 ]

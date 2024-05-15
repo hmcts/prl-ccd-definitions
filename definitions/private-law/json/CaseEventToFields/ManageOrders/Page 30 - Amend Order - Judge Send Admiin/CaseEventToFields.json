@@ -3,7 +3,7 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "judgeDirectionsToAdminAmendOrder",
+    "CaseFieldID": "judgeDirectionsToAdmin",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "OPTIONAL",
     "PageID": 30,
@@ -20,6 +20,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 30,
     "PageDisplayOrder": 30,
+    "FieldShowCondition": "[STATE] = \"JUDICIAL_REVIEW\" OR [STATE] = \"CASE_ISSUED\"",
     "ShowSummaryChangeOption": "N",
     "Publish" : "True"
   }

@@ -2,7 +2,7 @@ const defaultPassword = 'Password12';
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'ccd-importer@server.net',
+    email: 'prl-aat-ccddefimporter@hmcts.net',
     password: defaultPassword
   }
 };
