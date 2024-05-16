@@ -1,3 +1,5 @@
+const path = require('path')
+
 global.logCallingFunction = () => {
   const errorObj = new Error();
   const frame = errorObj.stack.split('\n')[2];
@@ -31,6 +33,7 @@ exports.config = {
       windowSize: '1280x960',
       disableScreenshots: false,
       video: true,
+      recordVideo: { dir: path.resolve(__dirname,'../../output') },
       keepVideoForPassedTests: false,
       keepTraceForPassedTests: false,
       fullPageScreenshots: true,
