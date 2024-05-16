@@ -5,7 +5,7 @@ let caseId;
 
 Feature('Solicitor - Manage order, Gatekeeping & Service of application tests');
 
-Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite', async({ I }) => {
+Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite @debug', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
@@ -18,7 +18,7 @@ Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-
   await I.moveCaseToGateKeeping();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a Judge edit & change a draft order @regression-suite', async({ I }) => {
+Scenario('As a Judge edit & change a draft order @regression-suite @debug', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.editAnDraftOrderCreatedBySolicitor();

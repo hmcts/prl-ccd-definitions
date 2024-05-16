@@ -327,7 +327,8 @@ module.exports = {
   async saveTheCaseIdAndSignInAsStokeCourtAdmin() {
     // I.wait('20');
     global.logCallingFunction();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    const caseId = await this.getCaseIDFromCaseDetailsPage();
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
     // await I.wait('10');
@@ -342,7 +343,8 @@ module.exports = {
 
   async saveTheCaseId() {
     global.logCallingFunction();
-    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    const caseId = await this.getCaseIDFromCaseDetailsPage();
+    // const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     return caseId;
   }
