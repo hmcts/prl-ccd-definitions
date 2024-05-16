@@ -121,6 +121,13 @@ module.exports = {
     await I.retry(retryCount).click('Continue');
   },
 
+  async selectTypeOfApplicationFL401DummyCase() {
+    await I.waitForText('Type of application');
+    await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
+    await I.retry(retryCount).click('Continue');
+    await I.wait('2');
+  },
+
   async fillSolicitorApplicationPageC100() {
     // await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click(
@@ -230,6 +237,14 @@ module.exports = {
     await this.amOnHistoryPageWithSuccessNotification();
   },
 
+  async createNewSolicitorDummyFL401Case() {
+    await this.clickCreateCase();
+    await this.fillFormAndSubmit_TSSolicitorApplication();
+    await this.selectTypeOfApplicationFL401DummyCase();
+    await I.retry(retryCount).click('Create my dummy case');
+    await I.wait('3');
+  },
+
   async fillFormAndSubmit_TSSolicitorApplication() {
     // await I.wait('15');
     await I.waitForElement(this.fields.jurisdiction);
@@ -242,20 +257,30 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
 
-  async saveTheCaseIdAndSignout() {
+  async saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
     // I.wait('20');
     const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
     console.log(caseId);
     await I.retry(retryCount).click(this.fields.signOut);
     // await I.wait('10');
-    try {
-      await I.retry(retryCount).seeElement('#authorizeCommand');
-      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
-    } catch {
-      await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
-      await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
-    }
+    await I.retry(retryCount).seeElement('#authorizeCommand');
+    await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
+    await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
+    await I.wait('5');
+    await I.retry(retryCount).click(this.fields.submitOther);
+    await I.wait('10');
+    return caseId;
+  },
+
+  async saveTheCaseIdAndSignInAsStokeCourtAdmin() {
+    // I.wait('20');
+    const caseId = normalizeCaseId(await I.grabTextFrom('.alert-message'));
+    console.log(caseId);
+    await I.retry(retryCount).click(this.fields.signOut);
+    // await I.wait('10');
+    await I.retry(retryCount).seeElement('#authorizeCommand');
+    await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
+    await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     await I.wait('5');
     await I.retry(retryCount).click(this.fields.submitOther);
     await I.wait('10');

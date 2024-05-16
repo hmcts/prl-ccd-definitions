@@ -37,7 +37,7 @@ module.exports = {
   },
 
   async chooseMessageTypeAndReceiver() {
-    await I.waitForText(sendMsgConfig.intMsgQuestion);
+    await I.waitForText(sendMsgConfig.whoMsgQuestion);
     await I.click(this.fields.chooseInternalUserField);
     await I.waitForText(sendMsgConfig.selectReceiverText);
     await I.click(this.fields.chooseUserType);

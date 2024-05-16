@@ -37,14 +37,20 @@ module.exports = {
   },
 
   async searchForCasesWithId(caseId, state = 'Any') {
+    await I.wait('5');
     await I.navigationInWAEnvs(this.fields.caseList);
+    await I.wait('5');
+    await I.click(this.fields.caseList);
     this.setInitialSearchFields(state);
     await I.grabCurrentUrl();
+    await I.wait('3');
     await I.fillField(this.fields.caseId, caseId);
     await I.grabCurrentUrl();
+    await I.wait('3');
     await I.click(this.fields.search);
     await I.grabCurrentUrl();
     await I.waitForElement(this.fields.searchResult);
+    await I.wait('3');
     await I.click(this.fields.searchResult);
   },
 

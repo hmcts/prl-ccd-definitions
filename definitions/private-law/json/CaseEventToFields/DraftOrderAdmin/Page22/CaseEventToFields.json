@@ -9,6 +9,7 @@
     "PageID": 22,
     "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/serve-order/mid-event",
     "PageShowCondition": "doYouWantToServeOrder=\"Yes\""
   },
   {
@@ -42,8 +43,7 @@
     "PageID": 22,
     "PageDisplayOrder": 22,
     "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "Yes",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/serve-order/mid-event"
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "01/12/2022",
@@ -75,11 +75,11 @@
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "isOnlyC47aOrderSelectedToServe",
     "PageFieldDisplayOrder": 7,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 22,
     "PageDisplayOrder": 22,
     "ShowSummaryChangeOption": "No",
-    "RetainHiddenValue": "No",
+    "RetainHiddenValue": "Yes",
     "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
   }
 ]

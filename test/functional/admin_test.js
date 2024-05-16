@@ -25,6 +25,13 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.createRole('ctsc-team-leader');
   I.createRole('caseworker-privatelaw-cafcass');
   I.createRole('prd-admin');
+  I.createRole('hearing-centre-team-leader');
+  I.createRole('tribunal-caseworker');
+  I.createRole('allocated-magistrate');
+  I.createRole('hearing-centre-admin');
+  I.createRole('judge');
+  I.createRole('ctsc');
+  I.createRole('senior-tribunal-caseworker');
   I.click('Manage User Roles');
   I.wait('10');
   I.see('citizen');
@@ -49,6 +56,13 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('ctsc-team-leader');
   I.see('caseworker-privatelaw-cafcass');
   I.see('prd-admin');
+  I.see('hearing-centre-team-leader');
+  I.see('tribunal-caseworker');
+  I.see('allocated-magistrate');
+  I.see('hearing-centre-admin');
+  I.see('judge');
+  I.see('ctsc');
+  I.see('senior-tribunal-caseworker');
 });// eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
