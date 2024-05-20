@@ -42,7 +42,8 @@ exports.config = {
     },
     PlaywrightHelpers: { require: './helpers/playwrightHelper.js' },
     GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
-    GeneralHelper: { require: './helpers/generalHelper.js' }
+    GeneralHelper: { require: './helpers/generalHelper.js' },
+    Mochawesome: { uniqueScreenshotNames: true }
   },
   plugins: {
     retryFailedStep: {
@@ -53,6 +54,10 @@ exports.config = {
     autoDelay: { enabled: true },
     screenshotOnFail: {
       fullPageScreenshots: true,
+      enabled: true
+    },
+    hooksPlugin: {
+      require: './helpers/hooks.js',
       enabled: true
     }
   },
