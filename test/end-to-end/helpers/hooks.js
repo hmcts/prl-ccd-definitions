@@ -6,11 +6,11 @@ const codeceptMochawesomeLog = require('./reportLogger');
 module.exports = () => {
   event.dispatcher.on(event.test.before, test => {
     codeceptMochawesomeLog.AddMessage(`************ Test status|${test.title}:${test.state}`);
-    actor().flushLogsToReport();
+    // actor().flushLogsToReport();
   });
   event.dispatcher.on(event.test.after, async test => {
     codeceptMochawesomeLog.AddMessage(`************ Test status|${test.title}:${test.state}`);
-    actor().flushLogsToReport();
+    // actor().flushLogsToReport();
 
     if (test.state === 'failed') {
       codeceptMochawesomeLog.AddMessage('*************** Browser error logs ***************');
