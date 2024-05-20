@@ -4,7 +4,7 @@ const codeceptMochawesomeLog = require('./reportLogger');
 
 
 module.exports = () => {
-  event.dispatcher.on(event.test.before, async test => {
+  event.dispatcher.on(event.test.before, test => {
     codeceptMochawesomeLog.AddMessage(`************ Test status|${test.title}:${test.state}`);
     actor().flushLogsToReport();
   });
@@ -30,4 +30,4 @@ module.exports = () => {
   event.dispatcher.on(event.test.passed, () => {
     codeceptMochawesomeLog.AddMessage('************ Test passed');
   });
-}
+};

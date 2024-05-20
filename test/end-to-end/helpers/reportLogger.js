@@ -9,7 +9,7 @@ class CodeceptMochawesomeLog {
     const mm = d.getMinutes() < magicNum ? `0${d.getMinutes()}` : d.getMinutes();
     const ss = d.getSeconds() < magicNum ? `0${d.getSeconds()}` : d.getSeconds();
 
-    return `[${hh}:${mm }:${ss}]`;
+    return `[${hh}:${mm}:${ss}]`;
   }
 
 
