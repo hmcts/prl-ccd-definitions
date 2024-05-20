@@ -24,8 +24,7 @@ module.exports = {
   },
 
   async fillApplicantsPage() {
-    await I.waitForText('Add new');
-    await I.retry(retryCount).click('Add new');
+    await I.wait('6');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
@@ -47,8 +46,8 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicants_0_representativeLastName"]', 'Robinson');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
-
     await I.runAccessibilityTest();
+    await I.waitForText('Add new');
     await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
   },

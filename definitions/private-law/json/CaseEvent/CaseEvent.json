@@ -193,6 +193,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-party-information",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-party-details",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
@@ -291,6 +292,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-party-information",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-party-details",
     "EndButtonLabel": "Save and continue",
@@ -757,7 +759,8 @@
     "EndButtonLabel": "Submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/08/2021",
