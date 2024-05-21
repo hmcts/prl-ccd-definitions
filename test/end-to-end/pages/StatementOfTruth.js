@@ -15,7 +15,7 @@ module.exports = {
     confidentialConsent: '#fl401ConfidentialityCheck_confidentialityConsent',
     selectCourt: 'select[id="submitCountyCourtSelection"]'
   },
-  
+
 
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Statement of Truth and submit');
