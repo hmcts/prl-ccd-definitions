@@ -1,9 +1,12 @@
 // const logCustomization = require('./helpers/logCustomization')
 // logCustomization.overrideConsoleLogforWorkersThreads();
+const path = require('path');
+
+const outputDir = path.resolve(__dirname, '../../output');
 
 exports.config = {
   tests: './tests/*_test.js',
-  output: '../../output',
+  output: outputDir,
   helpers: {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
@@ -61,10 +64,10 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: './output/console.log',
+        stdout: `${outputDir}/console.log`,
         options: {
           includeScreenshots: true,
-          reportDir: './output',
+          reportDir: outputDir,
           reportFilename: 'PrL-CCD-Callbacks-tests',
           reportTitle: 'PrL CCD Callbacks Tests',
           inline: true,
