@@ -1,7 +1,7 @@
 'use strict';
 const I = actor();
 const config = require('../config');
-
+const testLogger = require('../helpers/testLogger')
 const retryCount = 3;
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
@@ -23,6 +23,7 @@ module.exports = {
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
       await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
+      testLogger.AddMessage(`Login with user : ${config.legalProfessionalUserOne.email}`);
       await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
     } catch {
       await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
@@ -37,6 +38,7 @@ module.exports = {
       await I.runAccessibilityTest();
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
+      testLogger.AddMessage(`Login with user : ${config.legalProfessionalUserTwo.email}`);
       await I.fillField(this.fields.email, config.legalProfessionalUserTwo.email);
       await I.fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     } catch {
@@ -51,6 +53,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForSelector('#authorizeCommand');
     await I.seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.caseManagerUser.email}`);
     await I.fillField(this.fields.email, config.caseManagerUser.email);
     await I.fillField(this.fields.password, config.caseManagerUser.password);
 
@@ -64,6 +67,7 @@ module.exports = {
       await I.runAccessibilityTest();
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
+      testLogger.AddMessage(`Login with user : ${config.judgeUserOne.email}`);
       await I.fillField(this.fields.email, config.judgeUserOne.email);
       await I.fillField(this.fields.password, config.judgeUserOne.password);
     } catch {
@@ -85,6 +89,7 @@ module.exports = {
       await I.runAccessibilityTest();
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
+      testLogger.AddMessage(`Login with user : ${config.legalAdviserUserOne.email}`);
       await I.fillField(this.fields.email, config.legalAdviserUserOne.email);
       await I.fillField(this.fields.password, config.legalAdviserUserOne.password);
     } catch {
@@ -107,6 +112,7 @@ module.exports = {
       await I.runAccessibilityTest();
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
+      testLogger.AddMessage(`Login with user : ${config.legalProfessionalUserTwo.email}`);
       await I.fillField(this.fields.email, config.legalProfessionalUserTwo.email);
       await I.fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     } catch {
@@ -122,6 +128,7 @@ module.exports = {
     try {
       await I.waitForSelector('#authorizeCommand');
       await I.seeElement('#authorizeCommand');
+      testLogger.AddMessage(`Login with user : ${config.legalProfessionalUserOne.email}`);
       await I.fillField(this.fields.email, config.legalProfessionalUserOne.email);
       await I.fillField(this.fields.password, config.legalProfessionalUserOne.password);
     } catch {
@@ -138,6 +145,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForSelector('#authorizeCommand');
     await I.seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.courtAdminUser.email}`);
     await I.fillField(this.fields.email, config.courtAdminUser.email);
     await I.fillField(this.fields.password, config.courtAdminUser.password);
     await I.click(this.fields.submit);
@@ -149,6 +157,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForSelector('#authorizeCommand');
     await I.seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.respondentSolicitor.email}`);
     await I.fillField(this.fields.email, config.respondentSolicitor.email);
     await I.fillField(this.fields.password, config.respondentSolicitor.password);
     await I.click(this.fields.submit);
@@ -160,6 +169,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.waitForSelector('#authorizeCommand');
     await I.seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.oldCourtAdminUser.email}`);
     await I.fillField(this.fields.email, config.oldCourtAdminUser.email);
     await I.fillField(this.fields.password, config.oldCourtAdminUser.password);
     await I.click(this.fields.submit);

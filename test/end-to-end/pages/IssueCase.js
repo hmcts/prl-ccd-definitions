@@ -34,7 +34,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
     await I.wait('3');
     await I.retry(retryCount).click(this.fields.submit);
-    await I.wait(longWait);
-    await I.see('Case Issued');
+    // await I.wait(longWait);
+    await I.waitForText('Case Issued');
   }
 };

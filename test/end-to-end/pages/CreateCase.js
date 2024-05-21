@@ -116,7 +116,7 @@ module.exports = {
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('Continue');
 
-    await I.waitForText('TS-Admin application-Noc');
+    await I.waitForSelector('#applicantCaseName');
     await I.fillField('#applicantCaseName', 'auto test C100');
     await I.retry(retryCount).click('Continue');
     // await I.wait('3');
