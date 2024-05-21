@@ -1,22 +1,9 @@
-const path = require('path');
-
-global.logCallingFunction = () => {
-  const errorObj = new Error();
-  const frame = errorObj.stack.split('\n')[2];
-  const lineNumber = frame.split(':').reverse()[1];
-  let functionName = frame.split(' ')[5];
-  // const atFile = frame.split(' ')[6];
-
-  if (functionName.includes('/')) {
-    functionName = functionName.split('/').reverse()[0];
-  }
-  functionName += `: ${lineNumber}`;
-  console.log(`==> ${frame}`);
-};
+// const logCustomization = require('./helpers/logCustomization')
+// logCustomization.overrideConsoleLogforWorkersThreads();
 
 exports.config = {
   tests: './tests/*_test.js',
-  output: './output',
+  output: '../../output',
   helpers: {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
@@ -33,7 +20,7 @@ exports.config = {
       windowSize: '1280x960',
       disableScreenshots: false,
       video: true,
-      recordVideo: { dir: path.resolve(__dirname, '../../output') },
+      // recordVideo: { dir: path.resolve(__dirname, '../../output') },
       keepVideoForPassedTests: false,
       keepTraceForPassedTests: false,
       fullPageScreenshots: true,
@@ -74,10 +61,10 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: './output/console.log',
+        stdout: '../../output/console.log',
         options: {
           includeScreenshots: true,
-          reportDir: './output',
+          reportDir: '../../output',
           reportFilename: 'PrL-CCD-Callbacks-tests',
           reportTitle: 'PrL CCD Callbacks Tests',
           inline: true,
