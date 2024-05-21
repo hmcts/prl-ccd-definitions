@@ -61,10 +61,10 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: '../../output/console.log',
+        stdout: './output/console.log',
         options: {
           includeScreenshots: true,
-          reportDir: '../../output',
+          reportDir: './output',
           reportFilename: 'PrL-CCD-Callbacks-tests',
           reportTitle: 'PrL CCD Callbacks Tests',
           inline: true,
