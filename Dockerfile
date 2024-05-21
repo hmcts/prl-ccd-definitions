@@ -8,3 +8,6 @@ COPY index.js ./
 ENV NODE_CONFIG_DIR="/config"
 CMD ["yarn", "start"]
 EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=15s --start-period=60s --retries=3 \
+    CMD wget -q --spider localhost:3100/health || exit 1
