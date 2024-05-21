@@ -1,6 +1,7 @@
 const I = actor();
 const retryCount = 3;
 const config = require('../config');
+const testLogger = require('../helpers/testLogger');
 
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
@@ -29,6 +30,7 @@ module.exports = {
     caseId = caseId.trim().split('-');
     caseId = caseId.join('');
     console.log(caseId);
+    testLogger.AddMessage(`Case ID: ${caseId}`);
     return caseId;
   },
 

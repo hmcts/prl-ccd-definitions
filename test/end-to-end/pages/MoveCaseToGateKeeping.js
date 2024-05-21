@@ -11,7 +11,8 @@ module.exports = {
     returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
     assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Send to Gatekeeper")]/../../dl/div[4]//dd/a',
     gateKeeperTask: '//a[contains(.,"Send To Gatekeeper")]',
-    selectGateKeeperOption: '#isSpecificGateKeeperNeeded_No'
+    selectGateKeeperOption: '#isSpecificGateKeeperNeeded_No',
+    summaryTab: '//div[contains(text(),"Summary")]'
   },
 
   async moveCaseToGateKeeping() {
@@ -39,6 +40,8 @@ module.exports = {
 
     await I.wait(medWait);
     await I.seeElement('//span[contains(.,"success")]');
+    await I.waitForElement(this.fields.summaryTab);
+    await I.retry(retryCount).click(this.fields.summaryTab);
     await I.see('Gatekeeping');
   }
 };

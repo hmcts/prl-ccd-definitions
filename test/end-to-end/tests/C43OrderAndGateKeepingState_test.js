@@ -18,7 +18,7 @@ Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-
   await I.moveCaseToGateKeeping();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a Judge edit & change a draft order @regression-suite', async({ I }) => {
+Scenario('As a Judge edit & change a draft order @regression-suite @debug', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
   await I.editAnDraftOrderCreatedBySolicitor();

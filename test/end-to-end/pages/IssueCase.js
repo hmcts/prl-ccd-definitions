@@ -11,12 +11,13 @@ module.exports = {
     returnToTaskTab: 'div > div.govuk-form-group.govuk-form-group--error > a',
     assignToMe: '//a[@id="action_claim"]',
     issueTaskName: '//a[contains(.,"Issue and send to local Court")]',
-    courtListDropdown: '//select[@id="courtList"]'
+    courtListDropdown: '//select[@id="courtList"]',
+    summaryTab: '//div[contains(text(),"Summary")]'
   },
 
   async issueCase() {
     await I.retry(retryCount).triggerEvent('Issue and send to local court');
-    await I.wait(longWait);
+    await I.waitForElement(this.fields.returnToTaskTab);
     await I.retry(retryCount).click(this.fields.returnToTaskTab);
 
     await I.wait(medWait);
@@ -35,6 +36,8 @@ module.exports = {
     await I.wait('3');
     await I.retry(retryCount).click(this.fields.submit);
     // await I.wait(longWait);
+    await I.waitForElement(this.fields.summaryTab);
+    await I.retry(retryCount).click(this.fields.summaryTab);
     await I.waitForText('Case Issued');
   }
 };
