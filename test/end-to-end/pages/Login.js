@@ -1,7 +1,8 @@
 'use strict';
 const I = actor();
 const config = require('../config');
-const testLogger = require('../helpers/testLogger')
+const testLogger = require('../helpers/testLogger');
+
 const retryCount = 3;
 const normalizeCaseId = caseId => {
   return caseId.toString().replace(/\D/g, '');
