@@ -23,7 +23,7 @@ exports.config = {
       windowSize: '1280x960',
       disableScreenshots: false,
       video: true,
-      // recordVideo: { dir: path.resolve(__dirname, '../../output') },
+      recordVideo: { dir: outputDir },
       keepVideoForPassedTests: false,
       keepTraceForPassedTests: false,
       fullPageScreenshots: true,
