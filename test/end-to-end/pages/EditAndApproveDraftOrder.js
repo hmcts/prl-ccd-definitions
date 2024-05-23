@@ -10,6 +10,7 @@ module.exports = {
     orderByConsent_Yes: '#isTheOrderByConsent_Yes',
     draftOrdersDynamicList: '#draftOrdersDynamicList',
     tasksTab: '//div[contains(text(), "Tasks")]',
+    rolesAndAccessTab: '//div[contains(text(), "Roles and access")]',
     assignToMe: '//a[@id="action_claim"]',
     issueTaskName: '//a[contains(.,"Review and Approve Admin Order")]',
     selectDraftOrderForEditing: '#draftOrdersDynamicList',
@@ -32,6 +33,8 @@ module.exports = {
 
   async assignReviewTask() {
     await I.wait(medWait);
+    await I.click(this.fields.rolesAndAccessTab);
+    await I.wait(1);
     await I.click(this.fields.tasksTab);
 
     await I.wait(longWait);

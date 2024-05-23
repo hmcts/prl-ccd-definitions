@@ -206,6 +206,10 @@ module.exports = {
     await this.clickCreateCase();
     await this.fillFormAndSubmit_TS_Solicitor();
     await this.selectTypeOfApplicationC100();
+    await I.waitForText('TS-Solicitor application');
+    await I.waitForSelector('#applicantCaseName');
+    await I.fillField('#applicantCaseName', 'auto test C100');
+    await I.retry(retryCount).click('Continue');
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');
   },
