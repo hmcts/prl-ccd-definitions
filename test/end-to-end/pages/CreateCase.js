@@ -322,6 +322,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.signOut);
     // await I.wait('10');
     await I.retry(retryCount).seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.courtAdminUser.email}`);
     await I.retry(retryCount).fillField(this.fields.email, config.courtAdminUser.email);
     await I.retry(retryCount).fillField(this.fields.password, config.courtAdminUser.password);
     await I.wait('5');
@@ -339,6 +340,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.signOut);
     // await I.wait('10');
     await I.retry(retryCount).seeElement('#authorizeCommand');
+    testLogger.AddMessage(`Login with user : ${config.legalProfessionalUserTwo.email}`);
     await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserTwo.email);
     await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserTwo.password);
     await I.wait('5');

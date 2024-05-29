@@ -41,6 +41,7 @@ exports.config = {
       retries: 2,
       minTimeout: 2000
     },
+    retryTo: { enabled: true },
     autoDelay: { enabled: true },
     screenshotOnFail: {
       fullPageScreenshots: true,

@@ -1,3 +1,5 @@
+const testLogger = require("../helpers/testLogger");
+
 const I = actor();
 const retryCount = 3;
 const medWait = 20;
@@ -29,7 +31,13 @@ module.exports = {
 
   async triggerEvent() {
     global.logCallingFunction();
-    await I.retry(retryCount).triggerEvent('Submit and pay');
+    const retry = 3;
+    // eslint-disable-next-line no-undef
+    await retryTo(async() => {
+      testLogger.AddMessage('In retry triggger event for Submit and pay');
+      await I.retry(retryCount).triggerEvent('Submit and pay');
+      await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
+    }, retry);
   },
 
   async triggerDummyPaymentEvent() {
@@ -37,6 +45,7 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
     await I.waitForText('Dummy Payment confirmation');
     await I.waitForText('Make the payment');
+   
   },
 
   async confidentialityStatement() {

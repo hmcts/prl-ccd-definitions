@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 
 'use strict';
 const I = actor();
@@ -95,8 +97,11 @@ module.exports = {
   },
 
   async selectDraftOrder(modeOfOrder) {
-    await I.triggerEvent(modeOfOrder);
-    await I.waitForText(moConfig.draftOrderText);
+    await retryTo(async() => {
+      await I.triggerEvent(modeOfOrder);
+      await I.waitForText(moConfig.draftOrderText);
+    });
+  
     await I.click(this.fields.selectDraftOrder);
     await I.click(moConfig.continueText);
 
@@ -213,8 +218,11 @@ module.exports = {
   },
 
   async selectEditServeOrder(modeOfOrder) {
-    await I.triggerEvent(modeOfOrder);
-    await I.waitForText(moConfig.selectEditOrderText);
+    // eslint-disable-next-line no-unused-vars
+    await retryTo(async _retryFor => {
+      await I.triggerEvent(modeOfOrder);
+      await I.waitForText(moConfig.selectEditOrderText);
+    }, retryCount);
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
     await I.click(moConfig.continueText);
@@ -309,7 +317,7 @@ module.exports = {
     await I.waitForText(moConfig.cyaText);
     await I.click(moConfig.submitText);
     await I.wait('10');
-    await I.see('Order approved');
+    await I.waitForText('Order approved');
     await I.click(moConfig.returnToCaseDetails);
   },
 
