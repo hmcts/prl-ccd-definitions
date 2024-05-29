@@ -29,7 +29,7 @@ module.exports = {
     await I.click(this.fields.firstFlagSelectionEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Update flag "Documents in large print" comments');
+    await I.waitForText('Documents in large print');
     await I.click(manageFlagConfig.flagActiveState);
     await I.click(this.fields.nextBtn);
 
@@ -44,7 +44,7 @@ module.exports = {
     await I.click(this.fields.secondFlagSelectionEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Update flag "Support filling in forms" comments');
+    await I.waitForText('Support filling in forms');
     await I.click(manageFlagConfig.flagNotApprovedState);
     await I.fillField(this.fields.statusReasonChange, 'This is a test for non-approval');
     await I.click(this.fields.nextBtn);

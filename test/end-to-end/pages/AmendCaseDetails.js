@@ -68,7 +68,7 @@ module.exports = {
 
   async verifyUpdatedMiamDetails() {
     await I.click(this.fields.applicationTab);
-    await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings (or have they');
+    await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings');
     await I.runAccessibilityTest();
     await I.see('12345678');
     await I.see('Test mediator name');

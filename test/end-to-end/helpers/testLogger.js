@@ -69,7 +69,8 @@ class TestLogger {
     fs.appendFileSync(this.logFile, '\n');
     fs.appendFileSync(this.logFile, this.getDate() + message);
     console.log(this.getDate() + message);
-    actor().addMochawesomeContext(this.getDate() + message);
+    const I = actor();
+    I.addMochawesomeContext(this.getDate() + message);
   }
 
 
@@ -78,7 +79,8 @@ class TestLogger {
     fs.appendFileSync(this.logFile, '\n');
     fs.appendFileSync(this.logFile, this.getDate() + JSON.stringify(json, null, jsonIndent));
     console.log(this.getDate() + JSON.stringify(json, null, jsonIndent));
-    actor().addMochawesomeContext(this.getDate() + JSON.stringify(json, null, jsonIndent));
+    const I = actor();
+    I.addMochawesomeContext(this.getDate() + JSON.stringify(json, null, jsonIndent));
   }
 }
 
@@ -99,6 +101,6 @@ global.logCallingFunction = () => {
   functionName += `: ${lineNumber}`;
   console.log(`==> ${frame}`);
   testLogger.AddMessage(`==> ${frame}`);
-
-  actor().addMochawesomeContext(`==> ${frame}`);
+  const I = actor();
+  I.addMochawesomeContext(`==> ${frame}`);
 };

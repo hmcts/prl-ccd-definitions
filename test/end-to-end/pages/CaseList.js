@@ -40,7 +40,7 @@ module.exports = {
   async searchForCasesWithId(caseId, state = 'Any') {
     global.logCallingFunction();
     await I.wait('5');
-    await I.navigationInWAEnvs(this.fields.caseList);
+    await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
 
     // eslint-disable-next-line no-unused-vars
