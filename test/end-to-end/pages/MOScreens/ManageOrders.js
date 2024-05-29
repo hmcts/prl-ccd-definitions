@@ -101,7 +101,7 @@ module.exports = {
       await I.triggerEvent(modeOfOrder);
       await I.waitForText(moConfig.draftOrderText);
     });
-  
+
     await I.click(this.fields.selectDraftOrder);
     await I.click(moConfig.continueText);
 

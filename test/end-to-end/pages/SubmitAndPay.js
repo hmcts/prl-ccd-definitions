@@ -1,4 +1,4 @@
-const testLogger = require("../helpers/testLogger");
+const testLogger = require('../helpers/testLogger');
 
 const I = actor();
 const retryCount = 3;
@@ -45,7 +45,6 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
     await I.waitForText('Dummy Payment confirmation');
     await I.waitForText('Make the payment');
-   
   },
 
   async confidentialityStatement() {
