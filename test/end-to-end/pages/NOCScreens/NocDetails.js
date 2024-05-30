@@ -29,6 +29,7 @@ module.exports = {
   },
 
   async addNocDetails(caseId) {
+    await I.waitForText(nocConfig.nocText);
     await I.retry(retry).click(nocConfig.nocText);
     await I.waitForText(nocConfig.nocRequirementText);
     await I.fillField(this.fields.caseRef, caseId);
