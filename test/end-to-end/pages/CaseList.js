@@ -58,11 +58,8 @@ module.exports = {
     await I.grabCurrentUrl();
     await I.waitForElement(this.fields.searchResult);
     await I.wait('3');
-    // eslint-disable-next-line no-unused-vars
-    await retryTo(async _retryFor => {
-      await I.click(this.fields.searchResult);
-      await I.wait('5');
-    }, retryCount);
+    await I.waitForClickable(this.fields.searchResult);
+    await I.click(this.fields.searchResult);
   },
 
   searchForCasesWithName(caseName, state = 'Any') {

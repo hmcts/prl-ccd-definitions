@@ -33,7 +33,7 @@ exports.config = {
     PlaywrightHelpers: { require: './helpers/playwrightHelper.js' },
     GenerateReportHelper: { require: './helpers/generateReportHelper.js' },
     GeneralHelper: { require: './helpers/generalHelper.js' },
-    Mochawesome: { uniqueScreenshotNames: true }
+    Mochawesome: { uniqueScreenshotNames: true, disableScreenshots: false }
   },
   plugins: {
     retryFailedStep: {
