@@ -109,6 +109,9 @@ module.exports = () => {
     createNewCaseFL401_TS() {
       return CreateCasePage.createNewCaseFL401_TS();
     },
+    createC100UrgentCaseByCourtAdmin() {
+      return CreateCasePage.createC100UrgentCaseByCourtAdmin();
+    },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
     },
@@ -246,6 +249,9 @@ module.exports = () => {
     },
     runSubmitAndPay_TS() {
       return submitAndPay.dummyPaymentConfirmation();
+    },
+    submitAndPayCourtAdmin() {
+      return submitAndPay.submitAndPayCourtAdmin();
     },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
