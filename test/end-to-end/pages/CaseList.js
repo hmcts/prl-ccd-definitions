@@ -60,7 +60,6 @@ module.exports = {
     await I.wait('3');
     // eslint-disable-next-line no-unused-vars
     await retryTo(async _retryFor => {
-      await await I.click(this.fields.caseList);
       await I.click(this.fields.searchResult);
       await I.wait('5');
     }, retryCount);
