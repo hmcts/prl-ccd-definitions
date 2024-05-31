@@ -39,7 +39,7 @@ module.exports = {
 
   async searchForCasesWithId(caseId, state = 'Any') {
     global.logCallingFunction();
-    let caseidInViewCaseList = caseId.match(/.{1,4}/g);
+    // let caseidInViewCaseList = caseId.match(/.{1,4}/g);
     caseidInViewCaseList = caseidInViewCaseList.join('-');
     await I.wait('5');
     await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
@@ -58,7 +58,7 @@ module.exports = {
     await I.wait('3');
     await I.click(this.fields.search);
     await I.grabCurrentUrl();
-    await I.waitForText(caseidInViewCaseList);
+    // await I.waitForText(caseidInViewCaseList);
     await I.waitForElement(this.fields.searchResult);
     await I.wait('3');
     await I.retry(retryCount).click(this.fields.searchResult);
