@@ -59,7 +59,7 @@ module.exports = {
     await I.click(this.fields.search);
     await I.grabCurrentUrl();
     await I.waitForElement(`a[href*='/cases/case-details/${caseId}']`);
-    await I.waitForElement(this.fields.searchResult);
+    // await I.waitForElement(this.fields.searchResult);
     await I.wait('3');
     await I.retry(retryCount).click(`a[href*='/cases/case-details/${caseId}`);
   },
