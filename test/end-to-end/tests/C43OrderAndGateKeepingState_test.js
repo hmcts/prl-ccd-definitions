@@ -3,9 +3,9 @@ const testConfig = require('../config');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
-Feature('Solicitor - Manage order, Gatekeeping & Service of application tests');
+Feature('Solicitor - Manage order, Gatekeeping & Service of application tests @regression-suite-subset ');
 
-Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite @regression-suite-subset @debug', async({ I }) => {
+Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite @debug', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();
