@@ -40,7 +40,7 @@ module.exports = {
   async searchForCasesWithId(caseId, state = 'Any') {
     global.logCallingFunction();
     // let caseidInViewCaseList = caseId.match(/.{1,4}/g);
-    caseidInViewCaseList = caseidInViewCaseList.join('-');
+    // caseidInViewCaseList = caseidInViewCaseList.join('-');
     await I.wait('5');
     await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
