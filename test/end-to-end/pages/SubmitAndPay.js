@@ -115,6 +115,15 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
 
+  async happensNextCourtAdmin() {
+    await I.wait('12');
+    await I.retry(retryCount).click(this.fields.submit);
+    await I.wait('6');
+    await I.retry(retryCount).waitForElement(this.fields.caseStatus);
+    await I.wait('4');
+    await I.retry(retryCount).waitForText('Submitted');
+  },
+
   async runDummyPayment() {
     global.logCallingFunction();
     await this.triggerDummyPaymentEvent();
@@ -203,5 +212,14 @@ module.exports = {
     await this.happensNext();
     await this.runDummyPayment();
     await this.caseSubmittedCA();
+  },
+
+  async submitAndPayCourtAdmin() {
+    await this.triggerEvent();
+    await this.confidentialityStatement();
+    await this.declaration();
+    await this.payNow();
+    await this.happensNextCourtAdmin();
+    await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   }
 };
