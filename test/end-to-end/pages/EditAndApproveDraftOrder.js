@@ -49,7 +49,7 @@ module.exports = {
 
   async approveTheOrder() {
     await I.waitForElement(this.fields.selectDraftOrderForEditing, longWait);
-    await I.waitForText('Select the order');
+    await I.waitForText('Select the order', '5000');
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
     await I.click('Continue');
