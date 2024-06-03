@@ -98,7 +98,7 @@
     "EventElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>If the person is living in a refuge, all their details will be kept confidential and you do not have to complete a C8.</strong></div>",
     "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge=\"Yes\""
+    "FieldShowCondition": "applicants.isLiveInRefuge=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -110,7 +110,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge!=\"\""
+    "FieldShowCondition": "applicants.isLiveInRefuge!=\"\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -122,7 +122,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge!=\"\""
+    "FieldShowCondition": "applicants.isLiveInRefuge!=\"\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -211,7 +211,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge=\"No\""
+    "FieldShowCondition": "applicants.isLiveInRefuge=\"No\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -223,7 +223,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "20",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge=\"No\""
+    "FieldShowCondition": "applicants.isLiveInRefuge=\"No\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -234,7 +234,7 @@
     "ListElementCode": "addressLivedLessThan5YearsDetails",
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
-    "FieldShowCondition": "applicants.isAtAddressLessThan5Years=\"Yes\" OR applicants.liveInRefuge=\"Yes\"",
+    "FieldShowCondition": "applicants.isAtAddressLessThan5Years=\"Yes\" OR applicants.isLiveInRefuge=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -247,7 +247,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "22",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge!=\"\""
+    "FieldShowCondition": "applicants.isLiveInRefuge!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -258,7 +258,7 @@
     "ListElementCode": "email",
     "EventElementLabel": "",
     "FieldDisplayOrder": "23",
-    "FieldShowCondition": "applicants.liveInRefuge!=\"\" AND applicants.canYouProvideEmailAddress=\"Yes\"",
+    "FieldShowCondition": "applicants.isLiveInRefuge!=\"\" AND applicants.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -270,7 +270,7 @@
     "ListElementCode": "isEmailAddressConfidential",
     "EventElementLabel": "",
     "FieldDisplayOrder": "24",
-    "FieldShowCondition": "applicants.liveInRefuge=\"No\" AND applicants.canYouProvideEmailAddress=\"Yes\"",
+    "FieldShowCondition": "applicants.isLiveInRefuge=\"No\" AND applicants.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -283,7 +283,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge!=\"\""
+    "FieldShowCondition": "applicants.isLiveInRefuge!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -295,7 +295,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "26",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicants.liveInRefuge=\"No\""
+    "FieldShowCondition": "applicants.isLiveInRefuge=\"No\""
   },
   {
     "LiveFrom": "10/11/2021",
