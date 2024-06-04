@@ -31,13 +31,9 @@ module.exports = {
 
   async triggerEvent() {
     global.logCallingFunction();
-    const retry = 3;
-    // eslint-disable-next-line no-undef, no-unused-vars
-    await retryTo(async _WaitTime => {
-      testLogger.AddMessage('In retry triggger event for Submit and pay');
-      await I.retry(retryCount).triggerEvent('Submit and pay');
-      await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
-    }, retry);
+    testLogger.AddMessage('In retry triggger event for Submit and pay');
+    await I.retry(retryCount).triggerEvent('Submit and pay');
+    await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
   },
 
   async triggerDummyPaymentEvent() {

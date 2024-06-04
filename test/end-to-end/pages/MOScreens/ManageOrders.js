@@ -97,11 +97,8 @@ module.exports = {
   },
 
   async selectDraftOrder(modeOfOrder) {
-    await retryTo(async() => {
-      await I.triggerEvent(modeOfOrder);
-      await I.waitForText(moConfig.draftOrderText);
-    });
-
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.draftOrderText);
     await I.click(this.fields.selectDraftOrder);
     await I.click(moConfig.continueText);
 
@@ -218,11 +215,8 @@ module.exports = {
   },
 
   async selectEditServeOrder(modeOfOrder) {
-    // eslint-disable-next-line no-unused-vars
-    await retryTo(async _retryFor => {
-      await I.triggerEvent(modeOfOrder);
-      await I.waitForText(moConfig.selectEditOrderText);
-    }, retryCount);
+    await I.triggerEvent(modeOfOrder);
+    await I.waitForText(moConfig.selectEditOrderText);
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
     await I.click(moConfig.continueText);

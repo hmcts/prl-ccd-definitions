@@ -45,11 +45,11 @@ module.exports = {
     await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
 
+    await await I.click(this.fields.caseList);
+    await I.waitForText('Filters');
+
     // eslint-disable-next-line no-unused-vars
-    await retryTo(async _retryFor => {
-      await await I.click(this.fields.caseList);
-      await I.waitForText('Filters');
-    }, retryCount);
+
     this.setInitialSearchFields(state);
     await I.grabCurrentUrl();
     await I.wait('3');

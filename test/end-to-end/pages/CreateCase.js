@@ -36,12 +36,9 @@ module.exports = {
 
   async clickCreateCase() {
     global.logCallingFunction();
-    // eslint-disable-next-line no-undef, no-unused-vars
-    await retryTo(async _retryCount => {
-      await I.waitForSelector(this.fields.createCaseLink);
-      await I.retry(retryCount).click(this.fields.createCaseLink);
-      await I.waitForElement(this.fields.jurisdiction);
-    }, retryCount);
+    await I.waitForSelector(this.fields.createCaseLink);
+    await I.retry(retryCount).click(this.fields.createCaseLink);
+    await I.waitForElement(this.fields.jurisdiction);
   },
 
   async fillFormAndSubmit() {
