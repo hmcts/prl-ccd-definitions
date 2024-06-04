@@ -1,0 +1,117 @@
+[
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "caseTypeOfApplicationLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/validate-urgent-case-creation"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "caseFromCourtNav",
+    "DisplayContext": "Mandatory",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" ",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "fl401ConfidentialityDisclaimerLabel1",
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "confidentialityStatementDisclaimer",
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "c100ConfidentialityDisclaimerLabel1",
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "c100ConfidentialityStatementDisclaimer",
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "applicantCaseName",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "applicantOrRespondentCaseName",
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "PageShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "20/01/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminCreate",
+    "CaseFieldID": "applicantOrganisationPolicy",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "COMPLEX",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\""
+  }
+]
