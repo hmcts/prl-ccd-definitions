@@ -15,8 +15,9 @@ Scenario(
     await I.manageOrderUploadOrderServeNowPersonally();
   }).retry(testConfig.TestRetryScenarios);
 
+caseId = '1717576360043385';
 Scenario(
-  'CA Manage Order Upload Order - For Judge review - @regression-suite',
+  'CA Manage Order Upload Order - For Judge review - @regression-suite @debug',
   async({ I }) => {
     await I.loginAsSwanseaCourtAdmin();
     await I.searchForCasesWithId(caseId);

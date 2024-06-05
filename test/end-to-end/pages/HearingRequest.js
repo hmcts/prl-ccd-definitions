@@ -33,6 +33,7 @@ module.exports = {
   },
 
   async clickOnHearingsTab() {
+    await I.waitForElement(this.fields.hearingsTab);
     await I.clickTillElementFound(this.fields.hearingsTab, this.fields.nextBtnSelector);
     await I.click(this.fields.hearingsTab);
     await I.waitForText('Current and upcoming');

@@ -32,8 +32,9 @@ module.exports = {
     await I.click(this.fields.caseList);
   },
 
-  changeStateFilter(desiredState) {
+  async changeStateFilter(desiredState) {
     this.setInitialSearchFields(desiredState);
+    await I.waitForElement(this.fields.search);
     I.click(this.fields.search);
   },
 
