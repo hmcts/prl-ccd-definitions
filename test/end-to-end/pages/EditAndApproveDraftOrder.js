@@ -44,12 +44,17 @@ module.exports = {
     while (retryCtr < '3') {
       retryCtr += 1;
       try {
+        // eslint-disable-next-line no-await-in-loop
         await I.reloadPage(this.fields.assignToMe);
+        // eslint-disable-next-line no-await-in-loop
         await I.waitForElement(this.fields.assignToMe);
         break;
       } catch (stepError) {
+        // eslint-disable-next-line no-await-in-loop
         await I.click(this.fields.rolesAndAccessTab);
+        // eslint-disable-next-line no-await-in-loop
         await I.wait('1');
+        // eslint-disable-next-line no-await-in-loop
         await I.click(this.fields.tasksTab);
 
         testLogger.AddMessage(stepError);
