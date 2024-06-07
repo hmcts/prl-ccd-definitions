@@ -21,6 +21,7 @@ module.exports = {
     applicationType: '#caseTypeOfApplication-C100',
     search: 'Apply',
     caseList: 'Case list',
+    CaseListTab: '//a[contains(text(),"Case list")]',
     spinner: 'xuilib-loading-spinner',
     listofcourts: 'select[id="courtList"]',
     searchResult: '//a/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span',
@@ -29,7 +30,8 @@ module.exports = {
   },
 
   async navigate() {
-    await I.click(this.fields.caseList);
+    await I.waitForElement(this.fields.CaseListTab);
+    await I.click(this.fields.CaseListTab);
   },
 
   async changeStateFilter(desiredState) {

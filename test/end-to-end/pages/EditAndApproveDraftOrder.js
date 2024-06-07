@@ -3,6 +3,7 @@ const I = actor();
 const retryCount = 3;
 const longWait = 30;
 const medWait = 10;
+const testLogger = require('../helpers/testLogger');
 
 module.exports = {
 
@@ -38,8 +39,23 @@ module.exports = {
     await I.click(this.fields.tasksTab);
 
     await I.wait(longWait);
-    await I.reloadPage(this.fields.assignToMe);
-    await I.waitForElement(this.fields.assignToMe);
+
+    let retryCtr = 0;
+    while (retryCtr < '3') {
+      retryCtr += 1;
+      try {
+        await I.reloadPage(this.fields.assignToMe);
+        await I.waitForElement(this.fields.assignToMe);
+        break;
+      } catch (stepError) {
+        await I.click(this.fields.rolesAndAccessTab);
+        await I.wait('1');
+        await I.click(this.fields.tasksTab);
+
+        testLogger.AddMessage(stepError);
+      }
+    }
+
     await I.click(this.fields.assignToMe);
 
     await I.reloadPage(this.fields.issueTaskName);
