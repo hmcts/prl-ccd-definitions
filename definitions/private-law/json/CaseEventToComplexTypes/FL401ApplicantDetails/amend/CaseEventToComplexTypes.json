@@ -66,7 +66,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "isLiveInRefuge",
+    "ListElementCode": "liveInRefuge",
     "EventElementLabel": "",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
@@ -81,7 +81,7 @@
     "EventElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>If the person is living in a refuge, all their details will be kept confidential and you do not have to complete a C8.</strong></div>",
     "FieldDisplayOrder": "8",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge=\"Yes\"",
+    "FieldShowCondition": "applicantsFL401.liveInRefuge=\"Yes\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -94,7 +94,7 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge!=\"\"",
+    "FieldShowCondition": "applicantsFL401.liveInRefuge!=\"\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -106,7 +106,7 @@
     "ListElementCode": "address",
     "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge!=\"\""
+    "FieldShowCondition": "applicantsFL401.liveInRefuge!=\"\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -187,7 +187,7 @@
     "ListElementCode": "isAddressConfidential",
     "FieldDisplayOrder": "18",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge=\"No\""
+    "FieldShowCondition": "applicantsFL401.liveInRefuge=\"No\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -198,7 +198,7 @@
     "ListElementCode": "canYouProvideEmailAddress",
     "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge!=\"\""
+    "FieldShowCondition": "applicantsFL401.liveInRefuge!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -208,7 +208,7 @@
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "email",
     "FieldDisplayOrder": "20",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge!=\"\" AND applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
+    "FieldShowCondition": "applicantsFL401.liveInRefuge!=\"\" AND applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -219,7 +219,7 @@
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "isEmailAddressConfidential",
     "FieldDisplayOrder": "21",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge=\"No\" AND applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
+    "FieldShowCondition": "applicantsFL401.liveInRefuge=\"No\" AND applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -231,7 +231,7 @@
     "ListElementCode": "phoneNumber",
     "FieldDisplayOrder": "22",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge!=\"\""
+    "FieldShowCondition": "applicantsFL401.liveInRefuge!=\"\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -242,7 +242,7 @@
     "ListElementCode": "isPhoneNumberConfidential",
     "FieldDisplayOrder": "23",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "applicantsFL401.isLiveInRefuge=\"No\""
+    "FieldShowCondition": "applicantsFL401.liveInRefuge=\"No\""
   },
   {
     "LiveFrom": "10/11/2021",
