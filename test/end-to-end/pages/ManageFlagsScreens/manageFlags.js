@@ -4,6 +4,10 @@ const manageFlagConfig = require('./manageFlagsConfig');
 
 const date = new Date();
 
+function getFlagStatusRadioElement(status){
+  return `//label[contains(text(),'${status}')]/../input`;
+}
+
 module.exports = {
   fields: {
     firstFlagSelectionEle: '#flag-selection-0',
@@ -30,7 +34,9 @@ module.exports = {
     await I.click(this.fields.nextBtn);
 
     await I.waitForText('Documents in large print');
-    await I.click(manageFlagConfig.flagActiveState);
+    const activeStatusRadioElement = getFlagStatusRadioElement('Active');
+    await I.waitForElement(activeStatusRadioElement);
+    await I.click(activeStatusRadioElement);
     await I.click(this.fields.nextBtn);
 
     await I.waitForText(manageFlagConfig.cyaTextTitle);

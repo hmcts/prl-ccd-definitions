@@ -67,6 +67,7 @@ module.exports = {
   },
 
   async verifyUpdatedMiamDetails() {
+    await I.waitForElement(this.fields.applicationTab);
     await I.click(this.fields.applicationTab);
     await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings');
     // await I.runAccessibilityTest();
