@@ -16,11 +16,13 @@ module.exports = {
     selectCourt: 'select[id="submitCountyCourtSelection"]'
   },
 
+
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Statement of Truth and submit');
   },
 
   async fillTruthDetails() {
+    await I.wait('7');
     await I.click(this.fields.flTruthConsent);
     await I.fillField(this.fields.dobDay, '21');
     await I.fillField(this.fields.dobMonth, '12');
