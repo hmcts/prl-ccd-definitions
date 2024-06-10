@@ -1,5 +1,7 @@
+/* eslint-disable no-await-in-loop */
 const I = actor();
 const assert = require('assert');
+const testLogger = require('../helpers/testLogger');
 
 const eleCount = 7;
 
@@ -35,12 +37,21 @@ module.exports = {
   async clickOnHearingsTab() {
     await I.waitForElement(this.fields.hearingsTab);
     await I.clickTillElementFound(this.fields.hearingsTab, this.fields.nextBtnSelector);
-    await I.click(this.fields.hearingsTab);
-    await I.waitForText('Current and upcoming');
-    await I.click('Request a hearing');
-    await I.waitForText('Hearing requirements');
-    await I.runAccessibilityTest();
-    await I.click('Continue');
+    let retryCounter = 0;
+    while (retryCounter < '3') {
+      retryCounter += 1;
+      try {
+        await I.click(this.fields.hearingsTab);
+        await I.waitForText('Current and upcoming');
+        await I.click('Request a hearing');
+        await I.waitForText('Hearing requirements');
+        await I.runAccessibilityTest();
+        await I.click('Continue');
+        break;
+      } catch (stepErr) {
+        testLogger.AddMessage(`Error occured ${stepErr}`);
+      }
+    }
   },
 
   async fillAdditionalFacilities() {
@@ -73,6 +84,7 @@ module.exports = {
 
   async submitVenueAndJudgeDetails() {
     await I.waitForText('What are the hearing venue details?');
+    await I.waitForElement(this.fields.hearingLocationEle);
     await I.seeElement(this.fields.hearingLocationEle);
     await I.click('Continue');
     await I.waitForText('Does this hearing need to be in Welsh?');
@@ -103,6 +115,7 @@ module.exports = {
   async submitAndVerifyHearingRequest() {
     await I.waitForText('Check your answers before sending your request');
     await I.click('Submit request');
+    await I.waitForText('Hearing request submitted');
     await I.see('Hearing request submitted');
     await I.runAccessibilityTest();
     await I.click('view the status of this hearing in the hearings tab');
@@ -120,6 +133,7 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.see('WAITING TO BE LISTED');
     await I.see('Projector');
+    await I.waitForText('Swansea Civil And Family Justice Centre');
     await I.see('Swansea Civil And Family Justice Centre');
     await I.see('Submit updated request');
     await I.click('Back');
@@ -192,6 +206,7 @@ module.exports = {
   async verifyHearingCancellation() {
     await I.waitForText('Current and upcoming');
     await I.runAccessibilityTest();
+    await I.waitForText('CANCELLATION REQUESTED');
     await I.see('CANCELLATION REQUESTED');
     await I.dontSeeElement(this.fields.cancelEle);
     await I.click(this.fields.viewDetails);

@@ -2,6 +2,7 @@
 const { I } = inject();
 const config = require('../config');
 const { expect } = require('chai');
+const testLogger = require('../helpers/testLogger');
 
 const retryCount = 3;
 const totSearchResults = 25;
@@ -42,6 +43,7 @@ module.exports = {
 
   async searchForCasesWithId(caseId, state = 'Any') {
     global.logCallingFunction();
+    testLogger.AddMessage(`Search for case: ${caseId}`);
     // let caseidInViewCaseList = caseId.match(/.{1,4}/g);
     // caseidInViewCaseList = caseidInViewCaseList.join('-');
     await I.wait('5');

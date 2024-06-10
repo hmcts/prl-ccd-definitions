@@ -60,11 +60,14 @@ module.exports = {
     await I.see(manageFlagConfig.secondFlagComments);
     await I.see(manageFlagConfig.flagNotApprovedState);
     await I.click(this.fields.submitBtn);
+    await I.waitForElement(this.fields.caseFlagsTabSelector);
+
   },
 
   async verifyApprovedSupportRequest() {
     const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
 
+    await I.waitForElement(this.fields.caseFlagsTabSelector);
     await I.click(this.fields.caseFlagsTabSelector);
 
     // verify applicant request details
