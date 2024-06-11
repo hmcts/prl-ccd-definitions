@@ -98,6 +98,10 @@ const setupConfig = {
       enabled: true,
       fullPageScreenshots: true,
     },
+    hooksPlugin: {
+      require: './test/end-to-end/helpers/hooks.js',
+      enabled: true
+    }
   },
   include: {
     I: './test/end-to-end/steps_file.js',
