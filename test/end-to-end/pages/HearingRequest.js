@@ -140,6 +140,7 @@ module.exports = {
   },
 
   async clickOnUpdateHearing() {
+    await I.waitForElement(this.fields.viewEle);
     await I.click(this.fields.viewEle);
     await I.waitForText('View or edit hearing');
     await I.runAccessibilityTest();
@@ -229,6 +230,7 @@ module.exports = {
   },
 
   async updateHearing() {
+    await this.clickOnHearingsTab();
     await this.clickOnUpdateHearing();
     await this.updateHearingValues();
     await this.submitUpdatedValues();

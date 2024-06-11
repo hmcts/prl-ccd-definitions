@@ -4,7 +4,7 @@ const manageFlagConfig = require('./manageFlagsConfig');
 
 const date = new Date();
 
-function getFlagStatusRadioElement(status){
+function getFlagStatusRadioElement(status) {
   return `//label[contains(text(),'${status}')]/../input`;
 }
 
@@ -51,7 +51,9 @@ module.exports = {
     await I.click(this.fields.nextBtn);
 
     await I.waitForText('Support filling in forms');
-    await I.click(manageFlagConfig.flagNotApprovedState);
+    const notApprovedStatusRadioElement = getFlagStatusRadioElement('Not approved');
+    await I.waitForElement(notApprovedStatusRadioElement);
+    await I.click(notApprovedStatusRadioElement);
     await I.fillField(this.fields.statusReasonChange, 'This is a test for non-approval');
     await I.click(this.fields.nextBtn);
 
@@ -61,7 +63,6 @@ module.exports = {
     await I.see(manageFlagConfig.flagNotApprovedState);
     await I.click(this.fields.submitBtn);
     await I.waitForElement(this.fields.caseFlagsTabSelector);
-
   },
 
   async verifyApprovedSupportRequest() {
