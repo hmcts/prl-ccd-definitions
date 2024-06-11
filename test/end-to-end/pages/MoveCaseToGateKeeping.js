@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 // eslint-disable-next-line no-magic-numbers
 const I = actor();
 const retryCount = 3;
@@ -12,18 +13,32 @@ module.exports = {
     assignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Send to Gatekeeper")]/../../dl/div[4]//dd/a',
     gateKeeperTask: '//a[contains(.,"Send To Gatekeeper")]',
     selectGateKeeperOption: '#isSpecificGateKeeperNeeded_No',
-    summaryTab: '//div[contains(text(),"Summary")]'
+    summaryTab: '//div[contains(text(),"Summary")]',
+    tasksTab: '//div[contains(text(),"Tasks")]',
+    rolesAndAccessTab: '//div[contains(text(),"Roles and access")]'
   },
 
-  async moveCaseToGateKeeping() {
+  async xmoveCaseToGateKeeping() {
     global.logCallingFunction();
     await I.retry(retryCount).triggerEvent('Send to gatekeeper');
     await I.wait(longWait);
     await I.retry(retryCount).click(this.fields.returnToTaskTab);
 
     await I.wait(medWait);
-    await I.reloadPage(this.fields.assignTaskToMe);
-    await I.waitForElement(this.fields.assignTaskToMe);
+    let ctr = 0;
+    while (ctr < retryCount) {
+      ctr += 1;
+      try {
+        await I.click(this.fields.tasksTab);
+        await I.reloadPage(this.fields.assignTaskToMe);
+        await I.waitForElement(this.fields.assignTaskToMe);
+        break;
+      } catch (stepErr) {
+        await I.retry(retryCount).click(this.fields.rolesAndAccessTab);
+        await I.wait(medWait);
+      }
+    }
+
     await I.retry(retryCount).click(this.fields.assignTaskToMe);
 
     await I.waitForElement(this.fields.gateKeeperTask, medWait);
