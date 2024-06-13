@@ -28,7 +28,11 @@ class TestLogger {
         fs.rmSync(`${this.testLogsDir}/${f}`);
       });
     } else {
-      fs.mkdirSync(this.testLogsDir);
+      try {
+        fs.mkdirSync(this.testLogsDir);
+      } catch (stepErr) {
+        console.log(stepErr);
+      }
     }
 
     // this.logFile = `${this.testLogsDir}/noname.logs`;

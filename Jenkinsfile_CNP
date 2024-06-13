@@ -117,13 +117,19 @@ withPipeline("nodejs", product, component) {
   
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
+
   }
 
   afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
+
   }
 
   afterAlways('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
+
   }
 }
