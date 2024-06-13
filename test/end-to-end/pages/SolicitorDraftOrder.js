@@ -46,8 +46,8 @@ module.exports = {
     await I.retry(retryCount).click(manageOrder.fields.isTheOrderAboutChildrenDA_No);
     await I.retry(retryCount).fillField(manageOrder.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).fillField(manageOrder.fields.orderDirections, 'TEST DIRECTIONS');
-    await I.retry(retryCount).fillField(manageOrder.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
-    await I.retry(retryCount).fillField(manageOrder.fields.furtherInformation, 'TEST FURTHER INFORMATION');
+    // await I.retry(retryCount).fillField(manageOrder.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
+    // await I.retry(retryCount).fillField(manageOrder.fields.furtherInformation, 'TEST FURTHER INFORMATION');
     await I.retry(retryCount).click('Continue');
     await I.wait('7');
     await I.retry(retryCount).waitForText('Hearing outcome');
@@ -68,8 +68,8 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.allPartiesAttendHearingSameWayYesOrNo_Yes);
     await I.retry(retryCount).selectOption(this.fields.courtList, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
     await I.retry(retryCount).click('Magistrates');
-    await I.retry(retryCount).fillField(this.fields.additionalHearingDetails, 'ADDITIONAL HEARING DETAILS');
     await I.retry(retryCount).fillField(this.fields.instructionsForRemoteHearing, 'JOINING INSTRUCTIONS');
+    await I.retry(retryCount).fillField(this.fields.additionalHearingDetails, 'ADDITIONAL HEARING DETAILS');
     await I.retry(retryCount).click('Continue');
     await I.wait('4');
   },
@@ -85,7 +85,7 @@ module.exports = {
   async selectTypeOfOrderForDraftAnOrder(orderName) {
     await I.runAccessibilityTest();
     await I.retry(retryCount).waitForText('Draft an order');
-    await I.retry(retryCount).waitForText('Select order');
+    await I.retry(retryCount).waitForText('Select the type of order');
     await I.retry(retryCount).click(orderName);
     await I.retry(retryCount).click('Continue');
     await I.wait('5');
