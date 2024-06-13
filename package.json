@@ -22,7 +22,7 @@
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test:uploadFile": "yarn install && MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps --grep \"@pipeline\" -c test/functional/codecept.conf.js --reporter mocha-multi",
     "test:debug": "yarn install && codeceptjs run --steps --grep \"@debug\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
-    "test:preview": "yarn install && codeceptjs run --steps --grep \"@preview-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
+    "test:preview": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@preview-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:master": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@ptl-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./test/end-to-end/run-functional-tests.sh",
     "test:fullfunctional": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@regression-suite\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
