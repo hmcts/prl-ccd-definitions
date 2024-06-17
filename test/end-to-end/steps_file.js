@@ -51,6 +51,9 @@ const reqSupport = require('./pages/ReqSupportScreens/reqSupport');
 const manageFlags = require('./pages/ManageFlagsScreens/manageFlags');
 const createFlags = require('./pages/CreateFlagScreens/createFlags');
 const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
+const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
+const statementOfService = require('./pages/SOAScreens/StatementOfService');
+const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -63,6 +66,9 @@ module.exports = () => {
     },
     loginAsCourtAdmin() {
       return LoginPage.loginAsCourtAdmin();
+    },
+    loginAsCaseManager() {
+      return LoginPage.loginAsCaseManager();
     },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
@@ -79,8 +85,14 @@ module.exports = () => {
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
     },
+    loginAsOldCourtAdmin() {
+      return LoginPage.loginAsOldCourtAdmin();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
+    },
+    editDratOrderAsManager() {
+      return editAndApproveDraftOrder.editDratOrderAsManager();
     },
     runAttendingTheHearingEvent() {
       return AttendingTheHearing.runEventHappyPathAttendingTheHearing();
@@ -96,6 +108,9 @@ module.exports = () => {
     },
     createNewCaseFL401_TS() {
       return CreateCasePage.createNewCaseFL401_TS();
+    },
+    createC100UrgentCaseByCourtAdmin() {
+      return CreateCasePage.createC100UrgentCaseByCourtAdmin();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -235,6 +250,9 @@ module.exports = () => {
     runSubmitAndPay_TS() {
       return submitAndPay.dummyPaymentConfirmation();
     },
+    submitAndPayCourtAdmin() {
+      return submitAndPay.submitAndPayCourtAdmin();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -259,14 +277,20 @@ module.exports = () => {
     createSolicitorDummyCase() {
       return CreateCasePage.createNewSolicitorDummyC100Case();
     },
+    createDASolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyFL401Case();
+    },
     payAndSubmitDummySolicitorCase() {
       return submitAndPay.submitAndPayForDummySolicitorApplication();
     },
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
-    saveTheCaseIdAndSignout() {
-      return CreateCasePage.saveTheCaseIdAndSignout();
+    saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
+    },
+    saveTheCaseIdAndSignInAsStokeCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsStokeCourtAdmin();
     },
     saveTheCaseId() {
       return CreateCasePage.saveTheCaseId();
@@ -331,6 +355,9 @@ module.exports = () => {
     manageOrderCreateOrderC43() {
       return manageOrders.createAnOrderC43();
     },
+    createOrderC43AndSendToCaseManager() {
+      return manageOrders.createOrderC43AndSendToCaseManager();
+    },
     searchForInvalidCase() {
       return caseList.searchForInvalidCase();
     },
@@ -369,6 +396,18 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    verifyServiceOfApplicationSubmission() {
+      return soaPage.verifyServiceOfApplicationSubmission();
+    },
+    verifyPostConfidentialityCheck_Yes() {
+      return soaPage.verifyPostConfidentialityCheck_Yes();
+    },
+    completeStatementOfService() {
+      return statementOfService.completeStatementOfService();
+    },
+    verifyPostStatementOfService() {
+      return statementOfService.verifyPostStatementOfService();
     },
     performManageDocuments() {
       return manageDocuments.runManageDocumentsHappyPath();
@@ -417,6 +456,12 @@ module.exports = () => {
     },
     reviewCAAddedFlags() {
       return verifyFlags.verifySolicitorOnlyFlags();
+    },
+    caseManagerConfidentialityCheck() {
+      return caseManagerConfidentialityCheck.confidentialityCheck();
+    },
+    fillRespondentMiamNoOption() {
+      return respondentSolicitorMiam.fillRespondentMiamNoOption();
     }
   });
 };
