@@ -29,6 +29,7 @@ module.exports = {
   },
 
   async triggerEvent() {
+    await I.waitForElement('//option[contains(text(),"Upload additional applications")]');
     await I.retry(retryCount).triggerEvent('Upload additional applications');
   },
 
