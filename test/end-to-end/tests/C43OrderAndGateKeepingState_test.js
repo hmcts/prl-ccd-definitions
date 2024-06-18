@@ -1,9 +1,59 @@
+/* eslint-disable no-await-in-loop */
 const testConfig = require('../config');
-
+const caseEvent = require('../utilities/caseEventApi');
+const eventApi = require('../utilities/caseEventApi');
+const restApiData = require('../restApiData/prlapps');
+const { forEach } = require('lodash');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
 Feature('Solicitor - Manage order, Gatekeeping & Service of application tests ');
+
+
+Scenario('Courtadmins add note via API @debug', async({ I }) => {
+  caseId = '1718176793256925';
+  await I.loginAsSolicitor();
+
+  const createCaseRest = restApiData['Solicitor application'];
+  const caseCreateRes = await caseEvent.createCase('PRLAPPS', createCaseRest.eventId, createCaseRest.data);
+
+  caseId = caseCreateRes.id;
+  console.log(caseId);
+
+  const events = [
+    'Add case name',
+    'Type of application',
+    'Hearing urgency',
+    'Child details',
+    'Applicant details',
+    'Respondent details',
+    'Other people in the case',
+    'Other children not in the case',
+    'Children and applicants',
+    'Children and respondents',
+    'Children and other people',
+    'Allegations of harm',
+    'MIAM',
+    'Other proceedings',
+    'Attending the hearing',
+    'International element',
+    'Litigation capacity',
+    'Welsh language requirements',
+    'Submit and pay'
+
+  ];
+  for (const event of events) {
+    console.log(`************** RUNNING EVENT ${event}`)
+    const eventRest = restApiData[event];
+    await eventApi.submitEvent(caseId, eventRest.eventId, eventRest.data);
+  }
+
+  console.log(caseId);
+  // const addCaseNoteRest = restApiData['Add case note'];
+  // await eventApi.submitEvent(caseId, addCaseNoteRest.eventId, addCaseNoteRest.data);
+
+
+}).retry(testConfig.TestRetryScenarios);
 
 Scenario('Draft an Solicitor Order & Move case to Gatekeeping State @regression-suite', async({ I }) => {
   await I.loginAsSolicitor();
