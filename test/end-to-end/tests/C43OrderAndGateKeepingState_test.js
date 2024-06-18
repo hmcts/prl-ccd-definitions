@@ -3,7 +3,6 @@ const testConfig = require('../config');
 const caseEvent = require('../utilities/caseEventApi');
 const eventApi = require('../utilities/caseEventApi');
 const restApiData = require('../restApiData/prlapps');
-const { forEach } = require('lodash');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 

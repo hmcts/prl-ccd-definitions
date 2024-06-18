@@ -42,9 +42,10 @@ Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => 
 
   ];
   for (const event of events) {
-    console.log(`************** RUNNING EVENT ${event}`)
+    console.log(`************** RUNNING EVENT ${event}`);
     const eventRest = restApiData[event];
-    await eventApi.submitEvent(caseId, eventRest.eventId, eventRest.data);
+    const res = await eventApi.submitEvent(caseId, eventRest.eventId, eventRest.data);
+    eventRest.res = res;
   }
 
   console.log(caseId);
