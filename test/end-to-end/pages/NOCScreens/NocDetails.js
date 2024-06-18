@@ -3,6 +3,8 @@ const I = actor();
 
 const nocConfig = require('./nocConfig');
 
+const retry = 3;
+
 module.exports = {
   fields: {
     caseRef: '#caseRef',
@@ -27,7 +29,8 @@ module.exports = {
   },
 
   async addNocDetails(caseId) {
-    await I.click(nocConfig.nocText);
+    await I.waitForText(nocConfig.nocText);
+    await I.retry(retry).click(nocConfig.nocText);
     await I.waitForText(nocConfig.nocRequirementText);
     await I.fillField(this.fields.caseRef, caseId);
     await I.click(nocConfig.continueText);
