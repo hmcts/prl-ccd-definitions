@@ -19,7 +19,7 @@ Scenario('As a court admin - approve & non-approve the requested flag support', 
   await I.reviewSupportForHearingRequest();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin - Add a Non-RA & RA flags', async({ I }) => {
+Scenario('As a court admin - Add a Non-RA & RA flags @debug', async({ I }) => {
   await I.loginAsCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.addCAFlags();
