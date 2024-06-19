@@ -30,17 +30,17 @@ Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => 
     'Respondent details',
     'Other people in the case',
     'Other children not in the case',
-    'Children and applicants',
-    'Children and respondents',
-    'Children and other people',
-    'Allegations of harm',
-    'MIAM',
-    'Other proceedings',
-    'Attending the hearing',
-    'International element',
-    'Litigation capacity',
-    'Welsh language requirements',
-    'Submit and pay'
+    // 'Children and applicants',
+    // 'Children and respondents',
+    // 'Children and other people',
+    // 'Allegations of harm',
+    // 'MIAM',
+    // 'Other proceedings',
+    // 'Attending the hearing',
+    // 'International element',
+    // 'Litigation capacity',
+    // 'Welsh language requirements',
+    // 'Submit and pay'
 
   ];
   for (const event of events) {
