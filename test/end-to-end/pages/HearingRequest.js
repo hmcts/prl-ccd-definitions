@@ -2,7 +2,7 @@
 const I = actor();
 const assert = require('assert');
 const testLogger = require('../helpers/testLogger');
-
+const retryCount = 3;
 const eleCount = 7;
 
 
@@ -122,6 +122,18 @@ module.exports = {
     await I.waitForText('History');
 
     await I.runAccessibilityTest();
+
+    let retryCounter = 0;
+    while (retryCounter < retryCount) {
+      retryCounter += 1;
+      try {
+        await I.waitForText('WAITING TO BE LISTED');
+      } catch (tryError) {
+        await I.click('//div[@class = \'mat-tab-label-content\'][contains(text()\'Case Notes\')]');
+        await I.wait('2');
+        await I.click('//div[@class = \'mat-tab-label-content\'][contains(text()\'Hearings\')]');
+      }
+    }
     await I.waitForText('WAITING TO BE LISTED');
     await I.see('WAITING TO BE LISTED');
     await I.see('First Hearing');
