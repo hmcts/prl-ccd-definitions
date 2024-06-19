@@ -37,7 +37,7 @@ module.exports = {
   },
 
 
-  async submitEvent(caseId, eventId, eventData) {
+  async submitEvent(caseId, eventId, eventData, preProcessEventDataCallback) {
     const startEventUrl = `/data/internal/cases/${caseId}/event-triggers/${eventId}?ignore-warning=false`
 
     const startEventHeaders = {
@@ -48,7 +48,7 @@ module.exports = {
     const startEventRes = await apiUtil.getData(startEventUrl, startEventHeaders);
     const eventToken = startEventRes.event_token;
 
-    const submitEventUrl = `https://manage-case.aat.platform.hmcts.net/data/cases/${caseId}/events`
+    const submitEventUrl = `/data/cases/${caseId}/events`
     const postData = {
       // eslint-disable-next-line id-blacklist
       data: eventData,
