@@ -1,8 +1,5 @@
 /* eslint-disable no-await-in-loop */
 const testConfig = require('../config');
-const caseEvent = require('../utilities/caseEventApi');
-const eventApi = require('../utilities/caseEventApi');
-const restApiData = require('../restApiData/prlapps');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
