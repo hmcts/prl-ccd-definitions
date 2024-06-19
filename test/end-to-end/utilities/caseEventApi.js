@@ -37,8 +37,8 @@ module.exports = {
   },
 
 
-  async submitEvent(caseId, eventId, eventData) {
-    const startEventUrl = `/data/internal/cases/${caseId}/event-triggers/${eventId}?ignore-warning=false`
+  async submitEvent(caseId, eventDetails, midEventProcess) {
+    const startEventUrl = `/data/internal/cases/${caseId}/event-triggers/${eventDetails.eventId}?ignore-warning=false`;
 
     const startEventHeaders = {
       Accept: 'application/vnd.uk.gov.hmcts.ccd-data-store-api.ui-start-event-trigger.v2+json;charset=UTF-8',
@@ -48,12 +48,16 @@ module.exports = {
     const startEventRes = await apiUtil.getData(startEventUrl, startEventHeaders);
     const eventToken = startEventRes.event_token;
 
-    const submitEventUrl = `https://manage-case.aat.platform.hmcts.net/data/cases/${caseId}/events`
+    if (midEventProcess) {
+      midEventProcess(eventDetails, startEventRes);
+    }
+
+    const submitEventUrl = `/data/cases/${caseId}/events`;
     const postData = {
       // eslint-disable-next-line id-blacklist
-      data: eventData,
+      data: eventDetails.data,
       event: {
-        id: eventId,
+        id: eventDetails.eventId,
         summary: '',
         description: ''
       },
@@ -65,7 +69,8 @@ module.exports = {
       Experimental: true,
       'Content-type': 'application/json; charset=UTF-8'
     };
-    const submitEventRes = await apiUtil.postData(submitEventUrl, submitEventHeaders ,postData);
+    const submitEventRes = await apiUtil.postData(submitEventUrl, submitEventHeaders, postData);
+    eventDetails.submitEventRes = submitEventRes;
     return submitEventRes;
   }
 };
