@@ -1,9 +1,11 @@
 /* eslint-disable no-await-in-loop */
+const fs = require('fs');
 const testConfig = require('../config');
 const caseEvent = require('../utilities/caseEventApi');
 const eventApi = require('../utilities/caseEventApi');
-const restApiData = require('../restApiData/prlapps');
+const restApiDataTemplate = require('../restApiData/prlapps');
 
+const restApiData = JSON.parse(JSON.stringify(restApiDataTemplate));
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
@@ -49,6 +51,7 @@ Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => 
   }
 
   console.log(caseId);
+  fs.writeFileSync(`${__dirname}/apoCaseCreationResult.json`, JSON.stringify(restApiData, null, 2));
   // const addCaseNoteRest = restApiData['Add case note'];
   // await eventApi.submitEvent(caseId, addCaseNoteRest.eventId, addCaseNoteRest.data);
 }).retry(testConfig.TestRetryScenarios);
