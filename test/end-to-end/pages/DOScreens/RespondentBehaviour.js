@@ -5,6 +5,7 @@ module.exports = {
   fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
+    await I.waitForElement('//select[@id = "next-step"]//option[contains(text(),"Respondent\'s behaviour")]');
     await I.triggerEvent('Respondent\'s behaviour');
   },
 
