@@ -2151,6 +2151,11 @@ module.exports = {
         }
     },
 
+    'Dummy Payment confirmation': {
+        eventId: 'testingSupportPaymentSuccessCallback',
+        'data': {
+        }
+    },
   'Add case note': {
     eventId: 'addCaseNote',
     'data': {

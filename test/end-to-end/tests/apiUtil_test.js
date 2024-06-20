@@ -40,11 +40,18 @@ const childAndOtherPeopleProcess = (eventRestObj, startDEventRes) => {
   eventRestObj.data.buffChildAndOtherPeopleRelations = eventDataField.value;
 };
 
+const submitAndPayProcess = (eventRestObj, startDEventRes) => {
+  const eventDataField = startDEventRes.case_fields.find(field => {
+    return field.id === 'submitAndPayDownloadApplicationLink';
+  });
+  eventRestObj.data.submitAndPayDownloadApplicationLink = eventDataField.value;
+};
+
 
 Feature('API Util to create case and events ');
 
 
-Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => {
+Scenario('Create case and evenets till submit and pay', async ({ I }) => {
   await I.loginAsSolicitor();
 
   const createCaseRest = restApiData['Solicitor application'];
@@ -72,7 +79,8 @@ Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => 
     'International element',
     'Litigation capacity',
     'Welsh language requirements',
-    // 'Submit and pay'
+    'Submit and pay',
+    'Dummy Payment confirmation'
 
   ];
 
@@ -87,6 +95,8 @@ Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => 
       midEventProcess = childAndRespondentProcess;
     } else if (event === 'Children and other people') {
       midEventProcess = childAndOtherPeopleProcess;
+    } else if (event === 'Submit and pay') {
+      midEventProcess = submitAndPayProcess;
     }
 
     const res = await eventApi.submitEvent(caseId, eventRest, midEventProcess);
