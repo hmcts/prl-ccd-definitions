@@ -10,6 +10,7 @@ module.exports = {
   },
 
   async applicantFamily() {
+    await I.waitForElement('#applicantFamilyDetails_doesApplicantHaveChildren_Yes');
     await I.waitForText('Does the applicant have any children, have parental responsibility for any children or need to protect other children with this application?');
     await I.click('#applicantFamilyDetails_doesApplicantHaveChildren_Yes');
     await I.waitForText('Child');
