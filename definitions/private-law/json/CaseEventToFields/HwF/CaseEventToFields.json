@@ -65,7 +65,7 @@
     "CaseEventID": "processUrgentHelpWithFees",
     "CaseFieldID": "outstandingBalance",
     "PageFieldDisplayOrder": 6,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2
   },
@@ -75,7 +75,8 @@
     "CaseEventID": "processUrgentHelpWithFees",
     "CaseFieldID": "managerAgreedApplicationBeforePayment",
     "PageFieldDisplayOrder": 7,
-    "DisplayContext": "READONLY",
+    "FieldShowCondition": "outstandingBalance=\"Yes\"",
+    "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2
   },
@@ -85,7 +86,7 @@
     "CaseEventID": "processUrgentHelpWithFees",
     "CaseFieldID": "addCaseNoteShort",
     "PageFieldDisplayOrder": 1,
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "PageID": 3,
     "PageDisplayOrder": 3
   }
