@@ -21,6 +21,33 @@
     ]
   },
   {
+      "LiveFrom": "02/12/2021",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "personalServiceUnServedRespondentPack",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin"
+          ],
+          "CRUD": "RU"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-systemupdate"
+          ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "unServedRespondentPack",
