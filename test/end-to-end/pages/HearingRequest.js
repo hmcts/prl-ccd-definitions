@@ -36,6 +36,7 @@ module.exports = {
 
   async clickOnHearingsTab() {
     await I.waitForElement(this.fields.hearingsTab);
+    await I.click(this.fields.hearingsTab);
     await I.clickTillElementFound(this.fields.hearingsTab, this.fields.nextBtnSelector);
     let retryCounter = 0;
     while (retryCounter < '3') {
@@ -56,7 +57,9 @@ module.exports = {
 
   async fillAdditionalFacilities() {
     await I.waitForText('Do you require any additional facilities?');
-    await I.click(this.fields.selectFacilities);
+    await I.waitForElement(this.fields.selectFacilities);
+    await I.wait('3');
+    await I.retry(retryCount).click(this.fields.selectFacilities);
     await I.click('Continue');
     await I.waitForText('What stage is this hearing at?');
     await I.click(this.fields.selectHearingStage);
@@ -242,7 +245,7 @@ module.exports = {
   },
 
   async updateHearing() {
-    await this.clickOnHearingsTab();
+    await I.click(this.fields.hearingsTab);
     await this.clickOnUpdateHearing();
     await this.updateHearingValues();
     await this.submitUpdatedValues();
