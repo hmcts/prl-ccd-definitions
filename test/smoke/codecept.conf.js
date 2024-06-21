@@ -27,7 +27,7 @@ exports.config = {
       fullPageScreenshots: true,
       uniqueScreenshotNames: true
     },
-    GeneralHelper: { require: './helpers/generalHelper.js' },
+    GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {
     retryFailedStep: {
