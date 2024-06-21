@@ -68,7 +68,6 @@ module.exports = {
   async loginAsStokeCourtAdmin() {
     global.logCallingFunction();
     await this.loginWithUserPass(config.legalProfessionalUserTwo.email, config.legalProfessionalUserTwo.password);
-    
   },
   async loginAsSwanseaCourtAdmin() {
     global.logCallingFunction();
