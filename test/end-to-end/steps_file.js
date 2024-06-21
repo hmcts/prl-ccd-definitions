@@ -70,6 +70,12 @@ module.exports = () => {
     loginAsCaseManager() {
       return LoginPage.loginAsCaseManager();
     },
+    loginAsStokeCourtAdmin() {
+      return LoginPage.loginAsStokeCourtAdmin();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },

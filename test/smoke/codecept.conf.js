@@ -17,8 +17,7 @@ exports.config = {
       chrome: {
         ignoreHTTPSErrors: true,
         args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
-      },
-      windowSize: '1280x960'
+      }
     },
     GeneralHelper: { require: './helpers/generalHelper.js' },
     Mochawesome: { uniqueScreenshotNames: true, disableScreenshots: false },
