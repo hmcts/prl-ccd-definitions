@@ -8,7 +8,7 @@
     "DisplayContext": "READONLY",
     "PageID": 10,
     "PageDisplayOrder": 10,
-    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"appointmentOfGuardian\"",
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"appointmentOfGuardian\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
     "ShowSummaryChangeOption": "N"
   },
