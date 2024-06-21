@@ -150,6 +150,7 @@ class DataSetup {
     // await I.clearCookie();
     await I.loginAsSwanseaCourtAdmin();
 
+    // eslint-disable-next-line no-unused-vars
     const docUploadRes = await uploadDocument(path.resolve(__dirname, '../../resource/dummy.pdf'), 'dummy.pdf');
 
     const midEventProcess = null;

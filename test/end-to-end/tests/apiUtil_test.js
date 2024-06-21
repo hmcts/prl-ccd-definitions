@@ -8,7 +8,8 @@ Feature('API Util to create case and events ');
 
 
 Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => {
-  const dataSetup = new DataSetup()
+  await I.wait('1');
+  const dataSetup = new DataSetup();
   await dataSetup.caseSetupSendToGatekeeper();
 
   // const addCaseNoteRest = restApiData['Add case note'];
