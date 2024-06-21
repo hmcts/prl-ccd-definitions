@@ -1,7 +1,7 @@
 
 const path = require('path');
 
-const outputDir = path.resolve(__dirname, '../../output/smoke');
+const outputDir = path.resolve(__dirname, '../../output');
 
 exports.config = {
   tests: './tests/smoke_test.js',
@@ -17,18 +17,16 @@ exports.config = {
       chrome: {
         ignoreHTTPSErrors: true,
         args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
-      }
-    },
-    GeneralHelper: { require: './helpers/generalHelper.js' },
-    Mochawesome: { uniqueScreenshotNames: true, disableScreenshots: false },
-    windowSize: '1280x960',
-    disableScreenshots: false,
-    video: true,
-    recordVideo: { dir: outputDir },
-    keepVideoForPassedTests: false,
-    keepTraceForPassedTests: false,
-    fullPageScreenshots: true,
-    uniqueScreenshotNames: true
+      },
+      windowSize: '1280x960',
+      disableScreenshots: false,
+      video: true,
+      recordVideo: { dir: outputDir },
+      keepVideoForPassedTests: false,
+      keepTraceForPassedTests: false,
+      fullPageScreenshots: true,
+      uniqueScreenshotNames: true
+    }
   },
   plugins: {
     retryFailedStep: {
