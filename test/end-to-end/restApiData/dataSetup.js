@@ -55,15 +55,15 @@ const uploadDocument = async(filepath, filename) => {
   return await I.executeScript(async({ buffer, filename }) => {
     const formData = new FormData();
 
-      formData.append('files', new Blob([buffer], { type: 'application/pdf' }), filename);
+    formData.append('files', new Blob([buffer], { type: 'application/pdf' }), filename);
     formData.append('classification', 'PUBLIC');
 
     const res = await fetch('/documents', {
       method: 'POST',
       body: formData,
       headers: {
-          Accept: 'application/json, text/plain, */*',
-          'Accept-Encoding': 'gzip, deflate, br, zstd'
+        Accept: 'application/json, text/plain, */*',
+        'Accept-Encoding': 'gzip, deflate, br, zstd'
       }
     });
     return res;

@@ -3,11 +3,10 @@ const testConfig = require('../config');
 const DataSetup = require('../restApiData/dataSetup');
 
 
-
 Feature('API Util to create case and events ');
 
 
-Scenario('Create case and evenets till submit and pay @debug', async ({ I }) => {
+Scenario('Create case and evenets till submit and pay @debug', async({ I }) => {
   await I.wait('1');
   const dataSetup = new DataSetup();
   await dataSetup.caseSetupSendToGatekeeper();

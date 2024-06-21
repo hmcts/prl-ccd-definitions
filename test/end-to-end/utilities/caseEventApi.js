@@ -1,5 +1,5 @@
 
-const apiUtil = require('./apiUtil')
+const apiUtil = require('./apiUtil');
 
 module.exports = {
   async createCase(caseTypeId, eventId, caseData) {
@@ -17,7 +17,7 @@ module.exports = {
     const postData = {
       // eslint-disable-next-line id-blacklist
       data: caseData,
-      draft_id:null,
+      draft_id: null,
       event: {
         id: eventId,
         summary: '',
@@ -33,7 +33,6 @@ module.exports = {
     };
     const submitEventRes = await apiUtil.postData(submitCaseUrl, submitEventHeaders, postData);
     return submitEventRes;
-
   },
 
 
