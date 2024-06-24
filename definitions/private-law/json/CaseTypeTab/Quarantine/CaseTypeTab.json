@@ -8,7 +8,7 @@
     "TabDisplayOrder": 11,
     "CaseFieldID": "legalProfQuarantineDocsList",
     "TabFieldDisplayOrder": 1,
-    "TabShowCondition": "legalProfQuarantineDocsList!=\"\" OR cafcassQuarantineDocsList!=\"\" OR courtStaffQuarantineDocsList!=\"\" OR citizenUploadQuarantineDocsList!=\"\" OR scannedDocuments!=\"\""
+    "TabShowCondition": "legalProfQuarantineDocsList!=\"\" OR cafcassQuarantineDocsList!=\"\" OR courtStaffQuarantineDocsList!=\"\" OR citizenQuarantineDocsList!=\"\" OR citizenUploadQuarantineDocsList!=\"\" OR scannedDocuments!=\"\""
   },
   {
     "LiveFrom": "10/08/2021",
@@ -47,7 +47,17 @@
     "TabID": "quarantine",
     "TabLabel": "Documents to be reviewed",
     "TabDisplayOrder": 11,
-    "CaseFieldID": "scannedDocuments",
+    "CaseFieldID": "citizenQuarantineDocsList",
     "TabFieldDisplayOrder": 5
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "quarantine",
+    "TabLabel": "Documents to be reviewed",
+    "TabDisplayOrder": 11,
+    "CaseFieldID": "scannedDocuments",
+    "TabFieldDisplayOrder": 6
   }
 ]

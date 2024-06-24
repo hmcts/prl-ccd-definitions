@@ -21,7 +21,8 @@
     "test:crossbrowser-e2e": "yarn install && MOCHAWESOME_REPORTFILENAME=crossbrowser codeceptjs run-multiple --grep \"@cross-browser\" ${BROWSER_GROUP:-'--all'} -c saucelabs.conf.js --reporter mocha-multi",
     "test:crossbrowser": "./bin/run-crossbrowser-tests.sh",
     "test:uploadFile": "yarn install && MOCHAWESOME_REPORTFILENAME=functional codeceptjs run --steps --grep \"@pipeline\" -c test/functional/codecept.conf.js --reporter mocha-multi",
-    "test:preview": "yarn install && codeceptjs run --steps --grep \"@preview-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
+    "test:debug": "yarn install && codeceptjs run --steps --grep \"@debug\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
+    "test:preview": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@preview-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:master": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@ptl-regression\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./test/end-to-end/run-functional-tests.sh",
     "test:fullfunctional": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@regression-suite\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
@@ -46,11 +47,12 @@
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "1.8.4",
     "@hmcts/properties-volume": "0.0.14",
+    "angular": "^1.8.3",
     "assert": "^2.1.0",
     "codeceptjs": "^3.5.15",
     "config": "^3.0.1",
     "eslint-plugin-codeceptjs": "^1.0.0",
-    "express": "^4.16.4",
+    "express": "^4.19.2",
     "html_codesniffer": "^2.5.1",
     "json-schema": "^0.4.0",
     "left-pad": "^1.0.0",
@@ -84,11 +86,12 @@
     "flat": "^5.0.1",
     "minimatch": "^3.0.5",
     "json5": "^2.2.2",
-    "follow-redirects": "^1.14.7",
-    "axios": "^0.28.0",
+    "follow-redirects": "^1.15.6",
+    "axios": "^0.28.1",
     "codeceptjs/mocha-junit-reporter": ">=2.1.1",
     "cookiejar": ">=2.1.4",
-    "jackspeak": "2.1.1"
+    "jackspeak": "2.1.1",
+    "ip": "^2.0.1"
   },
   "packageManager": "yarn@3.8.1"
 }
