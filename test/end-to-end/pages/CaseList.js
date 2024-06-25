@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
 const { I } = inject();
 const config = require('../config');
 const { expect } = require('chai');
+const testLogger = require('../helpers/testLogger');
 
 const retryCount = 3;
 const totSearchResults = 25;
@@ -20,6 +22,7 @@ module.exports = {
     applicationType: '#caseTypeOfApplication-C100',
     search: 'Apply',
     caseList: 'Case list',
+    CaseListTab: '//a[contains(text(),"Case list")]',
     spinner: 'xuilib-loading-spinner',
     listofcourts: 'select[id="courtList"]',
     searchResult: '//a/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span',
@@ -28,19 +31,30 @@ module.exports = {
   },
 
   async navigate() {
-    await I.click(this.fields.caseList);
+    await I.waitForElement(this.fields.CaseListTab);
+    await I.click(this.fields.CaseListTab);
   },
 
-  changeStateFilter(desiredState) {
+  async changeStateFilter(desiredState) {
     this.setInitialSearchFields(desiredState);
+    await I.waitForElement(this.fields.search);
     I.click(this.fields.search);
   },
 
   async searchForCasesWithId(caseId, state = 'Any') {
+    global.logCallingFunction();
+    testLogger.AddMessage(`Search for case: ${caseId}`);
+    // let caseidInViewCaseList = caseId.match(/.{1,4}/g);
+    // caseidInViewCaseList = caseidInViewCaseList.join('-');
     await I.wait('5');
-    await I.navigationInWAEnvs(this.fields.caseList);
+    await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
-    await I.click(this.fields.caseList);
+
+    await await I.click(this.fields.caseList);
+    await I.waitForText('Filters');
+
+    // eslint-disable-next-line no-unused-vars
+
     this.setInitialSearchFields(state);
     await I.grabCurrentUrl();
     await I.wait('3');
@@ -49,9 +63,10 @@ module.exports = {
     await I.wait('3');
     await I.click(this.fields.search);
     await I.grabCurrentUrl();
-    await I.waitForElement(this.fields.searchResult);
+    await I.waitForElement(`a[href*='/cases/case-details/${caseId}']`);
+    // await I.waitForElement(this.fields.searchResult);
     await I.wait('3');
-    await I.click(this.fields.searchResult);
+    await I.retry(retryCount).click(`a[href*='/cases/case-details/${caseId}']`);
   },
 
   searchForCasesWithName(caseName, state = 'Any') {
