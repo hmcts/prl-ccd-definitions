@@ -829,6 +829,26 @@
   {
     "LiveFrom": "20/08/2021",
     "ID": "DraftOrder",
+    "ListElementCode": "orderTypeId",
+    "FieldType": "Text",
+    "ElementLabel": "Type of order",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
+    "ListElementCode": "orderType",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
+    "ElementLabel": "Order type id",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "ID": "DraftOrder",
     "ListElementCode": "magistrateLastName",
     "FieldType": "Collection",
     "FieldTypeParameter": "MagistrateLastName",
@@ -932,7 +952,8 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Is the  request to withdraw the application approved?",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -964,26 +985,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "DraftOrder",
-    "ListElementCode": "orderTypeId",
-    "FieldType": "Text",
-    "ElementLabel": "Type of order",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "isOrderUploadedByJudgeOrAdmin = \"Yes\""
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "ID": "DraftOrder",
-    "ListElementCode": "orderType",
-    "FieldType": "FixedRadioList",
-    "FieldTypeParameter": "CreateSelectOrderOptionsEnum",
-    "ElementLabel": "Type of order",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
   },
   {
     "LiveFrom": "20/08/2021",

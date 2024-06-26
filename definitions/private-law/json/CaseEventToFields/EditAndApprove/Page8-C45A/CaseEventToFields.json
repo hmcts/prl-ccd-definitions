@@ -20,7 +20,7 @@
     "PageID": 8,
     "PageDisplayOrder": 8,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"parentalResponsibility\"",
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"parentalResponsibility\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc"
   },
   {
