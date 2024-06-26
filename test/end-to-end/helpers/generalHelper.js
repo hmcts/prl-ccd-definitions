@@ -73,7 +73,7 @@ class GeneralHelper extends Helper {
   async triggerEvent(eventName) {
     const { Playwright } = this.helpers;
     await Playwright.waitForText('Next step');
-    await Playwright.waitForElement(`//select[@id = 'next-step']/option[contains(text(),'${eventName}')]`);
+    await Playwright.waitForElement(`//select[@id = "next-step"]/option[contains(text(),"${eventName}")]`);
     await Playwright.selectOption(fields.eventList, eventName);
     await Playwright.click(fields.submit);
   }

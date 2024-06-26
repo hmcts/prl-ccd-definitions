@@ -5,8 +5,10 @@ module.exports = {
   fields: { submit: 'button[type="submit"]' },
 
   async triggerEvent() {
-    await I.waitForElement('//select[@id = "next-step"]//option[contains(text(),"Respondent\'s behaviour")]');
-    await I.triggerEvent('Respondent\'s behaviour');
+    const respondentBehaviourEventOption = '//select[@id = "next-step"]//option[contains(text(),"Respondent\'s behaviour")]';
+    await I.waitForElement(respondentBehaviourEventOption);
+    // eslint-disable-next-line quotes
+    await I.triggerEvent("Respondent's behaviour");
   },
 
   async respondentBehaviour() {
