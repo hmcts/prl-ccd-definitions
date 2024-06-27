@@ -83,7 +83,7 @@ module.exports = {
       'applicants': [
         {
           'value': {
-            'firstName': 'test',
+            'firstName': 'test applicant',
             'lastName': 'test',
             'previousName': null,
             'dateOfBirth': '2000-01-01',
@@ -2225,9 +2225,79 @@ module.exports = {
 
   'Service of application': {
     eventId: 'serviceOfApplication',
-    'data': { isSpecificGateKeeperNeeded: 'No' }
+    'data': {
+      'serviceOfApplicationHeader': null,
+      'isConfidential': 'No',
+      'sentDocumentPlaceHolder': '<details class=\'govuk-details\'>\n\n<summary class=\'govuk-details__summary\'>\n\n<h3 class=\'govuk-details__summary-text\'>\n\nDocuments served in the pack\n\n</h3>\n\n</summary>\n\n<div class=\'govuk-details__text\'>\n\nCertain documents will be automatically included in the pack this is served on parties(the people in the case)\n\nThis includes\n\n<ul><li>C100</li><li>C1A</li><li>C7</li><li>C1A (if applicable)</li><li>C8 (Cafcass/Cafcass Cymru, if applicable)</li>\n\n<li>Any orders and hearing notices created at the initial gatekeeping stage</li></ul>\n\nYou do not need to upload these documents yourself\n\n</div>\n\n</details>',
+      'specialArrangementsLetter': {
+        'document_url': 'http://dm-store-aat.service.core-compute-aat.internal/documents/84c40bc2-f5ff-4038-baab-885231c5b9bc',
+        'document_binary_url': 'http://dm-store-aat.service.core-compute-aat.internal/documents/84c40bc2-f5ff-4038-baab-885231c5b9bc/binary',
+        'document_filename': 'prl-5427_1.png'
+      },
+      'additionalDocumentsList': [],
+      'caseTypeOfApplication': 'C100',
+      'soaIsOrderListEmpty': 'Yes',
+      'missingAddressWarningText': '<div class=\'govuk-warning-text\'><span class=\'govuk-warning-text__icon\' aria-hidden=\'true\'>!</span><strong class=\'govuk-warning-text__text\'>There is no postal address for a respondent and other people in the case</strong></div>',
+      'caseCreatedBy': 'SOLICITOR',
+      'isC8CheckNeeded': null,
+      'responsibleForService': null,
+      'isOccupationOrderSelected': null,
+      'soaServeToRespondentOptions': 'Yes',
+      'soaServingRespondentsOptionsCA': 'applicantLegalRepresentative',
+      'soaOtherParties': {
+        'value': [],
+        'list_items': [
+          {
+            'code': '9e10529f-0f90-4f6b-bed9-ddcb4b9b5558',
+            'label': 'tes othr test other ln'
+          }
+        ]
+      },
+      'soaCafcassCymruServedOptions': 'No',
+      'soaServeLocalAuthorityYesOrNo': 'No'
+    }
   },
 
+  'Statement of service': {
+    eventId: 'statementOfService',
+    'data': {
+      'stmtOfServiceWhatWasServed': 'statementOfServiceApplicationPack',
+      'stmtOfServiceAddRecipient': [
+        {
+          'value': {
+            'respondentDynamicList': {
+              'value': {
+                'code': '4af96cd3-2045-4702-b88d-62be4b20ea77',
+                'label': 'test resp test resp ln (Respondent 1)'
+              },
+              'list_items': [
+                {
+                  'code': '4af96cd3-2045-4702-b88d-62be4b20ea77',
+                  'label': 'test resp test resp ln (Respondent 1)'
+                },
+                {
+                  'code': 'All respondents',
+                  'label': 'All respondents'
+                }
+              ]
+            },
+            'servedDateTimeOption': '2024-06-02T00:00:00.000',
+            'selectedPartyName': null,
+            'citizenPartiesServedList': null,
+            'citizenPartiesServedDate': null,
+            'selectedPartyId': null,
+            'stmtOfServiceDocument': {
+              'document_url': 'http://dm-store-aat.service.core-compute-aat.internal/documents/41e09a71-bc1d-4b17-9a46-aabe87ca0f8c',
+              'document_binary_url': 'http://dm-store-aat.service.core-compute-aat.internal/documents/41e09a71-bc1d-4b17-9a46-aabe87ca0f8c/binary',
+              'document_filename': 'prl-5427_1.png'
+            },
+            'citizenSosDocs': []
+          },
+          'id': '1cae9da2-2961-4a14-8b71-98ada280d79f'
+        }
+      ]
+    }
+  },
 
   'Add case note': {
     eventId: 'addCaseNote',
