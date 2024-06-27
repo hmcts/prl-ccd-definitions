@@ -1,5 +1,7 @@
 
 const apiUtil = require('./apiUtil');
+const path = require('path');
+const fs = require('fs');
 
 module.exports = {
   async createCase(caseTypeId, eventId, caseData) {
@@ -32,11 +34,15 @@ module.exports = {
       'Content-type': 'application/json; charset=UTF-8'
     };
     const submitEventRes = await apiUtil.postData(submitCaseUrl, submitEventHeaders, postData);
+
     return submitEventRes;
   },
 
 
   async submitEvent(caseId, eventDetails, midEventProcess) {
+    const logPath = path.resolve(__dirname, '../../../../../output', `caseDataSetup_${caseId}.log`);
+    fs.appendFileSync(logPath, `********** start of event: ${eventDetails.eventId} \n`);
+
     const startEventUrl = `/data/internal/cases/${caseId}/event-triggers/${eventDetails.eventId}?ignore-warning=false`;
 
     const startEventHeaders = {
@@ -70,6 +76,8 @@ module.exports = {
     };
     const submitEventRes = await apiUtil.postData(submitEventUrl, submitEventHeaders, postData);
     eventDetails.submitEventRes = submitEventRes;
+
+    // fs.appendFileSync(logPath, JSON.stringify(eventDetails, null, '2'));
     return submitEventRes;
   }
 };
