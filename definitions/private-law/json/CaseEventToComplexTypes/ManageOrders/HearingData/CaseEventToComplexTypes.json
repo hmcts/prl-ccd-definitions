@@ -90,7 +90,7 @@
     "EventElementLabel": "**The date needs to be confirmed by the listing team before service**",
     "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "isAutomatedHearingPresent=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
+    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
   {
     "LiveFrom": "16/02/2022",
