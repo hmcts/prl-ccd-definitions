@@ -17,26 +17,28 @@
           "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "20/06/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "processUrgentHelpWithFeesAwp",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "ctsc-team-leader"
+        ],
+        "CRUD": "CRU"
       },
       {
-        "LiveFrom": "20/06/2024",
-        "CaseTypeID": "PRLAPPS",
-        "CaseEventID": "processUrgentHelpWithFeesAwp",
-        "AccessControl": [
-          {
-            "UserRoles": [
-              "caseworker-privatelaw-systemupdate",
-              "ctsc-team-leader"
-            ],
-            "CRUD": "CRU"
-          },
-          {
-            "UserRoles": [
-              "caseworker-wa-task-configuration",
-              "caseworker-privatelaw-readonly"
-            ],
-            "CRUD": "R"
-          }
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      }
     ]
   }
 ]
