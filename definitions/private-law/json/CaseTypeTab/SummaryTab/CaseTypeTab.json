@@ -145,7 +145,6 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
     "TabFieldDisplayOrder": 11
   },
-
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -157,8 +156,28 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
     "TabFieldDisplayOrder": 11
   },
-
-
+  {
+    "LiveFrom": "25/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "pathfinderLabel",
+    "FieldShowCondition": "isPathfinderCase = \"Yes\"",
+    "TabFieldDisplayOrder": 12
+  },
+  {
+    "LiveFrom": "25/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "isPathfinderCase",
+    "FieldShowCondition": "isPathfinderCase = \"Yes\"",
+    "TabFieldDisplayOrder": 13
+  },
   {
     "LiveFrom": "08/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -167,7 +186,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "specialArrangmentLabel",
-    "TabFieldDisplayOrder": 12
+    "TabFieldDisplayOrder": 14
   },
   {
     "LiveFrom": "08/11/2021",
@@ -177,7 +196,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "specialArrangement",
-    "TabFieldDisplayOrder": 13
+    "TabFieldDisplayOrder": 15
   },
   {
     "LiveFrom": "08/11/2021",
@@ -188,7 +207,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "orderAppliedForLabel",
     "FieldShowCondition": "ordersApplyingFor!=\"\"  AND caseTypeOfApplication=\"C100\"",
-    "TabFieldDisplayOrder": 14
+    "TabFieldDisplayOrder": 16
   },
   {
     "LiveFrom": "08/11/2021",
@@ -199,7 +218,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "summaryTabForOrderAppliedFor",
     "FieldShowCondition": "ordersApplyingFor!=\"\" AND caseTypeOfApplication=\"C100\"",
-    "TabFieldDisplayOrder": 15
+    "TabFieldDisplayOrder": 17
   },
   {
     "LiveFrom": "08/11/2021",
@@ -209,7 +228,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "otherProceedingsLabelForSummaryTab",
-    "TabFieldDisplayOrder": 16
+    "TabFieldDisplayOrder": 18
   },
   {
     "LiveFrom": "08/11/2021",
@@ -220,7 +239,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "otherProceedingsForSummaryTab",
     "FieldShowCondition": "existingProceedings!=\"\" OR fl401OtherProceedingDetails !=\"\"",
-    "TabFieldDisplayOrder": 17
+    "TabFieldDisplayOrder": 19
   },
   {
     "LiveFrom": "08/11/2021",
@@ -230,7 +249,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "otherProceedingEmptyTable",
-    "TabFieldDisplayOrder": 18
+    "TabFieldDisplayOrder": 20
   },
   {
     "LiveFrom": "08/11/2021",
@@ -240,7 +259,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "dateOfSubmissionLabel",
-    "TabFieldDisplayOrder": 19
+    "TabFieldDisplayOrder": 21
   },
   {
     "LiveFrom": "08/11/2021",
@@ -250,7 +269,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "dateOfSubmission",
-    "TabFieldDisplayOrder": 19
+    "TabFieldDisplayOrder": 22
   },
   {
     "LiveFrom": "08/11/2021",
@@ -261,36 +280,6 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "fl401OtherProceedingDetails",
     "FieldShowCondition": "fl401OtherProceedingDetails =\"DO_NOT_SHOW\"",
-    "TabFieldDisplayOrder": 20
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "Summary",
-    "TabLabel": "Summary",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "caseFromCourtNav",
-    "TabFieldDisplayOrder": 21
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "Summary",
-    "TabLabel": "Summary",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "caseOrigin",
-    "TabFieldDisplayOrder": 22
-  },
-  {
-    "LiveFrom": "08/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "Channel": "CaseWorker",
-    "TabID": "Summary",
-    "TabLabel": "Summary",
-    "TabDisplayOrder": 0,
-    "CaseFieldID": "courtNavApproved",
     "TabFieldDisplayOrder": 23
   },
   {
@@ -300,7 +289,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "hasDraftOrder",
+    "CaseFieldID": "caseFromCourtNav",
     "TabFieldDisplayOrder": 24
   },
   {
@@ -310,8 +299,38 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "numberOfAttachments",
+    "CaseFieldID": "caseOrigin",
     "TabFieldDisplayOrder": 25
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "courtNavApproved",
+    "TabFieldDisplayOrder": 26
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "hasDraftOrder",
+    "TabFieldDisplayOrder": 27
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "numberOfAttachments",
+    "TabFieldDisplayOrder": 28
   },
   {
     "LiveFrom": "01/01/2018",
