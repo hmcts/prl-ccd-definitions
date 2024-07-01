@@ -89,14 +89,13 @@ ccd:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
         USER_PROFILE_DB_OPTIONS: "?stringtype=unspecified"
         USER_PROFILE_DB_PASSWORD: '{{ tpl .Values.global.postgresPassword $}}'
+        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
         secrets:
           USER_PROFILE_DB_PASSWORD:
             secretRef: "{{ .Values.global.postgresSecret }}"
             key: PASSWORD
             disabled: true
       keyVaults: []
-      environment:
-        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   ccd-data-store-api:
