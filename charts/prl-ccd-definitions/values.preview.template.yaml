@@ -90,11 +90,11 @@ ccd:
         USER_PROFILE_DB_OPTIONS: "?stringtype=unspecified"
         USER_PROFILE_DB_PASSWORD: '{{ tpl .Values.global.postgresPassword $}}'
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
-        secrets:
-          USER_PROFILE_DB_PASSWORD:
-            secretRef: "{{ .Values.global.postgresSecret }}"
-            key: PASSWORD
-            disabled: true
+      secrets:
+        USER_PROFILE_DB_PASSWORD:
+          secretRef: "{{ .Values.global.postgresSecret }}"
+          key: PASSWORD
+          disabled: true
       keyVaults: []
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
@@ -119,11 +119,11 @@ ccd:
         DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend
         ROLE_ASSIGNMENT_URL: http://am-role-assignment-service-aat.service.core-compute-aat.internal
         DATA_STORE_DB_OPTIONS: "?stringtype=unspecified"
-        secrets:
-          DATA_STORE_DB_PASSWORD:
-            secretRef: "{{ .Values.global.postgresSecret }}"
-            key: PASSWORD
-            disabled: true
+      secrets:
+        DATA_STORE_DB_PASSWORD:
+          secretRef: "{{ .Values.global.postgresSecret }}"
+          key: PASSWORD
+          disabled: true
       keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
@@ -145,11 +145,11 @@ ccd:
         ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 50000
         DEFINITION_STORE_DEFAULT_LOG_LEVEL: DEBUG
         DEFINITION_STORE_TX_TIMEOUT_DEFAULT: 120
-      secrets:
-        DEFINITION_STORE_DB_PASSWORD:
-          secretRef: "{{ .Values.global.postgresSecret }}"
-          key: PASSWORD
-          disabled: true
+        secrets:
+          DEFINITION_STORE_DB_PASSWORD:
+            secretRef: "{{ .Values.global.postgresSecret }}"
+            key: PASSWORD
+            disabled: true
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
   ccd-admin-web:
