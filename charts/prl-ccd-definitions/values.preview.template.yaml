@@ -340,7 +340,7 @@ aac-manage-case-assignment:
     java:
       disableKeyVaults: true
       environment:
-        CCD_DATA_STORE_URL: http://{{ SERVICE_NAME }}-ccd-data-store-api
+        CCD_DATA_STORE_URL: http://{{ .Release.Name }}-ccd-data-store-api
         RUN_LD_ON_STARTUP: false
         ROLE_ASSIGNMENT_DB_HOST: ${SERVICE_NAME}-postgresql
         ROLE_ASSIGNMENT_DB_PASSWORD: '{{ tpl .Values.global.postgresPassword $}}'
