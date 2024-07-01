@@ -7,12 +7,12 @@ dependencies:
     version: 3.1.1
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
   - name: ccd
-    version: ~9.1.0
+    version: 9.1.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     tags:
       - ccd-pr
   - name: xui-webapp
-    version: ~1.0.17
+    version: 1.0.17
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: xui-webapp.enabled
   - name: idam-pr
@@ -24,6 +24,6 @@ dependencies:
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: ccd-case-document-am-api.enabled
   - name: aac-manage-case-assignment
-    version: ~0.2.13
+    version: 0.2.13
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: aac-manage-case-assignment.enabled
