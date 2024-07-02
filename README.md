@@ -73,3 +73,4 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 3. Run _yarn reset-ccd-submodule_ in local
 4. Now you can run the yarn commands locally.
 5. Also the file to update the environment urls is now env.json (env.json is read by json-env.js)
+6. 
