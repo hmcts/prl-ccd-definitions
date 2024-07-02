@@ -15,7 +15,6 @@ Scenario(
     await I.manageOrderUploadOrderServeNowPersonally();
   }).retry(testConfig.TestRetryScenarios);
 
-caseId = '1717576360043385';
 Scenario(
   'CA Manage Order Upload Order - For Judge review - @regression-suite',
   async({ I }) => {

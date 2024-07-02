@@ -1,8 +1,16 @@
 // const logCustomization = require('./helpers/logCustomization')
 // logCustomization.overrideConsoleLogforWorkersThreads();
 const path = require('path');
+const fs = require('fs');
 
 const outputDir = path.resolve(__dirname, '../../output');
+
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
+
+const DataSetupManager = require('./restApiData/DataSetupManager');
+
 
 exports.config = {
   tests: './tests/*_test.js',
@@ -84,5 +92,12 @@ exports.config = {
       browsers: ['chrome']
     }
   },
-  name: 'prl-ccd-definitions'
+  name: 'prl-ccd-definitions',
+  bootstrap: () => {
+    DataSetupManager.init();
+  },
+
+  teardown: async() => {
+    await DataSetupManager.close();
+  }
 };

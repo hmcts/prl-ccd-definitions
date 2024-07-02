@@ -70,6 +70,12 @@ module.exports = () => {
     loginAsCaseManager() {
       return LoginPage.loginAsCaseManager();
     },
+    loginAsStokeCourtAdmin() {
+      return LoginPage.loginAsStokeCourtAdmin();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },
@@ -81,9 +87,6 @@ module.exports = () => {
     },
     loginAsLegalAdviser() {
       return LoginPage.loginAsLegalAdviser();
-    },
-    loginAsSwanseaCourtAdmin() {
-      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     loginAsOldCourtAdmin() {
       return LoginPage.loginAsOldCourtAdmin();
