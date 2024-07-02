@@ -66,6 +66,8 @@ ccd:
       enabled: false
     elastic:
       enabled: true
+    ras:
+      enabled: false
 
   ingressHost: ${SERVICE_FQDN}
   ingressIP: ${INGRESS_IP}
@@ -295,6 +297,7 @@ aac-manage-case-assignment:
     ports:
       - 5005:5005
     environment:
+      ROLE_ASSIGNMENT_URL: http://am-role-assignment-service-aat.service.core-compute-aat.internal
       JAVA_TOOL_OPTIONS: -Xms128m -Xmx600m -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
       IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
