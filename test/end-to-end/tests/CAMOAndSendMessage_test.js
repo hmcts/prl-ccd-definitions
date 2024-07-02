@@ -5,8 +5,10 @@ let caseId;
 
 Feature('Court Admin Create Dummy case - Create Order & send message journeys');
 Scenario('Create Order C21 @regression-suite', async({ I }) => {
-  await I.loginAsCourtAdmin();
+  await I.loginAsOldCourtAdmin();
   await I.createC100CaseByCourtAdmin();
+  caseId = await I.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
+  await I.searchForCasesWithId(caseId);
   await I.manageOrderCreateOrderC21();
   await I.fillHearingDetails();
   await I.submitManageOrder();
@@ -14,14 +16,13 @@ Scenario('Create Order C21 @regression-suite', async({ I }) => {
 
 
 Scenario('As a court admin Create Order C43 @regression-suite', async({ I }) => {
-  await I.loginAsCourtAdmin();
-  await I.createC100CaseByCourtAdmin();
-  caseId = await I.saveTheCaseId();
+  await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.manageOrderCreateOrderC43();
 }).retry(testConfig.TestRetryScenarios);
 
 
+caseId = '1717587983937085';
 Scenario('As a Judge edit & draft C43 order @regression-suite', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
@@ -29,7 +30,7 @@ Scenario('As a Judge edit & draft C43 order @regression-suite', async({ I }) => 
 }).retry(testConfig.TestRetryScenarios);
 
 Scenario('As a court admin edit & serve an order @regression-suite', async({ I }) => {
-  await I.loginAsCourtAdmin();
+  await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.adminServeAnOrder();
 }).retry(testConfig.TestRetryScenarios);

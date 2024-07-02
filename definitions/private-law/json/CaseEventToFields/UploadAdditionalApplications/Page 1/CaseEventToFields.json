@@ -8,7 +8,8 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes"
+    "ShowSummaryChangeOption": "Yes",
+    "Publish": "True"
   },
   {
     "LiveFrom": "20/11/2022",
@@ -16,7 +17,7 @@
     "CaseEventID": "uploadAdditionalApplications",
     "CaseFieldID": "typeOfC2Application",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "additionalApplicationsApplyingFor CONTAINS \"c2Order\"",
+    "FieldShowCondition": "additionalApplicationsApplyingFor=\"c2Order\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -44,7 +45,7 @@
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
     "RetainHiddenValue": "Y",
-    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -57,7 +58,7 @@
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
     "RetainHiddenValue": "Y",
-    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\"",
+    "FieldShowCondition": "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/upload-additional-application/mid-event"
   },
   {
@@ -71,6 +72,20 @@
     "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "N",
     "RetainHiddenValue": "Y",
-    "FieldShowCondition" : "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "uploadAdditionalApplications",
+    "CaseFieldID": "awpWaTaskToBeCreated",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition": "additionalApplicationsApplyingFor=\"DO_NOT_SHOW\"",
+    "Publish": "True"
   }
 ]
