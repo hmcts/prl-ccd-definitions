@@ -49,11 +49,12 @@ const submitAndPayProcess = (eventRestObj, startDEventRes) => {
   eventRestObj.data.submitAndPayDownloadApplicationLink = eventDataField.value;
 };
 
-const exuiUploadDoc = async(caseId, eventPath, fieldSelector, filePath, page) => {
+const exuiUploadDoc = async (caseId, eventPath, fieldSelector, filePath, page) => {
   // await I.startRecordingTraffic();
-  await page.goto(`https://manage-case.aat.platform.hmcts.net/cases/case-details/${caseId}`);
+  const xuiWebUrl = process.env.XUI_WEB_URL;
+  await page.goto(`${xuiWebUrl}/cases/case-details/${caseId}`);
   await page.locator('#next-step').waitFor();
-  await page.goto(`https://manage-case.aat.platform.hmcts.net/cases/case-details/${caseId}/${eventPath}`);
+  await page.goto(`${xuiWebUrl}/cases/case-details/${caseId}/${eventPath}`);
 
   await page.locator(fieldSelector).waitFor();
   // const fileChooserPromise = page.waitForEvent('filechooser');
@@ -101,6 +102,7 @@ class CaseDataSetup {
       try {
         return await fn();
       } catch (fnErr) {
+
         this.log(`${fnErr}`);
         console.log(fnErr);
       }

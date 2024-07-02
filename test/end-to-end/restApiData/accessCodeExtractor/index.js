@@ -10,13 +10,12 @@ const getIdamToken = async() => {
   formData.append('password', process.env.CCD_DATASTORE_password);
   formData.append('scope', 'openid profile roles');
 
-  const postRes = await fetch('https://idam-web-public.aat.platform.hmcts.net/o/token', {
+  const postRes = await fetch(`https://idam-web-public.${process.env.ENV}.platform.hmcts.net/o/token`, {
     method: 'POST',
     body: formData,
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/x-www-form-urlencoded'
       // 'Content-Length': '169',
-      Cookie: 'XSRF-TOKEN=d6fb8911-b7e4-4283-beaa-950d8cc8d62c'
     }
   });
   let resBody = null;
@@ -30,7 +29,7 @@ const getIdamToken = async() => {
 };
 
 const getS2SToken = async() => {
-  const postRes = await fetch('http://rpe-service-auth-provider-aat.service.core-compute-aat.internal/testing-support/lease', {
+  const postRes = await fetch(`http://rpe-service-auth-provider-${process.env.ENV}.service.core-compute-${process.env.ENV}.internal/testing-support/lease`, {
     method: 'POST',
     body: JSON.stringify({ microservice: 'prl_cos_api' }),
     headers: {
@@ -57,7 +56,7 @@ const getCaseInvites = async caseId => {
     ServiceAuthorization: s2sToken,
     experimental: 'test'
   };
-  const caseDetails = await fetch(`http://ccd-data-store-api-aat.service.core-compute-aat.internal/cases/${caseId}`, {
+  const caseDetails = await fetch(`http://ccd-data-store-api-${process.env.ENV}.service.core-compute-${process.env.ENV}.internal/cases/${caseId}`, {
     method: 'GET',
     headers: caseDEtailsheaders
   });
