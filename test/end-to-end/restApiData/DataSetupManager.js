@@ -9,10 +9,12 @@ class DataSetupManager {
   constructor() {
     this.dataSetupList = [];
     this.dataSetupRefFilesPath = path.resolve(__dirname, '../../../output/caseDataSetup');
+    this.datasetupOutputLog = `${this.dataSetupRefFilesPath}/output.log`;
     if (!fs.existsSync(this.dataSetupRefFilesPath)) {
       fs.mkdirSync(this.dataSetupRefFilesPath);
     }
 
+    fs.writeFileSync(this.datasetupOutputLog, `${new Date().toLocaleTimeString()}: Datasetup started \n`, 'utf-8');
     this.state = 'running';
   }
 
@@ -29,17 +31,21 @@ class DataSetupManager {
   run() {
     for (const request of dataSetupRequestJson) {
       const caseDataSetup = new CaseDataSetupV2(this.browser);
-      this.dataSetupList.push({
+      const caseSetup = {
         scenario: request.scenario,
         datasetupObj: caseDataSetup
-      });
+      };
+      this.dataSetupList.push(caseSetup);
       caseDataSetup.state = 'running';
+      fs.appendFileSync(this.datasetupOutputLog, `${new Date().toLocaleTimeString()}: case for scenario => ${request.scenario} \n`);
       caseDataSetup.caseSetupToServiceOfApplication().then(() => {
         caseDataSetup.state = 'completed';
+        fs.appendFileSync(this.datasetupOutputLog, `${new Date().toLocaleTimeString()}: case for scenario => ${request.scenario} caseId ${caseDataSetup.caseId} Status: ${caseDataSetup.state} \n`, 'utf-8');
       })
         .catch(setupErr => {
           console.log(setupErr);
           caseDataSetup.state = 'failed';
+          fs.appendFileSync(this.datasetupOutputLog, `${new Date().toLocaleTimeString()}: case for scenario => ${request.scenario} caseId ${caseDataSetup.caseId} Status: ${caseDataSetup.state} \n`, 'utf-8');
         });
       console.log('text');
     }
