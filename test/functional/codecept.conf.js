@@ -24,12 +24,7 @@ exports.config = {
       retries: 2,
       minTimeout: 2000
     },
-    autoDelay: {
-      enabled: true
-    },
-    tryTo: {
-       enabled: true
-    }
+    tryTo: { enabled: true }
   },
   mocha: {
     reporterOptions: {
