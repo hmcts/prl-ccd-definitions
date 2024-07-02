@@ -79,6 +79,7 @@ const exuiUploadDoc = async(caseId, eventPath, fieldSelector, filePath, page) =>
 
 class CaseDataSetup {
   constructor(browser) {
+    this.outputDir = '../../../output';
     this.caseId = null;
     this.browser = browser;
     // this.initBrowser();
@@ -93,52 +94,78 @@ class CaseDataSetup {
     await this.browser.close();
   }
 
-  async login(usernameVal, passwordVal) {
-    await this.browserContext.clearCookies();
-    const xuiUrl = process.env.XUI_WEB_URL;
-    await this.page.goto(xuiUrl);
-    const username = this.page.locator('#username');
-    const password = this.page.locator('#password');
+  async retryBlock(fn) {
+    let retryCounter = 0;
+    while (retryCounter < '3') {
+      retryCounter += 1;
+      try {
+        return await fn();
+      } catch (fnErr) {
+     
+        this.log(`${fnErr}`);
+        console.log(fnErr);
+      }
+    }
+    return null;
+  }
 
-    await username.waitFor();
-    await username.fill(usernameVal);
-    await password.fill(passwordVal);
-    await this.page.locator('input[type="submit"]').click();
+  async login(usernameVal, passwordVal) {
+    await this.retryBlock(async() => {
+      await this.browserContext.clearCookies();
+      const xuiUrl = process.env.XUI_WEB_URL;
+      await this.page.goto(xuiUrl);
+      const username = this.page.locator('#username');
+      const password = this.page.locator('#password');
+
+      await username.waitFor();
+      await username.fill(usernameVal);
+      await password.fill(passwordVal);
+      await this.page.locator('input[type="submit"]').click();
+    });
   }
 
   log(message) {
-    const logPath = path.resolve(__dirname, '../../../output', `caseDataSetup_${this.caseId}.log`);
+    let logPath = null;
+    if (this.caseId) {
+      logPath = path.resolve(__dirname, this.outputDir, `caseDataSetup/caseDataSetup_running_${this.caseId}.log`);
+    } else {
+      logPath = path.resolve(__dirname, this.outputDir, 'caseDataSetup/case_creation.log');
+    }
     fs.appendFileSync(logPath, `${new Date().toLocaleTimeString()}: ${message} \n`);
   }
 
 
   async getData(url, headers) {
-    // eslint-disable-next-line no-shadow
-    const res = await this.page.evaluate(async({ url, headers }) => {
-      console.log(`GET : ${url}`);
-      const getRes = await fetch(url, {
-        method: 'GET',
-        headers,
-        credentials: 'same-origin'
-      });
-      const resData = await getRes.json();
-      return resData;
-    }, { url, headers });
-    return res;
+    return await this.retryBlock(async() => {
+      // eslint-disable-next-line no-shadow
+      const res = await this.page.evaluate(async({ url, headers }) => {
+        console.log(`GET : ${url}`);
+        const getRes = await fetch(url, {
+          method: 'GET',
+          headers,
+          credentials: 'same-origin'
+        });
+        const resData = await getRes.json();
+        return resData;
+      }, { url, headers });
+      return res;
+    });
   }
 
   async postData(url, headers, requestData) {
-    // eslint-disable-next-line no-shadow
-    const res = await this.page.evaluate(async({ url, headers, requestData }) => {
-      const postRes = await fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(requestData),
-        headers
-      });
-      const resData = await postRes.json();
-      return resData;
-    }, { url, headers, requestData });
-    return res;
+    return await this.retryBlock(async() => {
+      // eslint-disable-next-line no-shadow
+      const res = await this.page.evaluate(async({ url, headers, requestData }) => {
+        const postRes = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(requestData),
+          headers
+        });
+        const resData = await postRes.json();
+        return resData;
+      }, { url, headers, requestData });
+      return res;
+    });
   }
 
   async createCase(caseTypeId, eventId, caseData) {
@@ -177,8 +204,7 @@ class CaseDataSetup {
 
 
   async submitEvent(caseId, eventDetails, midEventProcess) {
-    const logPath = path.resolve(__dirname, '../../../output', `caseDataSetup_${caseId}.log`);
-    fs.appendFileSync(logPath, `${new Date().toLocaleTimeString()}: ********** start of event: ${eventDetails.eventId} \n`);
+    this.log(`********** start of event: ${eventDetails.eventId}`);
 
     const startEventUrl = `/data/internal/cases/${caseId}/event-triggers/${eventDetails.eventId}?ignore-warning=false`;
 
@@ -214,9 +240,7 @@ class CaseDataSetup {
     const submitEventRes = await this.postData(submitEventUrl, submitEventHeaders, postData);
     eventDetails.submitEventRes = submitEventRes;
 
-    fs.appendFileSync(logPath, `${new Date().toLocaleTimeString()}: ********** Successful event: ${eventDetails.eventId} \n\n`);
-
-    // fs.appendFileSync(logPath, JSON.stringify(eventDetails, null, '2'));
+    this.log(`********** Successful event: ${eventDetails.eventId} \n\n`);
     return submitEventRes;
   }
 
@@ -246,10 +270,7 @@ class CaseDataSetup {
 
   async caseStateSubmitAndPay() {
     await this.initBrowser();
-    const tempCaseId = Date.now();
-    const logPath = path.resolve(__dirname, '../../../output/caseDataSetup', `caseDataSetup_running_${tempCaseId}.log`);
-
-    fs.writeFileSync(logPath, '***** Case creation: \n');
+    this.log('***** Case creation:');
 
     // loginAsSolicitor
     await this.login(config.legalProfessionalUserOne.email, config.legalProfessionalUserOne.password);
@@ -260,10 +281,7 @@ class CaseDataSetup {
 
     this.caseId = caseCreateRes.id;
     console.log(this.caseId);
-    const newLogPath = path.resolve(__dirname, '../../../output', `caseDataSetup_running_${this.caseId}.log`);
-    fs.renameSync(logPath, newLogPath);
-    fs.appendFileSync(logPath, '***** Case created: \n');
-
+    this.log(`***** Case created: ${this.caseId}`);
     // fs.appendFileSync(logPath, JSON.stringify(caseCreateRes, null, '2'));
 
     const SolicitorEvents = [
@@ -340,7 +358,7 @@ class CaseDataSetup {
     eventRest.res = res;
 
     // Service of application
-    const doc = await exuiUploadDoc(this.caseId, 'trigger/serviceOfApplication/serviceOfApplication2', '//div[@id = "specialArrangementsLetter_fileInputWrapper"]/../input', './src/test/end-to-end/exuiSupport/restApiData/dummy.pdf', this.page);
+    const doc = await exuiUploadDoc(this.caseId, 'trigger/serviceOfApplication/serviceOfApplication2', '//div[@id = "specialArrangementsLetter_fileInputWrapper"]/../input', './test/end-to-end/restApiData/dummy.pdf', this.page);
     const soaRest = restApiData['Service of application'];
     soaRest.data.specialArrangementsLetter = doc;
     eventRest.res = res;
