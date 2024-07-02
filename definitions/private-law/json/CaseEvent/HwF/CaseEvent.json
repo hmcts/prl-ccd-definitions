@@ -1,0 +1,21 @@
+[
+  {
+    "LiveFrom": "20/06/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "processUrgentHelpWithFees",
+    "Name": "Process urgent help with fees",
+    "Description": "Process urgent help with fees",
+    "DisplayOrder": 144,
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/process-help-with-fees/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/process-help-with-fees/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/process-help-with-fees/submitted",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  }
+]
+
