@@ -101,7 +101,6 @@ class CaseDataSetup {
       try {
         return await fn();
       } catch (fnErr) {
-     
         this.log(`${fnErr}`);
         console.log(fnErr);
       }
