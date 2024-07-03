@@ -1,4 +1,4 @@
-FROM hmctspublic.azurecr.io/base/node:18-alpine as base
+FROM hmctspublic.azurecr.io/base/node:20-alpine as base
 USER hmcts
 COPY --chown=hmcts:hmcts package.json yarn.lock ./
 COPY /definitions/private-law/xlsx /
