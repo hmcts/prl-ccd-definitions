@@ -90,6 +90,7 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:preview') {
     yarnBuilder.yarn('reset-ccd-submodule')
+    yarnBuilder.yarn('playwrightsetup')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
@@ -105,6 +106,7 @@ withPipeline("nodejs", product, component) {
 
   before('smoketest:aat') {
     yarnBuilder.yarn('setup')
+    yarnBuilder.yarn('playwrightsetup')
     yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
