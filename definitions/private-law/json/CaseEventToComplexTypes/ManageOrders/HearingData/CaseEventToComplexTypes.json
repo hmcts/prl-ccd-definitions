@@ -679,7 +679,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "60",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "((ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND (loggedInUserType!=\"JUDGE\"))"
+    "FieldShowCondition": "(ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND loggedInUserType!=\"JUDGE\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -727,7 +727,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "64",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\" AND loggedInUserType!=\"JUDGE\""
+    "FieldShowCondition": "(ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\") AND loggedInUserType!=\"JUDGE\""
   },
 
   {
