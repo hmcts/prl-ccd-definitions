@@ -4,6 +4,7 @@ const Helper = codecept_helper;
 const longWait = 30;
 const loopMax = 3;
 // const { Playwright } = this.helpers;
+const testLogger = require('./testLogger');
 
 const fields = {
   eventList: 'select[id="next-step"]',
@@ -157,6 +158,23 @@ class GeneralHelper extends Helper {
       console.log('Skipping operation as element is not visible');
     }
     return null;
+  }
+
+  async retryBlock(functionBlock) {
+    let counter = 0;
+    let errObjTracker = null;
+    const maxRetyLimit = 3;
+    while (counter < maxRetyLimit) {
+      counter += 1;
+      try {
+        await functionBlock();
+        return;
+      } catch (errObj) {
+        errObjTracker = errObj;
+        testLogger.AddMessage(`Error in retry block: ${errObj}`);
+      }
+    }
+    throw errObjTracker;
   }
 }
 
