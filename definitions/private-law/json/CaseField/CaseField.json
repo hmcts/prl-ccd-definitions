@@ -917,6 +917,15 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "existingProceedingsWithDoc",
+    "Label": "Other proceedings",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ProceedingDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "labelTheApplicants",
     "Label": "**The Applicant(s)**",
     "FieldType": "Label",
@@ -3045,7 +3054,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalApplicationsApplyingFor",
     "Label": "What are you applying for?",
-    "FieldType": "MultiSelectList",
+    "FieldType": "FixedRadioList",
     "FieldTypeParameter": "AdditionalApplicationTypeEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -3064,7 +3073,7 @@
     "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalApplicantsList",
-    "Label": "Select applicant",
+    "Label": "Select party(s)",
     "FieldType": "DynamicMultiSelectList",
     "SecurityClassification": "Public",
     "Searchable": "N"

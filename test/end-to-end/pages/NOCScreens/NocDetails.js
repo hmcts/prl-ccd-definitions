@@ -3,6 +3,8 @@ const I = actor();
 
 const nocConfig = require('./nocConfig');
 
+const retry = 3;
+
 module.exports = {
   fields: {
     caseRef: '#caseRef',
@@ -16,15 +18,19 @@ module.exports = {
     confEle: '#resSolConfidentialityDisclaimerSubmit_confidentialityChecksChecked-confidentialityChecksChecked',
     decEle: '#respondentAgreeStatement-agree',
     respondentMiam: '//a[contains(.,"MIAM")]',
-    respondentAOH: '//a[contains(.,"Allegations of harm")]',
+    respondentAOH: '//a[contains(.,"Make allegations of harm")]',
+    respondentRAOH: '//a[contains(.,"Respond to allegations of harm")]',
     hasRespondentHaveAllegations: '*Are there allegations of harm?',
+    raohText: 'Would you like to respond to the allegations of harm and violence raised by the other party?',
+    raoh_No: '#responseToAllegationsOfHarmYesOrNoResponse_No',
     respondentAOH_No: '#respAohYesOrNo_No',
     cyaText: 'Check your answers'
 
   },
 
   async addNocDetails(caseId) {
-    await I.click(nocConfig.nocText);
+    await I.waitForText(nocConfig.nocText);
+    await I.retry(retry).click(nocConfig.nocText);
     await I.waitForText(nocConfig.nocRequirementText);
     await I.fillField(this.fields.caseRef, caseId);
     await I.click(nocConfig.continueText);
@@ -59,6 +65,16 @@ module.exports = {
     await I.click('Save and continue');
   },
 
+  async fillRespondentRAOHNoOption() {
+    await I.wait('10');
+    await I.waitForText(this.fields.raohText);
+    await I.click(this.fields.raoh_No);
+    await I.click('Continue');
+    await I.waitForText(this.fields.cyaText);
+    await I.click('Save and continue');
+    await I.wait('5');
+  },
+
   async fillRespondentTasks() {
     await I.triggerEvent(nocConfig.tsEvent);
     await I.click(nocConfig.submitText);
@@ -71,6 +87,9 @@ module.exports = {
     await I.click(this.fields.respondentTab);
     await I.click(this.fields.respondentAOH);
     await this.fillRespondentAOHNoOption();
+    await I.click(this.fields.respondentTab);
+    await I.click(this.fields.respondentRAOH);
+    await this.fillRespondentRAOHNoOption();
     await I.click(this.fields.respondentTab);
     await I.click(this.fields.submitEvent);
 
