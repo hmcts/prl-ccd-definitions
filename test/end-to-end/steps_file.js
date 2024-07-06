@@ -85,6 +85,9 @@ module.exports = () => {
     loginAsSwanseaCourtAdmin() {
       return LoginPage.loginAsSwanseaCourtAdmin();
     },
+    loginAsOldCourtAdmin() {
+      return LoginPage.loginAsOldCourtAdmin();
+    },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
     },
@@ -105,6 +108,9 @@ module.exports = () => {
     },
     createNewCaseFL401_TS() {
       return CreateCasePage.createNewCaseFL401_TS();
+    },
+    createC100UrgentCaseByCourtAdmin() {
+      return CreateCasePage.createC100UrgentCaseByCourtAdmin();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -244,6 +250,9 @@ module.exports = () => {
     runSubmitAndPay_TS() {
       return submitAndPay.dummyPaymentConfirmation();
     },
+    submitAndPayCourtAdmin() {
+      return submitAndPay.submitAndPayCourtAdmin();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -268,14 +277,20 @@ module.exports = () => {
     createSolicitorDummyCase() {
       return CreateCasePage.createNewSolicitorDummyC100Case();
     },
+    createDASolicitorDummyCase() {
+      return CreateCasePage.createNewSolicitorDummyFL401Case();
+    },
     payAndSubmitDummySolicitorCase() {
       return submitAndPay.submitAndPayForDummySolicitorApplication();
     },
     solicitorWithdrawApplication() {
       return solicitorWithdrawApplication.solicitorWithdrawApplicationFlow();
     },
-    saveTheCaseIdAndSignout() {
-      return CreateCasePage.saveTheCaseIdAndSignout();
+    saveTheCaseIdAndSignInAsSwanseaCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
+    },
+    saveTheCaseIdAndSignInAsStokeCourtAdmin() {
+      return CreateCasePage.saveTheCaseIdAndSignInAsStokeCourtAdmin();
     },
     saveTheCaseId() {
       return CreateCasePage.saveTheCaseId();
