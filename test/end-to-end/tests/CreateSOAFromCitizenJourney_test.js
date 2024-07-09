@@ -5,7 +5,7 @@ const testConfig = require('../config');
 const CaseDataSetup = require('../restApiData/CaseDataSetupV2');
 const CitizenCaseCreate = require('../citizenFrontendSupport/caseCreate');
 
-Feature('Citizen Journey - Create SOA @regression-suite @nightly');
+Feature('Citizen Journey - Create SOA @nightly');
 
 // eslint-disable-next-line no-unused-vars
 let caseId = null;
