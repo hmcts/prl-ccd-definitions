@@ -369,6 +369,26 @@ class CaseDataSetup {
 
     console.log(this.caseId);
   }
+
+  async performEvent(caseId, eventName) {
+    console.log(`API Util: starting event : ${eventName} on ${caseId}`);
+    const eventRest = restApiData[eventName];
+    let midEventProcess = null;
+
+    if (eventName === 'Children and applicants') {
+      midEventProcess = childAndApplicantProcess;
+    } else if (eventName === 'Children and respondents') {
+      midEventProcess = childAndRespondentProcess;
+    } else if (eventName === 'Children and other people') {
+      midEventProcess = childAndOtherPeopleProcess;
+    } else if (eventName === 'Submit and pay') {
+      midEventProcess = submitAndPayProcess;
+    }
+
+    const res = await this.submitEvent(caseId, eventRest, midEventProcess);
+    eventRest.res = res;
+    console.log(`API Util: completed event : ${eventName} on ${caseId}`);
+  }
 }
 
 module.exports = CaseDataSetup;
