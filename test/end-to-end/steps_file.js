@@ -388,6 +388,9 @@ module.exports = () => {
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
     },
+    submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname) {
+      return nocDetailsPage.submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname);
+    },
     sendAMessage() {
       return sendMessagePage.sendInternalMsgToJudge();
     },
@@ -399,6 +402,9 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    performCitizenServingSOA() {
+      return soaPage.performCitizenServingSOA();
     },
     verifyServiceOfApplicationSubmission() {
       return soaPage.verifyServiceOfApplicationSubmission();
