@@ -19,7 +19,7 @@ class DataSetupManager {
   }
 
   async init() {
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch({ headless: true });
     if (process.env.ENABLE_DATASETUP === 'true') {
       this.run();
     }
@@ -27,7 +27,9 @@ class DataSetupManager {
 
   async close() {
     this.state = 'close';
-    await this.browser.close();
+    if (this.browser) {
+      await this.browser.close();
+    }
   }
 
   run() {
