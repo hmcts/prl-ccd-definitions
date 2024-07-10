@@ -70,6 +70,12 @@ module.exports = () => {
     loginAsCaseManager() {
       return LoginPage.loginAsCaseManager();
     },
+    loginAsStokeCourtAdmin() {
+      return LoginPage.loginAsStokeCourtAdmin();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },
@@ -81,9 +87,6 @@ module.exports = () => {
     },
     loginAsLegalAdviser() {
       return LoginPage.loginAsLegalAdviser();
-    },
-    loginAsSwanseaCourtAdmin() {
-      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     loginAsOldCourtAdmin() {
       return LoginPage.loginAsOldCourtAdmin();
@@ -108,6 +111,9 @@ module.exports = () => {
     },
     createNewCaseFL401_TS() {
       return CreateCasePage.createNewCaseFL401_TS();
+    },
+    createC100UrgentCaseByCourtAdmin() {
+      return CreateCasePage.createC100UrgentCaseByCourtAdmin();
     },
     createC100CaseByCourtAdmin() {
       return CreateCasePage.createC100CaseByCourtAdmin();
@@ -247,6 +253,9 @@ module.exports = () => {
     runSubmitAndPay_TS() {
       return submitAndPay.dummyPaymentConfirmation();
     },
+    submitAndPayCourtAdmin() {
+      return submitAndPay.submitAndPayCourtAdmin();
+    },
     searchForCasesWithName(caseName) {
       return caseList.searchForCasesWithName(caseName, 'Open');
     },
@@ -379,6 +388,9 @@ module.exports = () => {
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
     },
+    submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname) {
+      return nocDetailsPage.submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname);
+    },
     sendAMessage() {
       return sendMessagePage.sendInternalMsgToJudge();
     },
@@ -390,6 +402,9 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    performCitizenServingSOA() {
+      return soaPage.performCitizenServingSOA();
     },
     verifyServiceOfApplicationSubmission() {
       return soaPage.verifyServiceOfApplicationSubmission();

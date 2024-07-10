@@ -3,6 +3,23 @@ const supportedBrowsers = require('./test/end-to-end/crossbrowser/supportedBrows
 const waitForTimeout = parseInt(process.env.WAIT_FOR_TIMEOUT) || 50000;
 const smartWait = parseInt(process.env.SMART_WAIT) || 50000;
 const browser = process.env.SAUCELABS_BROWSER || 'chrome';
+
+global.logCallingFunction = () => {
+  const errorObj = new Error();
+  const frame = errorObj.stack.split('\n')[2];
+  const lineNumber = frame.split(':').reverse()[1];
+  let functionName = frame.split(' ')[5];
+  // const atFile = frame.split(' ')[6];
+
+  if (functionName.includes('/')) {
+    functionName = functionName.split('/').reverse()[0];
+  }
+  functionName += `: ${lineNumber}`;
+  console.log(`==> ${frame}`);
+};
+
+console.log(`***** SAUCE_USERNAME: ${process.env.SAUCE_USERNAME}`)
+
 const defaultSauceOptions = {
   username: process.env.SAUCE_USERNAME,
   accessKey: process.env.SAUCE_ACCESS_KEY,
@@ -81,6 +98,10 @@ const setupConfig = {
       enabled: true,
       fullPageScreenshots: true,
     },
+    hooksPlugin: {
+      require: './test/end-to-end/helpers/hooks.js',
+      enabled: true
+    }
   },
   include: {
     I: './test/end-to-end/steps_file.js',

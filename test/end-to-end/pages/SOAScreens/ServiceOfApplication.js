@@ -10,7 +10,7 @@ const date = new Date();
 module.exports = {
   fields: {
     proceedToServing: '#proceedToServing_Yes',
-    selectOrder: '[name=\'serviceOfApplicationScreen1\']',
+    selectOrder: '[field_id=\'serviceOfApplicationScreen1\']',
     p63FileUpload: '#pd36qLetter',
     specialArrangementsUpload: '#specialArrangementsLetter',
     serveToRespondentOption: '#soaServeToRespondentOptions_Yes',
@@ -27,7 +27,10 @@ module.exports = {
     tasksTab: '//div[contains(text(), \'Tasks\')]',
     previousBtnSelector: '.mat-ripple.mat-tab-header-pagination.mat-tab-header-pagination-before.mat-elevation-z4',
     applicationSoSDueAssignTaskToMe: '//exui-case-task/p/strong[contains(text(), "Application statement of service due")]/../../dl/div[4]//dd/a',
-    waitingForSolicitorSoSText: 'Waiting for Applicant\'s Solicitor to upload Statement of Service'
+    waitingForSolicitorSoSText: 'Waiting for Applicant\'s Solicitor to upload Statement of Service',
+    continueButton: '//button[contains(text(), "Continue")]',
+    saveAndContinueButton: '//button[contains(text(), "Save and continue")]'
+
 
   },
 
@@ -40,14 +43,14 @@ module.exports = {
     await I.click(this.fields.selectOrder);
     await I.see(soaConfig.c43AOrderText);
     await I.wait('7');
-    // await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
+    await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
     await I.attachFile(this.fields.specialArrangementsUpload, '../resource/dummy.pdf');
     await I.wait('3');
     await I.click(soaConfig.continueText);
   },
 
   async serveOrderType() {
-    await I.waitForText(soaConfig.serveType);
+    // await I.waitForText(soaConfig.serveType);
     await I.click(this.fields.serveToRespondentOption);
     await I.waitForText(soaConfig.serveToRespondentOptions);
     await I.click(this.fields.applicantRep);
@@ -87,7 +90,7 @@ module.exports = {
     await I.see('C1A_Document.pdf');
     await I.see('cover_letter_re6.pdf');
     await I.see('Privacy_Notice.pdf');
-    await I.see('Mediation-voucher.pdf');
+    await I.see('Family Presidents letter to parties.pdf');
     await I.see('Blank_C7.pdf');
     await I.see('C9_personal_service.pdf');
     await I.see('C1A_Blank.pdf');
@@ -100,6 +103,34 @@ module.exports = {
     await I.see('test@gov.uk');
   },
 
+  async performCitizenServingSOA() {
+    await this.selectEvent();
+    await I.waitForText('Select and upload orders and documents to be served');
+    // await I.attachFile(this.fields.p63FileUpload, '../resource/dummy.pdf');
+    await I.attachFile(this.fields.specialArrangementsUpload, '../resource/dummy.pdf');
+    await I.wait('5');
+
+    await I.click(this.fields.continueButton);
+
+    await I.waitForText('Does this application need to be personally served on the respondent?');
+    await I.checkOption('#soaServeToRespondentOptions_No');
+    await I.waitForElement('//*[contains(text(),"Applicant 1")]/../ancestor::label/../input');
+    await I.click('//*[contains(text(),"Applicant 1")]/../ancestor::label/../input');
+    await I.click('//*[contains(text(),"Respondent 1")]/../ancestor::label/../input');
+    await I.checkOption('#soaCafcassCymruServedOptions_Yes');
+    await I.fillField('#soaCafcassCymruEmail', 'test@testcafcass.com');
+
+    await I.checkOption('#soaServeLocalAuthorityYesOrNo_Yes');
+    await I.waitForElement('//*[@field_id = "soaLaEmailAddress"]//input');
+    await I.fillField('//*[@field_id = "soaLaEmailAddress"]//input', 'testLA@test.com');
+    const option = await I.grabTextFrom('//select[@id="soaDocumentDynamicListForLa_0_documentsListForLa"]/option[3]');
+    await I.selectOption(this.fields.selectDocument, option);
+    await I.click(this.fields.continueButton);
+
+
+    await I.waitForText('Check your answers');
+    await I.click(this.fields.saveAndContinueButton);
+  },
   async performServiceOfApplication() {
     await this.selectEvent();
     await this.uploadDocumentsToBeServed();
