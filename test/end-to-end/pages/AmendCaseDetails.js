@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -68,7 +69,7 @@ module.exports = {
 
   async verifyUpdatedMiamDetails() {
     await I.waitForElement(this.fields.applicationTab);
-    await I.click(this.fields.applicationTab);
+    await I.retry(retryCount).click(this.fields.applicationTab);
     await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings');
     // await I.runAccessibilityTest();
     await I.see('12345678');
