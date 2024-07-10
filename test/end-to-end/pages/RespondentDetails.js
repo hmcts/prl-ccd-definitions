@@ -42,7 +42,7 @@ module.exports = {
     await I.retry(retryCount).triggerEvent(this.fields.headerText);
     await I.retry(retryCount).waitForPage('h1', this.fields.headerText);
     // I.wait('2');
-    await I.retry(retryCount).click('Add new');
+    await I.click('Add new');
     await I.retry(retryCount).fillField('//input[@id="respondents_0_firstName"]', 'Respondent Firstname');
     // I.wait('2');
     await I.retry(retryCount).fillField('//input[@id="respondents_0_lastName"]', 'Respondent Lastname');
