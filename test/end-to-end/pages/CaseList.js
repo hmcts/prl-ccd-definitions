@@ -49,7 +49,7 @@ module.exports = {
     await I.wait('5');
     await I.retry(retryCount).navigationInWAEnvs(this.fields.caseList);
     await I.wait('5');
-
+    await I.waitForText(this.fields.caseList);
     await await I.click(this.fields.caseList);
     await I.waitForText('Filters');
 
@@ -67,6 +67,7 @@ module.exports = {
     // await I.waitForElement(this.fields.searchResult);
     await I.wait('3');
     await I.retry(retryCount).click(`a[href*='/cases/case-details/${caseId}']`);
+    await I.waitForElement('ccd-case-viewer');
   },
 
   searchForCasesWithName(caseName, state = 'Any') {
