@@ -41,6 +41,25 @@ module.exports = {
     await I.click(nocConfig.continueText);
   },
 
+  async addNocDetailsForUser(caseId, firstname, lastname) {
+    await I.waitForText(nocConfig.nocText);
+    await I.retry(retry).click(nocConfig.nocText);
+    await I.waitForText(nocConfig.nocRequirementText);
+    await I.fillField(this.fields.caseRef, caseId);
+    await I.click(nocConfig.continueText);
+
+    await I.waitForText('Your client\'s first name');
+    await I.fillField(this.fields.respFirstName, firstname);
+    await I.fillField(this.fields.respSecondName, lastname);
+    await I.click(nocConfig.continueText);
+
+    await I.waitForText('Check and submit');
+    await I.click('#affirmation');
+    await I.click('#notifyEveryParty');
+
+    await I.click('Submit');
+  },
+
   async submitNocDetails(caseId) {
     await I.see(caseId);
     await I.see(nocConfig.respFirstName);
@@ -119,7 +138,10 @@ module.exports = {
     await this.submitNocDetails(caseId);
     await this.fillRespondentTasks();
     await this.verifyC7DocumentGeneration();
-  }
+  },
 
+  async submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname) {
+    await this.addNocDetailsForUser(caseId, firstname, lastname);
+  }
 
 };
