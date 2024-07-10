@@ -849,19 +849,6 @@
     "EventElementLabel": " ",
     "FieldDisplayOrder": "76",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "additionalDetailsForHearingDateOptions",
-    "EventHintText": "Give details of any additional requirements.",
-    "EventElementLabel": " ",
-    "FieldDisplayOrder": "77",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
+    "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND (ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\")"
   }
 ]
