@@ -1,0 +1,50 @@
+[
+  {
+    "LiveFrom": "01/05/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fm5ReminderNotifications",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/05/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fm5RemindersSent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-superuser",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+]

@@ -28,6 +28,10 @@ module.exports = {
     email: process.env.LEGALADVISER_TESTUSER_ONE,
     password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
   },
+  oldCourtAdminUser: {
+    email: process.env.OLDCOURTADMIN_TESTUSER_ONE,
+    password: process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',
@@ -38,8 +42,9 @@ module.exports = {
   },
 
   baseUrl: process.env.URL || 'https://manage-case.aat.platform.hmcts.net/cases',
-  TestOutputDir: process.env.E2E_OUTPUT_DIR || './functional-output',
+  TestOutputDir: process.env.E2E_OUTPUT_DIR || './output',
   TestForAccessibility: process.env.TESTS_FOR_ACCESSIBILITY || false,
   runningEnv: process.env.ENVIRONMENT,
-  TestRetryScenarios: 3
+  // eslint-disable-next-line no-magic-numbers
+  TestRetryScenarios: process.env.RETRY_SCENARIO ? parseInt(process.env.RETRY_SCENARIO) : 3
 };
