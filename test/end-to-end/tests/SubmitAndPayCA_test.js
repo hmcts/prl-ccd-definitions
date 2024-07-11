@@ -6,10 +6,10 @@ Scenario('Create a Case and Submit/Pay @regression-suite @preview-regression @pt
   await I.createCase();
   await I.typeOfApplicationEventC100();
   await I.hearingUrgency();
-  await I.childDetails();
   await I.applicantDetailsC100();
   await I.respondentDetailsC100();
   await I.otherPeopleInTheCase();
+  await I.childDetails();
   await I.runOtherChildDetailsEvent();
   await I.runChildrenAndApplicant();
   await I.runChildrenAndRespondent();
