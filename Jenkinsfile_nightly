@@ -74,12 +74,18 @@ withNightlyPipeline("nodejs", product, component) {
     // enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
     enableCrossBrowserTest(60)
 
+    before('fullFunctionalTest') {
+        yarnBuilder.yarn('playwrightsetup')
+    }
+
     afterAlways('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 
-    before('crossBrowserTest') {}
+    before('crossBrowserTest') {
+        yarnBuilder.yarn('playwrightsetup')
+    }
 
     afterAlways('crossBrowserTest') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
