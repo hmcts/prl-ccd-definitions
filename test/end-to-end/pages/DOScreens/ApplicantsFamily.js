@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -9,7 +10,7 @@ module.exports = {
   },
 
   async applicantFamily() {
-    const retryCount = 3;
+    await I.waitForElement('#applicantFamilyDetails_doesApplicantHaveChildren_Yes');
     await I.waitForText('Does the applicant have any children, have parental responsibility for any children or need to protect other children with this application?');
     await I.click('#applicantFamilyDetails_doesApplicantHaveChildren_Yes');
     await I.waitForText('Child');
@@ -30,7 +31,7 @@ module.exports = {
     await this.triggerEvent();
     await this.applicantFamily();
     // I.wait('2');
-    await I.click('Save and continue');
+    await I.retry(retryCount).click('Save and continue');
     // await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
   }
