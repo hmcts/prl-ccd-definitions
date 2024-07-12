@@ -179,7 +179,7 @@ module.exports = {
     );
     await I.retry(retryCount).click('Continue');
 
-    // await I.waitForElement('#applicantCaseName');
+    await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField(
       '//input[@id="applicantCaseName"]',
