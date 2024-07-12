@@ -78,7 +78,7 @@ class GeneralHelper extends Helper {
     let apiResponseResolved = null;
     while (retryCount < loopMax) {
       try {
-        const apiResponse = Playwright.waitForResponse('**/validate/**');
+        const apiResponse = Playwright.waitForResponse('**/validate?**');
         const continueBtnLocator = '//ccd-case-edit//button[contains(text(),"Continue")]';
         await Playwright.waitForElement(continueBtnLocator);
         await Playwright.click(continueBtnLocator);
@@ -117,8 +117,10 @@ class GeneralHelper extends Helper {
         if (eventTriggerResponseCode !== successStatusCode) {
           throw Error(`event trigger api failed with response code ${eventTriggerResponseCode}`);
         }
+        await Playwright.waitForInvisible('//select[@id = "next-step"]');
         return;
       } catch (eventTriggerError) {
+        testLogger.AddMessage(eventTriggerError);
         retryCount += 1;
       }
     }

@@ -77,7 +77,7 @@ module.exports = {
     await I.checkOption('#home_familyHome-useHouseholdContents');
     await I.fillField('#home_furtherInformation', 'Text Area');
     await I.runAccessibilityTest();
-    await I.I.continueEvent();
+    await I.continueEvent();
   },
   async runTheHomeEventHappyPath() {
     await this.triggerEvent();

@@ -42,7 +42,7 @@ module.exports = {
     await I.wait('10');
     await I.waitForText(this.fields.hasRespondentHaveAllegations);
     await I.click(this.fields.respondentAOH_No);
-    await I.I.continueEvent();
+    await I.continueEvent();
     await I.waitForText(this.fields.cyaText);
     await I.click('Save and continue');
   }

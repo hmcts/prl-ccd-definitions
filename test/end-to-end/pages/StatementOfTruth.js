@@ -32,13 +32,13 @@ module.exports = {
     await I.fillField(this.fields.firmName, 'Test firm name');
     await I.fillField(this.fields.signName, 'Test sign');
     await I.runAccessibilityTest();
-    await I.I.continueEvent();
+    await I.continueEvent();
   },
 
   async selectConfidentialConsent() {
     await I.waitForElement(this.fields.confidentialConsent);
     await I.click(this.fields.confidentialConsent);
-    await I.I.continueEvent();
+    await I.continueEvent();
     await I.selectOption(this.fields.selectCourt, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
     await I.click('Submit');
   },

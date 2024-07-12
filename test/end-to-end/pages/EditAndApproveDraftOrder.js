@@ -28,7 +28,7 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).waitForText('Select the draft order for editing');
     await I.retry(retryCount).selectOption(this.fields.draftOrdersDynamicList, '1: Object');
-    await I.retry(retryCount).I.continueEvent();
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
 
@@ -73,10 +73,10 @@ module.exports = {
     await I.waitForText('Select the order', '5000');
     const option = await I.grabTextFrom('//select/option[2]');
     await I.selectOption(this.fields.selectDraftOrderForEditing, option);
-    await I.I.continueEvent();
+    await I.continueEvent();
 
     await I.click(this.fields.serveToAdmin);
-    await I.I.continueEvent();
+    await I.continueEvent();
 
     await I.waitForText('Check your answers');
     await I.click('Submit');
