@@ -71,6 +71,33 @@ class GeneralHelper extends Helper {
     }
   }
 
+  async continueEvent() {
+    const { Playwright } = this.helpers;
+
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/validate/**');
+        const continueBtnLocator = '//ccd-case-edit//button[contains(text(),"Continue")]';
+        await Playwright.waitForElement(continueBtnLocator);
+        await Playwright.click(continueBtnLocator);
+
+        apiResponseResolved = await apiResponse;
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 200;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          testLogger.AddMessage('retrying event continue');
+          throw Error(`event continue validate api failed with response code ${eventTriggerResponseCode}`);
+        }
+        return;
+      } catch (eventTriggerError) {
+        retryCount += 1;
+      }
+    }
+  }
+
   async triggerEvent(eventName) {
     const { Playwright } = this.helpers;
     await Playwright.waitForText('Next step');

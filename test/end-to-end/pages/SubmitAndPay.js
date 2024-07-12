@@ -48,7 +48,7 @@ module.exports = {
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
   },
   async confidentialityStatementFL401() {
     global.logCallingFunction();
@@ -56,7 +56,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
     await I.wait('1');
     await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
   },
 
   async declaration() {
@@ -65,7 +65,7 @@ module.exports = {
     await I.retry(retryCount).click('#payAgreeStatement-agree');
     await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
   },
 
   async helpWithFeeNo() {
@@ -73,7 +73,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
     await I.wait('2');
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click(this.fields.submit);
@@ -92,7 +92,7 @@ module.exports = {
       this.fields.helpWithFeesReferenceNumber_text,
       this.fields.HWFRefNum
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
     await I.wait('2');
     await I.retry(retryCount).waitForText(this.fields.HWFYesErrorMsg);
   },
@@ -161,14 +161,14 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_signOnBehalf, 'Solicitor');
     await I.wait('2');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
     await I.wait('2');
   },
   async FL401ConfidentialityCheck() {
     global.logCallingFunction();
     await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
     await I.retry(retryCount).click(this.fields.fl401ConfidentialCheck);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).I.continueEvent();
     await I.wait('2');
   },
   async statementOfTruthAndSubmit() {
