@@ -1,4 +1,3 @@
-const testLogger = require('../helpers/testLogger');
 
 const I = actor();
 const retryCount = 3;
@@ -31,8 +30,7 @@ module.exports = {
 
   async triggerEvent() {
     global.logCallingFunction();
-    testLogger.AddMessage('In retry triggger event for Submit and pay');
-    await I.retry(retryCount).triggerEvent('Submit and pay');
+    await I.triggerEvent('Submit and pay');
     await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
   },
 
