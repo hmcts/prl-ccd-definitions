@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 // eslint-disable-next-line no-undef
 const Helper = codecept_helper;
 // const { Helper } = codeceptjs;
@@ -73,9 +74,27 @@ class GeneralHelper extends Helper {
   async triggerEvent(eventName) {
     const { Playwright } = this.helpers;
     await Playwright.waitForText('Next step');
-    await Playwright.waitForElement(`//select[@id = "next-step"]/option[contains(text(),"${eventName}")]`);
-    await Playwright.selectOption(fields.eventList, eventName);
-    await Playwright.click(fields.submit);
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/event-triggers/**');
+        await Playwright.waitForElement(`//select[@id = "next-step"]/option[contains(text(),"${eventName}")]`);
+        await Playwright.selectOption(fields.eventList, eventName);
+        await Playwright.click(fields.submit);
+        apiResponseResolved = await apiResponse;
+
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 200;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          throw Error(`event trigger api failed with response code ${eventTriggerResponseCode}`);
+        }
+        return;
+      } catch (eventTriggerError) {
+        retryCount += 1;
+      }
+    }
   }
 
   async waitForPage(header, headerText) {
