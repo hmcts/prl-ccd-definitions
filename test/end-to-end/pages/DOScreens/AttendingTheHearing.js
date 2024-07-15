@@ -43,7 +43,7 @@ module.exports = {
     await I.see('Set out the reasons that an intermediary is required.');
     await I.fillField('#reasonsForIntermediary', 'Example text - intermediary');
     await I.wait('2');
-    await I.continueEvent();
+    await I.click('Continue');
   },
 
   async runEventHappyPathAttendingTheHearingDO() {

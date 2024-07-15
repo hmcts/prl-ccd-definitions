@@ -33,7 +33,7 @@ module.exports = {
 
     await I.fillField('#respondentBehaviourData_otherReasonApplicantWantToStopFromRespondentDoing', 'Text Area');
     I.wait('2');
-    await I.continueEvent();
+    await I.click('Continue');
   },
 
   async runEventRespondentBehaviour() {

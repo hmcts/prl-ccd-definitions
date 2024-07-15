@@ -35,17 +35,17 @@ module.exports = {
   async selectTypeOfApplicationC100() {
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).click('Continue');
   },
 
   async fillSolicitorApplicationPageC100() {
     await I.waitForText('Confidentiality Statement');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).click('Continue');
 
     await I.waitForElement('#applicantCaseName');
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).click('Continue');
   },
 
   async createNewCaseC100andReturnID() {

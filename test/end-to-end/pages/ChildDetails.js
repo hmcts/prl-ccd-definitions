@@ -31,9 +31,8 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails, 'Text area field Test');
     await I.waitForElement(this.fields.childLiveWith);
     await I.retry(retryCount).click(this.fields.childLiveWith);
-    await I.waitForElement('//select[@id="newChildDetails_0_whoDoesTheChildLiveWith"]//option[2]');
-    const option = await I.grabTextFrom('//select[@id="newChildDetails_0_whoDoesTheChildLiveWith"]//option[2]');
-    await I.retry(retryCount).selectOption(this.fields.childLiveWith, option);
+    const option = await I.grabTextFrom('//select/option[1]');
+    await I.selectOption(this.fields.childLiveWith, option);
     // await I.retry(retryCount).selectOption(this.fields.childLiveWith, '1');
     await I.runAccessibilityTest();
     await this.addNewChild2();
@@ -51,9 +50,8 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails2, 'Text area field Test');
     await I.waitForElement(this.fields.childLiveWith1);
     await I.retry(retryCount).click(this.fields.childLiveWith1);
-    await I.waitForElement('//select[@id="newChildDetails_1_whoDoesTheChildLiveWith"]//option[2]');
-    const option = await I.grabTextFrom('//select[@id="newChildDetails_1_whoDoesTheChildLiveWith"]//option[2]');
-    await I.retry(retryCount).selectOption(this.fields.childLiveWith1, option);
+    const option = await I.grabTextFrom('//select/option[1]');
+    await I.selectOption(this.fields.childLiveWith1, option);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillAdditionalQuestionsPage() {
