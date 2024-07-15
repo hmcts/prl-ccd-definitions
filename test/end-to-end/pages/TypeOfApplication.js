@@ -69,7 +69,7 @@ module.exports = {
     await I.retry(retryCount).attachDocument('draftConsentOrderFile');
     await I.retry(retryCount).wait('15');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async permissionsPageC100() {
@@ -102,7 +102,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.occupationOrder);
     await I.runAccessibilityTest();
     I.wait('5');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async linkToChildArrangementsApplicationFL401() {
@@ -114,7 +114,7 @@ module.exports = {
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async checkYourAnswersPageFL401() {

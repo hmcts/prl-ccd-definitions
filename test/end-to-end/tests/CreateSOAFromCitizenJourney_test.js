@@ -10,7 +10,7 @@ Feature('Citizen Journey - Create SOA @nightly');
 // eslint-disable-next-line no-unused-vars
 let caseId = null;
 
-Scenario('Datasetup: Citizen case create @debug', async() => {
+Scenario('Datasetup: Citizen case create', async() => {
   const caseCreate = new CitizenCaseCreate();
   await caseCreate.init();
   try {
@@ -24,7 +24,7 @@ Scenario('Datasetup: Citizen case create @debug', async() => {
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('Datasetup: Serve order @debug', async() => {
+Scenario('Datasetup: Serve order', async() => {
   const browser = await chromium.launch({ headless: false });
   const caseDataSetup = new CaseDataSetup(browser);
   await caseDataSetup.initBrowser();
@@ -38,32 +38,32 @@ Scenario('Datasetup: Serve order @debug', async() => {
   await browser.close();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('Solicitor - Notice of change journey test @debug', async({ I }) => {
+Scenario('Solicitor - Notice of change journey test', async({ I }) => {
   await I.loginAsSolicitor();
   await I.submitAndVerifyNOCForApplicantCase(caseId, 'John', 'Doe');
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('As a court admin edit & serve an order @regression-suite @debug', async({ I }) => {
+Scenario('As a court admin edit & serve an order @regression-suite', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.performCitizenServingSOA();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As an Applicant Solicitor execute Statement of service @regression-suite @debug', async({ I }) => {
+Scenario('As an Applicant Solicitor execute Statement of service @regression-suite', async({ I }) => {
   await I.loginAsSolicitor();
   await I.searchForCasesWithId(caseId);
   await I.completeStatementOfService();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin Verify Statement of service in SOA tab @regression-suite @debug', async({ I }) => {
+Scenario('As a court admin Verify Statement of service in SOA tab @regression-suite', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.verifyPostStatementOfService();
 }).retry(testConfig.TestRetryScenarios);
 
 
-Scenario('Solicitor - Notice of change journey test @debug', async({ I }) => {
+Scenario('Solicitor - Notice of change journey test', async({ I }) => {
   await I.loginAsRespondentSolicitor();
   await I.submitAndVerifyNOCForApplicantCase(caseId, 'Mary', 'Richards');
 }).retry(testConfig.TestRetryScenarios);
