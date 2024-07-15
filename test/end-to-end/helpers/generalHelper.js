@@ -77,6 +77,8 @@ class GeneralHelper extends Helper {
         return;
       } catch (submitEventError) {
         retryCount += 1;
+        testLogger.AddMessage('submit event Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
       }
     }
   }
@@ -104,6 +106,8 @@ class GeneralHelper extends Helper {
         return;
       } catch (eventTriggerError) {
         retryCount += 1;
+        testLogger.AddMessage('continue event Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
       }
     }
   }
@@ -132,6 +136,8 @@ class GeneralHelper extends Helper {
       } catch (eventTriggerError) {
         testLogger.AddMessage(eventTriggerError);
         retryCount += 1;
+        testLogger.AddMessage('trigger event Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
       }
     }
   }
