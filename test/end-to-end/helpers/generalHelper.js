@@ -58,16 +58,26 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Playwright } = this.helpers;
-    const saveResponseTime = 5;
-    try {
-      await Playwright.waitForText('Check your answers', '30');
-      await Playwright.click('Save and continue');
-      await Playwright.wait(saveResponseTime);
-    } catch {
-      await Playwright.click('Continue');
-      await Playwright.waitForText('Check your answers', '30');
-      await Playwright.click('Save and continue');
-      await Playwright.wait(saveResponseTime);
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/validate?**');
+        await Playwright.waitForText('Check your answers', '30');
+        await Playwright.click('Save and continue');
+
+        apiResponseResolved = await apiResponse;
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 200;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          testLogger.AddMessage('retrying event continue');
+          throw Error(`event continue validate api failed with response code ${eventTriggerResponseCode}`);
+        }
+        return;
+      } catch (submitEventError) {
+        retryCount += 1;
+      }
     }
   }
 
