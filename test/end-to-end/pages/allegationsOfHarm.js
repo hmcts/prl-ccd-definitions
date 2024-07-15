@@ -61,11 +61,12 @@ module.exports = {
 
   },
   async triggerEvent(eventName) {
-    await I.retry(retryCount).waitForElement(this.fields.eventList);
-    await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
-    await I.wait('4');
-    await I.retry(retryCount).click(this.fields.submit);
-    await I.wait('7');
+    await I.triggerEvent(eventName);
+    // await I.retry(retryCount).waitForElement(this.fields.eventList);
+    // await I.retry(retryCount).selectOption(this.fields.eventList, eventName);
+    // await I.wait('4');
+    // await I.retry(retryCount).click(this.fields.submit);
+    // await I.wait('7');
   },
   async allegationsOfHarm() {
     await I.retry(retryCount).waitForText('Allegations of harm');
