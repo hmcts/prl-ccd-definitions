@@ -62,7 +62,7 @@ class GeneralHelper extends Helper {
     let apiResponseResolved = null;
     while (retryCount < loopMax) {
       try {
-        const apiResponse = Playwright.waitForResponse('**/validate?**');
+        const apiResponse = Playwright.waitForResponse('**/events');
         await Playwright.waitForText('Check your answers', '30');
         await Playwright.click('Save and continue');
 
