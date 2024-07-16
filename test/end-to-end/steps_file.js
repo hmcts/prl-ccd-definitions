@@ -70,6 +70,12 @@ module.exports = () => {
     loginAsCaseManager() {
       return LoginPage.loginAsCaseManager();
     },
+    loginAsStokeCourtAdmin() {
+      return LoginPage.loginAsStokeCourtAdmin();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },
@@ -81,9 +87,6 @@ module.exports = () => {
     },
     loginAsLegalAdviser() {
       return LoginPage.loginAsLegalAdviser();
-    },
-    loginAsSwanseaCourtAdmin() {
-      return LoginPage.loginAsSwanseaCourtAdmin();
     },
     loginAsOldCourtAdmin() {
       return LoginPage.loginAsOldCourtAdmin();
@@ -385,6 +388,9 @@ module.exports = () => {
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
     },
+    submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname) {
+      return nocDetailsPage.submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname);
+    },
     sendAMessage() {
       return sendMessagePage.sendInternalMsgToJudge();
     },
@@ -396,6 +402,9 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    performCitizenServingSOA() {
+      return soaPage.performCitizenServingSOA();
     },
     verifyServiceOfApplicationSubmission() {
       return soaPage.verifyServiceOfApplicationSubmission();
