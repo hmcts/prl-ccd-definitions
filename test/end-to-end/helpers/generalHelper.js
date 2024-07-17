@@ -62,23 +62,23 @@ class GeneralHelper extends Helper {
     let apiResponseResolved = null;
     while (retryCount < loopMax) {
       try {
-        const apiResponse = Playwright.waitForResponse('**/validate?**');
+        const apiResponse = Playwright.waitForResponse('**/events');
         await Playwright.waitForText('Check your answers', '30');
         await Playwright.click('Save and continue');
 
         apiResponseResolved = await apiResponse;
         const eventTriggerResponseCode = apiResponseResolved.status();
-        const successStatusCode = 200;
+        const successStatusCode = 201;
         testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
         if (eventTriggerResponseCode !== successStatusCode) {
           testLogger.AddMessage('retrying event continue');
-          throw Error(`event continue validate api failed with response code ${eventTriggerResponseCode}`);
+          throw Error(`event submit  api failed with response code ${eventTriggerResponseCode}`);
         }
         return;
       } catch (submitEventError) {
         retryCount += 1;
         testLogger.AddMessage(submitEventError);
-        testLogger.AddMessage('submit event Sleep 30sec before retry. to handle env flakiness');
+        testLogger.AddMessage('event submit Sleep 30sec before retry. to handle env flakiness');
         await Playwright.wait('30');
       }
     }
@@ -108,7 +108,7 @@ class GeneralHelper extends Helper {
       } catch (eventTriggerError) {
         retryCount += 1;
         testLogger.AddMessage(eventTriggerError);
-        testLogger.AddMessage('continue event Sleep 30sec before retry. to handle env flakiness');
+        testLogger.AddMessage('event continue Sleep 30sec before retry. to handle env flakiness');
         await Playwright.wait('30');
       }
     }
@@ -139,7 +139,7 @@ class GeneralHelper extends Helper {
         testLogger.AddMessage(eventTriggerError);
         retryCount += 1;
         testLogger.AddMessage(eventTriggerError);
-        testLogger.AddMessage('trigger event Sleep 30sec before retry. to handle env flakiness');
+        testLogger.AddMessage('event trigger Sleep 30sec before retry. to handle env flakiness');
         await Playwright.wait('30');
       }
     }
