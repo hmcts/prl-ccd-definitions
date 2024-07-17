@@ -117,11 +117,11 @@ module.exports = {
     global.logCallingFunction();
     // await I.waitForText('TS-Admin application-Noc');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForSelector('#applicantCaseName');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     // await I.wait('3');
   },
 
@@ -141,7 +141,7 @@ module.exports = {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async selectTypeOfApplicationFL401() {
@@ -150,24 +150,24 @@ module.exports = {
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async selectTypeOfApplicationFL401_TS() {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async selectTypeOfApplicationFL401DummyCase() {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForText('TS-Solicitor aplication');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
 
@@ -177,7 +177,7 @@ module.exports = {
     await I.retry(retryCount).click(
       '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
@@ -185,7 +185,7 @@ module.exports = {
       '//input[@id="applicantCaseName"]',
       'Test Case C100'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async fillSolicitorApplicationPageFL401() {
@@ -194,7 +194,7 @@ module.exports = {
     await I.retry(retryCount).click(
       '#confidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForElement('#applicantOrRespondentCaseName');
     await I.runAccessibilityTest();
@@ -202,7 +202,7 @@ module.exports = {
       '#applicantOrRespondentCaseName',
       'Test Case 1 DA 31'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async createNewCaseC100() {
@@ -231,7 +231,7 @@ module.exports = {
     await I.waitForText('TS-Solicitor application');
     await I.waitForSelector('#applicantCaseName');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');
   },
@@ -306,7 +306,7 @@ module.exports = {
     await I.waitForSelector('#applicantCaseName');
 
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).click('Create my dummy case');
     await this.amOnHistoryPageWithSuccessNotification();
   },
