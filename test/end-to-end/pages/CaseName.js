@@ -19,7 +19,7 @@ module.exports = {
     await I.retry(retryCount).waitForVisible(this.fields.caseNameBox);
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField(this.fields.caseNameBox, 'Updated Case Name');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async triggerEvent(eventName) {
