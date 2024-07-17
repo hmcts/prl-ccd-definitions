@@ -72,7 +72,7 @@ module.exports = {
     // I.wait('2');
     await I.retry(retryCount).waitForText('Continue', '30');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
   },
@@ -99,7 +99,7 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="respondentsFL401_phoneNumber"]', '0712234667');
     I.wait('2');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
   },
@@ -130,7 +130,7 @@ module.exports = {
     await I.retry(retryCount).checkOption(this.fields.res2ContactNumConfidential_Yes);
     await I.retry(retryCount).checkOption(this.fields.res3EmailAddConfidential_Yes);
     await I.wait('2');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('5');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('9');
