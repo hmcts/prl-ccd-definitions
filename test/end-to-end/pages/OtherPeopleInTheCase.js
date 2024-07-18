@@ -57,7 +57,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.opPhoneNo, '07122884667');
     await I.retry(retryCount).checkOption(this.fields.opPhoneNoConfidentialYes);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');
   }
