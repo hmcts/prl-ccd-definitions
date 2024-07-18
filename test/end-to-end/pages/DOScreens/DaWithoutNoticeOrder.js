@@ -32,13 +32,23 @@ module.exports = {
     await I.retry(retryCount).checkOption(this.fields.orderWithoutNoticeSelectYes);
     await I.click(this.fields.submit);
     await I.wait('3');
+    await I.waitForElement(this.fields.harmToApplicantOrChild);
     await I.retry(retryCount).checkOption(this.fields.harmToApplicantOrChild);
+
+    await I.waitForElement(this.fields.deferringApplicationIfNotImmediate);
     await I.retry(retryCount).checkOption(this.fields.deferringApplicationIfNotImmediate);
+
+    await I.waitForElement(this.fields.reasonForOrderWithoutGivingNotice);
     await I.retry(retryCount).checkOption(this.fields.reasonForOrderWithoutGivingNotice);
+
+    await I.waitForElement(this.fields.reasonForOrderWithoutGivingNoticeFurtherDetails);
     await I.fillField(this.fields.reasonForOrderWithoutGivingNoticeFurtherDetails, 'Further Optional Details');
+
     await I.wait('5');
     await I.click(this.fields.submit);
     await I.wait('3');
+
+    await I.waitForElement(this.fields.selectBailConditionYes);
     await I.retry(retryCount).checkOption(this.fields.selectBailConditionYes);
     await I.wait('2');
     await I.fillField(this.fields.bailConditionEndDay, '21');

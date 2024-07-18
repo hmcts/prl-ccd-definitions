@@ -19,7 +19,7 @@
     "DisplayContext": "READONLY",
     "PageID": 9,
     "PageDisplayOrder": 9,
-    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"specialGuardianShip\"",
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"specialGuardianShip\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
     "ShowSummaryChangeOption": "Y"
   },
