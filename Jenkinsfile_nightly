@@ -14,6 +14,7 @@ properties([
 String product = "prl"
 String component = "ccd-definitions"
 def channel = '#prl-tech-notifications'
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 // SAUCELABS config - configured on Jenkins
 env.SAUCE_TUNNEL_IDENTIFIER = 'reformtunnel'
