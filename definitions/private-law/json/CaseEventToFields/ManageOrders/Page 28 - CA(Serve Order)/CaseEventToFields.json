@@ -47,7 +47,6 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -59,7 +58,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" AND displayLegalRepOption=\"Yes\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"Yes\" AND caseTypeOfApplication=\"FL401\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -83,7 +82,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "(serveToRespondentOptions=\"Yes\" OR caseTypeOfApplication=\"FL401\") AND displayLegalRepOption=\"No\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -95,7 +94,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 28,
     "PageDisplayOrder": 28,
-    "FieldShowCondition": "serveToRespondentOptions=\"No\" AND caseTypeOfApplication=\"C100\"",
+    "FieldShowCondition": "serveToRespondentOptions=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
