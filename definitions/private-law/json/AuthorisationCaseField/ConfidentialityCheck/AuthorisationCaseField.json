@@ -43,6 +43,28 @@
     ]
   },
   {
+      "LiveFrom": "11/07/2024",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "unservedCitizenRespondentPack",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "citizen"
+          ],
+          "CRUD": "RU"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-systemupdate"
+          ],
+          "CRUD": "CRUD"
+        }
+      ]
+    },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicationServedYesNo",
