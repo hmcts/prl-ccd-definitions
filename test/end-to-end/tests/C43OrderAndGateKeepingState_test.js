@@ -1,6 +1,7 @@
+/* eslint-disable no-await-in-loop */
 const testConfig = require('../config');
-
 /* eslint init-declarations: ["error", "never"]*/
+
 let caseId;
 
 Feature('Solicitor - Manage order, Gatekeeping & Service of application tests ');
