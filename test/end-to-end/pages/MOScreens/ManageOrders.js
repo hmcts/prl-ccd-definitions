@@ -93,7 +93,7 @@ module.exports = {
     await I.retry(retryCount).triggerEvent('Manage orders');
     await I.retry(retryCount).waitForText('What do you want to do?');
     await I.retry(retryCount).click(modeOfOrder);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async selectDraftOrder(modeOfOrder) {
@@ -333,7 +333,7 @@ module.exports = {
     await I.retry(retryCount).click(orderName);
     await I.retry(retryCount).click(this.fields.isTheOrderUploadedByConsent_Yes);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async uploadOrder() {
     await I.retry(retryCount).waitForText('Approval Date (Optional)');
@@ -348,7 +348,7 @@ module.exports = {
     await I.retry(retryCount).attachFile(this.fields.uploadOrderDoc, '../resource/dummy.pdf');
     await I.wait('6');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async checkOrderBy(checkBy, judgeOrLA) {
     await I.retry(retryCount).waitForText(checkBy);
@@ -359,7 +359,7 @@ module.exports = {
     if (checkBy === 'A manager needs to check the order') {
       await I.retry(retryCount).waitForText('This will go to a manager to be checked');
     }
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('3');
   },
   async checkByJudgeorLA(judgeOrLA) {
@@ -385,7 +385,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.orderEndsInvolvementOfCafcassOrCymru_No);
     await this.doYouWantToServeOrderNow(serveNow, draftOrFinalise);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     // await I.wait('5');
   },
   async doYouWantToServeOrderNow(serveNow, draftOrFinalise) {
@@ -400,7 +400,7 @@ module.exports = {
     }
   },
   async selectOrderToServe() {
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async servePersonalOrNonPersonal(personal, responsible) {
     if (personal === 'Yes') {
@@ -410,7 +410,7 @@ module.exports = {
     // await I.retry(retryCount).click(this.fields.otherPartiesToServe);
     await I.retry(retryCount).click(this.fields.cafcassCymruServedOptions_No);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async checkYourAnswersAndSubmit() {
     await I.retry(retryCount).waitForText('Check your answers');
@@ -422,17 +422,17 @@ module.exports = {
     await I.waitForElement('#createSelectOrderOptions-blankOrderOrDirections');
     await I.retry(retryCount).click('Blank order or directions (C21)');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.waitForElement('#c21OrderOptions-c21other');
     await I.retry(retryCount).click('Blank order or directions (C21): Other');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
     await this.fillGenericScreen();
     await I.retry(retryCount).fillField(this.fields.recticalsOrPreambels, 'TEST PREAMBLE');
     await I.retry(retryCount).fillField(this.fields.orderDirections, 'TEST ORDER DIRECTIONS');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async manageOrderUploadOrderServeNowPersonally() {
     await this.selectOrder('Upload an order');
@@ -466,11 +466,11 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.OrderAboutAllChildren_Yes);
   },
   async submitManageOrder() {
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.waitForElement('#amendOrderSelectCheckOptions-judgeOrLegalAdvisorCheck');
     await I.retry(retryCount).click('#amendOrderSelectCheckOptions-managerCheck');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).click('Submit');
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
     await I.wait('4');
