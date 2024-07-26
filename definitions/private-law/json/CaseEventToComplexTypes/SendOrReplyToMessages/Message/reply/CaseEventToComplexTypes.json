@@ -54,10 +54,21 @@
     "ID": "Message",
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
-    "ListElementCode": "messageContent",
-    "EventElementLabel": "Your message",
-    "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
+    "ListElementCode": "yourMessageLabel",
+    "EventElementLabel": "**Your message**",
     "FieldDisplayOrder": "5",
+    "DisplayContext": "READONLY"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "messageContent",
+    "EventElementLabel": "Enter your message",
+    "EventHintText": "Explain what you're requesting and why. Include answers and decisions you need.",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -68,7 +79,7 @@
     "CaseFieldID": "replyMessageObject",
     "ListElementCode": "sendReplyJudgeName.idamId",
     "EventElementLabel": "Enter name of Judge",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
@@ -81,7 +92,7 @@
     "CaseFieldID": "replyMessageObject",
     "ListElementCode": "sendReplyJudgeName.personalCode",
     "EventElementLabel": "Enter name of Judge",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
     "ShowSummaryChangeOption": "Yes"
