@@ -3,26 +3,12 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "isCallFromTaskTab",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "No",
-    "RetainHiddenValue": "Y",
-    "FieldShowCondition" : "draftOrdersDynamicList=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "draftOrdersDynamicList",
+    "CaseFieldID": "additionalPage",
     "PageFieldDisplayOrder": 1,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "isCallFromTaskTab=\"No\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order"
+    "ShowSummaryChangeOption": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order"
   }
 ]
