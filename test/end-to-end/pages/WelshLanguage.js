@@ -16,7 +16,7 @@ module.exports = {
     await I.retry(retryCount).wait('2');
     await I.retry(retryCount).see('Does this application need to be translated into Welsh? (Optional)');
     await I.retry(retryCount).click(this.fields.languageRequirementApplicationNeedWelsh);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.runAccessibilityTest();
     await I.wait('1');
     await I.retry(retryCount).waitForText('Save and continue', '30');
