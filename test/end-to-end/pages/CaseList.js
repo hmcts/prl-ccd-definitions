@@ -104,7 +104,7 @@ module.exports = {
     await I.wait('5');
     await I.waitForElement(this.fields.listofcourts);
     await I.retry(retryCount).selectOption(this.fields.listofcourts, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
     await I.retry(retryCount).click('Submit');
     await I.wait('5');
