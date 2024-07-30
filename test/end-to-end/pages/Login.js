@@ -188,5 +188,11 @@ module.exports = {
     await I.fillField(this.fields.email, config.oldCourtAdminUser.email);
     await I.fillField(this.fields.password, config.oldCourtAdminUser.password);
     await I.click(this.fields.submit);
+  },
+
+  async loginAsCafcassUser() {
+    global.logCallingFunction();
+    await this.loginWithUserPass(config.cafcassUser.email, config.cafcassUser.password);
   }
+
 };
