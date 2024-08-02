@@ -42,6 +42,15 @@ const childAndOtherPeopleProcess = (eventRestObj, startDEventRes) => {
   eventRestObj.data.buffChildAndOtherPeopleRelations = eventDataField.value;
 };
 
+const childDetailsProcess = (eventRestObj, startDEventRes) => {
+  const eventDataField = startDEventRes.case_fields.find(field => {
+    return field.id === 'newChildDetails';
+  });
+
+  eventRestObj.data.newChildDetails[0].value.whoDoesTheChildLiveWith.value = eventDataField.value[0].value.whoDoesTheChildLiveWith.list_items[0];
+};
+
+
 const submitAndPayProcess = (eventRestObj, startDEventRes) => {
   const eventDataField = startDEventRes.case_fields.find(field => {
     return field.id === 'submitAndPayDownloadApplicationLink';
@@ -112,7 +121,7 @@ class CaseDataSetup {
   async login(usernameVal, passwordVal) {
     await this.retryBlock(async() => {
       await this.browserContext.clearCookies();
-      const xuiUrl = config.baseUrl;
+      const xuiUrl = process.env.XUI_WEB_URL;
       await this.page.goto(xuiUrl);
       const username = this.page.locator('#username');
       const password = this.page.locator('#password');
@@ -292,11 +301,11 @@ class CaseDataSetup {
       'Add case name',
       'Type of application',
       'Hearing urgency',
-      'Child details',
       'Applicant details',
       'Respondent details',
       'Other people in the case',
       'Other children not in the case',
+      'Child details',
       'Children and applicants',
       'Children and respondents',
       'Children and other people',
@@ -323,6 +332,8 @@ class CaseDataSetup {
         midEventProcess = childAndRespondentProcess;
       } else if (event === 'Children and other people') {
         midEventProcess = childAndOtherPeopleProcess;
+      } else if (event === 'Child details') {
+        midEventProcess = childDetailsProcess;
       } else if (event === 'Submit and pay') {
         midEventProcess = submitAndPayProcess;
       }
@@ -365,7 +376,9 @@ class CaseDataSetup {
     const doc = await exuiUploadDoc(this.caseId, 'trigger/serviceOfApplication/serviceOfApplication2', '//div[@id = "specialArrangementsLetter_fileInputWrapper"]/../input', './test/end-to-end/restApiData/dummy.pdf', this.page);
     const soaRest = restApiData['Service of application'];
     soaRest.data.specialArrangementsLetter = doc;
-    eventRest.res = res;
+    const soaResponse = await this.submitEvent(this.caseId, soaRest, midEventProcess);
+
+    soaRest.res = soaResponse;
 
     console.log(this.caseId);
   }
