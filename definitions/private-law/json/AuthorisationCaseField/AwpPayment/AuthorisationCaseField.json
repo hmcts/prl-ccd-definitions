@@ -12,5 +12,31 @@
         "CRUD": "CRUD"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/06/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "c100HwfRequestedForAdditionalApplications",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
