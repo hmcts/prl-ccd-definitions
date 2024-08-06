@@ -28,7 +28,6 @@
     "test:fullfunctional": "yarn install && codeceptjs run-multiple parallel --all --steps --grep \"@regression-suite\" -c test/end-to-end/codecept.conf.js --verbose --reporter mocha-multi",
     "test:smoke": "yarn install && MOCHAWESOME_REPORTFILENAME=smoke codeceptjs run --steps -c test/smoke/codecept.conf.js --reporter mocha-multi",
     "start": "node index.js",
-    "playwrightsetup": "yarn playwright install",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "generate-json": "cd ccd-definition-processor && yarn xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
@@ -58,13 +57,13 @@
     "json-schema": "^0.4.0",
     "left-pad": "^1.0.0",
     "minimist": "^1.2.3",
-    "playwright": "1.45.0",
+    "playwright": "1.37.0",
     "puppeteer": "^22.0.0",
     "ws": "^7.5.10"
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
-    "@playwright/test": "1.45.0",
+    "@playwright/test": "1.37.0",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-mocha": "^10.5.0",
