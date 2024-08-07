@@ -22,5 +22,6 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
     await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
     await I.retry(retryCount).click(this.fields.submit);
+    console.log('Logged in as solicitor')
   }
 };
