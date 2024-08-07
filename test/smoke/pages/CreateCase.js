@@ -30,7 +30,7 @@ module.exports = {
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
     await I.seeElement(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
-    console.log('Family Private Law Solicitor application selected')
+    console.log('Family Private Law Solicitor application selected');
   },
 
   async selectTypeOfApplicationC100() {
@@ -38,7 +38,7 @@ module.exports = {
     await I.seeElement('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click(this.fields.submit);
-    console.log('Type of application submitted')
+    console.log('Type of application submitted');
   },
 
   async fillSolicitorApplicationPageC100() {
@@ -46,13 +46,13 @@ module.exports = {
     await I.seeElement('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click(this.fields.submit);
-    console.log('Confidentiality statement submitted')
+    console.log('Confidentiality statement submitted');
 
 
     await I.waitForElement('#applicantCaseName');
     await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
     await I.retry(retryCount).click(this.fields.submit);
-    console.log('Application case name added')
+    console.log('Application case name added');
   },
 
   async createNewCaseC100andReturnID() {
