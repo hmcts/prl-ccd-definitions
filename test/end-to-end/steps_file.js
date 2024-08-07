@@ -54,6 +54,8 @@ const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
 const statementOfService = require('./pages/SOAScreens/StatementOfService');
 const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
+const addCafcassOfficer = require('./pages/asCafcassOfficer.js');
+
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -70,6 +72,12 @@ module.exports = () => {
     loginAsCaseManager() {
       return LoginPage.loginAsCaseManager();
     },
+    loginAsStokeCourtAdmin() {
+      return LoginPage.loginAsStokeCourtAdmin();
+    },
+    loginAsSwanseaCourtAdmin() {
+      return LoginPage.loginAsSwanseaCourtAdmin();
+    },
     loginAsCourtAdminTSSolicitorApplication() {
       return LoginPage.loginAsCourtAdminTSSolicitorApplication();
     },
@@ -82,11 +90,11 @@ module.exports = () => {
     loginAsLegalAdviser() {
       return LoginPage.loginAsLegalAdviser();
     },
-    loginAsSwanseaCourtAdmin() {
-      return LoginPage.loginAsSwanseaCourtAdmin();
-    },
     loginAsOldCourtAdmin() {
       return LoginPage.loginAsOldCourtAdmin();
+    },
+    loginAsCafcassUser() {
+      return LoginPage.loginAsCafcassUser();
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
@@ -385,6 +393,9 @@ module.exports = () => {
     submitAndVerifyNOCForCaseWithId(caseId) {
       return nocDetailsPage.triggerAndVerifyNocChanges(caseId);
     },
+    submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname) {
+      return nocDetailsPage.submitAndVerifyNOCForApplicantCase(caseId, firstname, lastname);
+    },
     sendAMessage() {
       return sendMessagePage.sendInternalMsgToJudge();
     },
@@ -396,6 +407,9 @@ module.exports = () => {
     },
     performServiceOfApplication() {
       return soaPage.performServiceOfApplication();
+    },
+    performCitizenServingSOA() {
+      return soaPage.performCitizenServingSOA();
     },
     verifyServiceOfApplicationSubmission() {
       return soaPage.verifyServiceOfApplicationSubmission();
@@ -462,6 +476,19 @@ module.exports = () => {
     },
     fillRespondentMiamNoOption() {
       return respondentSolicitorMiam.fillRespondentMiamNoOption();
+    },
+    asCafcassUserPerformEventAddCafcassOfficer() {
+      return addCafcassOfficer.performEventAddCafcassOfficer();
+    },
+    asCafcassUserPerformEventManageDocuments() {
+      return addCafcassOfficer.performEventManageDocuments();
+    },
+    asCafcassUserVerifyCafcassUploadedDocuments() {
+      return addCafcassOfficer.verifyCaseDocumentsCafcassUploadedDocuments();
+    },
+    verifyCaffcassOfficerDetails() {
+      return addCafcassOfficer.verifyPartiesAddedCafcassofficerDetails();
     }
+
   });
 };
