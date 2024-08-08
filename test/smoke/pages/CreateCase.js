@@ -22,30 +22,62 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
-    I.wait('5');
-    await I.waitForElement(this.fields.jurisdiction);
-    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
-    // I.wait('5');
-    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    await I.waitForClickable(this.fields.submit);
-    await I.retry(retryCount).click(this.fields.submit);
+    const maxRetries = 3; // Maximum number of retries to avoid infinite loop
+    let retryCount = 0;
+    let isOptionFound = false;
+
+    while (retryCount < maxRetries && !isOptionFound) {
+      try {
+        await I.wait(5);
+        await I.waitForElement(this.fields.jurisdiction);
+
+        // Check if the option 'Family Private Law' is available
+        const options = await I.grabTextFrom(this.fields.jurisdiction);
+        if (options.includes('Family Private Law')) {
+          isOptionFound = true;
+          await I.selectOption(this.fields.jurisdiction, 'Family Private Law');
+          await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+          await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
+          await I.seeElement(this.fields.submit);
+          await I.retry(retryCount).click(this.fields.submit);
+          console.log('Family Private Law Solicitor application selected');
+        } else {
+          console.log('Family Private Law not found, refreshing the page...');
+          await I.refreshPage();
+          retryCount++;
+        }
+      } catch (error) {
+        console.error(`Error selecting options, attempt ${retryCount + 1}:`, error);
+        await I.refreshPage();
+        retryCount++;
+      }
+    }
+
+    if (!isOptionFound) {
+      throw new Error('Family Private Law option was not found after multiple attempts.');
+    }
   },
 
   async selectTypeOfApplicationC100() {
     await I.waitForText('Type of application');
+    await I.seeElement('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).click(this.fields.submit);
+    console.log('Type of application submitted');
   },
 
   async fillSolicitorApplicationPageC100() {
     await I.waitForText('Confidentiality Statement');
+    await I.seeElement('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).click(this.fields.submit);
+    console.log('Confidentiality statement submitted');
+
 
     await I.waitForElement('#applicantCaseName');
-    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
-    await I.retry(retryCount).continueEvent();
+    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Smoke Test Case');
+    await I.retry(retryCount).click(this.fields.submit);
+    console.log('Application case name added');
   },
 
   async createNewCaseC100andReturnID() {
