@@ -22,40 +22,15 @@ module.exports = {
   },
 
   async fillFormAndSubmit() {
-    const maxRetries = 3; // Maximum number of retries to avoid infinite loop
-    let retryCount = 0;
-    let isOptionFound = false;
-
-    while (retryCount < maxRetries && !isOptionFound) {
-      try {
-        await I.wait(5);
-        await I.waitForElement(this.fields.jurisdiction);
-
-        // Check if the option 'Family Private Law' is available
-        const options = await I.grabTextFrom(this.fields.jurisdiction);
-        if (options.includes('Family Private Law')) {
-          isOptionFound = true;
-          await I.selectOption(this.fields.jurisdiction, 'Family Private Law');
-          await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
-          await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-          await I.seeElement(this.fields.submit);
-          await I.retry(retryCount).click(this.fields.submit);
-          console.log('Family Private Law Solicitor application selected');
-        } else {
-          console.log('Family Private Law not found, refreshing the page...');
-          await I.refreshPage();
-          retryCount++;
-        }
-      } catch (error) {
-        console.error(`Error selecting options, attempt ${retryCount + 1}:`, error);
-        await I.refreshPage();
-        retryCount++;
-      }
-    }
-
-    if (!isOptionFound) {
-      throw new Error('Family Private Law option was not found after multiple attempts.');
-    }
+    I.wait('5');
+    await I.waitForElement(this.fields.jurisdiction);
+    await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
+    // I.wait('5');
+    await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
+    await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
+    await I.seeElement(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
+    console.log('Family Private Law Solicitor application selected');
   },
 
   async selectTypeOfApplicationC100() {
