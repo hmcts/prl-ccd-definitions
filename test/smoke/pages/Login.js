@@ -16,11 +16,14 @@ module.exports = {
 
   async loginAsSolicitor() {
     await I.retry(retryCount).amOnPage(baseUrl);
+    await I.seeElement('#cookie-accept-submit');
     await I.retry(retryCount).click('#cookie-accept-submit');
     await I.retry(retryCount).click('#cookie-accept-all-success-banner-hide');
     await I.retry(retryCount).seeElement('#authorizeCommand');
+    await I.retry(retryCount).seeElement(this.fields.email);
     await I.retry(retryCount).fillField(this.fields.email, config.legalProfessionalUserOne.email);
     await I.retry(retryCount).fillField(this.fields.password, config.legalProfessionalUserOne.password);
+    await I.retry(retryCount).seeElement(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   }
 };
