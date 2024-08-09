@@ -1,5 +1,17 @@
 [
   {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "orderNameEditScreenLabel",
+    "PageFieldDisplayOrder": 0,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
@@ -7,11 +19,10 @@
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 0,
+    "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "N",
     "RetainHiddenValue": "Y",
-    "FieldShowCondition": "additionalPage=\"DO_NOT_SHOW\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-populate-draft-order-common-fields",
+    "FieldShowCondition": "orderNameEditScreenLabel=\"DO_NOT_SHOW\"",
     "Publish" : "True"
   },
   {
@@ -19,7 +30,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "orderName",
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -34,7 +45,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "RetainHiddenValue": "Y",
     "FieldShowCondition" : "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "No"
@@ -44,7 +55,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "isOrderCreatedBySolicitor",
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "OPTIONAL",
     "PageID": 2,
     "PageDisplayOrder": 2,
@@ -57,24 +68,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "doYouWantToEditTheOrder",
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "ShowSummaryChangeOption": "Y",
     "RetainHiddenValue": "Y",
     "FieldShowCondition": "isOrderCreatedBySolicitor=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "orderNameEditScreenLabel",
-    "PageFieldDisplayOrder": 5,
-    "DisplayContext": "READONLY",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "05/12/2023",
