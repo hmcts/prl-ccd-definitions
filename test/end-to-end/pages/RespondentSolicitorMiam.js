@@ -20,7 +20,7 @@ module.exports = {
     await I.retry(retryCount)
       .click(this.fields.hasRespondentAttendedMiam_No);
     await I.retry(retryCount)
-      .click('Continue');
+      .I.continueEvent();
   },
   async fillWillingToAttendedMiam_NoOption() {
     await I.wait('2');
@@ -29,7 +29,7 @@ module.exports = {
     await I.wait('2');
     await I.fillField(this.fields.respondentReasonNotAttendingMiam, this.fields.respondentReasonNotAttendingMiamText);
     await I.retry(retryCount)
-      .click('Continue');
+      .I.continueEvent();
     await I.waitForText(this.fields.cyaText);
     await I.waitForText(this.fields.respondentReasonNotAttendingMiamText);
     await I.retry(retryCount).click('Save and continue');
@@ -42,7 +42,7 @@ module.exports = {
     await I.wait('10');
     await I.waitForText(this.fields.hasRespondentHaveAllegations);
     await I.click(this.fields.respondentAOH_No);
-    await I.click('Continue');
+    await I.continueEvent();
     await I.waitForText(this.fields.cyaText);
     await I.click('Save and continue');
   }

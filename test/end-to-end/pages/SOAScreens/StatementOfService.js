@@ -38,6 +38,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.signOut);
   },
   async verifyPostStatementOfService() {
+    await I.waitForElement(this.fields.nextBtnSelector);
     await I.clickTillElementFound(this.fields.soaTab, this.fields.nextBtnSelector);
     await I.click(this.fields.soaTab);
     await I.see(sosConfig.sosEvent);
