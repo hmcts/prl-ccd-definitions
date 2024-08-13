@@ -43,7 +43,7 @@ module.exports = {
 
   async fillFormAndSubmit() {
     global.logCallingFunction();
-    await I.wait('5');
+    await I.wait('10');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
@@ -63,6 +63,7 @@ module.exports = {
   async fillFormAndSubmit_TS_Solicitor() {
     global.logCallingFunction();
     await I.waitForElement(this.fields.jurisdiction);
+    await I.wait('10');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
@@ -79,6 +80,7 @@ module.exports = {
   },
   async fillFormAndSubmit_TS() {
     global.logCallingFunction();
+    await I.wait('10');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
@@ -97,6 +99,7 @@ module.exports = {
 
   async fillFormAndSubmitCourtNav_TS() {
     global.logCallingFunction();
+    await I.wait('10');
     await I.retry(retryCount).selectOption(
       this.fields.jurisdiction,
       'Family Private Law'
