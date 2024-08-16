@@ -14,6 +14,7 @@ properties([
 String product = "prl"
 String component = "ccd-definitions"
 def channel = '#prl-tech-notifications'
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 // SAUCELABS config - configured on Jenkins
 env.SAUCE_TUNNEL_IDENTIFIER = 'reformtunnel'
@@ -35,7 +36,12 @@ def secrets = [
                 secret('judge-testuser-one', 'JUDGE_TESTUSER_ONE'),
                 secret('judge-testpassword', 'JUDGE_TESTPASSWORD'),
                 secret('casemanager-testuser', 'CASEMANAGER_TESTUSER'),
-                secret('old-courtadmin-testuser', 'OLDCOURTADMIN_TESTUSER_ONE')
+                secret('old-courtadmin-testuser', 'OLDCOURTADMIN_TESTUSER_ONE'),
+                secret('old-courtadmin-testuser', 'OLDCOURTADMIN_TESTUSER_ONE'),
+                secret('ccd-datastore-client-id', 'CCD_DATASTORE_client_id'),
+                secret('ccd-datastore-client-secret', 'CCD_DATASTORE_client_secret'),
+                secret('ccd-datastore-username', 'CCD_DATASTORE_username'),
+                secret('ccd-datastore-password', 'CCD_DATASTORE_password')
         ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
@@ -69,12 +75,18 @@ withNightlyPipeline("nodejs", product, component) {
     // enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
     enableCrossBrowserTest(60)
 
+    before('fullFunctionalTest') {
+        yarnBuilder.yarn('playwrightsetup')
+    }
+
     afterAlways('fullFunctionalTest') {
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
     }
 
-    before('crossBrowserTest') {}
+    before('crossBrowserTest') {
+        yarnBuilder.yarn('playwrightsetup')
+    }
 
     afterAlways('crossBrowserTest') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
