@@ -1,3 +1,4 @@
+
 const I = actor();
 const retryCount = 3;
 const medWait = 20;
@@ -28,44 +29,51 @@ module.exports = {
   },
 
   async triggerEvent() {
-    await I.retry(retryCount).triggerEvent('Submit and pay');
+    global.logCallingFunction();
+    await I.triggerEvent('Submit and pay');
+    await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
   },
 
   async triggerDummyPaymentEvent() {
+    global.logCallingFunction();
     await I.retry(retryCount).triggerEvent('Dummy Payment confirmation');
     await I.waitForText('Dummy Payment confirmation');
     await I.waitForText('Make the payment');
   },
 
   async confidentialityStatement() {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText('Confidentiality Statement', medWait);
     await I.retry(retryCount).click(
       '#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked'
     );
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async confidentialityStatementFL401() {
+    global.logCallingFunction();
     await I.wait('10');
     await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
     await I.wait('1');
     await I.retry(retryCount).click('#confidentialityDisclaimer_confidentialityChecksChecked-confidentialityChecksChecked');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async declaration() {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText('Declaration');
     await I.retry(retryCount).click('#payAgreeStatement-agree');
     await I.retry(retryCount).waitForText(this.fields.prlNoHWFText);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async helpWithFeeNo() {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click(this.fields.submit);
@@ -75,6 +83,7 @@ module.exports = {
     await I.wait('2');
   },
   async helpWithFeeYes() {
+    global.logCallingFunction();
     await I.wait('2');
     await I.retry(retryCount).waitForText(this.fields.HWFQuestion);
     await I.retry(retryCount).click(this.fields.helpWithFees_Yes);
@@ -83,16 +92,18 @@ module.exports = {
       this.fields.helpWithFeesReferenceNumber_text,
       this.fields.HWFRefNum
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
     await I.retry(retryCount).waitForText(this.fields.HWFYesErrorMsg);
   },
 
   async payNow() {
+    global.logCallingFunction();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async happensNext() {
+    global.logCallingFunction();
     await I.waitForClickable(this.fields.submit);
     await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
@@ -108,21 +119,25 @@ module.exports = {
   },
 
   async runDummyPayment() {
+    global.logCallingFunction();
     await this.triggerDummyPaymentEvent();
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async caseSubmittedCA() {
+    global.logCallingFunction();
     await I.waitForText('Submitted');
   },
 
   async answerHelpWithFeesNo() {
+    global.logCallingFunction();
     await I.wait('4');
     await I.retry(retryCount).click(this.fields.helpWithFees_No);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async submitAndPay() {
+    global.logCallingFunction();
     await this.triggerEvent();
     await this.confidentialityStatement();
     await this.declaration();
@@ -132,6 +147,7 @@ module.exports = {
     await this.caseSubmittedCA();
   },
   async FL401StatementOfTruth() {
+    global.logCallingFunction();
     await I.retry(retryCount).click(this.fields.fl401StmtOfTruth_applicantConsent);
     await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_dateDay, '11');
     await I.wait('2');
@@ -145,16 +161,18 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).fillField(this.fields.fl401StmtOfTruth_signOnBehalf, 'Solicitor');
     await I.wait('2');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
   async FL401ConfidentialityCheck() {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText('Ensure that no confidential information has been disclosed in the application');
     await I.retry(retryCount).click(this.fields.fl401ConfidentialCheck);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
   async statementOfTruthAndSubmit() {
+    global.logCallingFunction();
     await I.retry(retryCount).triggerEvent('Statement of Truth and submit');
     await I.wait('6');
     await this.FL401StatementOfTruth();
@@ -163,6 +181,7 @@ module.exports = {
     await I.retry(retryCount).amOnHistoryPageWithSuccessNotification();
   },
   async selectFamilyCourt(courtName) {
+    global.logCallingFunction();
     await I.retry(retryCount).waitForText('Select the family court');
     await I.retry(retryCount).selectOption(this.fields.fl401countyCourtSelection, courtName);
     await I.wait('2');
@@ -170,6 +189,7 @@ module.exports = {
     await I.wait('4');
   },
   async submitAndPay_HWF_Yes() {
+    global.logCallingFunction();
     await this.triggerEvent();
     await this.confidentialityStatement();
     await this.declaration();
@@ -177,6 +197,7 @@ module.exports = {
   },
 
   async submitAndPayForDummySolicitorApplication() {
+    global.logCallingFunction();
     await this.triggerEvent();
     await this.confidentialityStatement();
     await this.declaration();
