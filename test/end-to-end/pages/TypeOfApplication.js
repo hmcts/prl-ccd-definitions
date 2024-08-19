@@ -45,10 +45,11 @@ module.exports = {
   },
 
   async actionTypeOfApplicationEvent() {
-    await I.retry(retryCount).waitForText(this.fields.eventName);
-    await I.retry(retryCount).selectOption(this.fields.eventSelectField, this.fields.eventName);
-    await I.retry(retryCount).waitForEnabled(this.fields.submit);
-    await I.retry(retryCount).click(this.fields.submit);
+    await I.triggerEvent(this.fields.eventName);
+    // await I.retry(retryCount).waitForText(this.fields.eventName);
+    // await I.retry(retryCount).selectOption(this.fields.eventSelectField, this.fields.eventName);
+    // await I.retry(retryCount).waitForEnabled(this.fields.submit);
+    // await I.retry(retryCount).click(this.fields.submit);
   },
 
   async whatOrdersPageC100() {
@@ -66,9 +67,9 @@ module.exports = {
     await I.retry(retryCount).waitForText('Do you have a draft consent order?');
     await I.retry(retryCount).click(this.fields.consentOrderYes);
     await I.retry(retryCount).attachDocument('draftConsentOrderFile');
-    await I.retry(retryCount).wait('5');
+    await I.retry(retryCount).wait('15');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async permissionsPageC100() {
@@ -101,7 +102,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.occupationOrder);
     await I.runAccessibilityTest();
     I.wait('5');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async linkToChildArrangementsApplicationFL401() {
@@ -113,7 +114,7 @@ module.exports = {
     // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async checkYourAnswersPageFL401() {
