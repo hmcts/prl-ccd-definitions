@@ -61,7 +61,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
   ]
 }
 
-withPipeline("nodejs", product, component) {
+withPipeline("nodejs", product, component, 120) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   enableSlackNotifications(channel)
