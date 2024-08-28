@@ -54,12 +54,32 @@ module.exports = {
       'newChildDetails': [
         {
           'value': {
-            'firstName': 'Test',
-            'lastName': 'test',
+            'firstName': 'childone fn',
+            'lastName': 'childone ln',
             'dateOfBirth': '2020-01-01',
             'gender': 'male',
             'otherGender': null,
-            'parentalResponsibilityDetails': 'Test',
+            'parentalResponsibilityDetails': 'test',
+            'whoDoesTheChildLiveWith': {
+              'value': {
+                'code': '8f0f3e50-e333-4b09-8db5-4bd6697b45c3',
+                'label': 'test applicant test - Flat 11, Sheraton House, SW1V 3BZ'
+              },
+              'list_items': [
+                {
+                  'code': '8f0f3e50-e333-4b09-8db5-4bd6697b45c3',
+                  'label': 'test applicant test - Flat 11, Sheraton House, SW1V 3BZ'
+                },
+                {
+                  'code': '4af96cd3-2045-4702-b88d-62be4b20ea77',
+                  'label': 'test resp test resp ln'
+                },
+                {
+                  'code': '0510cb67-c03a-489c-b138-a2c27df68b7a',
+                  'label': 'tes othr test other ln'
+                }
+              ]
+            },
             'isDateOfBirthUnknown': null,
             'cafcassOfficerName': null,
             'cafcassOfficerPosition': null,
@@ -69,7 +89,7 @@ module.exports = {
             'isFinalOrderIssued': null,
             'orderAppliedFor': ['childArrangementsOrder']
           },
-          'id': null
+          'id': 'd958f1b8-1397-4105-8d31-899b1a70fd80'
         }
       ],
       'childrenKnownToLocalAuthority': 'no',
