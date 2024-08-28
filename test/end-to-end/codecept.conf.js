@@ -15,7 +15,7 @@ const DataSetupManager = require('./restApiData/DataSetupManager');
 exports.config = {
   tests: './tests/*_test.js',
   output: outputDir,
-  timeout: 7200 * 1000,
+  timeout: 3600 * 1000,
   helpers: {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
