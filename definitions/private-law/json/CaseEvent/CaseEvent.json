@@ -1993,6 +1993,18 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hwfProcessCaseUpdate",
+    "Name": "Process HWF for Citizen case",
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
+  },
+  {
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "removeDraftOrder",
