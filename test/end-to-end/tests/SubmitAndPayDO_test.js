@@ -4,6 +4,7 @@ Feature('Submit and Pay - DO');
 Scenario(
   'Submit and Pay - basic journey for FL401 Casetype @regression-suite @ptl-regression',
   async({ I }) => {
+    //This should run
     await I.loginAsSolicitor();
     await I.createCaseFL401();
     await I.typeOfApplicationEventFL401();
