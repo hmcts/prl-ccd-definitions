@@ -2,9 +2,8 @@ const testConfig = require('../config');
 
 Feature('Submit and Pay - DO');
 Scenario(
-  'Submit and Pay - basic journey for FL401 Casetype @regression-suite @ptl-regression',
+  'Submit and Pay - basic journey for FL401 Casetype @regression-suite @preview-regression ',
   async({ I }) => {
-    //This should run
     await I.loginAsSolicitor();
     await I.createCaseFL401();
     await I.typeOfApplicationEventFL401();
