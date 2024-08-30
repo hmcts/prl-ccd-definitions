@@ -1,7 +1,7 @@
 const testConfig = require('../config');
 
 Feature('CA Submit and Pay');
-Scenario('Create a Case and Submit/Pay @regression-suite @preview-regression @ptl-regression', async({ I }) => {
+Scenario('Create a Case and Submit/Pay @regression-suite @ptl-regression', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createCase();
   await I.typeOfApplicationEventC100();
