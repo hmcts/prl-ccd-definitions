@@ -6,7 +6,7 @@ let caseId;
 
 Feature('CA Manage Order Upload Order - TS Court Admin');
 Scenario(
-  'CA Manage Order Upload Order Serve order Personally @regression-suite',
+  'CA Manage Order Upload Order Serve order Personally @regression-suitec',
   async({ I }) => {
     await I.loginAsOldCourtAdmin();
     await I.createC100CaseByCourtAdmin();
@@ -30,7 +30,7 @@ Scenario('As a court admin Create Order C43 @regression-suite', async({ I }) => 
   await I.createOrderC43AndSendToCaseManager();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a Case manager edit & approve a draft order @regression-suite', async({ I }) => {
+Scenario('As a Case manager edit & approve a draft order @to-fix', async({ I }) => {
   await I.loginAsCaseManager();
   await I.searchForCasesWithId(caseId);
   await I.editDratOrderAsManager();

@@ -16,11 +16,14 @@ module.exports = {
     selectCourt: 'select[id="submitCountyCourtSelection"]'
   },
 
+
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('Statement of Truth and submit');
   },
 
   async fillTruthDetails() {
+    await I.wait('7');
+    await I.waitForElement(this.fields.flTruthConsent);
     await I.click(this.fields.flTruthConsent);
     await I.fillField(this.fields.dobDay, '21');
     await I.fillField(this.fields.dobMonth, '12');
@@ -29,12 +32,13 @@ module.exports = {
     await I.fillField(this.fields.firmName, 'Test firm name');
     await I.fillField(this.fields.signName, 'Test sign');
     await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.continueEvent();
   },
 
   async selectConfidentialConsent() {
+    await I.waitForElement(this.fields.confidentialConsent);
     await I.click(this.fields.confidentialConsent);
-    await I.click('Continue');
+    await I.continueEvent();
     await I.selectOption(this.fields.selectCourt, 'Aberystwyth Justice Centre - Trefechan - SY23 1AS');
     await I.click('Submit');
   },

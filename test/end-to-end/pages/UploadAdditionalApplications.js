@@ -29,6 +29,7 @@ module.exports = {
   },
 
   async triggerEvent() {
+    await I.waitForElement('//option[contains(text(),"Upload additional applications")]');
     await I.retry(retryCount).triggerEvent('Upload additional applications');
   },
 
@@ -40,7 +41,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.otherOrderCheckbox);
     await I.retry(retryCount).click(this.fields.applicantCheckbox);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('5');
   },
 
@@ -51,7 +52,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.within2DaysRadio);
     await I.wait('5');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('5');
   },
   async awpCAOtherOrders() {
@@ -66,7 +67,7 @@ module.exports = {
     await I.retry(retryCount).waitForText(this.fields.awpHWFQuestion);
     await I.retry(retryCount).waitForText('£167.00');
     await I.retry(retryCount).click(this.fields.awphelpWithFees_No);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
     await I.retry(retryCount).click('Save and continue');
     await I.wait('12');
