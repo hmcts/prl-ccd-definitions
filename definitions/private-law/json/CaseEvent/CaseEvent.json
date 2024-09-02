@@ -278,6 +278,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-information",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -792,7 +793,8 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header-case-note",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-case-note",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1374,7 +1376,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/07/2021",

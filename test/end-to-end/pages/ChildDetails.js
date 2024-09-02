@@ -10,6 +10,8 @@ module.exports = {
     child2FirstName: '//*[@id="newChildDetails_1_firstName"]',
     child2LastName: '//*[@id="newChildDetails_1_lastName"]',
     parentalResponsibilityDetails: '//*[@id="newChildDetails_0_parentalResponsibilityDetails"]',
+    childLiveWith: '#newChildDetails_0_whoDoesTheChildLiveWith',
+    childLiveWith1: '#newChildDetails_1_whoDoesTheChildLiveWith',
     parentalResponsibilityDetails2: '//*[@id="newChildDetails_1_parentalResponsibilityDetails"]'
   },
 
@@ -27,6 +29,12 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_0_gender-female"]');
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_0_orderAppliedFor-childArrangementsOrder"]');
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails, 'Text area field Test');
+    await I.waitForElement(this.fields.childLiveWith);
+    await I.retry(retryCount).click(this.fields.childLiveWith);
+    await I.waitForElement('//select[@id="newChildDetails_0_whoDoesTheChildLiveWith"]//option[2]');
+    const option = await I.grabTextFrom('//select[@id="newChildDetails_0_whoDoesTheChildLiveWith"]//option[2]');
+    await I.retry(retryCount).selectOption(this.fields.childLiveWith, option);
+    // await I.retry(retryCount).selectOption(this.fields.childLiveWith, '1');
     await I.runAccessibilityTest();
     await this.addNewChild2();
   },
@@ -41,6 +49,11 @@ module.exports = {
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_1_gender-female"]');
     await I.retry(retryCount).checkOption('//input[@id="newChildDetails_1_orderAppliedFor-childArrangementsOrder"]');
     await I.retry(retryCount).fillField(this.fields.parentalResponsibilityDetails2, 'Text area field Test');
+    await I.waitForElement(this.fields.childLiveWith1);
+    await I.retry(retryCount).click(this.fields.childLiveWith1);
+    await I.waitForElement('//select[@id="newChildDetails_1_whoDoesTheChildLiveWith"]//option[2]');
+    const option = await I.grabTextFrom('//select[@id="newChildDetails_1_whoDoesTheChildLiveWith"]//option[2]');
+    await I.retry(retryCount).selectOption(this.fields.childLiveWith1, option);
     await I.retry(retryCount).click(this.fields.submit);
   },
   async fillAdditionalQuestionsPage() {
