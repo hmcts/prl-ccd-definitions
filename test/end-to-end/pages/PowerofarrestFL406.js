@@ -51,7 +51,7 @@ module.exports = {
     await I.wait('1');
     await I.retry(retryCount).fillField(this.fields.dateOrderEndTime, '11 AM');
     await I.wait('1');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('9');
   }
 

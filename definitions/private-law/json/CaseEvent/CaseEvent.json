@@ -278,6 +278,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-information",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -792,7 +793,8 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header-case-note",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-case-note",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1374,7 +1376,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -1398,6 +1401,28 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpCreate",
+    "Name": "Create/submit citizen AWP",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpHwfCreate",
+    "Name": "Create/submit citizen AWP HWF",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "Publish": "True"
@@ -1555,7 +1580,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2023",
@@ -1988,6 +2014,18 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hwfProcessCaseUpdate",
+    "Name": "Process HWF for Citizen case",
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "26/07/2022",

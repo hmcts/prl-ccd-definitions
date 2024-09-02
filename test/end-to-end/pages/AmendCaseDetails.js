@@ -61,7 +61,7 @@ module.exports = {
     await I.attachFile(this.fields.uploadCertificate, '../resource/dummy.pdf');
     await I.wait('10');
     await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.continueEvent();
 
     await I.waitForText('Check your answers');
     await I.click('Save and continue');
@@ -112,7 +112,7 @@ module.exports = {
     await I.fillField(this.fields.repDXNumField, this.amendRespondentEvent.dxNumber);
 
     await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.continueEvent();
 
     await I.waitForText('Check your answers');
     await I.click('Save and continue');
