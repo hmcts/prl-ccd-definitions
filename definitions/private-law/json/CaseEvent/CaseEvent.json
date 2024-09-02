@@ -1406,6 +1406,28 @@
     "Publish": "True"
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpCreate",
+    "Name": "Create/submit citizen AWP",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpHwfCreate",
+    "Name": "Create/submit citizen AWP HWF",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "citizenSaveC100DraftInternal",
@@ -1558,7 +1580,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2023",
@@ -1991,6 +2014,18 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hwfProcessCaseUpdate",
+    "Name": "Process HWF for Citizen case",
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "26/07/2022",
