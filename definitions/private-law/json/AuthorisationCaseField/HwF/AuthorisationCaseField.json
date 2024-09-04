@@ -189,6 +189,31 @@
     ]
   },
   {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isTheCaseInDraftState",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-judge",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
     "LiveFrom": "20/06/2024",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "hwfApplicationDynamicData",
