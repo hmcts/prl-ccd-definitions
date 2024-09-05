@@ -247,6 +247,18 @@
     "DisplayContext": "MANDATORY"
   },
   {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicants",
+    "ListElementCode": "contactPreferences",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "23",
+    "FieldShowCondition": "applicants.canYouProvideEmailAddress=\"Yes\"",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
@@ -254,7 +266,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "phoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "24",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -265,7 +277,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "isPhoneNumberConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -276,7 +288,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorDetails",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "READONLY"
   },
   {
@@ -287,7 +299,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "representativeFirstName",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "26",
+    "FieldDisplayOrder": "27",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -298,7 +310,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "representativeLastName",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "27",
+    "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -309,7 +321,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorEmail",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "28",
+    "FieldDisplayOrder": "29",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -320,7 +332,7 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorReference",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "29",
+    "FieldDisplayOrder": "30",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -331,17 +343,6 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorOrg.OrganisationID",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "30",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorOrg",
-    "EventElementLabel": "",
     "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL"
   },
@@ -351,7 +352,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorOrg.OrganisationName",
+    "ListElementCode": "solicitorOrg",
     "EventElementLabel": "",
     "FieldDisplayOrder": "32",
     "DisplayContext": "OPTIONAL"
@@ -362,7 +363,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "dxNumber",
+    "ListElementCode": "solicitorOrg.OrganisationName",
     "EventElementLabel": "",
     "FieldDisplayOrder": "33",
     "DisplayContext": "OPTIONAL"
@@ -373,7 +374,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress",
+    "ListElementCode": "dxNumber",
     "EventElementLabel": "",
     "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL"
@@ -384,7 +385,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.AddressLine1",
+    "ListElementCode": "solicitorAddress",
     "EventElementLabel": "",
     "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL"
@@ -395,7 +396,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.AddressLine2",
+    "ListElementCode": "solicitorAddress.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL"
@@ -406,7 +407,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.AddressLine3",
+    "ListElementCode": "solicitorAddress.AddressLine2",
     "EventElementLabel": "",
     "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL"
@@ -417,7 +418,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.PostTown",
+    "ListElementCode": "solicitorAddress.AddressLine3",
     "EventElementLabel": "",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL"
@@ -428,7 +429,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.County",
+    "ListElementCode": "solicitorAddress.PostTown",
     "EventElementLabel": "",
     "FieldDisplayOrder": "39",
     "DisplayContext": "OPTIONAL"
@@ -439,7 +440,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.PostCode",
+    "ListElementCode": "solicitorAddress.County",
     "EventElementLabel": "",
     "FieldDisplayOrder": "40",
     "DisplayContext": "OPTIONAL"
@@ -450,7 +451,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "solicitorAddress.Country",
+    "ListElementCode": "solicitorAddress.PostCode",
     "EventElementLabel": "",
     "FieldDisplayOrder": "41",
     "DisplayContext": "OPTIONAL"
@@ -461,9 +462,20 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicants",
-    "ListElementCode": "addNewApplicantLabel",
+    "ListElementCode": "solicitorAddress.Country",
     "EventElementLabel": "",
     "FieldDisplayOrder": "42",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicants",
+    "ListElementCode": "addNewApplicantLabel",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "43",
     "DisplayContext": "MANDATORY"
   }
 ]

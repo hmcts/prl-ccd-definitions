@@ -9,7 +9,7 @@ async function uploadFLDocuments() {
 
   await I.retry(retryCount).wait('5');
   await I.runAccessibilityTest();
-  await I.retry(retryCount).click('Continue');
+  await I.retry(retryCount).continueEvent();
 
   await I.retry(retryCount).waitForText('Save and continue', '5');
   await I.retry(retryCount).click('Save and continue');

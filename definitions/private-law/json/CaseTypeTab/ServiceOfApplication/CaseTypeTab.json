@@ -19,7 +19,7 @@
     "TabDisplayOrder": 27,
     "CaseFieldID": "unServedPackLabel",
     "TabFieldDisplayOrder": 2,
-    "FieldShowCondition": "unServedRespondentPack.packDocument!=\"\" OR unServedOthersPack.packDocument!=\"\" OR unServedApplicantPack.packDocument!=\"\" OR unServedLaPack.packDocument!=\"\""
+    "FieldShowCondition": "unServedRespondentPack.packDocument!=\"\" OR unServedOthersPack.packDocument!=\"\" OR unServedApplicantPack.packDocument!=\"\" OR unServedLaPack.packDocument!=\"\" OR unServedCafcassCymruPack.servedPartyEmail!=\"\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -65,6 +65,16 @@
     "CaseFieldID": "unServedLaPack",
     "TabFieldDisplayOrder": 6,
     "FieldShowCondition": "unServedLaPack.packDocument!=\"\""
+  },
+  {
+    "LiveFrom": "16/08/2023",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "unServedCafcassCymruPack",
+    "TabFieldDisplayOrder": 6
   },
   {
     "LiveFrom": "01/01/2018",
@@ -130,5 +140,15 @@
     "TabDisplayOrder": 27,
     "CaseFieldID": "stmtOfServiceForApplication",
     "TabFieldDisplayOrder": 12
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfApplication",
+    "TabLabel": "Service of application",
+    "TabDisplayOrder": 27,
+    "CaseFieldID": "accessCodeNotifications",
+    "TabFieldDisplayOrder": 13
   }
 ]
