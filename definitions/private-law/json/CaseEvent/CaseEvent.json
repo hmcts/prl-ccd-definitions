@@ -682,8 +682,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -944,7 +943,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\"",
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\" AND isCourtNavCase!=\"Yes\"",
     "Publish": "True"
   },
   {
