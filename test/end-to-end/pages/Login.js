@@ -16,6 +16,23 @@ module.exports = {
     submit: 'input[type="submit"]'
   },
 
+  async loginWithUserPass(user, pass) {
+    global.logCallingFunction();
+    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
+    try {
+      await I.runAccessibilityTest();
+      await I.waitForSelector('#authorizeCommand');
+      await I.seeElement('#authorizeCommand');
+      await I.fillField(this.fields.email, user);
+      testLogger.AddMessage(`Login with user : ${user}`);
+      await I.fillField(this.fields.password, pass);
+    } catch {
+      await I.fillField(this.fields.email, user);
+      await I.fillField(this.fields.password, pass);
+    }
+    await I.click(this.fields.submit);
+  },
+
   async loginAsSolicitor() {
     global.logCallingFunction();
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -48,6 +65,15 @@ module.exports = {
     }
     await I.click(this.fields.submit);
   },
+  async loginAsStokeCourtAdmin() {
+    global.logCallingFunction();
+    await this.loginWithUserPass(config.legalProfessionalUserTwo.email, config.legalProfessionalUserTwo.password);
+  },
+  async loginAsSwanseaCourtAdmin() {
+    global.logCallingFunction();
+    await this.loginWithUserPass(config.courtAdminUser.email, config.courtAdminUser.password);
+  },
+
   async loginAsCaseManager() {
     global.logCallingFunction();
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -140,18 +166,6 @@ module.exports = {
     await I.wait('10');
   },
 
-  async loginAsSwanseaCourtAdmin() {
-    global.logCallingFunction();
-    await I.amOnPage(`${process.env.XUI_WEB_URL}`);
-    await I.runAccessibilityTest();
-    await I.waitForSelector('#authorizeCommand');
-    await I.seeElement('#authorizeCommand');
-    testLogger.AddMessage(`Login with user : ${config.courtAdminUser.email}`);
-    await I.fillField(this.fields.email, config.courtAdminUser.email);
-    await I.fillField(this.fields.password, config.courtAdminUser.password);
-    await I.click(this.fields.submit);
-  },
-
   async loginAsRespondentSolicitor() {
     global.logCallingFunction();
     await I.amOnPage(`${process.env.XUI_WEB_URL}`);
@@ -174,5 +188,11 @@ module.exports = {
     await I.fillField(this.fields.email, config.oldCourtAdminUser.email);
     await I.fillField(this.fields.password, config.oldCourtAdminUser.password);
     await I.click(this.fields.submit);
+  },
+
+  async loginAsCafcassUser() {
+    global.logCallingFunction();
+    await this.loginWithUserPass(config.cafcassUser.email, config.cafcassUser.password);
   }
+
 };

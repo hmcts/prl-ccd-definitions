@@ -1,4 +1,5 @@
 const I = actor();
+const retryCount = 3;
 
 module.exports = {
 
@@ -60,7 +61,7 @@ module.exports = {
     await I.attachFile(this.fields.uploadCertificate, '../resource/dummy.pdf');
     await I.wait('10');
     await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.continueEvent();
 
     await I.waitForText('Check your answers');
     await I.click('Save and continue');
@@ -68,7 +69,7 @@ module.exports = {
 
   async verifyUpdatedMiamDetails() {
     await I.waitForElement(this.fields.applicationTab);
-    await I.click(this.fields.applicationTab);
+    await I.retry(retryCount).click(this.fields.applicationTab);
     await I.waitForText('Are the children involved in any emergency protection, care or supervision proceedings');
     // await I.runAccessibilityTest();
     await I.see('12345678');
@@ -111,7 +112,7 @@ module.exports = {
     await I.fillField(this.fields.repDXNumField, this.amendRespondentEvent.dxNumber);
 
     await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.continueEvent();
 
     await I.waitForText('Check your answers');
     await I.click('Save and continue');

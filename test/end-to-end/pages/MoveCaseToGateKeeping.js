@@ -18,7 +18,7 @@ module.exports = {
     rolesAndAccessTab: '//div[contains(text(),"Roles and access")]'
   },
 
-  async xmoveCaseToGateKeeping() {
+  async moveCaseToGateKeeping() {
     global.logCallingFunction();
     await I.retry(retryCount).triggerEvent('Send to gatekeeper');
     await I.wait(longWait);
