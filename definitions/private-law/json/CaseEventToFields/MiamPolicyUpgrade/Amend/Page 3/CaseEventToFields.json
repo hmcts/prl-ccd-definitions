@@ -1,0 +1,83 @@
+[
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "submissionRequiredFieldsInfo3",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"mpuDomesticAbuse\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "miamExemptionLabel1",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuDomesticAbuseEvidences",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuIsDomesticAbuseEvidenceProvided",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuAddEvidenceLabel",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"Yes\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuDomesticAbuseEvidenceDocument",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "COMPLEX",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"Yes\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuNoDomesticAbuseEvidenceReason",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuIsDomesticAbuseEvidenceProvided=\"No\""
+  }
+]

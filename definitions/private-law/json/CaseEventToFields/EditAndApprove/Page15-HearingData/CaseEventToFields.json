@@ -9,7 +9,7 @@
     "PageDisplayOrder": 15,
     "PageFieldDisplayOrder": 1,
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
-    "PageShowCondition": "(whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND isHearingPageNeeded=\"Yes\""
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND isHearingPageNeeded=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",

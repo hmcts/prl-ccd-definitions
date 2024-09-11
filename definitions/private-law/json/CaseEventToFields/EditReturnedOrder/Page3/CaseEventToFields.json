@@ -1,5 +1,17 @@
 [
   {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editReturnedOrder",
+    "CaseFieldID": "daOrderForCaCase",
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\""
+  },
+  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editReturnedOrder",
@@ -153,7 +165,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND daOrderForCaCase!=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -165,7 +177,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\" OR daOrderForCaCase=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -213,7 +225,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderType!=\"generalForm\" AND orderUploadedAsDraftFlag!=\"Yes\""
+    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -225,7 +237,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType=\"blank\" OR orderType=\"generalForm\" OR c21OrderOptions=\"c21other\" AND orderUploadedAsDraftFlag!=\"Yes\""
+    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -237,6 +249,6 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "c21OrderOptions=\"c21other\" AND orderUploadedAsDraftFlag!=\"Yes\""
+    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\""
   }
 ]
