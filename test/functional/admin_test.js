@@ -32,6 +32,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.createRole('judge');
   I.createRole('ctsc');
   I.createRole('senior-tribunal-caseworker');
+  I.createRole('caseworker-privatelaw-courtadmin-casecreator');
   I.click('Manage User Roles');
   I.wait('10');
   I.see('citizen');
@@ -63,7 +64,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('judge');
   I.see('ctsc');
   I.see('senior-tribunal-caseworker');
-
+  I.see('caseworker-privatelaw-courtadmin-casecreator');
 });// eslint-disable-line no-magic-numbers
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {

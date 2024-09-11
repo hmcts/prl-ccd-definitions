@@ -3833,5 +3833,57 @@
     "CaseFieldID": "applicationTabAllegationsOfHarmRevisedLabel",
     "UserRole": "caseworker-approver",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamPolicyUpgradeTable",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "miamPolicyUpgradeExemptionsTable",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
