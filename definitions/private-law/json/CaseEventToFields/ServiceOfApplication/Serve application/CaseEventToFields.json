@@ -3,7 +3,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "missingAddressWarningTextCA",
+    "CaseFieldID": "missingAddressWarningTextLabel",
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
@@ -20,8 +20,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No",
-    "PageShowCondition": "caseTypeOfApplication=\"C100\""
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "01/12/2022",
@@ -51,24 +50,24 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaServingRespondentsOptionsCA",
+    "CaseFieldID": "soaServingRespondentsOptions",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy!=\"CITIZEN\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaCitizenServingRespondentsOptionsCA",
+    "CaseFieldID": "soaCitizenServingRespondentsOptions",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy=\"CITIZEN\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -93,7 +92,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "soaOtherPeoplePresentInCaseFlag=\"Yes\"",
+    "FieldShowCondition": "soaOtherPeoplePresentInCaseFlag=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/service-of-application/soa-validation"
   },
   {
@@ -105,7 +104,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "isCafcass=\"Yes\"",
+    "FieldShowCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -117,7 +116,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "isCafcass=\"No\"",
+    "FieldShowCondition": "isCafcass=\"No\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -129,7 +128,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaCafcassCymruServedOptions=\"Yes\" AND isCafcass=\"No\"",
+    "FieldShowCondition": "soaCafcassCymruServedOptions=\"Yes\" AND isCafcass=\"No\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -153,6 +152,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -164,7 +164,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\"",
+    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -176,7 +176,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\" AND isConfidential=\"Yes\"",
+    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\" AND isConfidential=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -188,7 +188,7 @@
     "DisplayContext": "READONLY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\"",
+    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -200,7 +200,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\"",
+    "FieldShowCondition": "soaServeLocalAuthorityYesOrNo=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   }
 ]
