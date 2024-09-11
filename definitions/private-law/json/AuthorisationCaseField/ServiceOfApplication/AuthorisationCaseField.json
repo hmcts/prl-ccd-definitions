@@ -1453,5 +1453,31 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "23/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isApplicantRepresented",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
