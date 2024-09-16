@@ -47,8 +47,7 @@
   ],
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "1.8.4",
-    "@hmcts/properties-volume": "1.2.0",
-    "angular": "^1.8.3",
+    "@hmcts/properties-volume": "0.0.14",
     "assert": "^2.1.0",
     "codeceptjs": "^3.5.15",
     "config": "^3.0.1",
@@ -60,7 +59,7 @@
     "minimist": "^1.2.3",
     "playwright": "1.46.1",
     "puppeteer": "^22.0.0",
-    "ws": "^8.0.0"
+    "ws": "^7.5.10"
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
@@ -94,5 +93,8 @@
     "jackspeak": "2.3.6",
     "ip": "^2.0.1"
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "overrides": {
+    "braces": "^3.0.3"
+  }
 }
