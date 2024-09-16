@@ -1,0 +1,109 @@
+[
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "missingAddressWarningTextLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "missingAddressWarningText!=\"\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaServeToRespondentOptions",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaServingRespondentsOptions",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaCitizenServingRespondentsOptions",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"No\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaRecipientsOptions",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"No\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaOtherPeoplePresentInCaseFlag",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Y",
+    "FieldShowCondition" : "missingAddressWarningTextLabel=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "soaOtherParties",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "soaOtherPeoplePresentInCaseFlag=\"Yes\" AND caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "sodAdditionalRecipients",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 8,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfDocuments",
+    "CaseFieldID": "sodAdditionalRecipientsList",
+    "DisplayContext": "COMPLEX",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 9,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "sodAdditionalRecipients=\"additionalRecipients\""
+  }
+]
