@@ -7,7 +7,7 @@
     "Description": "Record Final decision",
     "DisplayOrder": 109,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_RESUBMISSION_TO_HMCTS",
-    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(finalCaseClosedDate!=\"\"):1;*",
+    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED(caseClosed!=\"\"):1;*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
