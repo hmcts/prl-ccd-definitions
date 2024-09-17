@@ -39,7 +39,7 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "addDecisionLabel",
-    "Label": "### Add decision details",
+    "Label": "## Add decision details",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -48,9 +48,8 @@
     "LiveFrom": "18/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "dateFinalDecisionWasMade",
-    "FieldType": "DateTime",
-    "Label": "Date final decision was made",
-    "DisplayContextParameter": "#DATETIMEENTRY(dd-MM-yyyy hh:mm a)",
+    "FieldType": "DateFinalDecisionWasMade",
+    "Label": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -61,6 +60,15 @@
     "Label": "Child",
     "FieldType": "Collection",
     "FieldTypeParameter": "CaseClosingReasonForChildren",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "18/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "finalOutComeLabel",
+    "Label": "### Select final outcome for:",
+    "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

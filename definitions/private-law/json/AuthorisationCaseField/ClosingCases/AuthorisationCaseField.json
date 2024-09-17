@@ -66,7 +66,6 @@
         "UserRoles": [
           "caseworker-privatelaw-systemupdate",
           "caseworker-privatelaw-courtadmin"
-
         ],
         "CRUD": "CRU"
       },
@@ -177,6 +176,35 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "finalOutcomeForChildren",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin"
+
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen",
+          "caseworker-privatelaw-readonly",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "courtnav",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "finalOutComeLabel",
     "AccessControl": [
       {
         "UserRoles": [
