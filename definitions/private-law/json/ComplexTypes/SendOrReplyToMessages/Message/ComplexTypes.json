@@ -19,6 +19,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "externalMessageAttachDocs",
+    "ElementLabel": "Attached documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
     "ListElementCode": "senderName",
@@ -40,6 +50,15 @@
     "LiveFrom": "31/03/2023",
     "ID": "MessageHistory",
     "ListElementCode": "senderRole",
+    "FieldType": "Text",
+    "ElementLabel": "Sender role",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalOrExternalSentTo",
     "FieldType": "Text",
     "ElementLabel": "Sender role",
     "SecurityClassification": "Public",
@@ -123,6 +142,16 @@
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalMessageAttachDocs",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -261,6 +290,15 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "internalOrExternalSentTo",
+    "FieldType": "Text",
+    "ElementLabel": "To",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "judicialOrMagistrateTierValue",
@@ -321,6 +359,15 @@
     "ListElementCode": "messageSubject",
     "FieldType": "Text",
     "ElementLabel": "Subject",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
+    "ListElementCode": "messageIdentifier",
+    "FieldType": "Text",
+    "ElementLabel": "messageIdentifier",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -432,6 +479,16 @@
   {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
+    "ListElementCode": "externalMessageWhoToSendTo",
+    "ElementLabel": " ",
+    "FieldType": "DynamicMultiSelectList",
+    "FieldShowCondition": "externalMessageWhoToSendTo=\"DO_NOT_SHOW\"",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
     "ListElementCode": "internalMessageReplyTo",
     "ElementLabel": "To",
     "FieldType": "FixedRadioList",
@@ -511,6 +568,16 @@
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "internalMessageAttachDocs",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -610,6 +677,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "externalMessageAttachDocs",
+    "ElementLabel": "Attached documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "otherApplicationLink",
@@ -628,5 +705,23 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "hearingsLink=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "yourMessageLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Your message**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/2023",
+    "ID": "SendAndReplyDynamicDoc",
+    "ListElementCode": "submittedDocsRefList",
+    "ElementLabel": "Document",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
   }
 ]
