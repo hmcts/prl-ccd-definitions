@@ -117,6 +117,7 @@
     "ListElementCode": "isAddressConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Do you need to keep the address confidential?",
+    "HintText": "If, details need to be kept confidential, a C8 will be generated automatically",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -162,6 +163,7 @@
     "ListElementCode": "isEmailAddressConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Do you need to keep the email address confidential?",
+    "HintText": "If there is confidential information, a C8 will be generated automatically.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -191,6 +193,7 @@
     "ListElementCode": "isPhoneNumberConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Do you need to keep the contact number confidential?",
+    "HintText": "If, details need to be kept confidential, a C8 will be generated automatically",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -510,6 +513,33 @@
     "ListElementCode": "isRemoveLegalRepresentativeRequested",
     "FieldType": "YesOrNo",
     "ElementLabel": "Remove Legal Representative Requested by Citizen",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "PartyDetails",
+    "ListElementCode": "liveInRefuge",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "* Do they live in a refuge?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "PartyDetails",
+    "ListElementCode": "refugeInfo",
+    "FieldType": "Label",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "ID": "PartyDetails",
+    "ListElementCode": "addressInfo",
+    "FieldType": "Label",
+    "ElementLabel": "### Please enter address details",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
