@@ -54,6 +54,8 @@ const verifyFlags = require('./pages/CreateFlagScreens/verifySolicitorFlags');
 const caseManagerConfidentialityCheck = require('./pages/SOAScreens/CaseManagerConfidentialityCheck');
 const statementOfService = require('./pages/SOAScreens/StatementOfService');
 const respondentSolicitorMiam = require('./pages/RespondentSolicitorMiam');
+const addCafcassOfficer = require('./pages/asCafcassOfficer.js');
+
 // const { ordersApplyingForPageFL401 } = require('./pages/TypeOfApplication');
 
 module.exports = () => {
@@ -90,6 +92,9 @@ module.exports = () => {
     },
     loginAsOldCourtAdmin() {
       return LoginPage.loginAsOldCourtAdmin();
+    },
+    loginAsCafcassUser() {
+      return LoginPage.loginAsCafcassUser();
     },
     selectOrderForReview() {
       return editAndApproveDraftOrder.selectOrderForJudgeReview();
@@ -471,6 +476,19 @@ module.exports = () => {
     },
     fillRespondentMiamNoOption() {
       return respondentSolicitorMiam.fillRespondentMiamNoOption();
+    },
+    asCafcassUserPerformEventAddCafcassOfficer() {
+      return addCafcassOfficer.performEventAddCafcassOfficer();
+    },
+    asCafcassUserPerformEventManageDocuments() {
+      return addCafcassOfficer.performEventManageDocuments();
+    },
+    asCafcassUserVerifyCafcassUploadedDocuments() {
+      return addCafcassOfficer.verifyCaseDocumentsCafcassUploadedDocuments();
+    },
+    verifyCaffcassOfficerDetails() {
+      return addCafcassOfficer.verifyPartiesAddedCafcassofficerDetails();
     }
+
   });
 };

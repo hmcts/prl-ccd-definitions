@@ -29,7 +29,7 @@ module.exports = {
     await I.retry(retryCount).waitForText('Is the order about the children?');
     await I.retry(retryCount).click(manageOrder.fields.isTheOrderAboutChildrenDA_No);
     await I.retry(retryCount).fillField(manageOrder.fields.recticalsOrPreambels, 'TEST PREAMBLE');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('7');
     await powerOfArrestOrderScreen.fillPowerOfArrestOrderScreen();
     await this.previewTheOrder();
@@ -48,11 +48,11 @@ module.exports = {
     await I.retry(retryCount).fillField(manageOrder.fields.orderDirections, 'TEST DIRECTIONS');
     await I.retry(retryCount).fillField(manageOrder.fields.furtherDirections, 'TEST FURTHER DIRECTIONS');
     await I.retry(retryCount).fillField(manageOrder.fields.furtherInformation, 'TEST FURTHER INFORMATION');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('7');
     await I.retry(retryCount).waitForText('Hearing outcome');
     await I.retry(retryCount).fillField(this.fields.blankOrderHearingOutcome, 'TEST HEARING OUTCOME');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('7');
     await I.retry(retryCount).click(this.fields.hasJudgeProvidedHearingDetails_Yes);
     await I.wait('2');
@@ -70,7 +70,7 @@ module.exports = {
     await I.retry(retryCount).click('Magistrates');
     await I.retry(retryCount).fillField(this.fields.additionalHearingDetails, 'ADDITIONAL HEARING DETAILS');
     await I.retry(retryCount).fillField(this.fields.instructionsForRemoteHearing, 'JOINING INSTRUCTIONS');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('4');
   },
   async draftAnOrderModeOfOrder(modeOfOrder) {
@@ -79,7 +79,7 @@ module.exports = {
     await I.wait('2');
     await I.retry(retryCount).waitForText('What do you want to do?');
     await I.retry(retryCount).click(modeOfOrder);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
   async selectTypeOfOrderForDraftAnOrder(orderName) {
@@ -87,13 +87,13 @@ module.exports = {
     await I.retry(retryCount).waitForText('Draft an order');
     await I.retry(retryCount).waitForText('Select order');
     await I.retry(retryCount).click(orderName);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('5');
   },
   async previewTheOrder() {
     await I.retry(retryCount).waitForText('Preview the order');
     await I.retry(retryCount).waitForText('draft.pdf');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('5');
   }
 
