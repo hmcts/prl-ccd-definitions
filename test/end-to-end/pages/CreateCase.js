@@ -36,6 +36,7 @@ module.exports = {
 
   async clickCreateCase() {
     global.logCallingFunction();
+    await I.wait('40');
     await I.waitForSelector(this.fields.createCaseLink);
     await I.retry(retryCount).click(this.fields.createCaseLink);
     await I.waitForElement(this.fields.jurisdiction);
