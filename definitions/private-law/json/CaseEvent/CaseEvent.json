@@ -278,6 +278,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-information",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -792,7 +793,8 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header-case-note",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-case-note",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1099,7 +1101,7 @@
     "Name": "Send and reply to messages",
     "Description": "Send and reply to messages",
     "DisplayOrder": 48,
-    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;PREPARE_FOR_HEARING_CONDUCT_HEARING;ALL_FINAL_ORDERS_ISSUED;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -1374,7 +1376,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -1988,6 +1991,23 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "removeDraftOrder",
+    "Name": "Remove draft order",
+    "Description": "Remove draft order",
+    "DisplayOrder": 32,
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-remove-draft-order-dropdown",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/remove-draft-order/about-to-submit",
+    "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "Publish": "True"
   }
 ]
 
