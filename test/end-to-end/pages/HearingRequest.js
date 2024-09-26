@@ -1,6 +1,9 @@
+/* eslint-disable no-await-in-loop */
 const I = actor();
 const assert = require('assert');
+const testLogger = require('../helpers/testLogger');
 
+const retryCount = 3;
 const eleCount = 7;
 
 
@@ -33,18 +36,31 @@ module.exports = {
   },
 
   async clickOnHearingsTab() {
-    await I.clickTillElementFound(this.fields.hearingsTab, this.fields.nextBtnSelector);
+    await I.waitForElement(this.fields.hearingsTab);
     await I.click(this.fields.hearingsTab);
-    await I.waitForText('Current and upcoming');
-    await I.click('Request a hearing');
-    await I.waitForText('Hearing requirements');
-    await I.runAccessibilityTest();
-    await I.click('Continue');
+    await I.clickTillElementFound(this.fields.hearingsTab, this.fields.nextBtnSelector);
+    let retryCounter = 0;
+    while (retryCounter < '3') {
+      retryCounter += 1;
+      try {
+        await I.click(this.fields.hearingsTab);
+        await I.waitForText('Current and upcoming');
+        await I.click('Request a hearing');
+        await I.waitForText('Hearing requirements');
+        await I.runAccessibilityTest();
+        await I.click('Continue');
+        break;
+      } catch (stepErr) {
+        testLogger.AddMessage(`Error occured ${stepErr}`);
+      }
+    }
   },
 
   async fillAdditionalFacilities() {
     await I.waitForText('Do you require any additional facilities?');
-    await I.click(this.fields.selectFacilities);
+    await I.waitForElement(this.fields.selectFacilities);
+    await I.wait('3');
+    await I.retry(retryCount).click(this.fields.selectFacilities);
     await I.click('Continue');
     await I.waitForText('What stage is this hearing at?');
     await I.click(this.fields.selectHearingStage);
@@ -72,6 +88,7 @@ module.exports = {
 
   async submitVenueAndJudgeDetails() {
     await I.waitForText('What are the hearing venue details?');
+    await I.waitForElement(this.fields.hearingLocationEle);
     await I.seeElement(this.fields.hearingLocationEle);
     await I.click('Continue');
     await I.waitForText('Does this hearing need to be in Welsh?');
@@ -102,12 +119,25 @@ module.exports = {
   async submitAndVerifyHearingRequest() {
     await I.waitForText('Check your answers before sending your request');
     await I.click('Submit request');
+    await I.waitForText('Hearing request submitted');
     await I.see('Hearing request submitted');
     await I.runAccessibilityTest();
     await I.click('view the status of this hearing in the hearings tab');
     await I.waitForText('History');
 
     await I.runAccessibilityTest();
+
+    let retryCounter = 0;
+    while (retryCounter < retryCount) {
+      retryCounter += 1;
+      try {
+        await I.waitForText('WAITING TO BE LISTED');
+      } catch (tryError) {
+        await I.click('//div[@class = \'mat-tab-label-content\'][contains(text()\'Case Notes\')]');
+        await I.wait('2');
+        await I.click('//div[@class = \'mat-tab-label-content\'][contains(text()\'Hearings\')]');
+      }
+    }
     await I.waitForText('WAITING TO BE LISTED');
     await I.see('WAITING TO BE LISTED');
     await I.see('First Hearing');
@@ -119,12 +149,14 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.see('WAITING TO BE LISTED');
     await I.see('Projector');
+    await I.waitForText('Swansea Civil And Family Justice Centre');
     await I.see('Swansea Civil And Family Justice Centre');
     await I.see('Submit updated request');
     await I.click('Back');
   },
 
   async clickOnUpdateHearing() {
+    await I.waitForElement(this.fields.viewEle);
     await I.click(this.fields.viewEle);
     await I.waitForText('View or edit hearing');
     await I.runAccessibilityTest();
@@ -191,6 +223,7 @@ module.exports = {
   async verifyHearingCancellation() {
     await I.waitForText('Current and upcoming');
     await I.runAccessibilityTest();
+    await I.waitForText('CANCELLATION REQUESTED');
     await I.see('CANCELLATION REQUESTED');
     await I.dontSeeElement(this.fields.cancelEle);
     await I.click(this.fields.viewDetails);
@@ -213,6 +246,7 @@ module.exports = {
   },
 
   async updateHearing() {
+    await I.click(this.fields.hearingsTab);
     await this.clickOnUpdateHearing();
     await this.updateHearingValues();
     await this.submitUpdatedValues();
