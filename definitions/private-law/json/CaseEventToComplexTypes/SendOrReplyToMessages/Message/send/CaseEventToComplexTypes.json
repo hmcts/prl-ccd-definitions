@@ -32,7 +32,7 @@
     "ListElementCode": "externalMessageWhoToSendTo",
     "EventElementLabel": "Select who to send the message to",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
     "Publish": "True"
   },
@@ -58,7 +58,7 @@
     "EventElementLabel": "Cafcass email address",
     "FieldDisplayOrder": "4",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" && sendMessageObject.sendMessageToCafcass=\"Yes\""
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" AND sendMessageObject.sendMessageToCafcass=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -83,7 +83,7 @@
     "EventHintText": "Enter the email address separated by commas to send to multiple recipients",
     "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" && sendMessageObject.sendMessageToOtherParties=\"Yes\""
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" AND sendMessageObject.sendMessageToOtherParties=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -180,7 +180,7 @@
     "ListElementCode": "applicationsList",
     "EventElementLabel": "Select the application",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"APPLICATION\""
   },
   {
