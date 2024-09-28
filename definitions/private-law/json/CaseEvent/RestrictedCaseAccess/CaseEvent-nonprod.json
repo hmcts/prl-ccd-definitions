@@ -28,7 +28,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/restricted-case-access/submitted",
     "EndButtonLabel": "Mark case as private",
-    "EventEnablingCondition": "caseSecurityClassification!=\"private\""
+    "EventEnablingCondition": "caseSecurityClassification=\"\" OR caseSecurityClassification!=\"private\""
   },
   {
     "LiveFrom": "30/06/2023",
@@ -44,7 +44,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/restricted-case-access/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/restricted-case-access/submitted",
     "EndButtonLabel": "Mark case as restricted",
-    "EventEnablingCondition": "caseSecurityClassification!=\"restricted\""
+    "EventEnablingCondition": "caseSecurityClassification=\"\" OR caseSecurityClassification!=\"restricted\""
   },
   {
     "LiveFrom": "30/06/2023",
