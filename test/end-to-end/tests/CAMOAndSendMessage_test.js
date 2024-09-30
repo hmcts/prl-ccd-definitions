@@ -22,6 +22,7 @@ Scenario('As a court admin Create Order C43 @regression-suite', async({ I }) => 
 }).retry(testConfig.TestRetryScenarios);
 
 
+caseId = '1717587983937085';
 Scenario('As a Judge edit & draft C43 order @regression-suite', async({ I }) => {
   await I.loginAsJudge();
   await I.searchForCasesWithId(caseId);
