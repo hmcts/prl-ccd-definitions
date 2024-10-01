@@ -32,9 +32,58 @@
     "ListElementCode": "externalMessageWhoToSendTo",
     "EventElementLabel": "Select who to send the message to",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "sendMessageToCafcass",
+    "EventElementLabel": "Do you want to send a message to Cafcass?",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "cafcassEmailAddress",
+    "EventElementLabel": "Cafcass email address",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" AND sendMessageObject.sendMessageToCafcass=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "sendMessageToOtherParties",
+    "EventElementLabel": "Do you want to send a message to any other parties/organisations?",
+    "FieldDisplayOrder": "6",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "otherPartiesEmailAddress",
+    "EventElementLabel": "Enter email address",
+    "EventHintText": "Enter the email address separated by commas to send to multiple recipients",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\" AND sendMessageObject.sendMessageToOtherParties=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -131,7 +180,7 @@
     "ListElementCode": "applicationsList",
     "EventElementLabel": "Select the application",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.messageAbout=\"APPLICATION\""
   },
   {
