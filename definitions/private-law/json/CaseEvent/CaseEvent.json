@@ -717,7 +717,7 @@
     "ID": "manageDocuments",
     "Name": "Manage documents",
     "Description": "Manage documents",
-    "DisplayOrder": 38,
+    "DisplayOrder": 39,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -734,7 +734,7 @@
     "ID": "manageDocumentsNew",
     "Name": "Manage documents",
     "Description": "Manage documents",
-    "DisplayOrder": 38,
+    "DisplayOrder": 39,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -1480,7 +1480,7 @@
     "ID": "maintainCaseLink",
     "Name": "Manage case links",
     "Description": "To maintain linked cases",
-    "DisplayOrder": 37,
+    "DisplayOrder": 38,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;CASE_WITHDRAWN;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "ShowSummary": "Y",
@@ -2008,6 +2008,22 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageCafcassAccess",
+    "Name": "Manage Cafcass access",
+    "Description": "Manage Cafcass access",
+    "DisplayOrder": 37,
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/manage-cafcass-access/submitted",
+    "PreConditionState(s)": "PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\""
   }
 ]
 
