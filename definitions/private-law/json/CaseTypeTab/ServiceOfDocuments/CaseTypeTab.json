@@ -1,0 +1,57 @@
+[
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfDocuments",
+    "TabLabel": "Service of documents",
+    "TabDisplayOrder": 30,
+    "CaseFieldID": "serviceOfDocumentsLabel",
+    "TabFieldDisplayOrder": 1,
+    "TabShowCondition": "servedDocumentsDetailsList!=\"\" OR sodUnServedPack!=\"\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfDocuments",
+    "TabLabel": "Service of documents",
+    "TabDisplayOrder": 30,
+    "CaseFieldID": "unServedDocumentsLabel",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "sodUnServedPack.documents!=\"\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfDocuments",
+    "TabLabel": "Service of documents",
+    "TabDisplayOrder": 30,
+    "CaseFieldID": "sodUnServedPack",
+    "TabFieldDisplayOrder": 3,
+    "FieldShowCondition": "sodUnServedPack.documents!=\"\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfDocuments",
+    "TabLabel": "Service of documents",
+    "TabDisplayOrder": 30,
+    "CaseFieldID": "servedDocumentsLabel",
+    "TabFieldDisplayOrder": 4,
+    "FieldShowCondition": "servedDocumentsDetailsList!=\"\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ServiceOfDocuments",
+    "TabLabel": "Service of documents",
+    "TabDisplayOrder": 30,
+    "CaseFieldID": "servedDocumentsDetailsList",
+    "TabFieldDisplayOrder": 5,
+    "DisplayContextParameter": "#TABLE(servedBy,servedAt,modeOfService,whoIsResponsible)"
+  }
+]
