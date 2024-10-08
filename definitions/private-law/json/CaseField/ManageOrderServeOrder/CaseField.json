@@ -98,10 +98,9 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "cafcassServedOptions",
-    "Label": "Does Cafcass need to be served?",
+    "Label": "Provide Cafcass access to this case?",
     "FieldType": "YesOrNo",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/12/2022",
@@ -187,6 +186,7 @@
     "ID": "serveOtherPartiesDA",
     "Label": "Any other party who needs to be served with this application",
     "FieldType": "MultiSelectList",
+    "HintText": "For example, DWP or the local authority",
     "FieldTypeParameter": "ServeOtherPartiesOptions",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -232,6 +232,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "25/07/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "personallyServeRespondentsOptions",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SoaServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "displayLegalRepOption",
@@ -244,7 +254,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "manageOrderHeaderLabel23",
-    "Label": "## How to serve",
+    "Label": "## Serve the order",
     "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
