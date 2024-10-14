@@ -22,7 +22,7 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.requestToForeignAuthority);
     await I.retry(retryCount).fillField(this.fields.requestToForeignAuthorityGiveReason, this.fields.textareaText);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Save and continue', '10');
     await I.retry(retryCount).click('Save and continue');
   }

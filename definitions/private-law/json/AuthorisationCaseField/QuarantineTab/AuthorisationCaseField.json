@@ -48,11 +48,12 @@
   {
     "LiveFrom": "05/05/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "citizenUploadDocListConfTab",
+    "CaseFieldID": "citizenQuarantineDocsList",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-systemupdate",
+          "citizen",
           "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge"
@@ -61,8 +62,7 @@
       },
       {
         "UserRoles": [
-          "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-externaluser-viewonly"
+          "caseworker-wa-task-configuration"
         ],
         "CRUD": "R"
       }
@@ -94,54 +94,54 @@
     ]
   },
   {
-      "LiveFrom": "05/05/2023",
-      "CaseTypeID": "PRLAPPS",
-      "CaseFieldID": "legalProfUploadDocListConfTab",
-      "AccessControl": [
-        {
-          "UserRoles": [
-            "caseworker-privatelaw-systemupdate",
-            "caseworker-privatelaw-courtadmin",
-            "caseworker-privatelaw-la",
-            "caseworker-privatelaw-judge"
-          ],
-          "CRUD": "CRU"
-        },
-        {
-          "UserRoles": [
-            "caseworker-wa-task-configuration",
-            "citizen",
-            "caseworker-privatelaw-externaluser-viewonly"
-          ],
-          "CRUD": "R"
-        }
-      ]
-    },
-    {
-        "LiveFrom": "05/05/2023",
-        "CaseTypeID": "PRLAPPS",
-        "CaseFieldID": "legalProfUploadDocListDocTab",
-        "AccessControl": [
-          {
-            "UserRoles": [
-              "caseworker-privatelaw-systemupdate",
-              "caseworker-privatelaw-courtadmin",
-              "caseworker-privatelaw-la",
-              "caseworker-privatelaw-judge"
-            ],
-            "CRUD": "CRU"
-          },
-          {
-            "UserRoles": [
-              "caseworker-wa-task-configuration",
-              "citizen",
-              "caseworker-privatelaw-externaluser-viewonly",
-              "caseworker-privatelaw-solicitor"
-            ],
-            "CRUD": "R"
-          }
-        ]
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "legalProfUploadDocListConfTab",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
       },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "citizen",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "legalProfUploadDocListDocTab",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "citizen",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
   {
     "LiveFrom": "05/05/2023",
     "CaseTypeID": "PRLAPPS",
@@ -399,6 +399,56 @@
         "UserRoles": [
           "citizen",
           "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtNavUploadedDocListDocTab",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "courtnav"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtNavQuarantineDocumentList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "courtnav",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen"
         ],
         "CRUD": "R"
       }

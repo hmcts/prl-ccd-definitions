@@ -3,8 +3,8 @@ const retryCount = 3;
 
 module.exports = {
 
-  fields: { 
-    submit: 'button[type="submit"]' ,
+  fields: {
+    submit: 'button[type="submit"]',
     whyNotAttending: 'Why is the applicant not attending a MIAM? (Optional)',
     whatEvidence: '*What evidence of domestic abuse does the applicant have? (Optional)',
     checkList1: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_1',
@@ -12,7 +12,7 @@ module.exports = {
     checkList3: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_3',
     checkList4: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_4',
     checkList5: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_5',
-    checkList6:'#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_6',
+    checkList6: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_6',
     checkList7: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_7',
     checkList8: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_8',
     checkList9: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_9',
@@ -29,18 +29,18 @@ module.exports = {
     checkList20: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_20',
     checkList21: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_21',
     checkList22: '#mpuDomesticAbuseEvidences-miamDomesticAbuseChecklistEnum_Value_22',
-    addNew:'Add new',
+    addNew: 'Add new',
     details: 'James'
-},
+  },
 
   async triggerEvent() {
     await I.retry(retryCount).triggerEvent('MIAM');
   },
 
-  //Are the children involved in any emergency protection, care or supervision proceedings 
+  // Are the children involved in any emergency protection, care or supervision proceedings
   async fillMIAMEmergencyProtectionPage() {
     await I.wait('6');
-    await I.retry(retryCount).waitForElement('#mpuChildInvolvedInMiam_No'); 
+    await I.retry(retryCount).waitForElement('#mpuChildInvolvedInMiam_No');
     await I.retry(retryCount).checkOption('#mpuChildInvolvedInMiam_No');
     await I.retry(retryCount).waitForElement('#mpuApplicantAttendedMiam_No');
     await I.retry(retryCount).checkOption('#mpuApplicantAttendedMiam_No');
@@ -52,7 +52,7 @@ module.exports = {
 
   async fillMIAMEmergencyDifferentFlow() {
     await I.wait('6');
-    await I.retry(retryCount).waitForElement('#mpuChildInvolvedInMiam_No'); 
+    await I.retry(retryCount).waitForElement('#mpuChildInvolvedInMiam_No');
     await I.retry(retryCount).checkOption('#mpuChildInvolvedInMiam_No');
     await I.retry(retryCount).waitForElement('#mpuApplicantAttendedMiam_Yes');
     await I.retry(retryCount).checkOption('#mpuApplicantAttendedMiam_Yes');
@@ -73,24 +73,24 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
 
-  //Why is the applicant not attending a MIAM?
+  // Why is the applicant not attending a MIAM?
   async fillMIAMNotAttendingPage() {
     await I.waitForText(this.fields.whyNotAttending);
-    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuDomesticAbuse'); 
+    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuDomesticAbuse');
     await I.retry(retryCount).checkOption('#mpuExemptionReasons-mpuDomesticAbuse');
-    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuChildProtectionConcern'); 
+    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuChildProtectionConcern');
     await I.retry(retryCount).checkOption('#mpuExemptionReasons-mpuChildProtectionConcern');
-    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuUrgency'); 
+    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuUrgency');
     await I.retry(retryCount).checkOption('#mpuExemptionReasons-mpuUrgency');
-    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuPreviousMiamAttendance'); 
+    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuPreviousMiamAttendance');
     await I.retry(retryCount).checkOption('#mpuExemptionReasons-mpuPreviousMiamAttendance');
-    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuOther'); 
+    await I.retry(retryCount).waitForElement('#mpuExemptionReasons-mpuOther');
     await I.retry(retryCount).checkOption('#mpuExemptionReasons-mpuOther');
     await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
- 
-  //What evidence of domestic abuse does the applicant have? 
+
+  // What evidence of domestic abuse does the applicant have?
 
   async fillMIAMDomesticAbuse() {
     const uploadTime = 5;
@@ -151,8 +151,8 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.submit);
   },
 
-async fillMIAMPreviousAttendanceOption2() {
-  const uploadTime = 5;
+  async fillMIAMPreviousAttendanceOption2() {
+    const uploadTime = 5;
     await I.retry(retryCount).waitForText('Has, there been previous attendance of a MIAM or non-court dispute resolution? (Optional)');
     await I.retry(retryCount).click('#mpuPreviousMiamAttendanceReason-miamPolicyUpgradePreviousAttendance_Value_2');
     await I.retry(retryCount).waitForText('*What evidence of MIAM attendance are you submitting? (Optional)');
@@ -163,12 +163,12 @@ async fillMIAMPreviousAttendanceOption2() {
     await I.retry(retryCount).click(this.fields.submit);
   },
 
-async fillMIAMPreviousAttendanceOption3() {
+  async fillMIAMPreviousAttendanceOption3() {
     await I.retry(retryCount).waitForText('Has, there been previous attendance of a MIAM or non-court dispute resolution? (Optional)');
     await I.retry(retryCount).click('#mpuPreviousMiamAttendanceReason-miamPolicyUpgradePreviousAttendance_Value_2');
     await I.retry(retryCount).waitForText('*What evidence of MIAM attendance are you submitting? (Optional)');
     await I.retry(retryCount).click('#mpuTypeOfPreviousMiamAttendanceEvidence-miamAttendanceDetails');
-    await I.retry(retryCount).fillField('#mpuMediatorDetails',this.fields.details);
+    await I.retry(retryCount).fillField('#mpuMediatorDetails', this.fields.details);
     await I.runAccessibilityTest();
     await I.retry(retryCount).click(this.fields.submit);
   },
@@ -180,29 +180,27 @@ async fillMIAMPreviousAttendanceOption3() {
   },
 
   async checkYourAnswers() {
-  await I.retry(retryCount).waitForText('Check your answers');
+    await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).click('Save and continue');
   },
 
 
- async runMIAMEventHappyPath() {
-   await this.triggerEvent();
+  async runMIAMEventHappyPath() {
+    await this.triggerEvent();
 
-   await this.fillMIAMEmergencyDifferentFlow();
+    await this.fillMIAMEmergencyDifferentFlow();
     await this.fillMIAMCertificationPage();
     await I.submitEvent();
     await I.amOnHistoryPageWithSuccessNotification();
     await this.triggerEvent();
-   await this.fillMIAMEmergencyProtectionPage();
-   await this.fillMIAMNotAttendingPage();
-   await this.fillMIAMDomesticAbuse();
-   await this.fillMIAMChildProtectionConcern();
-   await this.fillMIAMUrgency();
-   await this.fillMIAMPreviousAttendanceOption1();
-   await this.fillMIAMOther(); 
-   await this.checkYourAnswers();
-   await I.amOnHistoryPageWithSuccessNotification();
-   }
+    await this.fillMIAMEmergencyProtectionPage();
+    await this.fillMIAMNotAttendingPage();
+    await this.fillMIAMDomesticAbuse();
+    await this.fillMIAMChildProtectionConcern();
+    await this.fillMIAMUrgency();
+    await this.fillMIAMPreviousAttendanceOption1();
+    await this.fillMIAMOther();
+    await this.checkYourAnswers();
+    await I.amOnHistoryPageWithSuccessNotification();
+  }
 };
-
-

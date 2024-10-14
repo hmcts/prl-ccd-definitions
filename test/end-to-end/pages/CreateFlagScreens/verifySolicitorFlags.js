@@ -16,7 +16,7 @@ module.exports = {
 
   async verifySolicitorOnlyFlags() {
     const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
-
+    await I.waitForElement(this.fields.supportTabSelector);
     await I.click(this.fields.supportTabSelector);
 
     // verify applicant solicitor request details
