@@ -63,8 +63,8 @@
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "c100ConfidentialityDisclaimerLabel1",
     "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "PageShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "No"
@@ -75,8 +75,8 @@
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "c100ConfidentialityStatementDisclaimer",
     "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 3,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "No",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/case-initiation/populate-court-list"
@@ -87,45 +87,11 @@
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "c100SelectFamilyCourtLabel1",
     "DisplayContext": "READONLY",
-    "PageID": 7,
-    "PageDisplayOrder": 4,
+    "PageID": 5,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "No"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "submitCountyCourtSelection",
-    "DisplayContext": "MANDATORY",
-    "PageID": 7,
-    "PageDisplayOrder": 4,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "helpWithFeesNotAvailable",
-    "DisplayContext": "READONLY",
-    "PageID": 4,
-    "PageDisplayOrder": 5,
-    "ShowSummaryChangeOption": "No",
-    "PageFieldDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "applicantCaseName",
-    "DisplayContext": "MANDATORY",
-    "PageID": 4,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 2,
-    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
-    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "22/02/2022",
@@ -136,11 +102,11 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "caseTypeOfApplication=\"FL401\"",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
     "ShowSummaryChangeOption": "No"
   },
   {
-    "LiveFrom": "22/02/2022",
+    "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "solicitorCreate",
     "CaseFieldID": "submitCountyCourtSelection",
@@ -148,6 +114,29 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "helpWithFeesNotAvailable",
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "applicantCaseName",
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 2,
+    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Yes"
   },
   {
