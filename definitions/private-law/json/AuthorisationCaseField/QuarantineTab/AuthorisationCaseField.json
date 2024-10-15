@@ -403,5 +403,55 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtNavUploadedDocListDocTab",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "courtnav"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "courtNavQuarantineDocumentList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "courtnav",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
