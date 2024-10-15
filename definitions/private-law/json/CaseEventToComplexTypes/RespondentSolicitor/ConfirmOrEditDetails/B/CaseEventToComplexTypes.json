@@ -63,6 +63,28 @@
     "LiveFrom": "20/10/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "ConfirmEditDetails",
+    "CaseEventID": "c100ResSolConfirmOrEditContactDetailsA",
+    "CaseFieldID": "resSolConfirmEditContactDetails",
+    "ListElementCode": "liveInRefuge",
+    "EventElementLabel": "*Does this person currently live in a refuge?",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ConfirmEditDetails",
+    "CaseEventID": "c100ResSolConfirmOrEditContactDetailsA",
+    "CaseFieldID": "resSolConfirmEditContactDetails",
+    "ListElementCode": "refugeConfidentialityC8Form",
+    "FieldDisplayOrder": "8",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "resSolConfirmEditContactDetails.liveInRefuge=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/10/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "ConfirmEditDetails",
     "CaseEventID": "c100ResSolConfirmOrEditContactDetailsB",
     "CaseFieldID": "resSolConfirmEditContactDetails",
     "ListElementCode": "address",
