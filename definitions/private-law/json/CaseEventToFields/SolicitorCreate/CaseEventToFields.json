@@ -78,6 +78,30 @@
     "PageID": 6,
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/case-initiation/populate-court-list"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "c100SelectFamilyCourtLabel1",
+    "DisplayContext": "READONLY",
+    "PageID": 7,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorCreate",
+    "CaseFieldID": "submitCountyCourtSelection",
+    "DisplayContext": "MANDATORY",
+    "PageID": 7,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "No"
   },
   {
@@ -87,7 +111,7 @@
     "CaseFieldID": "helpWithFeesNotAvailable",
     "DisplayContext": "READONLY",
     "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "No",
     "PageFieldDisplayOrder": 1
   },
@@ -98,7 +122,7 @@
     "CaseFieldID": "applicantCaseName",
     "DisplayContext": "MANDATORY",
     "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 2,
     "PageShowCondition": "caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Yes"
