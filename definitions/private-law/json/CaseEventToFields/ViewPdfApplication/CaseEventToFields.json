@@ -85,7 +85,7 @@
     "PageDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageFieldDisplayOrder": 8,
-    "FieldShowCondition": "isEngDocGen=\"Yes\""
+    "FieldShowCondition": "isEngDocGen=\"Yes\" AND newAllegationsOfHarmYesNo= \"Yes\""
   },
   {
     "LiveFrom": "03/12/2021",
@@ -96,6 +96,17 @@
     "PageDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageFieldDisplayOrder": 9,
-    "FieldShowCondition": "isWelshDocGen=\"Yes\""
+    "FieldShowCondition": "isWelshDocGen=\"Yes\" AND newAllegationsOfHarmYesNo= \"Yes\""
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "viewPdfDocument",
+    "CaseFieldID": "newAllegationsOfHarmYesNo",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageFieldDisplayOrder": 10,
+    "FieldShowCondition": "linkToDownloadApplicationLabel=\"DO_NOT_SHOW\""
   }
 ]
