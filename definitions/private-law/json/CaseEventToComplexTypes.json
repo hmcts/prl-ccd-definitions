@@ -820,7 +820,6 @@
     "FieldDisplayOrder": "25",
     "DisplayContext": "MANDATORY"
   },
-
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -1057,8 +1056,6 @@
     "FieldDisplayOrder": "21",
     "DisplayContext": "OPTIONAL"
   },
-
-
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -1155,7 +1152,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address",
+    "ListElementCode": "liveInRefuge",
     "EventElementLabel": "",
     "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL",
@@ -1167,10 +1164,11 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.AddressLine1",
+    "ListElementCode": "refugeConfidentialityC8Form",
     "EventElementLabel": "",
     "FieldDisplayOrder": "10",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" AND otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1178,10 +1176,11 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.AddressLine2",
+    "ListElementCode": "address",
     "EventElementLabel": "",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -1189,7 +1188,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.AddressLine3",
+    "ListElementCode": "address.AddressLine1",
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
@@ -1200,7 +1199,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.PostTown",
+    "ListElementCode": "address.AddressLine2",
     "EventElementLabel": "",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
@@ -1211,7 +1210,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.County",
+    "ListElementCode": "address.AddressLine3",
     "EventElementLabel": "",
     "FieldDisplayOrder": "14",
     "DisplayContext": "OPTIONAL"
@@ -1222,7 +1221,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.PostCode",
+    "ListElementCode": "address.PostTown",
     "EventElementLabel": "",
     "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL"
@@ -1233,9 +1232,31 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "address.Country",
+    "ListElementCode": "address.County",
     "EventElementLabel": "",
     "FieldDisplayOrder": "16",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "address.PostCode",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "17",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "address.Country",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1246,7 +1267,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "isAddressConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "17",
+    "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "othersToNotify.isCurrentAddressKnown=\"Yes\""
   },
@@ -1258,7 +1279,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "isAtAddressLessThan5Years",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "20",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -1269,7 +1290,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "addressLivedLessThan5YearsDetails",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "21",
     "FieldShowCondition": "otherPartyInTheCaseRevised.isAtAddressLessThan5Years=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
@@ -1281,7 +1302,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "canYouProvideEmailAddress",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1292,7 +1313,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "email",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvideEmailAddress=\"Yes\""
   },
@@ -1304,7 +1325,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "isEmailAddressConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "22",
+    "FieldDisplayOrder": "24",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
@@ -1316,7 +1337,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "canYouProvidePhoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -1327,7 +1348,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "phoneNumber",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvidePhoneNumber=\"Yes\""
   },
@@ -1339,7 +1360,7 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "isPhoneNumberConfidential",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "27",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvidePhoneNumber=\"Yes\""
   },
@@ -1351,12 +1372,9 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "addNewApplicantLabel",
     "EventElementLabel": "Add new person",
-    "FieldDisplayOrder": "26",
+    "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   },
-
-
-
   {
     "LiveFrom": "16/11/2021",
     "CaseTypeID": "PRLAPPS",
@@ -2135,5 +2153,4 @@
     "FieldDisplayOrder": "1",
     "DisplayContext": "OPTIONAL"
   }
-
 ]
