@@ -1,59 +1,59 @@
 [
   {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "removeDraftOrdersDynamicList",
+    "CaseEventID": "restrictedCaseAccess",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-superuser",
           "caseworker-privatelaw-systemupdate",
-          "courtnav"
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "CRU"
       }
     ]
   },
   {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "removeOrderNameLabel",
+    "CaseEventID": "privateCaseAccess",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-superuser",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "CRU"
       }
     ]
   },
   {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "checkTheRemoveOrderLabel",
+    "CaseEventID": "publicCaseAccess",
     "AccessControl": [
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-superuser",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "CRU"
       }
     ]
   },
   {
-    "LiveFrom": "15/02/2021",
+    "LiveFrom": "04/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "removeDraftOrderText",
+    "CaseEventID": "changeCaseAccess",
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-superuser",
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
