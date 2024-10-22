@@ -58,8 +58,7 @@
         "CRUD": "R"
       }
     ]
-  }
-,
+  },
   {
     "LiveFrom": "19/04/2022",
     "CaseTypeID": "PRLAPPS",
@@ -84,7 +83,41 @@
         "UserRoles": [
           "caseworker-privatelaw-readonly",
           "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "historicalRefugeDocuments",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-caa",
+          "caseworker-approver"
         ],
         "CRUD": "R"
       }
