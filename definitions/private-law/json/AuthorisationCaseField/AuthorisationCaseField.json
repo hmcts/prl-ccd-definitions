@@ -7832,6 +7832,13 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "welshLanguageRequirement",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "welshLanguageRequirementApplication",
@@ -7881,6 +7888,13 @@
     "CRUD": "CRU"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "welshLanguageRequirementApplication",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "languageRequirementApplicationNeedWelsh",
@@ -7930,6 +7944,13 @@
     "CRUD": "CRU"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "languageRequirementApplicationNeedWelsh",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "CRU"
+  },
+  {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "welshLanguageRequirementApplicationNeedEnglish",
@@ -7976,6 +7997,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "welshLanguageRequirementApplicationNeedEnglish",
     "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "welshLanguageRequirementApplicationNeedEnglish",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -13599,6 +13627,13 @@
     "LiveFrom": "13/01/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "familymanCaseNumber",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "13/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "familymanCaseNumber",
     "UserRole": "citizen",
     "CRUD": "CRUD"
   },
@@ -16889,6 +16924,33 @@
           "caseworker-privatelaw-externaluser-viewonly",
           "caseworker-wa-task-configuration",
           "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+,
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isInHearingState",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-externaluser-viewonly"
         ],
         "CRUD": "R"
       }
