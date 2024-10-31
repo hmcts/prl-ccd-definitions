@@ -18,6 +18,25 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/08/20214",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "partiesServedDateTime",
+    "FieldType": "Text",
+    "ElementLabel": "When were they served?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/07/2024",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "uploadedBy",
+    "FieldType": "FixedList",
+    "ElementLabel": "Served by",
+    "FieldTypeParameter": "SosUploadedByEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "13/07/2023",
     "ID": "StmtOfServiceAddRecipient",
     "ListElementCode": "citizenPartiesServedList",
@@ -84,5 +103,15 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "servedDateTimeOption = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/08/20214",
+    "ID": "StmtOfServiceAddRecipient",
+    "ListElementCode": "submittedDateTime",
+    "FieldType": "DateTime",
+    "ElementLabel": "Submitted date time",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "selectedPartyName = \"DO_NOT_SHOW\""
   }
 ]
