@@ -7,7 +7,7 @@ nodejs:
   ingressHost: ${SERVICE_FQDN}
   devmemoryRequests: 512Mi
   devcpuRequests: 500m
-  devmemoryLimits: 1Gi
+  devmemoryLimits: 2Gi
   devcpuLimits: 1000m
   autoscaling:
     enabled: false
@@ -30,10 +30,10 @@ xui-webapp:
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctspublic.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
-    devmemoryRequests: 512Mi
+    devmemoryRequests: 1Gi
     devcpuRequests: 1000m
-    devmemoryLimits: 2Gi
-    devcpuLimits: 2000m
+    devmemoryLimits: 4Gi
+    devcpuLimits: 4000m
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
