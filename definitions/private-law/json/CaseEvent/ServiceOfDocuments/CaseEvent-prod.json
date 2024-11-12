@@ -1,0 +1,40 @@
+[
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serviceOfDocuments",
+    "Name": "Service of documents",
+    "Description": "Event to serve the documents to the parties",
+    "DisplayOrder": 50,
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/service-of-documents/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/service-of-documents/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/service-of-documents/submitted",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "serviceOfDocumentsConfCheck",
+    "Name": "Confidential check - Documents",
+    "Description": "Confidentiality check for service of documents",
+    "DisplayOrder": 51,
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/sod-conf-check/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/sod-conf-check/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/sod-conf-check/submitted",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+  }
+]
