@@ -211,14 +211,16 @@ module.exports = {
       '#confidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
     await I.retry(retryCount).continueEvent();
+  },
 
-    await I.waitForElement('#applicantOrRespondentCaseName');
-    await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField(
-      '#applicantOrRespondentCaseName',
-      'Test Case 1 DA 31'
-    );
-    await I.retry(retryCount).continueEvent();
+  async fillSolicitorCaseNameFL401() {
+  await I.waitForElement('#applicantOrRespondentCaseName');
+  await I.runAccessibilityTest();
+  await I.retry(retryCount).fillField(
+    '#applicantOrRespondentCaseName',
+    'Test Case 1 DA 31'
+  );
+  await I.retry(retryCount).continueEvent();
   },
 
   async createNewCaseC100() {
@@ -284,6 +286,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
+    await this.fillSolicitorFamilyCourt();
+    await this.fillSolicitorCaseNameFL401();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
   },
