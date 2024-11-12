@@ -20,7 +20,8 @@ module.exports = {
     signOut: '//a[contains(.,"Sign out")]',
     email: '#username',
     password: '#password',
-    submitOther: 'input[type="submit"]'
+    submitOther: 'input[type="submit"]',
+    selectFamilyCourt: 'select[id="submitCountyCourtSelection"]'
   },
 
 
@@ -179,6 +180,20 @@ module.exports = {
       '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
     await I.retry(retryCount).continueEvent();
+  },
+
+  async fillSolicitorFamilyCourt() {
+    global.logCallingFunction();
+    await I.retry(retryCount).waitForText('Select the family court')
+    await I.retry(retryCount).waitForElement(this.fields.selectFamilyCourt);
+    await I.retry(retryCount).selectOption(
+      this.fields.selectFamilyCourt,
+      'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP'
+    );
+    await I.retry(retryCount).continueEvent();
+  },
+
+  async fillSolicitorCaseName() {
 
     await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
@@ -210,8 +225,10 @@ module.exports = {
     global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
-    await this.selectTypeOfApplicationC100();
+    await this.selectTypeOfApplicationC100();    
     await this.fillSolicitorApplicationPageC100();
+    await this.fillSolicitorFamilyCourt();
+    await this.fillSolicitorCaseName();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
   },
