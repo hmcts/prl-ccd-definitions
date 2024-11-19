@@ -816,7 +816,7 @@
     "ID": "issueAndSendToLocalCourtCallback",
     "Name": "Issue and send to local court",
     "PreConditionState(s)": "SUBMITTED_PAID",
-    "PostConditionState": "CASE_ISSUED",
+    "PostConditionState": "PROCEEDS_IN_HERITAGE_SYSTEM(isNonWorkAllocationEnabledCourtSelected=\"Yes\"):1;CASE_ISSUED",
     "DisplayOrder": 33,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-court-details",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/issue-and-send-to-local-court",
