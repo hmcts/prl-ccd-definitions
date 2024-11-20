@@ -1,0 +1,49 @@
+[
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "miamPolicyUpgrade",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[CREATOR]",
+          "[APPLICANTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "citizen",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  }
+]

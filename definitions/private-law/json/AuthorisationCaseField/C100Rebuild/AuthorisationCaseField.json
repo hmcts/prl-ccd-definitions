@@ -592,7 +592,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "helpWithFeesReferenceNumber",
     "UserRole": "caseworker-privatelaw-courtadmin",
-    "CRUD": "R"
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "27/01/2023",
@@ -622,6 +622,26 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "applicantPcqId",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "courtnav",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
