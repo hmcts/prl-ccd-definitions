@@ -184,7 +184,7 @@ module.exports = {
 
   async fillSolicitorFamilyCourt() {
     global.logCallingFunction();
-    await I.retry(retryCount).waitForText('Select the family court');
+    await I.retry(retryCount).waitForText('Select the family court')
     await I.retry(retryCount).waitForElement(this.fields.selectFamilyCourt);
     await I.retry(retryCount).selectOption(
       this.fields.selectFamilyCourt,
@@ -194,6 +194,7 @@ module.exports = {
   },
 
   async fillSolicitorCaseName() {
+
     await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField(
