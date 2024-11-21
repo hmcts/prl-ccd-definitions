@@ -16983,5 +16983,30 @@
           "CRUD": "R"
         }
       ]
-    }
+    },
+    {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isNonWorkAllocationEnabledCourtSelected",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
 ]
