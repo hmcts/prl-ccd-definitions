@@ -7190,6 +7190,13 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "c100SelectFamilyCourtLabel1",
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "c100ConfidentialityStatementDisclaimer",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
@@ -16972,6 +16979,31 @@
           "courtnav",
           "caseworker-privatelaw-superuser",
           "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isNonWorkAllocationEnabledCourtSelected",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
