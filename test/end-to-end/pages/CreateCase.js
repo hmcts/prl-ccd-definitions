@@ -214,20 +214,20 @@ module.exports = {
   },
 
   async fillSolicitorCaseNameFL401() {
-  await I.waitForElement('#applicantOrRespondentCaseName');
-  await I.runAccessibilityTest();
-  await I.retry(retryCount).fillField(
-    '#applicantOrRespondentCaseName',
-    'Test Case 1 DA 31'
-  );
-  await I.retry(retryCount).continueEvent();
+    await I.waitForElement('#applicantOrRespondentCaseName');
+    await I.runAccessibilityTest();
+    await I.retry(retryCount).fillField(
+      '#applicantOrRespondentCaseName',
+      'Test Case 1 DA 31'
+    );
+    await I.retry(retryCount).continueEvent();
   },
 
   async createNewCaseC100() {
     global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
-    await this.selectTypeOfApplicationC100();    
+    await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.fillSolicitorFamilyCourt();
     await this.fillSolicitorCaseName();
