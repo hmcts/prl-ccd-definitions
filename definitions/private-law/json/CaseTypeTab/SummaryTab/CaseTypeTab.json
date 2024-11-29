@@ -68,8 +68,9 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "confidentialityDetailsLabel",
-    "TabFieldDisplayOrder": 6
+    "CaseFieldID": "caseClosedDate",
+    "TabFieldDisplayOrder": 6,
+    "FieldShowCondition": "[STATE]=\"ALL_FINAL_ORDERS_ISSUED\""
   },
   {
     "LiveFrom": "08/11/2021",
@@ -78,7 +79,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "confidentialDetails",
+    "CaseFieldID": "confidentialityDetailsLabel",
     "TabFieldDisplayOrder": 7
   },
   {
@@ -88,7 +89,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "urgencyLabel",
+    "CaseFieldID": "confidentialDetails",
     "TabFieldDisplayOrder": 8
   },
   {
@@ -98,8 +99,18 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "urgencyDetails",
+    "CaseFieldID": "urgencyLabel",
     "TabFieldDisplayOrder": 9
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "urgencyDetails",
+    "TabFieldDisplayOrder": 10
   },
   {
     "LiveFrom": "08/11/2021",
@@ -110,7 +121,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "applicationTypeLabel",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "TabFieldDisplayOrder": 10
+    "TabFieldDisplayOrder": 11
   },
   {
     "LiveFrom": "08/11/2021",
@@ -121,7 +132,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "applicationTypeDetails",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "TabFieldDisplayOrder": 11
+    "TabFieldDisplayOrder": 12
   },
   {
     "LiveFrom": "08/11/2021",
@@ -132,7 +143,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarmLabel",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
-    "TabFieldDisplayOrder": 10
+    "TabFieldDisplayOrder": 11
   },
   {
     "LiveFrom": "08/11/2021",
@@ -143,7 +154,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarm",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
-    "TabFieldDisplayOrder": 11
+    "TabFieldDisplayOrder": 12
   },
   {
     "LiveFrom": "08/11/2021",
@@ -154,7 +165,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarmRevised",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
-    "TabFieldDisplayOrder": 11
+    "TabFieldDisplayOrder": 12
   },
   {
     "LiveFrom": "25/02/2022",
