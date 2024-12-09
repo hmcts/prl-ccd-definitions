@@ -630,6 +630,13 @@
   {
     "LiveFrom": "01/07/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "childName",
+    "UserRole": "caseworker-caa",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "01/07/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "respondentName",
     "UserRole": "caseworker-privatelaw-solicitor",
     "CRUD": "CRU"
@@ -6933,6 +6940,13 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedCaseTypeID",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "selectedCaseTypeID",
@@ -7172,6 +7186,13 @@
     "CaseFieldID": "c100ConfidentialityDisclaimerLabel1",
     "UserRole": "caseworker-privatelaw-superuser",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "c100SelectFamilyCourtLabel1",
+    "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -14604,6 +14625,13 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "14/1/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "dateSubmitted",
+    "UserRole": "caseworker-caa",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "17/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "submissionRequiredFieldsInfo1",
@@ -16951,6 +16979,31 @@
           "courtnav",
           "caseworker-privatelaw-superuser",
           "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isNonWorkAllocationEnabledCourtSelected",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
