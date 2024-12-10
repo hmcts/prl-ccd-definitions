@@ -149,6 +149,16 @@
     "ListElementCode": "stitchedDocument",
     "FieldType": "Document",
     "ElementLabel": "Stitched document",
+    "CategoryID": "courtBundle",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/10/2022",
+    "ID": "Bundle",
+    "ListElementCode": "historicalStitchedDocument",
+    "FieldType": "Document",
+    "ElementLabel": "Historical stitched document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -226,6 +236,7 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Is this the bundle you want to clone?",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "eligibleForCloning = \"DO_NOT_SHOW\"",
     "Searchable": "N"
   },
   {
@@ -297,7 +308,7 @@
     "LiveFrom": "31/10/2022",
     "ID": "BundlingInformation",
     "ListElementCode": "bundleCreationDateAndTime",
-    "FieldType": "DateTime",
+    "FieldType": "Text",
     "ElementLabel": "Bundle Creation Date and Time",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -306,7 +317,7 @@
     "LiveFrom": "31/10/2022",
     "ID": "BundlingInformation",
     "ListElementCode": "bundleHearingDateAndTime",
-    "FieldType": "DateTime",
+    "FieldType": "Text",
     "ElementLabel": "Hearing Date and Time",
     "SecurityClassification": "Public",
     "Searchable": "N"

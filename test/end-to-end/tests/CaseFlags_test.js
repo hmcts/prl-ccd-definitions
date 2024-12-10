@@ -3,7 +3,7 @@ const testConfig = require('../config');
 /* eslint init-declarations: ["error", "never"]*/
 let caseId;
 
-Feature('Court Admin - Review Solicitor support request for hearings @flaky-test-suite');
+Feature('Court Admin - Review Solicitor support request for hearings @regression-suite');
 
 Scenario('As a solicitor raise an RA flag', async({ I }) => {
   await I.loginAsSolicitor();

@@ -4,6 +4,10 @@ const manageFlagConfig = require('./manageFlagsConfig');
 
 const date = new Date();
 
+function getFlagStatusRadioElement(status) {
+  return `//label[contains(text(),'${status}')]/../input`;
+}
+
 module.exports = {
   fields: {
     firstFlagSelectionEle: '#flag-selection-0',
@@ -29,8 +33,10 @@ module.exports = {
     await I.click(this.fields.firstFlagSelectionEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Update flag "Documents in large print" comments');
-    await I.click(manageFlagConfig.flagActiveState);
+    await I.waitForText('Documents in large print');
+    const activeStatusRadioElement = getFlagStatusRadioElement('Active');
+    await I.waitForElement(activeStatusRadioElement);
+    await I.click(activeStatusRadioElement);
     await I.click(this.fields.nextBtn);
 
     await I.waitForText(manageFlagConfig.cyaTextTitle);
@@ -44,8 +50,10 @@ module.exports = {
     await I.click(this.fields.secondFlagSelectionEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Update flag "Support filling in forms" comments');
-    await I.click(manageFlagConfig.flagNotApprovedState);
+    await I.waitForText('Support filling in forms');
+    const notApprovedStatusRadioElement = getFlagStatusRadioElement('Not approved');
+    await I.waitForElement(notApprovedStatusRadioElement);
+    await I.click(notApprovedStatusRadioElement);
     await I.fillField(this.fields.statusReasonChange, 'This is a test for non-approval');
     await I.click(this.fields.nextBtn);
 
@@ -54,11 +62,13 @@ module.exports = {
     await I.see(manageFlagConfig.secondFlagComments);
     await I.see(manageFlagConfig.flagNotApprovedState);
     await I.click(this.fields.submitBtn);
+    await I.waitForElement(this.fields.caseFlagsTabSelector);
   },
 
   async verifyApprovedSupportRequest() {
     const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ /g, ' ');
 
+    await I.waitForElement(this.fields.caseFlagsTabSelector);
     await I.click(this.fields.caseFlagsTabSelector);
 
     // verify applicant request details

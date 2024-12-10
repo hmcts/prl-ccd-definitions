@@ -11,41 +11,53 @@ module.exports = {
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
     createCaseLink: '//a[contains(.,"Create case")]',
-    submit: 'button[type="submit"]'
+    submit: 'button[type="submit"]',
+    submitCountyCourtSelection: 'select[id="submitCountyCourtSelection"]'
   },
 
   async clickCreateCase() {
-    I.wait('7');
+    I.wait('60');
     await I.waitForText('Create case');
-    I.wait('7');
+    I.wait('30');
     await I.retry(retryCount).click(this.fields.createCaseLink);
   },
 
   async fillFormAndSubmit() {
-    // I.wait('5');
+    I.wait('5');
     await I.waitForElement(this.fields.jurisdiction);
     await I.retry(retryCount).selectOption(this.fields.jurisdiction, 'Family Private Law');
     // I.wait('5');
     await I.retry(retryCount).selectOption(this.fields.caseType, 'C100 & FL401 Applications');
     await I.retry(retryCount).selectOption(this.fields.event, 'Solicitor application');
-    await I.waitForClickable(this.fields.submit);
+    await I.seeElement(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
   },
 
   async selectTypeOfApplicationC100() {
     await I.waitForText('Type of application');
+    await I.seeElement('#caseTypeOfApplication-C100');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async fillSolicitorApplicationPageC100() {
     await I.waitForText('Confidentiality Statement');
+    await I.seeElement('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).click(this.fields.submit);
+
+    I.wait('5');
+    await I.waitForText('Select the family court');
+    await I.waitForElement(this.fields.submitCountyCourtSelection);
+    await I.retry(retryCount).selectOption(this.fields.submitCountyCourtSelection
+    , 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
+    await I.seeElement(this.fields.submit);
+    await I.retry(retryCount).click(this.fields.submit);
+
 
     await I.waitForElement('#applicantCaseName');
-    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Test Child');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Smoke Test Case');
+    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async createNewCaseC100andReturnID() {

@@ -1,6 +1,11 @@
+
+const path = require('path');
+
+const outputDir = path.resolve(__dirname, '../../output');
+
 exports.config = {
   tests: './tests/smoke_test.js',
-  output: './output',
+  output: outputDir,
   helpers: {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
@@ -13,7 +18,14 @@ exports.config = {
         ignoreHTTPSErrors: true,
         args: [ '--disable-gpu', '--no-sandbox', '--allow-running-insecure-content', '--ignore-certificate-errors']
       },
-      windowSize: '1280x960'
+      windowSize: '1280x960',
+      disableScreenshots: false,
+      video: true,
+      recordVideo: { dir: outputDir },
+      keepVideoForPassedTests: false,
+      keepTraceForPassedTests: false,
+      fullPageScreenshots: true,
+      uniqueScreenshotNames: true
     },
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
@@ -36,10 +48,15 @@ exports.config = {
         }
       },
       mochawesome: {
-        stdout: './smoke-output/console.log',
+        stdout: `${outputDir}/console.log`,
         options: {
-          reportDir: './smoke-output',
-          reportFilename: 'report'
+          includeScreenshots: true,
+          reportDir: outputDir,
+          reportFilename: 'PrL-CCD-Callbacks-smoke-tests',
+          reportTitle: 'PrL CCD Callbacks smoke Tests',
+          inline: true,
+          html: true,
+          json: true
         }
       },
       'mocha-junit-reporter': {
