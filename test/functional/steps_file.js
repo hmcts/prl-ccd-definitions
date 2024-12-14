@@ -20,9 +20,13 @@ module.exports = () => {
     },
     createRole(role) {
       I.click('Manage User Roles');
-      I.click('Create User Role');
+      I.tryTo(() => {
+        return I.click('Create User Role');
+      });
       I.fillField('role', role);
-      I.click('Create');
+      I.tryTo(() => {
+        return I.click('Create');
+      });
     },
     uploadConfig(path) {
       I.click('Import Case Definition');

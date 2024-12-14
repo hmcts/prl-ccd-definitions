@@ -23,7 +23,8 @@ exports.config = {
       enabled: true,
       retries: 2,
       minTimeout: 2000
-    }
+    },
+    tryTo: { enabled: true }
   },
   mocha: {
     reporterOptions: {
