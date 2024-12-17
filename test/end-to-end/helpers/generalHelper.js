@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 // eslint-disable-next-line no-undef
 const Helper = codecept_helper;
 // const { Helper } = codeceptjs;
@@ -57,24 +58,91 @@ class GeneralHelper extends Helper {
 
   async submitEvent() {
     const { Playwright } = this.helpers;
-    const saveResponseTime = 5;
-    try {
-      await Playwright.waitForText('Check your answers', '30');
-      await Playwright.click('Save and continue');
-      await Playwright.wait(saveResponseTime);
-    } catch {
-      await Playwright.click('Continue');
-      await Playwright.waitForText('Check your answers', '30');
-      await Playwright.click('Save and continue');
-      await Playwright.wait(saveResponseTime);
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/events');
+        await Playwright.waitForText('Check your answers', '30');
+        await Playwright.click('Save and continue');
+
+        apiResponseResolved = await apiResponse;
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 201;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          testLogger.AddMessage('retrying event continue');
+          throw Error(`event submit  api failed with response code ${eventTriggerResponseCode}`);
+        }
+        return;
+      } catch (submitEventError) {
+        retryCount += 1;
+        testLogger.AddMessage(submitEventError);
+        testLogger.AddMessage('event submit Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
+      }
+    }
+  }
+
+  async continueEvent() {
+    const { Playwright } = this.helpers;
+
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/validate?**');
+        const continueBtnLocator = '//ccd-case-edit//button[contains(text(),"Continue")]';
+        await Playwright.waitForElement(continueBtnLocator);
+        await Playwright.click(continueBtnLocator);
+
+        apiResponseResolved = await apiResponse;
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 200;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          testLogger.AddMessage('retrying event continue');
+          throw Error(`event continue validate api failed with response code ${eventTriggerResponseCode}`);
+        }
+        return;
+      } catch (eventTriggerError) {
+        retryCount += 1;
+        testLogger.AddMessage(eventTriggerError);
+        testLogger.AddMessage('event continue Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
+      }
     }
   }
 
   async triggerEvent(eventName) {
     const { Playwright } = this.helpers;
     await Playwright.waitForText('Next step');
-    await Playwright.selectOption(fields.eventList, eventName);
-    await Playwright.click(fields.submit);
+    let retryCount = 0;
+    let apiResponseResolved = null;
+    while (retryCount < loopMax) {
+      try {
+        const apiResponse = Playwright.waitForResponse('**/event-triggers/**');
+        await Playwright.waitForElement(`//select[@id = "next-step"]/option[contains(text(),"${eventName}")]`);
+        await Playwright.selectOption(fields.eventList, eventName);
+        await Playwright.click(fields.submit);
+        apiResponseResolved = await apiResponse;
+
+        const eventTriggerResponseCode = apiResponseResolved.status();
+        const successStatusCode = 200;
+        testLogger.AddMessage(`${apiResponseResolved.status()} =>  ${apiResponseResolved.url()}`);
+        if (eventTriggerResponseCode !== successStatusCode) {
+          throw Error(`event trigger api failed with response code ${eventTriggerResponseCode}`);
+        }
+        await Playwright.waitForInvisible('//select[@id = "next-step"]');
+        return;
+      } catch (eventTriggerError) {
+        testLogger.AddMessage(eventTriggerError);
+        retryCount += 1;
+        testLogger.AddMessage(eventTriggerError);
+        testLogger.AddMessage('event trigger Sleep 30sec before retry. to handle env flakiness');
+        await Playwright.wait('30');
+      }
+    }
   }
 
   async waitForPage(header, headerText) {

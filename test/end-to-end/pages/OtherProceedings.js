@@ -51,7 +51,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.existingProceedings_0_NameOfGuardian, 'Mia');
     await I.retry(retryCount).fillField(this.fields.existingProceedings_0_NameAndOffice, 'Grace');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');
@@ -68,7 +68,7 @@ module.exports = {
     await I.retry(retryCount).fillField(this.fields.typeOfCase, 'Respondent');
     await I.retry(retryCount).fillField(this.fields.anyOtherDetails, 'Testing');
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).waitForText('Check your answers');
     await I.retry(retryCount).waitForText('Save and continue', '30');
     await I.retry(retryCount).click('Save and continue');

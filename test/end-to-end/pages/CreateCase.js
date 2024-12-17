@@ -20,7 +20,8 @@ module.exports = {
     signOut: '//a[contains(.,"Sign out")]',
     email: '#username',
     password: '#password',
-    submitOther: 'input[type="submit"]'
+    submitOther: 'input[type="submit"]',
+    selectFamilyCourt: 'select[id="submitCountyCourtSelection"]'
   },
 
 
@@ -36,6 +37,7 @@ module.exports = {
 
   async clickCreateCase() {
     global.logCallingFunction();
+    await I.wait('40');
     await I.waitForSelector(this.fields.createCaseLink);
     await I.retry(retryCount).click(this.fields.createCaseLink);
     await I.waitForElement(this.fields.jurisdiction);
@@ -117,11 +119,11 @@ module.exports = {
     global.logCallingFunction();
     // await I.waitForText('TS-Admin application-Noc');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForSelector('#applicantCaseName');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     // await I.wait('3');
   },
 
@@ -141,7 +143,7 @@ module.exports = {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async selectTypeOfApplicationFL401() {
@@ -150,24 +152,24 @@ module.exports = {
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
     await I.retry(retryCount).click(this.fields.caseFromCourtNav_Yes);
     await I.runAccessibilityTest();
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
   async selectTypeOfApplicationFL401_TS() {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async selectTypeOfApplicationFL401DummyCase() {
     global.logCallingFunction();
     await I.waitForText('Type of application');
     await I.retry(retryCount).click('#caseTypeOfApplication-FL401');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
 
     await I.waitForText('TS-Solicitor aplication');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.wait('2');
   },
 
@@ -177,15 +179,29 @@ module.exports = {
     await I.retry(retryCount).click(
       '#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
+  },
 
-    // await I.waitForElement('#applicantCaseName');
+  async fillSolicitorFamilyCourt() {
+    global.logCallingFunction();
+    await I.retry(retryCount).waitForText('Select the family court')
+    await I.retry(retryCount).waitForElement(this.fields.selectFamilyCourt);
+    await I.retry(retryCount).selectOption(
+      this.fields.selectFamilyCourt,
+      'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP'
+    );
+    await I.retry(retryCount).continueEvent();
+  },
+
+  async fillSolicitorCaseName() {
+
+    await I.waitForElement('#applicantCaseName');
     await I.runAccessibilityTest();
     await I.retry(retryCount).fillField(
       '//input[@id="applicantCaseName"]',
       'Test Case C100'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
   },
 
   async fillSolicitorApplicationPageFL401() {
@@ -194,23 +210,27 @@ module.exports = {
     await I.retry(retryCount).click(
       '#confidentialityStatementDisclaimer-confidentialityStatementUnderstood'
     );
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
+  },
 
-    await I.waitForElement('#applicantOrRespondentCaseName');
-    await I.runAccessibilityTest();
-    await I.retry(retryCount).fillField(
-      '#applicantOrRespondentCaseName',
-      'Test Case 1 DA 31'
-    );
-    await I.retry(retryCount).click('Continue');
+  async fillSolicitorCaseNameFL401() {
+  await I.waitForElement('#applicantOrRespondentCaseName');
+  await I.runAccessibilityTest();
+  await I.retry(retryCount).fillField(
+    '#applicantOrRespondentCaseName',
+    'Test Case 1 DA 31'
+  );
+  await I.retry(retryCount).continueEvent();
   },
 
   async createNewCaseC100() {
     global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
-    await this.selectTypeOfApplicationC100();
+    await this.selectTypeOfApplicationC100();    
     await this.fillSolicitorApplicationPageC100();
+    await this.fillSolicitorFamilyCourt();
+    await this.fillSolicitorCaseName();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
   },
@@ -231,7 +251,7 @@ module.exports = {
     await I.waitForText('TS-Solicitor application');
     await I.waitForSelector('#applicantCaseName');
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).click('Create my dummy case');
     await I.wait('7');
   },
@@ -266,6 +286,8 @@ module.exports = {
     await this.fillFormAndSubmit();
     await this.selectTypeOfApplicationFL401();
     await this.fillSolicitorApplicationPageFL401();
+    await this.fillSolicitorFamilyCourt();
+    await this.fillSolicitorCaseNameFL401();
     await this.submitEvent();
     await this.amOnHistoryPageWithSuccessNotification();
   },
@@ -306,7 +328,7 @@ module.exports = {
     await I.waitForSelector('#applicantCaseName');
 
     await I.fillField('#applicantCaseName', 'auto test C100');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).click('Create my dummy case');
     await this.amOnHistoryPageWithSuccessNotification();
   },
