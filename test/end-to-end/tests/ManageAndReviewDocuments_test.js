@@ -6,7 +6,7 @@ let caseId;
 
 
 Feature('Court Admin - Manage and review documents');
-Scenario('As a court admin I want to manage and review restricted docs @regression-suite @ptl-regression', async({ I }) => {
+Scenario('As a court admin I want to manage and review restricted docs @regression-suite', async({ I }) => {
   await I.loginAsOldCourtAdmin();
   await I.createC100CaseByCourtAdmin();
   caseId = await I.saveTheCaseIdAndSignInAsSwanseaCourtAdmin();
@@ -15,21 +15,21 @@ Scenario('As a court admin I want to manage and review restricted docs @regressi
   await I.reviewCAManageDocuments();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin I want to manage and review Confidential docs @regression-suite @ptl-regression', async({ I }) => {
+Scenario('As a court admin I want to manage and review Confidential docs @regression-suite', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.performManageDocumentsForConfidentialFiles();
   await I.reviewConfidentialManageDocuments();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a court admin I want to manage and review non restricted docs @regression-suite @ptl-regression', async({ I }) => {
+Scenario('As a court admin I want to manage and review non restricted docs @regression-suite', async({ I }) => {
   await I.loginAsSwanseaCourtAdmin();
   await I.searchForCasesWithId(caseId);
   await I.performNonRestrictedManageDocuments();
   await I.reviewNonRestManageDocuments();
 }).retry(testConfig.TestRetryScenarios);
 
-Scenario('As a Solicitor I should not be able to upload court documents @regression-suite @ptl-regression', async({ I }) => {
+Scenario('As a Solicitor I should not be able to upload court documents @regression-suite', async({ I }) => {
   await I.loginAsSolicitor();
   await I.createSolicitorDummyCase();
   await I.payAndSubmitDummySolicitorCase();

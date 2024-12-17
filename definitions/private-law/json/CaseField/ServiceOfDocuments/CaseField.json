@@ -1,0 +1,124 @@
+[
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodSelectDocumentsLabel",
+    "FieldType": "Label",
+    "Label": "## Select documents to be served",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodDocumentsList",
+    "Label": "Documents",
+    "HintText": "Select a document to reference",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "DocumentsDynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodAdditionalDocumentsLabel",
+    "FieldType": "Label",
+    "Label": "## Upload additional documents to be served",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodAdditionalDocumentsList",
+    "Label": "Upload additional documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "HintText": "Please upload cover letter as first document if any, that is to be sent to both the applicant and the respondent.",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "CategoryID": "anyOtherDoc"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodAdditionalRecipients",
+    "Label": "Select additional recipients who needs to be served",
+    "FieldType": "MultiSelectList",
+    "HintText": "For example, Cafcass, Local authority and Other organization",
+    "FieldTypeParameter": "AdditionalRecipients",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodAdditionalRecipientsList",
+    "Label": "Recipient",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServeOrgDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodDocumentsCheckOptions",
+    "Label": "Does someone need to check the documents?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ServiceOfDocumentsCheckEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodSolicitorServingRespondentsOptions",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SodSolicitorServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodCitizenServingRespondentsOptions",
+    "Label": "Who is responsible for serving the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "SodCitizenServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodUnServedPack",
+    "Label": "Unserved documents",
+    "FieldType": "SodPack",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "servedBy=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "servedDocumentsDetailsList",
+    "Label": "Notifications",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ServedApplicationDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sodServeToRespondentOptions",
+    "Label": "Does this document need to be personally served on the respondent?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoNotApplicable",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  }
+]

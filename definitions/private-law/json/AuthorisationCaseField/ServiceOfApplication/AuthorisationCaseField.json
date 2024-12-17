@@ -322,6 +322,13 @@
     "CRUD": "R"
   },
   {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "pd36qLetter",
+    "UserRole": "caseworker-privatelaw-cafcass",
+    "CRUD": "R"
+  },
+  {
     "LiveFrom": "11/05/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "specialArrangementsLetter",
@@ -347,6 +354,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "specialArrangementsLetter",
     "UserRole": "caseworker-privatelaw-solicitor",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "specialArrangementsLetter",
+    "UserRole": "caseworker-privatelaw-cafcass",
     "CRUD": "R"
   },
   {
@@ -445,6 +459,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "additionalDocuments",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "additionalDocuments",
+    "UserRole": "caseworker-privatelaw-cafcass",
     "CRUD": "R"
   },
   {
@@ -989,7 +1010,8 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration"
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "R"
       }
@@ -1005,12 +1027,7 @@
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate"
-        ],
-        "CRUD": "R"
-      },
-      {
-        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
           "citizen",
           "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-superuser",
@@ -1310,6 +1327,27 @@
     ]
   },
   {
+      "LiveFrom": "02/12/2021",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "missingAddressWarningTextLabel",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-la",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate",
+            "citizen",
+            "caseworker-privatelaw-solicitor",
+            "caseworker-privatelaw-superuser",
+            "caseworker-wa-task-configuration",
+            "caseworker-privatelaw-readonly"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    },
+  {
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "missingAddressWarningTextCA",
@@ -1416,6 +1454,58 @@
     "LiveFrom": "08/01/2024",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isOccupationOrderSelected",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isApplicantRepresented",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "23/02/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "productHearingBundleOn",
     "AccessControl": [
       {
         "UserRoles": [

@@ -147,8 +147,9 @@
     "LiveFrom": "01/01/2023",
     "ID": "Applicant",
     "ListElementCode": "contactPreferences",
-    "FieldType": "Text",
-    "ElementLabel": "Contact preferences",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ContactPreferences",
+    "ElementLabel": "Contact Preferences",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -159,6 +160,7 @@
     "FieldType": "Label",
     "ElementLabel": "### Applicant Solicitor",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "representativeFirstName!=\"\"",
     "Searchable": "N"
   },
   {

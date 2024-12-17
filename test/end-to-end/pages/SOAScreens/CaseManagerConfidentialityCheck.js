@@ -16,6 +16,7 @@ module.exports = {
   },
 
   async confidentialityCheck() {
+    await I.wait(medWait);
     await I.click(this.fields.tasksTab);
     await I.wait(longWait);
     // await I.retry(retryCount).click(this.fields.returnToTaskTab);

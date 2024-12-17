@@ -340,6 +340,7 @@ module.exports = {
     await this.submitDocumentScreen();
 
     // Solicitor should not be able to upload documents with court type
+    await I.waitForText(manageDocConfig.errMsg);
     await I.see(manageDocConfig.errMsg);
     await I.selectOption(this.fields.selectParty, manageDocConfig.partyType);
     await this.submitDocuments();
