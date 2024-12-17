@@ -510,6 +510,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/amend-other-people-in-case/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -1547,6 +1548,7 @@
     "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/validate-hearing-state/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
@@ -1674,7 +1676,8 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/02/2023",
@@ -1704,8 +1707,7 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-documents/submitted",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1881,7 +1883,7 @@
     "Name": "Statement of service",
     "Description": "Event to provide personal service to the parties",
     "DisplayOrder": 63,
-    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-start",
