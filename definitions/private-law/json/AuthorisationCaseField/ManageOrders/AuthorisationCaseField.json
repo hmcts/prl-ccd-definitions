@@ -937,9 +937,23 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "previewOrderDoc",
+    "UserRole": "caseworker-privatelaw-cafcass",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "previewOrderDocWelsh",
     "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "previewOrderDocWelsh",
+    "UserRole": "caseworker-privatelaw-cafcass",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -1954,6 +1968,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "orderCollection",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderCollection",
+    "UserRole": "caseworker-privatelaw-cafcass",
     "CRUD": "R"
   },
   {
@@ -5581,6 +5602,58 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "requestSafeGuardingLetterUpdate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "safeGuardingLetterUploadDueDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
-  ]
+]
 
