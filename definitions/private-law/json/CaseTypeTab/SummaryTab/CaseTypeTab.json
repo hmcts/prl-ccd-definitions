@@ -48,7 +48,8 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "caseStatusLabel",
+    "CaseFieldID": "refugeLabel",
+    "FieldShowCondition": "refugeCase.isRefugeCase = \"Yes\"",
     "TabFieldDisplayOrder": 4
   },
   {
@@ -58,7 +59,8 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "caseStatus",
+    "CaseFieldID": "refugeCase",
+    "FieldShowCondition": "refugeCase.isRefugeCase = \"Yes\"",
     "TabFieldDisplayOrder": 5
   },
   {
@@ -79,7 +81,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "confidentialityDetailsLabel",
+    "CaseFieldID": "caseStatusLabel",
     "TabFieldDisplayOrder": 7
   },
   {
@@ -89,7 +91,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "confidentialDetails",
+    "CaseFieldID": "caseStatus",
     "TabFieldDisplayOrder": 8
   },
   {
@@ -99,7 +101,7 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "urgencyLabel",
+    "CaseFieldID": "confidentialityDetailsLabel",
     "TabFieldDisplayOrder": 9
   },
   {
@@ -109,8 +111,28 @@
     "TabID": "Summary",
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
-    "CaseFieldID": "urgencyDetails",
+    "CaseFieldID": "confidentialDetails",
     "TabFieldDisplayOrder": 10
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "urgencyLabel",
+    "TabFieldDisplayOrder": 10
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "urgencyDetails",
+    "TabFieldDisplayOrder": 11
   },
   {
     "LiveFrom": "08/11/2021",
@@ -121,7 +143,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "applicationTypeLabel",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "TabFieldDisplayOrder": 11
+    "TabFieldDisplayOrder": 12
   },
   {
     "LiveFrom": "08/11/2021",
@@ -132,7 +154,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "applicationTypeDetails",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "TabFieldDisplayOrder": 12
+    "TabFieldDisplayOrder": 13
   },
   {
     "LiveFrom": "08/11/2021",
@@ -143,7 +165,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarmLabel",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
-    "TabFieldDisplayOrder": 11
+    "TabFieldDisplayOrder": 12
   },
   {
     "LiveFrom": "08/11/2021",
@@ -154,7 +176,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarm",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
-    "TabFieldDisplayOrder": 12
+    "TabFieldDisplayOrder": 13
   },
   {
     "LiveFrom": "08/11/2021",
@@ -165,7 +187,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "allegationOfHarmRevised",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" ",
-    "TabFieldDisplayOrder": 12
+    "TabFieldDisplayOrder": 13
   },
   {
     "LiveFrom": "25/02/2022",
@@ -176,7 +198,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "pathfinderLabel",
     "FieldShowCondition": "isPathfinderCase = \"Yes\"",
-    "TabFieldDisplayOrder": 12
+    "TabFieldDisplayOrder": 14
   },
   {
     "LiveFrom": "25/02/2022",
@@ -187,7 +209,7 @@
     "TabDisplayOrder": 0,
     "CaseFieldID": "isPathfinderCase",
     "FieldShowCondition": "isPathfinderCase = \"Yes\"",
-    "TabFieldDisplayOrder": 13
+    "TabFieldDisplayOrder": 15
   },
   {
     "LiveFrom": "08/11/2021",
@@ -197,7 +219,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "specialArrangmentLabel",
-    "TabFieldDisplayOrder": 14
+    "TabFieldDisplayOrder": 16
   },
   {
     "LiveFrom": "08/11/2021",
@@ -207,7 +229,7 @@
     "TabLabel": "Summary",
     "TabDisplayOrder": 0,
     "CaseFieldID": "specialArrangement",
-    "TabFieldDisplayOrder": 15
+    "TabFieldDisplayOrder": 16
   },
   {
     "LiveFrom": "08/11/2021",
