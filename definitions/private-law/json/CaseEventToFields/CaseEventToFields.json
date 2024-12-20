@@ -184,12 +184,36 @@
   {
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "UpdateNextHearingInfo",
+    "CaseEventID": "enableUpdateHearingActualTask",
     "CaseFieldID": "nextHearingDate",
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "enableUpdateHearingActualTask",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition" : "nextHearingDate=\"DO_NOT_SHOW\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "enableRequestSolicitorOrderTask",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition" : "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "N"
   }
 ]
