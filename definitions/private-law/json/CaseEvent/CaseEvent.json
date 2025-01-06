@@ -15,6 +15,7 @@
     "EndButtonLabel": "Save and continue"
   },
   {
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "attendingTheHearing",
@@ -2084,6 +2085,22 @@
     "ID": "enableRequestSolicitorOrderTask",
     "Name": "WA request solicitor order",
     "Description": "WA Event trigger for request solicitor order task",
+    "DisplayOrder": 38,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hmcHearingCompleted",
+    "Name": "Complete update hearing actuals",
+    "Description": "WA Event trigger for completing update hearing actuals task",
     "DisplayOrder": 38,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
