@@ -90,7 +90,7 @@
     "EventElementLabel": "**The date needs to be confirmed by the listing team before service**",
     "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\" AND isAutomatedHearingPresent!=\"Yes\""
+    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -139,7 +139,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" AND isAutomatedHearingPresent!=\"Yes\""
+    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -247,7 +247,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "21",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" AND isAutomatedHearingPresent!=\"Yes\""
+    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
     "LiveFrom": "16/02/2022",
