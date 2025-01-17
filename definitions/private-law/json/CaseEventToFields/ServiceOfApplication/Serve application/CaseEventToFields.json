@@ -55,7 +55,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy!=\"CITIZEN\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -67,7 +67,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND caseCreatedBy=\"CITIZEN\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -99,7 +99,7 @@
     "LiveFrom": "01/12/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "serviceOfApplication",
-    "CaseFieldID": "soaCafcassServedOptions",
+    "CaseFieldID": "cafcassServedOptions",
     "PageFieldDisplayOrder": 8,
     "DisplayContext": "MANDATORY",
     "PageID": 4,
@@ -128,7 +128,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaCafcassCymruServedOptions=\"Yes\" AND caseTypeOfApplication=\"C100\"",
+    "FieldShowCondition": "soaCafcassCymruServedOptions=\"Yes\" AND isCafcass=\"No\" AND caseTypeOfApplication=\"C100\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -140,7 +140,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaCafcassServedOptions=\"DO_NOT_SHOW\"",
+    "FieldShowCondition": "cafcassServedOptions=\"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "Y"
   },
   {

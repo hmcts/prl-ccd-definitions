@@ -278,6 +278,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-information",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -394,6 +395,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-data",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/allegation-of-harm/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\"",
@@ -411,6 +413,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/allegation-of-harm/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -491,6 +494,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-other-people-party-details",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -507,6 +511,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-other-people-party-details",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -681,8 +686,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EndButtonLabel": "Save and continue"
   },
   {
     "LiveFrom": "03/12/2021",
@@ -716,7 +720,7 @@
     "ID": "manageDocuments",
     "Name": "Manage documents",
     "Description": "Manage documents",
-    "DisplayOrder": 38,
+    "DisplayOrder": 39,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -733,7 +737,7 @@
     "ID": "manageDocumentsNew",
     "Name": "Manage documents",
     "Description": "Manage documents",
-    "DisplayOrder": 38,
+    "DisplayOrder": 39,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -792,7 +796,8 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-header-case-note",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/submit-case-note",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -813,7 +818,7 @@
     "ID": "issueAndSendToLocalCourtCallback",
     "Name": "Issue and send to local court",
     "PreConditionState(s)": "SUBMITTED_PAID",
-    "PostConditionState": "CASE_ISSUED",
+    "PostConditionState": "PROCEEDS_IN_HERITAGE_SYSTEM(isNonWorkAllocationEnabledCourtSelected=\"Yes\"):1;CASE_ISSUED",
     "DisplayOrder": 33,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-court-details",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/issue-and-send-to-local-court",
@@ -942,7 +947,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\"",
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\" AND isCourtNavCase!=\"Yes\"",
     "Publish": "True"
   },
   {
@@ -1118,7 +1123,7 @@
     "Description": "Statement of Truth and submit",
     "DisplayOrder": 106,
     "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS",
-    "PostConditionState": "SUBMITTED_PAID",
+    "PostConditionState": "PROCEEDS_IN_HERITAGE_SYSTEM(isNonWorkAllocationEnabledCourtSelected=\"Yes\"):1;SUBMITTED_PAID",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
@@ -1374,7 +1379,8 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -1398,6 +1404,28 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/generate-document-submit-application",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpCreate",
+    "Name": "Create/submit citizen AWP",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "citizenAwpHwfCreate",
+    "Name": "Create/submit citizen AWP HWF",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "Publish": "True"
@@ -1477,7 +1505,7 @@
     "ID": "maintainCaseLink",
     "Name": "Manage case links",
     "Description": "To maintain linked cases",
-    "DisplayOrder": 37,
+    "DisplayOrder": 38,
     "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;CASE_WITHDRAWN;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "ShowSummary": "Y",
@@ -1521,6 +1549,7 @@
     "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/validate-hearing-state/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
@@ -1555,7 +1584,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-citizen-application",
     "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2023",
@@ -1582,10 +1612,9 @@
     "DisplayOrder": 36,
     "PreConditionState(s)": "JUDICIAL_REVIEW",
     "PostConditionState": "*",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-hearingPage-Data",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
     "Publish": "True",
@@ -1603,8 +1632,8 @@
     "ShowSummary": "Y",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/ca-listWithoutNotice-confirmation",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/listWithoutNotice",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/listWithoutNotice-confirmation",
     "Publish": "True",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
   },
@@ -1648,7 +1677,8 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/02/2023",
@@ -1678,8 +1708,7 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-documents/submitted",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1855,7 +1884,7 @@
     "Name": "Statement of service",
     "Description": "Event to provide personal service to the parties",
     "DisplayOrder": 63,
-    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-start",
@@ -1990,6 +2019,18 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
   },
   {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hwfProcessCaseUpdate",
+    "Name": "Process HWF for Citizen case",
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
+  },
+  {
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "removeDraftOrder",
@@ -2005,6 +2046,22 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageCafcassAccess",
+    "Name": "Manage Cafcass access",
+    "Description": "Manage Cafcass access",
+    "DisplayOrder": 37,
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/manage-cafcass-access/submitted",
+    "PreConditionState(s)": "PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\""
   }
 ]
 
