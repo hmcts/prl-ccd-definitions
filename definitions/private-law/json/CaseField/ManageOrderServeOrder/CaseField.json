@@ -43,7 +43,8 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "serveToRespondentOptions",
     "Label": "Does this order need to be personally served on the respondent?",
-    "FieldType": "YesOrNo",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoNotApplicable",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -73,6 +74,24 @@
     "Label": "Who is responsible for serving the respondent?",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "SoaCitizenServingRespondentsEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "courtAdminText",
+    "Label": "(you must serve the order)",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "courtBailiffText",
+    "Label": "(you must arrange for them to serve the order)",
+    "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
