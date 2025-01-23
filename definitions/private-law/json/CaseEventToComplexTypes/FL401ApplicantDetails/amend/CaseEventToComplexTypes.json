@@ -61,13 +61,36 @@
     "FieldShowCondition": "applicantsFL401.gender=\"other\""
   },
   {
+    "LiveFrom": "01/10/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "liveInRefuge",
+    "EventElementLabel": "*Does the applicant currently live in a refuge?",
+    "FieldDisplayOrder": "7",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "05/10/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "refugeConfidentialityC8Form",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "8",
+    "FieldShowCondition": "applicantsFL401.liveInRefuge=\"Yes\"",
+    "DisplayContext": "MANDATORY"
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "address",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -77,7 +100,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "address.AddressLine1",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -87,26 +110,6 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "address.AddressLine2",
-    "FieldDisplayOrder": "9",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "address.AddressLine3",
-    "FieldDisplayOrder": "10",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "address.PostTown",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL"
   },
@@ -116,7 +119,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "address.County",
+    "ListElementCode": "address.AddressLine3",
     "FieldDisplayOrder": "12",
     "DisplayContext": "OPTIONAL"
   },
@@ -126,7 +129,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "address.PostCode",
+    "ListElementCode": "address.PostTown",
     "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL"
   },
@@ -136,8 +139,28 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "address.Country",
+    "ListElementCode": "address.County",
     "FieldDisplayOrder": "14",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "address.PostCode",
+    "FieldDisplayOrder": "15",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "address.Country",
+    "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL"
   },
   {
@@ -149,7 +172,7 @@
     "DisplayContext": "MANDATORY",
     "ListElementCode": "hintTextForC8Form",
     "EventElementLabel": "If you fill out this section you do not need to send a separate C8 form.",
-    "FieldDisplayOrder": "15",
+    "FieldDisplayOrder": "17",
     "FieldShowCondition": "applicantsFL401.firstName=\"\" OR applicantsFL401.firstName=\"*\""
   },
   {
@@ -159,7 +182,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "isAddressConfidential",
-    "FieldDisplayOrder": "16",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -169,7 +192,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "canYouProvideEmailAddress",
-    "FieldDisplayOrder": "17",
+    "FieldDisplayOrder": "19",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -179,7 +202,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "email",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "20",
     "FieldShowCondition": "applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
@@ -190,7 +213,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "isEmailAddressConfidential",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "21",
     "FieldShowCondition": "applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "MANDATORY"
   },
@@ -202,7 +225,7 @@
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "contactPreferences",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "22",
     "FieldShowCondition": "applicantsFL401.canYouProvideEmailAddress=\"Yes\"",
     "DisplayContext": "OPTIONAL"
   },
@@ -213,7 +236,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "phoneNumber",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -223,7 +246,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "isPhoneNumberConfidential",
-    "FieldDisplayOrder": "22",
+    "FieldDisplayOrder": "24",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -233,7 +256,7 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "solicitorDetails",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "READONLY"
   },
   {
@@ -243,26 +266,6 @@
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
     "ListElementCode": "representativeFirstName",
-    "FieldDisplayOrder": "24",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "10/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "representativeLastName",
-    "FieldDisplayOrder": "25",
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "10/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "amendApplicantsDetails",
-    "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorEmail",
     "FieldDisplayOrder": "26",
     "DisplayContext": "OPTIONAL"
   },
@@ -272,7 +275,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorTelephone",
+    "ListElementCode": "representativeLastName",
     "FieldDisplayOrder": "27",
     "DisplayContext": "OPTIONAL"
   },
@@ -282,27 +285,27 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorReference",
+    "ListElementCode": "solicitorEmail",
     "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorOrg.OrganisationID",
+    "ListElementCode": "solicitorTelephone",
     "FieldDisplayOrder": "29",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "10/11/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorOrg",
+    "ListElementCode": "solicitorReference",
     "FieldDisplayOrder": "30",
     "DisplayContext": "OPTIONAL"
   },
@@ -312,7 +315,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorOrg.OrganisationName",
+    "ListElementCode": "solicitorOrg.OrganisationID",
     "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL"
   },
@@ -322,7 +325,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "dxNumber",
+    "ListElementCode": "solicitorOrg",
     "FieldDisplayOrder": "32",
     "DisplayContext": "OPTIONAL"
   },
@@ -332,7 +335,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress",
+    "ListElementCode": "solicitorOrg.OrganisationName",
     "FieldDisplayOrder": "33",
     "DisplayContext": "OPTIONAL"
   },
@@ -342,7 +345,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.AddressLine1",
+    "ListElementCode": "dxNumber",
     "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL"
   },
@@ -352,7 +355,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.AddressLine2",
+    "ListElementCode": "solicitorAddress",
     "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL"
   },
@@ -362,7 +365,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.AddressLine3",
+    "ListElementCode": "solicitorAddress.AddressLine1",
     "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL"
   },
@@ -372,7 +375,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.PostTown",
+    "ListElementCode": "solicitorAddress.AddressLine2",
     "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL"
   },
@@ -382,7 +385,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.County",
+    "ListElementCode": "solicitorAddress.AddressLine3",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL"
   },
@@ -392,7 +395,7 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.PostCode",
+    "ListElementCode": "solicitorAddress.PostTown",
     "FieldDisplayOrder": "39",
     "DisplayContext": "OPTIONAL"
   },
@@ -402,8 +405,28 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendApplicantsDetails",
     "CaseFieldID": "applicantsFL401",
-    "ListElementCode": "solicitorAddress.Country",
+    "ListElementCode": "solicitorAddress.County",
     "FieldDisplayOrder": "40",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "solicitorAddress.PostCode",
+    "FieldDisplayOrder": "41",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "solicitorAddress.Country",
+    "FieldDisplayOrder": "42",
     "DisplayContext": "OPTIONAL"
   }
 ]
