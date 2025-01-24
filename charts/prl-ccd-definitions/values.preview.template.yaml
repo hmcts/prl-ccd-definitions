@@ -105,7 +105,6 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
-      image: hmctspublic.azurecr.io/ccd/data-store-api:pr-2517
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
