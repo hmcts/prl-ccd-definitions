@@ -2,13 +2,13 @@ Feature('Admin Web');
 
 Scenario('add all the roles @pipeline', ({ I }) => {
   I.loginToAdminConsole();
+  I.createRestrictedRole('caseworker-privatelaw-systemupdate','RESTRICTED');
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
   I.createRole('caseworker-privatelaw-courtadmin');
   I.createRole('caseworker-privatelaw-judge');
   I.createRole('caseworker-privatelaw-la');
   I.createRole('caseworker-privatelaw-superuser');
-  I.createRole('caseworker-privatelaw-systemupdate');
   I.createRole('caseworker-privatelaw-readonly');
   I.createRole('caseworker-privatelaw-bulkscan');
   I.createRole('caseworker-privatelaw-bulkscansystemupdate');
