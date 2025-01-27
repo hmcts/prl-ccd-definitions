@@ -193,7 +193,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabOtherPeopleRevisedInTheCaseLabel",
-    "FieldShowCondition": "otherPartyInTheCaseRevised!=\"\"",
+    "FieldShowCondition": "otherPeopleInTheCaseRevisedTable!=\"\"",
     "TabFieldDisplayOrder": 18
   },
   {
@@ -445,8 +445,19 @@
     "TabID": "ApplicationDetails",
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
+    "CaseFieldID": "newAllegationsOfHarmChildAbductionYesNo",
+    "FieldShowCondition": "newAllegationsOfHarmChildAbductionYesNo = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 41
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
     "CaseFieldID": "allegationsOfHarmRevisedChildAbductionTable",
-    "FieldShowCondition": "newAllegationsOfHarmYesNo=\"Yes\"",
+    "FieldShowCondition": "newAllegationsOfHarmChildAbductionYesNo=\"Yes\" AND newAllegationsOfHarmYesNo=\"Yes\"",
     "TabFieldDisplayOrder": 41
   },
   {
