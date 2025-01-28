@@ -161,6 +161,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "firstDateOfTheHearing",
     "EventElementLabel": "",
+    "EventHintText": "Date must exclude weekends and bank holidays",
     "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
@@ -221,6 +222,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "earliestHearingDate",
     "EventElementLabel": "Earliest hearing date",
+    "EventHintText": "Enter a date the hearing must be listed after",
     "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
@@ -233,6 +235,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "latestHearingDate",
     "EventElementLabel": "Latest hearing date",
+    "EventHintText": "Enter a date the hearing must be listed before",
     "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
@@ -762,7 +765,8 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "customDetails",
     "EventElementLabel": "Custom details",
-    "FieldDisplayOrder": "65",
+    "EventHintText": "*** HINT TEXT TO BE ADDED ***",
+    "FieldDisplayOrder": "68",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
@@ -786,7 +790,8 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "additionalHearingDetails",
     "EventElementLabel": "Additional hearing details",
-    "FieldDisplayOrder": "67",
+    "EventHintText": "*** HINT TEXT TO BE ADDED ***",
+    "FieldDisplayOrder": "70",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
