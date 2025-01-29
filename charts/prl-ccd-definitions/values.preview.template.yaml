@@ -105,7 +105,12 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
+      memoryRequests: 1Gi
+      devmemoryRequests: 1Gi
+      memoryLimits: 2Gi
+      devmemoryLimits: 2Gi
       environment:
+        ELASTIC_SEARCH_REQUEST_TIMEOUT: 16000
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
