@@ -34,6 +34,23 @@
     ]
   },
   {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "externalMessagesHint",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "messages",
@@ -47,6 +64,12 @@
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -153,6 +176,12 @@
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -169,6 +198,83 @@
           "caseworker-wa-task-configuration",
           "caseworker-privatelaw-externaluser-viewonly",
           "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "internalMessageAttachDocsList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "externalMessageAttachDocsList",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allocatedJudgeForSendAndReply",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
         ],
         "CRUD": "CRU"
       }
