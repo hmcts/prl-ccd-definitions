@@ -71,5 +71,30 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "03/12/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hwfProcessCaseUpdate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "citizen",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

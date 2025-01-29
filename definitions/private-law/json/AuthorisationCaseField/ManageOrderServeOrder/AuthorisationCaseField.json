@@ -1257,6 +1257,56 @@
     {
       "LiveFrom": "28/11/2023",
       "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "courtAdminText",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate",
+            "caseworker-privatelaw-superuser",
+            "caseworker-privatelaw-judge",
+           "caseworker-privatelaw-la"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-solicitor",
+            "courtnav",
+            "citizen"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    },
+    {
+      "LiveFrom": "28/11/2023",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "courtBailiffText",
+      "AccessControl": [
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-courtadmin",
+            "caseworker-privatelaw-systemupdate",
+            "caseworker-privatelaw-superuser",
+            "caseworker-privatelaw-judge",
+            "caseworker-privatelaw-la"
+          ],
+          "CRUD": "CRU"
+        },
+        {
+          "UserRoles": [
+            "caseworker-privatelaw-solicitor",
+            "courtnav",
+            "citizen"
+          ],
+          "CRUD": "R"
+        }
+      ]
+    },
+    {
+      "LiveFrom": "28/11/2023",
+      "CaseTypeID": "PRLAPPS",
       "CaseFieldID": "displayLegalRepOption",
       "AccessControl": [
         {
@@ -1278,5 +1328,31 @@
           "CRUD": "R"
         }
       ]
+    },
+    {
+      "LiveFrom": "26/07/2024",
+      "CaseTypeID": "PRLAPPS",
+      "CaseFieldID": "personallyServeRespondentsOptions",
+      "AccessControl": [
+           {
+             "UserRoles": [
+               "caseworker-privatelaw-courtadmin",
+               "caseworker-privatelaw-systemupdate",
+               "caseworker-privatelaw-superuser",
+               "caseworker-privatelaw-judge",
+               "caseworker-privatelaw-la"
+             ],
+             "CRUD": "CRU"
+           },
+           {
+             "UserRoles": [
+               "caseworker-privatelaw-solicitor",
+               "courtnav",
+               "caseworker-privatelaw-readonly",
+               "caseworker-wa-task-configuration"
+             ],
+             "CRUD": "R"
+           }
+         ]
     }
 ]

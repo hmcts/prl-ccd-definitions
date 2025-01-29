@@ -45,6 +45,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "newAllegationsOfHarmYesNo",
+    "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+     "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "newAllegationsOfHarmYesNo",
     "UserRole": "caseworker-wa-task-configuration",
     "CRUD": "CRU"
   },
@@ -59,6 +66,13 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "newAllegationsOfHarmDomesticAbuseYesNo",
+    "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "newAllegationsOfHarmDomesticAbuseYesNo",
     "UserRole": "caseworker-privatelaw-solicitor",
     "CRUD": "CRU"
   },
@@ -215,6 +229,13 @@
     "CaseFieldID": "newAllegationsOfHarmLabel",
     "UserRole": "caseworker-privatelaw-superuser",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "newAllegationsOfHarmChildAbuseYesNo",
+    "UserRole": "caseworker-privatelaw-externaluser-viewonly",
+    "CRUD": "R"
   },
   {
     "LiveFrom": "10/08/2021",
@@ -549,6 +570,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -675,6 +702,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -801,6 +834,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -927,6 +966,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -1053,6 +1098,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -1179,6 +1230,12 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "R"
       }
     ]
   },
@@ -1312,6 +1369,24 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "domesticBehaviours",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "childAbuseBehavioursDocmosis",
     "AccessControl": [
       {
         "UserRoles": [
