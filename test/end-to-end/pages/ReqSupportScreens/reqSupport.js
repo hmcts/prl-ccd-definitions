@@ -10,6 +10,7 @@ module.exports = {
     firstApplicantEle: '#flag-location-0',
     applicantSolEle: '#flag-location-1',
     nextBtn: 'Next',
+    reasonableAdjustmentEle: '//ccd-select-flag-type//label[contains(text(),"Reasonable adjustment")]',
     flagTypeEle: '#flag-location-0',
     requestExplanationEle: '#flagComments',
     submitBtn: 'Submit',
@@ -31,16 +32,18 @@ module.exports = {
     await I.click(this.fields.firstApplicantEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Reasonable adjustment');
-    await I.click('Reasonable adjustment');
+    await I.waitForElement(this.fields.reasonableAdjustmentEle);
+    await I.click(this.fields.reasonableAdjustmentEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('I need documents in an alternative format');
-    await I.click('I need documents in an alternative format');
+    const alternameDocFormatEle = '//ccd-select-flag-type//label[contains(text(),"I need documents in an alternative format")]';
+    await I.waitForElement(alternameDocFormatEle);
+    await I.click(alternameDocFormatEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Documents in large print');
-    await I.click('Documents in large print');
+    const documentInLargePrintEle = '//ccd-select-flag-type//label[contains(text(),"Documents in large print")]';
+    await I.waitForElement(documentInLargePrintEle);
+    await I.click(documentInLargePrintEle);
     await I.click(this.fields.nextBtn);
 
     await I.waitForText('Tell us more about the request (optional)');
@@ -59,16 +62,18 @@ module.exports = {
     await I.click(this.fields.applicantSolEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Reasonable adjustment');
-    await I.click('Reasonable adjustment');
+    await I.waitForElement(this.fields.reasonableAdjustmentEle);
+    await I.click(this.fields.reasonableAdjustmentEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('I need help with forms');
-    await I.click('I need help with forms');
+    const needHelpWithFormsEle = '//ccd-select-flag-type//label[contains(text(),"I need help with forms")]';
+    await I.waitForElement(needHelpWithFormsEle);
+    await I.click(needHelpWithFormsEle);
     await I.click(this.fields.nextBtn);
 
-    await I.waitForText('Support filling in forms');
-    await I.click('Support filling in forms');
+    const supportFillingFormsEle = '//ccd-select-flag-type//label[contains(text(),"Support filling in forms")]';
+    await I.waitForElement(supportFillingFormsEle);
+    await I.click(supportFillingFormsEle);
     await I.click(this.fields.nextBtn);
 
     await I.waitForText('Tell us more about the request (optional)');

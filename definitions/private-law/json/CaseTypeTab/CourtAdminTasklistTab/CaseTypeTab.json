@@ -1,0 +1,26 @@
+[
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "CATasks",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "TabLabel": "CA Tasks",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "taskListLabel",
+    "TabShowCondition": "[STATE] = \"AWAITING_SUBMISSION_TO_HMCTS\"",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "25/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "CATasks",
+    "TabLabel": "CA Tasks",
+    "TabDisplayOrder": 0,
+    "CaseFieldID": "taskList",
+    "TabFieldDisplayOrder": 2,
+    "FieldShowCondition": "taskList = \"DO_NOT_SHOW\"",
+    "Comment": "taskListLabel is defined as '${taskList}' thus taskList must be present on tab"
+  }
+]

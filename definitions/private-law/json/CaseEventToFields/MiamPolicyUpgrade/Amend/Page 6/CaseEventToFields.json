@@ -1,0 +1,84 @@
+[
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "submissionRequiredFieldsInfo5",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "mpuClaimingExemptionMiam=\"Yes\" AND mpuApplicantAttendedMiam=\"No\" AND mpuChildInvolvedInMiam=\"No\" AND mpuExemptionReasons CONTAINS \"mpuPreviousMiamAttendance\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "miamExemptionLabel3",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuPreviousMiamAttendanceReason",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuDocFromDisputeResolutionProvider",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_1\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuTypeOfPreviousMiamAttendanceEvidence",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuCertificateByMediator",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND mpuTypeOfPreviousMiamAttendanceEvidence=\"miamCertificate\""
+  },
+  {
+    "LiveFrom": "03/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendMiamPolicyUpgrade",
+    "CaseFieldID": "mpuMediatorDetails",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "mpuPreviousMiamAttendanceReason=\"miamPolicyUpgradePreviousAttendance_Value_2\" AND mpuTypeOfPreviousMiamAttendanceEvidence=\"miamAttendanceDetails\""
+  }
+]

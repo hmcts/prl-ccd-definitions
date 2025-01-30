@@ -917,6 +917,15 @@
   {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "ID": "existingProceedingsWithDoc",
+    "Label": "Other proceedings",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ProceedingDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "ID": "labelTheApplicants",
     "Label": "**The Applicant(s)**",
     "FieldType": "Label",
@@ -1466,6 +1475,14 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "c100ConfidentialityDisclaimerLabel1",
     "Label": "## Confidentiality Statement\n\nWhen completing this form, you have the option to mark information as confidential. \n\nYou should do this if you wish to keep certain information private.\n\n### Who will have access to the confidential information\n\nIf you mark information as confidential, it will only be accessible to:\n- the court\n- the judiciary\n- the Children and Family Court Advisory and Support Service (CAFCASS)\n- CAFCASS Cymru\n\nThe information will not be revealed to anyone else, unless ordered by the court.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100SelectFamilyCourtLabel1",
+    "Label": "## Select the family court",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2418,7 +2435,8 @@
     "HintText": "You must select 'No' to continue with your application.",
     "FieldType": "YesOrNo",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "Y",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -3038,14 +3056,14 @@
     "FieldType": "FixedList",
     "FieldTypeParameter": "CaseCreatedByEnum",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "20/11/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "additionalApplicationsApplyingFor",
     "Label": "What are you applying for?",
-    "FieldType": "MultiSelectList",
+    "FieldType": "FixedRadioList",
     "FieldTypeParameter": "AdditionalApplicationTypeEnum",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -3219,6 +3237,24 @@
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "taskListVersion",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "17/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isInHearingState",
+    "Label": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "isNonWorkAllocationEnabledCourtSelected",
     "Label": " ",
     "FieldType": "Text",
     "SecurityClassification": "Public",

@@ -39,7 +39,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "componentLauncher",
     "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "CRU"
+    "CRUD": "R"
   },
   {
     "LiveFrom": "24/11/2022",
@@ -54,6 +54,48 @@
     "CaseFieldID": "componentLauncher",
     "UserRole": "caseworker-privatelaw-externaluser-viewonly",
     "CRUD": "R"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "judge",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "allocated-magistrate",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "senior-tribunal-caseworker",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "tribunal-caseworker",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "ctsc",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "24/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "componentLauncher",
+    "UserRole": "hearing-centre-admin",
+    "CRUD": "CRU"
   },
   {
     "LiveFrom": "24/11/2022",
@@ -2423,5 +2465,23 @@
     "CaseFieldID": "draftOrders",
     "UserRole": "ctsc-team-leader",
     "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "fm5Statements",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   }
 ]

@@ -7,7 +7,9 @@ module.exports = {
     submit: 'button[type="submit"]',
     applicantAddress: 'applicants_0_address_address',
     applicantAddressFL401: 'applicantsFL401_address_address',
-    organisation: 'AAT'
+    organisation: 'AAT',
+    c100UploadC8RefugeForm: 'applicants_0_refugeConfidentialityC8Form',
+    fl401UploadC8RefugeForm: 'applicantsFL401_refugeConfidentialityC8Form'
   },
 
   async triggerEvent() {
@@ -24,8 +26,7 @@ module.exports = {
   },
 
   async fillApplicantsPage() {
-    await I.waitForText('Add new');
-    await I.retry(retryCount).click('Add new');
+    await I.wait('6');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_firstName"]', 'Applicant Firstname');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_lastName"]', 'Applicant Lastname');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-day"]', '10');
@@ -33,6 +34,9 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '1990');
     await I.retry(retryCount).checkOption('//input[@id="applicants_0_gender-male"]');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_placeOfBirth"]', 'London');
+    await I.retry(retryCount).checkOption('//input[@id="applicants_0_liveInRefuge_Yes"]');
+    await I.retry(retryCount).attachDocument(this.fields.c100UploadC8RefugeForm);
+    await I.wait('7');
     await I.selectPostCodeLookupAddress(this.fields.applicantAddress, 'B11LS');
     await I.retry(retryCount).checkOption('//input[@id="applicants_0_isAddressConfidential_Yes"]');
     await I.retry(retryCount).checkOption('//input[@id="applicants_0_isAtAddressLessThan5Years_Yes"]');
@@ -47,8 +51,8 @@ module.exports = {
     await I.retry(retryCount).fillField('//input[@id="applicants_0_representativeLastName"]', 'Robinson');
     await I.retry(retryCount).fillField('//input[@id="applicants_0_solicitorEmail"]', 'test@example.com');
     await this.searchAndSelectGivenRegisteredOrganisation();
-
     await I.runAccessibilityTest();
+    await I.waitForText('Add new');
     await I.wait('2');
     await I.retry(retryCount).click(this.fields.submit);
   },
@@ -64,6 +68,9 @@ module.exports = {
     await I.wait('1');
     await I.retry(retryCount).fillField('//input[@id="dateOfBirth-year"]', '2000');
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_gender-male"]');
+    await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_liveInRefuge_Yes"]');
+    await I.retry(retryCount).attachDocument(this.fields.fl401UploadC8RefugeForm);
+    await I.wait('7');
     await I.selectPostCodeLookupAddress(this.fields.applicantAddressFL401, 'B11LS');
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_isAddressConfidential_Yes"]');
     await I.retry(retryCount).checkOption('//input[@id="applicantsFL401_canYouProvideEmailAddress_Yes"]');

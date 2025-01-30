@@ -146,6 +146,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "01/10/20223",
+    "ID": "MessageHistory",
+    "ListElementCode": "internalMessageAttachDocs",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "10/11/2021",
     "ID": "MessageHistory",
     "ListElementCode": "messageSubject",
@@ -182,16 +192,6 @@
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "internalMessageWhoToSendTo=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "MessageHistory",
-    "ListElementCode": "externalMessageWhoToSendTo",
-    "ElementLabel": "Who to send to",
-    "FieldType": "Text",
-    "SecurityClassification": "Public",
-    "Searchable": "N",
-    "FieldShowCondition": "externalMessageWhoToSendTo=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "10/11/2021",
@@ -365,6 +365,15 @@
   {
     "LiveFrom": "10/11/2021",
     "ID": "Message",
+    "ListElementCode": "messageIdentifier",
+    "FieldType": "Text",
+    "ElementLabel": "messageIdentifier",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "ID": "Message",
     "ListElementCode": "latestMessage",
     "FieldType": "TextArea",
     "ElementLabel": "Latest message",
@@ -471,8 +480,9 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "externalMessageWhoToSendTo",
-    "ElementLabel": "To",
+    "ElementLabel": " ",
     "FieldType": "DynamicMultiSelectList",
+    "FieldShowCondition": "externalMessageWhoToSendTo=\"DO_NOT_SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -510,15 +520,6 @@
     "LiveFrom": "31/03/2023",
     "ID": "Message",
     "ListElementCode": "recipientEmailAddresses",
-    "FieldType": "Text",
-    "ElementLabel": "Recipient email addresses",
-    "SecurityClassification": "Public",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "ID": "Message",
-    "ListElementCode": "cafcassOrCafcasscCymruEmail",
     "FieldType": "Text",
     "ElementLabel": "Recipient email addresses",
     "SecurityClassification": "Public",
@@ -567,6 +568,16 @@
     "ListElementCode": "selectedDocument",
     "FieldType": "Document",
     "ElementLabel": "Document",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/10/20223",
+    "ID": "Message",
+    "ListElementCode": "internalMessageAttachDocs",
+    "ElementLabel": "Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Document",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -696,11 +707,56 @@
     "FieldShowCondition": "hearingsLink=\"DO_NOT_SHOW\""
   },
   {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "yourMessageLabel",
+    "FieldType": "Label",
+    "ElementLabel": "**Your message**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "01/10/2023",
     "ID": "SendAndReplyDynamicDoc",
     "ListElementCode": "submittedDocsRefList",
     "ElementLabel": "Document",
     "FieldType": "DynamicList",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "Message",
+    "ListElementCode": "sendMessageToCafcass",
+    "ElementLabel": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "ID": "Message",
+    "ListElementCode": "sendMessageToOtherParties",
+    "ElementLabel": " ",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "cafcassEmailAddress",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "ID": "Message",
+    "ListElementCode": "otherPartiesEmailAddress",
+    "FieldType": "Text",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
