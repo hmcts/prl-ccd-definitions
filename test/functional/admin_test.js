@@ -5,7 +5,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.createRestrictedRole('caseworker-privatelaw-systemupdate','RESTRICTED');
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
-  I.createRole('caseworker-privatelaw-courtadmin');
+  I.createRestrictedRole('caseworker-privatelaw-courtadmin','RESTRICTED');
   I.createRole('caseworker-privatelaw-judge');
   I.createRole('caseworker-privatelaw-la');
   I.createRole('caseworker-privatelaw-superuser');
