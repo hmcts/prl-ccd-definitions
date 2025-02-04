@@ -2066,9 +2066,9 @@
   {
     "LiveFrom": "26/10/2024",
     "CaseTypeID": "PRLAPPS",
-    "ID": "create-case-privatelaw-bs",
+    "ID": "create-case-privatelaw-bs-c100",
     "Name": "Create case from bulk scan",
-    "Description": "Allow bulk scan to create case from ocr data",
+    "Description": "Allow bulk scan to create a c100 case from ocr data",
     "DisplayOrder": 38,
     "PostConditionState": "SUBMITTED_PAID",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
@@ -2076,7 +2076,24 @@
     "EndButtonLabel": "Submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "26/10/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "create-case-privatelaw-bs-fl401",
+    "Name": "Create case from bulk scan",
+    "Description": "Allow bulk scan to create a fl401 case from ocr data",
+    "DisplayOrder": 39,
+    "PostConditionState": "SUBMITTED_PAID",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
+    "Publish": "True"
   }
 ]
 
