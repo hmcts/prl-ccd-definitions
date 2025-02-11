@@ -17151,7 +17151,7 @@
       }
     ]
   },
-  {
+    {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isNonWorkAllocationEnabledCourtSelected",
@@ -17171,6 +17171,27 @@
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "21/11/2024",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "nextHearingDate",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
