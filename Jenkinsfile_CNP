@@ -4,8 +4,6 @@
 String product = "prl"
 String component = "ccd-definitions"
 
-def channel = '#prl-tech-notifications'
-
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 def secrets = [
@@ -64,7 +62,6 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
-  enableSlackNotifications(channel)
 
   onPR{
     env.ENVIRONMENT="preview"
@@ -73,10 +70,12 @@ withPipeline("nodejs", product, component) {
     env.ENVIRONMENT="aat"
   }
 
-  afterAlways('test') {}
 
   before('highleveldatasetup:preview') {
     yarnBuilder.yarn('setup')
+    env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java";
+    env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api";
+    env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
     stageWithAgent('Generate Family Private Law Case config - preview', product) {
       yarnBuilder.yarn('generate-excel-preview')
     }
@@ -96,7 +95,7 @@ withPipeline("nodejs", product, component) {
   before('smoketest:preview') {
     yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('playwrightsetup')
-    yarnBuilder.yarn('generate-excel-all')
+    //yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
