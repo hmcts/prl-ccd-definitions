@@ -333,14 +333,13 @@ prl-cos:
   java:
     releaseNameOverride: ${SERVICE_NAME}-prl-cos
     image: hmctspublic.azurecr.io/prl/cos:latest
+    ingressHost: prl-cos-${SERVICE_FQDN}
     environment:
-      PAY_URL: http://payment-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
-      PAY_CALLBACK_URL: https://prl-cos-pr-2997.preview.platform.hmcts.net/service-request-update
-      FEE_URL: http://fees-register-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
-      IDAM_CLIENT_REDIRECT_URI: https://prl-cos-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal/oauth2/callback
-      CORE_CASE_DATA_API_URL: http://prl-ccd-definitions-pr-2578-ccd-data-store-api
-      CCD_CASE_DOCS_AM_API: http://prl-ccd-definitions-pr-2578-cdam
-      ACA_SERVICE_API_BASEURL: http://prl-ccd-definitions-pr-2578-aac-manage-case-assignment
-      BUNDLE_URL: http://prl-ccd-definitions-pr-2578-em-ccdorc
+      PAY_CALLBACK_URL: https://prl-cos-${SERVICE_FQDN}/service-request-update
+      IDAM_CLIENT_REDIRECT_URI: https://prl-cos-${SERVICE_FQDN}/oauth2/callback
+      CORE_CASE_DATA_API_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
+      ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
+      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
