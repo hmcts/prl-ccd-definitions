@@ -71,36 +71,24 @@ withPipeline("nodejs", product, component) {
   }
 
 
-  before('highleveldatasetup:preview') {
+  before('highleveldatasetup') {
     yarnBuilder.yarn('setup')
-    env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java";
-    env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api";
-    env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
-    stageWithAgent('Generate Family Private Law Case config - preview', product) {
-      yarnBuilder.yarn('generate-excel-preview')
-    }
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
-  }
-
-  before('highleveldatasetup:aat') {
-    yarnBuilder.yarn('setup')
-
+    onPR{
+      env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java"
+      env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api";
+      env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
+      env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
+    };
     stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
+
   }
 
   before('smoketest:preview') {
-    yarnBuilder.yarn('reset-ccd-submodule')
-    yarnBuilder.yarn('playwrightsetup')
-    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
-    yarnBuilder.yarn('test:uploadFile')
   }
 
   afterAlways('smoketest:preview') {
