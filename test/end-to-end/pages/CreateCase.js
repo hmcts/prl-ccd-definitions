@@ -227,7 +227,7 @@ module.exports = {
     global.logCallingFunction();
     await this.clickCreateCase();
     await this.fillFormAndSubmit();
-    await this.selectTypeOfApplicationC100();    
+    await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await this.fillSolicitorFamilyCourt();
     await this.fillSolicitorCaseName();
