@@ -30,6 +30,14 @@ class GeneralHelper extends Helper {
     await Playwright.wait(historyResponseTime);
   }
 
+  async amOnApplicationPageAfterSuccessCaseCreation() {
+    const applicationResponseTime = 4;
+    const { Playwright } = this.helpers;
+    await Playwright.wait(applicationResponseTime);
+    await Playwright.waitForText('Application');
+    await Playwright.wait(applicationResponseTime);
+  }
+
   async selectFromList(list, value) {
     const { Playwright } = this.helpers;
     await Playwright.waitForElement(list);
