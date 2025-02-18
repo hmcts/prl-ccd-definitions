@@ -50,7 +50,7 @@ module.exports = {
     await I.waitForText('Select the family court');
     await I.waitForElement(this.fields.submitCountyCourtSelection);
     await I.retry(retryCount).selectOption(this.fields.submitCountyCourtSelection
-    , 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
+      , 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
     await I.seeElement(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
 
@@ -66,7 +66,7 @@ module.exports = {
     await this.selectTypeOfApplicationC100();
     await this.fillSolicitorApplicationPageC100();
     await I.submitEvent();
-    await I.amOnHistoryPageWithSuccessNotification();
+    await I.amOnApplicationPageAfterSuccessCaseCreation();
     const caseId = normalizeCaseId(await I.grabTextFrom('.markdown > h2:nth-child(3)'));
     return caseId;
   }
