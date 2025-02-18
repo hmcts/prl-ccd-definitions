@@ -836,7 +836,7 @@
     "Name": "Payment failure",
     "DisplayOrder": 44,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "SUBMITTED_NOT_PAID",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -2062,54 +2062,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\""
-  },
-  {
-    "LiveFrom": "26/07/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "enableUpdateHearingActualTask",
-    "Name": "WA update hearing actual task",
-    "Description": "WA Event trigger for update hearing actual task",
-    "DisplayOrder": 38,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "EndButtonLabel": "Submit",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "Publish": "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "26/07/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "enableRequestSolicitorOrderTask",
-    "Name": "WA request solicitor order",
-    "Description": "WA Event trigger for request solicitor order task",
-    "DisplayOrder": 38,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "EndButtonLabel": "Submit",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "Publish": "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "26/07/2022",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "hmcHearingCompleted",
-    "Name": "WA complete hearing actuals",
-    "Description": "WA Event trigger for completing update hearing actuals task",
-    "DisplayOrder": 38,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "EndButtonLabel": "Submit",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "Publish": "True",
-    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
   }
 ]
 
