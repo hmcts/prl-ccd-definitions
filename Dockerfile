@@ -5,7 +5,7 @@ USER hmcts
 COPY --chown=hmcts:hmcts package.json yarn.lock ./
 COPY /definitions/private-law/xlsx /
 ADD ./config "/config"
-RUN yarn workspaces focus --all --production  \
+RUN yarn install --mode=production  \
     && rm -rf $(yarn cache clean)
 COPY index.js ./
 ENV NODE_CONFIG_DIR="/config"
