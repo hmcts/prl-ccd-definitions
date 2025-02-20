@@ -5,7 +5,9 @@ USER hmcts
 COPY --chown=hmcts:hmcts package.json yarn.lock ./
 COPY /definitions/private-law/xlsx /
 ADD ./config "/config"
-RUN yarn install --mode=production  \
+RUN yarn config set httpProxy "$http_proxy" \
+    && yarn config set httpsProxy "$https_proxy" \
+    && yarn workspaces focus --all --production \
     && rm -rf $(yarn cache clean)
 COPY index.js ./
 ENV NODE_CONFIG_DIR="/config"
