@@ -319,7 +319,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:prl-cos-pr-3029-java-85bf784d65-c2b2v
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     environment:
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
