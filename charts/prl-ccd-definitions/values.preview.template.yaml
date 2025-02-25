@@ -317,10 +317,9 @@ aac-manage-case-assignment:
       autoscaling:
         enabled: false
 
-# Point the prl-cos image to pr-3036
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3036
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
