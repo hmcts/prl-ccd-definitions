@@ -321,6 +321,7 @@ prl-cos:
   java:
     image: hmctspublic.azurecr.io/prl/cos:pr-3036
     ingressHost: ${SERVICE_FQDN}
+    imagePullPolicy: Always
     environment:
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
       IDAM_CLIENT_REDIRECT_URI: https://${SERVICE_FQDN}/oauth2/callback
