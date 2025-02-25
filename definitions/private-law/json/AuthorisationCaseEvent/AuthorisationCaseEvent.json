@@ -432,5 +432,53 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "25/02/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "processPaymentForBulkscan",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "25/02/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "processHwfPaymentForBulkscan",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
