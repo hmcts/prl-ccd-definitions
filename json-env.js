@@ -17,7 +17,7 @@ if (!envConfig.cosUrl && envs.environments.includes(environment)) {
 
 // Override with environment variables for preview
 if (environment === 'preview') {
-  envConfig.cosUrl = process.env.CCD_DEF_COS_URL;
+  envConfig.cosUrl = 'http://prl-cos-pr-3018-java';
   envConfig.ccdUrl = process.env.CCD_DEF_CCD_URL;
   envConfig.aacUrl = process.env.CCD_DEF_AAC_URL;
 }
