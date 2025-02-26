@@ -73,3 +73,28 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 3. Run _yarn reset-ccd-submodule_ in local
 4. Now you can run the yarn commands locally.
 5. Also the file to update the environment urls is now env.json (env.json is read by json-env.js)
+
+## Testing with prl-cos
+
+### If your ticket doesn’t require changes in the prl-cos API
+
+1. No changes are needed in this repository, and everything will be set automatically.
+
+### If your ticket includes changes in the prl-cos API
+
+1. Update the following section in the [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) file:
+    ```yaml
+    prl-cos:
+      java:
+        image: hmctspublic.azurecr.io/prl/cos:pr-3036 # Replace 3036 with the PR number of the prl-cos update you want to test against this repo.
+    ```
+2. If you make additional changes to the cos pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
+    ```bash
+    kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
+    ```
+3. After testing, make sure to revert the above change to use the latest prl-cos image:
+    ```yaml
+    prl-cos:
+      java:
+        image: hmctspublic.azurecr.io/prl/cos:latest
+    ```
