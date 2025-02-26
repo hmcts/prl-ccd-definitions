@@ -319,8 +319,14 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:latest
+    image: hmctspublic.azurecr.io/prl/cos:pr-3029
     ingressHost: ${SERVICE_FQDN}
+    imagePullPolicy: Always
+    #Below settings are copied from prl-cos preview values, needs review.
+    devmemoryRequests: 1Gi
+    devcpuRequests: 1000m
+    devmemoryLimits: 4Gi
+    devcpuLimits: 2000m
     environment:
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
       IDAM_CLIENT_REDIRECT_URI: https://${SERVICE_FQDN}/oauth2/callback
