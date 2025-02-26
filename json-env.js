@@ -16,7 +16,7 @@ if (!envConfig.cosUrl && envs.environments.includes(environment)) {
 }
 
 // Override with environment variables for preview
-if (environment === 'preview') {
+if (environment === 'preview' && process.env.CCD_DEF_COS_URL != null) {
   envConfig.cosUrl = process.env.CCD_DEF_COS_URL;
   envConfig.ccdUrl = process.env.CCD_DEF_CCD_URL;
   envConfig.aacUrl = process.env.CCD_DEF_AAC_URL;
