@@ -326,3 +326,23 @@ aac-manage-case-assignment:
       MANAGE_CASE_DEFAULT_LOG_LEVEL: INFO
       autoscaling:
         enabled: false
+
+prl-cos:
+  java:
+    image: hmctspublic.azurecr.io/prl/cos:latest
+    ingressHost: ${SERVICE_FQDN}
+    imagePullPolicy: Always
+    #Below settings are copied from prl-cos preview values, needs review.
+    devmemoryRequests: 1Gi
+    devcpuRequests: 1000m
+    devmemoryLimits: 4Gi
+    devcpuLimits: 2000m
+    environment:
+      PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
+      IDAM_CLIENT_REDIRECT_URI: https://${SERVICE_FQDN}/oauth2/callback
+      CORE_CASE_DATA_API_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
+      ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
+      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
+      APP_ENV: "preview"
