@@ -1,10 +1,10 @@
 #!groovy
+import uk.gov.hmcts.contino.GithubAPI
+
 @Library("Infrastructure")
 
 String product = "prl"
 String component = "ccd-definitions"
-
-def channel = '#prl-tech-notifications'
 
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
@@ -61,10 +61,13 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
   ]
 }
 
+def checkForEnableTestsLabel(branch_name) {
+  return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
+}
+
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
-  enableSlackNotifications(channel)
 
   onPR{
     env.ENVIRONMENT="preview"
@@ -73,35 +76,33 @@ withPipeline("nodejs", product, component) {
     env.ENVIRONMENT="aat"
   }
 
-  afterAlways('test') {}
 
-  before('highleveldatasetup:preview') {
+  before('highleveldatasetup') {
     yarnBuilder.yarn('setup')
-    stageWithAgent('Generate Family Private Law Case config - preview', product) {
-      yarnBuilder.yarn('generate-excel-preview')
+    onPR{
+      env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java"
+      env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api"
+      env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
+      env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
     }
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
-  }
-
-  before('highleveldatasetup:aat') {
-    yarnBuilder.yarn('setup')
-
+    onMaster{
+      env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
+      env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
+      env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
+      env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
+    }
     stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
     }
+
   }
 
   before('smoketest:preview') {
-    yarnBuilder.yarn('reset-ccd-submodule')
     yarnBuilder.yarn('playwrightsetup')
-    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
-    yarnBuilder.yarn('test:uploadFile')
   }
 
   afterAlways('smoketest:preview') {
@@ -110,26 +111,22 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:aat') {
-    yarnBuilder.yarn('setup')
     yarnBuilder.yarn('playwrightsetup')
-    yarnBuilder.yarn('generate-excel-all')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-    env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
-    env.XUI_WEB_URL="https://manage-case.aat.platform.hmcts.net"
-    env.XUI_ORG_WEB_URL="https://manage-org.aat.platform.hmcts.net"
-    env.CCD_FILE_NAME="ccd-config-PRL-aat.xlsx"
-
-    yarnBuilder.yarn('test:uploadFile')
   }
-  
+
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
   }
 
   before('functionalTest:preview') {
-    env.PRL_CCD_DEF_URL = "https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases"
-    build job: 'HMCTS_j_to_z/prl-e2e-tests/master', wait: true, propogate: true, parameters: [booleanParam(name: "skipCitizenTests", value: true), string(name: "MANAGE_CASES_BASE_URL", value: env.PRL_CCD_DEF_URL)]
+    if (checkForEnableTestsLabel(env.BRANCH_NAME)) {
+      env.PRL_CCD_DEF_URL = "https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases"
+      build job: 'HMCTS_j_to_z/prl-e2e-tests/master', wait: true, propogate: true, parameters: [booleanParam(name: "skipCitizenTests", value: true), string(name: "MANAGE_CASES_BASE_URL", value: env.PRL_CCD_DEF_URL)]
+    } else {
+    echo "Skipping Functional Tests: 'enable-prl-e2e-tests' label is absent"
+    }
   }
   afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
