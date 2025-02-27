@@ -24,13 +24,13 @@ module.exports = () => {
       I.fillField('role', role);
       I.click('Create');
     },
-    createRestrictedRole(role, classification) {
-      I.click('Manage User Roles');
-      I.click('Create User Role');
-      I.fillField('role', role);
-      I.selectOption('classification', classification);
-      I.click('Create');
-    },
+    createRestrictedRole(role,classification) {
+          I.click('Manage User Roles');
+          I.click('Create User Role');
+          I.fillField('role', role);
+          I.selectOption('classification', classification);
+          I.click('Create');
+        },
     uploadConfig(path) {
       I.click('Import Case Definition');
       I.wait('10');
