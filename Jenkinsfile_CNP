@@ -1,4 +1,6 @@
 #!groovy
+import uk.gov.hmcts.contino.GithubAPI
+
 @Library("Infrastructure")
 
 String product = "prl"
@@ -111,7 +113,7 @@ withPipeline("nodejs", product, component) {
   before('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
   }
-  
+
   afterAlways('smoketest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
