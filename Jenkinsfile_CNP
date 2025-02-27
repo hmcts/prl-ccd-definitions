@@ -1,4 +1,6 @@
 #!groovy
+import uk.gov.hmcts.contino.GithubAPI
+
 @Library("Infrastructure")
 
 String product = "prl"
@@ -59,6 +61,10 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
   ]
 }
 
+def checkForEnableTestsLabel(branch_name) {
+  return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
+}
+
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
@@ -76,7 +82,7 @@ withPipeline("nodejs", product, component) {
     onPR{
       env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java"
-      env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api";
+      env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api"
       env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
       env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
@@ -105,6 +111,7 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:aat') {
+    yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
   }
 
@@ -114,8 +121,12 @@ withPipeline("nodejs", product, component) {
   }
 
   before('functionalTest:preview') {
-    env.PRL_CCD_DEF_URL = "https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases"
-    build job: 'HMCTS_j_to_z/prl-e2e-tests/master', wait: true, propogate: true, parameters: [booleanParam(name: "skipCitizenTests", value: true), string(name: "MANAGE_CASES_BASE_URL", value: env.PRL_CCD_DEF_URL)]
+    if (checkForEnableTestsLabel(env.BRANCH_NAME)) {
+      env.PRL_CCD_DEF_URL = "https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases"
+      build job: 'HMCTS_j_to_z/prl-e2e-tests/master', wait: true, propogate: true, parameters: [booleanParam(name: "skipCitizenTests", value: true), string(name: "MANAGE_CASES_BASE_URL", value: env.PRL_CCD_DEF_URL)]
+    } else {
+    echo "Skipping Functional Tests: 'enable-prl-e2e-tests' label is absent"
+    }
   }
   afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
