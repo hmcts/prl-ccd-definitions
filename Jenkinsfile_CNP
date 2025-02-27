@@ -111,6 +111,7 @@ withPipeline("nodejs", product, component) {
   }
 
   before('smoketest:aat') {
+    yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
   }
 
