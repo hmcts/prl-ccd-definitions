@@ -1,16 +1,6 @@
 tags:
   ccd-pr: true
 
-nodejs:
-  # Don't modify below here
-  ingressHost: ${SERVICE_FQDN}
-  devmemoryRequests: 512Mi
-  devcpuRequests: 500m
-  devmemoryLimits: 2Gi
-  devcpuLimits: 1000m
-  autoscaling:
-    enabled: false
-
 idam-pr:
   releaseNameOverride: ${SERVICE_NAME}-idam-pr
   enabled: true
