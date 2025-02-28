@@ -132,6 +132,32 @@
   {
     "LiveFrom": "01/01/2025",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isEdgeCase",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-wa-task-configuration",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "dssCaseData",
     "AccessControl": [
       {
