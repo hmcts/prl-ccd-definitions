@@ -21,5 +21,29 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "04/03/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "submitBulkScanCase",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "ctsc-team-leader",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-bulkscansystemupdate",
+          "caseworker-privatelaw-bulkscan",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
