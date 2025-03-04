@@ -494,6 +494,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-other-people-party-details",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -510,6 +511,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-other-people-party-details",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -834,7 +836,7 @@
     "Name": "Payment failure",
     "DisplayOrder": 44,
     "PreConditionState(s)": "*",
-    "PostConditionState": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -1547,6 +1549,7 @@
     "Description": "HMC Case Update to Prepare for Hearing",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/validate-hearing-state/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
@@ -1674,7 +1677,8 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   },
   {
     "LiveFrom": "01/02/2023",
@@ -1880,7 +1884,7 @@
     "Name": "Statement of service",
     "Description": "Event to provide personal service to the parties",
     "DisplayOrder": 63,
-    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING",
+    "PreConditionState(s)": "JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/Statement-of-service-about-to-start",
@@ -2058,6 +2062,54 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "enableUpdateHearingActualTask",
+    "Name": "WA update hearing actual task",
+    "Description": "WA Event trigger for update hearing actual task",
+    "DisplayOrder": 38,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "enableRequestSolicitorOrderTask",
+    "Name": "WA request solicitor order",
+    "Description": "WA Event trigger for request solicitor order task",
+    "DisplayOrder": 38,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "26/07/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "hmcHearingCompleted",
+    "Name": "WA complete hearing actuals",
+    "Description": "WA Event trigger for completing update hearing actuals task",
+    "DisplayOrder": 38,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
   }
 ]
 

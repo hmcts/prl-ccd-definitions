@@ -262,7 +262,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "applicationTabAttendingTheHearingLabel",
-    "FieldShowCondition": "isWelshNeeded!=\"\"",
+    "FieldShowCondition": "isWelshNeeded!=\"\" OR isCourtNavCase=\"Yes\"",
     "TabFieldDisplayOrder": 25
   },
   {
@@ -273,7 +273,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "attendingTheHearingTable",
-    "FieldShowCondition": "isWelshNeeded!=\"\"",
+    "FieldShowCondition": "isWelshNeeded!=\"\" OR isCourtNavCase=\"Yes\"",
     "TabFieldDisplayOrder": 26
   },
   {
@@ -295,7 +295,7 @@
     "TabLabel": "Application",
     "TabDisplayOrder": 7,
     "CaseFieldID": "interpreterNeeds",
-    "FieldShowCondition": "isWelshNeeded!=\"\"",
+    "FieldShowCondition": "isWelshNeeded!=\"\" OR isCourtNavCase=\"Yes\"",
     "TabFieldDisplayOrder": 28
   },
   {
@@ -385,5 +385,16 @@
     "CaseFieldID": "isHomeEntered",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "TabFieldDisplayOrder": 36
+  },
+  {
+    "LiveFrom": "08/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "Channel": "CaseWorker",
+    "TabID": "FL401ApplicationDetails",
+    "TabLabel": "Application",
+    "TabDisplayOrder": 7,
+    "CaseFieldID": "isCourtNavCase",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "TabFieldDisplayOrder": 25
   }
 ]
