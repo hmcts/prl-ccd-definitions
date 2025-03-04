@@ -60,6 +60,22 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\"",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "04/03/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "submitBulkScanCase",
+    "Name": "Submit case - bulk scan",
+    "Description": "Event to submit a bulk scan created case",
+    "DisplayOrder": 42,
+    "PreConditionState(s)": "SUBMITTED_NOT_PAID",
+    "PostConditionState": "SUBMITTED_PAID",
+    "SecurityClassification": "Public",
+    "EndButtonLabel": "Submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND caseCreatedBy=\"BULK_SCAN\"",
+    "Publish": "True"
   }
 ]
 
