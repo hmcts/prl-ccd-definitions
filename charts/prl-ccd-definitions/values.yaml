@@ -1,11 +1,3 @@
-nodejs:
-  image: hmctspublic.azurecr.io/prl/ccd-definitions:latest
-  applicationPort: 3000
-  autoscaling: # Default is false
-    enabled: true
-    maxReplicas: 5 # Required setting
-    targetCPUUtilizationPercentage: 80 # Default is 80% target CPU utilization
-
 idam-pr:
   enabled: false
 
@@ -20,3 +12,6 @@ ccd-case-document-am-api:
 
 aac-manage-case-assignment:
   enabled: false
+
+prl-cos:
+  enabled: true
