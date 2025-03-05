@@ -81,7 +81,7 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('setup')
     onPR{
       env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-      env.CCD_DEF_COS_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-java"
+      env.CCD_DEF_COS_URL="http://prl-cos-pr-3053-java"
       env.CCD_DEF_CCD_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api"
       env.CCD_DEF_AAC_URL="http://prl-ccd-definitions-pr-${CHANGE_ID}-aac-manage-case-assignment"
       env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
