@@ -65,30 +65,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 }
 
 withNightlyPipeline("nodejs", product, component) {
-    env.TEST_URL = params.XUI_WEB_URL
-    env.test_environment = params.RUNNING_ENV
-    env.TESTS_FOR_ACCESSIBILITY = true
-
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
-    enableFullFunctionalTest(200)
-    // enableCrossBrowserTest(['chrome', 'firefox','microsoft'])
-    enableCrossBrowserTest(60)
-
-    before('fullFunctionalTest') {
-        yarnBuilder.yarn('playwrightsetup')
-    }
-
-    afterAlways('fullFunctionalTest') {
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/**/*'
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
-    }
-
-    before('crossBrowserTest') {
-        yarnBuilder.yarn('playwrightsetup')
-    }
-
-    afterAlways('crossBrowserTest') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
-    }
+    // Note that tests are now run in the prl-e2e-tests pipeline instead
 }
