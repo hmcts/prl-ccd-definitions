@@ -25,12 +25,12 @@ module.exports = {
     await I.retry(retryCount).click(this.fields.confidentalDetailListed);
     await I.retry(retryCount).click(this.fields.clarificationNeeded);
     await I.retry(retryCount).click(this.fields.otherReason);
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).wait('2');
 
     await I.retry(retryCount).see('Return message');
     await I.retry(retryCount).seeElement('<textarea class="form-control bottom-30 ng-touched ng-pristine ng-valid" rows="retryCount" id="returnMessage"></textarea>');
-    await I.retry(retryCount).click('Continue');
+    await I.retry(retryCount).continueEvent();
     await I.retry(retryCount).wait('2');
 
 
