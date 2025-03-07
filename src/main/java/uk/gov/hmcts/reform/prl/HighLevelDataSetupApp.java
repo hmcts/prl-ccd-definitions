@@ -27,7 +27,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
             new CcdRoleConfig("payments", PUBLIC),
             new CcdRoleConfig("pui-case-manager", PUBLIC),
             new CcdRoleConfig("courtnav", PUBLIC),
-            new CcdRoleConfig("caseworker-wa-task-configuration", PUBLIC),
+            new CcdRoleConfig("caseworker-wa-task-configuration", RESTRICTED),
             new CcdRoleConfig("caseworker-ras-validation", PUBLIC),
             new CcdRoleConfig("caseworker-privatelaw-externaluser-viewonly", PUBLIC),
             new CcdRoleConfig("GS_profile", PUBLIC),
@@ -57,6 +57,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
         main(HighLevelDataSetupApp.class, args);
     }
 
+    @Override
     public void createRoleAssignments() {
         BeftaUtils.defaultLog("Will NOT create role assignments!");
     }
