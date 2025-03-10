@@ -105,6 +105,7 @@
     "FieldType": "YesOrNo",
     "ElementLabel": "Do you need to keep the address confidential?",
     "SecurityClassification": "Public",
+    "FieldShowCondition": "firstName=\"DO NOT SHOW\"",
     "Searchable": "N"
   },
   {
@@ -112,7 +113,7 @@
     "ID": "OtherPersonInTheCaseRevised",
     "ListElementCode": "isAtAddressLessThan5Years",
     "FieldType": "YesOrNo",
-    "ElementLabel": "*Has applicant lived at this address for less than 5 years?",
+    "ElementLabel": "*Has this person lived at this address for less than 5 years?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -149,6 +150,7 @@
     "ListElementCode": "isEmailAddressConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "Do you need to keep the email address confidential?",
+    "FieldShowCondition": "firstName=\"DO NOT SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -176,6 +178,7 @@
     "ListElementCode": "isPhoneNumberConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "Do you need to keep the contact number confidential?",
+    "FieldShowCondition": "firstName=\"DO NOT SHOW\"",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

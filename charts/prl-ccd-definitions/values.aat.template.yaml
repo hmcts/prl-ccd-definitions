@@ -1,4 +1,10 @@
-nodejs:
-  # Don't modify below here
-  image: ${IMAGE_NAME}
-  ingressHost: ${SERVICE_FQDN}
+prl-cos:
+  enabled: true
+  java:
+    image: hmctspublic.azurecr.io/prl/cos:latest
+    ingressHost: ${SERVICE_FQDN}
+    environment:
+      PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
+      IDAM_CLIENT_REDIRECT_URI: https://${SERVICE_FQDN}/oauth2/callback
+      PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
+      APP_ENV: "aat"
