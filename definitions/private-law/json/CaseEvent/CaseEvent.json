@@ -112,7 +112,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND isEdgeCase!=\"Yes\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -964,7 +964,7 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/return-application-notification",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\" AND isCourtNavCase!=\"Yes\"",
+    "EventEnablingCondition": "isWithdrawRequestSent!=\"Pending\" AND isWithdrawRequestSent!=\"Approved\" AND isCourtNavCase!=\"Yes\" AND isEdgeCase!=\"Yes\"",
     "Publish": "True"
   },
   {
@@ -1759,7 +1759,7 @@
     "ShowEventNotes": "N",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\""
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\" AND isEdgeCase!=\"Yes\""
   },
   {
     "LiveFrom": "01/08/2021",
@@ -1910,7 +1910,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "True"
+    "Publish": "True",
+    "EventEnablingCondition": "isEdgeCase!=\"Yes\""
   },
   {
     "LiveFrom": "05/11/2021",
@@ -2078,7 +2079,7 @@
     "EndButtonLabel": "Submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\""
+    "EventEnablingCondition": "isCafcass=\"Yes\" AND caseTypeOfApplication=\"C100\" AND isEdgeCase!=\"Yes\""
   },
   {
     "LiveFrom": "26/07/2022",
