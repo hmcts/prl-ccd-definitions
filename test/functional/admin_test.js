@@ -2,7 +2,7 @@ Feature('Admin Web');
 
 Scenario('add all the roles @pipeline', ({ I }) => {
   I.loginToAdminConsole();
-  I.createRestrictedRole('caseworker-privatelaw-systemupdate','RESTRICTED');
+  I.createRestrictedRole('caseworker-privatelaw-systemupdate', 'RESTRICTED');
   I.createRole('citizen');
   I.createRole('caseworker-privatelaw-solicitor');
   I.createRole('caseworker-privatelaw-courtadmin');
@@ -18,7 +18,7 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.createRole('pui-case-manager');
   I.createRole('courtnav');
   I.createRole('global');
-  I.createRole('caseworker-wa-task-configuration');
+  I.createRestrictedRole('caseworker-wa-task-configuration', 'RESTRICTED');
   I.createRole('caseworker-ras-validation');
   I.createRole('GS_profile');
   I.createRole('caseworker-privatelaw-externaluser-viewonly');
