@@ -96,6 +96,7 @@ withPipeline("nodejs", product, component) {
     }
     stageWithAgent('Generate Family Private Law Case config - all', product) {
       yarnBuilder.yarn('generate-excel-all')
+      steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
     }
 
   }
