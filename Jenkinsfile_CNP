@@ -138,4 +138,3 @@ withPipeline("nodejs", product, component) {
   afterAlways('functionalTest:aat') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
   }
-}
