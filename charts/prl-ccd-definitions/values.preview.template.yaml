@@ -129,7 +129,7 @@ ccd:
         ELASTIC_SEARCH_HOST: ${SERVICE_NAME}-es-master
         ELASTIC_SEARCH_CASE_INDEX_MAPPING_FIELDS_LIMIT: 50000
         DEFINITION_STORE_DEFAULT_LOG_LEVEL: DEBUG
-        DEFINITION_STORE_TX_TIMEOUT_DEFAULT: 120
+        DEFINITION_STORE_TX_TIMEOUT_DEFAULT: 300
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
 
   ccd-admin-web:
@@ -176,6 +176,19 @@ ccd:
       environment:
         IDAM_PRINT_SERVICE_KEY: ${PRINT_S2S_KEY}
       ingressHost: ccd-case-print-service-${SERVICE_FQDN}
+
+  importer:
+    userprofile:
+      enabled: true
+      jurisdictions:
+        - PRIVATELAW
+      users:
+        - fprl_caseworker_solicitor@mailinator.com|PRIVATELAW|PRLAPPS|Created
+      userProfileDatabaseHost: ${SERVICE_NAME}-ccd-postgres
+      userProfileDatabasePort: 5432
+      userProfileDatabaseUser: hmcts
+      userProfileDatabasePassword: hmcts
+      userProfileDatabaseName: user-profile
 
   postgresql:
     persistence:
