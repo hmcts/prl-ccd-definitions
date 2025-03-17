@@ -177,19 +177,6 @@ ccd:
         IDAM_PRINT_SERVICE_KEY: ${PRINT_S2S_KEY}
       ingressHost: ccd-case-print-service-${SERVICE_FQDN}
 
-  importer:
-    userprofile:
-      enabled: true
-      jurisdictions:
-        - PRIVATELAW
-      users:
-        - fprl_caseworker_solicitor@mailinator.com|PRIVATELAW|PRLAPPS|Created
-      userProfileDatabaseHost: ${SERVICE_NAME}-ccd-postgres
-      userProfileDatabasePort: 5432
-      userProfileDatabaseUser: hmcts
-      userProfileDatabasePassword: hmcts
-      userProfileDatabaseName: user-profile
-
   postgresql:
     persistence:
       enabled: false
