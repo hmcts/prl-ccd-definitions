@@ -118,9 +118,9 @@ ccd:
     java:
       imagePullPolicy: Always
       keyVaults: []
-      devcpuRequests: 100m
-      devmemoryRequests: 512Mi
-      devcpuLimits: 2
+      devcpuRequests: 2500m
+      devmemoryRequests: 1Gi
+      devcpuLimits: 2500m
       devmemoryLimits: 1Gi
       environment:
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
