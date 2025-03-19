@@ -319,7 +319,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:latest
+    image: hmctspublic.azurecr.io/prl/cos:pr-2966
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -334,5 +334,6 @@ prl-cos:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      PRL_DGS_API_URL: https://prl-dgs-pr-369.preview.platform.hmcts.net
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
