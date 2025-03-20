@@ -86,7 +86,7 @@ ccd:
       imagePullPolicy: Always
       enviroment:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults: []
+      keyVaults: {}
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
