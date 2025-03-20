@@ -117,7 +117,7 @@ ccd:
   ccd-definition-store-api:
     java:
       imagePullPolicy: Always
-      keyVaults: []
+      keyVaults: {}
       environment:
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
