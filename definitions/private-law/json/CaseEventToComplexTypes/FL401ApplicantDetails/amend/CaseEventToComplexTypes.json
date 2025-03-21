@@ -428,5 +428,27 @@
     "ListElementCode": "solicitorAddress.Country",
     "FieldDisplayOrder": "42",
     "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "nameOfOrganisation",
+    "FieldDisplayOrder": "43",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "edgeCaseTypeOfApplication=\"FGM\" OR edgeCaseTypeOfApplication=\"FMPO\""
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendApplicantsDetails",
+    "CaseFieldID": "applicantsFL401",
+    "ListElementCode": "positionHeldInOrganisation",
+    "FieldDisplayOrder": "44",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "edgeCaseTypeOfApplication=\"FGM\" OR edgeCaseTypeOfApplication=\"FMPO\""
   }
 ]

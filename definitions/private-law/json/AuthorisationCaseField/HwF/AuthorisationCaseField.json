@@ -284,5 +284,31 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isC100EdgeCase",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-judge",
+          "caseworker-wa-task-configuration",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
