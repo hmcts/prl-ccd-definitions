@@ -15,30 +15,3 @@ aac-manage-case-assignment:
 
 prl-cos:
   enabled: true
-
-# Annoyingly we need a value on this because a subchart under ccpay under
-# draft data store expects a value for this
-ccd:
-  ccpay:
-    ccd:
-      draft-store-service:
-        java:
-          functionaltests:
-            enabled: false  # Default to false to avoid nil pointer errors.
-          functionaltestscron:
-            enabled: false
-          smoketests:
-            enabled: false
-          smoketestscron:
-            enabled: false
-
-global:
-  postgresql:
-    auth:
-      username: dummyuser
-      password: dummyPassword
-      database: dummyDatabase
-      secretName: dummySecret
-      existingSecret: dummy
-
-
