@@ -11,7 +11,9 @@ let envConfig = envs[environment] || {};
 
 if (!envConfig.cosUrl && envs.environments.includes(environment)) {
   envConfig = Object.fromEntries(
-    Object.entries(envs.baseUrls).map(([key, url]) => [key, url.replace(/{{env}}/g, environment)])
+    Object.entries(envs.baseUrls).map(([key, url]) => {
+      return [key, url.replace(/{{env}}/g, environment)];
+    })
   );
 }
 
@@ -33,7 +35,10 @@ const envVars = Object.entries({
   CCD_DEF_COS_URL: envConfig.cosUrl,
   CCD_DEF_CCD_URL: envConfig.ccdUrl,
   CCD_DEF_AAC_URL: envConfig.aacUrl
-}).map(([key, value]) => `${key}=${value}`).join(' ');
+}).map(([key, value]) => {
+  return `${key}=${value}`;
+})
+  .join(' ');
 
 const cmd = `${envVars} yarn ${scriptToRun} ${optionalArgs.join(' ')}`;
 const subprocess = spawn(cmd, { shell: true, stdio: 'inherit' });
