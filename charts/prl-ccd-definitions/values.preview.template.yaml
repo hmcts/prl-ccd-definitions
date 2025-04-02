@@ -19,8 +19,14 @@ xui-webapp:
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctspublic.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
-    devmemoryRequests: 1024Mi
-    devmemoryLimits: 2048Mi
+    memoryRequests: 2Gi
+    cpuRequests: 2000m
+    memoryLimits: 4Gi
+    cpuLimits: 4000m
+    devmemoryRequests: 2Gi
+    devcpuRequests: 2000m
+    devmemoryLimits: 4Gi
+    devcpuLimits: 4000m
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
@@ -88,10 +94,6 @@ ccd:
   ccd-data-store-api:
     java:
       imagePullPolicy: Always
-      devmemoryRequests: 1024Mi
-      devcpuRequests: 2000m
-      devmemoryLimits: 2058Mi
-      devcpuLimits: 2000m
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
@@ -223,10 +225,10 @@ ccd:
         - es-${SERVICE_FQDN}
 
   logstash:
-    devmemoryRequests: 1024Mi
-    devcpuRequests: 2000m
-    devmemoryLimits: 2058Mi
-    devcpuLimits: 2000m
+    devmemoryRequests: 512Mi
+    devcpuRequests: "1000m"
+    devmemoryLimits: 1024Mi
+    devcpuLimits: "2000m"
     resources:
       requests:
         cpu: 1000m
