@@ -223,10 +223,10 @@ ccd:
         - es-${SERVICE_FQDN}
 
   logstash:
-    devmemoryRequests: 512Mi
-    devcpuRequests: "1000m"
-    devmemoryLimits: 1024Mi
-    devcpuLimits: "2000m"
+    devmemoryRequests: 1024Mi
+    devcpuRequests: 2000m
+    devmemoryLimits: 2058Mi
+    devcpuLimits: 2000m
     resources:
       requests:
         cpu: 1000m
