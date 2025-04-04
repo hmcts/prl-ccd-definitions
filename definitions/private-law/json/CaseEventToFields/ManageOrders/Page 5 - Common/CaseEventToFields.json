@@ -155,7 +155,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+    "FieldShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND  createSelectOrderOptions != \"other\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -163,11 +163,11 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "judgeOrMagistrateTitle",
     "PageFieldDisplayOrder": 17,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+    "FieldShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND  createSelectOrderOptions != \"other\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -175,11 +175,11 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "judgeOrMagistratesLastName",
     "PageFieldDisplayOrder": 18,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\" AND judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\""
+    "FieldShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND  createSelectOrderOptions != \"other\" AND judgeOrMagistrateTitle != \"magistrate\" AND judgeOrMagistrateTitle != \"justicesLegalAdviser\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -191,7 +191,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\" AND judgeOrMagistrateTitle = \"magistrate\""
+    "FieldShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND  createSelectOrderOptions != \"other\" AND judgeOrMagistrateTitle = \"magistrate\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -203,7 +203,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions != \"other\""
+    "FieldShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND  createSelectOrderOptions != \"other\""
   },
   {
     "LiveFrom": "31/03/2022",
