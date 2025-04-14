@@ -27,4 +27,12 @@ dependencies {
 
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
+    testImplementation 'com.github.hmcts:fortify-client:1.2.2:all'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.4'
+}
+
+task fortifyScan(type: JavaExec)  {
+    main = "uk.gov.hmcts.fortifyclient.FortifyClientMainApp"
+    classpath += sourceSets.test.runtimeClasspath
+    jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
 }
