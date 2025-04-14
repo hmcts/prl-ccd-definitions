@@ -40,7 +40,7 @@
     "generate-excel-prod": "yarn envs prod generate-excel -e '*-nonprod.json,*-sublive.json,*-preview.json,*-ignore.json'",
     "generate-excel": "cd ccd-definition-processor && yarn json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
     "generate-excel-all": "yarn generate-excel-local && yarn generate-excel-preview && yarn generate-excel-aat && yarn generate-excel-demo && yarn generate-excel-ithc && yarn generate-excel-perftest && yarn generate-excel-prod",
-    "fortifyScan": "./test/java/gradlew -p test/java fortifyScan"
+    "fortifyScan": "./gradlew -p fortifyScan"
   },
   "pre-commit": [
     "lint"
