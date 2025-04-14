@@ -67,5 +67,10 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withNightlyPipeline("nodejs", product, component) {
     loadVaultSecrets(secrets)
     enableSlackNotifications(channel)
+    enableFortifyScan()
     // Note that tests are now run in the prl-e2e-tests pipeline instead
+
+    afterAlways('fortify-scan') {
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/Fortify Scan/**/*'
+    }
 }
