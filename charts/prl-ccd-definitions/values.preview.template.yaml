@@ -65,8 +65,6 @@ ccd:
       enabled: true
     ras:
       enabled: false
-    postgresql:
-      enabled: false
 
   ingressHost: ${SERVICE_FQDN}
   ingressIP: ${INGRESS_IP}
@@ -87,6 +85,7 @@ ccd:
 
   ccd-user-profile-api:
     java:
+      disableKeyVaults: true
       imagePullPolicy: Always
       keyVaults: []
       environment:
@@ -101,10 +100,11 @@ ccd:
 
   ccd-data-store-api:
     java:
+      disableKeyVaults: true
       imagePullPolicy: Always
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
-        DATA_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
+        DATA_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
         IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET: ${IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET}
         IDAM_DATA_STORE_SYSTEM_USER_USERNAME: ${IDAM_DATA_STORE_SYSTEM_USER_USERNAME}
@@ -129,10 +129,11 @@ ccd:
 
   ccd-definition-store-api:
     java:
+      disableKeyVaults: true
       imagePullPolicy: Always
       keyVaults: []
       environment:
-        DEFINITION_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
+        DEFINITION_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
