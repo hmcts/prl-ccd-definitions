@@ -129,6 +129,7 @@ wa:
         AZURE_SERVICE_BUS_SUBSCRIPTION_NAME: ${SERVICE_NAME}-ccd-case-events
         AZURE_SERVICE_BUS_CCD_CASE_EVENTS_SUBSCRIPTION_NAME: ${SERVICE_NAME}-ccd-case-events
   wa-task-monitor:
+    enabled: ${ENABLE_WA}
     java:
       ingressHost: wa-task-monitor-${SERVICE_FQDN}
       environment:
