@@ -30,7 +30,8 @@ def secrets = [
                 secret('ccd-datastore-client-id', 'CCD_DATASTORE_client_id'),
                 secret('ccd-datastore-client-secret', 'CCD_DATASTORE_client_secret'),
                 secret('ccd-datastore-username', 'CCD_DATASTORE_username'),
-                secret('ccd-datastore-password', 'CCD_DATASTORE_password')
+                secret('ccd-datastore-password', 'CCD_DATASTORE_password'),
+                secret('prl-cos-idam-client-secret', 'PRL_S2S_SECRET')
         ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
@@ -87,6 +88,12 @@ withPipeline("nodejs", product, component) {
       env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
+      env.SERVICE_AUTH_PROVIDER_API_BASE_URL="http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      env.IDAM_API_BASE_URL="https://idam-api.aat.platform.hmcts.net"
+      env.CCD_IDAM_REDIRECT_URL="https://ccd-case-management-web-aat.service.core-compute-aat.internal/oauth2redirect"
+      env.CCD_DEFINITION_STORE_API_BASE_URL="https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.ROLE_ASSIGNMENT_URL="https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CAMUNDA_BASE_URL="https://camunda-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     }
     onMaster{
       env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
