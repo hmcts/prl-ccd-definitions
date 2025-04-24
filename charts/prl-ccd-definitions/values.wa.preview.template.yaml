@@ -1,7 +1,7 @@
 # OVERRIDE VALUES IF pr-values:wa tag is applied
 
 xui-webapp:
-  enabled: true
+  enabled: ${ENABLE_WA}
   redis:
     enabled: false
     architecture: replication
@@ -146,7 +146,7 @@ wa:
       enabled: false
 
 servicebus:
-  enabled: true
+  enabled: ${ENABLE_WA}
   releaseNameOverride: ${SERVICE_NAME}
   resourceGroup: private-law-aso-preview-rg
   sbNamespace: private-law-servicebus-preview
@@ -157,7 +157,7 @@ servicebus:
         requiresSession: true
 
 ccd-message-publisher:
-  enabled: true
+  enabled: ${ENABLE_WA}
   servicebus:
     enabled: false
   java:
