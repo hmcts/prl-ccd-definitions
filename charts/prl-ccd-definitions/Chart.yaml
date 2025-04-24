@@ -28,23 +28,3 @@ dependencies:
     version: ~0.0.63
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: prl-cos.enabled
-  - name: xui-mo-webapp
-    version: ~1.1.18
-    repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: xui-mo-webapp.enabled
-  - name: postgresql
-    version: 1.1.0
-    repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: postgresql.enabled
-  - name: servicebus
-    version: 1.2.1
-    repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: servicebus.enabled
-  - name: wa
-    version: ~1.1.0
-    repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: wa.enabled
-  - name: ccd-message-publisher
-    version: ~0.1.22
-    repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: ccd-message-publisher.enabled
