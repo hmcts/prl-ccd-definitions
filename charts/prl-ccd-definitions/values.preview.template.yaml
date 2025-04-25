@@ -88,7 +88,7 @@ ccd:
       disableKeyVaults: true
       imagePullPolicy: Always
       environment:
-        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
+        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_cos_api,prl_citizen_frontend
         USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
       secrets:
         USER_PROFILE_DB_PASSWORD:
