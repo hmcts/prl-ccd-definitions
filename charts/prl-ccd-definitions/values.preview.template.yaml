@@ -89,7 +89,7 @@ ccd:
       imagePullPolicy: Always
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
-        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
+        USER_PROFILE_DB_HOST: private-law-preview.postgres.database.azure.com
       secrets:
         USER_PROFILE_DB_PASSWORD:
           secretRef: postgres
@@ -167,7 +167,7 @@ ccd:
       ingressHost: admin-web-${SERVICE_FQDN}
       keyVaults: []
       environment:
-        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
+        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
         IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
     idam-pr:
