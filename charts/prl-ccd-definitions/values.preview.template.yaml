@@ -65,8 +65,6 @@ ccd:
       enabled: true
     ras:
       enabled: false
-    postgresql:
-      enabled: false
 
   ingressHost: ${SERVICE_FQDN}
   ingressIP: ${INGRESS_IP}
@@ -98,7 +96,6 @@ ccd:
           key: PASSWORD
           disabled: true
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
-      keyVaults: [ ]
 
   ccd-data-store-api:
     java:
@@ -302,6 +299,39 @@ ccd:
         mountPath: /usr/share/logstash/files
     livenessProbe:
       initialDelaySeconds: 90
+
+  am-role-assignment-service:
+    enabled: false
+    java:
+      ingressHost: am-role-assignment-service-${SERVICE_FQDN}
+      autoscaling:
+        enabled: false
+        minReplicas: 1
+        maxReplicas: 1
+      environment:
+        APPLICATION_LOGGING_LEVEL: TRACE
+        ROLE_ASSIGNMENT_DB_USERNAME: hmcts
+        ROLE_ASSIGNMENT_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
+        CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
+        RUN_LD_ON_STARTUP: false
+      keyVaults:
+        am:
+          secrets:
+            - name: am-role-assignment-service-s2s-secret
+              alias: AM_ROLE_ASSIGNMENT_SERVICE_SECRET
+            - name: app-insights-connection-string
+              alias: app-insights-connection-string
+            - name: role-assignment-service-IDAM-CLIENT-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_CLIENT_SECRET
+            - name: role-assignment-service-IDAM-ADMIN-SECRET
+              alias: ROLE_ASSIGNMENT_IDAM_ADMIN_PASSWORD
+            - name: role-assignment-service-LD-SDK-KEY
+              alias: LD_SDK_KEY
+      secrets:
+        ROLE_ASSIGNMENT_DB_PASSWORD:
+          secretRef: postgres
+          key: PASSWORD
+          disabled: false
 
 ccd-case-document-am-api:
   enabled: true
