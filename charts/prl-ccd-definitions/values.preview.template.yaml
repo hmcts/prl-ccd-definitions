@@ -89,7 +89,7 @@ ccd:
       imagePullPolicy: Always
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
-        USER_PROFILE_DB_HOST: private-law-preview.postgres.database.azure.com
+        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
       secrets:
         USER_PROFILE_DB_PASSWORD:
           secretRef: postgres
