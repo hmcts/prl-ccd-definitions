@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -ex
 branchName=$1
 
 #Checkout specific branch of wa-standalone-task-bpmn
