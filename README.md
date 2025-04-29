@@ -98,3 +98,13 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
       java:
         image: hmctspublic.azurecr.io/prl/cos:latest
     ```
+
+### Functional End-to-End (E2E) Tests
+
+Functional end-to-end (E2E) tests are hosted in the [prl-e2e-tests](https://github.com/hmcts/prl-e2e-tests) repository.
+
+To run E2E tests on your PR build, add the label `enable-prl-e2e-tests`. This will initiate a Playwright smoke test. Developers should add this label when their changes are ready for code review.
+
+Smoke tests from this repository are executed by triggering a build job in Jenkins.
+
+The smoke test is run against **AAT** in the master build.
