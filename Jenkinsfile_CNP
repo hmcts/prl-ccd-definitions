@@ -132,13 +132,4 @@ withPipeline("nodejs", product, component) {
   afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
   }
-
-  before('functionalTest:aat') {
-    env.PRL_CCD_DEF_URL = "https://manage-case.aat.platform.hmcts.net/cases"
-    build job: 'HMCTS_j_to_z/prl-e2e-tests/master', wait: true, propogate: true, parameters: [booleanParam(name: "skipCitizenTests", value: true), string(name: "MANAGE_CASES_BASE_URL", value: env.PRL_CCD_DEF_URL)]
-  }
-
-  afterAlways('functionalTest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
-  }
 }
