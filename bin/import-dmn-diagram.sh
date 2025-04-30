@@ -11,6 +11,8 @@ s2sSecret=${PRL_S2S_SECRET:-AABBCCDDEEFFGGHH}
 serviceToken=$($(realpath $workspace)/bin/utils/idam-lease-service-token.sh prl_cos_api \
   $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${s2sSecret}))
 
+echo "got service token ${serviceToken}"
+
 camundaFilepath="$(realpath $workspace)/camunda"
 if [ ! -d ${camundaFilepath} ]; then
   echo "Directory with camunda definition files is missing: ${camundaFilepath}";
