@@ -31,7 +31,9 @@ def secrets = [
                 secret('ccd-datastore-client-secret', 'CCD_DATASTORE_client_secret'),
                 secret('ccd-datastore-username', 'CCD_DATASTORE_username'),
                 secret('ccd-datastore-password', 'CCD_DATASTORE_password'),
-                secret('microservicekey-prl-cos-api', 'PRL_S2S_SECRET')
+                secret('microservicekey-prl-cos-api', 'PRL_S2S_SECRET'),
+                secret('system-update-user-username', 'SYSTEM_UPDATE_USER_USERNAME'),
+                secret('system-update-user-password', 'SYSTEM_UPDATE_USER_PASSWORD')
         ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
@@ -137,11 +139,11 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
 
-    deployWADmns()
-
     sh """
       ./bin/add-role-assignments.sh
     """
+
+    deployWADmns()
   }
 
   afterAlways('smoketest:preview') {
