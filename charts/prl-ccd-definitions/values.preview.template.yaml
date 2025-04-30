@@ -88,7 +88,7 @@ ccd:
       disableKeyVaults: true
       imagePullPolicy: Always
       environment:
-        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_cos_api,prl_citizen_frontend
+        USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
         USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
       secrets:
         USER_PROFILE_DB_PASSWORD:
@@ -288,7 +288,6 @@ ccd:
       initialDelaySeconds: 90
 
   am-role-assignment-service:
-    enabled: true
     java:
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
       autoscaling:
@@ -401,3 +400,8 @@ postgresql:
       - name: "pr-${CHANGE_ID}-definition-store"
       - name: "pr-${CHANGE_ID}-user-profile"
       - name: "pr-${CHANGE_ID}-role-assignment"
+      - name: "pr-${CHANGE_ID}-wa-case-event-handler"
+      - name: "pr-${CHANGE_ID}-wa_workflow_api"
+      - name: "pr-${CHANGE_ID}-camunda"
+      - name: "pr-${CHANGE_ID}-cft_task_db"
+      - name: "pr-${CHANGE_ID}-cft_task_db_replica"

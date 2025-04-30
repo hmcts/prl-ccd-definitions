@@ -84,7 +84,7 @@ def deployWADmns() {
         eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
         ./bin/pull-latest-dmn-files.sh ${dmnBranch}
         ./bin/pull-camunda-bpmn-files.sh ${waStandaloneBranch}
-        ./bin/import-dmn-diagram.sh . privatelaw fpl
+        ./bin/import-dmn-diagram.sh . privatelaw prl
         """
   } else {
     env.ENABLE_WA = false
