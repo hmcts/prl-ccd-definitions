@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-#set -eux
+set -eu
+
 workspace=${1}
 tenant_id=${2}
 product=${3}
