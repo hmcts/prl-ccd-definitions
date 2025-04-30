@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-set -eux
+set -eu
 
 microservice=${1}
 oneTimePassword=${2}
 
 curl --insecure --fail --show-error --silent -X POST \
- http://rpe-service-auth-provider-aat.service.core-compute-aat.internal/testing-support/lease \
+  ${SERVICE_AUTH_PROVIDER_API_BASE_URL:-http://localhost:4502}/testing-support/lease \
   -H "Content-Type: application/json" \
   -d '{
-    "microservice": "prl_cos_api",
+    "microservice": "'${microservice}'",
     "oneTimePassword": "'${oneTimePassword}'"
   }'
