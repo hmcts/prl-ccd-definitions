@@ -86,6 +86,7 @@ def deployWADmns() {
     echo "WA enabled, loading DMNs"
     sh """
         eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
+        ./bin/add-role-assignments.sh
         ./bin/pull-latest-dmn-files.sh ${dmnBranch}
         ./bin/pull-camunda-bpmn-files.sh ${waStandaloneBranch}
         ./bin/import-dmn-diagram.sh . privatelaw prl
@@ -139,11 +140,6 @@ withPipeline("nodejs", product, component) {
   before('smoketest:preview') {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
-
-    // Uncomment below to add roles
-    sh """
-      ./bin/add-role-assignments.sh
-    """
 
     deployWADmns()
   }
