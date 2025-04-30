@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+set -exu
 
 workspace=${1}
 tenant_id=${2}
@@ -8,7 +8,7 @@ product=${3}
 
 s2sSecret=${PRL_S2S_SECRET:-AABBCCDDEEFFGGHH}
 
-serviceToken=$($(realpath $workspace)/bin/utils/idam-lease-service-token.sh prl-cos-api \
+serviceToken=$($(realpath $workspace)/bin/utils/idam-lease-service-token.sh prl_cos_api \
   $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${s2sSecret}))
 
 camundaFilepath="$(realpath $workspace)/camunda"
