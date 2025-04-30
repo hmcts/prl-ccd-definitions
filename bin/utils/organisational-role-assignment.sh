@@ -21,8 +21,8 @@ BASEDIR=$(dirname "$0")
 
 USER_TOKEN=$($BASEDIR/idam-lease-user-token.sh $USERNAME $PASSWORD)
 USER_ID=$($BASEDIR/idam-user-id.sh $USER_TOKEN)
-SERVICE_TOKEN=$($BASEDIR/idam-lease-service-token.sh fpl_case_service \
-  $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${FPL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
+SERVICE_TOKEN=$($BASEDIR/idam-lease-service-token.sh prl_cos_api \
+  $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
 
 echo -e "\nCreating role assignment: \n User: ${USER_ID}\n Role name: ${ROLE_NAME}\n ROLE_CLASSIFICATION: ${ROLE_CLASSIFICATION}\n"
 

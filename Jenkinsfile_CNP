@@ -141,9 +141,9 @@ withPipeline("nodejs", product, component) {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
 
     // Uncomment below to add roles
-    //sh """
-      //./bin/add-role-assignments.sh
-    //"""
+    sh """
+      ./bin/add-role-assignments.sh
+    """
 
     deployWADmns()
   }
