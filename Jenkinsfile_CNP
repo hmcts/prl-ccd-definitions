@@ -139,9 +139,10 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
 
-    sh """
-      ./bin/add-role-assignments.sh
-    """
+    // Uncomment below to add roles
+    //sh """
+      //./bin/add-role-assignments.sh
+    //"""
 
     deployWADmns()
   }
