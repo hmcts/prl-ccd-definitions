@@ -137,11 +137,12 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
 
-    sh """
-      ./bin/add-role-assignments.sh
-    """
-
-    deployWADmns()
+    if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
+      sh """
+          ./bin/add-role-assignments.sh
+          """
+      deployWADmns()
+    }
   }
 
   afterAlways('smoketest:preview') {
