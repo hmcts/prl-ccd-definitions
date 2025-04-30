@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-set -ex
+set -exu
 
 microservice=${1}
 oneTimePassword=${2}
 
 curl --insecure --fail --show-error --silent -X POST \
-  http://rpe-service-auth-provider-aat.service.core-compute-aat.internal/lease \
+  ${SERVICE_AUTH_PROVIDER_API_BASE_URL:-http://localhost:4502}/lease \
   -H "Content-Type: application/json" \
   -d '{
     "microservice": "'${microservice}'",
