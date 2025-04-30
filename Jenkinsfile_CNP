@@ -31,7 +31,7 @@ def secrets = [
                 secret('ccd-datastore-client-secret', 'CCD_DATASTORE_client_secret'),
                 secret('ccd-datastore-username', 'CCD_DATASTORE_username'),
                 secret('ccd-datastore-password', 'CCD_DATASTORE_password'),
-                secret('prl-cos-idam-client-secret', 'PRL_S2S_SECRET')
+                secret('microservicekey-prl-cos-api', 'PRL_S2S_SECRET')
         ],
         'ccd-${env}'      : [
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
