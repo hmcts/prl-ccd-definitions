@@ -76,6 +76,8 @@ def deployWADmns() {
   // For testing DMNs, change this to the branch on the DMN repo, but ensure it is changed back to master before merging
   def dmnBranch = "master"
 
+  env.ROLE_ASSIGNMENT_URL="http://am-role-assignment-service-aat.service.core-compute-aat.internal"
+
   echo "Checking if we should use WA"
   if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
     env.SERVICES_WORK_ALLOCATION_TASK_API = "http://prl-ccd-definitions-pr-${CHANGE_ID}-wa-task-management-api"
@@ -89,7 +91,7 @@ def deployWADmns() {
         ./bin/add-role-assignments.sh
         ./bin/pull-latest-dmn-files.sh ${dmnBranch}
         ./bin/pull-camunda-bpmn-files.sh ${waStandaloneBranch}
-        ./bin/import-dmn-diagram.sh . privatelaw prl
+        ./bin/import-dmn-diagram.sh . privatelaw privatelaw
         """
   } else {
     env.ENABLE_WA = false
@@ -140,6 +142,8 @@ withPipeline("nodejs", product, component) {
   before('smoketest:preview') {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
+
+
 
     deployWADmns()
   }
