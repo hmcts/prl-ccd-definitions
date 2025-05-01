@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+set -exu
 
 dir=$(dirname ${0})
 
