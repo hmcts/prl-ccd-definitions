@@ -1,5 +1,10 @@
 # OVERRIDE VALUES IF pr-values:wa tag is applied
 
+ccd:
+  ccd:
+    ras:
+      enabled: true
+
 xui-webapp:
   enabled: true
   redis:
@@ -101,7 +106,7 @@ wa:
         IDAM_URL: "https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net"
         S2S_URL: "http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"
         OPEN_ID_IDAM_URL: "https://idam-web-public.{{ .Values.global.environment }}.platform.hmcts.net"
-        ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
+        ROLE_ASSIGNMENT_URL: ${SERVICES_ROLE_ASSIGNMENT_API}
         ALLOWED_JURISDICTIONS: privatelaw,PRIVATELAW
         ALLOWED_CASE_TYPES: prlapps,privatelaw_exceptionrecord
 
@@ -121,7 +126,7 @@ wa:
         CAMUNDA_URL: "http://{{ .Release.Name }}-camunda/engine-rest"
         CCD_URL: "http://{{ .Release.Name }}-ccd-data-store-api"
         CCD_SEARCH_URL: "http://{{ .Release.Name }}-ccd-data-store-api"
-        ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
+        ROLE_ASSIGNMENT_URL: ${SERVICES_ROLE_ASSIGNMENT_API}
         WA_WORKFLOW_API_URL: "http://{{ .Release.Name }}-wa-workflow-api"
         WA_TASK_MANAGEMENT_API_URL: "http://{{ .Release.Name }}-wa-task-management-api"
         AZURE_SERVICE_BUS_TOPIC_NAME: ${SERVICE_NAME}-ccd-case-events
