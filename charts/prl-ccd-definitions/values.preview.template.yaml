@@ -336,15 +336,3 @@ prl-cos:
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
-
-postgresql:
-  enabled: ${PREVIEW_BRANCH_WITH_LOCAL_CCD}
-  flexibleserver: sscs-preview
-  setup:
-    databases:
-      - name: "${SERVICE_NAME}-data-store"
-      - name: "${SERVICE_NAME}-definition-store"
-      - name: "${SERVICE_NAME}-user-profile"
-      - name: "${SERVICE_NAME}-draftstore"
-      - name: "${SERVICE_NAME}-role-assignment"
-      - name: "${SERVICE_NAME}-org_role_mapping"
