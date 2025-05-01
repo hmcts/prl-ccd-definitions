@@ -86,7 +86,7 @@ ccd:
       imagePullPolicy: Always
       enviroment:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults: [ ]
+      keyVaults: []
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
@@ -111,13 +111,13 @@ ccd:
         DATA_STORE_DEFAULT_LOG_LEVEL: INFO
         DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,wa_task_configuration_api,wa_task_monitor,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend
         ROLE_ASSIGNMENT_URL: http://am-role-assignment-service-aat.service.core-compute-aat.internal
-      keyVaults: [ ]
+      keyVaults: []
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
 
   ccd-definition-store-api:
     java:
       imagePullPolicy: Always
-      keyVaults: [ ]
+      keyVaults: []
       environment:
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
@@ -136,7 +136,7 @@ ccd:
     nodejs:
       image: hmctspublic.azurecr.io/ccd/admin-web:latest
       ingressHost: admin-web-${SERVICE_FQDN}
-      keyVaults: [ ]
+      keyVaults: []
       environment:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
         IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
@@ -160,7 +160,7 @@ ccd:
 
   ccd-api-gateway-web:
     nodejs:
-      keyVaults: [ ]
+      keyVaults: []
       environment:
         IDAM_SERVICE_KEY: ${API_GATEWAY_S2S_KEY}
         IDAM_OAUTH2_CLIENT_SECRET: ${API_GATEWAY_IDAM_SECRET}
@@ -172,7 +172,7 @@ ccd:
 
   ccd-case-print-service:
     nodejs:
-      keyVaults: [ ]
+      keyVaults: []
       environment:
         IDAM_PRINT_SERVICE_KEY: ${PRINT_S2S_KEY}
       ingressHost: ccd-case-print-service-${SERVICE_FQDN}
@@ -290,7 +290,7 @@ aac-manage-case-assignment:
     releaseNameOverride: ${SERVICE_NAME}-aac-manage-case-assignment
     image: hmctspublic.azurecr.io/aac/manage-case-assignment:latest
     #ingressHost: aac-${SERVICE_FQDN}
-    keyVaults: [ ]
+    keyVaults: []
     ports:
       - 5005:5005
     environment:
