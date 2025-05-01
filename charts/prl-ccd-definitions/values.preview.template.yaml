@@ -77,15 +77,18 @@ ccd:
     ccdAdminWebIngress: admin-web-${SERVICE_FQDN}
     ccdApiGatewayIngress: gateway-${SERVICE_FQDN}
     ccdCaseManagementWebIngress: case-management-web-${SERVICE_FQDN}
+    s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+    postgresHostname: "private-law-preview.postgres.database.azure.com"
+    postgresSecret: postgres
+    databaseNamePrefix: "pr-2718-"
     postgresUsername: hmcts
     postgresPassword: hmcts
-    s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
 
   ccd-user-profile-api:
     java:
       imagePullPolicy: Always
       enviroment:
-        USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
+        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
       keyVaults: []
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
@@ -96,7 +99,7 @@ ccd:
       imagePullPolicy: Always
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
-        DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
+        DATA_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
         IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET: ${IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET}
         IDAM_DATA_STORE_SYSTEM_USER_USERNAME: ${IDAM_DATA_STORE_SYSTEM_USER_USERNAME}
@@ -119,7 +122,7 @@ ccd:
       imagePullPolicy: Always
       keyVaults: []
       environment:
-        DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
+        DEFINITION_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
@@ -138,7 +141,7 @@ ccd:
       ingressHost: admin-web-${SERVICE_FQDN}
       keyVaults: []
       environment:
-        USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
+        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
         IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
     idam-pr:
@@ -238,13 +241,13 @@ ccd:
     logstashJavaOpts: -Xmx1g -Xms512M
     extraEnvs:
       - name: DATA_STORE_URL
-        value: jdbc:postgresql://${SERVICE_NAME}-postgresql:5432/data-store?ssl=disable&stringtype=unspecified
+        value: 'jdbc:postgresql://private-law-preview.postgres.database.azure.com:5432/pr-2718-data-store?sslmode=require&stringtype=unspecified'
       - name: DATA_STORE_USER
         value: hmcts
       - name: DATA_STORE_PASS
         value: hmcts
       - name: DB_URL
-        value: jdbc:postgresql://${SERVICE_NAME}-postgresql:5432/data-store?ssl=disable&stringtype=unspecified
+        value: 'jdbc:postgresql://private-law-preview.postgres.database.azure.com:5432/pr-2718-data-store?sslmode=require&stringtype=unspecified'
       - name: DB_USER
         value: hmcts
       - name: DB_PWD
@@ -336,3 +339,17 @@ prl-cos:
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
+
+postgresql:
+  enabled: true
+  flexibleserver: private-law-preview
+  setup:
+    databases:
+      - name: "pr-2718-data-store"
+      - name: "pr-2718-definition-store"
+      - name: "pr-2718-user-profile"
+      - name: "pr-2718-role-assignment"
+      - name: "pr-2718-draftstore"
+      - name: "pr-2718-evidence"
+      - name: "pr-2718-annotation"
+      - name: "pr-2718-role-assignment"
