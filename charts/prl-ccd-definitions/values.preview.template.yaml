@@ -48,7 +48,6 @@ xui-webapp:
       SERVICES_IDAM_INDEX_URL: /
       SERVICES_IDAM_OAUTH_CALLBACK_URL: /oauth2/callback
       SERVICES_S2S: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
-      ENABLE_WA: ${ENABLE_WA}
 
 ccd:
   ccd:
@@ -391,6 +390,7 @@ prl-cos:
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
+      ENABLE_WA: ${ENABLE_WA}
 
 postgresql:
   enabled: true
