@@ -69,6 +69,13 @@ def checkForEnableTestsLabel(branch_name) {
   return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
 }
 
+def setPreviewEnvVars() {
+  env.ROLE_ASSIGNMENT_URL="http://am-role-assignment-service-aat.service.core-compute-aat.internal"
+  if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
+    env.ROLE_ASSIGNMENT_URL="https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+  }
+}
+
 def deployWADmns() {
   def githubApi = new GithubAPI(this)
 
@@ -83,7 +90,6 @@ def deployWADmns() {
     """
     env.SERVICES_WORK_ALLOCATION_TASK_API = "http://prl-ccd-definitions-pr-${CHANGE_ID}-wa-task-management-api"
     env.SERVICES_WA_WORKFLOW_API_URL = "http://prl-ccd-definitions-pr-${CHANGE_ID}-wa-workflow-api"
-    env.ROLE_ASSIGNMENT_URL="https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.WA_SUPPORTED_JURISDICTIONS = "PRIVATELAW"
     env.ENABLE_WA = true
     echo "WA enabled, loading DMNs"
@@ -104,6 +110,7 @@ withPipeline("nodejs", product, component) {
 
   onPR{
     env.ENVIRONMENT="preview"
+    setPreviewEnvVars();
   }
   onMaster{
     env.ENVIRONMENT="aat"
@@ -125,7 +132,6 @@ withPipeline("nodejs", product, component) {
       env.CCD_IDAM_REDIRECT_URL="https://ccd-case-management-web-aat.service.core-compute-aat.internal/oauth2redirect"
       env.CCD_DEFINITION_STORE_API_BASE_URL="https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.CAMUNDA_BASE_URL="https://camunda-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-      env.ROLE_ASSIGNMENT_URL="http://am-role-assignment-service-aat.service.core-compute-aat.internal"
     }
     onMaster{
       env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
