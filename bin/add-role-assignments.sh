@@ -9,6 +9,10 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   idamId=$(jq -r '.id' <<< $user)
   password=${PREVIEW_AM_USER_PASSWORD}
 
+  if [[ $email == *"ejudiciary"* ]]; then
+    password=${PREVIEW_AM_JUDGE_PASSWORD}
+  fi
+
   jq -c '(.roleAssignments[])' <<< $user | while read assignment; do
     roleName=$(jq -r '.roleName' <<< $assignment)
     roleCategory=$(jq -r '.roleCategory' <<< $assignment)
