@@ -17,8 +17,6 @@ module.exports = {
 
   async clickCreateCase() {
     I.wait('60');
-    await I.refreshPage();
-    I.wait('30');
     await I.waitForText('Create case');
     I.wait('30');
     await I.retry(retryCount).click(this.fields.createCaseLink);
