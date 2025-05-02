@@ -12,7 +12,7 @@ module.exports = {
     jurisdiction: 'select[id="cc-jurisdiction"]',
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
-    createCaseLink: '//a[contains(.,"Create case")]',
+    createCaseLink: 'body > exui-root > exui-case-home > exui-app-header > exui-header > header > div > exui-hmcts-global-header > nav > div > div.hmcts-primary-navigation__nav > nav > ul > li:nth-child(2) > a',
     submit: 'button[type="submit"]',
     caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
     caseFromCourtNav_No: '#caseFromCourtNav_No',
@@ -37,7 +37,7 @@ module.exports = {
 
   async clickCreateCase() {
     global.logCallingFunction();
-    await I.wait('60');
+    await I.wait('80');
     await I.waitForSelector(this.fields.createCaseLink);
     await I.retry(retryCount).click(this.fields.createCaseLink);
     await I.waitForElement(this.fields.jurisdiction);
