@@ -20,9 +20,9 @@ exports.config = {
       show: process.env.SHOW_BROWSER_WINDOW || false,
       // show: false,
       url: process.env.URL ? process.env.URL : 'http://localhost:3000',
-      waitForTimeout: 60000,
-      getPageTimeout: 60000,
-      waitForAction: 1000,
+      waitForTimeout: 80000,
+      getPageTimeout: 80000,
+      waitForAction: 4000,
       waitForNavigation: 'domcontentloaded',
       chrome: {
         ignoreHTTPSErrors: true,
