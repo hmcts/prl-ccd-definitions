@@ -1,0 +1,16 @@
+api:
+  url: "{{ .Values.global.idamApiUrl }}"
+image: hmctspublic.azurecr.io/imported/curlimages/curl:7.85.0
+web_public:
+  url: "{{ .Values.global.idamWebUrl }}"
+
+global:
+  idamApiUrl: https://idam-api.aat.platform.hmcts.net
+  idamWebUrl: https://idam-web-public.aat.platform.hmcts.net
+
+memoryRequests: "128Mi"
+cpuRequests: "25m"
+memoryLimits: "1024Mi"
+cpuLimits: "2500m"
+ttlSecondsAfterFinished: 3600 #1hr
+debug: false

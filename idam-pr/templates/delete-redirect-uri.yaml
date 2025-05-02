@@ -1,0 +1,46 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ template "hmcts.idamPr.releaseName" . }}-del
+  labels:
+    app.kubernetes.io/name: {{ template "hmcts.idamPr.releaseName" . }}-del
+    helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+    app.kubernetes.io/instance: {{ .Release.Name | quote }}
+  annotations:
+    helm.sh/hook: post-delete
+    helm.sh/hook-weight: "-5"
+    helm.sh/hook-delete-policy: "{{ if .Values.debug }}before-hook-creation{{ else }}hook-succeeded{{ end}}"
+spec:
+  {{- if .Values.ttlSecondsAfterFinished }}
+  ttlSecondsAfterFinished: {{ .Values.ttlSecondsAfterFinished }}
+  {{- end }}
+  template:
+    metadata:
+      name: {{ template "hmcts.idamPr.releaseName" . }}-del
+      labels:
+        app.kubernetes.io/name: {{ template "hmcts.idamPr.releaseName" . }}-del
+    spec:
+      volumes:
+        - name: container-init
+          configMap:
+            name: {{ template "hmcts.idamPr.releaseName" . }}-bin-delete
+            defaultMode: 0755
+      containers:
+        - name: {{ template "hmcts.idamPr.releaseName" . }}-del
+          image: {{ .Values.image }}
+          volumeMounts:
+            - name: container-init
+              mountPath: /container.init
+          command: [ "/bin/sh" ]
+          args:
+            - /container.init/idam-pr-delete
+          resources:
+            requests:
+              memory: {{ .Values.memoryRequests }}
+              cpu: {{ .Values.cpuRequests }}
+            limits:
+              memory: {{ .Values.memoryLimits }}
+              cpu: {{ .Values.cpuLimits }}
+      restartPolicy: Never

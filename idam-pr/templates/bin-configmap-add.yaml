@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "hmcts.idamPr.releaseName" . }}-bin-add
+  labels:
+    type: configuration
+    app.kubernetes.io/name: {{ template "hmcts.idamPr.releaseName" . }}-bin-add
+    helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+    app.kubernetes.io/instance: {{ .Release.Name | quote }}
+data:
+  idam-pr-add: |
+{{ include (print .Template.BasePath "/bin/_idam-pr-add.tpl") . | indent 4 }}
