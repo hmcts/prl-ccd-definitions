@@ -4,7 +4,7 @@ name: prl-ccd-definitions
 version: 0.0.28
 dependencies:
   - name: ccd
-    version: ~8.0.29
+    version: 9.2.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     tags:
       - ccd-pr
@@ -21,7 +21,7 @@ dependencies:
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: ccd-case-document-am-api.enabled
   - name: aac-manage-case-assignment
-    version: ~0.2.13
+    version: ~0.2.14
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
     condition: aac-manage-case-assignment.enabled
   - name: prl-cos
