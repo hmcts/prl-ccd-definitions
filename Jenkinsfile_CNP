@@ -34,9 +34,12 @@ def secrets = [
                 secret('microservicekey-prl-cos-api', 'PRL_S2S_SECRET'),
                 secret('system-update-user-username', 'SYSTEM_UPDATE_USER_USERNAME'),
                 secret('system-update-user-password', 'SYSTEM_UPDATE_USER_PASSWORD'),
-                secret('prl-cos-idam-client-secret', 'IDAM_CLIENT_SECRET')
+                secret('prl-cos-idam-client-secret', 'IDAM_CLIENT_SECRET'),
+                secret('preview-am-user-password', 'PREVIEW_AM_USER_PASSWORD'),
+                secret('preview-am-judge-password', 'PREVIEW_AM_JUDGE_PASSWORD')
         ],
         'ccd-${env}'      : [
+                secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_IDAM_CLIENT_SECRET'),
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
                 secret('ccd-api-gateway-oauth2-client-secret', 'API_GATEWAY_IDAM_SECRET'),
                 secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),

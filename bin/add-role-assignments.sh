@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-set -eu
+set -exu
 
 dir=$(dirname ${0})
 
 jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   email=$(jq -r '.email' <<< $user)
   idamId=$(jq -r '.id' <<< $user)
-  password=${SYSTEM_UPDATE_USER_PASSWORD}
+  password=${PREVIEW_AM_USER_PASSWORD}
 
   if [[ $email == *"ejudiciary"* ]]; then
-    password=${E2E_TEST_JUDGE_PASSWORD}
+    password=${PREVIEW_AM_JUDGE_PASSWORD}
   fi
 
   jq -c '(.roleAssignments[])' <<< $user | while read assignment; do
