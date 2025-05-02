@@ -11,7 +11,9 @@ let envConfig = envs[environment] || {};
 
 if (!envConfig.cosUrl && envs.environments.includes(environment)) {
   envConfig = Object.fromEntries(
-    Object.entries(envs.baseUrls).map(([key, url]) => [key, url.replace(/{{env}}/g, environment)])
+    Object.entries(envs.baseUrls).map(([key, url]) => {
+      return [key, url.replace(/{{env}}/g, environment)];
+    })
   );
 }
 
