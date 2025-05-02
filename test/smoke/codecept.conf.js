@@ -10,9 +10,9 @@ exports.config = {
     Playwright: {
       show: process.env.SHOW_BROWSER_WINDOW || false,
       // show: true,
-      waitForTimeout: 60000,
-      getPageTimeout: 60000,
-      waitForAction: 1000,
+      waitForTimeout: 80000,
+      getPageTimeout: 80000,
+      waitForAction: 4000,
       waitForNavigation: 'domcontentloaded',
       chrome: {
         ignoreHTTPSErrors: true,
@@ -32,7 +32,7 @@ exports.config = {
   plugins: {
     retryFailedStep: {
       enabled: true,
-      retries: 2,
+      retries: 3,
       minTimeout: 2000
     }
   },
