@@ -12,7 +12,7 @@ module.exports = {
     jurisdiction: 'select[id="cc-jurisdiction"]',
     caseType: 'select[id="cc-case-type"]',
     event: 'select[id="cc-event"]',
-    createCaseLink: 'body > exui-root > exui-case-home > exui-app-header > exui-header > header > div > exui-hmcts-global-header > nav > div > div.hmcts-primary-navigation__nav > nav > ul > li:nth-child(2) > a',
+    createCaseLink: '//a[contains(.,"Create case")]',
     submit: 'button[type="submit"]',
     caseFromCourtNav_Yes: '#caseFromCourtNav_Yes',
     caseFromCourtNav_No: '#caseFromCourtNav_No',

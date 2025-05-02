@@ -12,6 +12,10 @@ dependencies:
     version: ~1.0.12
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: xui-webapp.enabled
+  - name: xui-mo-webapp
+    version: ~1.1.0
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: xui-mo-webapp.enabled
   - name: idam-pr
     version: 2.3.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
