@@ -71,11 +71,11 @@ ccd:
   consulIP: ${CONSUL_LB_IP}
 
   global:
+    ccdApiGatewayIngress: http://${SERVICE_NAME}-ccd-api-gw
     idamApiUrl: https://idam-api.aat.platform.hmcts.net
     idamWebUrl: https://idam-web-public.aat.platform.hmcts.net
     dmStoreUrl: http://dm-store-aat.service.core-compute-aat.internal
     ccdAdminWebIngress: admin-web-${SERVICE_FQDN}
-    ccdApiGatewayIngress: gateway-${SERVICE_FQDN}
     ccdCaseManagementWebIngress: case-management-web-${SERVICE_FQDN}
     s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
     postgresHostname: "private-law-preview.postgres.database.azure.com"

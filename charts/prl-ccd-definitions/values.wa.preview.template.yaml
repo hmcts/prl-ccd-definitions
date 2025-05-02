@@ -102,8 +102,8 @@ wa:
         S2S_URL: "http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"
         OPEN_ID_IDAM_URL: "https://idam-web-public.{{ .Values.global.environment }}.platform.hmcts.net"
         ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
-        ALLOWED_JURISDICTIONS: privatelaw,PRIVATELAW
-        ALLOWED_CASE_TYPES: prlapps,privatelaw_exceptionrecord
+        ALLOWED_JURISDICTIONS: wa,ia,sscs,civil,publiclaw,privatelaw,employment,st_cic
+        ALLOWED_CASE_TYPES: asylum,wacasetype,sscs,civil,generalapplication,care_supervision_epo,prlapps,privatelaw_exceptionrecord,et_englandwales,et_scotland,benefit,criminalinjuriescompensation
 
   wa-case-event-handler:
     java:
