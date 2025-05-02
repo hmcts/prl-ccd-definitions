@@ -82,24 +82,24 @@ ccd:
     s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
 
   ccd-user-profile-api:
-    enabled: true
     java:
       imagePullPolicy: Always
-      enviroment:
+      environment:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
         # Workaround: prevent Helm rendering errors due to default PASSWORD secretKeyRef
         PASSWORD: dummy
+        USER_PROFILE_DB_PASSWORD: dummy
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
       secretName: microservicekey-ccd-definition
 
   ccd-data-store-api:
-    enabled: true
     java:
       imagePullPolicy: Always
       environment:
         # Workaround: prevent Helm rendering errors due to default PASSWORD secretKeyRef
         PASSWORD: dummy
+        DATA_STORE_DB_PASSWORD: dummy
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
@@ -120,9 +120,9 @@ ccd:
       secretName: microservicekey-ccd-data
 
   ccd-definition-store-api:
-    enabled: true
     java:
       imagePullPolicy: Always
+      keyVaults: {}
       environment:
         DEFINITION_STORE_DB_HOST: ${SERVICE_NAME}-postgresql
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
@@ -345,11 +345,3 @@ prl-cos:
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
       APP_ENV: "preview"
-
-
-
-
-
-
-
-
