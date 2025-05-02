@@ -1,6 +1,6 @@
 Feature('Smoke tests @smoke-tests');
 Scenario('Sign in as local authority and create a case', async({ I }) => {
-  // await I.loginAsSolicitor();
+  await I.loginAsSolicitor();
   const caseId = await I.createCaseAndReturnID();
   await I.navigateToCaseList();
   console.log(`case id is ${caseId}`);
