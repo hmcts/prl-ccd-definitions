@@ -7,6 +7,8 @@ idam-pr:
   redirect_uris:
     XUI:
       - https://xui-${SERVICE_FQDN}/oauth2/callback
+    CCD:
+      - https://case-management-web-${SERVICE_FQDN}/oauth2redirect
     CCD Admin:
       - https://admin-web-${SERVICE_FQDN}/oauth2redirect
 
@@ -52,7 +54,7 @@ ccd:
     definitionImporter:
       enabled: false
     managementWeb:
-      enabled: false
+      enabled: true
     apiGatewayWeb:
       enabled: true
     s2s:
@@ -115,7 +117,7 @@ ccd:
         ELASTIC_SEARCH_DATA_NODES_HOSTS:  http://${SERVICE_NAME}-es-master:9200
         DATA_STORE_DEFAULT_LOG_LEVEL: INFO
         DATA_STORE_S2S_AUTHORISED_SERVICES: ccd_data,ccd_gw,ccd_ps,probate_backend,divorce_ccd_submission,sscs,sscs_bulkscan,cmc,cmc_claim_store,cmc_claim_external_api,jui_webapp,pui_webapp,bulk_scan_orchestrator,fpl_case_service,iac,finrem_ccd_data_migrator,finrem_case_orchestration,employment_tribunals,ethos_repl_service,ccpay_bubble,ctsc_work_allocation,em_ccd_orchestrator,xui_webapp,bulk_scan_payment_processor,pcq_consolidation_service,em_npa_app,ecm_consumer,aac_manage_case_assignment,unspec_service,divorce_frontend,ccd_case_document_am_api,prl_cos_api,prl_citizen_frontend,wa_workflow_api,wa_task_configuration_api,wa_task_management_api,wa_task_monitor,wa_case_event_handler,am_role_assignment_service,ccd_gateway,em_ccd_orchestrator
-        ROLE_ASSIGNMENT_URL: https://am-role-assignment-service-${SERVICE_FQDN}
+        ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
       secrets:
         DATA_STORE_DB_PASSWORD:
           secretRef: postgres
@@ -130,7 +132,7 @@ ccd:
       environment:
         DEFINITION_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
-        DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend
+        DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend,xui_webapp
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
         IDAM_OIDC_URL: https://idam-web-public.aat.platform.hmcts.net
         OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat.internal:8443/openam/oauth2/hmcts
@@ -387,7 +389,7 @@ prl-cos:
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
-      PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api
+      PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
 
 postgresql:
