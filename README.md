@@ -111,14 +111,14 @@ The smoke test is run against **AAT** in the master build.
 
 ### Preview Database changes
 Preview is now set up with a PostgreSQL flexible server. The database host is `private-law-preview.postgres.database.azure.com`. 
-While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) section `postgresql`. 
+While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) under `postgresql` section. 
 The password is present in aat key value under the secret `preview-db-password`   
 
 ### WA preview set up
 On the pull request set label `pr-values:wa`
 
 To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP) file (`def dmnBranch = "<branch_name>"`). 
-Note: Before merging, revert it to the master branch (`def dmnBranch = "master"`)
+**Note**: Before merging, revert it to the master branch (`def dmnBranch = "master"`)
 
 ### AM role assignment
 To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
