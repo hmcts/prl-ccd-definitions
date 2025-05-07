@@ -89,7 +89,6 @@ ccd:
       imagePullPolicy: Always
       environment:
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
-        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
       secrets:
         USER_PROFILE_DB_PASSWORD:
           secretRef: postgres
@@ -103,7 +102,6 @@ ccd:
       imagePullPolicy: Always
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
-        DATA_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
         IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET: ${IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET}
         IDAM_DATA_STORE_SYSTEM_USER_USERNAME: ${IDAM_DATA_STORE_SYSTEM_USER_USERNAME}
@@ -130,7 +128,6 @@ ccd:
       disableKeyVaults: true
       imagePullPolicy: Always
       environment:
-        DEFINITION_STORE_DB_HOST: '{{ tpl .Values.global.postgresHostname $ }}'
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend,xui_webapp
         IDAM_API_BASE_URL: https://idam-api.aat.platform.hmcts.net
@@ -155,7 +152,6 @@ ccd:
       ingressHost: admin-web-${SERVICE_FQDN}
       keyVaults: []
       environment:
-        USER_PROFILE_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         IDAM_ADMIN_WEB_SERVICE_KEY: ${ADMIN_S2S_KEY}
         IDAM_OAUTH2_AW_CLIENT_SECRET: ${ADMIN_WEB_IDAM_SECRET}
     idam-pr:
@@ -296,8 +292,6 @@ ccd:
         maxReplicas: 1
       environment:
         APPLICATION_LOGGING_LEVEL: TRACE
-        ROLE_ASSIGNMENT_DB_USERNAME: hmcts
-        ROLE_ASSIGNMENT_DB_HOST: '{{ tpl .Values.global.postgresHostname $}}'
         CCD_DATA_STORE_URL: http://${SERVICE_NAME}-ccd-data-store-api
         RUN_LD_ON_STARTUP: false
       keyVaults:
