@@ -1,10 +1,5 @@
 # OVERRIDE VALUES IF pr-values:wa tag is applied
 
-ccd:
-  ccd:
-    ras:
-      enabled: true
-
 xui-webapp:
   enabled: true
   redis:
@@ -28,6 +23,7 @@ xui-webapp:
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
+      HEALTH_ROLE_ASSIGNMENT_API: http://${SERVICE_NAME}-am-role-assignment-service/health
       SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
       SERVICES_CCD_DATA_STORE_API: http://${SERVICE_NAME}-ccd-data-store-api
       SERVICES_DOCUMENTS_API_V2: http://${SERVICE_NAME}-cdam
@@ -35,7 +31,7 @@ xui-webapp:
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       SERVICES_WORK_ALLOCATION_TASK_API: http://${SERVICE_NAME}-wa-task-management-api
       SERVICES_WA_WORKFLOW_API_URL: http://${SERVICE_NAME}-wa-workflow-api
-      SERVICES_ROLE_ASSIGNMENT_API: ${ROLE_ASSIGNMENT_URL}
+      SERVICES_ROLE_ASSIGNMENT_API: http://${SERVICE_NAME}-am-role-assignment-service
       JURISDICTIONS: PRIVATELAW
       WA_SUPPORTED_JURISDICTIONS: PRIVATELAW
       LAUNCH_DARKLY_CLIENT_ID: 5de6610b23ce5408280f2268
@@ -106,9 +102,9 @@ wa:
         IDAM_URL: "https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net"
         S2S_URL: "http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"
         OPEN_ID_IDAM_URL: "https://idam-web-public.{{ .Values.global.environment }}.platform.hmcts.net"
-        ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
-        ALLOWED_JURISDICTIONS: privatelaw,PRIVATELAW
-        ALLOWED_CASE_TYPES: prlapps,privatelaw_exceptionrecord
+        ROLE_ASSIGNMENT_URL: http://${SERVICE_NAME}-am-role-assignment-service
+        ALLOWED_JURISDICTIONS: wa,ia,sscs,civil,publiclaw,privatelaw,employment,st_cic
+        ALLOWED_CASE_TYPES: asylum,wacasetype,sscs,civil,generalapplication,care_supervision_epo,prlapps,privatelaw_exceptionrecord,et_englandwales,et_scotland,benefit,criminalinjuriescompensation
 
   wa-case-event-handler:
     java:
@@ -126,17 +122,19 @@ wa:
         CAMUNDA_URL: "http://{{ .Release.Name }}-camunda/engine-rest"
         CCD_URL: "http://{{ .Release.Name }}-ccd-data-store-api"
         CCD_SEARCH_URL: "http://{{ .Release.Name }}-ccd-data-store-api"
-        ROLE_ASSIGNMENT_URL: ${ROLE_ASSIGNMENT_URL}
+        ROLE_ASSIGNMENT_URL: http://${SERVICE_NAME}-am-role-assignment-service
         WA_WORKFLOW_API_URL: "http://{{ .Release.Name }}-wa-workflow-api"
         WA_TASK_MANAGEMENT_API_URL: "http://{{ .Release.Name }}-wa-task-management-api"
         AZURE_SERVICE_BUS_TOPIC_NAME: ${SERVICE_NAME}-ccd-case-events
         AZURE_SERVICE_BUS_SUBSCRIPTION_NAME: ${SERVICE_NAME}-ccd-case-events
         AZURE_SERVICE_BUS_CCD_CASE_EVENTS_SUBSCRIPTION_NAME: ${SERVICE_NAME}-ccd-case-events
+
   wa-task-monitor:
     java:
       ingressHost: wa-task-monitor-${SERVICE_FQDN}
       environment:
         WA_TASK_MANAGEMENT_API_URL: http://{{ .Release.Name }}-wa-task-management-api
+
   wa-workflow-api:
     java:
       devcpuRequests: 500m
@@ -145,6 +143,7 @@ wa:
       devmemoryLimits: 4Gi
       environment:
         DB_READER_USERNAME: "hmcts"
+
   wa:
     postgresql:
       enabled: false

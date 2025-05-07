@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -exu
+set -eu
 
 workspace=${1}
 tenant_id=${2}
