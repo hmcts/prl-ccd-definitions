@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -exu
+set -eu
 ## Usage: ./organisational-role-assignment.sh [username] [password] [role_classification] [role_name] [role_attributes] [microservice_name]
 ##
 ## Options:

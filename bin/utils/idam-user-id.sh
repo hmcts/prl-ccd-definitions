@@ -1,5 +1,5 @@
 #!/bin/bash
-set -exu
+set -eu
 ## Usage: ./idam-user-id.sh [usertoken]
 ##
 ## Options:
