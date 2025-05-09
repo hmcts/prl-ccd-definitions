@@ -30,9 +30,16 @@ def secrets = [
                 secret('ccd-datastore-client-id', 'CCD_DATASTORE_client_id'),
                 secret('ccd-datastore-client-secret', 'CCD_DATASTORE_client_secret'),
                 secret('ccd-datastore-username', 'CCD_DATASTORE_username'),
-                secret('ccd-datastore-password', 'CCD_DATASTORE_password')
+                secret('ccd-datastore-password', 'CCD_DATASTORE_password'),
+                secret('microservicekey-prl-cos-api', 'PRL_S2S_SECRET'),
+                secret('system-update-user-username', 'SYSTEM_UPDATE_USER_USERNAME'),
+                secret('system-update-user-password', 'SYSTEM_UPDATE_USER_PASSWORD'),
+                secret('prl-cos-idam-client-secret', 'IDAM_CLIENT_SECRET'),
+                secret('preview-am-user-password', 'PREVIEW_AM_USER_PASSWORD'),
+                secret('preview-am-judge-password', 'PREVIEW_AM_JUDGE_PASSWORD')
         ],
         'ccd-${env}'      : [
+                secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_IDAM_CLIENT_SECRET'),
                 secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
                 secret('ccd-api-gateway-oauth2-client-secret', 'API_GATEWAY_IDAM_SECRET'),
                 secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
@@ -65,12 +72,53 @@ def checkForEnableTestsLabel(branch_name) {
   return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
 }
 
+def setPreviewEnvVars() {
+  def githubApi = new GithubAPI(this)
+
+  env.ENABLE_WA = false
+  env.ROLE_ASSIGNMENT_URL="http://am-role-assignment-service-aat.service.core-compute-aat.internal"
+
+  if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
+    env.ENABLE_WA = true
+    env.ROLE_ASSIGNMENT_URL="https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+  }
+}
+
+def deployWADmns() {
+  def githubApi = new GithubAPI(this)
+
+  def waStandaloneBranch = "master"
+  // For testing DMNs, change this to the branch on the DMN repo, but ensure it is changed back to master before merging
+  def dmnBranch = "master"
+
+  echo "Checking if we should use WA"
+  if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
+    sh """
+      ./bin/add-role-assignments.sh
+    """
+    env.SERVICES_WORK_ALLOCATION_TASK_API = "http://prl-ccd-definitions-pr-${CHANGE_ID}-wa-task-management-api"
+    env.SERVICES_WA_WORKFLOW_API_URL = "http://prl-ccd-definitions-pr-${CHANGE_ID}-wa-workflow-api"
+    env.WA_SUPPORTED_JURISDICTIONS = "PRIVATELAW"
+    env.ENABLE_WA = true
+    echo "WA enabled, loading DMNs from ${dmnBranch}"
+    sh """
+        eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
+        ./bin/pull-latest-dmn-files.sh ${dmnBranch}
+        ./bin/pull-camunda-bpmn-files.sh ${waStandaloneBranch}
+        ./bin/import-dmn-diagram.sh . privatelaw prl
+        """
+  } else {
+    env.ENABLE_WA = false
+  }
+}
+
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
 
   onPR{
     env.ENVIRONMENT="preview"
+    setPreviewEnvVars();
   }
   onMaster{
     env.ENVIRONMENT="aat"
@@ -87,6 +135,11 @@ withPipeline("nodejs", product, component) {
       env.CCD_ADMIN_URL="https://admin-web-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.XUI_WEB_URL="https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
       env.CCD_FILE_NAME="ccd-config-PRL-preview.xlsx"
+      env.SERVICE_AUTH_PROVIDER_API_BASE_URL="http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      env.IDAM_API_BASE_URL="https://idam-api.aat.platform.hmcts.net"
+      env.CCD_IDAM_REDIRECT_URL="https://ccd-case-management-web-aat.service.core-compute-aat.internal/oauth2redirect"
+      env.CCD_DEFINITION_STORE_API_BASE_URL="https://ccd-definition-store-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CAMUNDA_BASE_URL="https://camunda-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     }
     onMaster{
       env.CCD_ADMIN_URL="https://ccd-admin-web.aat.platform.hmcts.net"
@@ -103,6 +156,8 @@ withPipeline("nodejs", product, component) {
   before('smoketest:preview') {
     yarnBuilder.yarn('playwrightsetup')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'definitions/**/xlsx/*.xlsx'
+
+    deployWADmns()
   }
 
   afterAlways('smoketest:preview') {
