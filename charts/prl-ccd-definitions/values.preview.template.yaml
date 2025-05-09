@@ -245,9 +245,6 @@ ccd:
     image: hmctspublic.azurecr.io/ccd/logstash
     imageTag: "latest"
     logstashJavaOpts: -Xmx1g -Xms512M
-    elasticsearch:
-      host: ${SERVICE_NAME}-es-master
-      port: 9200
     extraEnvs:
       - name: DATA_STORE_URL
         value: 'jdbc:postgresql://private-law-preview.postgres.database.azure.com:5432/pr-${CHANGE_ID}-data-store?sslmode=require&stringtype=unspecified'
