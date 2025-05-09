@@ -79,20 +79,27 @@ ccd:
     ccdCaseManagementWebIngress: case-management-web-${SERVICE_FQDN}
     postgresUsername: hmcts
     postgresPassword: hmcts
+    postgresSecret: postgres
     s2sUrl: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
 
   ccd-user-profile-api:
     java:
       imagePullPolicy: Always
-      keyVaults: {}
+      disableKeyVaults: true
       environment:
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
         USER_PROFILE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_definition,prl_citizen_frontend
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
       secretName: microservicekey-ccd-definition
+      secrets:
+        USER_PROFILE_DB_PASSWORD:
+          secretRef: postgres
+          key: PASSWORD
+          disabled: false
 
   ccd-data-store-api:
     java:
+      disableKeyVaults: true
       imagePullPolicy: Always
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
@@ -114,9 +121,15 @@ ccd:
 
       ingressHost: ccd-data-store-api-${SERVICE_FQDN}
       secretName: microservicekey-ccd-data
+      secrets:
+        DATA_STORE_DB_PASSWORD:
+          secretRef: postgres
+          key: PASSWORD
+          disabled: false
 
   ccd-definition-store-api:
     java:
+      disableKeyVaults: true
       imagePullPolicy: Always
       keyVaults: {}
       environment:
@@ -136,6 +149,11 @@ ccd:
         PASSWORD: definition-store-db-password
       ingressHost: ccd-definition-store-${SERVICE_FQDN}
       secretName: microservicekey-ccd-definition
+      secrets:
+        DEFINITION_STORE_DB_PASSWORD:
+          secretRef: postgres
+          key: PASSWORD
+          disabled: false
 
   ccd-admin-web:
     nodejs:
@@ -253,7 +271,10 @@ ccd:
       - name: DB_USER
         value: hmcts
       - name: DB_PWD
-        value: hmcts
+        valueFrom:
+          secretKeyRef:
+            name: postgres
+            key: PASSWORD
       - name: ES_HOSTS
         value: http://${SERVICE_NAME}-es-master:9200
       - name: ES_DATA_NODES_URL
