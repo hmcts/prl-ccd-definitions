@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#something to update this file
 set -eu
 
 dir=$(dirname ${0})
