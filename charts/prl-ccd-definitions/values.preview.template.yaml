@@ -98,6 +98,14 @@ ccd:
 
   ccd-data-store-api:
     java:
+      memoryRequests: 2Gi
+      cpuRequests: 2000m
+      memoryLimits: 4Gi
+      cpuLimits: 4000m
+      devmemoryRequests: 2Gi
+      devcpuRequests: 2000m
+      devmemoryLimits: 4Gi
+      devcpuLimits: 4000m
       disableKeyVaults: true
       imagePullPolicy: Always
       environment:
