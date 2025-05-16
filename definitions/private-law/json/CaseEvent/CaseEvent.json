@@ -2132,8 +2132,8 @@
   {
     "LiveFrom": "03/02/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "reviewAdditionalApplicationSystemEvent",
-    "Name": "System event for Review Additional Application",
+    "ID": "systemReviewAdditionalApplication",
+    "Name": "System event for RAA",
     "Description": "System event for Review Additional Application",
     "DisplayOrder": 40,
     "PreConditionState(s)": "*",
@@ -2141,8 +2141,9 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "Publish": "True"
+    "EndButtonLabel": "Submit",
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"DO_NOT_SHOW\""
   }
 ]
 
