@@ -98,3 +98,28 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
       java:
         image: hmctspublic.azurecr.io/prl/cos:latest
     ```
+
+### Functional End-to-End (E2E) Tests
+
+Functional end-to-end (E2E) tests are hosted in the [prl-e2e-tests](https://github.com/hmcts/prl-e2e-tests) repository.
+
+To run E2E tests on your PR build, add the label `enable-prl-e2e-tests`. This will initiate a Playwright smoke test. Developers should add this label when their changes are ready for code review.
+
+Smoke tests from this repository are executed by triggering a build job in Jenkins.
+
+The smoke test is run against **AAT** in the master build.
+
+### Preview Database changes
+Preview is now set up with a PostgreSQL flexible server. The database host is `private-law-preview.postgres.database.azure.com`. 
+While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) under `postgresql` section. 
+The password is present in aat key value under the secret `preview-db-password`   
+
+### WA preview set up
+On the pull request set label `pr-values:wa`
+
+To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP) file (`def dmnBranch = "<branch_name>"`). 
+**Note**: Before merging, revert it to the master branch (`def dmnBranch = "master"`)
+
+### AM role assignment
+To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
+
