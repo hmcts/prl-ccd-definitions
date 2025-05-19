@@ -3,7 +3,15 @@
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "migrateCase",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CR"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   }
 ]
