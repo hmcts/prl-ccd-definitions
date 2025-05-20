@@ -1,19 +1,16 @@
 [
   {
-    "LiveFrom": "14/05/2025",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "returnToPreviousState",
-    "Name": "Return to Previous State",
-    "Description": "Press Save to Return this case from Hearing Outcome to Hearing",
-    "DisplayOrder": 109,
-    "SecurityClassification": "Public",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "PREPARE_FOR_HEARING_CONDUCT_HEARING",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/returnToPreviousStateSubmitted",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"never_show\"",
-    "Publish": "True"
-  }
+  "LiveFrom": "31/10/2022",
+  "CaseTypeID": "PRLAPPS",
+  "ID": "returnToPreviousState",
+  "Name": "Return to previous state",
+  "Description": "Return urgent case to Hearing",
+  "DisplayOrder": 26,
+  "PreConditionState(s)": "*",
+  "PostConditionState": "*",
+  "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/bundle/createBundle",
+  "SecurityClassification": "Public",
+  "ShowEventNotes": "N",
+  "EndButtonLabel": "Confirm state change"
+}
 ]
