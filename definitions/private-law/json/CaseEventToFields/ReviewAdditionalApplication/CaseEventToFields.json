@@ -26,6 +26,18 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "selectedAdditionalApplicationsId",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "chooseSendOrReply",
     "DisplayContext": "MANDATORY",
     "PageID": 2,
@@ -95,7 +107,8 @@
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
+    "FieldShowCondition": "chooseSendOrReply=\"SEND\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/populate-application"
   },
   {
     "LiveFrom": "31/03/2023",
