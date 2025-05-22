@@ -1,0 +1,32 @@
+[
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100ReviewCaseNotesAndCreateFlags",
+    "Name": "Create case flag",
+    "Description": "Create case flag",
+    "DisplayOrder": 27,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/caseflags/setup-wa-task",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createWaTaskForC100ReviewCaseNotesAndCreateFlags",
+    "Name": "Create WA task for case notes and flags",
+    "Description": "Trigger dummy event on case notes and flags added by CTSC",
+    "DisplayOrder": 27,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
+  }
+]
