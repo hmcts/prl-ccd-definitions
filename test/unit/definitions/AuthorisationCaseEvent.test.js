@@ -7,6 +7,8 @@ const {
 } = require('../utils/utils');
 const { AuthorisationCaseEvent } = require('../utils/dataProvider');
 
+// DUMMY COMMENT 
+
 function assertFieldDefinitionIsValid(row) {
   expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
     return v.startsWith('PRLAPPS');
