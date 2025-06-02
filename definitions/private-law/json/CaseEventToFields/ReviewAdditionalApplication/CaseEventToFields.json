@@ -26,27 +26,13 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "caseTypeOfApplication",
-    "DisplayContext": "MANDATORY",
-    "PageID": 1,
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "RetainHiddenValue": "Y",
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "isAdditionalApplicationReviewed=\"DO_NOT_SHOW\"",
-    "Publish" : "True"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "chooseSendOrReply",
     "DisplayContext": "OPTIONAL",
     "PageID": 2,
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "isAdditionalApplicationReviewed=\"DO NOT SHOW\""
+    "FieldShowCondition": "isAdditionalApplicationReviewed=\"DO NOT SHOW\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -64,11 +50,25 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "isAdditionalApplicationReviewed=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "sendingMessagesLabel",
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "No",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/clear-dynamic-lists"
   },
@@ -80,7 +80,7 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition": "chooseSendOrReply=\"SEND\""
   },
@@ -92,7 +92,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "chooseSendOrReply=\"SEND\""
   },
