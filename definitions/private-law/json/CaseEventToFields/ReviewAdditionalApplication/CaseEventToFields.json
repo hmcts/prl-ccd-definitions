@@ -26,38 +26,14 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "chooseSendOrReply",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "isAdditionalApplicationReviewed=\"DO NOT SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "messageReplyDynamicList",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "caseTypeOfApplication",
-    "DisplayContext": "OPTIONAL",
-    "PageID": 2,
-    "PageDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"DO_NOT_SHOW\"",
+    "FieldShowCondition": "isAdditionalApplicationReviewed=\"DO_NOT_SHOW\"",
     "Publish" : "True"
   },
   {
@@ -66,12 +42,11 @@
     "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "sendingMessagesLabel",
     "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "No",
-    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/clear-dynamic-lists"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -79,11 +54,10 @@
     "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "sendingMessagesHint",
     "DisplayContext": "READONLY",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -91,11 +65,10 @@
     "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "sendMessageObject",
     "DisplayContext": "COMPLEX",
-    "PageID": 3,
-    "PageDisplayOrder": 3,
+    "PageID": 2,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Yes",
-    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -104,8 +77,8 @@
     "CaseFieldID": "externalMessagesHint",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "No"
   },
@@ -116,8 +89,8 @@
     "CaseFieldID": "externalMessageAttachDocsList",
     "DisplayContext": "COMPLEX",
     "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -127,9 +100,8 @@
     "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "messageContent",
     "DisplayContext": "MANDATORY",
-    "PageShowCondition": "chooseSendOrReply=\"SEND\"",
-    "PageID": 4,
-    "PageDisplayOrder": 4,
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes"
   },
@@ -137,74 +109,13 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "respondToMessage",
-    "DisplayContext": "MANDATORY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "messageReplyTable",
     "DisplayContext": "OPTIONAL",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
+    "PageID": 4,
+    "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
     "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "messageReplyTableLabel",
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "internalMessageAttachDocsList",
-    "DisplayContext": "READONLY",
-    "PageID": 5,
-    "PageDisplayOrder": 5,
-    "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "replyMessageObject",
-    "DisplayContext": "COMPLEX",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "PageFieldDisplayOrder": 1,
-    "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
-  },
-  {
-    "LiveFrom": "31/03/2023",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "reviewAdditionalApplication",
-    "CaseFieldID": "messageReplyTableLabel2",
-    "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
+    "FieldShowCondition": "isAdditionalApplicationReviewed = \"DO_NOT_SHOW\""
   }
 ]
