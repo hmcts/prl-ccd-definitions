@@ -40,11 +40,35 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "chooseSendOrReply",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "isAdditionalApplicationReviewed=\"DO NOT SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "messageReplyDynamicList",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "sendingMessagesLabel",
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "No",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/clear-dynamic-lists"
   },
@@ -56,8 +80,9 @@
     "DisplayContext": "READONLY",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No"
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"SEND\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -67,7 +92,7 @@
     "DisplayContext": "COMPLEX",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -109,6 +134,18 @@
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "respondToMessage",
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
     "CaseFieldID": "messageReplyTable",
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
@@ -117,5 +154,54 @@
     "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition": "isAdditionalApplicationReviewed = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "messageReplyTableLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "internalMessageAttachDocsList",
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "replyMessageObject",
+    "DisplayContext": "COMPLEX",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Yes",
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/clear-dynamic-lists"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "messageReplyTableLabel2",
+    "DisplayContext": "READONLY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 8,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
   }
 ]
