@@ -28,5 +28,22 @@
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "03/05/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "c100CreateFlagsForGivenCaseNote",
+    "Name": "Create case flag",
+    "Description": "Create case flag",
+    "DisplayOrder": 27,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/review-lang-sm/about-to-start",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/caseflags/setup-wa-task",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   }
 ]
