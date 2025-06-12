@@ -1,0 +1,120 @@
+[
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "selectedAdditionalApplicationsBundle",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "isAdditionalApplicationReviewed",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/review-additional-application/mid-event"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "caseTypeOfApplication",
+    "DisplayContext": "MANDATORY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "isAdditionalApplicationReviewed=\"DO_NOT_SHOW\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "sendingMessagesLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "sendingMessagesHint",
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "sendMessageObject",
+    "DisplayContext": "COMPLEX",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "externalMessagesHint",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "externalMessageAttachDocsList",
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "sendMessageObject.internalOrExternalMessage=\"EXTERNAL\"",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "messageContent",
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "reviewAdditionalApplication",
+    "CaseFieldID": "messageReplyTable",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "isAdditionalApplicationReviewed = \"DO_NOT_SHOW\""
+  }
+]
