@@ -30,5 +30,20 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/caseflags/check-wa-task-status",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "closeReviewRARequestTask",
+    "Name": "To close WA task",
+    "Description": "To close WA task for case flags",
+    "DisplayOrder": 39,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
   }
 ]
