@@ -35,7 +35,10 @@ tasks.register('highLevelDataSetup', JavaExec) {
 }
 
 dependencies {
-    implementation group: 'com.github.hmcts', name: 'befta-fw', version: '9.2.4'
+    implementation('com.github.hmcts:befta-fw:9.2.4') {
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.17'
     implementation 'ch.qos.logback:logback-classic:1.5.18'
 
