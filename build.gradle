@@ -19,6 +19,13 @@ tasks.register('highLevelDataSetup', JavaExec) {
     mainClass = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
     classpath += sourceSets.main.runtimeClasspath
     jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
+
+    def envArg = System.getenv('ENVIRONMENT')?.toUpperCase() ?: 'LOCAL'
+    args = [envArg]
+
+    doFirst {
+        println ">> Running highLevelDataSetup with ENVIRONMENT=${envArg}"
+    }
 }
 
 dependencies {
