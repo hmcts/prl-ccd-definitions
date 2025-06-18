@@ -15,6 +15,12 @@ repositories {
     }
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 tasks.register('highLevelDataSetup', JavaExec) {
     mainClass = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
     classpath += sourceSets.main.runtimeClasspath
