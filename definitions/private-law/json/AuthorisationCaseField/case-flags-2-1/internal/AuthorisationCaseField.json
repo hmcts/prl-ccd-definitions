@@ -28,5 +28,65 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "03/05/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedReviewLangAndSmReq",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/05/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isReviewLangAndSmReqReviewed",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-caa",
+          "caseworker-approver",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
