@@ -4,27 +4,44 @@ plugins {
     id 'jacoco'
 }
 
-group 'com.github.hmcts'
-version 'DEV-SNAPSHOT'
+group = 'com.github.hmcts'
+version = 'DEV-SNAPSHOT'
 
 repositories {
     mavenCentral()
     mavenLocal()
-    maven { url 'https://jitpack.io' }
-    jcenter()
+    maven {
+        url = 'https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1'
+    }
 }
 
-task highLevelDataSetup(type: JavaExec) {
-    main = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.register('highLevelDataSetup', JavaExec) {
+    mainClass = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
     classpath += sourceSets.main.runtimeClasspath
     jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
+
+    def envArg = System.getenv('ENVIRONMENT')?.toUpperCase() ?: 'LOCAL'
+    args = [envArg]
+
+    doFirst {
+        println ">> Running highLevelDataSetup with ENVIRONMENT=${envArg}"
+    }
 }
 
 dependencies {
-    implementation group: 'com.github.hmcts', name: 'befta-fw', version: '8.10.1'
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.17'
+    implementation('com.github.hmcts:befta-fw:9.2.4') {
+        exclude group: 'commons-logging', module: 'commons-logging'
+    }
+
+    implementation 'org.slf4j:slf4j-api:2.0.17'
     implementation 'ch.qos.logback:logback-classic:1.5.18'
 
-    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    testImplementation 'junit:junit:4.13.2'
     testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
 }

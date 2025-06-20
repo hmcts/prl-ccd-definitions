@@ -57,6 +57,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
         main(HighLevelDataSetupApp.class, args);
     }
 
+    @Override
     public void createRoleAssignments() {
         BeftaUtils.defaultLog("Will NOT create role assignments!");
     }
