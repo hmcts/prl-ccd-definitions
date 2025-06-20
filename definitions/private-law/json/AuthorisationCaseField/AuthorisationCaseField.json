@@ -17268,5 +17268,30 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "19/06/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "TransientClientContext",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
