@@ -1,0 +1,20 @@
+[
+  {
+    "LiveFrom": "03/05/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "createFlagsForGivenCaseNote",
+    "Name": "Create reviewed case flag",
+    "Description": "Create reviewed case flag",
+    "DisplayOrder": 28,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "Y",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/caseflags/review-lang-sm/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/caseflags/review-lang-sm/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/caseflags/setup-wa-task",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "Publish": "True"
+  }
+]
