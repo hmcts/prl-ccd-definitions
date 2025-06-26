@@ -121,5 +121,6 @@ To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP)
 **Note**: Before merging, revert it to the master branch (`def dmnBranch = "master"`)
 
 ### AM role assignment
-To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
+To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json)
+
 
