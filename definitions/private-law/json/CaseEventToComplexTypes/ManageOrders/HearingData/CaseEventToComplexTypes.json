@@ -6,7 +6,7 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "displayConfirmedHearing",
-    "EventElementLabel": "Display Confirmed Hearing Date",
+    "EventElementLabel": "Display Confirmed Hearing Details",
     "FieldDisplayOrder": "1",
     "DisplayContext": "READONLY"
   },
@@ -30,7 +30,8 @@
     "ListElementCode": "hearingTypes",
     "EventElementLabel": "Hearing Type",
     "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
     "LiveFrom": "26/06/2025",
