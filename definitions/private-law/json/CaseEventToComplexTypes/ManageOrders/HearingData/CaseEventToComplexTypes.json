@@ -764,10 +764,10 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
-    "EventElementLabel": "**The date is confirmed in the Hearings tab qqqq**",
+    "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "66",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -779,7 +779,7 @@
     "EventElementLabel": "Select from hearing",
     "FieldDisplayOrder": "68",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
