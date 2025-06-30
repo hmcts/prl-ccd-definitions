@@ -42,7 +42,8 @@
     "ListElementCode": "transientConfirmedHearingDetail",
     "EventElementLabel": "Selected hearing",
     "FieldDisplayOrder": "4",
-    "DisplayContext": "READONLY"
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -767,7 +768,7 @@
     "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "66",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"No\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -779,7 +780,7 @@
     "EventElementLabel": "Select from hearing",
     "FieldDisplayOrder": "68",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"No\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
     "LiveFrom": "16/02/2022",
