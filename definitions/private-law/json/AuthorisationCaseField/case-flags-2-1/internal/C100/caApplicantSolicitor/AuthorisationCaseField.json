@@ -2,6 +2,39 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "selectedFlags",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "[CREATOR]",
+          "[APPLICANTSOLICITOR]",
+          "[C100APPLICANTSOLICITOR1]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caApplicantSolicitor1InternalFlags",
     "AccessControl": [
       {
