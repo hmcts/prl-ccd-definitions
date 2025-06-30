@@ -42,7 +42,19 @@
     "ListElementCode": "transientConfirmedHearingDetail",
     "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
+    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "HearingData",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "ordersHearingDetails",
+    "ListElementCode": "labelConfirmedHearingDetail",
+    "EventElementLabel": "${ordersHearingDetails.transientConfirmedHearingDetail}",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition":  "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -879,17 +891,5 @@
     "FieldDisplayOrder": "77",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "labelConfirmedHearingDetail",
-    "EventElementLabel": "${ordersHearingDetails.transientConfirmedHearingDetail}",
-    "FieldDisplayOrder": "78",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition":  "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   }
 ]
