@@ -492,7 +492,7 @@ postgresql:
   flexibleserver: private-law-preview
   setup:
     databases:
-      - name: "${CHANGE_ID}-data-store"
+      - name: "pr-${CHANGE_ID}-data-store"
       - name: "pr-${CHANGE_ID}-definition-store"
       - name: "pr-${CHANGE_ID}-user-profile"
       - name: "pr-${CHANGE_ID}-role-assignment"
