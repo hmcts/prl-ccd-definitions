@@ -468,7 +468,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:latest
+    image: hmctspublic.azurecr.io/prl/cos:pr-3166
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -492,7 +492,7 @@ postgresql:
   flexibleserver: private-law-preview
   setup:
     databases:
-      - name: "pr-${CHANGE_ID}-data-store"
+      - name: "${CHANGE_ID}-data-store"
       - name: "pr-${CHANGE_ID}-definition-store"
       - name: "pr-${CHANGE_ID}-user-profile"
       - name: "pr-${CHANGE_ID}-role-assignment"
