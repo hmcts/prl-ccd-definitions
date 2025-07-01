@@ -731,7 +731,7 @@
     "ListElementCode": "hearingListedLinkedCases",
     "EventElementLabel": "",
     "FieldDisplayOrder": "61",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
 
@@ -744,7 +744,7 @@
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
     "EventElementLabel": "**The date is confirmed in the Hearings tab**",
     "FieldDisplayOrder": "62",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -769,7 +769,7 @@
     "EventElementLabel": "Custom details",
     "EventHintText": "Please note that if any details are entered here that any listing request will be manually sent for listing rather than automatically.",
     "FieldDisplayOrder": "68",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
@@ -781,7 +781,7 @@
     "ListElementCode": "instructionsForRemoteHearing",
     "EventElementLabel": "Insert joining instructions for remote hearing",
     "FieldDisplayOrder": "66",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -794,7 +794,7 @@
     "EventElementLabel": "Additional hearing details",
     "EventHintText": "Please note that if any details are entered here that any listing request will be manually sent for listing rather than automatically.",
     "FieldDisplayOrder": "70",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
@@ -806,7 +806,7 @@
     "ListElementCode": "hearingJudgeNameAndEmail.idamId",
     "EventElementLabel": "",
     "FieldDisplayOrder": "69",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
@@ -818,7 +818,7 @@
     "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
     "EventElementLabel": "",
     "FieldDisplayOrder": "70",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
