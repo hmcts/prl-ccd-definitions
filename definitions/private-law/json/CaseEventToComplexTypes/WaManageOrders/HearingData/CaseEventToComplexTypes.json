@@ -1,6 +1,6 @@
 [
   {
-    "LiveFrom": "26/06/2025",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -8,10 +8,11 @@
     "ListElementCode": "displayConfirmedHearing",
     "EventElementLabel": "Display Confirmed Hearing Details",
     "FieldDisplayOrder": "1",
+    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "READONLY"
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -22,7 +23,7 @@
     "DisplayContext": "READONLY"
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -34,30 +35,7 @@
     "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
-    "LiveFrom": "26/06/2025",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "waManageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "transientConfirmedHearingDetail",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "waManageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "labelConfirmedHearingDetail",
-    "EventElementLabel": "${ordersHearingDetails.transientConfirmedHearingDetail}",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition":  "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
-  },
-  {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -69,7 +47,7 @@
     "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -82,7 +60,7 @@
     "FieldShowCondition": "isRenderingRequiredFlag=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -94,7 +72,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -106,7 +84,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -117,7 +95,7 @@
     "DisplayContext": "MANDATORY"
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -129,7 +107,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -141,7 +119,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -153,7 +131,7 @@
     "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -166,7 +144,7 @@
   },
 
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -178,7 +156,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -190,7 +168,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -203,7 +181,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -215,7 +193,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -227,7 +205,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -239,7 +217,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -251,7 +229,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -264,7 +242,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -277,7 +255,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -289,7 +267,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -301,7 +279,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -313,7 +291,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -325,7 +303,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -337,7 +315,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -349,7 +327,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -361,7 +339,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -373,7 +351,7 @@
     "FieldShowCondition": "isFL401ApplicantPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -385,7 +363,7 @@
     "FieldShowCondition": "isFL401ApplicantSolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -397,7 +375,7 @@
     "FieldShowCondition": "isFL401RespondentPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -409,7 +387,7 @@
     "FieldShowCondition": "isFL401RespondentSolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -421,7 +399,7 @@
     "FieldShowCondition": "isApplicant1Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -433,7 +411,7 @@
     "FieldShowCondition": "isApplicant1SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -445,7 +423,7 @@
     "FieldShowCondition": "isApplicant2Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -457,7 +435,7 @@
     "FieldShowCondition": "isApplicant2SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -469,7 +447,7 @@
     "FieldShowCondition": "isApplicant3Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -481,7 +459,7 @@
     "FieldShowCondition": "isApplicant3SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -493,7 +471,7 @@
     "FieldShowCondition": "isApplicant4Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -505,7 +483,7 @@
     "FieldShowCondition": "isApplicant4SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -517,7 +495,7 @@
     "FieldShowCondition": "isApplicant5Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -529,7 +507,7 @@
     "FieldShowCondition": "isApplicant5SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -541,7 +519,7 @@
     "FieldShowCondition": "isRespondent1Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -553,7 +531,7 @@
     "FieldShowCondition": "isRespondent1SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -565,7 +543,7 @@
     "FieldShowCondition": "isRespondent2Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -577,7 +555,7 @@
     "FieldShowCondition": "isRespondent2SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -589,7 +567,7 @@
     "FieldShowCondition": "isRespondent3Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -601,7 +579,7 @@
     "FieldShowCondition": "isRespondent3SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -613,7 +591,7 @@
     "FieldShowCondition": "isRespondent4Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -625,7 +603,7 @@
     "FieldShowCondition": "isRespondent4SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -637,7 +615,7 @@
     "FieldShowCondition": "isRespondent5Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -649,7 +627,7 @@
     "FieldShowCondition": "isRespondent5SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -661,7 +639,7 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isCafcassCymru=\"No\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -673,7 +651,7 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isCafcassCymru=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -685,7 +663,7 @@
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -697,7 +675,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -709,7 +687,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -721,7 +699,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -733,7 +711,7 @@
     "FieldShowCondition": "hearingJudgePersonalCode=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -745,7 +723,7 @@
     "FieldShowCondition": "hearingJudgeLastName=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -757,7 +735,7 @@
     "FieldShowCondition": "hearingJudgeEmailAddress=\"DO_NOT_SHOW\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -770,7 +748,7 @@
   },
 
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -782,19 +760,19 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"No\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "confirmedHearingDates",
-    "EventElementLabel": "Select from hearing",
+    "EventElementLabel": "Selected hearing",
     "FieldDisplayOrder": "68",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -807,7 +785,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -819,7 +797,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -832,7 +810,7 @@
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"Yes\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -844,7 +822,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -856,7 +834,7 @@
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
-    "LiveFrom": "16/02/2022",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -868,7 +846,7 @@
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
   {
-    "LiveFrom": "01/09/2023",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
@@ -880,7 +858,7 @@
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
   {
-    "LiveFrom": "01/09/2023",
+    "LiveFrom": "01/07/2025",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
     "CaseEventID": "waManageOrders",
