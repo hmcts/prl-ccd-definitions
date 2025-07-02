@@ -1,16 +1,5 @@
 [
   {
-    "LiveFrom": "26/06/2025",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "displayConfirmedHearing",
-    "EventElementLabel": "Display Confirmed Hearing Details",
-    "FieldDisplayOrder": "1",
-    "DisplayContext": "READONLY"
-  },
-  {
     "LiveFrom": "16/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "HearingData",
@@ -18,7 +7,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "addNewHearingDataLabel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "2",
+    "FieldDisplayOrder": "1",
     "DisplayContext": "READONLY"
   },
   {
@@ -29,32 +18,8 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingTypes",
     "EventElementLabel": "Hearing Type",
-    "FieldDisplayOrder": "3",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"No\""
-  },
-  {
-    "LiveFrom": "26/06/2025",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "transientConfirmedHearingDetail",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "01/09/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "HearingData",
-    "CaseEventID": "manageOrders",
-    "CaseFieldID": "ordersHearingDetails",
-    "ListElementCode": "labelConfirmedHearingDetail",
-    "EventElementLabel": "${ordersHearingDetails.transientConfirmedHearingDetail}",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition":  "ordersHearingDetails.displayConfirmedHearing=\"Yes\""
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -64,9 +29,8 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingDateConfirmOptionEnum",
     "EventElementLabel": "Has the hearing date been confirmed?",
-    "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.displayConfirmedHearing=\"No\""
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "16/02/2022",
@@ -76,7 +40,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "isRenderingRequiredFlag",
     "EventElementLabel": "is Rendering required?",
-    "FieldDisplayOrder": "6",
+    "FieldDisplayOrder": "4",
     "DisplayContext": "OPTIONAL",
     "RetainHiddenValue": "Y",
     "FieldShowCondition": "isRenderingRequiredFlag=\"DO_NOT_SHOW\""
@@ -89,7 +53,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "dateIsReservedWithListAssistLabel",
     "EventElementLabel": "**The date is reserved with List Assist**",
-    "FieldDisplayOrder": "7",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -101,7 +65,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingDateTimes",
     "EventElementLabel": "Enter date and time",
-    "FieldDisplayOrder": "8",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -113,7 +77,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingDateTimes.hearingDateTimeOption",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "9",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -124,7 +88,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "dateNeedsToBeConfirmedByListingTeamBeforeServiceLabel",
     "EventElementLabel": "**The date needs to be confirmed by the listing team before service**",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
@@ -136,7 +100,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "orderWillBeServedWithTheDateToBeFixedLabel",
     "EventElementLabel": "**This order will be served with the 'date to be fixed'**",
-    "FieldDisplayOrder": "11",
+    "FieldDisplayOrder": "9",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
@@ -148,7 +112,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "fillingFormRenderingInfo",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fillingFormRenderingInfo=\"DO_NOT_SHOW\""
   },
@@ -160,7 +124,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "fillingFormRenderingInfoLabel",
     "EventElementLabel": "${ordersHearingDetails.fillingFormRenderingInfo}",
-    "FieldDisplayOrder": "13",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
@@ -173,7 +137,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingSpecificDatesOptionsEnum",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "14",
+    "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -185,7 +149,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "yesLabel",
     "EventElementLabel": "**Yes**",
-    "FieldDisplayOrder": "15",
+    "FieldDisplayOrder": "13",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -198,7 +162,7 @@
     "ListElementCode": "firstDateOfTheHearing",
     "EventElementLabel": "",
     "EventHintText": "Date must exclude weekends and bank holidays",
-    "FieldDisplayOrder": "16",
+    "FieldDisplayOrder": "14",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -210,7 +174,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "theHearingMustTakePlaceAtLabel",
     "EventElementLabel": "The hearing must take place at",
-    "FieldDisplayOrder": "17",
+    "FieldDisplayOrder": "15",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -222,7 +186,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingMustTakePlaceAtHour",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "18",
+    "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -234,7 +198,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingMustTakePlaceAtMinute",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "19",
+    "FieldDisplayOrder": "17",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"Yes\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -246,7 +210,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingNeedsBetweenCertianDatesLabel",
     "EventElementLabel": "**It needs to take place between certain dates**\n\nYou can enter either or both dates",
-    "FieldDisplayOrder": "20",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -259,7 +223,7 @@
     "ListElementCode": "earliestHearingDate",
     "EventElementLabel": "Earliest hearing date",
     "EventHintText": "Enter a date the hearing must be listed after",
-    "FieldDisplayOrder": "21",
+    "FieldDisplayOrder": "19",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -272,7 +236,7 @@
     "ListElementCode": "latestHearingDate",
     "EventElementLabel": "Latest hearing date",
     "EventHintText": "Enter a date the hearing must be listed before",
-    "FieldDisplayOrder": "22",
+    "FieldDisplayOrder": "20",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingSpecificDatesOptionsEnum=\"HearingRequiredBetweenCertainDates\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -284,7 +248,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingPriorityTypeEnum",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "23",
+    "FieldDisplayOrder": "21",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -296,7 +260,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "estimatedTimeLabel",
     "EventElementLabel": "**Estimated time**\n\nA minimum of one input is required",
-    "FieldDisplayOrder": "24",
+    "FieldDisplayOrder": "22",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -308,7 +272,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingEstimatedDays",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "25",
+    "FieldDisplayOrder": "23",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -320,7 +284,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingEstimatedHours",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "26",
+    "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -344,7 +308,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingChannelsEnum",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "28",
+    "FieldDisplayOrder": "29",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -356,7 +320,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "allPartiesAttendHearingSameWayYesOrNo",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "29",
+    "FieldDisplayOrder": "30",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -368,7 +332,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.applicantName}",
-    "FieldDisplayOrder": "30",
+    "FieldDisplayOrder": "31",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isFL401ApplicantPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -380,7 +344,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor}",
-    "FieldDisplayOrder": "31",
+    "FieldDisplayOrder": "32",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isFL401ApplicantSolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -392,7 +356,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.respondentName}",
-    "FieldDisplayOrder": "34",
+    "FieldDisplayOrder": "33",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isFL401RespondentPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -404,7 +368,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor}",
-    "FieldDisplayOrder": "35",
+    "FieldDisplayOrder": "34",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isFL401RespondentSolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -416,7 +380,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel1",
     "EventElementLabel": "${ordersHearingDetails.applicantName1}",
-    "FieldDisplayOrder": "36",
+    "FieldDisplayOrder": "35",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant1Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -428,7 +392,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel1",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor1}",
-    "FieldDisplayOrder": "37",
+    "FieldDisplayOrder": "36",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant1SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -440,7 +404,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel2",
     "EventElementLabel": "${ordersHearingDetails.applicantName2}",
-    "FieldDisplayOrder": "38",
+    "FieldDisplayOrder": "37",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant2Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -452,7 +416,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel2",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor2}",
-    "FieldDisplayOrder": "39",
+    "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant2SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -464,7 +428,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel3",
     "EventElementLabel": "${ordersHearingDetails.applicantName3}",
-    "FieldDisplayOrder": "40",
+    "FieldDisplayOrder": "39",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant3Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -476,7 +440,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel3",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor3}",
-    "FieldDisplayOrder": "41",
+    "FieldDisplayOrder": "40",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant3SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -488,7 +452,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel4",
     "EventElementLabel": "${ordersHearingDetails.applicantName4}",
-    "FieldDisplayOrder": "42",
+    "FieldDisplayOrder": "41",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant4Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -500,7 +464,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel4",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor4}",
-    "FieldDisplayOrder": "43",
+    "FieldDisplayOrder": "42",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant4SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -512,7 +476,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantHearingChannel5",
     "EventElementLabel": "${ordersHearingDetails.applicantName5}",
-    "FieldDisplayOrder": "44",
+    "FieldDisplayOrder": "43",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant5Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -524,7 +488,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "applicantSolicitorHearingChannel5",
     "EventElementLabel": "${ordersHearingDetails.applicantSolicitor5}",
-    "FieldDisplayOrder": "45",
+    "FieldDisplayOrder": "44",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isApplicant5SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -536,7 +500,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel1",
     "EventElementLabel": "${ordersHearingDetails.respondentName1}",
-    "FieldDisplayOrder": "46",
+    "FieldDisplayOrder": "45",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent1Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -548,7 +512,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel1",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor1}",
-    "FieldDisplayOrder": "47",
+    "FieldDisplayOrder": "46",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent1SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -560,7 +524,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel2",
     "EventElementLabel": "${ordersHearingDetails.respondentName2}",
-    "FieldDisplayOrder": "48",
+    "FieldDisplayOrder": "47",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent2Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -572,7 +536,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel2",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor2}",
-    "FieldDisplayOrder": "49",
+    "FieldDisplayOrder": "48",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent2SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -584,7 +548,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel3",
     "EventElementLabel": "${ordersHearingDetails.respondentName3}",
-    "FieldDisplayOrder": "50",
+    "FieldDisplayOrder": "49",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent3Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -596,7 +560,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel3",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor3}",
-    "FieldDisplayOrder": "51",
+    "FieldDisplayOrder": "50",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent3SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -608,7 +572,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel4",
     "EventElementLabel": "${ordersHearingDetails.respondentName4}",
-    "FieldDisplayOrder": "52",
+    "FieldDisplayOrder": "51",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent4Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -620,7 +584,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel4",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor4}",
-    "FieldDisplayOrder": "53",
+    "FieldDisplayOrder": "52",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent4SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -632,7 +596,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentHearingChannel5",
     "EventElementLabel": "${ordersHearingDetails.respondentName5}",
-    "FieldDisplayOrder": "54",
+    "FieldDisplayOrder": "53",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent5Present=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -644,7 +608,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "respondentSolicitorHearingChannel5",
     "EventElementLabel": "${ordersHearingDetails.respondentSolicitor5}",
-    "FieldDisplayOrder": "55",
+    "FieldDisplayOrder": "54",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "isRespondent5SolicitorPresent=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -656,7 +620,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "cafcassHearingChannel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "56",
+    "FieldDisplayOrder": "55",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isCafcassCymru=\"No\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -668,7 +632,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "cafcassCymruHearingChannel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "57",
+    "FieldDisplayOrder": "56",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND isCafcassCymru=\"Yes\" AND ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -680,7 +644,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "localAuthorityHearingChannel",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "58",
+    "FieldDisplayOrder": "57",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.allPartiesAttendHearingSameWayYesOrNo=\"No\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   },
@@ -692,7 +656,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "courtList",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "59",
+    "FieldDisplayOrder": "58",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -704,7 +668,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingAuthority",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "60",
+    "FieldDisplayOrder": "59",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -716,7 +680,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeNameAndEmail",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "61",
+    "FieldDisplayOrder": "60",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -728,7 +692,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgePersonalCode",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "62",
+    "FieldDisplayOrder": "61",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "hearingJudgePersonalCode=\"DO_NOT_SHOW\""
   },
@@ -740,7 +704,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeLastName",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "63",
+    "FieldDisplayOrder": "62",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "hearingJudgeLastName=\"DO_NOT_SHOW\""
   },
@@ -752,7 +716,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeEmailAddress",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "64",
+    "FieldDisplayOrder": "63",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "hearingJudgeEmailAddress=\"DO_NOT_SHOW\""
   },
@@ -764,7 +728,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingListedLinkedCases",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "65",
+    "FieldDisplayOrder": "64",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -777,9 +741,9 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "dateIsConfirmedInTheHearingsTabLabel",
     "EventElementLabel": "**The date is confirmed in the Hearings tab**",
-    "FieldDisplayOrder": "66",
+    "FieldDisplayOrder": "65",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"No\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -789,9 +753,9 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "confirmedHearingDates",
     "EventElementLabel": "Select from hearing",
-    "FieldDisplayOrder": "68",
+    "FieldDisplayOrder": "67",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" AND ordersHearingDetails.displayConfirmedHearing=\"Yes\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -802,7 +766,7 @@
     "ListElementCode": "customDetails",
     "EventElementLabel": "Custom details",
     "EventHintText": "Please note that if any details are entered here that any listing request will be manually sent for listing rather than automatically.",
-    "FieldDisplayOrder": "69",
+    "FieldDisplayOrder": "68",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
@@ -814,9 +778,9 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "instructionsForRemoteHearing",
     "EventElementLabel": "Insert joining instructions for remote hearing",
-    "FieldDisplayOrder": "70",
+    "FieldDisplayOrder": "69",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.displayConfirmedHearing=\"Yes\""
+    "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -827,9 +791,9 @@
     "ListElementCode": "additionalHearingDetails",
     "EventElementLabel": "Additional hearing details",
     "EventHintText": "Please note that if any details are entered here that any listing request will be manually sent for listing rather than automatically.",
-    "FieldDisplayOrder": "71",
+    "FieldDisplayOrder": "70",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\" OR ordersHearingDetails.displayConfirmedHearing=\"Yes\""
+    "FieldShowCondition": "loggedInUserType!=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateToBeFixed\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\" OR ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedInHearingsTab\""
   },
   {
     "LiveFrom": "16/02/2022",
@@ -839,7 +803,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeNameAndEmail.idamId",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "73",
+    "FieldDisplayOrder": "72",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -851,7 +815,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingJudgeNameAndEmail.personalCode",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "74",
+    "FieldDisplayOrder": "73",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateReservedWithListAssit\""
   },
@@ -863,7 +827,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingDateToBeConfirmedLabel",
     "EventElementLabel": "**The date needs to be confirmed by the listing team before service (Optional)**",
-    "FieldDisplayOrder": "75",
+    "FieldDisplayOrder": "74",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateConfirmedByListingTeam\""
   },
@@ -875,7 +839,7 @@
     "CaseFieldID": "ordersHearingDetails",
     "ListElementCode": "hearingDateToBeFixedLabel",
     "EventElementLabel": "**This order will be served with the 'date to be fixed' (Optional)**",
-    "FieldDisplayOrder": "76",
+    "FieldDisplayOrder": "75",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum=\"dateToBeFixed\""
   },
@@ -888,7 +852,7 @@
     "ListElementCode": "additionalDetailsForHearingDateOptions",
     "EventHintText": "Give details of any additional requirements.",
     "EventElementLabel": " ",
-    "FieldDisplayOrder": "77",
+    "FieldDisplayOrder": "76",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "loggedInUserType=\"JUDGE\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateReservedWithListAssit\" AND ordersHearingDetails.hearingDateConfirmOptionEnum!=\"dateConfirmedInHearingsTab\""
   }
