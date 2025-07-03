@@ -55,8 +55,8 @@
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "hearingEditAndApproveAnOrder",
-    "Name": "Hearing edit&serve an order",
-    "Description": "Hearing edit and serve an order",
+    "Name": "Edit and serve an order",
+    "Description": "Edit and serve an order",
     "DisplayOrder": 31,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/populate-draft-order-dropdown",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/about-to-submit",
@@ -67,6 +67,7 @@
     "EndButtonLabel": "Submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "Publish": "True"
+    "Publish": "True",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
   }
 ]
