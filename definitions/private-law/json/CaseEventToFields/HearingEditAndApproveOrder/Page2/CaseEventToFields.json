@@ -1,0 +1,72 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "downloadOrderLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "PageShowCondition": "orderUploadedAsDraftFlag=\"Yes\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "judgeNotesEmptyUploadJourney",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "downloadOrderLabel=\"DO_NOT_SHOW\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+  "LiveFrom": "31/03/2022",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "hearingEditAndApproveAnOrder",
+  "CaseFieldID": "previewUploadedOrder",
+  "PageFieldDisplayOrder": 3,
+  "DisplayContext": "READONLY",
+  "PageID": 2,
+  "PageDisplayOrder": 2,
+  "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "makeChangesToUploadedOrder",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "uploadOrAmendDirectionsFromJudge",
+    "PageFieldDisplayOrder": 5,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "judgeNotesEmptyUploadJourney!=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "manageOrdersOptions",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition" : "makeChangesToUploadedOrder=\"DO_NOT_SHOW\""
+  }
+]

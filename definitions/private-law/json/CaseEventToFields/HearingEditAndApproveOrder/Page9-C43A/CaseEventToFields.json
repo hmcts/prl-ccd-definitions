@@ -1,0 +1,39 @@
+[
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "orderNameLabel9",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "orderType=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "appointedGuardianLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
+    "PageShowCondition": "orderType=\"specialGuardianShip\" AND doYouWantToEditTheOrder=\"Yes\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "appointedGuardianName",
+    "PageID": 9,
+    "PageDisplayOrder": 9,
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "orderType=\"specialGuardianShip\"",
+    "ShowSummaryChangeOption": "Y"
+  }
+]
