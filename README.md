@@ -126,4 +126,7 @@ To add new AAT user to preview update [preview-am-role-assignments.json](config/
 ### HEARING HACK
 On preview by default hearing api calls are hacked. This controlled by env variable HEARING_HACK_ENABLED [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml).
 Endpoint to post a hearing request is available on swagger - "swagger-ui/index.html#/hearing-support-controller". Select case state - Hearing.
-Sample payload for the swagger request - [sampleListedHearing.json](test/resource/hearing/sampleListedHearing.json)
+Sample payload for the swagger request - [sampleListedHearing.json](test/resource/hearing/sampleListedHearing.json). 
+Replace :
+"caseRef" : "<Actual case id>" (Add actual case id)
+"hearingId" : "999999" (valid values 999999 and 111111)
