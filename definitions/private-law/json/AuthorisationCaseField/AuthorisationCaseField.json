@@ -17109,8 +17109,7 @@
         "CRUD": "R"
       }
     ]
-  }
-,
+  },
   {
     "LiveFrom": "13/08/2021",
     "CaseTypeID": "PRLAPPS",
@@ -17127,6 +17126,32 @@
         "UserRoles": [
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav",
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isInvokedFromTask",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "citizen",
           "courtnav",
