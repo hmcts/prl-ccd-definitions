@@ -98,7 +98,7 @@ ccd:
 
   ccd-data-store-api:
     java:
-      image: hmctspublic.azurecr.io/ccd/data-store-api:pr-2545-1d6d939-20250710090545
+      image: hmctspublic.azurecr.io/ccd/data-store-api:pr-2545
       disableKeyVaults: true
       imagePullPolicy: Always
       environment:
@@ -469,7 +469,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3191
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
