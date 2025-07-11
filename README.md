@@ -128,7 +128,9 @@ This is to speed up development by not relying on environments where hearing is 
 So, on preview by default hearing api calls are bypassed. 
 This controlled by env variable HEARING_PREVIEW_BYPASS_ENABLED [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml).
 Endpoint to post a hearing request is available on swagger ("swagger-ui/index.html#/hearing-support-controller") with no authorisation required 
-put request ("/hearing-support/testing/prepare-for-hearing")
+put request ("/hearing-support/testing/prepare-for-hearing"). 
+For e.g.  
+https://prl-ccd-definitions-pr-2791.preview.platform.hmcts.net/swagger-ui/index.html#/hearing-support-controller/prepareForHearing
 Sample payload for the swagger request - [sampleListedHearing.json](test/resource/hearing/sampleListedHearing.json). 
 Replace :
 "caseRef" : "<Actual case id>" (Add actual case id)
