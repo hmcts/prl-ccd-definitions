@@ -1,0 +1,97 @@
+[
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "manageOrderHeaderLabel21",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/judge-or-admin-edit-approve/serve-order/mid-event",
+    "PageShowCondition": "doYouWantToServeOrder=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrderDynamicList",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrderAdditionalDocumentsLabel",
+    "DisplayContext": "READONLY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "ShowSummaryChangeOption": "Yes",
+    "PageFieldDisplayOrder": 3
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "serveOrderAdditionalDocuments",
+    "DisplayContext": "OPTIONAL",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "PageFieldDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "isCafcass",
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "otherPeoplePresentInCaseFlag",
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "isOnlyC47aOrderSelectedToServe",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "ShowSummaryChangeOption": "No",
+    "RetainHiddenValue": "Yes",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/12/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "isInHearingState",
+    "DisplayContext": "MANDATORY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "PageFieldDisplayOrder": 8,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition" : "manageOrderHeaderLabel21=\"DO_NOT_SHOW\""
+  }
+]
