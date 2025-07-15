@@ -126,6 +126,9 @@ ccd:
   ccd-definition-store-api:
     java:
       disableKeyVaults: true
+      devmemoryRequests: '1024Mi'
+      devmemoryLimits: '2048Mi'
+      devcpuRequests: '900m'
       imagePullPolicy: Always
       devmemoryRequests: 1Gi
       devcpuRequests: 1000m
