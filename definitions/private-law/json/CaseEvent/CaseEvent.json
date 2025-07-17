@@ -2036,6 +2036,22 @@
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
   },
   {
+    "LiveFrom": "15/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageBarrister",
+    "Name": "Manage barrister",
+    "Description": "Manage the barrister on the case",
+    "DisplayOrder": 9,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS;",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
+  },
+  {
     "LiveFrom": "11/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "amendMiamPolicyUpgrade",
@@ -2178,20 +2194,6 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
-    "Publish": "True"
-  },
-  {
-    "LiveFrom": "15/07/2025",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "manageBarrister",
-    "Name": "Manage barrister",
-    "Description": "Manage the barrister on the case",
-    "DisplayOrder": 64,
-    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS;AWAITING_RESUBMISSION_TO_HMCTS",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Save and continue",
     "Publish": "True"
   }
 ]
