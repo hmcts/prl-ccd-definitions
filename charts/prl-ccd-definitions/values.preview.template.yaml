@@ -126,6 +126,9 @@ ccd:
   ccd-definition-store-api:
     java:
       disableKeyVaults: true
+      devmemoryRequests: '1024Mi'
+      devmemoryLimits: '2048Mi'
+      devcpuRequests: '900m'
       imagePullPolicy: Always
       environment:
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
@@ -469,6 +472,7 @@ aac-manage-case-assignment:
 prl-cos:
   java:
     image: hmctspublic.azurecr.io/prl/cos:pr-3205
+
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
