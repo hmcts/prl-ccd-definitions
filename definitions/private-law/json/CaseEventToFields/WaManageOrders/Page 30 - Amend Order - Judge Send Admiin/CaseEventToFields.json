@@ -1,0 +1,27 @@
+[
+  {
+    "LiveFrom": "01/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "waManageOrders",
+    "CaseFieldID": "judgeDirectionsToAdmin",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 30,
+    "PageDisplayOrder": 30,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "manageOrdersOptions!=\"servedSavedOrders\" AND loggedInUserType=\"JUDGE\""
+  },
+  {
+    "LiveFrom": "01/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "waManageOrders",
+    "CaseFieldID": "isOrderCompleteToServe",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 30,
+    "PageDisplayOrder": 30,
+    "FieldShowCondition": "[STATE] = \"JUDICIAL_REVIEW\" OR [STATE] = \"CASE_ISSUED\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish" : "True"
+  }
+]
