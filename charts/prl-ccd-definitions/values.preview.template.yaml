@@ -130,6 +130,10 @@ ccd:
       devmemoryLimits: '2048Mi'
       devcpuRequests: '900m'
       imagePullPolicy: Always
+      devmemoryRequests: 1Gi
+      devcpuRequests: 1000m
+      devmemoryLimits: 2Gi
+      devcpuLimits: 2000m
       environment:
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend,xui_webapp
