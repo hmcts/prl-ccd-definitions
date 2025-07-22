@@ -83,7 +83,7 @@
     "CaseEventID": "addBarrister",
     "CaseFieldID": "applicants",
     "ListElementCode": "solicitorReference",
-    "EventElementLabel": "Sol ref",
+    "EventElementLabel": "",
     "FieldDisplayOrder": "8",
     "DisplayContext": "READONLY"
   },
@@ -99,6 +99,88 @@
     "DisplayContext": "READONLY"
   },
   {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "firstName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "10",
+    "DisplayContext": "READONLY"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "lastName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "11",
+    "DisplayContext": "READONLY"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "dateOfBirth",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "respondents.isDateOfBirthKnown=\"Yes\""
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "representativeFirstName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "respondents.doTheyHaveLegalRepresentation=\"yes\""
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "representativeLastName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "14",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "respondents.doTheyHaveLegalRepresentation=\"yes\""
+  },
+  {
+    "LiveFrom": "10/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "solicitorEmail",
+    "EventElementLabel": "*Email Address",
+    "FieldDisplayOrder": "15",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "respondents.doTheyHaveLegalRepresentation=\"yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "solicitorOrg",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "16",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "respondents.doTheyHaveLegalRepresentation=\"yes\""
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
@@ -106,7 +188,18 @@
     "CaseFieldID": "applicants",
     "ListElementCode": "selectForAddBarrister",
     "EventElementLabel": "Select applicant",
-    "FieldDisplayOrder": "10",
+    "FieldDisplayOrder": "17",
+    "DisplayContext": "OPTIONAL"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "addBarrister",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "selectForAddBarrister",
+    "EventElementLabel": "Select respondent",
+    "FieldDisplayOrder": "18",
     "DisplayContext": "OPTIONAL"
   },
   {
