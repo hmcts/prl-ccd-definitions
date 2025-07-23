@@ -29,5 +29,36 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "27/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "allocatedBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
