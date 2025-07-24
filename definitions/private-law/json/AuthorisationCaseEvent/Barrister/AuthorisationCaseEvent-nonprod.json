@@ -12,13 +12,27 @@
       },
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorAddBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "[CREATOR]",
+          "caseworker-privatelaw-courtadmin"
+        ],
+        "CRUD": "CRU"
       }
     ]
   }
