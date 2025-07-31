@@ -2,11 +2,12 @@
   {
     "LiveFrom": "05/11/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "caseworkerAddBarrister",
+    "CaseEventID": "adminAddBarrister",
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRUD"
       },
@@ -14,8 +15,7 @@
         "UserRoles": [
           "[CREATOR]",
           "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser"
+          "caseworker-privatelaw-la"
         ],
         "CRUD": "R"
       }
