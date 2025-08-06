@@ -472,7 +472,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3235
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -489,7 +489,6 @@ prl-cos:
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
-      PRL_DGS_API_URL: https://prl-dgs-pr-402.preview.platform.hmcts.net
       APP_ENV: "preview"
 
 postgresql:
