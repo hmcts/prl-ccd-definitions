@@ -33,7 +33,7 @@ xui-webapp:
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
       SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
-      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-2774.preview.platform.hmcts.net
+      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-2807.preview.platform.hmcts.net
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://${SERVICE_NAME}-aac-manage-case-assignment
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       JURISDICTIONS: PRIVATELAW
@@ -126,10 +126,11 @@ ccd:
   ccd-definition-store-api:
     java:
       disableKeyVaults: true
-      devmemoryRequests: '1024Mi'
-      devmemoryLimits: '2048Mi'
-      devcpuRequests: '900m'
       imagePullPolicy: Always
+      devmemoryRequests: 1Gi
+      devcpuRequests: 1000m
+      devmemoryLimits: 2Gi
+      devcpuLimits: 2000m
       environment:
         DEFINITION_STORE_IDAM_KEY: ${DEFINITION_STORE_S2S_KEY}
         DEFINITION_STORE_S2S_AUTHORISED_SERVICES: ccd_admin,ccd_data,ccd_gw,aac_manage_case_assignment,prl_citizen_frontend,xui_webapp
@@ -471,7 +472,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3227
+    image: hmctspublic.azurecr.io/prl/cos:pr-3235
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -488,6 +489,7 @@ prl-cos:
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
       BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
+      PRL_DGS_API_URL: https://prl-dgs-pr-402.preview.platform.hmcts.net
       APP_ENV: "preview"
 
 postgresql:
