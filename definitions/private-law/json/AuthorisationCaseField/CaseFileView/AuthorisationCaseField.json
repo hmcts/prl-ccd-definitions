@@ -546,11 +546,30 @@
     "CRUD": "CRU"
   },
   {
-    "LiveFrom": "24/11/2022",
+    "LiveFrom": "25/06/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "applicantC1AApplication",
-    "UserRole": "ctsc-team-leader",
-    "CRUD": "CRU"
+    "CaseFieldID": "c8ArchivedDocuments",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "[CREATOR]",
+          "[APPLICANTSOLICITOR]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-cafcass",
+          "ctsc-team-leader"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
   },
   {
     "LiveFrom": "24/11/2022",
