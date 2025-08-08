@@ -7,7 +7,7 @@ import uk.gov.hmcts.befta.util.BeftaUtils;
 
 import java.util.List;
 import java.util.Locale;
-
+// dummy comment
 public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
 
     public static final String PUBLIC = "PUBLIC";
