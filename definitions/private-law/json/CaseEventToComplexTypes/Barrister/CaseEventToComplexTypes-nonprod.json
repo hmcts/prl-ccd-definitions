@@ -82,7 +82,7 @@
     "CaseEventID": "solicitorAddBarrister",
     "CaseFieldID": "allocatedBarrister",
     "ListElementCode": "partyList",
-    "EventElementLabel": "Select applicant or respondent",
+    "EventElementLabel": "For which party do you want to add a barrister?",
     "FieldDisplayOrder": "1",
     "DisplayContext": "MANDATORY"
   },
@@ -92,8 +92,8 @@
     "ID": "AllocatedBarrister",
     "CaseEventID": "solicitorAddBarrister",
     "CaseFieldID": "allocatedBarrister",
-    "ListElementCode": "barristerName",
-    "EventElementLabel": "Name of the barrister",
+    "ListElementCode": "barristerFirstName",
+    "EventElementLabel": "First names of the barrister",
     "FieldDisplayOrder": "2",
     "DisplayContext": "MANDATORY"
   },
@@ -103,8 +103,8 @@
     "ID": "AllocatedBarrister",
     "CaseEventID": "solicitorAddBarrister",
     "CaseFieldID": "allocatedBarrister",
-    "ListElementCode": "barristerEmail",
-    "EventElementLabel": "Email of the barrister",
+    "ListElementCode": "barristerLastName",
+    "EventElementLabel": "Last name of the barrister",
     "FieldDisplayOrder": "3",
     "DisplayContext": "MANDATORY"
   },
@@ -114,9 +114,19 @@
     "ID": "AllocatedBarrister",
     "CaseEventID": "solicitorAddBarrister",
     "CaseFieldID": "allocatedBarrister",
-    "ListElementCode": "barristerOrg",
-    "EventElementLabel": "Barrister organisation search",
+    "ListElementCode": "barristerEmail",
+    "EventElementLabel": "Email address of the barrister",
     "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "AllocatedBarrister",
+    "CaseEventID": "solicitorAddBarrister",
+    "CaseFieldID": "allocatedBarrister",
+    "ListElementCode": "barristerOrg",
+    "FieldDisplayOrder": "5",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -127,7 +137,7 @@
     "CaseFieldID": "allocatedBarrister",
     "ListElementCode": "barristerOrg.OrganisationID",
     "EventElementLabel": "Barrister organisation Id",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "6",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -138,19 +148,7 @@
     "CaseFieldID": "allocatedBarrister",
     "ListElementCode": "barristerOrg.OrganisationName",
     "EventElementLabel": "Barrister organisation name",
-    "FieldDisplayOrder": "4",
-    "DisplayContext": "MANDATORY"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "AllocatedBarrister",
-    "CaseEventID": "solicitorAddBarrister",
-    "CaseFieldID": "allocatedBarrister",
-    "ListElementCode": "roleItem",
-    "EventElementLabel": "Role item of the barrister",
-    "FieldDisplayOrder": "5",
-    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "FieldDisplayOrder": "7",
     "DisplayContext": "MANDATORY"
   }
 ]
