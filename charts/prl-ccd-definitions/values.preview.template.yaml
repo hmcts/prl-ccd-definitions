@@ -472,7 +472,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:latest
+    image: hmctspublic.azurecr.io/prl/cos:pr-3281
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -497,10 +497,10 @@ prl-cron-acro:
 
 job:
   kind: CronJob
-  image: hmctspublic.azurecr.io/prl/cos:latest
-  schedule: "17 22 * * *" # 22:17 UTC
+  image: hmctspublic.azurecr.io/prl/cos:pr-3281
+  schedule: " 22 * * *" # 22:17 UTC
   environment:
-    TASK_NAME: AwpProcessHwfPaymentTask
+    TASK_NAME: BaisDocumentUploadTask
     VAR: trigger1
     FEATURE_EXAMPLE: true
     PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
