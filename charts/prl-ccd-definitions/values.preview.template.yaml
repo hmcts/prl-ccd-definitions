@@ -472,7 +472,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3257
+    image: hmctspublic.azurecr.io/prl/cos:pr-3258
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -491,6 +491,7 @@ prl-cos:
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
+      BARRISTER_FEATURE_ENABLED: "true"
 
 postgresql:
   enabled: true
