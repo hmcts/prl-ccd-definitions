@@ -498,7 +498,7 @@ prl-cron-acro:
 job:
   kind: CronJob
   image: hmctspublic.azurecr.io/prl/cos:pr-3281
-  schedule: " 22 * * *" # 22:17 UTC
+  schedule: "* */3 * * *" # 22:17 UTC
   environment:
     TASK_NAME: BaisDocumentUploadTask
     VAR: trigger1
