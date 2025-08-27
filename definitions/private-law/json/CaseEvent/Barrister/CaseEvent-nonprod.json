@@ -1,0 +1,63 @@
+[
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "adminAddBarrister",
+    "Name": "Add barrister",
+    "Description": "Caseworker add barrister",
+    "DisplayOrder": 200,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/add/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/add/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "solicitorAddBarrister",
+    "Name": "Add barrister",
+    "Description": "Solicitor add barrister",
+    "DisplayOrder": 201,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/add/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/add/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "solicitorRemoveBarrister",
+    "Name": "Remove barrister",
+    "Description": "Solicitor Remove Barrister",
+    "DisplayOrder": 203,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/remove/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/remove/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "adminRemoveBarrister",
+    "Name": "Remove barrister",
+    "Description": "Caseworker remove barrister",
+    "DisplayOrder": 201,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/remove/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/remove/about-to-submit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  }
+]
+
