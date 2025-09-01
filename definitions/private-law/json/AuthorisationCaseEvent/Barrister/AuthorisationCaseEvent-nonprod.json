@@ -21,5 +21,40 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "05/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorAddBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[APPLICANTSOLICITOR]",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "hearing-centre-team-leader"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminRemoveBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]
