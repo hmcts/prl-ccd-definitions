@@ -499,6 +499,10 @@ prl-cron:
     image: hmctspublic.azurecr.io/prl/cos:pr-3281
     schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
+    cpuLimits: "4000m"
+    cpuRequests: "2000m"
+    memoryLimits: "2048Mi"
+    memoryRequests: "1024Mi"
     environment:
       TASK_NAME: BaisDocumentUploadTask
       VAR: trigger1
