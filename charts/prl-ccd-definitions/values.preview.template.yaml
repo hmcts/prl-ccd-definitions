@@ -33,7 +33,7 @@ xui-webapp:
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
       SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
-      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-2842.preview.platform.hmcts.net
+      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-2829.preview.platform.hmcts.net
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://${SERVICE_NAME}-aac-manage-case-assignment
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       JURISDICTIONS: PRIVATELAW
@@ -143,6 +143,7 @@ ccd:
         DEFINITION_STORE_DEFAULT_LOG_LEVEL: DEBUG
         DEFINITION_STORE_TX_TIMEOUT_DEFAULT: 120
         DEFINITION_STORE_DB_USERNAME: hmcts
+        LOG_LEVEL_ROOT: DEBUG
       secrets:
         DEFINITION_STORE_DB_PASSWORD:
           secretRef: postgres
