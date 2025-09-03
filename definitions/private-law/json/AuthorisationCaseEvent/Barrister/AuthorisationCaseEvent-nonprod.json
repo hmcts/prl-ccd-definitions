@@ -29,17 +29,76 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITOR]",
-          "caseworker-privatelaw-solicitor"
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "[C100APPLICANTSOLICITOR1]",
+          "[C100APPLICANTSOLICITOR2]",
+          "[C100APPLICANTSOLICITOR3]",
+          "[C100APPLICANTSOLICITOR4]",
+          "[C100APPLICANTSOLICITOR5]",
+          "[FL401RESPONDENTSOLICITOR]",
+          "[FL401APPLICANTSOLICITOR]",
+          "[APPLICANTSOLICITOR]"
         ],
         "CRUD": "CRU"
       },
       {
         "UserRoles": [
+          "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-courtadmin",
           "hearing-centre-team-leader"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorRemoveBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTSOLICITOR2]",
+          "[C100RESPONDENTSOLICITOR3]",
+          "[C100RESPONDENTSOLICITOR4]",
+          "[C100RESPONDENTSOLICITOR5]",
+          "[C100APPLICANTSOLICITOR1]",
+          "[C100APPLICANTSOLICITOR2]",
+          "[C100APPLICANTSOLICITOR3]",
+          "[C100APPLICANTSOLICITOR4]",
+          "[C100APPLICANTSOLICITOR5]",
+          "[FL401RESPONDENTSOLICITOR]",
+          "[FL401APPLICANTSOLICITOR]",
+          "[APPLICANTSOLICITOR]"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-courtadmin",
+          "hearing-centre-team-leader"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminRemoveBarrister",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRUD"
       }
     ]
   }
