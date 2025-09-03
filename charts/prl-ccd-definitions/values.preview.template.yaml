@@ -519,6 +519,12 @@ prl-cron:
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       ACRO_SOURCE_DIRECTORY: /tmp/source
       ACRO_OUTPUT_DIRECTORY: /tmp/export
+    volumeMounts:
+      - mountPath: /mnt
+        name: cron-data
+    volumes:
+      - name: cron-data
+        emptyDir: {}
 
 postgresql:
   enabled: true
