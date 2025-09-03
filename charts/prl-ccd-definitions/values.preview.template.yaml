@@ -519,6 +519,12 @@ prl-cron:
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       ACRO_SOURCE_DIRECTORY: /tmp/source
       ACRO_OUTPUT_DIRECTORY: /tmp/export
+    volumeMounts:
+      - name: cron-data
+        mountPath: /cron
+volumes:
+  - name: cron-data
+
 
 postgresql:
   enabled: true
@@ -534,3 +540,4 @@ postgresql:
       - name: "pr-${CHANGE_ID}-camunda"
       - name: "pr-${CHANGE_ID}-cft_task_db"
       - name: "pr-${CHANGE_ID}-cft_task_db_replica"
+
