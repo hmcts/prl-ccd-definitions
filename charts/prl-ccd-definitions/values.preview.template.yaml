@@ -517,15 +517,9 @@ prl-cron:
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
-      ACRO_SOURCE_DIRECTORY: /tmp/source
-      ACRO_OUTPUT_DIRECTORY: /tmp/export
+      ACRO_SOURCE_DIRECTORY: /tmp/acro/source
+      ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       SUSPEND: false
-    volumeMounts:
-      - mountPath: /mnt
-        name: cron-data
-    volumes:
-      - name: cron-data
-        emptyDir: {}
 
 postgresql:
   enabled: true
