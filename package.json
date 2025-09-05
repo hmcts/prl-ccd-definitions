@@ -32,7 +32,7 @@
     "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "generate-json": "cd ccd-definition-processor && yarn xlsx2json -D ../definitions/private-law/json -i ../definitions/private-law/xlsx/ccd-config-PRL-base.xlsx && pretty-quick --pattern 'definitions/**/json/**.json'",
     "generate-excel-local": "yarn envs local generate-excel -e '*-prod.json,*-sublive.json,*-ignore.json'",
-    "generate-excel-preview": "yarn envs preview generate-excel -e '*-nonprod.json,*-sublive.json,*-ignore.json'",
+    "generate-excel-preview": "yarn envs preview generate-excel -e '*-nonprod.json,*-sublive.json,*-preview.json,*-ignore.json'",
     "generate-excel-demo": "yarn envs demo generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
     "generate-excel-aat": "yarn envs aat generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
     "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
