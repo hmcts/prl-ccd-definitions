@@ -473,9 +473,9 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:latest
+    image: hmctspublic.azurecr.io/prl/cos:pr-3292
     ingressHost: ${SERVICE_FQDN}
-    imagePullPolicy: Always
+    imagePullPolicy: Always fr
     #Below settings are copied from prl-cos preview values, needs review.
     devmemoryRequests: 1Gi
     devcpuRequests: 1000m
