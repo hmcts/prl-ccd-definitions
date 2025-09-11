@@ -1,0 +1,33 @@
+[
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "daRespondentBarristerExternalFlags",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[FL401RESPONDENTSOLICITOR]",
+          "[FL401RESPONDENTBARRISTER]",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "caseworker-caa",
+          "caseworker-approver"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  }
+]
