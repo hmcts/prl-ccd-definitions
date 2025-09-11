@@ -11,6 +11,7 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/add/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/add/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/barrister/add/submitted",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
   },
@@ -26,6 +27,7 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/add/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/add/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/barrister/add/submitted",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
   },
@@ -40,6 +42,22 @@
     "PreConditionState(s)": "CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_RESUBMISSION_TO_HMCTS;CASE_WITHDRAWN",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/remove/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/remove/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/barrister/remove/submitted",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "17/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "barristerStopRepresenting",
+    "Name": "Stop representing client",
+    "Description": "Stop representing client as a barrister",
+    "DisplayOrder": 204,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUED;JUDICIAL_REVIEW;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;ALL_FINAL_ORDERS_ISSUED;CASE_WITHDRAWN;",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/stop-representing/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/remove/about-to-submit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
@@ -56,6 +74,7 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/barrister/remove/about-to-start",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/case-assignment/barrister/remove/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/barrister/remove/submitted",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
   }
