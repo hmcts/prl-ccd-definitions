@@ -1022,5 +1022,35 @@
         "CRUD": "CRUD"
       }
     ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderCollection",
+    "ListElementCode": "finalisationDetails",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]
