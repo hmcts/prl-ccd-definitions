@@ -74,7 +74,7 @@ def checkForEnableTestsLabel(branch_name) {
 
 def setPreviewEnvVars() {
   def githubApi = new GithubAPI(this)
-  env.COS_IMAGE = latest
+  env.COS_IMAGE = "latest"
   env.ENABLE_WA = false
   env.ROLE_ASSIGNMENT_URL="http://am-role-assignment-service-aat.service.core-compute-aat.internal"
 
@@ -84,7 +84,7 @@ def setPreviewEnvVars() {
   }
 
   if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-cos:image')) {
-      env.COS_IMAGE = pr-3309
+      env.COS_IMAGE = "pr-3309"
   }
 }
 
