@@ -82,11 +82,13 @@ def setPreviewEnvVars() {
     env.ENABLE_WA = true
     env.ROLE_ASSIGNMENT_URL="https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
   }
+
+  def cosPrefix = "pr-cos:"
   def label = githubApi
-            .getLabelsbyPattern(env.BRANCH_NAME, "pr-cos:")
-            .find { it.startsWith("pr-cos-") }
+            .getLabelsbyPattern(env.BRANCH_NAME, cosPrefix)
+            .find { it.startsWith(cosPrefix) }
   if (label) {
-    env.COS_IMAGE = label - "pr-cos-"
+    env.COS_IMAGE = label - cosPrefix
   }
   echo "COS_IMAGE derived is ${env.COS_IMAGE}"
 }
