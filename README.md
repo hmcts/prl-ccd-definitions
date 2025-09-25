@@ -82,21 +82,10 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 
 ### If your ticket includes changes in the prl-cos API
 
-1. Update the following section in the [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) file:
-    ```yaml
-    prl-cos:
-      java:
-        image: hmctspublic.azurecr.io/prl/cos:pr-3036 # Replace 3036 with the PR number of the prl-cos update you want to test against this repo.
-    ```
+1. Create a new label in lines of `pr-cos:pr-pr-3309` # Replace `3309` with the PR number of the prl-cos update you want to test against this repo
 2. If you make additional changes to the cos pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
     ```bash
     kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
-    ```
-3. After testing, make sure to revert the above change to use the latest prl-cos image:
-    ```yaml
-    prl-cos:
-      java:
-        image: hmctspublic.azurecr.io/prl/cos:latest
     ```
 
 ### Functional End-to-End (E2E) Tests
