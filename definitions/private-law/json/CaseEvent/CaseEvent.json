@@ -12,7 +12,8 @@
     "ShowEventNotes": "N",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/about-to-submit-case-creation",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/case-initiation/submitted",
-    "EndButtonLabel": "Save and continue"
+    "EndButtonLabel": "Save and continue",
+    "TTLIncrement": "28"
   },
   {
     "LiveFrom": "01/08/2021",
@@ -1426,7 +1427,8 @@
     "PostConditionState": "AWAITING_SUBMISSION_TO_HMCTS",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/citizen-case-creation-callback/submitted",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "TTLIncrement": "28"
   },
   {
     "LiveFrom": "01/07/2021",
@@ -2179,5 +2181,20 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "24/09/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "manageCaseTTL",
+    "Name": "Resolve time to live",
+    "Description": "Resolve time to live",
+    "DisplayOrder": 41,
+    "PreConditionState(s)": "AWAITING_SUBMISSION_TO_HMCTS,AWAITING_RESUBMISSION_TO_HMCTS",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\"",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit"
   }
 ]
