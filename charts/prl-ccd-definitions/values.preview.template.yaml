@@ -572,6 +572,35 @@ prl-cron:
           - name: acro-zip-password
             alias: ACRO_ZIP_PASSWORD
 
+fis-hmc-api:
+  java:
+    image: 'hmctspublic.azurecr.io/fis/hmc-api:latest'
+    ingressHost: fis-hmc-api-${SERVICE_FQDN}
+    environment:
+      REFORM_TEAM: fis
+      REFORM_SERVICE_NAME: fis-hmc-api
+      SERVICE_AUTH_PROVIDER_URL: 'http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal'
+      IDAM_WEB_URL: 'https://idam-web-public.{{ .Values.global.environment }}.platform.hmcts.net/login'
+      IDAM_API_URL: 'https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net'
+      HMC_FIS_TOPIC_NAME: 'hmc-to-cft-{{ .Values.global.environment }}'
+      HMC_FIS_SUBSCRIPTION_NAME: 'hmc-fis-subs-prl-{{ .Values.global.environment }}'
+      HMC_HOST: 'hmc-servicebus-{{ .Values.global.environment }}.servicebus.windows.net'
+      APPLICATION_NAME: 'fis_hmc_api'
+      MANAGE_CASE_REDIRECT_URL: 'https://manage-case.{{ .Values.global.environment }}.platform.hmcts.net/oauth2/callback'
+      HMC_CFT_HEARING_BASEURL: 'http://hmc-cft-hearing-service-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal/hearings/'
+      HMC_CFT_HEARING_BASEURL_FOR_FEIGN: 'http://hmc-cft-hearing-service-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal/'
+      CASE_DATA_STORE_BASEURL: 'http://ccd-data-store-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal'
+      CCD_UI_URL: 'https://manage-case.{{ .Values.global.environment }}.platform.hmcts.net/cases/case-details/'
+      AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: "http://rpe-service-auth-provider-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal"
+      OIDC_S2S_MICROSERVICE_NAME: 'fis_hmc_api'
+      PRL_URL: 'http://prl-cos-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal'
+      PRL_HMC_S2S_AUTHORISED_SERVICES: xui_webapp,prl_cos_api,fis_hmc_api
+      CAFCASS_EXCLUDE_HEARING_STATES: HEARING_REQUESTED,AWAITING_LISTING,EXCEPTION,CANCELLATION_SUBMITTED,UPDATE_SUBMITTED
+      REF_DATA_VENUE_URL: 'http://rd-location-ref-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal/'
+      REF_DATA_JUDICIAL_URL: 'http://rd-judicial-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal/'
+      ROLE_ASSIGNMENT_SERVICE_URL: 'http://am-role-assignment-service-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal'
+
+
 postgresql:
   enabled: true
   flexibleserver: private-law-preview
@@ -586,3 +615,17 @@ postgresql:
       - name: "pr-${CHANGE_ID}-camunda"
       - name: "pr-${CHANGE_ID}-cft_task_db"
       - name: "pr-${CHANGE_ID}-cft_task_db_replica"
+
+servicebus:
+  enabled: true
+  releaseNameOverride: ${SERVICE_NAME}
+  resourceGroup: private-law-aso-preview-rg
+  sbNamespace: private-law-servicebus-preview
+  setup:
+    topics:
+      - name: ccd-case-events
+        subscriptionNeeded: yes
+        requiresSession: true
+    queues:
+      - name: tribunals-to-hearing-api
+
