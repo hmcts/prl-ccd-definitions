@@ -616,16 +616,16 @@ postgresql:
       - name: "pr-${CHANGE_ID}-cft_task_db"
       - name: "pr-${CHANGE_ID}-cft_task_db_replica"
 
-#servicebus:
-#  enabled: true
-#  releaseNameOverride: ${SERVICE_NAME}
-#  resourceGroup: private-law-aso-preview-rg
-#  sbNamespace: private-law-servicebus-preview
-#  setup:
-#    topics:
-#      - name: ccd-case-events
-#        subscriptionNeeded: yes
-#        requiresSession: true
-#    queues:
-#      - name: tribunals-to-hearing-api
+servicebus:
+  enabled: true
+  releaseNameOverride: ${SERVICE_NAME}
+  resourceGroup: private-law-aso-preview-rg
+  sbNamespace: private-law-servicebus-preview
+  setup:
+    topics:
+      - name: ccd-case-events
+        subscriptionNeeded: yes
+        requiresSession: true
+    queues:
+      - name: tribunals-to-hearing-api
 
