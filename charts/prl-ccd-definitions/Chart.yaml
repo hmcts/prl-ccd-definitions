@@ -48,3 +48,7 @@ dependencies:
     version: 0.0.18
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: prl-cron.enabled
+  - name: fis-hmc-api
+    version: ~0.0.37
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: fis-hmc-api.enabled
