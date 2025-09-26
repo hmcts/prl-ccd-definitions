@@ -572,6 +572,57 @@ prl-cron:
           - name: acro-zip-password
             alias: ACRO_ZIP_PASSWORD
 
+fis-hmc-api:
+  enabled: true
+  java:
+    image: 'hmctspublic.azurecr.io/fis/hmc-api:latest'
+    ingressHost: fis-hmc-api-${SERVICE_FQDN}
+    releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
+    environment:
+      REFORM_TEAM: fis
+      REFORM_SERVICE_NAME: fis-hmc-api
+      SERVICE_AUTH_PROVIDER_URL: 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+      IDAM_WEB_URL: 'https://idam-web-public.aat.platform.hmcts.net/login'
+      IDAM_API_URL: 'https://idam-api.aat.platform.hmcts.net'
+      HMC_FIS_TOPIC_NAME: 'hmc-to-cft-aat'
+      HMC_FIS_SUBSCRIPTION_NAME: 'hmc-fis-subs-prl-aat'
+      HMC_HOST: 'hmc-servicebus-aat.servicebus.windows.net'
+      APPLICATION_NAME: 'fis_hmc_api'
+      MANAGE_CASE_REDIRECT_URL: 'https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/oauth2/callback'
+      HMC_CFT_HEARING_BASEURL: 'http://hmc-cft-hearing-service-aat.service.core-compute-aat.internal/hearings/'
+      HMC_CFT_HEARING_BASEURL_FOR_FEIGN: 'http://hmc-cft-hearing-service-aat.service.core-compute-aat.internal/'
+      CASE_DATA_STORE_BASEURL: 'http://${SERVICE_NAME}-ccd-data-store-api'
+      CCD_UI_URL: 'https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases/case-details/'
+      AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      OIDC_S2S_MICROSERVICE_NAME: 'fis_hmc_api'
+      PRL_URL: 'https://prl-ccd-definitions-pr-${CHANGE_ID}-java'
+      PRL_HMC_S2S_AUTHORISED_SERVICES: xui_webapp,prl_cos_api,fis_hmc_api
+      CAFCASS_EXCLUDE_HEARING_STATES: HEARING_REQUESTED,AWAITING_LISTING,EXCEPTION,CANCELLATION_SUBMITTED,UPDATE_SUBMITTED
+      REF_DATA_VENUE_URL: 'http://rd-location-ref-api-aat.service.core-compute-aat.internal/'
+      REF_DATA_JUDICIAL_URL: 'http://rd-judicial-api-aat.service.core-compute-aat.internal/'
+      ROLE_ASSIGNMENT_SERVICE_URL: ${ROLE_ASSIGNMENT_URL}
+
+hmcsb:
+  enabled: true
+  resourceGroup: hmc-shared-aat
+  sbNamespace: hmc-servicebus-aat
+  #Each topic/queue matches up to one used in the config above
+  setup:
+    topics:
+      - name: prl
+        fullName: hmc-to-cft-aat
+        create: false
+        subscriptionNeeded: yes
+        ignoreSubscriptionDeletion: true
+        rules:
+          - name: "servicefilter"
+            filterType: CorrelationFilter
+            correlationFilter:
+              - name: "hmctsServiceId"
+                value: "ABA5"
+              - name: "hmctsDeploymentId"
+                value: "prl-${CHANGE_ID}"
+
 postgresql:
   enabled: true
   flexibleserver: private-law-preview
@@ -586,3 +637,17 @@ postgresql:
       - name: "pr-${CHANGE_ID}-camunda"
       - name: "pr-${CHANGE_ID}-cft_task_db"
       - name: "pr-${CHANGE_ID}-cft_task_db_replica"
+
+servicebus:
+  enabled: true
+  releaseNameOverride: ${SERVICE_NAME}
+  resourceGroup: private-law-aso-preview-rg
+  sbNamespace: private-law-servicebus-preview
+  setup:
+    topics:
+      - name: ccd-case-events
+        subscriptionNeeded: yes
+        requiresSession: true
+    queues:
+      - name: tribunals-to-hearing-api
+

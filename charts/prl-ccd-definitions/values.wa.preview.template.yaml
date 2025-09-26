@@ -148,17 +148,6 @@ wa:
     postgresql:
       enabled: false
 
-servicebus:
-  enabled: true
-  releaseNameOverride: ${SERVICE_NAME}
-  resourceGroup: private-law-aso-preview-rg
-  sbNamespace: private-law-servicebus-preview
-  setup:
-    topics:
-      - name: ccd-case-events
-        subscriptionNeeded: yes
-        requiresSession: true
-
 ccd-message-publisher:
   enabled: true
   servicebus:
