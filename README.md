@@ -82,7 +82,7 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 
 ### If your ticket includes changes in the prl-cos API
 
-1. Create a new label in lines of `pr-cos:pr-pr-3309` # Replace `3309` with the PR number of the prl-cos update you want to test against this repo
+1. Create a new label in lines of `pr-cos:pr-3309` # Replace `3309` with the PR number of the prl-cos update you want to test against this repo
 2. If you make additional changes to the cos pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
     ```bash
     kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
