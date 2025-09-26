@@ -578,6 +578,7 @@ fis-hmc-api:
     image: 'hmctspublic.azurecr.io/fis/hmc-api:latest'
     ingressHost: fis-hmc-api-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
+    keyVaults: []
     environment:
       REFORM_TEAM: fis
       REFORM_SERVICE_NAME: fis-hmc-api
