@@ -33,7 +33,7 @@ xui-webapp:
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
       SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
-      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-2922.preview.platform.hmcts.net
+      SERVICES_CCD_DATA_STORE_API: http://${SERVICE_NAME}-ccd-data-store-api
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://${SERVICE_NAME}-aac-manage-case-assignment
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       JURISDICTIONS: PRIVATELAW
@@ -443,7 +443,7 @@ aac-manage-case-assignment:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-aac-manage-case-assignment
     image: hmctspublic.azurecr.io/aac/manage-case-assignment:latest
-    ingressHost: aac-manage-case-assignment-${SERVICE_FQDN}
+    #ingressHost: aac-${SERVICE_FQDN}
     keyVaults: []
     ports:
       - 5005:5005
@@ -473,7 +473,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3321
+    image: hmctspublic.azurecr.io/prl/cos:${COS_IMAGE}
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
