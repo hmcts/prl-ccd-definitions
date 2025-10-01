@@ -52,3 +52,8 @@ dependencies:
     version: ~0.0.37
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: fis-hmc-api.enabled
+  - name: servicebus
+    version: 1.2.1
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: servicebus.enabled
+    alias: hmcsb
