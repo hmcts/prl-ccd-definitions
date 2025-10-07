@@ -98,8 +98,12 @@ ccd:
 
   ccd-data-store-api:
     java:
+      image: hmctspublic.azurecr.io/ccd/data-store-api:pr-2652
       disableKeyVaults: true
       imagePullPolicy: Always
+      devmemoryRequests: '1524Mi'
+      devmemoryLimits: '2048Mi'
+      devcpuRequests: '900m'
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
@@ -391,6 +395,10 @@ ccd:
 
   am-role-assignment-service:
     java:
+      devmemoryRequests: 1024Mi
+      devcpuRequests: 500m
+      devmemoryLimits: 2048Mi
+      devcpuLimits: 1500m
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
       autoscaling:
         enabled: false
@@ -473,7 +481,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3280
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -498,7 +506,7 @@ prl-cron:
   enabled: true
   job:
     kind: CronJob
-    image: hmctspublic.azurecr.io/prl/cos:pr-3281
+    image: hmctspublic.azurecr.io/prl/cos:latest
     schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
