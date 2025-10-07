@@ -473,7 +473,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:pr-3280
+    image: hmctspublic.azurecr.io/prl/cos:latest
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -498,7 +498,7 @@ prl-cron:
   enabled: true
   job:
     kind: CronJob
-    image: hmctspublic.azurecr.io/prl/cos:pr-3281
+    image: hmctspublic.azurecr.io/prl/cos:latest
     schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
