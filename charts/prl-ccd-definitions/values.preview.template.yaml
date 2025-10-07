@@ -101,6 +101,9 @@ ccd:
       image: hmctspublic.azurecr.io/ccd/data-store-api:pr-2652
       disableKeyVaults: true
       imagePullPolicy: Always
+      devmemoryRequests: '1524Mi'
+      devmemoryLimits: '2048Mi'
+      devcpuRequests: '900m'
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
