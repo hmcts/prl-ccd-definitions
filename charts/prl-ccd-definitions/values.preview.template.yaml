@@ -582,6 +582,7 @@ prl-citizen-frontend:
     environment:
       CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
       COS_URL: http://${SERVICE_NAME}-java
+      DOCUMENT_MANAGEMENT_URL: http://${SERVICE_NAME}-cdam
 
 postgresql:
   enabled: true
