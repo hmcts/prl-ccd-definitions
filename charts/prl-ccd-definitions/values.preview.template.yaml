@@ -425,7 +425,7 @@ ccd-case-document-am-api:
     disableKeyVaults: true
     releaseNameOverride: ${SERVICE_NAME}-cdam
     imagePullPolicy: Always
-    image: hmctspublic.azurecr.io/ccd/case-document-am-api:pr-450
+    image: hmctspublic.azurecr.io/ccd/case-document-am-api:latest
     ingressHost: ccd-case-document-am-api-${SERVICE_FQDN}
     environment:
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
@@ -493,6 +493,7 @@ prl-cos:
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       BARRISTER_FEATURE_ENABLED: "true"
+      PRL_DGS_API_URL: http://prl-dgs-pr-450-java
 
 prl-cron:
   enabled: true
