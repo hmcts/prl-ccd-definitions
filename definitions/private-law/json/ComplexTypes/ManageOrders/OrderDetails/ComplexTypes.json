@@ -377,7 +377,7 @@
     "FieldType": "Text",
     "ElementLabel": "Order",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -386,7 +386,7 @@
     "FieldType": "Text",
     "ElementLabel": "Order",
     "SecurityClassification": "Public",
-    "Searchable": "N",
+    "Searchable": "Y",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
   },
   {
@@ -412,7 +412,7 @@
     "FieldType": "Text",
     "ElementLabel": "Type of order",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -505,7 +505,7 @@
     "ElementLabel": "Date created",
     "FieldShowCondition": "dateCreated=\"DO_NOT_SHOW\"",
     "SecurityClassification": "Public",
-    "Searchable": "N"
+    "Searchable": "Y"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -664,6 +664,16 @@
     "ListElementCode": "fl404CustomFields",
     "FieldType": "FL400",
     "ElementLabel": "Custom fields",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "01/08/2024",
+    "ID": "OrderDetails",
+    "ListElementCode": "finalisationDetails",
+    "FieldType": "FinalisationDetails",
+    "ElementLabel": " ",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "FieldShowCondition": "orderTypeId = \"DO_NOT_SHOW\""
