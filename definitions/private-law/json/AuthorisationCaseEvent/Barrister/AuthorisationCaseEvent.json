@@ -16,7 +16,9 @@
           "[APPLICANTSOLICITOR]",
           "[CREATOR]",
           "caseworker-privatelaw-judge",
-          "caseworker-privatelaw-la"
+          "caseworker-privatelaw-la",
+          "hearing-centre-team-leader",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
@@ -49,7 +51,11 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-courtadmin",
-          "hearing-centre-team-leader"
+          "hearing-centre-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
@@ -82,7 +88,11 @@
         "UserRoles": [
           "caseworker-privatelaw-solicitor",
           "caseworker-privatelaw-courtadmin",
-          "hearing-centre-team-leader"
+          "hearing-centre-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
@@ -113,7 +123,11 @@
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
-          "hearing-centre-team-leader"
+          "hearing-centre-team-leader",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-readonly",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "R"
       }
@@ -130,6 +144,15 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "hearing-centre-team-leader",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
       }
     ]
   }
