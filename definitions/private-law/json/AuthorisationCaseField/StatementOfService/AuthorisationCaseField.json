@@ -151,5 +151,30 @@
         "CRUD": "CRUD"
       }
     ]
+  },
+  {
+    "LiveFrom": "15/10/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "servedOrderIds",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "courtnav",
+          "citizen"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]
