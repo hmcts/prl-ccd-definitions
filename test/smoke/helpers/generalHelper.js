@@ -63,8 +63,7 @@ class GeneralHelper extends Helper {
   async submitEvent() {
     const saveResponseTime = 5;
     const { Playwright } = this.helpers;
-    await Playwright.waitForText('Check your answers', '30');
-    await Playwright.click('Save and continue');
+    await Playwright.click('Submit');
     await Playwright.wait(saveResponseTime);
   }
 

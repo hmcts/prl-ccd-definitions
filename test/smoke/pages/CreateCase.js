@@ -53,11 +53,6 @@ module.exports = {
       , 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
     await I.seeElement(this.fields.submit);
     await I.retry(retryCount).click(this.fields.submit);
-
-
-    await I.waitForElement('#applicantCaseName');
-    await I.retry(retryCount).fillField('//input[@id="applicantCaseName"]', 'Smoke Test Case');
-    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async createNewCaseC100andReturnID() {
