@@ -35,7 +35,7 @@
     "generate-excel-preview": "yarn envs preview generate-excel -e '*-prod.json,*-sublive.json,*-ignore.json'",
     "generate-excel-demo": "yarn envs demo generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
     "generate-excel-aat": "yarn envs aat generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
-    "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
+    "generate-excel-perftest": "yarn envs perftest generate-excel -e '*-prod.json,*-sublive.json,*-ignore.json'",
     "generate-excel-ithc": "yarn envs ithc generate-excel -e '*-prod.json,*-preview.json,*-ignore.json'",
     "generate-excel-prod": "yarn envs prod generate-excel -e '*-nonprod.json,*-sublive.json,*-preview.json,*-ignore.json'",
     "generate-excel": "cd ccd-definition-processor && yarn json2xlsx -D ../definitions/private-law/json -o ../definitions/private-law/xlsx/ccd-config-PRL-${TARGET_ENV:-base}.xlsx",
