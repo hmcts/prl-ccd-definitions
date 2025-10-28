@@ -923,7 +923,7 @@
     "Description": "CTSC staff add family man number for the case.",
     "DisplayOrder": 3,
     "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
-    "PostConditionState": "CASE_ISSUED(familymanCaseNumber=\"\" AND isAddCaseNumberAdded=\"Yes\"):1;*",
+    "PostConditionState": "CASE_ISSUED(isAddCaseNumberAdded=\"Yes\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-add-case-number",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
