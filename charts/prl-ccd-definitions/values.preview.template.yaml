@@ -100,9 +100,6 @@ ccd:
     java:
       disableKeyVaults: true
       imagePullPolicy: Always
-      devmemoryRequests: '1524Mi'
-      devmemoryLimits: '2048Mi'
-      devcpuRequests: '900m'
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
@@ -394,10 +391,6 @@ ccd:
 
   am-role-assignment-service:
     java:
-      devmemoryRequests: 1024Mi
-      devcpuRequests: 500m
-      devmemoryLimits: 2048Mi
-      devcpuLimits: 1500m
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
       autoscaling:
         enabled: false
