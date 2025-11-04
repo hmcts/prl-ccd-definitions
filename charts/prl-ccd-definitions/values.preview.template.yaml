@@ -493,6 +493,7 @@ prl-cos:
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       BARRISTER_FEATURE_ENABLED: "true"
+      PRL_DGS_API_URL: http://prl-dgs-pr-450-java
 
 prl-cron:
   enabled: true
@@ -571,6 +572,17 @@ prl-cron:
             alias: app-insights-connection-string
           - name: acro-zip-password
             alias: ACRO_ZIP_PASSWORD
+
+prl-citizen-frontend:
+  nodejs:
+    image: hmctspublic.azurecr.io/prl/citizen-frontend:latest
+    imagePullPolicy: Always
+    releaseNameOverride: ${SERVICE_NAME}-prl-citizen
+    ingressHost: prl-citizen-${SERVICE_FQDN}
+    environment:
+      CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      COS_URL: http://${SERVICE_NAME}-java
+      DOCUMENT_MANAGEMENT_URL: http://${SERVICE_NAME}-cdam
 
 postgresql:
   enabled: true
