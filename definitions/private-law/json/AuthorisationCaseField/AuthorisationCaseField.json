@@ -162,6 +162,7 @@
       {
         "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTBARRISTER1]",
           "caseworker-privatelaw-systemupdate"
         ],
         "CRUD": "CRU"
@@ -199,6 +200,7 @@
       {
         "UserRoles": [
           "[C100RESPONDENTSOLICITOR1]",
+          "[C100RESPONDENTBARRISTER1]",
           "caseworker-privatelaw-systemupdate",
           "citizen"
         ],
@@ -4671,6 +4673,13 @@
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "existingProceedings",
     "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "existingProceedings",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "CRU"
   },
   {
@@ -17370,5 +17379,25 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "TTL",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "TTL_profile"
+        ],
+        "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "13/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "TTL",
+    "UserRole": "caseworker-privatelaw-systemupdate",
+    "CRUD": "CRUD"
   }
 ]
