@@ -44,6 +44,10 @@ dependencies:
     version: ~0.1.22
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd-message-publisher.enabled
+  - name: em-ccdorc
+    version: 2.1.0
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: em-ccdorc.enabled
   - name: em-stitching
     version: 1.1.0
     repository: 'oci://hmctspublic.azurecr.io/helm'
