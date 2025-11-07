@@ -495,7 +495,7 @@ prl-cos:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      BUNDLE_URL: em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
@@ -522,7 +522,7 @@ prl-cron:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      BUNDLE_URL: em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
