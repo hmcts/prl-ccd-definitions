@@ -495,7 +495,7 @@ prl-cos:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: em-ccdorc-${SERVICE_FQDN}
+      BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
@@ -522,7 +522,7 @@ prl-cron:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: em-ccdorc-${SERVICE_FQDN}
+      BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
@@ -593,7 +593,7 @@ em-ccdorc:
       DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
       CCD_DATA_API_URL: http://${SERVICE_NAME}-ccd-data-store-api
       CALLBACK_HTTP_SCHEME: https
-      CALLBACK_DOMAIN: em-ccdorc-${SERVICE_FQDN}
+      CALLBACK_DOMAIN: https://em-ccdorc-${SERVICE_FQDN}
       LOGGING_LEVEL_UK_GOV_HMCTS_REFORM_EM: DEBUG
     keyVaults:
       em-ccdorc:
