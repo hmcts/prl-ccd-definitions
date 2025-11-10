@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.37
+version: 0.0.38
 dependencies:
   - name: ccd
     version: 9.2.2
@@ -44,6 +44,14 @@ dependencies:
     version: ~0.1.22
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: ccd-message-publisher.enabled
+  - name: em-ccdorc
+    version: 2.1.0
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: em-ccdorc.enabled
+  - name: em-stitching
+    version: 1.1.0
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: em-stitching.enabled
   - name: prl-cron
     version: 0.0.18
     repository: 'oci://hmctspublic.azurecr.io/helm'
