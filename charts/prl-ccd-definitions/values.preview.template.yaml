@@ -100,6 +100,9 @@ ccd:
     java:
       disableKeyVaults: true
       imagePullPolicy: Always
+      devmemoryRequests: '1524Mi'
+      devmemoryLimits: '2048Mi'
+      devcpuRequests: '900m'
       environment:
         NODE_TLS_REJECT_UNAUTHORIZED: 0
         DATA_STORE_IDAM_KEY: ${DATA_STORE_S2S_KEY}
@@ -391,6 +394,10 @@ ccd:
 
   am-role-assignment-service:
     java:
+      devmemoryRequests: 1024Mi
+      devcpuRequests: 500m
+      devmemoryLimits: 2048Mi
+      devcpuLimits: 1500m
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
       autoscaling:
         enabled: false
@@ -488,11 +495,12 @@ prl-cos:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       BARRISTER_FEATURE_ENABLED: "true"
+      CAFCASS_DATE_TIME_FEATURE_ENABLED: "true"
 
 prl-cron:
   enabled: true
@@ -515,7 +523,7 @@ prl-cron:
       CCD_CASE_DOCS_AM_API: http://${SERVICE_NAME}-cdam
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
-      BUNDLE_URL: http://${SERVICE_NAME}-em-ccdorc
+      BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
@@ -572,6 +580,67 @@ prl-cron:
           - name: acro-zip-password
             alias: ACRO_ZIP_PASSWORD
 
+em-ccdorc:
+  enabled: true
+  java:
+    image: hmctspublic.azurecr.io/em/ccdorc:latest
+    releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
+    ingressHost: em-ccdorc-${SERVICE_FQDN}
+    environment:
+      IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
+      OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
+      S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      EM_STITCHING_API_URL: https://em-stitching-${SERVICE_FQDN}
+      DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
+      CCD_DATA_API_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      CALLBACK_HTTP_SCHEME: https
+      CALLBACK_DOMAIN: em-ccdorc-${SERVICE_FQDN}
+      LOGGING_LEVEL_UK_GOV_HMCTS_REFORM_EM: DEBUG
+    keyVaults:
+      em-ccdorc:
+        resourceGroup: em-ccdorc
+        secrets:
+          - name: microservicekey-em-ccd-orchestrator
+            alias: S2S_KEY
+          - name: notification-api-key
+            alias: NOTIFICATION_API_KEY
+
+em-stitching:
+  enabled: true
+  java:
+    image: hmctspublic.azurecr.io/em/stitching:latest
+    releaseNameOverride: ${SERVICE_NAME}-em-stitching
+    ingressHost: em-stitching-${SERVICE_FQDN}
+    environment:
+      SPRING_DATASOURCE_HOST: private-law-preview.postgres.database.azure.com
+      SPRING_DATASOURCE_NAME: "pr-${CHANGE_ID}-emstitch"
+      SPRING_DATASOURCE_OPTIONS: "?ssl=disable"
+      SPRING_DATASOURCE_PORT: 5432
+      SPRING_DATASOURCE_USERNAME: hmcts
+      IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
+      OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
+      S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
+      DM_STORE_APP_URL: http://dm-store-aat.service.core-compute-aat.internal
+      CDAM_URL: http://${SERVICE_NAME}-cdam
+      ENABLE_DB_MIGRATE: true
+      RUN_DB_MIGRATION_ON_STARTUP: true
+      FLYWAY_POSTGRESQL_TRANSACTIONAL_LOCK: false
+      LOGGING_LEVEL_UK_GOV_HMCTS_REFORM_EM: DEBUG
+    secrets:
+      SPRING_DATASOURCE_PASSWORD:
+        secretRef: postgres
+        key: PASSWORD
+        disabled: false
+    keyVaults:
+      em-stitching:
+        resourceGroup: em-stitching
+        secrets:
+          - name: docmosis-access-key
+            alias: DOCMOSIS_ACCESS_KEY
+          - name: microservicekey-em-stitching-api
+            alias: S2S_KEY
+
+
 postgresql:
   enabled: true
   flexibleserver: private-law-preview
@@ -586,3 +655,4 @@ postgresql:
       - name: "pr-${CHANGE_ID}-camunda"
       - name: "pr-${CHANGE_ID}-cft_task_db"
       - name: "pr-${CHANGE_ID}-cft_task_db_replica"
+      - name: "pr-${CHANGE_ID}-emstitch"
