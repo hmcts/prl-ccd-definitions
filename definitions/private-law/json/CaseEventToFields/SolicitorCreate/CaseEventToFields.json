@@ -128,29 +128,6 @@
     "PageFieldDisplayOrder": 1
   },
   {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "applicantCaseName",
-    "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "PageFieldDisplayOrder": 2,
-    "PageShowCondition": "caseTypeOfApplication=\"C100\"",
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
-    "LiveFrom": "05/11/2021",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "solicitorCreate",
-    "CaseFieldID": "applicantOrRespondentCaseName",
-    "DisplayContext": "MANDATORY",
-    "PageID": 7,
-    "PageDisplayOrder": 7,
-    "PageShowCondition": "caseTypeOfApplication=\"FL401\"",
-    "ShowSummaryChangeOption": "Yes"
-  },
-  {
     "LiveFrom": "20/01/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "solicitorCreate",
@@ -159,8 +136,8 @@
     "DisplayContext": "COMPLEX",
     "PageID": 2,
     "PageDisplayOrder": 2,
-    "ShowSummaryChangeOption": "Yes",
+    "ShowSummaryChangeOption": "No",
     "RetainHiddenValue": "Y",
-    "FieldShowCondition": "applicantCaseName=\"NEVER_SHOW\" OR applicantOrRespondentCaseName=\"NEVER_SHOW\""
+    "FieldShowCondition": "submitCountyCourtSelection=\"NEVER_SHOW\""
   }
 ]
