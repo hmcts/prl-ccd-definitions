@@ -43,6 +43,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "Publish": "True"
@@ -75,6 +76,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -126,6 +128,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -227,6 +230,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v2\" AND taskListVersion!=\"v3\""
@@ -244,6 +248,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-child-information",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"\""
@@ -327,6 +332,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion!=\"v3\""
@@ -538,6 +544,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -571,6 +578,7 @@
     "PostConditionState": "*",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\""
@@ -1541,6 +1549,7 @@
     "Description": "HMC Case Update to Decision Outcome",
     "PreConditionState(s)": "*",
     "PostConditionState": "DECISION_OUTCOME",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
@@ -2004,6 +2013,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
     "EndButtonLabel": "Save and continue",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\" AND taskListVersion=\"v3\""
@@ -2061,6 +2071,7 @@
     "Name": "Manage Cafcass access",
     "Description": "Manage Cafcass access",
     "DisplayOrder": 37,
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/manage-cafcass-access/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/manage-cafcass-access/submitted",
     "PreConditionState(s)": "PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
     "PostConditionState": "*",
