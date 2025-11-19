@@ -1,9 +1,9 @@
 Feature('Smoke tests @smoke-tests');
-Scenario('Sign in as local authority and create a case', async({ I }) => {
+Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   await I.loginAsSolicitor();
   const caseId = await I.createCaseAndReturnID();
   await I.navigateToCaseList();
-  console.log(`case id is ${caseId}`);
-  // await I.searchForCasesWithId(caseId); --This check is ignored due to a bug FPET-903
-  // await I.seeCaseInSearchResult(caseId); --This check is ignored due to a bug FPET-903
+  console.log('case id is ${caseId}');
+  await I.searchForCasesWithId(caseId);
+  await I.seeCaseInSearchResult(caseId);
 }).retry(1);

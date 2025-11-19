@@ -1,22 +1,25 @@
 [
   {
-    "LiveFrom": "04/11/2021",
+    "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "c100listWithoutNotice",
+    "CaseFieldID": "cafcassDateTime",
     "AccessControl": [
       {
         "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
           "caseworker-privatelaw-judge",
           "caseworker-privatelaw-la",
-          "caseworker-privatelaw-systemupdate"
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRUD"
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-superuser",
           "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-cafcass"
         ],
         "CRUD": "R"
       }
