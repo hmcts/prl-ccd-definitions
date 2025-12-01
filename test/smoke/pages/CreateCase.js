@@ -45,10 +45,6 @@ module.exports = {
     await I.seeElement('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click(this.fields.submit);
-
-    I.wait('5');
-    await I.seeElement(this.fields.submit);
-    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async createNewCaseC100andReturnID() {
