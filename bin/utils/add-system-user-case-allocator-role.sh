@@ -1,10 +1,21 @@
 #!/bin/bash
 
-roleAssignmentsUrl="${IDAM_API_BASE_URL}/am/role-assignments"
+set -eu
 
-curl --silent --location "$roleAssignmentsUrl" \
+echo "Adding 'case-allocator' role assignment to System User..."
+
+dir=$(dirname ${0})
+
+SERVICE_TOKEN=$(dir/idam-lease-service-token.sh prl_cos_api \
+  $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
+
+ACCESS_TOKEN=$($dir/idam-access-token.sh "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")
+
+status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
   --request POST \
   --header "Content-Type: application/json" \
+  --header "Authorization: Bearer ${ACCESS_TOKEN}" \
+  --header "ServiceAuthorization: Bearer ${SERVICE_TOKEN}" \
   --data @- <<EOF
     {
         "roleRequest": {
@@ -39,10 +50,12 @@ curl --silent --location "$roleAssignmentsUrl" \
                 "created": null,
                 "authorisations": null,
                 "attributes": {
-                    "jurisdiction": "PRIVATELAW",
+                    "jurisdiction": "PRIVATELAWx",
                     "caseType": "PRLAPPS"
                 }
             }
         ]
     }
 EOF
+)
+echo "HTTP Status: $status"
