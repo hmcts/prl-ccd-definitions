@@ -50,7 +50,7 @@ status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROL
                 "created": null,
                 "authorisations": null,
                 "attributes": {
-                    "jurisdiction": "PRIVATELAWx",
+                    "jurisdiction": "PRIVATELAW",
                     "caseType": "PRLAPPS"
                 }
             }
