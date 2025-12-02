@@ -13,7 +13,7 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
     password=${PREVIEW_AM_JUDGE_PASSWORD}
   fi
 
-  if [[ $email == "prl-system-update@mailinator.com" ]]; then
+  if [[ $email == ${SYSTEM_UPDATE_USER_USERNAME} ]]; then
     password=${SYSTEM_UPDATE_USER_PASSWORD}
   fi
 
