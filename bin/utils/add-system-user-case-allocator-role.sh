@@ -11,6 +11,8 @@ SERVICE_TOKEN=$($dir/idam-lease-service-token.sh prl_cos_api \
 
 ACCESS_TOKEN=$($dir/idam-access-token.sh "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")
 
+echo "Role Assignment URL: ${ROLE_ASSIGNMENT_URL}/am/role-assignments"
+
 status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
   --request POST \
   --header "Content-Type: application/json" \
