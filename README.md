@@ -123,3 +123,4 @@ Sample payload for the swagger request - [sampleListedHearing.json](test/resourc
 Replace :
 "caseRef" : "<Actual case id>" (Add actual case id)
 "hearingId" : "999999" (valid values are 999999 and 111111)
+
