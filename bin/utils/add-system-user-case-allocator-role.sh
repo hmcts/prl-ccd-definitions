@@ -43,7 +43,7 @@ status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROL
                 "actorId": "540b6fed-6454-4ea2-bf23-06ab4b113e2f",
                 "roleType": "ORGANISATION",
                 "roleName": "case-allocator",
-                "classification": "RESTRICTED",
+                "classification": "PUBLIC",
                 "grantType": "STANDARD",
                 "roleCategory": "SYSTEM",
                 "readOnly": false,
