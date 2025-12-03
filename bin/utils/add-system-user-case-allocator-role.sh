@@ -1,4 +1,9 @@
 #!/bin/bash
+# This script is primarily intended for use in the CI/CD pipeline when creating a preview environment.
+
+# It is used to add the 'case-allocator' role to the system user.
+# The system user requires this role as the account is used to perform case role assignment requests
+# e.g. assigning the 'allocate-judge' role as part of the 'Send and reply to messages' event.
 
 set -eu
 
