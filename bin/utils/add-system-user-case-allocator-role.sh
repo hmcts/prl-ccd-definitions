@@ -1,17 +1,22 @@
 #!/bin/bash
+# This script is primarily intended for use in the CI/CD pipeline when creating a preview environment.
+
+# It is used to add the 'case-allocator' role to the system user.
+# The system user requires this role as the account is used to perform case role assignment requests
+# e.g. assigning the 'allocate-judge' role as part of the 'Send and reply to messages' event.
 
 set -eu
 
 echo "Adding 'case-allocator' role assignment to System User..."
 
-dir=$(dirname ${0})
+dir=$(dirname "${0}")
 
-SERVICE_TOKEN=$(dir/idam-lease-service-token.sh prl_cos_api \
-  $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
+SERVICE_TOKEN="$("$dir/idam-lease-service-token.sh" prl_cos_api \
+  "$(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b "${PRL_S2S_SECRET}")")"
 
-ACCESS_TOKEN=$($dir/idam-access-token.sh "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")
+ACCESS_TOKEN="$("$dir/idam-access-token.sh" "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")"
 
-status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
+curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
   --request POST \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${ACCESS_TOKEN}" \
@@ -41,7 +46,7 @@ status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROL
                 "actorId": "540b6fed-6454-4ea2-bf23-06ab4b113e2f",
                 "roleType": "ORGANISATION",
                 "roleName": "case-allocator",
-                "classification": "RESTRICTED",
+                "classification": "PUBLIC",
                 "grantType": "STANDARD",
                 "roleCategory": "SYSTEM",
                 "readOnly": false,
@@ -50,12 +55,10 @@ status=$(curl --silent --show-error --location --write-out "%{http_code}" "${ROL
                 "created": null,
                 "authorisations": null,
                 "attributes": {
-                    "jurisdiction": "PRIVATELAWx",
+                    "jurisdiction": "PRIVATELAW",
                     "caseType": "PRLAPPS"
                 }
             }
         ]
     }
 EOF
-)
-echo "HTTP Status: $status"
