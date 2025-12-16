@@ -144,7 +144,7 @@ class CitizenCaseSetup {
     await this.clickFieldWithID('sq_courtPermissionRequired-2');
     await this.clickButton('Continue');
 
-    await this.waitForText('Has any application been made for a care order, a supervision order, an emergency protection order or an order requiring someone to disclose where a child is or to deliver the child to another person and which:⋅⋅a) is still going on? or⋅⋅b) has finished but the order is still in place?');
+    await this.waitForText('Has any application been made for a care order, a supervision order, an emergency protection order or an order requiring someone to disclose where a child is or to deliver the child to another person and which: a) is still going on? or b) has finished but the order is still in place?');
     await this.clickFieldWithID('miam_otherProceedings-2');
     await this.clickButton('Continue');
 
