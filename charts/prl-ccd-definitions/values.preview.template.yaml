@@ -663,8 +663,8 @@ prl-citizen-frontend:
     ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
     image: hmctspublic.azurecr.io/prl/citizen-frontend:pr-1977
     environment:
-      CCD_URL: 'https://prl-ccd-definitions-pr-3025-ccd-data-store-api'
-      COS_URL: 'https://prl-ccd-definitions-pr-3025-java'
+      CCD_URL: 'http://prl-ccd-definitions-pr-${CHANGE_ID}-ccd-data-store-api'
+      COS_URL: 'http://prl-ccd-definitions-pr-${CHANGE_ID}-java'
 
 postgresql:
   enabled: true
