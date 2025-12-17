@@ -656,6 +656,23 @@ em-stitching:
           - name: microservicekey-em-stitching-api
             alias: S2S_KEY
 
+prl-citizen-frontend:
+  enabled: true
+  nodejs:
+    releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
+    ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
+    image: hmctspublic.azurecr.io/prl/citizen-frontend:pr-1977
+    environment:
+      CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
+      COS_URL: http://${SERVICE_NAME}-java
+      LAUNCH_DARKLY_OFFLINE_MODE: false
+      C100_REBUILD_FLAG: false
+      ENABLE_C100_CASE_PROGRESSION_TRAIN_TRACK: true
+      TESTING_SUPPORT_FLAG: true
+      ENABLE_CASE_TRAIN_TRACK: true
+      ENABLE_RA_COMPONENT: true
+      ENABLE_PCQ_COMPONENT: true
+      ALLOWED_COURTS: Swansea Civil Justice Centre,Kingston-upon-Hull Combined Court Centre,Grimsby Combined Court Centre
 
 postgresql:
   enabled: true
