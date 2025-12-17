@@ -658,6 +658,7 @@ em-stitching:
 
 prl-citizen-frontend:
   enabled: true
+  releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
   ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
   image: 'hmctspublic.azurecr.io/prl/citizen-frontend:pr-1977'
   environment:
