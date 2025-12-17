@@ -658,12 +658,13 @@ em-stitching:
 
 prl-citizen-frontend:
   enabled: true
-  releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
-  ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
-  image: 'hmctspublic.azurecr.io/prl/citizen-frontend:pr-1977'
-  environment:
-    CCD_URL: 'https://prl-ccd-definitions-pr-3025-ccd-data-store-api'
-    COS_URL: 'https://prl-ccd-definitions-pr-3025-java'
+  nodejs:
+    releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
+    ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
+    image: hmctspublic.azurecr.io/prl/citizen-frontend:pr-1977
+    environment:
+      CCD_URL: 'https://prl-ccd-definitions-pr-3025-ccd-data-store-api'
+      COS_URL: 'https://prl-ccd-definitions-pr-3025-java'
 
 postgresql:
   enabled: true
