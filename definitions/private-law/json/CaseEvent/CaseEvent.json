@@ -780,7 +780,7 @@
     "Name": "Payment confirmation",
     "DisplayOrder": 43,
     "PreConditionState(s)": "*",
-    "PostConditionState": "SUBMITTED_PAID",
+    "PostConditionState": "SUBMITTED_PAID([STATE]=\"SUBMITTED_NOT_PAID\" OR [STATE]=\"CASE_WITHDRAWN\"):1;*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
