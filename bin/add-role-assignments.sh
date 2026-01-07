@@ -4,6 +4,8 @@ set -eu
 
 dir=$(dirname ${0})
 
+${dir}/utils/add-system-user-case-allocator-role.sh
+
 jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   email=$(jq -r '.email' <<< $user)
   idamId=$(jq -r '.id' <<< $user)
