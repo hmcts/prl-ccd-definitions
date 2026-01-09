@@ -148,7 +148,7 @@ wa:
     postgresql:
       enabled: false
 
-servicebus:
+servicebusPrimary:
   enabled: true
   releaseNameOverride: ${SERVICE_NAME}
   resourceGroup: private-law-aso-preview-rg
@@ -161,7 +161,7 @@ servicebus:
 
 ccd-message-publisher:
   enabled: true
-  servicebus:
+  servicebusPrimary:
     enabled: false
   java:
     ingressHost: ccd-message-publisher-${SERVICE_FQDN}
