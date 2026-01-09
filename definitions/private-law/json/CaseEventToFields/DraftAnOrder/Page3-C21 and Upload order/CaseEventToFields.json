@@ -10,7 +10,7 @@
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "draftOrderOptions=\"uploadAnOrder\"",
-    "PageShowCondition": "draftOrderOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"blankOrderOrDirections\""
+    "PageShowCondition": "draftOrderOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -95,6 +95,6 @@
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/selected-order",
-    "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
+    "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\""
   }
 ]
