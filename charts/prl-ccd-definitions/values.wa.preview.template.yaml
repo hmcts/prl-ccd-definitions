@@ -47,6 +47,8 @@ xui-webapp:
       NOW: false
       REDISCLOUD_URL: redis://${SERVICE_NAME}-redis-master:6379
       PROTOCOL: http
+      PREVIEW_DEPLOYMENT_ID: "prl-${CHANGE_ID}"
+      ENABLE_HEARING_DATA_SOURCE_HEADERS: "true"
     keyVaults:
       rpx:
         resourceGroup: rpx
