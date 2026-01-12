@@ -664,7 +664,7 @@ prl-citizen-frontend:
     image: hmctspublic.azurecr.io/prl/citizen-frontend:latest
     environment:
       CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
-      COS_URL: https://prl-cos-pr-3443.preview.platform.hmcts.net/
+      COS_URL: http://${SERVICE_NAME}-java
       LAUNCH_DARKLY_OFFLINE_MODE: false
       C100_REBUILD_FLAG: false
       ENABLE_C100_CASE_PROGRESSION_TRAIN_TRACK: true
