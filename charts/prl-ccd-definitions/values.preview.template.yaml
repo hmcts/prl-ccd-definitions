@@ -701,7 +701,7 @@ fis-hmc-api:
       CCD_UI_URL: 'https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases/case-details/'
       AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
       OIDC_S2S_MICROSERVICE_NAME: 'fis_hmc_api'
-      PRL_URL: 'https://prl-ccd-definitions-pr-${CHANGE_ID}-java'
+      PRL_URL: 'http://${SERVICE_NAME}-java'
       PRL_HMC_S2S_AUTHORISED_SERVICES: xui_webapp,prl_cos_api,fis_hmc_api
       CAFCASS_EXCLUDE_HEARING_STATES: HEARING_REQUESTED,AWAITING_LISTING,EXCEPTION,CANCELLATION_SUBMITTED,UPDATE_SUBMITTED
       REF_DATA_VENUE_URL: 'http://rd-location-ref-api-aat.service.core-compute-aat.internal/'
