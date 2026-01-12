@@ -1,0 +1,28 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "nameOfOrder",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "otherOrdersOption=\"other\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "c21OrderOptions",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "ShowSummaryChangeOption": "Y",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/selected-order",
+    "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\"",
+    "PageShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\""
+  }
+]
