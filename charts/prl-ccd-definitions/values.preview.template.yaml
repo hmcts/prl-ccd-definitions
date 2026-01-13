@@ -697,7 +697,7 @@ fis-hmc-api:
       MANAGE_CASE_REDIRECT_URL: 'https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/oauth2/callback'
       HMC_CFT_HEARING_BASEURL: 'http://hmc-cft-hearing-service-aat.service.core-compute-aat.internal/hearings/'
       HMC_CFT_HEARING_BASEURL_FOR_FEIGN: 'http://hmc-cft-hearing-service-aat.service.core-compute-aat.internal/'
-      CASE_DATA_STORE_BASEURL: 'https://ccd-data-store-api-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net'
+      CASE_DATA_STORE_BASEURL: 'http://${SERVICE_NAME}-ccd-data-store-api'
       CCD_UI_URL: 'https://xui-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net/cases/case-details/'
       AUTH_PROVIDER_SERVICE_CLIENT_BASEURL: "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
       OIDC_S2S_MICROSERVICE_NAME: 'fis_hmc_api'
