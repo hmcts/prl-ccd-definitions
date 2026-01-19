@@ -9,10 +9,10 @@ echo -e "Adding new hearing system user"
 
 dir=$(dirname "${0}")
 
-SERVICE_TOKEN="$("$dir/idam-lease-service-token.sh" prl_cos_api \
-  "$(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b "${PRL_S2S_SECRET}")")"
+SERVICE_TOKEN="$("$dir/idam-lease-service-token.sh" fis_hmc_api \
+  "$(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b "${FIS_S2S_SECRET}")")"
 
-ACCESS_TOKEN="$("$dir/idam-access-token.sh" "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")"
+ACCESS_TOKEN="$("$dir/idam-access-token.sh" "$FIS_SYSTEM_UPDATE_USER_USERNAME" "$FIS_SYSTEM_UPDATE_USER_PASSWORD")"
 
 curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
   --request POST \
@@ -28,6 +28,7 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
         "process": "private-law-system-users",
         "reference": "private-law-hearings-system-user",
         "replaceExisting": true,
+        "byPassOrgDroolRule": false
       },
       "requestedRoles": [
         {
