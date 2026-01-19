@@ -9,7 +9,7 @@
     "PageID": 20,
     "PageDisplayOrder": 20,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\"",
+    "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\"",
     "PageShowCondition": "draftOrderOptions!=\"uploadAnOrder\""
   },
   {
@@ -66,6 +66,6 @@
   "PageID": 20,
   "PageDisplayOrder": 20,
   "ShowSummaryChangeOption": "Y",
-  "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
+  "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\""
   }
 ]
