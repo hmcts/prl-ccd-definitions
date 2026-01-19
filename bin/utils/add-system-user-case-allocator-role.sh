@@ -61,6 +61,7 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
             }
         ]
     }
+EOF
 
 curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignments" \
   --request POST \
