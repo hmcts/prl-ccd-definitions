@@ -35,7 +35,7 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
         "status": null,
         "created": null,
         "log": null,
-        "byPassOrgDroolRule": false
+        "byPassOrgDroolRule": true
       },
       "requestedRoles": [
         {
