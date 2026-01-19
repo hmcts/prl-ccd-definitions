@@ -3,7 +3,7 @@
 
 # It is used to add new hearing system user
 
-set -eu
+set -exu
 
 echo "Adding new hearing system user"
 
