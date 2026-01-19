@@ -24,14 +24,14 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
   --data @- <<EOF
     {
         "roleRequest": {
-            "id": "540b6fed-6454-4ea2-bf23-06ab4b113e2f",
-            "clientId": "prl_cos_api",
+            "id": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
+            "clientId": "fis_hmc_api",
             "authenticatedUserId": null,
             "correlationId": null,
-            "assignerId": "540b6fed-6454-4ea2-bf23-06ab4b113e2f",
+            "assignerId": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
             "requestType": null,
             "process": "private-law-system-users",
-            "reference": "private-law-case-allocator-system-user",
+            "reference": "private-law-hearings-system-user",
             "replaceExisting": true,
             "roleAssignmentId": null,
             "status": null,
@@ -43,22 +43,42 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
             {
                 "id": null,
                 "actorIdType": "IDAM",
-                "actorId": "540b6fed-6454-4ea2-bf23-06ab4b113e2f",
+                "actorId": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
                 "roleType": "ORGANISATION",
-                "roleName": "case-allocator",
+                "roleName": "hearing-viewer",
                 "classification": "PUBLIC",
                 "grantType": "STANDARD",
                 "roleCategory": "SYSTEM",
                 "readOnly": false,
-                "beginTime": "2025-12-01T13:58:00.946954Z",
+                "beginTime": "2026-01-19T13:58:00.946954Z",
                 "endTime": null,
                 "created": null,
                 "authorisations": null,
                 "attributes": {
-                    "jurisdiction": "PRIVATELAW",
-                    "caseType": "PRLAPPS"
+                  "caseType": "PRLAPPS",
+                  "substantive": "N",
+                  "jurisdiction": "PRIVATELAW"
+              },
+              {
+                "id": null,
+                "actorIdType": "IDAM",
+                "actorId": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
+                "roleType": "ORGANISATION",
+                "roleName": "hearing-manager",
+                "classification": "PUBLIC",
+                "grantType": "STANDARD",
+                "roleCategory": "SYSTEM",
+                "readOnly": false,
+                "beginTime": "2026-01-19T13:58:00.946954Z",
+                "endTime": null,
+                "created": null,
+                "authorisations": null,
+                "attributes": {
+                  "caseType": "PRLAPPS",
+                  "substantive": "N",
+                  "jurisdiction": "PRIVATELAW"
                 }
-            }
+            },
         ]
     }
 EOF
