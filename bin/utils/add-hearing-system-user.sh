@@ -9,7 +9,7 @@ echo -e "Adding new hearing system user"
 
 dir=$(dirname "${0}")
 
-SERVICE_TOKEN="$("$dir/idam-lease-service-token.sh" fis_hmc_api \
+SERVICE_TOKEN="$("$dir/idam-lease-service-token.sh" prl_cos_api \
   "$(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b "${PRL_S2S_SECRET}")")"
 
 ACCESS_TOKEN="$("$dir/idam-access-token.sh" "$SYSTEM_UPDATE_USER_USERNAME" "$SYSTEM_UPDATE_USER_PASSWORD")"
