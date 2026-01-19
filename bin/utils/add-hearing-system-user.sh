@@ -24,18 +24,10 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
       "roleRequest": {
         "id": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
         "clientId": "fis_hmc_api",
-        "authenticatedUserId": null,
-        "correlationId": null,
         "assignerId": "6455c84c-e77d-4c4f-9759-bf4a93a8e971",
-        "requestType": null,
         "process": "private-law-system-users",
         "reference": "private-law-hearings-system-user",
         "replaceExisting": true,
-        "roleAssignmentId": null,
-        "status": null,
-        "created": null,
-        "log": null,
-        "byPassOrgDroolRule": true
       },
       "requestedRoles": [
         {
@@ -54,7 +46,6 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
           "authorisations": null,
           "attributes": {
             "caseType": "PRLAPPS",
-            "substantive": "N",
             "jurisdiction": "PRIVATELAW"
           }
         },
@@ -74,7 +65,6 @@ curl --silent --show-error --location "${ROLE_ASSIGNMENT_URL}/am/role-assignment
           "authorisations": null,
           "attributes": {
             "caseType": "PRLAPPS",
-            "substantive": "N",
             "jurisdiction": "PRIVATELAW"
           }
         }
