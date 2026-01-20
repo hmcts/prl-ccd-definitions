@@ -58,8 +58,8 @@ def secrets = [
                 secret('idam-mca-system-user-password', 'IDAM_CAA_PASSWORD')
         ],
         'fis-kv-${env}': [
-                secret('fis-hmc-idam-client-secret', 'FIS_S2S_SECRET'),
-                secret('fis-hmc-idam-user-name', 'FIS_SYSTEM_UPDATE_USER_USERNAME'),
+                secret('fis-hmc-api-s2s-secret', 'FIS_S2S_SECRET'),
+                secret('prl-hearing-manager', 'FIS_SYSTEM_UPDATE_USER_USERNAME'),
                 secret('idam-hmc-component-user-password', 'FIS_SYSTEM_UPDATE_USER_PASSWORD'),
         ]
 ]
