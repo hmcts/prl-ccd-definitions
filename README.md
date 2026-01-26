@@ -110,3 +110,6 @@ To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP)
 
 ### AM role assignment
 To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
+
+### Hearing set up
+Enabled hearing by default in preview.
