@@ -31,5 +31,18 @@ describe('CaseTypeTab', () => {
     it('should have only valid definitions', () => {
       uniqResult.forEach(assertFieldDefinitionIsValid);
     });
+
+    it('should have correct tab order', () => {
+          const expectedOrders = {
+            'caseFileView': 7,
+            'DraftOrders': 8
+          };
+
+          uniqResult.forEach((row) => {
+            if (expectedOrders.hasOwnProperty(row.TabID)) {
+              expect(row.TabDisplayOrder).to.equal(expectedOrders[row.TabID]);
+            }
+          });
+        });
   });
 });
