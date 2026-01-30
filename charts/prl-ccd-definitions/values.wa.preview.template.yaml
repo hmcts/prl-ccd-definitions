@@ -25,13 +25,13 @@ xui-webapp:
       HEALTH_TERMS_AND_CONDITIONS_API: https://xui-terms-and-conditions-${SERVICE_FQDN}
       HEALTH_ROLE_ASSIGNMENT_API: http://${SERVICE_NAME}-am-role-assignment-service/health
       SERVICES_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw
-      SERVICES_CCD_DATA_STORE_API: http://${SERVICE_NAME}-ccd-data-store-api
+      SERVICES_CCD_DATA_STORE_API: https://ccd-data-store-api-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net
       SERVICES_DOCUMENTS_API_V2: http://${SERVICE_NAME}-cdam
       SERVICES_CCD_CASE_ASSIGNMENT_API: http://${SERVICE_NAME}-aac-manage-case-assignment
       SERVICES_TERMS_AND_CONDITIONS: https://xui-terms-and-conditions-${SERVICE_FQDN}
       SERVICES_WORK_ALLOCATION_TASK_API: http://${SERVICE_NAME}-wa-task-management-api
       SERVICES_WA_WORKFLOW_API_URL: http://${SERVICE_NAME}-wa-workflow-api
-      SERVICES_ROLE_ASSIGNMENT_API: http://${SERVICE_NAME}-am-role-assignment-service
+      SERVICES_ROLE_ASSIGNMENT_API: https://am-role-assignment-service-prl-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net
       JURISDICTIONS: PRIVATELAW
       WA_SUPPORTED_JURISDICTIONS: PRIVATELAW
       LAUNCH_DARKLY_CLIENT_ID: 5de6610b23ce5408280f2268
@@ -47,6 +47,10 @@ xui-webapp:
       NOW: false
       REDISCLOUD_URL: redis://${SERVICE_NAME}-redis-master:6379
       PROTOCOL: http
+      PREVIEW_DEPLOYMENT_ID: "prl-${CHANGE_ID}"
+      ENABLE_HEARING_DATA_SOURCE_HEADERS: "true"
+      SERVICES_HEARINGS_COMPONENT_API_PRIVATELAW: http://${SERVICE_NAME}-fis-hmc-api
+      FEATURE_ACCESS_MANAGEMENT_ENABLED: true
     keyVaults:
       rpx:
         resourceGroup: rpx
@@ -148,7 +152,7 @@ wa:
     postgresql:
       enabled: false
 
-servicebus:
+servicebusPrimary:
   enabled: true
   releaseNameOverride: ${SERVICE_NAME}
   resourceGroup: private-law-aso-preview-rg
@@ -161,7 +165,7 @@ servicebus:
 
 ccd-message-publisher:
   enabled: true
-  servicebus:
+  servicebusPrimary:
     enabled: false
   java:
     ingressHost: ccd-message-publisher-${SERVICE_FQDN}
