@@ -1,0 +1,18 @@
+[
+  {
+    "LiveFrom": "01/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "highCourtCase",
+    "Name": "High Court Decision",
+    "Description": "High Court Decision",
+    "DisplayOrder": 71,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/high-court-case/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/high-court-case/submitted",
+    "EndButtonLabel": "Mark case as High Court Case",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\" OR caseTypeOfApplication=\"FL401\""
+  }
+]
