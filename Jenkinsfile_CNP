@@ -72,6 +72,10 @@ def checkForEnableTestsLabel(branch_name) {
   return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
 }
 
+def checkForSkipSmokeTestLabel(branch_name) {
+  return new GithubAPI(this).getLabelsbyPattern(branch_name, "skip-smoke-test").contains("skip-smoke-test")
+}
+
 def setPreviewEnvVars() {
   def githubApi = new GithubAPI(this)
   env.COS_IMAGE = "latest"
@@ -128,6 +132,9 @@ withPipeline("nodejs", product, component) {
   onPR{
     env.ENVIRONMENT="preview"
     setPreviewEnvVars();
+    if (checkForSkipSmokeTestLabel(env.BRANCH_NAME)) {
+      env.SKIP_SMOKE_TEST = "true"
+    }
   }
   onMaster{
     env.ENVIRONMENT="aat"
