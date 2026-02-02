@@ -38,8 +38,15 @@
     "LiveFrom": "14/02/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "finalWelshDocument",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "14/02/2022",

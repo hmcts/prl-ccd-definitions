@@ -10,8 +10,15 @@
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "citizenResponseC7DocumentList",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "10/08/2021",
