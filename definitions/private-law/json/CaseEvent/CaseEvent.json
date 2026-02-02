@@ -774,6 +774,22 @@
     "Publish": "True"
   },
   {
+    "LiveFrom": "01/01/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "awaitingInformation",
+    "Name": "Awaiting Information",
+    "Description": "Move Case to Awaiting Information (Manual Event) — CTSC / HCA Admin Workflow",
+    "DisplayOrder": 50,
+    "PreConditionState(s)": "PENDING;SUBMITTED;CASE_ISSUED;GATEKEEPING",
+    "PostConditionState": "AWAITING_INFORMATION",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-task-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "True"
+  },
+  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "PRLAPPS",
     "ID": "paymentSuccessCallback",
