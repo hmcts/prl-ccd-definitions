@@ -52,8 +52,15 @@
     "LiveFrom": "02/12/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "submitAndPayDownloadApplicationWelshLink",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "02/12/2021",
