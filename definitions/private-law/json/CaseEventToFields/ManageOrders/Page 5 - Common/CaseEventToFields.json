@@ -70,8 +70,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createCustomOrder\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/populate-preview-order"
+    "FieldShowCondition": "manageOrdersOptions=\"createCustomOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -251,7 +250,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND daOrderForCaCase=\"No\""
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\" AND (daOrderForCaCase=\"No\" OR manageOrdersOptions=\"createCustomOrder\")"
   },
   {
     "LiveFrom": "01/01/2023",
