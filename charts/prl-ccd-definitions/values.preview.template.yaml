@@ -517,9 +517,10 @@ prl-cos:
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
       BARRISTER_FEATURE_ENABLED: "true"
       CAFCASS_DATE_TIME_FEATURE_ENABLED: "true"
+      OS_COURT_LOOKUP_ENABLED: "false"
 
 prl-cron:
-  enabled: true
+  enabled: false
   job:
     kind: CronJob
     image: hmctspublic.azurecr.io/prl/cos:pr-3281
