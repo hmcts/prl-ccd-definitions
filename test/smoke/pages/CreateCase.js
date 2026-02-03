@@ -45,14 +45,6 @@ module.exports = {
     await I.seeElement('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click('#c100ConfidentialityStatementDisclaimer-confidentialityStatementUnderstood');
     await I.retry(retryCount).click(this.fields.submit);
-
-    I.wait('5');
-    await I.waitForText('Select the family court');
-    await I.waitForElement(this.fields.submitCountyCourtSelection);
-    await I.retry(retryCount).selectOption(this.fields.submitCountyCourtSelection
-      , 'Swansea Civil Justice Centre - Quay West, Quay Parade - SA1 1SP');
-    await I.seeElement(this.fields.submit);
-    await I.retry(retryCount).click(this.fields.submit);
   },
 
   async createNewCaseC100andReturnID() {

@@ -3,13 +3,34 @@
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "transferToAnotherCourt",
+    "CaseFieldID": "courtName",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "courtList=\"NEVER_SHOW\"",
+    "PageFieldDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
     "CaseFieldID": "transferCourtWarning",
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/transfer-court/validate-court-fields"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
+    "CaseFieldID": "transferCourtChangeWarning",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3
   },
   {
     "LiveFrom": "20/08/2021",
@@ -19,7 +40,7 @@
     "DisplayContext": "READONLY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -30,7 +51,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -41,7 +62,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   },
   {
@@ -52,7 +73,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "cantFindCourtCheck CONTAINS \"DO_NOT_SHOW\""
   },
@@ -64,7 +85,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 8,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "cantFindCourtCheck CONTAINS \"cantFindCourt\""
   },
@@ -76,7 +97,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 9,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "cantFindCourtCheck CONTAINS \"cantFindCourt\""
   },
@@ -88,7 +109,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 10,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
@@ -100,7 +121,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 11,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
@@ -112,7 +133,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 12,
     "ShowSummaryChangeOption": "Yes",
     "FieldShowCondition": "reasonForTransferToAnotherCourt CONTAINS \"anotherReason\" OR reasonForTransferToAnotherCourtDa CONTAINS \"anotherReason\""
   },
@@ -124,7 +145,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 13,
     "ShowSummaryChangeOption": "Yes",
     "RetainHiddenValue": "Y",
     "FieldShowCondition": "cantFindCourtCheck=\"DO_NOT_SHOW\""
