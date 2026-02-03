@@ -38,8 +38,15 @@
     "LiveFrom": "24/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "componentLauncher",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "24/11/2022",
