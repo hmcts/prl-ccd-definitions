@@ -5,6 +5,7 @@ set -eu
 dir=$(dirname ${0})
 
 ${dir}/utils/add-system-user-case-allocator-role.sh
+${dir}/utils/add-hearing-system-user.sh
 
 jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   email=$(jq -r '.email' <<< $user)
