@@ -168,16 +168,7 @@ withPipeline("nodejs", product, component) {
   }
 
   afterAlways('test') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'mochawesome-report/**'
-
-    publishHTML([
-            allowMissing: true,
-            alwaysLinkToLastBuild: true,
-            keepAll: true,
-            reportDir: 'mochawesome-report',
-            reportFiles: 'mochawesome.html',
-            reportName: 'Unit Test Report'
-    ])
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/unit/**'
   }
 
 
