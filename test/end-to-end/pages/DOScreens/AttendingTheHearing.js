@@ -10,7 +10,7 @@ module.exports = {
   async attendingTheHearing() {
     await I.waitForPage('h1', 'Attending the hearing');
     await I.click('#isWelshNeeded_Yes');
-    await I.see('Welsh needs');
+    await I.see('Welsh wants');
     await I.click('//*[@id="fl401WelshNeeds"]/div/button[1]');
     I.wait('1');
     await I.fillField('#fl401WelshNeeds_0_whoNeedsWelsh', 'Joe Doe');
