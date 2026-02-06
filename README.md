@@ -111,15 +111,5 @@ To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP)
 ### AM role assignment
 To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
 
-### PREVIEW HEARING BYPASS 
-This is to speed up development by not relying on environments where hearing is integrated. 
-So, on preview by default hearing api calls are bypassed. 
-This controlled by env variable HEARING_PREVIEW_BYPASS_ENABLED [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml).
-Endpoint to post a hearing request is available on swagger ("swagger-ui/index.html#/hearing-support-controller") with no authorisation required 
-put request ("/hearing-support/testing/prepare-for-hearing"). 
-For e.g.  
-https://prl-ccd-definitions-pr-2791.preview.platform.hmcts.net/swagger-ui/index.html#/hearing-support-controller/prepareForHearing
-Sample payload for the swagger request - [sampleListedHearing.json](test/resource/hearing/sampleListedHearing.json). 
-Replace :
-"caseRef" : "<Actual case id>" (Add actual case id)
-"hearingId" : "999999" (valid values are 999999 and 111111)
+### Hearing set up
+Enabled hearing by default in preview.
