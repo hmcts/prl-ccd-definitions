@@ -14,7 +14,7 @@
     "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && cd ccd-definition-processor && yarn install",
     "setup": "git submodule update --init --recursive && cd ccd-definition-processor && yarn install",
     "lint": "eslint --fix .",
-    "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js --timeout 5000",
+    "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js --timeout 5000 --reporter mochawesome --reporter-options reportDir=test-results/unit-tests",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
