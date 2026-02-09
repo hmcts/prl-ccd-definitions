@@ -435,5 +435,26 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "05/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]

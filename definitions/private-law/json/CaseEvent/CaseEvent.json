@@ -2163,5 +2163,20 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "05/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "sendToGateKeeper",
+    "Name": "Send to gatekeeper",
+    "Description": "Move case to Gatekeeping from Awaiting Information",
+    "DisplayOrder": 51,
+    "PreConditionState(s)": "CASE_ISSUED;AWAITING_INFORMATION",
+    "PostConditionState": "GATEKEEPING",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/send-to-gatekeeper",
+    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "Publish": "True"
   }
 ]
