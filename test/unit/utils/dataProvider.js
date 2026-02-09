@@ -7,7 +7,7 @@ const loadFile = file => {
   const candidate1 = path.join(baseDir, `${file}.json`);
   const candidate2 = path.join(baseDir, file, `${file}.json`);
 
-  let modulePath;
+  let modulePath = '';
   if (fs.existsSync(candidate1)) {
     modulePath = candidate1;
   } else if (fs.existsSync(candidate2)) {
