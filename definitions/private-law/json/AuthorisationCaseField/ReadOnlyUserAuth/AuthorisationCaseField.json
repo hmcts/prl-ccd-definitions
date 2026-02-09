@@ -1998,8 +1998,16 @@
     "LiveFrom": "25/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "childrenConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-readonly",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "[LASOCIALWORKER]",
+          "[LASOLICITOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "25/06/2023",
@@ -3924,8 +3932,16 @@
     "LiveFrom": "25/06/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "fl401ChildrenConfidentialDetails",
-    "UserRole": "caseworker-privatelaw-readonly",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly",
+          "[LASOCIALWORKER]",
+          "[LASOLICITOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "25/06/2023",

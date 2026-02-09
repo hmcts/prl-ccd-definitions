@@ -7165,8 +7165,16 @@
     "LiveFrom": "27/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseTypeOfApplication",
-    "UserRole": "caseworker-privatelaw-externaluser-viewonly",
-    "CRUD": "R"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly",
+          "[LASOCIALWORKER]",
+          "[LASOLICITOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "27/01/2023",
