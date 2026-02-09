@@ -3,7 +3,21 @@ const fs = require('fs');
 const path = require('path');
 
 const loadFile = file => {
-  return Object.assign(load(`../../../definitions/private-law/json/${file}.json`), []);
+  const baseDir = path.resolve(__dirname, '../../../definitions/private-law/json');
+  const candidate1 = path.join(baseDir, `${file}.json`);
+  const candidate2 = path.join(baseDir, file, `${file}.json`);
+
+  let modulePath;
+  if (fs.existsSync(candidate1)) {
+    modulePath = candidate1;
+  } else if (fs.existsSync(candidate2)) {
+    modulePath = candidate2;
+  } else {
+    // fallback to original require (will throw the same MODULE_NOT_FOUND if missing)
+    modulePath = `../../../definitions/private-law/json/${file}.json`;
+  }
+
+  return Object.assign(load(modulePath), []);
 };
 
 let getFieldData = [];
