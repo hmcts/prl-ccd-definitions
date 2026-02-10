@@ -1567,8 +1567,22 @@
     "LiveFrom": "24/11/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "localAuthorityDocuments",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass"
+        ],
+        "CRUD": "CU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "[LASOCIALWORKER]",
+          "[LASOLICITOR]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "24/11/2022",
