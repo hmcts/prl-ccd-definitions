@@ -19,7 +19,6 @@
     "ListElementCode": "Organisation.OrganisationID",
     "EventElementLabel": "",
     "FieldDisplayOrder": "8",
-    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -31,7 +30,6 @@
     "ListElementCode": "Organisation.OrganisationName",
     "EventElementLabel": "",
     "FieldDisplayOrder": "9",
-    "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "MANDATORY"
   },
   {
@@ -41,10 +39,11 @@
     "CaseEventID": "adminAddLocalAuthority",
     "CaseFieldID": "localAuthoritySolicitorOrganisationPolicy",
     "ListElementCode": "OrgPolicyCaseAssignedRole",
-    "DefaultValue": "[APPLICANTSOLICITOR]",
+    "DefaultValue": "[LASOLICITOR]",
     "FieldDisplayOrder": "10",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "DisplayContext": "OPTIONAL"
+    "RetainHiddenValue": "Y"
   },
   {
     "LiveFrom": "20/01/2021",
@@ -65,8 +64,8 @@
     "CaseEventID": "adminAddLocalAuthority",
     "CaseFieldID": "localAuthoritySolicitorOrganisationPolicy",
     "ListElementCode": "PreviousOrganisations",
-    "FieldDisplayOrder": "12",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
+    "FieldDisplayOrder": "12",
     "EventElementLabel": "",
     "DisplayContext": "OPTIONAL"
   },
@@ -113,10 +112,11 @@
     "CaseEventID": "adminRemoveLocalAuthority",
     "CaseFieldID": "localAuthoritySolicitorOrganisationPolicy",
     "ListElementCode": "OrgPolicyCaseAssignedRole",
-    "DefaultValue": "[APPLICANTSOLICITOR]",
+    "DefaultValue": "[LASOLICITOR]",
     "FieldDisplayOrder": "10",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "RetainHiddenValue": "Y"
   },
   {
     "LiveFrom": "20/01/2021",
