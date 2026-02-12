@@ -2163,5 +2163,20 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "awaitingInformation",
+    "Name": "Awaiting Information",
+    "Description": "Awaiting Information",
+    "DisplayOrder": 41,
+    "PreConditionState(s)": "SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW",
+    "PostConditionState": "AWAITING_INFORMATION",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "True"
   }
 ]
