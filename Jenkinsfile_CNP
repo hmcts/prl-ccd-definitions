@@ -56,6 +56,11 @@ def secrets = [
                 secret('idam-mca-client-secret', 'IDAM_MCA_CLIENT_SECRET'),
                 secret('idam-mca-system-user-username', 'IDAM_CAA_USERNAME'),
                 secret('idam-mca-system-user-password', 'IDAM_CAA_PASSWORD')
+        ],
+        'fis-kv-${env}': [
+                secret('fis-hmc-api-s2s-secret', 'FIS_S2S_SECRET'),
+                secret('prl-hearing-manager', 'FIS_SYSTEM_UPDATE_USER_USERNAME'),
+                secret('idam-hmc-component-user-password', 'FIS_SYSTEM_UPDATE_USER_PASSWORD'),
         ]
 ]
 
@@ -70,10 +75,6 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 
 def checkForEnableTestsLabel(branch_name) {
   return new GithubAPI(this).getLabelsbyPattern(branch_name, "enable-prl-e2e-tests").contains("enable-prl-e2e-tests")
-}
-
-def checkForSkipSmokeTestLabel(branch_name) {
-  return new GithubAPI(this).getLabelsbyPattern(branch_name, "skip-smoke-test").contains("skip-smoke-test")
 }
 
 def setPreviewEnvVars() {
@@ -131,10 +132,7 @@ withPipeline("nodejs", product, component) {
 
   onPR{
     env.ENVIRONMENT="preview"
-    setPreviewEnvVars();
-    if (checkForSkipSmokeTestLabel(env.BRANCH_NAME)) {
-      env.SKIP_SMOKE_TEST = "true"
-    }
+    setPreviewEnvVars()
   }
   onMaster{
     env.ENVIRONMENT="aat"
@@ -168,6 +166,11 @@ withPipeline("nodejs", product, component) {
     }
 
   }
+
+  afterAlways('test') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/**'
+  }
+
 
   before('smoketest:preview') {
     yarnBuilder.yarn('playwrightsetup')
