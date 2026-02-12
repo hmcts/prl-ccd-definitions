@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.41
+version: 0.0.42
 dependencies:
   - name: ccd
     version: 9.2.2
@@ -39,7 +39,8 @@ dependencies:
   - name: servicebus
     version: 1.2.1
     repository: 'oci://hmctspublic.azurecr.io/helm'
-    condition: servicebus.enabled
+    alias: servicebusPrimary
+    condition: servicebusPrimary.enabled
   - name: wa
     version: ~1.1.0
     repository: 'oci://hmctspublic.azurecr.io/helm'
@@ -64,3 +65,12 @@ dependencies:
     version: 0.0.28
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: prl-citizen-frontend.enabled
+  - name: fis-hmc-api
+    version: ~0.0.37
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    condition: fis-hmc-api.enabled
+  - name: servicebus
+    version: 1.2.1
+    repository: 'oci://hmctspublic.azurecr.io/helm'
+    alias: hmcsb
+    condition: hmcsb.enabled
