@@ -63,6 +63,31 @@
     "CRUD": "R"
   },
   {
+    "CaseEventID": "sendToGateKeeper",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
+  },
+  {
+    "CaseEventID": "sendToGateKeeper",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "R"
+  },
+  {
+    "CaseEventID": "sendToGateKeeper",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "R"
+  },
+  {
+    "CaseEventID": "issueAndSendToLocalCourt",
+    "UserRole": "ctsc-team-leader",
+    "CRUD": "CRU"
+  },
+  {
+    "CaseEventID": "transferToAnotherCourt",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
+  },
+  {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "courtnav-case-creation",
@@ -429,6 +454,27 @@
       {
         "UserRoles": [
           "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "02/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendToGateKeeper",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "caseworker-privatelaw-la",
           "caseworker-privatelaw-judge"
         ],
