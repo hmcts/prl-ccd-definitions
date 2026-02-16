@@ -202,22 +202,21 @@
     "LiveFrom": "19/04/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "cafcass-document-upload",
-    "UserRole": "caseworker-privatelaw-cafcass",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "19/04/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "cafcass-document-upload",
-    "UserRole": "caseworker-wa-task-configuration",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "19/04/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "cafcass-document-upload",
-    "UserRole": "caseworker-privatelaw-systemupdate",
-    "CRUD": "CRU"
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "01/03/2023",
@@ -439,7 +438,7 @@
   {
     "LiveFrom": "05/02/2026",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "sendToGateKeeperAwaitInfo",
+    "CaseEventID": "sendToGateKeeper",
     "AccessControl": [
       {
         "UserRoles": [
