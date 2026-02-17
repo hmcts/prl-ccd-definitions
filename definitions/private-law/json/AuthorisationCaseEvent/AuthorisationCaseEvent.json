@@ -63,28 +63,59 @@
     "CRUD": "R"
   },
   {
-    "CaseEventID": "sendToGateKeeper",
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "issueAndSendToLocalCourt",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401AddCaseNumber",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
   },
   {
-    "CaseEventID": "sendToGateKeeper",
-    "UserRole": "caseworker-privatelaw-la",
-    "CRUD": "R"
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "returnApplication",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
   },
   {
-    "CaseEventID": "sendToGateKeeper",
-    "UserRole": "caseworker-privatelaw-judge",
-    "CRUD": "R"
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "transferToAnotherCourt",
+    "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "CRU"
   },
   {
-    "CaseEventID": "issueAndSendToLocalCourt",
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "recordFinalDecision",
     "UserRole": "ctsc-team-leader",
     "CRUD": "CRU"
   },
   {
-    "CaseEventID": "transferToAnotherCourt",
-    "UserRole": "caseworker-privatelaw-courtadmin",
+    "LiveFrom": "01/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "processUrgentHWF",
+    "UserRole": "ctsc-team-leader",
     "CRUD": "CRU"
   },
   {
