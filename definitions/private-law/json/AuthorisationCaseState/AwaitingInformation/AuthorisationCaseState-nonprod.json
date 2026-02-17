@@ -5,20 +5,23 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-superuser",
-          "caseworker-wa-task-configuration",
           "caseworker-privatelaw-systemupdate"
         ],
-        "CRUD": "CRUD"
+        "CRUD": "CRU"
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
           "citizen",
-          "[APPLICANTSOLICITOR]",
-          "[CREATOR]"
+          "GS_profile",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-caa",
+          "caseworker-approver",
+          "caseworker-privatelaw-readonly"
         ],
         "CRUD": "R"
       }
