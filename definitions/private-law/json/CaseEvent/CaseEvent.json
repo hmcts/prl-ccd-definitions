@@ -2163,39 +2163,5 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
     "Publish": "True"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "transferToAnotherCourt",
-    "Name": "Transfer to another court",
-    "Description": "Conditional",
-    "PreConditionState(s)": "AWAITING_INFORMATION",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/transfer-court/about-to-submit"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "recordFinalDecision",
-    "Name": "Record final decision",
-    "Description": "Close case",
-    "PreConditionState(s)": "AWAITING_INFORMATION",
-    "PostConditionState": "ALL_FINAL_ORDERS_ISSUED",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y"
-  },
-  {
-    "LiveFrom": "01/01/2023",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "processUrgentHWF",
-    "Name": "Process urgent HWF",
-    "Description": "Submit case",
-    "PreConditionState(s)": "AWAITING_INFORMATION",
-    "PostConditionState": "SUBMITTED_PAID",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y"
   }
 ]
