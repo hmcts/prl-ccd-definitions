@@ -13,7 +13,7 @@
     "envs": "node json-env.js",
     "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && cd ccd-definition-processor && yarn install",
     "setup": "git submodule update --init --recursive && cd ccd-definition-processor && yarn install",
-    "lint": "eslint --fix .",
+    "lint": "eslint --fix \"**/*.js\" --ignore-pattern \"build/\" --ignore-pattern \"test-results/\"",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js --timeout 5000 --reporter mochawesome --reporter-options reportDir=test-results/unit-tests",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",

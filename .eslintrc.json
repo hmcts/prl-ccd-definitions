@@ -1,4 +1,11 @@
 {
+    "root": true,
+    "ignorePatterns": [
+        "ccd-definition-processor/**",
+        "build/**",
+        "test-results/**",
+        "coverage/**"
+    ],
     "env": {
         "browser": true,
         "es6": true,
@@ -43,7 +50,7 @@
                 "ignoreComments": true,
                 "ignoreTrailingComments": true,
                 "ignoreRegExpLiterals": true,
-                "ignorePattern": ".*exports.*=.*class.*|.*if \\(.*\\)|.*\\?.*\\:.*|.*\\|\\|.*|.*\\&\\&.*"
+                "ignorePattern": ".*exports.*=.*class.*|.*if \\(.*\\)|.*\\?.*:.*|.*\\|\\|.*|.*&&.*"
             }
         ],
         "arrow-body-style": ["error", "always"],

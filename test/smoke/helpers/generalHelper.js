@@ -125,15 +125,11 @@ class GeneralHelper extends Helper {
   async waitForPage(header, headerText) {
     const { Playwright } = this.helpers;
 
-    try {
-      // eslint-disable-next-line no-undefined
-      if (headerText === undefined) {
-        await Playwright.waitForElement(header, '90');
-      } else {
-        await Playwright.waitForText(headerText, '90', header);
-      }
-    } catch (error) {
-      throw error;
+    // eslint-disable-next-line no-undefined
+    if (headerText === undefined) {
+      await Playwright.waitForElement(header, '90');
+    } else {
+      await Playwright.waitForText(headerText, '90', header);
     }
   }
   async seeDocuments(title, documentName) {
