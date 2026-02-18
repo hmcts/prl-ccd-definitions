@@ -135,6 +135,42 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
+    "LiveFrom": "09/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendSelectApplicationType",
+    "CaseFieldID": "orderInPlacePermissionRequired",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "applicationPermissionRequired=\"yes\" OR applicationPermissionRequired=\"noNowSought\"",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "09/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendSelectApplicationType",
+    "CaseFieldID": "orderDetailsForPermissions",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "orderInPlacePermissionRequired=\"Yes\" AND (applicationPermissionRequired=\"yes\" OR applicationPermissionRequired=\"noNowSought\")",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "09/02/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "amendSelectApplicationType",
+    "CaseFieldID": "uploadOrderDocForPermission",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "orderInPlacePermissionRequired=\"Yes\" AND (applicationPermissionRequired=\"yes\" OR applicationPermissionRequired=\"noNowSought\")",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 7,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
     "LiveFrom": "03/11/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "amendSelectApplicationType",
