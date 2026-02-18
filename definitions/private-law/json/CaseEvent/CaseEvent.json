@@ -792,7 +792,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "issueAndSendToLocalCourtCallback",
     "Name": "Issue and send to local court",
-    "PreConditionState(s)": "SUBMITTED_PAID,AWAITING_INFORMATION",
+    "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_INFORMATION",
     "PostConditionState": "PROCEEDS_IN_HERITAGE_SYSTEM(isNonWorkAllocationEnabledCourtSelected=\"Yes\"):1;CASE_ISSUED",
     "DisplayOrder": 33,
     "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/pre-populate-court-details",
