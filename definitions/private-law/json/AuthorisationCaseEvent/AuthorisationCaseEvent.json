@@ -23,6 +23,20 @@
   {
     "LiveFrom": "01/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizen-case-update",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizen-case-update",
+    "UserRole": "caseworker-privatelaw-judge",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseEventID": "citizenCreate",
     "UserRole": "citizen",
     "CRUD": "CRU"
@@ -32,6 +46,20 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "citizenCreate",
     "UserRole": "caseworker-privatelaw-courtadmin",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenCreate",
+    "UserRole": "caseworker-privatelaw-la",
+    "CRUD": "R"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "citizenCreate",
+    "UserRole": "caseworker-privatelaw-judge",
     "CRUD": "R"
   },
   {
@@ -96,7 +124,9 @@
         "UserRoles": [
           "caseworker-privatelaw-readonly",
           "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "R"
       }
@@ -295,7 +325,9 @@
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "R"
       }
@@ -315,7 +347,9 @@
       },
       {
         "UserRoles": [
-          "caseworker-privatelaw-courtadmin"
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
         ],
         "CRUD": "R"
       }
@@ -391,6 +425,14 @@
           "caseworker-privatelaw-superuser"
         ],
         "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
       }
     ]
   }
