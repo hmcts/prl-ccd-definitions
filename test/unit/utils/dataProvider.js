@@ -85,7 +85,7 @@ module.exports = {
     WorkBasketInputFields: loadFile('WorkBasketInputFields'),
     WorkBasketResultFields: loadFile('WorkBasketResultFields')
   },
-  caseFieldData: getFieldData('../../../definitions/private-law/json', 'CaseField.json'),
+  caseFieldData: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseField.json', 'CaseField-nonprod.json'),
   AuthorisationCaseFieldData: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
   CaseEventToFieldData: getFieldData('../../../definitions/private-law/json', 'CaseEventToFields.json'),
   CaseTypeTab: getFieldData('../../../definitions/private-law/json', 'CaseTypeTab.json'),
