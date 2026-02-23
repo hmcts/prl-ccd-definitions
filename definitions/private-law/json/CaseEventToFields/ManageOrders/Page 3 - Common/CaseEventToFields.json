@@ -9,8 +9,7 @@
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "PageShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\"",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
+    "PageShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -21,8 +20,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -33,8 +31,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -45,8 +42,7 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -57,20 +53,30 @@
     "DisplayContext": "OPTIONAL",
     "PageID": 3,
     "PageDisplayOrder": 3,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "nameOfOrder",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "MANDATORY",
+    "PageID": 3,
+    "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\""
+    "FieldShowCondition": "otherOrdersOption=\"other\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "isTheOrderUploadedByConsent",
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 8,
     "DisplayContext": "MANDATORY",
     "PageID": 3,
     "PageDisplayOrder": 3,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"uploadAnOrder\" OR createSelectOrderOptions=\"other\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/fetch-order-details"
   }
 ]
