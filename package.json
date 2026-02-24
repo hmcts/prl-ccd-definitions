@@ -14,7 +14,7 @@
     "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && cd ccd-definition-processor && yarn install",
     "setup": "git submodule update --init --recursive && cd ccd-definition-processor && yarn install",
     "lint": "eslint --fix .",
-    "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js --timeout 5000",
+    "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js --timeout 5000 --reporter mochawesome --reporter-options reportDir=test-results/unit-tests",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "codeceptjs": "node $NODE_DEBUG_OPTION ./node_modules/.bin/codeceptjs --verbose",
@@ -53,15 +53,15 @@
     "express": "^5.2.0",
     "html_codesniffer": "^2.5.1",
     "json-schema": "^0.4.0",
-    "metro": "^0.83.0",
+    "metro": "^0.84.0",
     "minimist": "^1.2.3",
-    "playwright": "1.58.1",
+    "playwright": "1.58.2",
     "puppeteer": "^24.29.1",
     "ws": "^8.18.0"
   },
   "devDependencies": {
     "@hmcts/eslint-config": "^1.4.0",
-    "@playwright/test": "1.58.1",
+    "@playwright/test": "1.58.2",
     "chai": "^6.0.0",
     "codeceptjs": "^3.7.5",
     "eslint": "^5.16.0",
@@ -81,8 +81,9 @@
   },
   "resolutions": {
     "jws": "^4.0.1",
-    "qs": "^6.14.1",
-    "tar": "^7.5.7"
+    "qs": "^6.14.2",
+    "tar": "^7.5.9",
+    "minimatch": "10.2.2"
   },
   "packageManager": "yarn@4.12.0",
   "overrides": {
