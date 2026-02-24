@@ -31,5 +31,16 @@ describe('CaseTypeTab', () => {
     it('should have only valid definitions', () => {
       uniqResult.forEach(assertFieldDefinitionIsValid);
     });
+
+    it('should have correct tab order', () => {
+      const expectedOrders = require('../utils/caseTypeTabOrders.json');
+
+      uniqResult.forEach(row => {
+        if (expectedOrders.hasOwnProperty(row.TabID)) {
+          const expected = expectedOrders[row.TabID];
+          expect(expected).to.include(row.TabDisplayOrder);
+        }
+      });
+    });
   });
 });
