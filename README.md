@@ -22,6 +22,7 @@ When trying to create a XLS file ends with error message mentioning a module can
 
 <details>
   <summary>Example error output</summary>
+  
 
 ```sh
 yarn run v1.22.5
