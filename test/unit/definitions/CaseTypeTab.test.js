@@ -7,6 +7,7 @@ const {
   noDuplicateFoundCT
 } = require('../utils/utils');
 const { CaseTypeTab } = require('../utils/dataProvider');
+const expectedOrders = require('../utils/caseTypeTabOrders.json');
 
 function assertFieldDefinitionIsValid(row) {
   expect(row.CaseTypeID).to.be.a('string').and.satisfy(v => {
@@ -30,6 +31,15 @@ describe('CaseTypeTab', () => {
 
     it('should have only valid definitions', () => {
       uniqResult.forEach(assertFieldDefinitionIsValid);
+    });
+
+    it('should have correct tab order', () => {
+      uniqResult.forEach(row => {
+        if (expectedOrders.hasOwnProperty(row.TabID)) {
+          const expected = expectedOrders[row.TabID];
+          expect(expected).to.include(row.TabDisplayOrder);
+        }
+      });
     });
   });
 });
