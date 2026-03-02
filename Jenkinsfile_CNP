@@ -132,7 +132,7 @@ withPipeline("nodejs", product, component) {
 
   onPR{
     env.ENVIRONMENT="preview"
-    setPreviewEnvVars();
+    setPreviewEnvVars()
   }
   onMaster{
     env.ENVIRONMENT="aat"
@@ -166,6 +166,11 @@ withPipeline("nodejs", product, component) {
     }
 
   }
+
+  afterAlways('test') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/**'
+  }
+
 
   before('smoketest:preview') {
     yarnBuilder.yarn('playwrightsetup')
