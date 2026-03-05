@@ -1,0 +1,25 @@
+[
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "CustomC43OrderDetails",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "customC43OrderDetails",
+    "ListElementCode": "ordersToIssue",
+    "EventElementLabel": "Select orders to issue",
+    "FieldDisplayOrder": "1",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "CustomC43OrderDetails",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "customC43OrderDetails",
+    "ListElementCode": "childArrangementsOrderType",
+    "EventElementLabel": "Select type of child arrangements order",
+    "FieldDisplayOrder": "2",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "customC43OrderDetails.ordersToIssue CONTAINS \"childArrangementsOrder\""
+  }
+]
