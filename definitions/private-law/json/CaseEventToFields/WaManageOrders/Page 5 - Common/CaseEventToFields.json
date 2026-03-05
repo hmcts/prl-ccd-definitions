@@ -160,7 +160,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "manageOrdersOptions=\"createCustomOrder\" OR (manageOrdersOptions=\"createAnOrder\" AND isSdoSelected=\"No\") OR (manageOrdersOptions=\"uploadAnOrder\" AND isSdoSelected=\"No\")"
+    "FieldShowCondition": "(manageOrdersOptions=\"createAnOrder\" OR manageOrdersOptions=\"uploadAnOrder\") AND isSdoSelected=\"No\""
   },
   {
     "LiveFrom": "01/07/2025",
@@ -184,8 +184,7 @@
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"Yes\"",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/populate-from-hearing"
+    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"Yes\""
   },
   {
     "LiveFrom": "01/07/2025",
