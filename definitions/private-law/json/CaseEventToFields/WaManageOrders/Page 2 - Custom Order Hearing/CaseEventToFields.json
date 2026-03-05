@@ -1,0 +1,38 @@
+[
+  {
+    "LiveFrom": "01/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "waManageOrders",
+    "CaseFieldID": "selectedOrderHearingLabel",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "manageOrdersOptions=\"createCustomOrder\""
+  },
+  {
+    "LiveFrom": "01/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "waManageOrders",
+    "CaseFieldID": "wasTheOrderApprovedAtHearing",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/07/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "waManageOrders",
+    "CaseFieldID": "hearingsType",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": 2,
+    "PageDisplayOrder": 2,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"Yes\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/populate-from-hearing"
+  }
+]
