@@ -75,6 +75,7 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 
 ## Testing with prl-cos
 
+
 ### If your ticket doesn’t require changes in the prl-cos API
 
 1. No changes are needed in this repository, and everything will be set automatically.
