@@ -8,6 +8,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "chooseSendOrReply=\"XYZ\"",
     "ShowSummaryChangeOption": "No"
   },
   {
@@ -20,7 +21,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition" : "taskAssociatedWithMessage=\"NO\"",
+    "PageShowCondition" : "taskAssociatedWithMessage=\"No\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
 
@@ -157,8 +158,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -169,8 +169,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -182,7 +181,7 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
+    "PageShowCondition": "respondToMessage=\"Yes\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
   },
   {
@@ -195,6 +194,6 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
+    "FieldShowCondition": "respondToMessage=\"Yes\""
   }
 ]
