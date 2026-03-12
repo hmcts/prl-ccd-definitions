@@ -8,7 +8,7 @@
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "FieldShowCondition": "chooseSendOrReply=\"XYZ\"",
+    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\"",
     "ShowSummaryChangeOption": "No"
   },
   {
@@ -21,7 +21,9 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
+    "RetainHiddenValue": "Y",
     "PageShowCondition" : "taskAssociatedWithMessage=\"No\"",
+    "FieldShowCondition": "taskAssociatedWithMessage=\"No\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
 
@@ -35,6 +37,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes",
+    "RetainHiddenValue": "Y",
     "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
@@ -134,7 +137,8 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\""
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -170,6 +174,32 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "11/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "optionReply",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "respondToMessage = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "11/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "messageIdentifier",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "respondToMessage = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2023",
