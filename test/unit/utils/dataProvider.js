@@ -59,7 +59,7 @@ module.exports = {
   ccdData: {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
     AuthorisationCaseType: loadFile('AuthorisationCaseType'),
-    CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
+    CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseEvent-nonprod.json', 'CaseEvent-nonprod.json'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
     FixedLists: loadFile('FixedLists'),
@@ -75,7 +75,7 @@ module.exports = {
   AuthorisationCaseFieldData: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
   CaseEventToFieldData: getFieldData('../../../definitions/private-law/json', 'CaseEventToFields.json'),
   CaseTypeTab: getFieldData('../../../definitions/private-law/json', 'CaseTypeTab.json'),
-  AuthorisationCaseEvent: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseEvent.json'),
+  AuthorisationCaseEvent: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseEvent-nonprod.json'),
   CaseEventToComplexTypes: getFieldData('../../../definitions/private-law/json', 'CaseEventToComplexTypes.json'),
   ComplexTypes: getFieldData('../../../definitions/private-law/json', 'ComplexTypes.json')
 };
