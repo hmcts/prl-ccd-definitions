@@ -72,10 +72,10 @@ module.exports = {
     WorkBasketResultFields: loadFile('WorkBasketResultFields')
   },
   caseFieldData: getFieldData('../../../definitions/private-law/json', 'CaseField.json'),
-  AuthorisationCaseFieldData: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseField.json'),
-  CaseEventToFieldData: getFieldData('../../../definitions/private-law/json', 'CaseEventToFields.json'),
+  AuthorisationCaseFieldData: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseField-nonprod.json'),
+  CaseEventToFieldData: getFieldData('../../../definitions/private-law/json', 'CaseEventToFields-nonprod.json'),
   CaseTypeTab: getFieldData('../../../definitions/private-law/json', 'CaseTypeTab.json'),
   AuthorisationCaseEvent: getFieldData('../../../definitions/private-law/json', 'AuthorisationCaseEvent-nonprod.json'),
-  CaseEventToComplexTypes: getFieldData('../../../definitions/private-law/json', 'CaseEventToComplexTypes.json'),
+  CaseEventToComplexTypes: getFieldData('../../../definitions/private-law/json', 'CaseEventToComplexTypes-nonprod.json'),
   ComplexTypes: getFieldData('../../../definitions/private-law/json', 'ComplexTypes.json')
 };
