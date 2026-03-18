@@ -69,6 +69,27 @@
   },
   {
     "CaseTypeID": "PRLAPPS",
+    "CaseStateID": "AWAITING_INFORMATION",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "ctsc-team-leader",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
     "CaseStateID": "SUBMITTED_NOT_PAID",
     "AccessControl": [
       {
