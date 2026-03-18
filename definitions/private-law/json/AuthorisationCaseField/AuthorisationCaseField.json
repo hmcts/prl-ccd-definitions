@@ -6879,6 +6879,20 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseNameHmctsInternal",
+    "UserRole": "courtnav",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseNameHmctsInternal",
+    "UserRole": "citizen",
+    "CRUD": "CRU"
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "applicantOrRespondentCaseName",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
@@ -16864,6 +16878,31 @@
           "courtnav"
         ],
         "CRUD": "CRU"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "04/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "soaServeToRespondentOptionsDA",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "citizen",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
       }
     ]
   },
