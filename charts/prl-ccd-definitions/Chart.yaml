@@ -1,7 +1,7 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.44
+version: 0.0.45
 dependencies:
   - name: ccd
     version: 9.2.2
@@ -62,7 +62,7 @@ dependencies:
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: prl-cron.enabled
   - name: prl-citizen-frontend
-    version: 0.0.28
+    version: 0.0.29
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: prl-citizen-frontend.enabled
   - name: fis-hmc-api
