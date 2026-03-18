@@ -19,7 +19,7 @@ xui-webapp:
   nodejs:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
-    image: hmctspublic.azurecr.io/xui/webapp:latest
+    image: hmctsprod.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
     memoryRequests: 2Gi
     cpuRequests: 2000m
@@ -59,7 +59,7 @@ xui-mo-webapp:
   nodejs:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-mo-webapp
-    image: hmctspublic.azurecr.io/xui/mo-webapp:latest
+    image: hmctsprod.azurecr.io/xui/mo-webapp:latest
     ingressHost: xui-mo-${SERVICE_FQDN}
     environment:
       MANAGE_CASE_LINK: https://xui-${SERVICE_FQDN}/cases
@@ -175,7 +175,7 @@ ccd:
 
   ccd-admin-web:
     nodejs:
-      image: hmctspublic.azurecr.io/ccd/admin-web:latest
+      image: hmctsprod.azurecr.io/ccd/admin-web:latest
       ingressHost: admin-web-${SERVICE_FQDN}
       keyVaults: []
       environment:
@@ -236,7 +236,7 @@ ccd:
     replicas: 1
 
   logstash:
-    image: hmctspublic.azurecr.io/imported/logstash/logstash
+    image: hmctsprod.azurecr.io/imported/logstash/logstash
     imageTag: "7.16.1"
     imagePullPolicy: "IfNotPresent"
     logstashJavaOpts: -Xmx1g -Xms512M
@@ -247,7 +247,7 @@ ccd:
         value: "${SERVICE_NAME}-es-master"
     extraInitContainers: |
       - name: download-postgres-jdbc
-        image: hmctspublic.azurecr.io/curl:7.70.0
+        image: hmctsprod.azurecr.io/curl:7.70.0
         command: ['curl', '-L', 'https://jdbc.postgresql.org/download/postgresql-42.3.3.jar', '-o', '/logstash-lib/postgresql.jar']
         volumeMounts:
         - name: logstash-lib
@@ -451,7 +451,7 @@ ccd-case-document-am-api:
     disableKeyVaults: true
     releaseNameOverride: ${SERVICE_NAME}-cdam
     imagePullPolicy: Always
-    image: hmctspublic.azurecr.io/ccd/case-document-am-api:latest
+    image: hmctsprod.azurecr.io/ccd/case-document-am-api:latest
     ingressHost: ccd-case-document-am-api-${SERVICE_FQDN}
     environment:
       IDAM_API_URL: https://idam-api.aat.platform.hmcts.net
@@ -468,7 +468,7 @@ aac-manage-case-assignment:
   java:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-aac-manage-case-assignment
-    image: hmctspublic.azurecr.io/aac/manage-case-assignment:latest
+    image: hmctsprod.azurecr.io/aac/manage-case-assignment:latest
     ingressHost: aac-manage-case-assignment-${SERVICE_FQDN}
     keyVaults: []
     ports:
@@ -499,7 +499,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctspublic.azurecr.io/prl/cos:${COS_IMAGE}
+    image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
@@ -525,7 +525,7 @@ prl-cron:
   enabled: true
   job:
     kind: CronJob
-    image: hmctspublic.azurecr.io/prl/cos:pr-3281
+    image: hmctsprod.azurecr.io/prl/cos:pr-3281
     schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
@@ -602,7 +602,7 @@ prl-cron:
 em-ccdorc:
   enabled: true
   java:
-    image: hmctspublic.azurecr.io/em/ccdorc:latest
+    image: hmctsprod.azurecr.io/em/ccdorc:latest
     releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
     ingressHost: em-ccdorc-${SERVICE_FQDN}
     environment:
@@ -627,7 +627,7 @@ em-ccdorc:
 em-stitching:
   enabled: true
   java:
-    image: hmctspublic.azurecr.io/em/stitching:latest
+    image: hmctsprod.azurecr.io/em/stitching:latest
     releaseNameOverride: ${SERVICE_NAME}-em-stitching
     ingressHost: em-stitching-${SERVICE_FQDN}
     environment:
@@ -664,7 +664,7 @@ prl-citizen-frontend:
   nodejs:
     releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
     ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
-    image: hmctspublic.azurecr.io/prl/citizen-frontend:latest
+    image: hmctsprod.azurecr.io/prl/citizen-frontend:latest
     environment:
       CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
       COS_URL: http://${SERVICE_NAME}-java
@@ -681,7 +681,7 @@ fis-hmc-api:
   enabled: true
   java:
     imagePullPolicy: Always
-    image: hmctspublic.azurecr.io/fis/hmc-api:latest
+    image: hmctsprod.azurecr.io/fis/hmc-api:latest
     ingressHost: fis-hmc-api-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
     environment:
