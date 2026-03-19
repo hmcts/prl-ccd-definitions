@@ -25,6 +25,29 @@
   {
     "LiveFrom": "09/03/2026",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "cirDocUploaded",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "citizen"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "09/03/2026",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "cirReceivedByDeadline",
     "AccessControl": [
       {
