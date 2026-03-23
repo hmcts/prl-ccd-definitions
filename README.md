@@ -75,7 +75,7 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 
 ### Generate Excel Configs for a specific environment i.e. AAT/DEMO/ITHC/PERFTEST
 
-* Note AuthorisationCaseType-prod.json file is use for Production env, don't remove it
+* Note AuthorisationCaseType-prod.json file is used to shutter Production env, don't remove it
 ```
 yarn generate-excel-(local/demo/aat/ithc/perftest/prod)
 ```
