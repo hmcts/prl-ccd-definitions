@@ -106,11 +106,35 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
+    "LiveFrom": "09/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "localAuthorityNeedToProvideReport",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "MANDATORY",
+    "PageID": 26,
+    "PageDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "09/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "whenReportsMustBeFiledByLocalAuthority",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "MANDATORY",
+    "PageID": 26,
+    "PageDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\" AND caseTypeOfApplication=\"C100\""
+  },
+  {
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "doYouWantToServeOrder",
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 12,
     "DisplayContext": "MANDATORY",
     "PageID": 26,
     "PageDisplayOrder": 26,
@@ -122,12 +146,11 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "whatDoWithOrder",
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 13,
     "DisplayContext": "MANDATORY",
     "PageID": 26,
     "PageDisplayOrder": 26,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "doYouWantToServeOrder=\"No\""
-
   }
 ]
