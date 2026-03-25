@@ -681,7 +681,7 @@ fis-hmc-api:
   enabled: true
   java:
     imagePullPolicy: Always
-    image: hmctsprod.azurecr.io/fis/hmc-api:latest
+    image: hmctsprod.azurecr.io/fis/hmc-api:pr-609-48a75cd-20260318092734
     ingressHost: fis-hmc-api-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
     environment:
