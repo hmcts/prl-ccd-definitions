@@ -17,8 +17,9 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   // Navigate to case details page
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   await I.waitForElement('.govuk-summary-list, h1, body', PAGE_LOAD_WAIT);
-
+  const formattedCaseId = caseId.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1-$2-$3-$4');
+  console.log(`Formatted case id: ${formattedCaseId}`);
   // Verify case ID visible on page
   const pageCaseId = await I.grabTextFrom('.govuk-summary-list__value');
-  assert.ok(pageCaseId.includes(caseId), 'Case ID visible on case details page');
+  assert.ok(pageCaseId.includes(formattedCaseId), 'Case ID visible on case details page');
 }).retry(1);
