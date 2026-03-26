@@ -13,6 +13,8 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
 
   await I.wait(INITIAL_WAIT);
 
-  console.log(`${process.env.XUI_WEB_URL}/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
-  await I.amOnPage(`${process.env.XUI_WEB_URL}/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
+  const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+
+  console.log(`Page url is ${pageUrl}`);
+  await I.amOnPage(pageUrl);
 }).retry(1);
