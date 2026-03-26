@@ -13,8 +13,12 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
 
   await I.wait(INITIAL_WAIT);
 
-  const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/').concat(caseId);
+  const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/PRIVATELAW/PRLAPPS/').concat(caseId);
 
   console.log(`Page url is ${pageUrl}`);
   await I.amOnPage(pageUrl);
+  const formattedCaseId = caseId.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1-$2-$3-$4');
+  console.log(`Formatted case id: ${formattedCaseId}`);
+  // Verify case ID visible on page
+  await I.see(formattedCaseId);
 }).retry(1);
