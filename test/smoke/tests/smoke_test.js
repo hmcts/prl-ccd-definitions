@@ -2,6 +2,8 @@ const assert = require('assert');
 
 const HTTP_STATUS_OK = 200;
 
+const INITIAL_WAIT = 2;
+const PAGE_LOAD_WAIT = 15;
 
 Feature('Smoke tests @smoke-tests');
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
@@ -14,5 +16,12 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
 
+  await I.wait(INITIAL_WAIT);
+  await I.executeScript('return document.readyState === "complete"');
+
+  // Navigate + verify
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
+  await I.waitForElement('.govuk-summary-list, h1, body', PAGE_LOAD_WAIT);
+  const pageCaseId = await I.grabTextFrom('.govuk-summary-list__value');
+  assert.ok(pageCaseId.includes(caseId), 'Case ID visible on page');
 }).retry(1);
