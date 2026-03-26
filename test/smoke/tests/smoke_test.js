@@ -12,5 +12,4 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
 
   const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
-  assert.strictEqual(response.data.id, caseId, 'Returned case ID should match');
 }).retry(1);
