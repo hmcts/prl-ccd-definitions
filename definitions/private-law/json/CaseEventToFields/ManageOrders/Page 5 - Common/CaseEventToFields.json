@@ -90,7 +90,7 @@
     "LiveFrom": "01/01/2025",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "customOrderDateEnds",
+    "CaseFieldID": "customOrderDateEndsOptions",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
     "PageID": 5,
@@ -98,6 +98,19 @@
     "ShowSummaryChangeOption": "Y",
     "RetainHiddenValue": "No",
     "FieldShowCondition": "manageOrdersOptions=\"createCustomOrder\" AND (customOrderNameOption=\"nonMolestation\" OR customOrderNameOption=\"occupation\" OR customOrderNameOption=\"powerOfArrest\")"
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "customOrderDateEnds",
+    "PageFieldDisplayOrder": 6,
+    "DisplayContext": "MANDATORY",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "No",
+    "FieldShowCondition": "manageOrdersOptions=\"createCustomOrder\" AND (customOrderNameOption=\"nonMolestation\" OR customOrderNameOption=\"occupation\" OR customOrderNameOption=\"powerOfArrest\") AND customOrderDateEndsOptions=\"specifiedDateAndTime\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -117,7 +130,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "customOrderDoc",
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 7,
     "DisplayContext": "MANDATORY",
     "PageID": 5,
     "PageDisplayOrder": 5,
