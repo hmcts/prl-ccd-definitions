@@ -12,4 +12,7 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
 
   const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
+
+  const invalidResponse = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/1234`);
+  assert.strictEqual(invalidResponse.status, HTTP_STATUS_OK, 'Case should exist');
 }).retry(1);
