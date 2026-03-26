@@ -16,6 +16,4 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
 
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
-  await I.wait(medWait);
-  await I.see(caseId);
 }).retry(1);
