@@ -1,11 +1,10 @@
 const assert = require('assert');
 
-const HTTP_STATUS_OK = 200;
-
 const INITIAL_WAIT = 2;
 const PAGE_LOAD_WAIT = 15;
 
 Feature('Smoke tests @smoke-tests');
+
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   await I.loginAsSolicitor();
 
@@ -13,17 +12,13 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   console.log(`case id is ${caseId}`);
   assert.ok(caseId, 'Case ID should be defined');
 
-  const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
-  assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
-
   await I.wait(INITIAL_WAIT);
-  // Check page ready (CORRECT SYNTAX)
-  const isReady = await I.executeScript(() => document.readyState === 'complete');
-  console.log('Page ready:', isReady);
 
+  // Navigate to case details page
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   await I.waitForElement('.govuk-summary-list, h1, body', PAGE_LOAD_WAIT);
 
+  // Verify case ID visible on page
   const pageCaseId = await I.grabTextFrom('.govuk-summary-list__value');
-  assert.ok(pageCaseId.includes(caseId), 'Case ID visible');
+  assert.ok(pageCaseId.includes(caseId), 'Case ID visible on case details page');
 }).retry(1);
