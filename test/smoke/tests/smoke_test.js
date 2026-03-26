@@ -14,5 +14,6 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   await I.wait(INITIAL_WAIT);
 
   await I.restartBrowser();
+  console.log(`${process.env.XUI_WEB_URL}/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   await I.amOnPage(`/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
 }).retry(1);
