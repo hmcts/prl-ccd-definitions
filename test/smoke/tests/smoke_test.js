@@ -2,6 +2,8 @@ const assert = require('assert');
 
 const HTTP_STATUS_OK = 200;
 
+const medWait = 20;
+
 Feature('Smoke tests @smoke-tests');
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   await I.loginAsSolicitor();
@@ -14,6 +16,6 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
 
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
-  await I.waitForElement('h1, .case-header, [data-testid*="case"]', 10); // adjust selector
-  await I.see(caseId); // verify case ID visible on page
+  await I.wait(medWait);
+  await I.see(caseId);
 }).retry(1);

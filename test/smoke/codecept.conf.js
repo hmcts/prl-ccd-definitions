@@ -31,9 +31,7 @@ exports.config = {
     REST: {
       endpoint: process.env.XUI_WEB_URL || 'https://manage-case.aat.platform.hmcts.net/cases',
       prettyPrintJson: true,
-      defaultHeaders: {
-        'Content-Type': 'application/json'
-      }
+      defaultHeaders: { 'Content-Type': 'application/json' }
     },
 
     GeneralHelper: { require: './helpers/generalHelper.js' }
