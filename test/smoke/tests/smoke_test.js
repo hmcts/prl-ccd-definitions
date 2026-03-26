@@ -1,8 +1,6 @@
 const assert = require('assert');
 
 const INITIAL_WAIT = 15;
-const RETRIES = 3;
-const MIN_TIMEOUT = 1000;
 Feature('Smoke tests @smoke-tests');
 
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
