@@ -13,6 +13,7 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
 
-  const invalidResponse = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/1234`);
-  assert.strictEqual(invalidResponse.status, HTTP_STATUS_OK, 'Case should exist');
+  await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
+  await I.waitForElement('h1, .case-header, [data-testid*="case"]', 10); // adjust selector
+  await I.see(caseId); // verify case ID visible on page
 }).retry(1);
