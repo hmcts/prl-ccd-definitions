@@ -13,7 +13,6 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   assert.ok(caseId, 'Case ID should be defined');
 
 
-
   const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/PRIVATELAW/PRLAPPS/').concat(caseId);
 
   console.log(`Page url is ${pageUrl}`);
