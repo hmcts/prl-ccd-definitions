@@ -19,5 +19,5 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   const formattedCaseId = caseId.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1-$2-$3-$4');
   console.log(`Formatted case id: ${formattedCaseId}`);
   // Verify case ID visible on page
-  await I.see(formattedCaseId);
+  await I.retry({ retries: RETRIES, minTimeout: MIN_TIMEOUT }).see(formattedCaseId);
 }).retry(1);
