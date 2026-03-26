@@ -2,7 +2,6 @@ const assert = require('assert');
 
 const HTTP_STATUS_OK = 200;
 
-const medWait = 20;
 
 Feature('Smoke tests @smoke-tests');
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
