@@ -17,11 +17,13 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   assert.strictEqual(response.status, HTTP_STATUS_OK, 'Case should exist');
 
   await I.wait(INITIAL_WAIT);
-  await I.executeScript('return document.readyState === "complete"');
+  // Check page ready (CORRECT SYNTAX)
+  const isReady = await I.executeScript(() => document.readyState === 'complete');
+  console.log('Page ready:', isReady);
 
-  // Navigate + verify
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
   await I.waitForElement('.govuk-summary-list, h1, body', PAGE_LOAD_WAIT);
+
   const pageCaseId = await I.grabTextFrom('.govuk-summary-list__value');
-  assert.ok(pageCaseId.includes(caseId), 'Case ID visible on page');
+  assert.ok(pageCaseId.includes(caseId), 'Case ID visible');
 }).retry(1);
