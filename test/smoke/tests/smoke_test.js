@@ -1,7 +1,6 @@
 const assert = require('assert');
 
 const INITIAL_WAIT = 2;
-const PAGE_LOAD_WAIT = 15;
 
 Feature('Smoke tests @smoke-tests');
 
