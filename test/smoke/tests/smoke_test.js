@@ -13,6 +13,6 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
 
   await I.wait(INITIAL_WAIT);
 
-  // Navigate to case details page
+  await I.restartBrowser();
   await I.amOnPage(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
 }).retry(1);
