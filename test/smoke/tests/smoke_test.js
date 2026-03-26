@@ -1,9 +1,12 @@
 Feature('Smoke tests @smoke-tests');
 Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   await I.loginAsSolicitor();
+
   const caseId = await I.createCaseAndReturnID();
-  await I.navigateToCaseList();
-  console.log('case id is ${caseId}');
-  await I.searchForCasesWithId(caseId);
-  await I.seeCaseInSearchResult(caseId);
+  console.log(`case id is ${caseId}`);
+  assert.ok(caseId, 'Case ID should be defined');
+
+  const response = await I.sendGetRequest(`/cases/case-details/PRIVATELAW/PRLAPPS/${caseId}`);
+  assert.strictEqual(response.status, 200, 'Case should exist');
+  assert.strictEqual(response.data.id, caseId, 'Returned case ID should match');
 }).retry(1);
