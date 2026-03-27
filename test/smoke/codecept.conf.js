@@ -27,13 +27,6 @@ exports.config = {
       fullPageScreenshots: true,
       uniqueScreenshotNames: true
     },
-
-    REST: {
-      endpoint: process.env.XUI_WEB_URL || 'https://manage-case.aat.platform.hmcts.net/cases',
-      prettyPrintJson: true,
-      defaultHeaders: { 'Content-Type': 'application/json' }
-    },
-
     GeneralHelper: { require: './helpers/generalHelper.js' }
   },
   plugins: {
