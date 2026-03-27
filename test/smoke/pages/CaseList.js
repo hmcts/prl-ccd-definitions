@@ -57,5 +57,4 @@ module.exports = {
   seeCaseInSearchResult(caseId) {
     I.seeElement(this.locateCase(normalizeCaseId(caseId)));
   }
-
 };

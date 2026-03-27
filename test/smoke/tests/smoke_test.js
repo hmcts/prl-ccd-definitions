@@ -12,8 +12,7 @@ Scenario('Sign in as Solicitor and create a case', async({ I }) => {
   console.log(`case id is ${caseId}`);
   assert.ok(caseId, 'Case ID should be defined');
 
-  const pageUrl = `${process.env.XUI_WEB_URL}`.concat('/case-details/PRIVATELAW/PRLAPPS/').concat(caseId);
-  await I.amOnPage(pageUrl);
+  await I.loadCase(caseId);
 
   const formattedCaseId = caseId.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/, '$1-$2-$3-$4');
   console.log(`Formatted case id: ${formattedCaseId}`);
