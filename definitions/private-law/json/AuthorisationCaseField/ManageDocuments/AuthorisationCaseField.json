@@ -967,6 +967,35 @@
     ]
   },
   {
+    "LiveFrom": "25/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "manageDocUploadedCategory",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
     "LiveFrom": "01/05/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "isC8DocumentPresent",
