@@ -122,7 +122,32 @@
     "EventElementLabel": "*Does this person currently live in a refuge?",
     "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\""
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" OR otherPartyInTheCaseRevised.isCurrentAddressKnown=\"No\""
+  },
+  {
+    "LiveFrom": "01/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "refugeConfidentialC8Info",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isAddressConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "13",
+    "DisplayContext": "MANDATORY",
+    "RetainHiddenValue": "N",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" AND otherPartyInTheCaseRevised.liveInRefuge=\"No\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -134,7 +159,7 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "12",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" AND otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
+    "FieldShowCondition": "otherPartyInTheCaseRevised=\"DO NOT SHOW\""
   },
   {
     "LiveFrom": "20/08/2021",
