@@ -17,11 +17,12 @@ ROLE_ATTRIBUTES="${5:-'{"jurisdiction":"PRIVATELAW"}'}"
 ROLE_CATEGORY="${6:-"ADMIN"}"
 AUTHORISATIONS="${7:-null}"
 GRANT_TYPE="${8:-"STANDARD"}"
+USER_ID="${9:-null}"
 
 BASEDIR=$(dirname "$0")
 
-USER_TOKEN=$($BASEDIR/idam-lease-user-token.sh $USERNAME $PASSWORD)
-USER_ID=$($BASEDIR/idam-user-id.sh $USER_TOKEN)
+USER_TOKEN=$($BASEDIR/idam-access-token.sh $USERNAME $PASSWORD)
+#USER_ID=$($BASEDIR/idam-user-id.sh $USER_TOKEN)
 SERVICE_TOKEN=$($BASEDIR/idam-lease-service-token.sh prl_cos_api \
   $(docker run --rm hmctsprod.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
 
