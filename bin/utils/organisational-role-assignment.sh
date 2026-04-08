@@ -21,7 +21,7 @@ USER_ID="${9:-null}"
 
 BASEDIR=$(dirname "$0")
 
-USER_TOKEN=$($BASEDIR/idam-access-token $USERNAME $PASSWORD)
+USER_TOKEN=$($BASEDIR/idam-access-token.sh $USERNAME $PASSWORD)
 #USER_ID=$($BASEDIR/idam-user-id.sh $USER_TOKEN)
 SERVICE_TOKEN=$($BASEDIR/idam-lease-service-token.sh prl_cos_api \
   $(docker run --rm hmctsprod.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
