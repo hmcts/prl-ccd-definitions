@@ -20,7 +20,20 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 2,
-    "ShowSummaryChangeOption": "No"
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+  },
+  {
+    "LiveFrom": "04/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "serviceOfApplication",
+    "CaseFieldID": "soaServeToRespondentOptionsDA",
+    "DisplayContext": "MANDATORY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+    "ShowSummaryChangeOption": "No",
+    "FieldShowCondition": "caseTypeOfApplication=\"FL401\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -55,7 +68,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"Yes\"",
+    "FieldShowCondition": "(soaServeToRespondentOptions=\"Yes\" OR soaServeToRespondentOptionsDA=\"Yes\") AND displayLegalRepOption=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -67,7 +80,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"Yes\" AND displayLegalRepOption=\"No\"",
+    "FieldShowCondition": "(soaServeToRespondentOptions=\"Yes\" OR soaServeToRespondentOptionsDA=\"Yes\") AND displayLegalRepOption=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -79,7 +92,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 4,
     "PageDisplayOrder": 4,
-    "FieldShowCondition": "soaServeToRespondentOptions=\"No\"",
+    "FieldShowCondition": "soaServeToRespondentOptions=\"No\" OR soaServeToRespondentOptionsDA=\"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {

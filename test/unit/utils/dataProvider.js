@@ -72,7 +72,7 @@ processDir = (filePath, fileType) => {
 module.exports = {
   ccdData: {
     AuthorisationCaseState: loadFile('AuthorisationCaseState'),
-    AuthorisationCaseType: loadFile('AuthorisationCaseType'),
+    AuthorisationCaseType: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'AuthorisationCaseType.json', 'AuthorisationCaseType-nonprod.json'),
     CaseEvent: getFieldDataFromMultiFileType('../../../definitions/private-law/json', 'CaseEvent.json', 'CaseEvent-nonprod.json'),
     CaseRoles: loadFile('CaseRoles'),
     CaseType: loadFile('CaseType'),
