@@ -452,6 +452,27 @@
           "caseworker-privatelaw-judge"
         ],
         "CRUD": "R"
+      },
+      {
+        "LiveFrom": "08/04/2026",
+        "CaseTypeID": "PRLAPPS",
+        "CaseEventID": "removeCaseNote",
+        "AccessControl": [
+          {
+            "UserRoles": [
+              "caseworker-privatelaw-superuser"
+            ],
+            "CRUD": "CRU"
+          },
+          {
+            "UserRoles": [
+              "caseworker-privatelaw-courtadmin",
+              "caseworker-privatelaw-la",
+              "caseworker-privatelaw-judge"
+            ],
+            "CRUD": "R"
+          }
+        ]
       }
     ]
   }
