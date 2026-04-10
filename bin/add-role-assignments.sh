@@ -27,8 +27,7 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
     authorisations=$(jq -r '.authorisations | tostring' <<< $assignment)
 
     echo "Creating '${roleName}' assignment for user ${email}"
-    ##${dir}/utils/organisational-role-assignment.sh $email $password $classification $roleName $attributes $roleCategory $authorisations $grantType
-    ${dir}/utils/organisational-role-assignment.sh $email $password $classification $roleName $attributes $roleCategory $authorisations $grantType || echo "Warning: failed to create '${roleName}' assignment for ${email}, continuing..."
+    ${dir}/utils/organisational-role-assignment.sh $email $password $classification $roleName $attributes $roleCategory $authorisations $grantType $idamId
   done
   echo
 done
