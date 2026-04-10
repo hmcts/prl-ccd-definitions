@@ -437,7 +437,7 @@
   {
     "LiveFrom": "01/06/2025",
     "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "removeDocuments",
+    "CaseEventID": "removeCaseNotes",
     "AccessControl": [
       {
         "UserRoles": [
@@ -452,27 +452,6 @@
           "caseworker-privatelaw-judge"
         ],
         "CRUD": "R"
-      },
-      {
-        "LiveFrom": "08/04/2026",
-        "CaseTypeID": "PRLAPPS",
-        "CaseEventID": "removeCaseNote",
-        "AccessControl": [
-          {
-            "UserRoles": [
-              "caseworker-privatelaw-superuser"
-            ],
-            "CRUD": "CRU"
-          },
-          {
-            "UserRoles": [
-              "caseworker-privatelaw-courtadmin",
-              "caseworker-privatelaw-la",
-              "caseworker-privatelaw-judge"
-            ],
-            "CRUD": "R"
-          }
-        ]
       }
     ]
   }
