@@ -526,7 +526,7 @@ prl-cron:
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:pr-3281
-    schedule: "*/30 * * * *" # 22:17 UTC
+    schedule: "*/10 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
