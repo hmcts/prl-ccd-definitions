@@ -526,14 +526,15 @@ prl-cron:
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:pr-3281
-    schedule: "*/10 * * * *" # 22:17 UTC
+    schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
     devmemoryLimits: "2048Mi"
     devmemoryRequests: "1024Mi"
     environment:
-      TASK_NAME: BaisDocumentUploadTask
+      TASK_NAME: UpdateHearingActualTask
+      HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
