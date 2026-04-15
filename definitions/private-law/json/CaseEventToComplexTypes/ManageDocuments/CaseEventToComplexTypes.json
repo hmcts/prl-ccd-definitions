@@ -29,9 +29,32 @@
     "ID": "FurtherEvidence",
     "CaseEventID": "manageDocuments",
     "CaseFieldID": "mainApplicationDocument",
+    "ListElementCode": "renameDocument",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "4",
+    "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FurtherEvidence",
+    "CaseEventID": "manageDocuments",
+    "CaseFieldID": "mainApplicationDocument",
+    "ListElementCode": "documentName",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "renameDocument=\"Yes\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FurtherEvidence",
+    "CaseEventID": "manageDocuments",
+    "CaseFieldID": "mainApplicationDocument",
     "ListElementCode": "checkDocumentsConfidentialLabel",
     "EventElementLabel": "<br /><div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>Check if documents are confidential</strong></div><br>",
-    "FieldDisplayOrder": "4",
+    "FieldDisplayOrder": "6",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "READONLY"
   },
@@ -43,7 +66,7 @@
     "CaseFieldID": "mainApplicationDocument",
     "ListElementCode": "restrictCheckboxFurtherEvidence",
     "EventElementLabel": "Tick to restrict to Cafcass and HMCTS staff",
-    "FieldDisplayOrder": "5",
+    "FieldDisplayOrder": "7",
     "FieldShowCondition": "caseTypeOfApplication = \"DO_NOT_SHOW\"",
     "DisplayContext": "OPTIONAL"
   },

@@ -14,10 +14,27 @@
     "ID": "FurtherEvidence",
     "ListElementCode": "documentFurtherEvidence",
     "FieldType": "Document",
-    "ElementLabel": "Upload document",
+    "ElementLabel": "Upload document and rename",
     "SecurityClassification": "Public",
     "Searchable": "N",
     "CategoryID": "applicantApplication"
+  },
+  {
+    "LiveFrom": "17/1/2022",
+    "ID": "FurtherEvidence",
+    "ListElementCode": "renameDocument",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Do you want to rename is document?",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/1/2022",
+    "ID": "FurtherEvidence",
+    "ListElementCode": "documentName",
+    "FieldType": "Text",
+    "ElementLabel": "Enter the new name of the document (without the extension)",
+    "SecurityClassification": "Public",
+    "FieldShowCondition": "renameDocument=\"Yes\""
   },
   {
     "LiveFrom": "17/1/2022",
