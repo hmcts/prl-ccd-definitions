@@ -83,7 +83,7 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
-    "LiveFrom": "09/03/2026",
+    "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "localAuthorityNeedToProvideReport",
@@ -92,26 +92,39 @@
     "PageID": 21,
     "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "caseTypeOfApplication=\"C100\""
+    "Publish" : "True"
   },
   {
-    "LiveFrom": "09/03/2026",
+    "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
-    "CaseFieldID": "whenReportsMustBeFiledByLocalAuthority",
+    "CaseFieldID": "localAuthorityMultipleDocuments",
     "PageFieldDisplayOrder": 9,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\" AND caseTypeOfApplication=\"C100\""
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "whenReportsMustBeFiledByLocalAuthority",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "READONLY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\"",
+    "Publish" : "True"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "doYouWantToServeOrder",
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 11,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
@@ -123,7 +136,7 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "whatDoWithOrder",
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 12,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
