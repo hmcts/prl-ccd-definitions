@@ -116,6 +116,7 @@ ccd:
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   ccd-data-store-api:
+    image: hmctsprod.azurecr.io/ccd/data-store-api:PR-2846
     java:
       disableKeyVaults: true
       imagePullPolicy: Always
