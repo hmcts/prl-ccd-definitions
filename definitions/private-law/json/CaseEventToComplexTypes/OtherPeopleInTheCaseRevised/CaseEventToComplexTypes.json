@@ -107,22 +107,9 @@
     "ID": "PartyDetails",
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "isCurrentAddressKnown",
-    "EventElementLabel": "",
+    "ListElementCode": "liveInRefuge",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "20/08/2021",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "otherPeopleInTheCaseRevised",
-    "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "liveInRefuge",
-    "EventElementLabel": "*Does this person currently live in a refuge?",
-    "FieldDisplayOrder": "11",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" OR otherPartyInTheCaseRevised.isCurrentAddressKnown=\"No\""
   },
   {
     "LiveFrom": "01/04/2026",
@@ -132,22 +119,9 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "refugeConfidentialC8Info",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
-  },
-  {
-    "LiveFrom": "01/04/2026",
-    "CaseTypeID": "PRLAPPS",
-    "ID": "PartyDetails",
-    "CaseEventID": "otherPeopleInTheCaseRevised",
-    "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "isAddressConfidential",
-    "EventElementLabel": "",
-    "FieldDisplayOrder": "13",
-    "DisplayContext": "MANDATORY",
-    "RetainHiddenValue": "N",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" AND otherPartyInTheCaseRevised.liveInRefuge=\"No\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -157,9 +131,20 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "refugeConfidentialityC8Form",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "otherPartyInTheCaseRevised=\"DO NOT SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isCurrentAddressKnown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -251,6 +236,19 @@
     "DisplayContext": "OPTIONAL"
   },
   {
+    "LiveFrom": "01/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "otherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isAddressConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "21",
+    "DisplayContext": "MANDATORY",
+    "RetainHiddenValue": "N",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\""
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
@@ -281,7 +279,6 @@
     "CaseEventID": "otherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "canYouProvideEmailAddress",
-    "EventElementLabel": "*Can you provide an email address?",
     "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
   },
