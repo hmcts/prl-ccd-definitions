@@ -547,10 +547,10 @@ prl-cron:
       BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
-      HEARING_PREVIEW_BYPASS_ENABLED: "true"
       ACRO_SOURCE_DIRECTORY: /tmp/acro/source
       ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       ACRO_CRONJOB_ENABLED: true
+      HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
     keyVaults:
       prl:
         secrets:
