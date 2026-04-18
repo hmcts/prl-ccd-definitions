@@ -602,7 +602,7 @@ prl-cron:
 em-ccdorc:
   enabled: true
   java:
-    image: hmctsprod.azurecr.io/em/ccdorc:latest
+    image: hmctsprod.azurecr.io/em/ccdorc:pr-2241
     releaseNameOverride: ${SERVICE_NAME}-em-ccdorc
     ingressHost: em-ccdorc-${SERVICE_FQDN}
     environment:
@@ -660,7 +660,7 @@ em-stitching:
             alias: S2S_KEY
 
 prl-citizen-frontend:
-  enabled: false
+  enabled: true
   nodejs:
     releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
     ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
