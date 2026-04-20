@@ -527,7 +527,7 @@ prl-cron:
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # FPVTL-2408: TEMP - every 10 mins for testing, revert before merge
+    schedule: "*/10 * * * *" # revert before merge
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
@@ -535,8 +535,8 @@ prl-cron:
     devmemoryRequests: "1024Mi"
     environment:
       TASK_NAME: UpdateHearingActualTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0" # FPVTL-2408/2409 preview: fire on hearing day + every cron run until order, revert before merge
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0" # FPVTL-2408/2409 preview: fire on hearing day + every cron run until order, revert before merge
+      REQUEST_ORDER_TASK_C100_CADENCE: "0" # FPVTL-2408/2409 revert before merge
+      REQUEST_ORDER_TASK_FL401_CADENCE: "0" # FPVTL-2408/2409  revert before merge
       VAR: trigger1
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
