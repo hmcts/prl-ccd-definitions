@@ -1,5 +1,17 @@
 [
   {
+    "LiveFrom": "09/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "taskAssociatedWithMessage",
+    "DisplayContext": "READONLY",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "FieldShowCondition": "chooseSendOrReply = \"DO_NOT_SHOW\"",
+    "ShowSummaryChangeOption": "No"
+  },
+  {
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "sendOrReplyToMessages",
@@ -7,10 +19,14 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "ShowSummaryChangeOption": "Yes",
+    "RetainHiddenValue": "Y",
+    "PageShowCondition" : "taskAssociatedWithMessage=\"No\"",
+    "FieldShowCondition": "taskAssociatedWithMessage=\"No\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
+
   {
     "LiveFrom": "31/03/2023",
     "CaseTypeID": "PRLAPPS",
@@ -19,8 +35,9 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "Yes",
+    "RetainHiddenValue": "Y",
     "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
   },
   {
@@ -31,7 +48,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
     "RetainHiddenValue": "Y",
     "ShowSummaryChangeOption": "No",
     "FieldShowCondition": "chooseSendOrReply=\"DO_NOT_SHOW\"",
@@ -120,7 +137,8 @@
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\""
+    "PageShowCondition": "chooseSendOrReply=\"REPLY\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/mid-event"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -144,8 +162,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 3,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+    "ShowSummaryChangeOption": "No"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -156,8 +173,33 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 4,
-    "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\""
+    "ShowSummaryChangeOption": "No"
+  },
+  {
+    "LiveFrom": "11/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "optionSendOrReply",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 5,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "respondToMessage = \"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "11/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "sendOrReplyToMessages",
+    "CaseFieldID": "messageIdentifier",
+    "DisplayContext": "READONLY",
+    "PageID": 4,
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
+    "RetainHiddenValue": "Y",
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "respondToMessage = \"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "31/03/2023",
@@ -169,7 +211,7 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
     "ShowSummaryChangeOption": "Yes",
-    "PageShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\"",
+    "PageShowCondition": "respondToMessage=\"Yes\"",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/send-and-reply-to-messages/send-or-reply-to-messages/clear-dynamic-lists"
   },
   {
@@ -182,6 +224,6 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 3,
     "ShowSummaryChangeOption": "No",
-    "FieldShowCondition": "chooseSendOrReply=\"REPLY\" AND respondToMessage=\"Yes\""
+    "FieldShowCondition": "respondToMessage=\"Yes\""
   }
 ]

@@ -5,6 +5,7 @@ set -eu
 dir=$(dirname ${0})
 
 ${dir}/utils/add-system-user-case-allocator-role.sh
+${dir}/utils/add-hearing-system-user.sh
 
 jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   email=$(jq -r '.email' <<< $user)
@@ -26,7 +27,7 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
     authorisations=$(jq -r '.authorisations | tostring' <<< $assignment)
 
     echo "Creating '${roleName}' assignment for user ${email}"
-    ${dir}/utils/organisational-role-assignment.sh $email $password $classification $roleName $attributes $roleCategory $authorisations $grantType
+    ${dir}/utils/organisational-role-assignment.sh $email $password $classification $roleName $attributes $roleCategory $authorisations $grantType $idamId
   done
   echo
 done

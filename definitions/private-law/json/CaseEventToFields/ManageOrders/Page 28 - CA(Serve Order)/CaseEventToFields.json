@@ -22,9 +22,8 @@
     "PageID": 28,
     "PageDisplayOrder": 28,
     "ShowSummaryChangeOption": "Y",
-    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/recipients-validations",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
-    "PageShowCondition": "doYouWantToServeOrder=\"Yes\" OR manageOrdersOptions=\"servedSavedOrders\""
+    "PageShowCondition": "(doYouWantToServeOrder=\"Yes\" OR manageOrdersOptions=\"servedSavedOrders\") AND loggedInUserType!=\"JUDGE\""
   },
   {
     "LiveFrom": "01/12/2022",
@@ -203,6 +202,7 @@
     "PageID": 28,
     "PageDisplayOrder": 28,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "serveOtherPartiesDA=\"other\" OR serveOtherPartiesCA=\"anotherOrganisation\""
+    "FieldShowCondition": "serveOtherPartiesDA=\"other\" OR serveOtherPartiesCA=\"anotherOrganisation\"",
+    "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/validate-additional-parties"
   }
 ]
