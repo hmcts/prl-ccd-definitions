@@ -94,18 +94,18 @@ yarn generate-excel-(local/demo/aat/ithc/perftest/prod)
     kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
     ```
 
-## Testing with prl-citizen
+## Testing with prl-citizen-frontend
 
-### If your ticket doesn’t require changes in the prl-cos API
+### If your ticket doesn’t require changes in the prl-citizen-frontend
 
 1. No changes are needed in this repository, and everything will be set automatically.
 
-### If your ticket includes changes in the prl-cos API
+### If your ticket includes changes in the prl-citizen-frontend
 
-1. Create a new label in lines of `pr-cos:pr-3309` # Replace `3309` with the PR number of the prl-cos update you want to test against this repo
-2. If you make additional changes to the cos pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
+1. Create a new label in lines of `pr-citizen:pr-2108` # Replace `2108` with the PR number of the prl-citizen-frontend update you want to test against this repo
+2. If you make additional changes to the prl-citizen-frontend pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
     ```bash
-    kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
+    kubectl delete pod -n private-law prl-ccd-definitions-pr-2108-prl-citizen-frontend-b4cffdb9-tcw99
 ### Functional End-to-End (E2E) Tests
 
 Functional end-to-end (E2E) tests are hosted in the [prl-e2e-tests](https://github.com/hmcts/prl-e2e-tests) repository.
