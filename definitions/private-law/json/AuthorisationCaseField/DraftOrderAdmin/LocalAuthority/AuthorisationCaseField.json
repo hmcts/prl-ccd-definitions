@@ -26,6 +26,30 @@
   {
     "LiveFrom": "15/02/2021",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "createCirUpdateTask",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "courtnav",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "localAuthorityMultipleDocuments",
     "AccessControl": [
       {
