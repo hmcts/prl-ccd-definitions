@@ -96,6 +96,16 @@ def setPreviewEnvVars() {
     env.COS_IMAGE = label - cosPrefix
   }
   echo "COS_IMAGE derived is ${env.COS_IMAGE}"
+
+  env.CITIZEN_IMAGE = "latest"
+  def citizenPrefix = "pr-citizen:"
+  label = githubApi
+          .getLabelsbyPattern(env.BRANCH_NAME, citizenPrefix)
+          .find { it.startsWith(citizenPrefix) }
+  if (label) {
+    env.CITIZEN_IMAGE = label - citizenPrefix
+  }
+  echo "CITIZEN_IMAGE derived is ${env.CITIZEN_IMAGE}"
 }
 
 def deployWADmns() {
