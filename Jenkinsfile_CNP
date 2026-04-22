@@ -97,15 +97,17 @@ def setPreviewEnvVars() {
   }
   echo "COS_IMAGE derived is ${env.COS_IMAGE}"
 
-  env.CITIZEN_IMAGE = "latest"
+  env.CITIZEN_FE_IMAGE = "latest"
+  env.ENABLE_CITIZEN_FE = false
   def citizenPrefix = "pr-citizen:"
   label = githubApi
           .getLabelsbyPattern(env.BRANCH_NAME, citizenPrefix)
           .find { it.startsWith(citizenPrefix) }
   if (label) {
-    env.CITIZEN_IMAGE = label - citizenPrefix
+    env.CITIZEN_FE_IMAGE = label - citizenPrefix
+    env.ENABLE_CITIZEN_FE = true
   }
-  echo "CITIZEN_IMAGE derived is ${env.CITIZEN_IMAGE}"
+  echo "CITIZEN_FE_IMAGE derived is ${env.CITIZEN_FE_IMAGE}"
 }
 
 def deployWADmns() {

@@ -661,11 +661,11 @@ em-stitching:
             alias: S2S_KEY
 
 prl-citizen-frontend:
-  enabled: false
+  enabled: ${ENABLE_CITIZEN_FE}
   nodejs:
     releaseNameOverride: ${SERVICE_NAME}-prl-citizen-frontend
     ingressHost: prl-citizen-frontend-${SERVICE_FQDN}
-    image: hmctsprod.azurecr.io/prl/citizen-frontend:${CITIZEN_IMAGE}
+    image: hmctsprod.azurecr.io/prl/citizen-frontend:${CITIZEN_FE_IMAGE}
     environment:
       CCD_URL: http://${SERVICE_NAME}-ccd-data-store-api
       COS_URL: http://${SERVICE_NAME}-java
