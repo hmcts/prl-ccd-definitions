@@ -964,7 +964,7 @@
     "Label": "*Applicant",
     "Min": "1",
     "FieldType": "Collection",
-    "FieldTypeParameter": "PartyDetails",
+    "FieldTypeParameter": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -980,7 +980,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "applicantsFL401",
     "Label": "Applicant",
-    "FieldType": "PartyDetails",
+    "FieldType": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -2698,6 +2698,16 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "respondentConfidentialDetails",
     "Label": "Respondent",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ApplicantConfidentialityDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "09/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeopleConfidentialDetails",
+    "Label": "Other people",
     "FieldType": "Collection",
     "FieldTypeParameter": "ApplicantConfidentialityDetails",
     "SecurityClassification": "Public",
