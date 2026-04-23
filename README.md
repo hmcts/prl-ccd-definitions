@@ -110,6 +110,7 @@ While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-
 The password is present in aat key value under the secret `preview-db-password`   
 
 ### WA preview set up
+
 On the pull request set label `pr-values:wa`
 
 To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP) file (`def dmnBranch = "<branch_name>"`). 
