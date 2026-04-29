@@ -107,22 +107,22 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendOtherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "isCurrentAddressKnown",
-    "EventElementLabel": "",
+    "ListElementCode": "liveInRefuge",
+    "EventElementLabel": "*Does this person currently live in a refuge?",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "20/08/2021",
+    "LiveFrom": "01/04/2026",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendOtherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
-    "ListElementCode": "liveInRefuge",
-    "EventElementLabel": "*Does this person currently live in a refuge?",
+    "ListElementCode": "refugeConfidentialC8Info",
+    "EventElementLabel": "",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\""
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
   },
   {
     "LiveFrom": "20/08/2021",
@@ -132,9 +132,20 @@
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "refugeConfidentialityC8Form",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
+    "FieldDisplayOrder": "11",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\" AND otherPartyInTheCaseRevised.liveInRefuge=\"Yes\""
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"DO NOT SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isCurrentAddressKnown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "20/08/2021",
@@ -226,6 +237,19 @@
     "DisplayContext": "OPTIONAL"
   },
   {
+    "LiveFrom": "01/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isAddressConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "21",
+    "DisplayContext": "MANDATORY",
+    "RetainHiddenValue": "N",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.isCurrentAddressKnown=\"Yes\""
+  },
+  {
     "LiveFrom": "20/08/2021",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
@@ -255,7 +279,7 @@
     "CaseEventID": "amendOtherPeopleInTheCaseRevised",
     "CaseFieldID": "otherPartyInTheCaseRevised",
     "ListElementCode": "canYouProvideEmailAddress",
-    "EventElementLabel": "",
+    "EventElementLabel": "*Can you provide their email address?",
     "FieldDisplayOrder": "24",
     "DisplayContext": "OPTIONAL"
   },
@@ -269,6 +293,18 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "25",
     "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvideEmailAddress=\"Yes\""
+  },
+  {
+    "LiveFrom": "09/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isEmailAddressConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "26",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvideEmailAddress=\"Yes\""
   },
   {
@@ -292,6 +328,18 @@
     "EventElementLabel": "",
     "FieldDisplayOrder": "28",
     "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvidePhoneNumber=\"Yes\""
+  },
+  {
+    "LiveFrom": "09/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendOtherPeopleInTheCaseRevised",
+    "CaseFieldID": "otherPartyInTheCaseRevised",
+    "ListElementCode": "isPhoneNumberConfidential",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "29",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "otherPartyInTheCaseRevised.canYouProvidePhoneNumber=\"Yes\""
   },
   {
