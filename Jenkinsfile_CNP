@@ -103,7 +103,7 @@ def deployWADmns() {
 
   def waStandaloneBranch = "master"
   // For testing DMNs, change this to the branch on the DMN repo, but ensure it is changed back to master before merging
-  def dmnBranch = "master"
+  def dmnBranch = "FPVTL-2085_SA"
 
   echo "Checking if we should use WA"
   if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
@@ -210,5 +210,5 @@ withPipeline("nodejs", product, component) {
 
   // 'demo' currently removed, to avoid overriding CCD definitions when testing
   def branchesToSync = ['perftest', 'ithc']
-  syncBranchesWithMaster(branchesToSync);
+  syncBranchesWithMaster(branchesToSync)
 }
