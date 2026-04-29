@@ -117,6 +117,7 @@
     "ListElementCode": "isAddressConfidential",
     "FieldType": "YesOrNo",
     "ElementLabel": "*Do you need to keep the address confidential?",
+    "HintText": "If details need to be kept confidential, a C8 will be generated automatically.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -143,7 +144,7 @@
     "ID": "PartyDetails",
     "ListElementCode": "canYouProvideEmailAddress",
     "FieldType": "YesOrNo",
-    "ElementLabel": "*Can you provide email address?",
+    "ElementLabel": "*Can you provide their email address?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -161,7 +162,8 @@
     "ID": "PartyDetails",
     "ListElementCode": "isEmailAddressConfidential",
     "FieldType": "YesOrNo",
-    "ElementLabel": "*Do you need to keep the email address confidential?",
+    "ElementLabel": "*Do you need to keep their email address confidential?",
+    "HintText": "If there is confidential information, a C8 will be generated automatically.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -190,7 +192,8 @@
     "ID": "PartyDetails",
     "ListElementCode": "isPhoneNumberConfidential",
     "FieldType": "YesOrNo",
-    "ElementLabel": "*Do you need to keep the contact number confidential?",
+    "ElementLabel": "*Do you need to keep their contact number confidential?",
+    "HintText": "If details need to be kept confidential, a C8 will be generated automatically.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -235,7 +238,7 @@
     "ID": "PartyDetails",
     "ListElementCode": "isCurrentAddressKnown",
     "FieldType": "YesOrNo",
-    "ElementLabel": "*Is current address known?",
+    "ElementLabel": "*Do you know their current address?",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
@@ -509,7 +512,8 @@
     "ListElementCode": "contactPreferences",
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "ContactPreferences",
-    "ElementLabel": "Contact Preferences",
+    "ElementLabel": "Contact preference",
+    "HintText": "If you do not select an option, they will be served by post if unrepresented.",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
