@@ -91,7 +91,8 @@
     "PageID": 26,
     "PageDisplayOrder": 26,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\" AND caseTypeOfApplication=\"C100\""
+    "FieldShowCondition": "cafcassOrCymruNeedToProvideReport=\"Yes\" AND caseTypeOfApplication=\"C100\"",
+    "Publish" : "True"
   },
   {
     "LiveFrom": "01/02/2023",
@@ -109,8 +110,45 @@
     "LiveFrom": "01/02/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
-    "CaseFieldID": "doYouWantToServeOrder",
+    "CaseFieldID": "localAuthorityNeedToProvideReport",
     "PageFieldDisplayOrder": 10,
+    "DisplayContext": "MANDATORY",
+    "PageID": 26,
+    "PageDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Y",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "localAuthorityMultipleDocuments",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "MANDATORY",
+    "PageID": 26,
+    "PageDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "whenReportsMustBeFiledByLocalAuthority",
+    "PageFieldDisplayOrder": 12,
+    "DisplayContext": "MANDATORY",
+    "PageID": 26,
+    "PageDisplayOrder": 26,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\"",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "doYouWantToServeOrder",
+    "PageFieldDisplayOrder": 13,
     "DisplayContext": "MANDATORY",
     "PageID": 26,
     "PageDisplayOrder": 26,
@@ -122,12 +160,25 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "whatDoWithOrder",
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 14,
     "DisplayContext": "MANDATORY",
     "PageID": 26,
     "PageDisplayOrder": 26,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "doYouWantToServeOrder=\"No\""
 
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "cirDocumentsRequested",
+    "PageFieldDisplayOrder": 15,
+    "DisplayContext": "READONLY",
+    "PageID": 27,
+    "PageDisplayOrder": 27,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doYouWantToServeOrder = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
   }
 ]

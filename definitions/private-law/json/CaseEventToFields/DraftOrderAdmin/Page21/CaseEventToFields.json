@@ -83,11 +83,48 @@
     "FieldShowCondition": "caseTypeOfApplication=\"C100\""
   },
   {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "localAuthorityNeedToProvideReport",
+    "PageFieldDisplayOrder": 8,
+    "DisplayContext": "MANDATORY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Y",
+    "Publish" : "True"
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "localAuthorityMultipleDocuments",
+    "PageFieldDisplayOrder": 9,
+    "DisplayContext": "MANDATORY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "whenReportsMustBeFiledByLocalAuthority",
+    "PageFieldDisplayOrder": 10,
+    "DisplayContext": "MANDATORY",
+    "PageID": 21,
+    "PageDisplayOrder": 21,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "localAuthorityNeedToProvideReport=\"Yes\"",
+    "Publish" : "True"
+  },
+  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "doYouWantToServeOrder",
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 11,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
@@ -99,11 +136,24 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "adminEditAndApproveAnOrder",
     "CaseFieldID": "whatDoWithOrder",
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 12,
     "DisplayContext": "MANDATORY",
     "PageID": 21,
     "PageDisplayOrder": 21,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "doYouWantToServeOrder=\"No\""
+  },
+  {
+    "LiveFrom": "01/02/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "adminEditAndApproveAnOrder",
+    "CaseFieldID": "cirDocumentsRequested",
+    "PageFieldDisplayOrder": 13,
+    "DisplayContext": "READONLY",
+    "PageID": 22,
+    "PageDisplayOrder": 22,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "doYouWantToServeOrder = \"DO_NOT_SHOW\"",
+    "Publish" : "True"
   }
 ]
