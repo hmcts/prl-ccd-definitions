@@ -23,6 +23,10 @@ tasks.register('highLevelDataSetup', JavaExec) {
     jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
 }
 
+dependencyLocking {
+    lockAllConfigurations()
+}
+
 dependencies {
     implementation ("com.github.hmcts:befta-fw:8.10.1")
     implementation ("org.slf4j:slf4j-api:2.0.17")
