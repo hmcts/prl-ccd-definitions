@@ -7,25 +7,12 @@ plugins {
 'group = com.github.hmcts'
 'version = DEV-SNAPSHOT'
 
-def mirrorHost = System.env.NONPROD_SUBSCRIPTION_NAME == "sandbox" ? "artifactory.sandbox" : "artifactory"
-def mirrorUrl = "https://${mirrorHost}.platform.hmcts.net/artifactory/maven-remotes"
-
-repositories {
-    mavenLocal()
-    maven {
-        url = mirrorUrl
-    }
-}
-
 tasks.register('highLevelDataSetup', JavaExec) {
     mainClass = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
     classpath += sourceSets.main.runtimeClasspath
     jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
 }
 
-dependencyLocking {
-    lockAllConfigurations()
-}
 
 dependencies {
     implementation ("com.github.hmcts:befta-fw:8.10.1")
