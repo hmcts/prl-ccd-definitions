@@ -7,12 +7,19 @@ plugins {
 'group = com.github.hmcts'
 'version = DEV-SNAPSHOT'
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = uri('https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1')
+    }
+}
+
 tasks.register('highLevelDataSetup', JavaExec) {
     mainClass = "uk.gov.hmcts.reform.prl.HighLevelDataSetupApp"
     classpath += sourceSets.main.runtimeClasspath
     jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
 }
-
 
 dependencies {
     implementation ("com.github.hmcts:befta-fw:8.10.1")
