@@ -239,11 +239,11 @@ ccd:
     esConfig:
       elasticsearch.yml: |
         discovery.type: single-node
-  extraEnvs:
-    - name: cluster.initial_master_nodes
-      value: ""
-    - name: discovery.seed_hosts
-      value: ""
+    extraEnvs:
+      - name: cluster.initial_master_nodes
+        value: ""
+      - name: discovery.seed_hosts
+        value: ""
 
   logstash:
     image: hmctsprod.azurecr.io/imported/elastic/logstash
