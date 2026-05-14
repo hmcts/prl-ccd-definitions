@@ -234,10 +234,16 @@ ccd:
     nameOverride: ${SERVICE_NAME}-es
     clusterName: "es"
     replicas: 1
+    masterService: ""
     clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
     esConfig:
       elasticsearch.yml: |
         discovery.type: single-node
+    extraEnvs:
+    - name: discovery.type
+      value: single-node
+    - name: cluster.initial_master_nodes
+      value: ""
 
   logstash:
     image: hmctsprod.azurecr.io/imported/elastic/logstash
