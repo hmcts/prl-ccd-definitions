@@ -234,6 +234,7 @@ ccd:
     nameOverride: ${SERVICE_NAME}-es
     clusterName: "es"
     replicas: 1
+    clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
 
   logstash:
     image: hmctsprod.azurecr.io/imported/elastic/logstash
@@ -535,7 +536,7 @@ prl-cron:
     devmemoryLimits: "2048Mi"
     devmemoryRequests: "1024Mi"
     environment:
-      TASK_NAME: BaisDocumentUploadTask
+      TASK_NAME: UpdateHearingActualTask
       VAR: trigger1
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
@@ -545,6 +546,7 @@ prl-cron:
       ACA_SERVICE_API_BASEURL: http://${SERVICE_NAME}-aac-manage-case-assignment
       AM_ROLE_ASSIGNMENT_API_URL: ${ROLE_ASSIGNMENT_URL}
       BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
+      REFDATA_API_URL: http://rd-commondata-api-aat.service.core-compute-aat.internal
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
       HEARING_PREVIEW_BYPASS_ENABLED: "true"
