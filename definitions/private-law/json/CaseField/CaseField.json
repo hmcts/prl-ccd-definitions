@@ -2618,7 +2618,7 @@
     "LiveFrom": "19/01/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "localCourtHint",
-    "Label": "Let the local court admin know there’s a new case",
+    "Label": "Let the local court admin know there’s a new case \n\n## ${courtName} is currently chosen",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -3335,6 +3335,15 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "caseNoteId",
     "Label": "Case note collection id",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "02/06/2025",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameHmctsInternalBackup",
+    "Label": "Pre-migration case name backup",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
