@@ -2,6 +2,17 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "viewFilteredDraftOrders",
+    "Label": "Draft Order",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "DraftOrder",
+    "DisplayContext": "READONLY",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "viewFilteredDraftOrdersLabel",
     "Label": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>This is a read-only page; editing and submission are disabled.</strong></div>",
     "FieldType": "Label",
@@ -11,11 +22,9 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "viewFilteredDraftOrders",
-    "Label": "Draft Order",
-    "FieldType": "Collection",
-    "FieldTypeParameter": "DraftOrder",
-    "DisplayContext": "READONLY",
+    "ID": "viewFilteredDraftOrdersLinkBackToCaseLabel",
+    "Label": "[Click here to go back to case summary page](/cases/case-details/${[JURISDICTION]}/${[CASE_TYPE]}/${[CASE_REFERENCE]}#My%20Draft%20orders)",
+    "FieldType": "Label",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
