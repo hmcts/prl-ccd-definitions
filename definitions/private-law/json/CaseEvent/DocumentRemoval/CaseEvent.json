@@ -1,0 +1,18 @@
+[
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "documentRemoval",
+    "Name": "Remove document",
+    "Description": "Remove a document from the case",
+    "DisplayOrder": 39,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/document-removal/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/document-removal/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/document-removal/submitted"
+  }
+]
