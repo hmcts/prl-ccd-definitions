@@ -9,7 +9,8 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\"",
+    "PageShowCondition": "(createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\") AND manageOrdersOptions!=\"createCustomOrder\""
   },
   {
     "LiveFrom": "01/07/2025",
@@ -21,8 +22,7 @@
     "PageID": 4,
     "PageDisplayOrder": 4,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\"",
-    "PageShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\""
+    "FieldShowCondition": "createSelectOrderOptions=\"blankOrderOrDirections\" OR childArrangementOrders=\"blankOrderOrDirections\""
   },
   {
     "LiveFrom": "01/07/2025",

@@ -23,6 +23,20 @@
   {
     "LiveFrom": "03/11/2022",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseLinks",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[LASOLICITOR]",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "caseLinksTabTitle",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRUD"
@@ -40,6 +54,20 @@
     "CaseFieldID": "caseLinksTabTitle",
     "UserRole": "caseworker-privatelaw-la",
     "CRUD": "CRUD"
+  },
+  {
+    "LiveFrom": "03/11/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "caseLinksTabTitle",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "[LASOLICITOR]",
+          "[LASOCIALWORKER]"
+        ],
+        "CRUD": "R"
+      }
+    ]
   },
   {
     "LiveFrom": "03/11/2022",
@@ -99,7 +127,9 @@
       {
         "UserRoles": [
           "caseworker-caa",
-          "caseworker-approver"
+          "caseworker-approver",
+          "[LASOCIALWORKER]",
+          "[LASOLICITOR]"
         ],
         "CRUD": "R"
       }
