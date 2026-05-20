@@ -206,4 +206,9 @@ withPipeline("nodejs", product, component) {
   afterAlways('functionalTest:preview') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**'
   }
+
+
+  // 'demo' currently removed, to avoid overriding CCD definitions when testing
+  def branchesToSync = ['perftest', 'ithc']
+  syncBranchesWithMaster(branchesToSync);
 }

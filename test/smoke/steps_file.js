@@ -1,6 +1,7 @@
 const CreateCasePage = require('./pages/CreateCase');
 const LoginPage = require('./pages/Login');
 const caseList = require('./pages/CaseList');
+const casePage = require('./pages/CasePage');
 
 module.exports = () => {
   return actor({
@@ -24,6 +25,12 @@ module.exports = () => {
     },
     seeCaseInSearchResult(caseID) {
       return caseList.seeCaseInSearchResult(caseID);
+    },
+    loadCase(caseId) {
+      return casePage.loadCase(caseId);
+    },
+    searchForCaseId(caseId) {
+      return casePage.searchForCaseId(caseId);
     }
   });
 };

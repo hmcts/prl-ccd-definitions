@@ -5608,59 +5608,85 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "requestSafeGuardingLetterUpdate",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-judge"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-solicitor",
-          "caseworker-privatelaw-superuser",
-          "courtnav",
-          "citizen"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "safeGuardingLetterUploadDueDate",
-    "AccessControl": [
-      {
-        "UserRoles": [
-          "caseworker-privatelaw-courtadmin",
-          "caseworker-privatelaw-systemupdate",
-          "caseworker-privatelaw-la",
-          "caseworker-privatelaw-judge"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
-          "caseworker-wa-task-configuration",
-          "caseworker-privatelaw-solicitor",
-          "caseworker-privatelaw-superuser",
-          "courtnav",
-          "citizen"
-        ],
-        "CRUD": "R"
-      }
-    ]
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "checkForAutomatedHearing",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "customOrderSelectedHearingLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "customOrderWasApprovedAtHearing",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-solicitor",
+          "citizen",
+          "courtnav"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/01/2025",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "customOrderHearingsType",
     "AccessControl": [
       {
         "UserRoles": [
