@@ -234,10 +234,11 @@ ccd:
     nameOverride: ${SERVICE_NAME}-es
     clusterName: "es"
     replicas: 1
+    clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
 
   logstash:
-    image: hmctsprod.azurecr.io/imported/logstash/logstash
-    imageTag: "7.16.1"
+    image: hmctsprod.azurecr.io/imported/elastic/logstash
+    imageTag: "9.2.4"
     imagePullPolicy: "IfNotPresent"
     logstashJavaOpts: -Xmx1g -Xms512M
     persistence:
@@ -248,7 +249,7 @@ ccd:
     extraInitContainers: |
       - name: download-postgres-jdbc
         image: hmctsprod.azurecr.io/curl:7.70.0
-        command: ['curl', '-L', 'https://jdbc.postgresql.org/download/postgresql-42.3.3.jar', '-o', '/logstash-lib/postgresql.jar']
+        command: ['curl', '-L', 'https://jdbc.postgresql.org/download/postgresql-42.7.9.jar', '-o', '/logstash-lib/postgresql.jar']
         volumeMounts:
         - name: logstash-lib
           mountPath: /logstash-lib
@@ -266,10 +267,11 @@ ccd:
         readOnly: true
     logstashConfig:
       logstash.yml: |
-        http.host: 0.0.0.0
+        api.http.host: 0.0.0.0
         xpack.monitoring.enabled: false
         queue.type: persisted
         dead_letter_queue.enable: true
+        pipeline.ecs_compatibility: disabled
       pipelines.yml: |
         - pipeline.id: main
           path.config: "/usr/share/logstash/pipeline/{01_input,02_filter,03_output}.conf"
@@ -521,6 +523,7 @@ prl-cos:
       CAFCASS_DATE_TIME_FEATURE_ENABLED: "true"
       OS_COURT_LOOKUP_ENABLED: "true"
       HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
 
 prl-cron:
   enabled: true
