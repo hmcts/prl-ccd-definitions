@@ -2,18 +2,37 @@
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "viewFilteredDraftOrders",
+    "ID": "filteredDraftOrders",
     "Label": "Draft Order",
     "FieldType": "Collection",
     "FieldTypeParameter": "DraftOrder",
     "DisplayContext": "READONLY",
+    "SecurityClassification": "Public",
+    "Searchable": "N",
+    "FieldShowCondition": "filteredDraftOrdersLabel!=\"\""
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "noFilteredDraftOrdersLabelText",
+    "FieldType": "Text",
+    "Label": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "11/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "filteredDraftOrdersLabel",
+    "FieldType": "Label",
+    "Label": "${noFilteredDraftOrdersLabelText}",
     "SecurityClassification": "Public",
     "Searchable": "N"
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "viewFilteredDraftOrdersLabel",
+    "ID": "viewFilteredDraftOrdersSubmitWarningLabel",
     "Label": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>This is a read-only page; editing and submission are disabled.</strong></div>",
     "FieldType": "Label",
     "SecurityClassification": "Public",

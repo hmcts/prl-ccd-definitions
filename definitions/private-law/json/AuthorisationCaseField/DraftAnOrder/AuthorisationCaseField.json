@@ -313,7 +313,7 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "viewFilteredDraftOrders",
+    "CaseFieldID": "filteredDraftOrders",
     "AccessControl": [
       {
         "UserRoles": [
@@ -338,7 +338,57 @@
   {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
-    "CaseFieldID": "viewFilteredDraftOrdersLabel",
+    "CaseFieldID": "viewFilteredDraftOrdersSubmitWarningLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "filteredDraftOrdersLabel",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-systemupdate",
+          "courtnav"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-superuser",
+          "caseworker-privatelaw-solicitor",
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "10/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "noFilteredDraftOrdersLabelText",
     "AccessControl": [
       {
         "UserRoles": [
