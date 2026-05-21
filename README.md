@@ -104,6 +104,29 @@ Smoke tests from this repository are executed by triggering a build job in Jenki
 
 The smoke test is run against **AAT** in the master build.
 
+### Credential environment variables
+
+Credentials must be provided through environment variables sourced from Azure Key Vault references in pipeline/deployment config.
+
+Required variables:
+
+- `LEGALPROFESSIONAL_TESTUSER_ONE`
+- `LEGALPROFESSIONAL_TESTPASSWORD_ONE`
+- `CITIZEN_TEST_EMAIL` (temporary fallback to `LEGALPROFESSIONAL_TESTUSER_ONE` in E2E config)
+- `CITIZEN_TEST_PASSWORD` (temporary fallback to `LEGALPROFESSIONAL_TESTPASSWORD_ONE` in E2E config)
+- `CCD_API_GATEWAY_IDAM_CLIENT_SECRET`
+- `PRL_S2S_SECRET`
+
+Existing secret mapping used by pipelines:
+
+- `CITIZEN_TEST_EMAIL` <- Azure Key Vault secret `citizen-user`
+- `CITIZEN_TEST_PASSWORD` <- Azure Key Vault secret `citizen-password`
+
+Compatibility note:
+
+- Existing Azure Key Vault secret keys are preserved; only application/script consumers are moved to env-only reads.
+- Test payment form values in `test/end-to-end/citizenFrontendSupport/caseCreate.js` remain fixed non-sensitive data.
+
 ### Preview Database changes
 Preview is now set up with a PostgreSQL flexible server. The database host is `private-law-preview.postgres.database.azure.com`. 
 While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) under `postgresql` section. 

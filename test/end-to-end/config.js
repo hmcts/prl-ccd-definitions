@@ -36,6 +36,11 @@ module.exports = {
     email: process.env.CAFCASS_USER_EMAIL,
     password: process.env.CAFCASS_USER_PASSWORD
   },
+  citizenUser: {
+    // Keep a compatibility fallback so CI can migrate to dedicated vars safely.
+    email: process.env.CITIZEN_TEST_EMAIL || process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
+    password: process.env.CITIZEN_TEST_PASSWORD || process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',

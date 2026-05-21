@@ -1,4 +1,5 @@
 const { chromium } = require('playwright');
+const testConfig = require('../config');
 
 
 class CitizenCaseSetup {
@@ -109,7 +110,7 @@ class CitizenCaseSetup {
     caseDetails.child1_firstName = caseDetails.child1_firstName ? caseDetails.child1_firstName : 'childfn';
     caseDetails.child1_lastName = caseDetails.child1_lastName ? caseDetails.child1_lastName : 'childln';
 
-    await this.login('familyprivatelaw@gmail.com', 'Password12');
+    await this.login(testConfig.citizenUser.email, testConfig.citizenUser.password);
     const caseId = await this.createC100Case(caseDetails);
     return caseId;
   }
