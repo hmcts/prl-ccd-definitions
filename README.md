@@ -119,8 +119,8 @@ Required variables:
 
 Existing secret mapping used by pipelines:
 
-- `CITIZEN_TEST_EMAIL` <- Azure Key Vault secret `citizen-user`
-- `CITIZEN_TEST_PASSWORD` <- Azure Key Vault secret `citizen-password`
+- `CITIZEN_TEST_EMAIL` <- Azure Key Vault secret `citizen-user` from `prl-${env}` (for example `prl-aat`)
+- `CITIZEN_TEST_PASSWORD` <- Azure Key Vault secret `citizen-password` from `prl-${env}` (for example `prl-aat`)
 
 Compatibility note:
 
