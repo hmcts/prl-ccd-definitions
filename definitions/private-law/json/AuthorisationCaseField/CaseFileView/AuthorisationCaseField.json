@@ -2032,6 +2032,54 @@
   {
     "LiveFrom": "25/03/2026",
     "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "enforcementOrderSuitabilityReport",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-cafcass",
+          "ctsc-team-leader"
+
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "25/03/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "parentalOrderReporterReport",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-cafcass",
+          "ctsc-team-leader"
+
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "25/03/2026",
+    "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "cirTransferRequest",
     "UserRole": "caseworker-privatelaw-courtadmin",
     "CRUD": "CRU"
