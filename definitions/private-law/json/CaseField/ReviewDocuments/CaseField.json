@@ -76,6 +76,24 @@
   {
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
+    "ID": "quarantineInformation",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "quarantineInformationLabel",
+    "Label": "${quarantineInformation}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/05/2023",
+    "CaseTypeID": "PRLAPPS",
     "ID": "docLabel",
     "Label": " ",
     "FieldType": "Text",
@@ -104,7 +122,7 @@
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "documentCategories",
-    "Label": "Document Categories",
+    "Label": "Document Category",
     "FieldType": "DynamicList",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -243,8 +261,8 @@
     "LiveFrom": "10/05/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "documentNewName",
-    "Label": "Rename document",
-    "HintText": "Rename this document",
+    "Label": "Change document name (Optional)",
+    "HintText": "You should make sure not to use the same name as existing documents. Do not include the file type such as '.pdf' in the name.",
     "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
