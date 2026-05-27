@@ -3,14 +3,14 @@ set -eu
 ## Usage: ./organisational-role-assignment.sh [username] [password] [role_classification] [role_name] [role_attributes] [microservice_name]
 ##
 ## Options:
-##    - username: Email for user. Default to `test@fake.hmcts.net`.
-##    - password: Password for user. Default to `Test`.
+##    - username: Email for user. Required.
+##    - password: Password for user. Required.
 ##    - role_classification: Role assignment classification. Default to `PUBLIC`.
 ##    - role_name: Name of the role for role-assignment. Default to `ctsc`.
 ##
 
-USERNAME=${1:-test@fake.hmcts.net}
-PASSWORD=${2:-Test}
+USERNAME=${1:?username argument is required}
+PASSWORD=${2:?password argument is required}
 ROLE_CLASSIFICATION="${3:-PUBLIC}"
 ROLE_NAME="${4:-"ctsc"}"
 ROLE_ATTRIBUTES="${5:-'{"jurisdiction":"PRIVATELAW"}'}"
@@ -24,7 +24,7 @@ BASEDIR=$(dirname "$0")
 USER_TOKEN=$($BASEDIR/idam-access-token.sh $USERNAME $PASSWORD)
 #USER_ID=$($BASEDIR/idam-user-id.sh $USER_TOKEN)
 SERVICE_TOKEN=$($BASEDIR/idam-lease-service-token.sh prl_cos_api \
-  $(docker run --rm hmctsprod.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
+  $(docker run --rm hmctsprod.azurecr.io/imported/toolbelt/oathtool --totp -b ${PRL_S2S_SECRET:?PRL_S2S_SECRET must be set}))
 
 echo -e "\nCreating role assignment: \n User: ${USER_ID}\n Role name: ${ROLE_NAME}\n ROLE_CLASSIFICATION: ${ROLE_CLASSIFICATION}\n"
 
