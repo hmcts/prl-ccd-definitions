@@ -16,6 +16,26 @@
     "Publish": "True"
   },
   {
+    "LiveFrom": "19/04/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "viewDraftOrders",
+    "Name": "View Draft Orders",
+    "Description": "Displays a filtered view of the case draft orders for the user.",
+    "DisplayOrder": 29,
+    "SecurityClassification": "Public",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/draft-orders-list/populate-draft-orders-list",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/draft-orders-list/populate-draft-orders-list/about-to-submit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/draft-orders-list/populate-draft-orders-list/submitted",
+    "EndButtonLabel": "Save and continue",
+    "Publish": "False",
+    "EventEnablingCondition": "caseTypeOfApplication=\"NEVER_SHOW\""
+
+  },
+  {
     "LiveFrom": "26/07/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "editAndApproveAnOrder",
