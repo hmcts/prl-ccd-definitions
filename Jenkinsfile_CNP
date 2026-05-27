@@ -212,5 +212,5 @@ withPipeline("nodejs", product, component) {
 
   // 'demo' currently removed, to avoid overriding CCD definitions when testing
   def branchesToSync = ['perftest', 'ithc']
-  syncBranchesWithMaster(branchesToSync)
+  syncBranchesWithMaster(branchesToSync);
 }
