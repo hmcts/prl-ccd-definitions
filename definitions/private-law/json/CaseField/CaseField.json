@@ -964,7 +964,7 @@
     "Label": "*Applicant",
     "Min": "1",
     "FieldType": "Collection",
-    "FieldTypeParameter": "PartyDetails",
+    "FieldTypeParameter": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -980,7 +980,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "applicantsFL401",
     "Label": "Applicant",
-    "FieldType": "PartyDetails",
+    "FieldType": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -2618,7 +2618,7 @@
     "LiveFrom": "19/01/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "localCourtHint",
-    "Label": "Let the local court admin know there’s a new case",
+    "Label": "Let the local court admin know there’s a new case \n\n## ${courtName} is currently chosen",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -2698,6 +2698,16 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "respondentConfidentialDetails",
     "Label": "Respondent",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ApplicantConfidentialityDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "09/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeopleConfidentialDetails",
+    "Label": "Other people",
     "FieldType": "Collection",
     "FieldTypeParameter": "ApplicantConfidentialityDetails",
     "SecurityClassification": "Public",
@@ -3342,9 +3352,28 @@
   {
     "LiveFrom": "02/06/2025",
     "CaseTypeID": "PRLAPPS",
+    "ID": "caseNameHmctsInternalBackup",
+    "Label": "Pre-migration case name backup",
+    "FieldType": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "02/06/2025",
+    "CaseTypeID": "PRLAPPS",
     "ID": "TTL",
     "Label": "Setup TTL",
     "FieldType": "TTL",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cirDocumentsRequested",
+    "Label": "test",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }

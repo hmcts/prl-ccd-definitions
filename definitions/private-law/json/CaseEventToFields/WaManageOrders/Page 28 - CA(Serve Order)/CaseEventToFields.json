@@ -24,7 +24,7 @@
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/manage-orders/recipients-validations",
     "FieldShowCondition": "caseTypeOfApplication=\"C100\"",
-    "PageShowCondition": "doYouWantToServeOrder=\"Yes\" OR manageOrdersOptions=\"servedSavedOrders\""
+    "PageShowCondition": "(doYouWantToServeOrder=\"Yes\" OR manageOrdersOptions=\"servedSavedOrders\") AND loggedInUserType!=\"JUDGE\""
   },
   {
     "LiveFrom": "01/07/2025",
