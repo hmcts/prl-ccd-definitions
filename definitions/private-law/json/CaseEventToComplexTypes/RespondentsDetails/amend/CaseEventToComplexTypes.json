@@ -107,22 +107,22 @@
     "ID": "PartyDetails",
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondents",
-    "ListElementCode": "isCurrentAddressKnown",
-    "EventElementLabel": "",
+    "ListElementCode": "liveInRefuge",
+    "EventElementLabel": "*Does the respondent currently live in a refuge?",
     "FieldDisplayOrder": "10",
     "DisplayContext": "OPTIONAL"
   },
   {
-    "LiveFrom": "16/11/2021",
+    "LiveFrom": "01/04/2026",
     "CaseTypeID": "PRLAPPS",
     "ID": "PartyDetails",
     "CaseEventID": "amendRespondentsDetails",
     "CaseFieldID": "respondents",
-    "ListElementCode": "liveInRefuge",
-    "EventElementLabel": "*Does the respondent currently live in a refuge?",
+    "ListElementCode": "refugeConfidentialC8Info",
+    "EventElementLabel": "",
     "FieldDisplayOrder": "11",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "respondents.isCurrentAddressKnown=\"Yes\""
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "respondents.liveInRefuge=\"Yes\""
   },
   {
     "LiveFrom": "05/10/2021",
@@ -132,9 +132,20 @@
     "CaseFieldID": "respondents",
     "ListElementCode": "refugeConfidentialityC8Form",
     "EventElementLabel": "",
-    "FieldDisplayOrder": "12",
-    "FieldShowCondition": "respondents.isCurrentAddressKnown=\"Yes\" AND respondents.liveInRefuge=\"Yes\"",
+    "FieldDisplayOrder": "11",
+    "FieldShowCondition": "respondents.isCurrentAddressKnown=\"DO_NOT_SHOW\"",
     "DisplayContext": "MANDATORY"
+  },
+  {
+    "LiveFrom": "16/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "PartyDetails",
+    "CaseEventID": "amendRespondentsDetails",
+    "CaseFieldID": "respondents",
+    "ListElementCode": "isCurrentAddressKnown",
+    "EventElementLabel": "",
+    "FieldDisplayOrder": "12",
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "16/11/2021",
