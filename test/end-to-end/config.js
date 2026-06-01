@@ -36,6 +36,10 @@ module.exports = {
     email: process.env.CAFCASS_USER_EMAIL,
     password: process.env.CAFCASS_USER_PASSWORD
   },
+  citizenUser: {
+    email: process.env.CITIZEN_TEST_EMAIL,
+    password: process.env.CITIZEN_TEST_PASSWORD
+  },
   definition: {
     jurisdiction: 'PRIVATELAW',
     jurisdictionFullDesc: 'Family Private Law',

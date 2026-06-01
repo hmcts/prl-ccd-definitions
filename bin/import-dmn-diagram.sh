@@ -6,7 +6,7 @@ workspace=${1}
 tenant_id=${2}
 product=${3}
 
-s2sSecret=${PRL_S2S_SECRET:-AABBCCDDEEFFGGHH}
+s2sSecret=${PRL_S2S_SECRET:?PRL_S2S_SECRET must be set}
 
 serviceToken=$($(realpath $workspace)/bin/utils/idam-lease-service-token.sh prl_cos_api \
   $(docker run --rm hmctsprod.azurecr.io/imported/toolbelt/oathtool --totp -b ${s2sSecret}))
