@@ -526,6 +526,7 @@ prl-cos:
       AWAITING_INFORMATION_ENABLED: "true"
       EXIT_AWAITING_INFORMATION_ENABLED: "true"
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
+      REFDATA_API_URL: http://rd-commondata-api-aat.service.core-compute-aat.internal
 
 prl-cron:
   enabled: true
@@ -557,6 +558,7 @@ prl-cron:
       ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       ACRO_CRONJOB_ENABLED: true
       HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      REFDATA_API_URL: http://rd-commondata-api-aat.service.core-compute-aat.internal
     keyVaults:
       prl:
         secrets:
