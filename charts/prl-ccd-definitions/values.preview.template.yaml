@@ -527,20 +527,22 @@ prl-cos:
       AWAITING_INFORMATION_ENABLED: "true"
       EXIT_AWAITING_INFORMATION_ENABLED: "true"
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
+      REFDATA_API_URL: http://rd-commondata-api-aat.service.core-compute-aat.internal
 
 prl-cron:
   enabled: true
   job:
     kind: CronJob
-    image: hmctsprod.azurecr.io/prl/cos:pr-3281
-    schedule: "*/30 * * * *" # 22:17 UTC
+    image: hmctsprod.azurecr.io/prl/cos:pr-3727
+    schedule: "*/10 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
     devmemoryLimits: "2048Mi"
     devmemoryRequests: "1024Mi"
     environment:
-      TASK_NAME: BaisDocumentUploadTask
+      TASK_NAME: UpdateHearingActualTask
+      HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
@@ -556,6 +558,8 @@ prl-cron:
       ACRO_SOURCE_DIRECTORY: /tmp/acro/source
       ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       ACRO_CRONJOB_ENABLED: true
+      HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      REFDATA_API_URL: http://rd-commondata-api-aat.service.core-compute-aat.internal
     keyVaults:
       prl:
         secrets:
