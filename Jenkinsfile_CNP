@@ -107,7 +107,6 @@ def deployWADmns() {
   // For testing DMNs, change this to the branch on the DMN repo, but ensure it is changed back to master before merging
   def dmnBranch = "FPVTL-2408-2409"
 
-
   echo "Checking if we should use WA"
   if (githubApi.checkForLabel(env.BRANCH_NAME, 'pr-values:wa')) {
     sh """
