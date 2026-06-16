@@ -232,6 +232,11 @@ ccd:
     clusterName: "es"
     replicas: 1
     clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+    minimumMasterNodes: 1
+    persistence:
+      enabled: false
+    tests:
+      enabled: false
 
   logstash:
     image: hmctsprod.azurecr.io/imported/elastic/logstash
