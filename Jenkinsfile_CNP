@@ -20,6 +20,8 @@ def secrets = [
                 secret('legalprofessional-testuser-one', 'LEGALPROFESSIONAL_TESTUSER_ONE'),
                 secret('legalprofessional-respondent-testuser', 'LEGALPROFESSIONAL_RESPONDENT_TESTUSER'),
                 secret('legalprofessional-testpassword-one', 'LEGALPROFESSIONAL_TESTPASSWORD_ONE'),
+                secret('citizen-user', 'CITIZEN_TEST_EMAIL'),
+                secret('citizen-password', 'CITIZEN_TEST_PASSWORD'),
                 secret('courtadmin-testuser-one', 'COURTADMIN_TESTUSER_ONE'),
                 secret('courtadmin-swansea-testuser', 'COURTADMIN_SWANSEA_TESTUSER'),
                 secret('judge-testuser-one', 'JUDGE_TESTUSER_ONE'),
@@ -211,5 +213,5 @@ withPipeline("nodejs", product, component) {
 
   // 'demo' currently removed, to avoid overriding CCD definitions when testing
   def branchesToSync = ['perftest', 'ithc']
-  syncBranchesWithMaster(branchesToSync);
+  syncBranchesWithMaster(branchesToSync)
 }
