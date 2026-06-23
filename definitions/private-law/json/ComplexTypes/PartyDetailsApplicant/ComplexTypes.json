@@ -1,0 +1,604 @@
+[
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "firstName",
+    "FieldType": "Text",
+    "ElementLabel": "*First name(s)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "lastName",
+    "FieldType": "Text",
+    "ElementLabel": "*Last name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "previousName",
+    "FieldType": "Text",
+    "ElementLabel": "Previous name (if any)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "dateOfBirth",
+    "FieldType": "Date",
+    "ElementLabel": "*Date of birth",
+    "HintText": "For example, 12 11 2007",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isDateOfBirthUnknown",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DontKnow",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "gender",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "Gender",
+    "ElementLabel": "*Gender",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "otherGender",
+    "FieldType": "Text",
+    "ElementLabel": "*Applicant gender",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "placeOfBirth",
+    "FieldType": "Text",
+    "ElementLabel": "*Place of birth (town)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "address",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isAddressUnknown",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "DontKnow",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "hintTextForC8Form",
+    "FieldType": "Label",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you need to keep their address confidential?",
+    "HintText": "If details need to be kept confidential, a C8 will be generated automatically.",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isAtAddressLessThan5Years",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Has applicant lived at this address for less than 5 years?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "addressLivedLessThan5YearsDetails",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Provide details of all previous addresses for the last 5 years below(if known, including the dates and starting with most recent)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "canYouProvideEmailAddress",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Can you provide their email address?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "email",
+    "FieldType": "Email",
+    "ElementLabel": "*Email address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isEmailAddressConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you need to keep their email address confidential?",
+    "HintText": "If there is confidential information, a C8 will be generated automatically.",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "landline",
+    "FieldType": "Text",
+    "RegularExpression": "^[0-9 +().-]{9,}$",
+    "ElementLabel": "*Home telephone number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "phoneNumber",
+    "FieldType": "Text",
+    "RegularExpression": "^[0-9 +().-]{9,}$",
+    "ElementLabel": "*Contact Number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isPhoneNumberConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you need to keep their contact number confidential?",
+    "HintText": "If details need to be kept confidential, a C8 will be generated automatically.",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isPartyIdentityConfidential",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "addNewApplicantLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Add new applicant",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "relationshipToChildren",
+    "FieldType": "TextArea",
+    "ElementLabel": "*Please state their relationship to the child(ren) listed",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isDateOfBirthKnown",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Is date of birth known?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isCurrentAddressKnown",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do you know their current address?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "canYouProvidePhoneNumber",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Can you provide a contact number?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isPlaceOfBirthKnown",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Is place of birth known?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorOrg",
+    "FieldType": "Organisation",
+    "ElementLabel": "*Organisation Search",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorAddress",
+    "FieldType": "AddressUK",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "dxNumber",
+    "FieldType": "Text",
+    "ElementLabel": "DX Number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorReference",
+    "FieldType": "Text",
+    "ElementLabel": "Solicitor reference",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorDetails",
+    "FieldType": "Label",
+    "ElementLabel": "**Solicitor's Details**",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "representativeFirstName",
+    "FieldType": "Text",
+    "ElementLabel": "*Representative's first name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "10/1/2021",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "representativeLastName",
+    "FieldType": "Text",
+    "ElementLabel": "*Representative's last name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isAtAddressLessThan5YearsWithDontKnow",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoDontKnow",
+    "ElementLabel": "*Has applicant lived at this address for less than 5 years?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "doTheyHaveLegalRepresentation",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "YesNoDontKnow",
+    "ElementLabel": "*Do they have legal representation?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "orgUnregisteredLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Organisation (unregistered) (Optional)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "askOrgToRegisterLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Ask an organisation to register",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "sendSignUpLink",
+    "FieldType": "Text",
+    "ElementLabel": "If the organisation you need isn\u2019t listed, enter their details to send them a sign-up request\nOrganisation name",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorEmail",
+    "FieldType": "Email",
+    "ElementLabel": "*Email address",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorTelephone",
+    "FieldType": "Text",
+    "RegularExpression": "^[0-9 +().-]{9,}$",
+    "ElementLabel": "*Telephone number",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "addNewRespondentLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Add new respondent",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "addressOptionalLabel",
+    "FieldType": "Label",
+    "ElementLabel": "## Address (Optional)",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "otherPersonRelationshipToChildren",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "OtherPersonRelationshipToChild",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "respondentLivedWithApplicant",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Does the respondent live with the applicant? ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "applicantContactInstructions",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "applicantPreferredContact",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "PreferredContactEnum",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "user",
+    "FieldType": "User",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "response",
+    "FieldType": "Response",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "currentRespondent",
+    "FieldType": "YesOrNo",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "partyLevelFlag",
+    "FieldType": "Flags",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "partyId",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorPartyId",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "solicitorOrgUuid",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "contactPreferences",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ContactPreferences",
+    "ElementLabel": "Contact preference",
+    "HintText": "If you do not select an option, they will be served by post if unrepresented.",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "isRemoveLegalRepresentativeRequested",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "Remove Legal Representative Requested by Citizen",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "liveInRefuge",
+    "FieldType": "YesOrNo",
+    "ElementLabel": "*Do they live in a refuge?",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "refugeConfidentialC8Info",
+    "ElementLabel": "<div class='govuk-warning-text'><span class='govuk-warning-text__icon' aria-hidden='true'>!</span><strong class='govuk-warning-text__text'>All their details will be kept confidential and you do not have to complete a C8.</strong></div>",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "refugeConfidentialityC8Form",
+    "ElementLabel": "*Upload a C8 form with the refuge address",
+    "FieldType": "Document",
+    "HintText": "You can download the form from www.gov.uk. The address, email address and contact number entered for this party will be kept confidential.",
+    "RegularExpression": ".pdf,.docx",
+    "Searchable": "N",
+    "SecurityClassification": "Public",
+    "CategoryID": "confidential"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerFirstName",
+    "ElementLabel": "Barrister first name",
+    "FieldType": "Text",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerLastName",
+    "ElementLabel": "Barrister last name",
+    "FieldType": "Text",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerEmail",
+    "ElementLabel": "Barrister email",
+    "FieldType": "Text",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerId",
+    "ElementLabel": "Barrister Id",
+    "FieldType": "Text",
+    "Searchable": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerOrg",
+    "FieldType": "Organisation",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "21/04/2026",
+    "ID": "PartyDetailsApplicant",
+    "ListElementCode": "barristerRole",
+    "FieldType": "Text",
+    "ElementLabel": " ",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  }
+]
