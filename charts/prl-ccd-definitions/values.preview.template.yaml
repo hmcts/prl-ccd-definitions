@@ -534,7 +534,7 @@ prl-cos:
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
 
 prl-cron:
-  enabled: true
+  enabled: false
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
@@ -546,8 +546,8 @@ prl-cron:
     devmemoryRequests: "1024Mi"
     environment:
       TASK_NAME: UpdateHearingActualTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0" # FPVTL-2408/2409 revert before merge
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0" # FPVTL-2408/2409  revert before merge
+      REQUEST_ORDER_TASK_C100_CADENCE: "0"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
       HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
