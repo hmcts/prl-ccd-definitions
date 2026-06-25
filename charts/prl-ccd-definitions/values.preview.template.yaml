@@ -534,7 +534,7 @@ prl-cos:
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
 
 prl-cron:
-  enabled: true
+  enabled: false
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
@@ -546,8 +546,8 @@ prl-cron:
     devmemoryRequests: "1024Mi"
     environment:
       TASK_NAME: UpdateHearingActualTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0" # FPVTL-2408/2409 revert before merge
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0" # FPVTL-2408/2409  revert before merge
+      REQUEST_ORDER_TASK_C100_CADENCE: "0"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
       HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
@@ -564,6 +564,7 @@ prl-cron:
       ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       ACRO_CRONJOB_ENABLED: true
       HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      REFDATA_API_URL: http://rd-commondata-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     keyVaults:
       prl:
         secrets:
