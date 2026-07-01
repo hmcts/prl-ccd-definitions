@@ -57,13 +57,15 @@ dependencies:
     version: 1.1.6
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: em-stitching.enabled
-  - name: prl-cron-updateHearingActuals
+  - name: prl-cron
     version: 0.0.18
     repository: 'oci://hmctsprod.azurecr.io/helm'
+    alias: prl-cron-updateHearingActuals
     condition: prl-cron-updateHearingActuals.enabled
-  - name: prl-cron-requestOrder
+  - name: prl-cron
     version: 0.0.18
     repository: 'oci://hmctsprod.azurecr.io/helm'
+    alias: prl-cron-requestOrder
     condition: prl-cron-requestOrder.enabled
   - name: prl-citizen-frontend
     version: 0.0.29
