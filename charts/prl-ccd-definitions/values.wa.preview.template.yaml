@@ -99,8 +99,8 @@ wa:
   wa-task-management-api:
     java:
       ingressHost: wa-task-management-api-${SERVICE_FQDN}
-      devcpuRequests: 50m
-      devcpuLimits: 200m
+      devcpuRequests: 200m
+      devcpuLimits: 500m
       devmemoryRequests: 1Gi
       devmemoryLimits: 2Gi
       environment:
