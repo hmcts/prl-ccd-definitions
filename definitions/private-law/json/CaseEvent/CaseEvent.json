@@ -898,7 +898,7 @@
     "Description": "CTSC staff add family man number for the case.",
     "DisplayOrder": 3,
     "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_INFORMATION",
-    "PostConditionState": "CASE_ISSUED(caseStatus.state=\"Submitted\" AND isAddCaseNumberAdded=\"Yes\"):1;*",
+    "PostConditionState": "CASE_ISSUED([STATE]=\"AWAITING_INFORMATION\" OR [STATE]=\"SUBMITTED_PAID\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-add-case-number",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -2198,6 +2198,21 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/review-additional-application/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/review-additional-application/submitted",
     "Publish": "True"
+  },
+  {
+    "LiveFrom": "01/09/2024",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "renameDocuments",
+    "Name": "Rename documents",
+    "Description": "Event to rename the documents in the case",
+    "DisplayOrder": 67,
+    "PreConditionState(s)": "AWAITING_RESUBMISSION_TO_HMCTS;SUBMITTED_PAID;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_COS_URL}/rename-documents/about-to-start",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/rename-documents/about-to-submit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "28/04/2026",
