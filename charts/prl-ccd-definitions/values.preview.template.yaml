@@ -572,8 +572,8 @@ prl-cron-requestOrder:
     imagePullPolicy: Always
     environment:
       TASK_NAME: RequestOrderTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0"
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
+      REQUEST_ORDER_TASK_C100_CADENCE: "3"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "1"
       HEARING_AWAY_DAYS: 18
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
