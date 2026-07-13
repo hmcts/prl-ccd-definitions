@@ -417,8 +417,8 @@ ccd:
 
   am-role-assignment-service:
     java:
-      devcpuRequests: 200m
-      devcpuLimits: 500m
+      devcpuRequests: 500m
+      devcpuLimits: 1000m
       devmemoryRequests: 1024Mi
       devmemoryLimits: 2048Mi
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
