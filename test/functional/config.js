@@ -1,8 +1,8 @@
-const defaultPassword = 'Password12';
+const defaultPassword = process.env.LEGALPROFESSIONAL_TESTPASSWORD_ONE;
 
 module.exports = {
   legalProfessionalUserOne: {
-    email: 'prl-aat-ccddefimporter@hmcts.net',
+    email: process.env.LEGALPROFESSIONAL_TESTUSER_ONE,
     password: defaultPassword
   }
 };
