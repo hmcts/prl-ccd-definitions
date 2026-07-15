@@ -3,7 +3,7 @@
 username=$1
 password=$2
 clientId=ccd_gateway
-clientSecret=${CCD_API_GATEWAY_IDAM_CLIENT_SECRET:-ccd_gateway_secret}
+clientSecret=${CCD_API_GATEWAY_IDAM_CLIENT_SECRET:?CCD_API_GATEWAY_IDAM_CLIENT_SECRET must be set}
 redirectUri=http://localhost:3451/oauth2redirect
 
 curl --silent --location "${IDAM_API_BASE_URL}/o/token" \

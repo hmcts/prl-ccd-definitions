@@ -964,7 +964,7 @@
     "Label": "*Applicant",
     "Min": "1",
     "FieldType": "Collection",
-    "FieldTypeParameter": "PartyDetails",
+    "FieldTypeParameter": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -980,7 +980,7 @@
     "CaseTypeID": "PRLAPPS",
     "ID": "applicantsFL401",
     "Label": "Applicant",
-    "FieldType": "PartyDetails",
+    "FieldType": "PartyDetailsApplicant",
     "SecurityClassification": "Public"
   },
   {
@@ -2704,6 +2704,16 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "09/04/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "otherPeopleConfidentialDetails",
+    "Label": "Other people",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "ApplicantConfidentialityDetails",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "08/02/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "fl401ChildrenConfidentialDetails",
@@ -3354,6 +3364,25 @@
     "ID": "TTL",
     "Label": "Setup TTL",
     "FieldType": "TTL",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "03/02/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "cirDocumentsRequested",
+    "Label": "test",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "Text",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/06/2026",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "taskAssigneeIdamId",
+    "Label": "Task Assignee Idam id",
+    "FieldType": "Text",
     "SecurityClassification": "Public",
     "Searchable": "N"
   }
