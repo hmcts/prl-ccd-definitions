@@ -21,10 +21,10 @@ xui-webapp:
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctsprod.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
-    devmemoryRequests: 512Mi
-    devcpuRequests: 50m
-    devmemoryLimits: 1024Mi
-    devcpuLimits: 200m
+    devmemoryRequests: 1024mi
+    devcpuRequests: 200m
+    devmemoryLimits: 1536Mi
+    devcpuLimits: 500m
     environment:
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
