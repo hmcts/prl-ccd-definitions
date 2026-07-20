@@ -103,6 +103,7 @@ wa:
       devmemoryRequests: 1Gi
       devcpuLimits: 2
       devmemoryLimits: 4Gi
+      image: hmctsprod.azurecr.io/wa/task-management-api:pr-1666
       environment:
         CAMUNDA_URL: "http://{{ .Release.Name }}-camunda/engine-rest"
         IDAM_URL: "https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net"
