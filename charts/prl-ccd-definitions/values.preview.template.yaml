@@ -235,6 +235,11 @@ ccd:
     clusterName: "es"
     replicas: 1
     clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+    minimumMasterNodes: 1
+    persistence:
+      enabled: false
+    tests:
+      enabled: false
 
   logstash:
     image: hmctsprod.azurecr.io/imported/elastic/logstash
@@ -523,20 +528,27 @@ prl-cos:
       CAFCASS_DATE_TIME_FEATURE_ENABLED: "true"
       OS_COURT_LOOKUP_ENABLED: "true"
       HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      BUNDLE_BY_CATEGORY_ENABLED: "true"
+      AWAITING_INFORMATION_ENABLED: "true"
+      EXIT_AWAITING_INFORMATION_ENABLED: "true"
+      CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
 
 prl-cron:
-  enabled: true
+  enabled: false
   job:
     kind: CronJob
-    image: hmctsprod.azurecr.io/prl/cos:pr-3281
-    schedule: "*/30 * * * *" # 22:17 UTC
+    image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
+    schedule: "*/10 * * * *" # revert before merge
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
     devmemoryLimits: "2048Mi"
     devmemoryRequests: "1024Mi"
     environment:
-      TASK_NAME: BaisDocumentUploadTask
+      TASK_NAME: UpdateHearingActualTask
+      REQUEST_ORDER_TASK_C100_CADENCE: "0"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
+      HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
@@ -548,10 +560,11 @@ prl-cron:
       BUNDLE_URL: https://em-ccdorc-${SERVICE_FQDN}
       PRL_S2S_AUTHORISED_SERVICES: api_gw,prl_citizen_frontend,fis_hmc_api,ccd_data,prl_cos_api,payment_app
       APP_ENV: "preview"
-      HEARING_PREVIEW_BYPASS_ENABLED: "true"
       ACRO_SOURCE_DIRECTORY: /tmp/acro/source
       ACRO_OUTPUT_DIRECTORY: /tmp/acro/export
       ACRO_CRONJOB_ENABLED: true
+      HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
+      REFDATA_API_URL: http://rd-commondata-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     keyVaults:
       prl:
         secrets:
@@ -684,7 +697,7 @@ fis-hmc-api:
   enabled: true
   java:
     imagePullPolicy: Always
-    image: hmctsprod.azurecr.io/fis/hmc-api:latest
+    image: hmctsprod.azurecr.io/fis/hmc-api:pr-627
     ingressHost: fis-hmc-api-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
     environment:
