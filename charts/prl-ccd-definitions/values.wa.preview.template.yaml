@@ -98,6 +98,7 @@ wa:
 
   wa-task-management-api:
     java:
+      imagePullPolicy: Always
       image: hmctsprod.azurecr.io/wa/task-management-api:latest
       ingressHost: wa-task-management-api-${SERVICE_FQDN}
       devcpuRequests: 500m
@@ -115,6 +116,7 @@ wa:
         MANDATORY_TASK_FIELD_CHECK_ENABLED: true
   wa-case-event-handler:
     java:
+      imagePullPolicy: Always
       image: hmctsprod.azurecr.io/wa/case-event-handler:latest
       ingressHost: wa-case-event-handler-${SERVICE_FQDN}
       releaseNameOverride: ${SERVICE_NAME}-wa-case-event-handler
@@ -139,6 +141,7 @@ wa:
 
   wa-task-monitor:
     java:
+      imagePullPolicy: Always
       image: hmctsprod.azurecr.io/wa/task-monitor:latest
       ingressHost: wa-task-monitor-${SERVICE_FQDN}
       environment:
@@ -146,6 +149,7 @@ wa:
 
   wa-workflow-api:
     java:
+      imagePullPolicy: Always
       image: hmctsprod.azurecr.io/wa/workflow-api:latest
       devcpuRequests: 500m
       devmemoryRequests: 1Gi
