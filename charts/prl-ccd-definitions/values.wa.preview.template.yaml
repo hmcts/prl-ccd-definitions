@@ -149,6 +149,7 @@ wa:
       devmemoryLimits: 4Gi
       environment:
         DB_READER_USERNAME: "hmcts"
+        CAMUNDA_URL: "http://camunda-${SERVICE_NAME}/engine-rest"
 
   wa:
     postgresql:
