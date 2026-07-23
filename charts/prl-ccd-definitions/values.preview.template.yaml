@@ -537,8 +537,8 @@ prl-cron:
   enabled: false
   job:
     kind: CronJob
-    image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    image: hmctsprod.azurecr.io/prl/cos:pr-3909
+    schedule: "*/30 * * * *" # 22:17 UTC
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
