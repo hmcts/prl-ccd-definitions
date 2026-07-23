@@ -98,6 +98,7 @@ wa:
 
   wa-task-management-api:
     java:
+      imagePullPolicy: Always
       ingressHost: wa-task-management-api-${SERVICE_FQDN}
       devcpuRequests: 500m
       devmemoryRequests: 1Gi
@@ -112,8 +113,10 @@ wa:
         ALLOWED_JURISDICTIONS: wa,ia,sscs,civil,publiclaw,privatelaw,employment,st_cic
         ALLOWED_CASE_TYPES: asylum,wacasetype,sscs,civil,generalapplication,care_supervision_epo,prlapps,privatelaw_exceptionrecord,et_englandwales,et_scotland,benefit,criminalinjuriescompensation
         MANDATORY_TASK_FIELD_CHECK_ENABLED: true
+
   wa-case-event-handler:
     java:
+      imagePullPolicy: Always
       ingressHost: wa-case-event-handler-${SERVICE_FQDN}
       releaseNameOverride: ${SERVICE_NAME}-wa-case-event-handler
       secrets:
@@ -137,12 +140,14 @@ wa:
 
   wa-task-monitor:
     java:
+      imagePullPolicy: Always
       ingressHost: wa-task-monitor-${SERVICE_FQDN}
       environment:
         WA_TASK_MANAGEMENT_API_URL: http://{{ .Release.Name }}-wa-task-management-api
 
   wa-workflow-api:
     java:
+      imagePullPolicy: Always
       devcpuRequests: 500m
       devmemoryRequests: 1Gi
       devcpuLimits: 2
