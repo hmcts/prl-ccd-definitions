@@ -534,18 +534,19 @@ prl-cos:
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
 
 prl-cron:
-  enabled: false
+  enabled: true
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    schedule: "*/1 * * * *" # revert before merge
+    suspend: false
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
     devmemoryLimits: "2048Mi"
     devmemoryRequests: "1024Mi"
     environment:
-      TASK_NAME: UpdateHearingActualTask
+      TASK_NAME: BaisDocumentUploadTask
       REQUEST_ORDER_TASK_C100_CADENCE: "0"
       REQUEST_ORDER_TASK_FL401_CADENCE: "0"
       HEARING_AWAY_DAYS: 18
