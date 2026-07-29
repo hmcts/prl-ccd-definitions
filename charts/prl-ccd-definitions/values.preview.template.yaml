@@ -418,7 +418,7 @@ ccd:
   am-role-assignment-service:
     java:
       devcpuRequests: 500m
-      devcpuLimits: 1000m
+      devcpuLimits: 1500m
       devmemoryRequests: 1024Mi
       devmemoryLimits: 2048Mi
       ingressHost: am-role-assignment-service-${SERVICE_FQDN}
@@ -698,7 +698,7 @@ fis-hmc-api:
     ingressHost: fis-hmc-api-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-fis-hmc-api
     devcpuRequests: 100m
-    devcpuLimits: 250m
+    devcpuLimits: 500m
     devmemoryRequests: 512Mi
     devmemoryLimits: 1024Mi
     environment:
