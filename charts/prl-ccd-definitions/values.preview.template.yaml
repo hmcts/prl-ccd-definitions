@@ -623,6 +623,7 @@ em-ccdorc:
     ingressHost: em-ccdorc-${SERVICE_FQDN}
     environment:
       IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
+      IDAM_WEB_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net
       OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
       IDAM_SECURITY_ALLOWED_ISSUERS_0: https://idam-web-public.aat.platform.hmcts.net/o
       S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
@@ -654,6 +655,7 @@ em-stitching:
       SPRING_DATASOURCE_PORT: 5432
       SPRING_DATASOURCE_USERNAME: hmcts
       IDAM_API_BASE_URI: https://idam-api.aat.platform.hmcts.net
+      IDAM_WEB_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net
       OPEN_ID_API_BASE_URI: https://idam-web-public.aat.platform.hmcts.net/o
       IDAM_SECURITY_ALLOWED_ISSUERS_0: https://idam-web-public.aat.platform.hmcts.net/o
       S2S_BASE_URI: http://rpe-service-auth-provider-aat.service.core-compute-aat.internal
