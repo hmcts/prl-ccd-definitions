@@ -123,7 +123,6 @@ Existing secret mapping used by pipelines:
 - `CITIZEN_TEST_PASSWORD` <- Azure Key Vault secret `citizen-password` from `prl-${env}` (for example `prl-aat`)
 
 Compatibility note:
-
 - Existing Azure Key Vault secret keys are preserved; only application/script consumers are moved to env-only reads.
 - Test payment form values in `test/end-to-end/citizenFrontendSupport/caseCreate.js` remain fixed non-sensitive data.
 
