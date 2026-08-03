@@ -1567,7 +1567,7 @@
     "Name": "Decision Outcome",
     "Description": "HMC Case Update to Decision Outcome",
     "PreConditionState(s)": "*",
-    "PostConditionState": "DECISION_OUTCOME",
+    "PostConditionState": "DECISION_OUTCOME([STATE]!=\"ALL_FINAL_ORDERS_ISSUED\"):1;*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/update-task-list/about-to-submit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-allTabs-after-hmc-case-state/submitted",
     "SecurityClassification": "Public",
