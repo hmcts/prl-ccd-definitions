@@ -4,8 +4,16 @@ plugins {
     id 'jacoco'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 'group = com.github.hmcts'
 'version = DEV-SNAPSHOT'
+
+
 
 repositories {
     mavenLocal()
