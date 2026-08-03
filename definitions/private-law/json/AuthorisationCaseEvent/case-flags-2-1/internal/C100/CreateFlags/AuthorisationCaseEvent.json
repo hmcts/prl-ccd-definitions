@@ -41,5 +41,34 @@
         "CRUD": "R"
       }
     ]
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "solicitorLanguageSupportNotes",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-solicitor"
+        ],
+        "CRUD": "C"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-readonly",
+          "caseworker-wa-task-configuration",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
