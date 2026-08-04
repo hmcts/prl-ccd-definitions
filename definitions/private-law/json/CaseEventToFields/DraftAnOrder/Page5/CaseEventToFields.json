@@ -252,13 +252,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "draftAnOrder",
-    "CaseFieldID": "recitalsOrPreambleRtf",
-    "PageFieldDisplayOrder": 23,
+    "CaseFieldID": "penalNoticeNeeded",
+    "PageFieldDisplayOrder": 24,
     "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "draftOrderOptions!=\"uploadAnOrder\""
+    "FieldShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND draftOrderOptions!=\"uploadAnOrder\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "penalNoticeRtf",
+    "PageFieldDisplayOrder": 24,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "penalNoticeNeeded=\"Yes\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -271,6 +283,18 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND draftOrderOptions!=\"uploadAnOrder\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "recitalsOrPreambleRtf",
+    "PageFieldDisplayOrder": 23,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "draftOrderOptions!=\"uploadAnOrder\""
   },
   {
     "LiveFrom": "31/03/2022",

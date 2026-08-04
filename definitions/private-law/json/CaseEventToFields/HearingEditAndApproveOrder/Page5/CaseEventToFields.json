@@ -220,13 +220,25 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "hearingEditAndApproveAnOrder",
-    "CaseFieldID": "recitalsOrPreambleRtf",
-    "PageFieldDisplayOrder": 18,
+    "CaseFieldID": "penalNoticeNeeded",
+    "PageFieldDisplayOrder": 19,
     "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "penalNoticeRtf",
+    "PageFieldDisplayOrder": 19,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "penalNoticeNeeded=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
@@ -239,6 +251,30 @@
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "recitalsOrPreambleRtf",
+    "PageFieldDisplayOrder": 18,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "hearingEditAndApproveAnOrder",
+    "CaseFieldID": "scheduleToOrderRtf",
+    "PageFieldDisplayOrder": 18,
+    "DisplayContext": "OPTIONAL",
+    "PageID": 5,
+    "PageDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
   },
   {
     "LiveFrom": "31/03/2022",
