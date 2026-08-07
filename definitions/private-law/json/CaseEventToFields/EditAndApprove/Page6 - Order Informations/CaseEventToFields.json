@@ -3,132 +3,120 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "recitalsOrPreamble",
-    "PageFieldDisplayOrder": 18,
-    "DisplayContext": "OPTIONAL",
+    "CaseFieldID": "selectedOrderLabel2",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "PageShowCondition": "manageOrdersOptions!=\"amendOrderUnderSlipRule\" AND manageOrdersOptions!=\"servedSavedOrders\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\" OR manageOrdersOptions=\"createCustomOrder\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "orderDirections",
-    "PageFieldDisplayOrder": 19,
-    "DisplayContext": "OPTIONAL",
+    "CaseFieldID": "rtfLabel",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
     "PageID": 6,
     "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "penalNoticeLabel",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "ShowSummaryChangeOption": "N",
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"nonMolestation\" AND createSelectOrderOptions!=\"occupation\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "penalNoticeNeeded",
-    "PageFieldDisplayOrder": 19,
+    "PageFieldDisplayOrder": 4,
     "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"nonMolestation\" AND createSelectOrderOptions!=\"occupation\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "penalNoticeRtf",
-    "PageFieldDisplayOrder": 19,
+    "PageFieldDisplayOrder": 5,
     "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "penalNoticeNeeded=\"Yes\" AND orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "penalNoticeNeeded=\"Yes\" AND manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"nonMolestation\" AND createSelectOrderOptions!=\"occupation\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "orderDirectionsRtf",
-    "PageFieldDisplayOrder": 19,
-    "DisplayContext": "OPTIONAL",
+    "PageFieldDisplayOrder": 6,
     "PageID": 6,
     "PageDisplayOrder": 6,
+    "DisplayContext": "OPTIONAL",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "recitalsOrPreambleRtf",
-    "PageFieldDisplayOrder": 18,
+    "PageFieldDisplayOrder": 7,
     "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"other\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
     "CaseFieldID": "scheduleToOrderRtf",
-    "PageFieldDisplayOrder": 19,
+    "PageFieldDisplayOrder": 8,
     "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType!=\"noticeOfProceedingsParties\" AND orderType!=\"noticeOfProceedingsNonParties\" AND orderType!=\"noticeOfProceedings\" AND orderType!=\"standardDirectionsOrder\" AND orderUploadedAsDraftFlag!=\"Yes\" AND orderUploadedAsDraftFlag!=\"\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"directionOnIssue\" AND createSelectOrderOptions!=\"parentalResponsibility\" AND createSelectOrderOptions!=\"specialGuardianShip\" AND createSelectOrderOptions!=\"appointmentOfGuardian\" AND createSelectOrderOptions!=\"powerOfArrest\" AND createSelectOrderOptions!=\"amendDischargedVaried\" AND createSelectOrderOptions!=\"blank\" AND createSelectOrderOptions!=\"generalForm\""
   },
   {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "furtherDirectionsIfRequired",
-    "PageFieldDisplayOrder": 20,
+    "CaseFieldID": "orderDirections",
+    "PageFieldDisplayOrder": 9,
+    "PageID": 6,
+    "PageDisplayOrder": 6,
+    "DisplayContext": "OPTIONAL",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"blankOrderOrDirections\" AND createSelectOrderOptions!=\"childArrangementsSpecificProhibitedOrder\" AND createSelectOrderOptions!=\"nonMolestation\" AND createSelectOrderOptions!=\"occupation\" AND manageOrdersOptions!=\"uploadAnOrder\" AND manageOrdersOptions!=\"createCustomOrder\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "recitalsOrPreamble",
+    "PageFieldDisplayOrder": 10,
     "DisplayContext": "OPTIONAL",
     "PageID": 6,
     "PageDisplayOrder": 6,
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderType=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "furtherInformationIfRequired",
-    "PageFieldDisplayOrder": 21,
-    "DisplayContext": "OPTIONAL",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "wasTheOrderApprovedAtHearing=\"DO_NOT_SHOW\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "uploadAmendedOrderLabel",
-    "PageFieldDisplayOrder": 22,
-    "DisplayContext": "READONLY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"\" AND orderUploadedAsDraftFlag=\"Yes\""
-  },
-  {
-    "LiveFrom": "31/03/2022",
-    "CaseTypeID": "PRLAPPS",
-    "CaseEventID": "editAndApproveAnOrder",
-    "CaseFieldID": "editedUploadOrderDoc",
-    "PageFieldDisplayOrder": 23,
-    "DisplayContext": "MANDATORY",
-    "PageID": 6,
-    "PageDisplayOrder": 6,
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "orderUploadedAsDraftFlag!=\"\" AND orderUploadedAsDraftFlag=\"Yes\""
+    "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND createSelectOrderOptions!=\"other\" AND createSelectOrderOptions!=\"standardDirectionsOrder\" AND createSelectOrderOptions!=\"blankOrderOrDirections\" AND createSelectOrderOptions!=\"childArrangementsSpecificProhibitedOrder\" AND createSelectOrderOptions!=\"nonMolestation\" AND createSelectOrderOptions!=\"occupation\""
   }
 ]
