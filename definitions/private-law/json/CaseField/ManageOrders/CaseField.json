@@ -187,8 +187,26 @@
   {
     "LiveFrom": "4/05/2022",
     "CaseTypeID": "PRLAPPS",
+    "ID": "rtfLabel",
+    "Label": "These boxes use Rich Text Formatting (RTF). You can apply styles and formatting like bold, italic, underlined and lists. You cannot change the font itself.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "4/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "penalNoticeLabel",
+    "Label": "### Penal notice",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "4/05/2022",
+    "CaseTypeID": "PRLAPPS",
     "ID": "penalNoticeNeeded",
-    "Label": "Is a Penal Notice needed",
+    "Label": "Check the box if you need to include a penal notice. if you do not require one leave it blank",
     "FieldType": "MultiSelectList",
     "FieldTypeParameter": "PenalNoticeOptionEnum",
     "SecurityClassification": "Public",
@@ -198,7 +216,8 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "penalNoticeRtf",
-    "Label": "Penal notice RTF",
+    "Label": " ",
+    "HintText": "If the penal notice applies only to specific paragraphs, state which ones",
     "FieldType": "TextArea",
     "SecurityClassification": "Public",
     "Searchable": "N"
@@ -717,6 +736,15 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "selectedOrderLabel1",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderLabel2",
     "Label": "${selectedOrder}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
