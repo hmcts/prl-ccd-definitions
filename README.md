@@ -3,10 +3,12 @@
 Project creating Family Private Law (PRL) CCD config files...
 
 Updated with Release 4.0 and Solicitor upload journey
+
 ## Usage
 
-Clone project and in the project directory run: 
- - `yarn install && yarn reset-ccd-submodule`
+Clone project and in the project directory run:
+
+- `yarn install && yarn reset-ccd-submodule`
 
 Check `package.json` for a list of `yarn` scripts for XLS file generation and project management. Eg. AAT XLS file can
 be generated with `yarn generate-excel-aat`
@@ -14,6 +16,7 @@ be generated with `yarn generate-excel-aat`
 #### Troubleshooting
 
 ### Managing Preview environment PODs
+
 Make sure you have added the label 'enable_keep_helm' while creating the PR. Otherwise, add the label and re-trigger the build.
 
 ### Error: Cannot find modules
@@ -58,15 +61,18 @@ Require stack:
 
 </details>
 
-try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before. 
+try to reset definition processor submodule with `yarn reset-ccd-submodule`. Prerequisite: `yarn install` had been run before.
 
 ## Running E2E against remote environment
+
 ```$bash
  SHOW_BROWSER_WINDOW=true PARALLEL_CHUNKS=5 yarn test
 ```
+
 ## Changes after yarn upgrade
 
 After the yarn upgrade you need to follow the below steps to ensure that yarn commands are working fine in local:
+
 1. Ensure that branch is synched with master
 2. Run _yarn install_ in local
 3. Run _yarn reset-ccd-submodule_ in local
@@ -75,7 +81,8 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 
 ### Generate Excel Configs for a specific environment i.e. AAT/DEMO/ITHC/PERFTEST
 
-* Note AuthorisationCaseType-prod.json file is used to shutter Production env, don't remove it
+- Note AuthorisationCaseType-prod.json file is used to shutter Production env, don't remove it
+
 ```
 yarn generate-excel-(local/demo/aat/ithc/perftest/prod)
 ```
@@ -90,9 +97,9 @@ yarn generate-excel-(local/demo/aat/ithc/perftest/prod)
 
 1. Create a new label in lines of `pr-cos:pr-3309` # Replace `3309` with the PR number of the prl-cos update you want to test against this repo
 2. If you make additional changes to the cos pr, the easiest way to reflect them in this repo is to delete the cos pod of this PR so it pulls the latest image from the PR:
-    ```bash
-    kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v 
-    ```
+   ```bash
+   kubectl delete pod -n private-law prl-ccd-definitions-pr-2600-java-64b88bc8f4-ffn2v
+   ```
 
 ### Functional End-to-End (E2E) Tests
 
@@ -128,19 +135,22 @@ Compatibility note:
 - Test payment form values in `test/end-to-end/citizenFrontendSupport/caseCreate.js` remain fixed non-sensitive data.
 
 ### Preview Database changes
-Preview is now set up with a PostgreSQL flexible server. The database host is `private-law-preview.postgres.database.azure.com`. 
-While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) under `postgresql` section. 
-The password is present in aat key value under the secret `preview-db-password`   
+
+Preview is now set up with a PostgreSQL flexible server. The database host is `private-law-preview.postgres.database.azure.com`.
+While the databases are listed in [values.preview.template.yaml](charts/prl-ccd-definitions/values.preview.template.yaml) under `postgresql` section.
+The password is present in aat key value under the secret `preview-db-password`
 
 ### WA preview set up
+
 On the pull request set label `pr-values:wa`
 
-To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP) file (`def dmnBranch = "<branch_name>"`). 
+To test DMN changes update the branch name in [Jenkinsfile_CNP](Jenkinsfile_CNP) file (`def dmnBranch = "<branch_name>"`).
 **Note**: Before merging, revert it to the master branch (`def dmnBranch = "master"`)
 
 ### AM role assignment
+
 To add new AAT user to preview update [preview-am-role-assignments.json](config/preview-am-role-assignments.json).
 
 ### Hearing set up
-Enabled hearing by default in preview.
 
+Enabled hearing by default in preview.
