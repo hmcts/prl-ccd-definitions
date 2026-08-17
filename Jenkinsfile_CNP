@@ -1,7 +1,7 @@
 #!groovy
 import uk.gov.hmcts.contino.GithubAPI
 
-@Library("Infrastructure")
+@Library("Infrastructure@2.5.0")
 
 String product = "prl"
 String component = "ccd-definitions"
@@ -211,7 +211,7 @@ withPipeline("nodejs", product, component) {
 
 
   // 'demo' currently removed, to avoid overriding CCD definitions when testing
-  def branchesToSync = ['perftest', 'ithc']
+  def branchesToSync = ['perftest']
   syncBranchesWithMaster(branchesToSync)
 }
 
