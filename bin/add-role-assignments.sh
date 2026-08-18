@@ -13,7 +13,6 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   password=${PREVIEW_AM_USER_PASSWORD}
 
   if jq -e '.roleAssignments[] | select(.roleName == "hmcts-judiciary")' <<< "$user" >/dev/null; then
-    echo "User ${email} has role 'hmcts-judiciary', using judge password"
     password=${PREVIEW_AM_JUDGE_PASSWORD}
   fi
 
