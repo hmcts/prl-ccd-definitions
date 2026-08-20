@@ -539,7 +539,7 @@ prl-cron:
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    schedule: "*/10 * * * *"
     imagePullPolicy: Always
     devcpuLimits: "4000m"
     devcpuRequests: "2000m"
@@ -547,8 +547,8 @@ prl-cron:
     devmemoryRequests: "1024Mi"
     environment:
       TASK_NAME: UpdateHearingActualTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0"
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
+      REQUEST_ORDER_TASK_C100_CADENCE: "1"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "1"
       HEARING_AWAY_DAYS: 18
       VAR: trigger1
       FEATURE_EXAMPLE: true
