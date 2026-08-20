@@ -534,7 +534,7 @@ prl-cos:
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
 
-prl-cron-updateHearingActs-3712:
+prl-cron-updateHearingActs:
   enabled: true
   job:
     releaseNameOverride: "{{ .Release.Name }}-updateHearingActs-cron"
@@ -562,7 +562,7 @@ prl-cron-updateHearingActs-3712:
       REFDATA_API_URL: http://rd-commondata-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
 
-prl-cron-requestOrder-3712:
+prl-cron-requestOrder:
   enabled: true
   job:
     releaseNameOverride: "{{ .Release.Name }}-requestOrder-cron"
