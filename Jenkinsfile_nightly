@@ -9,7 +9,7 @@ properties([
     ])
 ])
 
-@Library("Infrastructure")
+@Library("Infrastructure@2.5.0")
 
 String product = "prl"
 String component = "ccd-definitions"
@@ -54,7 +54,7 @@ def secrets = [
                 secret('idam-data-store-system-user-password','IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
                 secret('ccd-case-document-am-api-s2s-secret', 'CCD_CASE_DOCUMENT_AM_API_SECRET')
         ]
-      
+
 ]
 
 static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
