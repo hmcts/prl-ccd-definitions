@@ -540,7 +540,7 @@ prl-cron-updateHearingActs:
     releaseNameOverride: "{{ .Release.Name }}-updateHearingActs-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    schedule: "*/10 * * * *"
     imagePullPolicy: Always
     environment:
       TASK_NAME: UpdateHearingActualTask
@@ -568,12 +568,12 @@ prl-cron-requestOrder:
     releaseNameOverride: "{{ .Release.Name }}-requestOrder-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "5/10 * * * *" # revert before merge
+    schedule: "*/10 * * * *" # revert before merge
     imagePullPolicy: Always
     environment:
       TASK_NAME: RequestOrderTask
-      REQUEST_ORDER_TASK_C100_CADENCE: "0"
-      REQUEST_ORDER_TASK_FL401_CADENCE: "0"
+      REQUEST_ORDER_TASK_C100_CADENCE: "1"
+      REQUEST_ORDER_TASK_FL401_CADENCE: "1"
       HEARING_AWAY_DAYS: 18
       FEATURE_EXAMPLE: true
       PAY_CALLBACK_URL: https://${SERVICE_FQDN}/service-request-update
