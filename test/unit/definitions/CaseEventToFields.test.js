@@ -86,6 +86,13 @@ function assertPageColumnNumber(row) {
   assertOrderField(row, 'PageColumnNumber');
 }
 
+function getConditionFieldIds(condition) {
+  const fieldPattern = /(?:^|[\s(])([A-Za-z][A-Za-z0-9_.]*)(?=\s*(?:!?=|(?:NOT\s+)?CONTAINS\b))/g;
+  return Array.from(condition.matchAll(fieldPattern), match => {
+    return match[1].split('.')[0];
+  });
+}
+
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
 
@@ -112,6 +119,33 @@ describe('CaseEventToFields ', () => {
       assertPageDisplayOrder(row);
       assertPageColumnNumber(row);
     });
+  });
+
+  it('only references fields registered to the event in show conditions', () => {
+    const fieldIdsByEvent = new Map();
+    CaseEventToFieldData.forEach(row => {
+      if (!fieldIdsByEvent.has(row.CaseEventID)) {
+        fieldIdsByEvent.set(row.CaseEventID, new Set());
+      }
+      fieldIdsByEvent.get(row.CaseEventID).add(row.CaseFieldID);
+    });
+
+    const errors = [];
+    CaseEventToFieldData.forEach(row => {
+      ['FieldShowCondition', 'PageShowCondition'].forEach(conditionType => {
+        const condition = row[conditionType];
+        if (!condition) {
+          return;
+        }
+        getConditionFieldIds(condition).forEach(fieldId => {
+          if (!fieldIdsByEvent.get(row.CaseEventID).has(fieldId)) {
+            errors.push(`Unknown field '${fieldId}' for event '${row.CaseEventID}' in ${conditionType}: '${condition}'`);
+          }
+        });
+      });
+    });
+
+    expect(errors).to.eql([]);
   });
 
   // describe('CallBackURLMidEvent', () => {
