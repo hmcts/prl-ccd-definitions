@@ -11,10 +11,10 @@ xui-webapp:
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctsprod.azurecr.io/xui/webapp:latest
     ingressHost: xui-${SERVICE_FQDN}
-    devcpuRequests: 500m
-    devmemoryRequests: 1Gi
-    devcpuLimits: 1
-    devmemoryLimits: 4Gi
+    devmemoryRequests: 1024Mi
+    devcpuRequests: 200m
+    devmemoryLimits: 1536Mi
+    devcpuLimits: 500m
     readinessPeriod: 5
     livenessPeriod: 3
     livenessDelay: 10
@@ -89,9 +89,9 @@ wa:
 
   camunda-bpm:
     java:
-      devcpuRequests: 500m
+      devcpuRequests: 250m
+      devcpuLimits: 1
       devmemoryRequests: 1Gi
-      devcpuLimits: 2
       devmemoryLimits: 4Gi
       environment:
         CAMUNDA_DB_CONN_OPTIONS: "?stringtype=unspecified&reWriteBatchedInserts=true&sslmode=require"
@@ -101,10 +101,10 @@ wa:
       imagePullPolicy: Always
       image: hmctsprod.azurecr.io/wa/task-management-api:latest
       ingressHost: wa-task-management-api-${SERVICE_FQDN}
-      devcpuRequests: 500m
+      devcpuRequests: 200m
+      devcpuLimits: 500m
       devmemoryRequests: 1Gi
-      devcpuLimits: 2
-      devmemoryLimits: 4Gi
+      devmemoryLimits: 2Gi
       environment:
         CAMUNDA_URL: "http://{{ .Release.Name }}-camunda/engine-rest"
         IDAM_URL: "https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net"
@@ -130,9 +130,9 @@ wa:
         AZURE_SERVICE_BUS_CONNECTION_STRING:
           secretRef: private-law-sb-preview
           key: connectionString
-      devcpuRequests: 500m
+      devcpuRequests: 200m
+      devcpuLimits: 400m
       devmemoryRequests: 1Gi
-      devcpuLimits: 2
       devmemoryLimits: 4Gi
       environment:
         CAMUNDA_URL: "http://{{ .Release.Name }}-camunda/engine-rest"
@@ -159,7 +159,6 @@ wa:
       image: hmctsprod.azurecr.io/wa/workflow-api:latest
       devcpuRequests: 500m
       devmemoryRequests: 1Gi
-      devcpuLimits: 2
       devmemoryLimits: 4Gi
       environment:
         DB_READER_USERNAME: "hmcts"
@@ -187,9 +186,9 @@ ccd-message-publisher:
     ingressHost: ccd-message-publisher-${SERVICE_FQDN}
     releaseNameOverride: ${SERVICE_NAME}-ccd-message-publisher
     disableKeyVaults: true # TODO - check if this can be disabled or not
-    devcpuRequests: 500m
-    devmemoryRequests: 1Gi
+    devcpuRequests: 50m
     devcpuLimits: 1
+    devmemoryRequests: 1Gi
     devmemoryLimits: 4Gi
     environment:
       DATA_STORE_DB_HOST: private-law-preview.postgres.database.azure.com
