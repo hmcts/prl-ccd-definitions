@@ -65,10 +65,10 @@ Scenario('add all the roles @pipeline', ({ I }) => {
   I.see('ctsc');
   I.see('senior-tribunal-caseworker');
   I.see('caseworker-privatelaw-courtadmin-casecreator');
-});// eslint-disable-line no-magic-numbers
+});
 
 Scenario('upload Private Law Config file @pipeline', ({ I }) => {
   I.loginToAdminConsole();
   I.uploadConfig(`../../definitions/private-law/xlsx/${process.env.CCD_FILE_NAME}`);
   I.wait('40');
-}).retry(1); // eslint-disable-line no-magic-numbers
+}).retry(1);
