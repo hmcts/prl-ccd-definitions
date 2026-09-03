@@ -61,11 +61,23 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "fl401SendToGateKeeper",
     "CaseFieldID": "legalAdviserList",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviserGatekeeping=\"legalAdviser\"",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "isSpecificGateKeeperNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"DO_NOT_SHOW\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "25/01/2023",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "fl401SendToGateKeeper",
+    "CaseFieldID": "legalAdviserName",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\"",
+    "PageID": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
     "ShowSummaryChangeOption": "Yes"
   },
   {
