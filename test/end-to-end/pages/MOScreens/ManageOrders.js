@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-
 'use strict';
 const I = actor();
 const retryCount = 3;
@@ -9,7 +6,6 @@ const medWait = 10;
 const shortWait = 3;
 const date = new Date();
 const moConfig = require('./manageOrderConfig');
-
 
 module.exports = {
 
