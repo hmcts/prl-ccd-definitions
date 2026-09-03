@@ -10,6 +10,7 @@ Scenario('Case datasetup for cafcass journey test @regression-suite', async({ I 
   const dataSetupObj = CaseDatasetupManager.getDataSetupForScenario('cafcass_journey_test');
 
   while (dataSetupObj.state === 'running') {
+    /* eslint-disable no-await-in-loop */
     await I.wait('2');
     console.log('waiting for datasetup to complete');
   }

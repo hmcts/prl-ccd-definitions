@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 const path = require('path');
 const fs = require('fs');
 // const caseEvent = require('../utilities/caseEventApi');

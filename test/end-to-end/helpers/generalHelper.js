@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 const Helper = codecept_helper;
 // const { Helper } = codeceptjs;
 const longWait = 30;

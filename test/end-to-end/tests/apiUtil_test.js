@@ -1,4 +1,4 @@
-
+/* eslint-disable no-await-in-loop */
 const testConfig = require('../config');
 const CaseDatasetupManager = require('../restApiData/DataSetupManager');
 const CitizenCaseCreate = require('../citizenFrontendSupport/caseCreate');

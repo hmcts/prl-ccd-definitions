@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 const I = actor();
 const retryCount = 3;
 const longWait = 30;

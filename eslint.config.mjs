@@ -69,7 +69,8 @@ export default [
             'max-nested-callbacks': ['error', 5],
             'max-depth': ['error', 4],
             'no-console': 'off',
-            'no-undef': 'off'
+            'no-undef': 'off',
+            'no-await-in-loop': 'error'
         }
     }
 ];
