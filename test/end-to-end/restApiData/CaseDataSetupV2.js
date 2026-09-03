@@ -1,6 +1,3 @@
-/* eslint-disable no-return-await */
-/* eslint-disable no-await-in-loop */
-
 const path = require('path');
 const fs = require('fs');
 // const caseEvent = require('../utilities/caseEventApi');
@@ -146,7 +143,6 @@ class CaseDataSetup {
 
   async getData(url, headers) {
     return await this.retryBlock(async() => {
-      // eslint-disable-next-line no-shadow
       const res = await this.page.evaluate(async({ url, headers }) => {
         console.log(`GET : ${url}`);
         const getRes = await fetch(url, {
@@ -163,7 +159,6 @@ class CaseDataSetup {
 
   async postData(url, headers, requestData) {
     return await this.retryBlock(async() => {
-      // eslint-disable-next-line no-shadow
       const res = await this.page.evaluate(async({ url, headers, requestData }) => {
         const postRes = await fetch(url, {
           method: 'POST',
@@ -191,7 +186,6 @@ class CaseDataSetup {
 
       const submitCaseUrl = `/data/case-types/${caseTypeId}/cases?ignore-warning=false`;
       const postData = {
-        // eslint-disable-next-line id-blacklist
         data: caseData,
         draft_id: null,
         event: {
@@ -234,7 +228,6 @@ class CaseDataSetup {
 
       const submitEventUrl = `/data/cases/${caseId}/events`;
       const postData = {
-        // eslint-disable-next-line id-blacklist
         data: eventDetails.data,
         event: {
           id: eventDetails.eventId,
@@ -363,7 +356,6 @@ class CaseDataSetup {
     await this.login(config.courtAdminUser.email, config.courtAdminUser.password);
     // await I.loginAsSwanseaCourtAdmin();
 
-    // eslint-disable-next-line no-unused-vars
     await this.page.locator('exui-header').waitFor();
 
 

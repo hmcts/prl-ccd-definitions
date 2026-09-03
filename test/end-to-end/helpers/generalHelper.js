@@ -1,5 +1,3 @@
-/* eslint-disable no-await-in-loop */
-// eslint-disable-next-line no-undef
 const Helper = codecept_helper;
 // const { Helper } = codeceptjs;
 const longWait = 30;
@@ -149,7 +147,6 @@ class GeneralHelper extends Helper {
     const { Playwright } = this.helpers;
 
     try {
-      // eslint-disable-next-line no-undefined
       if (headerText === undefined) {
         await Playwright.waitForElement(header, '90');
       } else {
@@ -169,7 +166,7 @@ class GeneralHelper extends Helper {
     const helper = this.helpers.Playwright;
     try {
       const eleVisible = await helper.grabNumberOfVisibleElements(tabSelector);
-      /* eslint-disable no-await-in-loop */
+
       for (let i = 1; i < loopMax; i++) {
         if (eleVisible === 0) {
           console.log(`loop ${i}`);
@@ -181,7 +178,6 @@ class GeneralHelper extends Helper {
           // break;
         }
       }
-      // eslint-disable-next-line id-blacklist
     } catch (err) {
       console.log('Skipping operation as element is not visible');
     }
@@ -197,7 +193,6 @@ class GeneralHelper extends Helper {
       if (waVisible.includes('https://manage-case.aat.platform.hmcts.net')) {
         return helper.click(selector, ...options);
       }
-      // eslint-disable-next-line id-blacklist
     } catch (err) {
       console.log('Skipping operation as element is not visible');
     }
@@ -207,7 +202,6 @@ class GeneralHelper extends Helper {
   async reloadPage(selector) {
     const helper = this.helpers.Playwright;
     try {
-      /* eslint-disable no-await-in-loop */
       for (let i = 1; i < longWait; i++) {
         const numVisible = await helper.grabNumberOfVisibleElements(selector);
         if (numVisible === 0) {
@@ -221,7 +215,6 @@ class GeneralHelper extends Helper {
           // break;
         }
       }
-      // eslint-disable-next-line id-blacklist
     } catch (err) {
       console.log('Skipping operation as element is not visible');
     }

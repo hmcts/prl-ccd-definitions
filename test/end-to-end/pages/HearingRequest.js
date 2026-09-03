@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 const I = actor();
 const assert = require('assert');
 const testLogger = require('../helpers/testLogger');

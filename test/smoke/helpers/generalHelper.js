@@ -1,5 +1,3 @@
-/* eslint-disable no-await-in-loop */
-// eslint-disable-next-line no-undef
 const Helper = codecept_helper;
 const testLogger = require('./testLogger');
 
@@ -126,7 +124,6 @@ class GeneralHelper extends Helper {
     const { Playwright } = this.helpers;
 
     try {
-      // eslint-disable-next-line no-undefined
       if (headerText === undefined) {
         await Playwright.waitForElement(header, '90');
       } else {

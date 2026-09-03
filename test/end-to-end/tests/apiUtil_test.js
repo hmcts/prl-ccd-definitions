@@ -1,11 +1,10 @@
-/* eslint-disable no-await-in-loop */
+
 const testConfig = require('../config');
 const CaseDatasetupManager = require('../restApiData/DataSetupManager');
 const CitizenCaseCreate = require('../citizenFrontendSupport/caseCreate');
 
 Feature('API Util to create case and events ');
 
-// eslint-disable-next-line no-unused-vars
 let caseId = null;
 Scenario('Create case and evenets till submit and pay', async({ I }) => {
   const dataSetupObj = CaseDatasetupManager.getDataSetupForScenario('test1');
