@@ -12,7 +12,7 @@ jq -c '(.[])' config/preview-am-role-assignments.json | while read user; do
   idamId=$(jq -r '.id' <<< $user)
   password=${PREVIEW_AM_USER_PASSWORD}
 
-  if [[ $email == *"ejudiciary"* ]]; then
+  if jq -e '.roleAssignments[] | select(.roleName == "hmcts-judiciary")' <<< "$user" >/dev/null; then
     password=${PREVIEW_AM_JUDGE_PASSWORD}
   fi
 
