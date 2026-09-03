@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 const testConfig = require('../config');
 /* eslint init-declarations: ["error", "never"]*/
 
