@@ -17,7 +17,6 @@ module.exports = {
 
     const submitCaseUrl = `/data/case-types/${caseTypeId}/cases?ignore-warning=false`;
     const postData = {
-      // eslint-disable-next-line id-blacklist
       data: caseData,
       draft_id: null,
       event: {
@@ -59,7 +58,6 @@ module.exports = {
 
     const submitEventUrl = `/data/cases/${caseId}/events`;
     const postData = {
-      // eslint-disable-next-line id-blacklist
       data: eventDetails.data,
       event: {
         id: eventDetails.eventId,
