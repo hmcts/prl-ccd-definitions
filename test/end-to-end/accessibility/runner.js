@@ -50,14 +50,11 @@ async function runAccessibility(url, page) {
 
   try {
     await page.screenshot({ path: `${screenshotPath}/${screenshotName}`, fullPage: true });
-    // eslint-disable-next-line id-blacklist
   } catch (err) {
-    // eslint-disable-next-line id-blacklist
     console.log(`screenshot error ${err}`);
     fs.mkdirSync(screenshotPath, { recursive: true });
     await page.screenshot({ path: `${screenshotPath}/${screenshotName}`, fullPage: true });
   }
-  // eslint-disable-next-line no-use-before-define
   updateResultObject(url, await page.title(), screenshotReportRef, accessibilityErrorsOnThePage);
 }
 
