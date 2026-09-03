@@ -7234,6 +7234,25 @@
     "CRUD": "CRUD"
   },
   {
+    "LiveFrom": "22/05/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "isCirUpdateFollowUp",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "R"
+      }
+    ]
+  },
+  {
     "LiveFrom": "10/08/2021",
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "CaseAccessCategory",
@@ -17616,6 +17635,22 @@
           "caseworker-wa-task-configuration"
         ],
         "CRUD": "R"
+      }
+    ]
+  },
+  {
+    "LiveFrom": "01/06/2026",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "taskAssigneeIdamId",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-la"
+        ],
+        "CRUD": "CRU"
       }
     ]
   }
