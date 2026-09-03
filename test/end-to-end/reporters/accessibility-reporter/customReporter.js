@@ -2,7 +2,6 @@ const fs = require('fs');
 const testConfig = require('../../config.js');
 
 function generateAccessibilityReport(reportObj) {
-  // eslint-disable-next-line no-use-before-define
   consoleReport(reportObj);
 
   const sourceReport = `${__dirname}/Report.html`;
@@ -10,14 +9,13 @@ function generateAccessibilityReport(reportObj) {
   const destJson = `${testConfig.TestOutputDir}/a11y_output.js`;
   const previouschunkjson = `${testConfig.TestOutputDir}/parallelexecution_a11y_result.json`;
 
-  // eslint-disable-next-line no-use-before-define
   const updatedReportObj = appendPreviousParallelExecTestResults(reportObj);
   const result = `var replacejsoncontent = ${JSON.stringify(updatedReportObj)}`;
 
   fs.copyFileSync(sourceReport, destReport);
   fs.writeFileSync(previouschunkjson, JSON.stringify(updatedReportObj));
   fs.writeFileSync(destJson, result);
-  // eslint-disable-next-line no-use-before-define
+
   copyResources();
 }
 
@@ -53,7 +51,6 @@ function copyResources() {
 }
 
 function consoleReport(reportjson) {
-  /* eslint-disable no-console */
   console.log(`\t Total tests : ${reportjson.tests.length}`);
   console.log(`\t Passed tests : ${reportjson.passCount}`);
   console.log(`\t Failed tests : ${reportjson.passCount}`);
