@@ -185,6 +185,71 @@
     "Searchable": "N"
   },
   {
+    "LiveFrom": "4/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "rtfLabel",
+    "Label": "These boxes use Rich Text Formatting (RTF). You can apply styles and formatting like bold, italic, underlined and lists. You cannot change the font itself.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "4/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "penalNoticeLabel",
+    "Label": "### Penal notice",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "4/05/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "penalNoticeNeeded",
+    "Label": "Check the box if you need to include a penal notice. if you do not require one leave it blank",
+    "FieldType": "MultiSelectList",
+    "FieldTypeParameter": "PenalNoticeOptionEnum",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "penalNoticeRtf",
+    "Label": " ",
+    "HintText": "If the penal notice applies only to specific paragraphs, state which ones",
+    "FieldType": "RichTextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderDirectionsRtf",
+    "Label": "Add directions RTF",
+    "FieldType": "RichTextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "recitalsOrPreambleRtf",
+    "Label": "Add recitals or preamble RTF",
+    "FieldType": "RichTextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "scheduleToOrderRtf",
+    "Label": "Schedule to order RTF",
+    "FieldType": "RichTextArea",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "furtherDirectionsIfRequired",
@@ -671,6 +736,15 @@
     "LiveFrom": "31/03/2022",
     "CaseTypeID": "PRLAPPS",
     "ID": "selectedOrderLabel1",
+    "Label": "${selectedOrder}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "selectedOrderLabel2",
     "Label": "${selectedOrder}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
@@ -1286,6 +1360,15 @@
     "LiveFrom": "16/10/2023",
     "CaseTypeID": "PRLAPPS",
     "ID": "orderNameEditScreenLabel",
+    "Label": "${orderName}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "orderNameLabel6",
     "Label": "${orderName}",
     "FieldType": "Label",
     "SecurityClassification": "Public",
