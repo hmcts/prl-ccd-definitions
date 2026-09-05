@@ -57,15 +57,28 @@
     "ShowSummaryChangeOption": "Yes"
   },
   {
+  "LiveFrom": "01/01/2023",
+  "CaseTypeID": "PRLAPPS",
+  "CaseEventID": "allocatedJudge",
+  "CaseFieldID": "legalAdviserList",
+  "DisplayContext": "MANDATORY",
+  "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"DO_NOT_SHOW\"",
+  "PageID": 1,
+  "PageDisplayOrder": 1,
+  "PageFieldDisplayOrder": 5,
+  "ShowSummaryChangeOption": "Yes"
+  },
+  {
     "LiveFrom": "01/01/2023",
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "allocatedJudge",
-    "CaseFieldID": "legalAdviserList",
+    "CaseFieldID": "legalAdviserTypeAhead",
     "DisplayContext": "MANDATORY",
+    "DisplayContextParameter": "#ARGUMENT(CATEGORY-LEGAL-OPS,CATEGORY-ADMIN,REGION-1235)",
     "FieldShowCondition": "isSpecificJudgeOrLegalAdviserNeeded=\"Yes\" AND isJudgeOrLegalAdviser=\"legalAdviser\"",
     "PageID": 1,
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "ShowSummaryChangeOption": "Yes"
   },
   {
