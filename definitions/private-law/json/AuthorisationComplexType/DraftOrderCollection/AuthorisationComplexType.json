@@ -1892,6 +1892,27 @@
   {
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "draftOrderCollection",
+    "ListElementCode": "miamForOrder",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "draftOrderCollection",
     "ListElementCode": "manageOrderHearingDetails",
     "AccessControl": [
       {
