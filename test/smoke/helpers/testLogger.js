@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 const path = require('path');
 const fs = require('fs');
 
@@ -7,8 +6,6 @@ global.logCallingFunction = () => {
   const frame = errorObj.stack.split('\n')[2];
   const lineNumber = frame.split(':').reverse()[1];
   let functionName = frame.split(' ')[5];
-  // const atFile = frame.split(' ')[6];
-
   if (functionName.includes('/')) {
     functionName = functionName.split('/').reverse()[0];
   }
