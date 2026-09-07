@@ -537,7 +537,7 @@ prl-cron-updateHearingActs:
     releaseNameOverride: "{{ .Release.Name }}-updateHearingActs-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    schedule: "*/10 * * * *"
     imagePullPolicy: Always
     devcpuRequests: 50m
     devcpuLimits: 200m
@@ -569,7 +569,7 @@ prl-cron-requestOrder:
     releaseNameOverride: "{{ .Release.Name }}-requestOrder-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "5/10 * * * *" # revert before merge
+    schedule: "*/10 * * * *" # revert before merge
     imagePullPolicy: Always
     environment:
       TASK_NAME: RequestOrderTask
