@@ -2098,5 +2098,28 @@
         "CRUD": "CRUD"
       }
     ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "draftOrderCollection",
+    "ListElementCode": "checkIsThisUrgent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
   }
 ]
