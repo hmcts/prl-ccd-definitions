@@ -118,9 +118,9 @@
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "legalAdviserList",
     "EventElementLabel": "Select a legal adviser",
-    "EventHintText": "Select a legal adviser",
     "FieldDisplayOrder": "5",
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"DO_NOT_SHOW\""
   },
   {
     "LiveFrom": "04/12/2025",
@@ -129,6 +129,7 @@
     "CaseEventID": "sendOrReplyToMessages",
     "CaseFieldID": "sendMessageObject",
     "ListElementCode": "legalAdviser",
+    "DisplayContextParameter": "#ARGUMENT(CATEGORY-LEGAL-OPS)",
     "EventElementLabel": "Enter name of a legal adviser",
     "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL",
