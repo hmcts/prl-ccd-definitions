@@ -28,5 +28,29 @@ describe('FixedLists', () => {
     it('should have only valid definitions', () => {
       uniqResult.forEach(assertFieldDefinitionIsValid);
     });
+
+    it('keeps the custom order UI list aligned with the legacy list except for directions on issue', () => {
+      const comparableFields = ['ListElementCode', 'ListElement', 'DisplayOrder'];
+      const legacyOptions = nonProd
+        .filter(row => {
+          return row.ID === 'CustomOrderNameOptionsEnum' && row.ListElementCode !== 'directionOnIssue';
+        })
+        .map(row => {
+          return Object.fromEntries(comparableFields.map(field => {
+            return [field, row[field]];
+          }));
+        });
+      const uiOptions = nonProd
+        .filter(row => {
+          return row.ID === 'CustomOrderNameOptionsV2Enum';
+        })
+        .map(row => {
+          return Object.fromEntries(comparableFields.map(field => {
+            return [field, row[field]];
+          }));
+        });
+
+      expect(uiOptions).to.eql(legacyOptions);
+    });
   });
 });
