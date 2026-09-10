@@ -56,6 +56,19 @@
     "ID": "Message",
     "CaseEventID": "waSendOrReplyToMessages",
     "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "legalAdviser",
+    "EventElementLabel": "Enter name of Legal Adviser",
+    "FieldDisplayOrder": "3",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"LEGAL_ADVISER\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "waSendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
     "ListElementCode": "internalMessageUrgent",
     "EventElementLabel": "Is this urgent?",
     "FieldDisplayOrder": "4",
@@ -108,6 +121,19 @@
     "FieldDisplayOrder": "8",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"JUDICIARY\"",
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "waSendOrReplyToMessages",
+    "CaseFieldID": "replyMessageObject",
+    "ListElementCode": "legalAdviser.idamId",
+    "EventElementLabel": "Enter name of a Legal Adviser",
+    "FieldDisplayOrder": "9",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "replyMessageObject.internalMessageReplyTo=\"LEGAL_ADVISER\"",
     "ShowSummaryChangeOption": "Yes"
   }
 ]
