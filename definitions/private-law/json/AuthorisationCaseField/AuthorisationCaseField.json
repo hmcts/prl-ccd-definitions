@@ -17653,5 +17653,35 @@
         "CRUD": "CRU"
       }
     ]
+  },
+  {
+    "LiveFrom": "15/02/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "legalAdviser",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "courtnav",
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-judge",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-superuser"
+        ],
+        "CRUD": "CRUD"
+      },
+      {
+        "UserRoles": [
+          "caseworker-wa-task-configuration"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      }
+    ]
   }
 ]
