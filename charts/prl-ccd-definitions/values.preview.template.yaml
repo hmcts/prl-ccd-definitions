@@ -531,8 +531,8 @@ prl-cos:
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
 
-prl-cron-updateHearingActs:
-  enabled: true
+prl-cron-updateHearing:
+  enabled: false
   job:
     releaseNameOverride: "{{ .Release.Name }}-updateHearingActs-cron"
     kind: CronJob
@@ -564,7 +564,7 @@ prl-cron-updateHearingActs:
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
 
 prl-cron-requestOrder:
-  enabled: true
+  enabled: false
   job:
     releaseNameOverride: "{{ .Release.Name }}-requestOrder-cron"
     kind: CronJob
