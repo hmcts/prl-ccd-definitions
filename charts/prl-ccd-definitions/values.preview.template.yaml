@@ -614,12 +614,12 @@ prl-cron-acro:
             alias: ACRO_ZIP_PASSWORD
 
 prl-cron-updateHearing:
-  enabled: false
+  enabled: true
   job:
     releaseNameOverride: "{{ .Release.Name }}-updateHearingActs-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * * *" # revert before merge
+    schedule: "0 11 * * *" # revert before merge
     imagePullPolicy: Always
     devcpuRequests: 50m
     devcpuLimits: 200m
@@ -646,12 +646,12 @@ prl-cron-updateHearing:
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
 
 prl-cron-requestOrder:
-  enabled: false
+  enabled: true
   job:
     releaseNameOverride: "{{ .Release.Name }}-requestOrder-cron"
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "5/10 * * * *" # revert before merge
+    schedule: "15 11 * * *" # revert before merge
     imagePullPolicy: Always
     environment:
       TASK_NAME: RequestOrderTask
