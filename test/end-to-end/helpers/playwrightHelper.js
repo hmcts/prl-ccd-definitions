@@ -19,9 +19,7 @@ module.exports = class PlaywrightHelpers extends Helper {
    * @param selector - element selector
    * @returns {Promise<Array>} - promise holding either collection of elements or empty collection if element is not found
    */
-  // eslint-disable-next-line require-await
   async locateSelector(selector) {
-    // eslint-disable-next-line no-return-await
     return this.helpers.Playwright._locate(selector);
   }
 
@@ -45,12 +43,10 @@ module.exports = class PlaywrightHelpers extends Helper {
     try {
       return await context.waitForSelector(locator, { timeout: waitTimeout });
     } catch (error) {
-      // eslint-disable-next-line no-undefined
       return undefined;
     }
   }
 
-  // eslint-disable-next-line require-await
   async waitForAnySelector(selectors, maxWaitInSecond) {
     return this.waitForSelector([].concat(selectors).join(','), maxWaitInSecond);
   }
@@ -59,7 +55,6 @@ module.exports = class PlaywrightHelpers extends Helper {
     try {
       const numVisible = await this.helpers.Playwright.grabNumberOfVisibleElements(selector);
       return Boolean(numVisible);
-      // eslint-disable-next-line id-blacklist
     } catch (err) {
       return false;
     }
@@ -86,7 +81,6 @@ module.exports = class PlaywrightHelpers extends Helper {
     } else if (texts.length === 1) {
       return texts[0];
     } else {
-      // eslint-disable-next-line no-undefined
       return undefined;
     }
   }
