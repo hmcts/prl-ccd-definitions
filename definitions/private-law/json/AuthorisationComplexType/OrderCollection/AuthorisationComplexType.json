@@ -962,6 +962,37 @@
   {
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "orderCollection",
+    "ListElementCode": "checkIsThisUrgent",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge",
+          "caseworker-wa-task-configuration",
+          "citizen"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-externaluser-viewonly",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "orderCollection",
     "ListElementCode": "sosStatus",
     "AccessControl": [
       {
