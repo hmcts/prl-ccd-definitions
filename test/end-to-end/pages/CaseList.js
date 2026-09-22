@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const { I } = inject();
 const config = require('../config');
 const { expect } = require('chai');
@@ -52,8 +51,6 @@ module.exports = {
     await I.waitForText(this.fields.caseList);
     await await I.click(this.fields.caseList);
     await I.waitForText('Filters');
-
-    // eslint-disable-next-line no-unused-vars
 
     this.setInitialSearchFields(state);
     await I.grabCurrentUrl();

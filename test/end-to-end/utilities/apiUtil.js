@@ -1,5 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable require-await */
 const I = actor();
 
 module.exports = {

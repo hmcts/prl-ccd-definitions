@@ -1,10 +1,10 @@
 apiVersion: v2
 description: Private Law - CCD Definitions
 name: prl-ccd-definitions
-version: 0.0.61
+version: 0.0.68
 dependencies:
   - name: ccd
-    version: 9.2.3
+    version: 9.3.0
     repository: 'oci://hmctsprod.azurecr.io/helm'
     tags:
       - ccd-pr
@@ -33,7 +33,7 @@ dependencies:
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: prl-cos.enabled
   - name: postgresql
-    version: 1.1.1
+    version: 1.1.3
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: postgresql.enabled
   - name: servicebus
@@ -58,11 +58,22 @@ dependencies:
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: em-stitching.enabled
   - name: prl-cron
-    version: 0.0.18
+    version: 0.0.20
     repository: 'oci://hmctsprod.azurecr.io/helm'
-    condition: prl-cron.enabled
+    alias: prl-cron-acro
+    condition: prl-cron-acro.enabled
+  - name: prl-cron
+    version: 0.0.20
+    repository: 'oci://hmctsprod.azurecr.io/helm'
+    alias: prl-cron-updateHearing
+    condition: prl-cron-updateHearing.enabled
+  - name: prl-cron
+    version: 0.0.20
+    repository: 'oci://hmctsprod.azurecr.io/helm'
+    alias: prl-cron-requestOrder
+    condition: prl-cron-requestOrder.enabled
   - name: prl-citizen-frontend
-    version: 0.0.29
+    version: 0.0.33
     repository: 'oci://hmctsprod.azurecr.io/helm'
     condition: prl-citizen-frontend.enabled
   - name: fis-hmc-api
