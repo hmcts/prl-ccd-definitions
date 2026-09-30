@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const I = actor();
 const retryCount = 3;
 

@@ -1892,6 +1892,27 @@
   {
     "CaseTypeID": "PRLAPPS",
     "CaseFieldID": "draftOrderCollection",
+    "ListElementCode": "miamForOrder",
+    "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "draftOrderCollection",
     "ListElementCode": "manageOrderHearingDetails",
     "AccessControl": [
       {
@@ -2083,6 +2104,29 @@
       {
         "UserRoles": [
           "citizen",
+          "caseworker-privatelaw-cafcass",
+          "caseworker-privatelaw-readonly"
+        ],
+        "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-privatelaw-courtadmin",
+          "caseworker-privatelaw-systemupdate",
+          "caseworker-privatelaw-la",
+          "caseworker-privatelaw-judge"
+        ],
+        "CRUD": "CRUD"
+      }
+    ]
+  },
+  {
+    "CaseTypeID": "PRLAPPS",
+    "CaseFieldID": "draftOrderCollection",
+    "ListElementCode": "checkIsThisUrgent",
+    "AccessControl": [
+      {
+        "UserRoles": [
           "caseworker-privatelaw-cafcass",
           "caseworker-privatelaw-readonly"
         ],

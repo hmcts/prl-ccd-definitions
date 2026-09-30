@@ -1,5 +1,4 @@
 /* eslint-disable no-await-in-loop */
-// eslint-disable-next-line no-magic-numbers
 const I = actor();
 const retryCount = 3;
 const longWait = 30;

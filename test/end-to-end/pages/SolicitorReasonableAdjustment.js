@@ -83,7 +83,6 @@ module.exports = {
     await this.checkDetailsInSupportTab(this.fields.moreAboutRATextOther);
   },
   async selectRAGetIntoInandAroundBuilding() {
-    // eslint-disable-next-line no-magic-numbers
     const partyEle = this.fields.partyNameRadio.concat(`${1}`);
     // eslint-disable-next-line no-magic-numbers
     const raEle = this.fields.reasonableAdjustmentRadio.concat(`${2}`);

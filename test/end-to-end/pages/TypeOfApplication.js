@@ -111,7 +111,6 @@ module.exports = {
     await I.runAccessibilityTest();
     await I.retry(retryCount).waitForText(this.fields.childArrangementOrderInstructionText);
     await I.retry(retryCount).waitForText(this.fields.childArrangementCaseNumberLabel);
-    // eslint-disable-next-line max-len
     await I.retry(retryCount).fillField(this.fields.childArrangementsCaseNumberField, this.fields.childArrangementsCaseNumberText);
     await I.runAccessibilityTest();
     await I.retry(retryCount).continueEvent();

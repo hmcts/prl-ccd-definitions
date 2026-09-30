@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 const { chromium } = require('playwright');
 
 const testConfig = require('../config');
@@ -7,7 +6,6 @@ const CitizenCaseCreate = require('../citizenFrontendSupport/caseCreate');
 
 Feature('Citizen Journey - Create SOA @nightly');
 
-// eslint-disable-next-line no-unused-vars
 let caseId = null;
 
 Scenario('Datasetup: Citizen case create', async() => {

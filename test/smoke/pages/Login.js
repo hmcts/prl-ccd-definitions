@@ -2,8 +2,6 @@ const I = actor();
 const config = require('../config');
 
 const retryCount = 3;
-
-// eslint-disable-next-line no-unused-vars
 const baseUrl = config.baseUrl;
 
 module.exports = {
