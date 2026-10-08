@@ -1,0 +1,48 @@
+[
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "orderNameLabel7",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "READONLY",
+    "PageID": 8,
+    "PageDisplayOrder": 8,
+    "ShowSummaryChangeOption": "N",
+    "PageShowCondition": "orderUploadedAsDraftFlag!=\"Yes\" AND (whatToDoWithOrderSolicitor=\"editTheOrderAndServe\" OR whatToDoWithOrderCourtAdmin=\"editTheOrderAndServe\") AND orderType=\"childArrangementsSpecificProhibitedOrder\""
+  },
+  {
+    "LiveFrom": "31/03/2022",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "addOrderDetailsLabel",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "READONLY",
+    "PageID": 8,
+    "PageDisplayOrder": 8,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "childArrangementsOrdersToIssue",
+    "DisplayContext": "MANDATORY",
+    "PageID": 8,
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 5,
+    "ShowSummaryChangeOption": "Yes"
+  },
+  {
+    "LiveFrom": "04/11/2021",
+    "CaseTypeID": "PRLAPPS",
+    "CaseEventID": "editAndApproveAnOrder",
+    "CaseFieldID": "selectChildArrangementsOrder",
+    "DisplayContext": "MANDATORY",
+    "PageID": 8,
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 6,
+    "ShowSummaryChangeOption": "Yes",
+    "FieldShowCondition": "childArrangementsOrdersToIssue CONTAINS \"childArrangementsOrder\""
+  }
+]
