@@ -10,7 +10,7 @@
     "PageFieldDisplayOrder": 1,
     "CallBackURLMidEvent": "${CCD_DEF_COS_URL}/generate-doc",
     "FieldShowCondition": "createSelectOrderOptions!=\"blankOrderOrDirections\"",
-    "PageShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR createSelectOrderOptions=\"blank\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"noticeOfProceedings\" OR createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR (draftOrderOptions=\"draftAnOrder\" AND c21OrderOptions=\"c21other\")"
+    "PageShowCondition": "createSelectOrderOptions=\"nonMolestation\" OR createSelectOrderOptions=\"occupation\" OR createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\" OR createSelectOrderOptions=\"blank\" OR createSelectOrderOptions=\"amendDischargedVaried\" OR createSelectOrderOptions=\"noticeOfProceedings\" OR createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"noticeOfHearing\" OR createSelectOrderOptions=\"noticeOfHearingParties\" OR (draftOrderOptions=\"draftAnOrder\" AND c21OrderOptions=\"c21other\")"
   },
   {
     "LiveFrom": "22/10/2022",
@@ -43,7 +43,7 @@
     "PageDisplayOrder": 17,
     "PageFieldDisplayOrder": 4,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND (createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"noticeOfProceedings\")"
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND (createSelectOrderOptions=\"noticeOfProceedingsParties\" OR createSelectOrderOptions=\"noticeOfProceedingsNonParties\" OR createSelectOrderOptions=\"noticeOfProceedings\" OR createSelectOrderOptions=\"noticeOfHearing\" OR createSelectOrderOptions=\"noticeOfHearingParties\")"
   },
   {
     "LiveFrom": "31/03/2022",
@@ -55,7 +55,7 @@
     "PageDisplayOrder": 17,
     "PageFieldDisplayOrder": 5,
     "ShowSummaryChangeOption": "N",
-    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\""
+    "FieldShowCondition": "hasJudgeProvidedHearingDetails=\"Yes\" AND createSelectOrderOptions!=\"noticeOfProceedingsParties\" AND createSelectOrderOptions!=\"noticeOfProceedingsNonParties\" AND createSelectOrderOptions!=\"noticeOfProceedings\" AND createSelectOrderOptions!=\"noticeOfHearing\" AND createSelectOrderOptions!=\"noticeOfHearingParties\""
   },
   {
     "LiveFrom": "01/09/2023",
