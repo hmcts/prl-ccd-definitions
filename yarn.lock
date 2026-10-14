@@ -5,39 +5,40 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
-"@ai-sdk/gateway@npm:3.0.186":
-  version: 3.0.186
-  resolution: "@ai-sdk/gateway@npm:3.0.186"
+"@ai-sdk/gateway@npm:4.0.107":
+  version: 4.0.107
+  resolution: "@ai-sdk/gateway@npm:4.0.107"
   dependencies:
-    "@ai-sdk/provider": "npm:3.0.15"
-    "@ai-sdk/provider-utils": "npm:4.0.50"
+    "@ai-sdk/provider": "npm:4.0.24"
+    "@ai-sdk/provider-utils": "npm:5.0.56"
     "@vercel/oidc": "npm:3.2.0"
   peerDependencies:
     zod: ^3.25.76 || ^4.1.8
-  checksum: 10c0/4788109ec8d8619e54a1f7f12931223591583a474578e38862331654d592741c403dc75232c452464a39183d2fd727af6bd1a64d18bd71cb4b411ed9f719c72b
+  checksum: 10c0/439fce6379d134566e49cd11b9f127b6564c17107fae3e881aac3209d2176ed2d0b54973b7ed46c1c2b7fbe2d2bf81c96081033581a8e69e1db9e67c8b441260
   languageName: node
   linkType: hard
 
-"@ai-sdk/provider-utils@npm:4.0.50":
-  version: 4.0.50
-  resolution: "@ai-sdk/provider-utils@npm:4.0.50"
+"@ai-sdk/provider-utils@npm:5.0.56":
+  version: 5.0.56
+  resolution: "@ai-sdk/provider-utils@npm:5.0.56"
   dependencies:
-    "@ai-sdk/provider": "npm:3.0.15"
+    "@ai-sdk/provider": "npm:4.0.24"
     "@standard-schema/spec": "npm:^1.1.0"
+    "@workflow/serde": "npm:4.1.0"
     eventsource-parser: "npm:^3.0.8"
-    undici: "npm:^6.28.0"
+    undici: "npm:^7.29.0"
   peerDependencies:
     zod: ^3.25.76 || ^4.1.8
-  checksum: 10c0/c80ea0a8489da063aa704a431354c4d9136880ab30c6e54324d9458cfb02ea30858bac24e8d559a21de3b984fec16b6aedee6e2ce85687f11d8a65a06311ed86
+  checksum: 10c0/8fd8d2085e98a7b1dc95f820b0451eb6d662f32588852f7d5b64ec337eca6f355d8b25371f0fb37b9d7f8166ebb0c74fa290a1700bfe126fadf07c7063c87027
   languageName: node
   linkType: hard
 
-"@ai-sdk/provider@npm:3.0.15":
-  version: 3.0.15
-  resolution: "@ai-sdk/provider@npm:3.0.15"
+"@ai-sdk/provider@npm:4.0.24":
+  version: 4.0.24
+  resolution: "@ai-sdk/provider@npm:4.0.24"
   dependencies:
     json-schema: "npm:^0.4.0"
-  checksum: 10c0/0a17eca818c6d821e9488188cf02789502e426eff125d9c9572c2308baead3ed2e93ad53856887b207f287e6907441da81860e31350b12a11c91a6dfd1c6f344
+  checksum: 10c0/5d36dfe985180743a54a101fb6f39fe3cd9b814a6d18e12fd90b3fb3d0c74d55a34437c37a45215c45392945b7cbc4c06c7ac5cb2728fd073e6a71ffb9360997
   languageName: node
   linkType: hard
 
@@ -778,13 +779,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opentelemetry/api@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "@opentelemetry/api@npm:1.9.1"
-  checksum: 10c0/c608485fc8b5a91e1f7e05e843b45b509307456b31cd2ad365933d90813e40ebfedf179f1451c762037e82d7c76aa8500e95d2da3609f640a1206cde5322cd14
-  languageName: node
-  linkType: hard
-
 "@paralleldrive/cuid2@npm:^2.2.2":
   version: 2.2.2
   resolution: "@paralleldrive/cuid2@npm:2.2.2"
@@ -1049,6 +1043,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@workflow/serde@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@workflow/serde@npm:4.1.0"
+  checksum: 10c0/8ec68cd9448b486bc8244d1f2b33d64d4af4b0fc18d33417699ce29345b21e4359d880c5ea5d66872def4576c0cddcfa2a63282d1f4d661c455663c075595e81
+  languageName: node
+  linkType: hard
+
 "@xmldom/xmldom@npm:^0.9.12":
   version: 0.9.12
   resolution: "@xmldom/xmldom@npm:0.9.12"
@@ -1178,17 +1179,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ai@npm:^6.0.43":
-  version: 6.0.273
-  resolution: "ai@npm:6.0.273"
+"ai@npm:7.0.132":
+  version: 7.0.132
+  resolution: "ai@npm:7.0.132"
   dependencies:
-    "@ai-sdk/gateway": "npm:3.0.186"
-    "@ai-sdk/provider": "npm:3.0.15"
-    "@ai-sdk/provider-utils": "npm:4.0.50"
-    "@opentelemetry/api": "npm:^1.9.0"
+    "@ai-sdk/gateway": "npm:4.0.107"
+    "@ai-sdk/provider": "npm:4.0.24"
+    "@ai-sdk/provider-utils": "npm:5.0.56"
   peerDependencies:
     zod: ^3.25.76 || ^4.1.8
-  checksum: 10c0/872888d5c8151a852c3eb7a529a5c0424eb69b8ce8f7885577da7d70b8ce78f0511fb20c7622595dad34e3ed4cf66f53c822e11e48a17d7ce95a62fd12951840
+  checksum: 10c0/d9f81965e98a3cf03346fd6acb95a6a599f93eb5ad21212a0c8ee6869ee3e4098773b278050e2ad3f1b218b22493e02273f43171c22c910f9618c33eed0aa056
   languageName: node
   linkType: hard
 
@@ -1918,8 +1918,8 @@ __metadata:
   linkType: hard
 
 "codeceptjs@npm:^4.0.0":
-  version: 4.2.0
-  resolution: "codeceptjs@npm:4.2.0"
+  version: 4.2.1
+  resolution: "codeceptjs@npm:4.2.1"
   dependencies:
     "@codeceptjs/configure": "npm:^4.0.0-beta.4"
     "@codeceptjs/helper": "npm:2.0.4"
@@ -1929,7 +1929,7 @@ __metadata:
     "@modelcontextprotocol/sdk": "npm:^1.26.0"
     "@xmldom/xmldom": "npm:0.9.10"
     acorn: "npm:8.15.0"
-    ai: "npm:^6.0.43"
+    ai: "npm:7.0.132"
     arrify: "npm:3.0.0"
     axios: "npm:1.16.1"
     chalk: "npm:4.1.2"
@@ -1976,7 +1976,7 @@ __metadata:
     codeceptjs: bin/codecept.js
     codeceptjs-mcp: bin/mcp-server.js
     codeceptq: bin/codeceptq.js
-  checksum: 10c0/0f6964867113b4578d5eca1d5e1bfbf417479a325954a8bd0509bc7d18c84bdc5b672cba0a6a4ea4663367ee8769c53cfc8a31536300a3d1b4592371ae3d77ac
+  checksum: 10c0/04bc4199e6ca5c8daf1c2628479d38760ba9f445b090926be51a6a71e50324f84f1af705cc9076e3f4cffa510c49304ce8b40064a9b979a2443d986a1e83311e
   languageName: node
   linkType: hard
 
