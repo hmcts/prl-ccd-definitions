@@ -26,6 +26,7 @@ xui-webapp:
     devmemoryLimits: 1536Mi
     devcpuLimits: 500m
     environment:
+      DUMMY: "value"
       NODE_TLS_REJECT_UNAUTHORIZED: 0
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
