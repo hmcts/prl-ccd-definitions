@@ -121,7 +121,20 @@
     "EventHintText": "Select a legal adviser",
     "FieldDisplayOrder": "5",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"LEGAL_ADVISER\""
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "waSendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "legalAdviser",
+    "EventElementLabel": "Select a legal adviser",
+    "FieldDisplayOrder": "5",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"LEGAL_ADVISER\"",
+    "ShowSummaryChangeOption": "Yes"
   },
   {
     "LiveFrom": "31/03/2023",
@@ -255,6 +268,18 @@
     "FieldDisplayOrder": "16",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"JUDICIARY\""
+  },
+  {
+    "LiveFrom": "31/03/2023",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "Message",
+    "CaseEventID": "waSendOrReplyToMessages",
+    "CaseFieldID": "sendMessageObject",
+    "ListElementCode": "legalAdviser.idamId",
+    "EventElementLabel": "Select a legal adviser",
+    "FieldDisplayOrder": "17",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "sendMessageObject.internalMessageWhoToSendTo=\"LEGAL_ADVISER\""
   },
   {
     "LiveFrom": "01/10/2023",
