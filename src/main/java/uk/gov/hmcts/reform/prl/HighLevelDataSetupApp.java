@@ -64,7 +64,12 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
 
     @Override
     protected boolean shouldTolerateDataSetupFailure() {
-        return true;
+        if (environment == CcdEnvironment.PROD || environment == CcdEnvironment.AAT) {
+            BeftaUtils.defaultLog("Data setup failure will NOT be tolerated in PROD or AAT");
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
