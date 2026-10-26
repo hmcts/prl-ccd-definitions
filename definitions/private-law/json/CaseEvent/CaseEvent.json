@@ -887,7 +887,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "EventEnablingCondition": "isIssuedAfterCaseNameRelease=\"Yes\" AND caseTypeOfApplication=\"C100\"",
     "Publish": "True"
   },
   {
@@ -905,7 +905,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
-    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
+    "EventEnablingCondition": "isIssuedAfterCaseNameRelease=\"Yes\" AND caseTypeOfApplication=\"FL401\"",
     "Publish": "True"
   },
   {
