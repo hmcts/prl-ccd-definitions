@@ -527,12 +527,25 @@ prl-cos:
       BARRISTER_FEATURE_ENABLED: "true"
       CAFCASS_DATE_TIME_FEATURE_ENABLED: "true"
       OS_COURT_LOOKUP_ENABLED: "true"
+      FACT_V2_ENABLED: true
+      FACT_V2_API_URL: https://cft-api-mgmt.aat.platform.hmcts.net/fact
+      FACT_V2_SCOPE: api://6e2a7c9e-0634-4846-8a8e-0af598d905b0/.default
       HEARING_API_BASEURL: http://${SERVICE_NAME}-fis-hmc-api
       BUNDLE_BY_CATEGORY_ENABLED: "true"
       AWAITING_INFORMATION_ENABLED: "true"
       EXIT_AWAITING_INFORMATION_ENABLED: "true"
       CREATE_REQUEST_CIR_UPDATE_TASK_ENABLED: "true"
       TASK_MANAGEMENT_API_BASEURL: http://${SERVICE_NAME}-wa-task-management-api
+    keyVaults:
+      central-app-reg-kv:
+        excludeEnvironmentSuffix: true
+        secrets:
+          - name: tenant-id
+            alias: FACT_V2_TENANT_ID
+          - name: prl-cos-api-non-prod-app-id
+            alias: FACT_V2_CLIENT_ID
+          - name: prl-cos-api-non-prod-secret
+            alias: FACT_V2_CLIENT_SECRET
 
 prl-cron-acro:
   enabled: false
