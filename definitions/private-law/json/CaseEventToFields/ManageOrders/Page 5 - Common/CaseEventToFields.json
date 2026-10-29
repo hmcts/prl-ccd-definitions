@@ -311,9 +311,9 @@
     "CaseTypeID": "PRLAPPS",
     "CaseEventID": "manageOrders",
     "CaseFieldID": "partiesAndRepresentation",
-    "FieldShowCondition": "createSelectOrderOptions=\"childArrangementsSpecificProhibitedOrder\"",
+    "FieldShowCondition": "orderType=\"childArrangementsSpecificProhibitedOrder\" AND orderType!=\"blankOrderOrDirections\" AND orderType!=\"occupation\" AND orderType!=\"nonMolestation\"",
     "PageFieldDisplayOrder": 22,
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageID": 5,
     "PageDisplayOrder": 5,
     "ShowSummaryChangeOption": "Y"
