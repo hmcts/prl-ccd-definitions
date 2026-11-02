@@ -8,7 +8,7 @@ const JSON_SPACING = 2;
 function main() {
   const csvArg = process.argv[2];
   if (!csvArg) {
-    console.error('Usage: ./bin/dfjGenerator/generateJson <pathToCSV>');
+    console.error('Usage: ./definitions/dfjGenerator/generateJson <pathToCSV>');
     process.exit(1);
   }
 
@@ -301,4 +301,21 @@ function parseCsvLine(line) {
   return result;
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  main,
+  parseCsv,
+  parseCsvLine,
+  toPascalArea,
+  toCamelArea,
+  toAreaDisplayLabel,
+  buildAreaMap,
+  writeCaseFieldJson,
+  writeOverallAreaFixedListsJson,
+  writePerAreaCourtFixedListsJson,
+  writeWorkBasketInputFieldsJson,
+  writeAuthorisationCaseFieldJson
+};
