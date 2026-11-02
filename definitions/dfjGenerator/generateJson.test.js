@@ -14,7 +14,7 @@ const {
   writePerAreaCourtFixedListsJson,
   writeWorkBasketInputFieldsJson,
   writeAuthorisationCaseFieldJson
-} = require('../../../definitions/dfjGenerator/generateJson');
+} = require('./generateJson');
 
 function mkTempRoot() {
   return fs.mkdtempSync(path.join(os.tmpdir(), 'dfj-generator-test-'));
