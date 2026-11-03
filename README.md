@@ -146,4 +146,3 @@ To add new AAT user to preview update [preview-am-role-assignments.json](config/
 Enabled hearing by default in preview.
 
 ### STUB
-
