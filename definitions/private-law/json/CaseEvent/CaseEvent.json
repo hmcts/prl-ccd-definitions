@@ -911,8 +911,8 @@
   {
     "LiveFrom": "13/01/2022",
     "CaseTypeID": "PRLAPPS",
-    "ID": "fL401IssueCaseWithPrefix",
-    "Name": "Issue Case and Generate Prefix",
+    "ID": "fL401IssueCase",
+    "Name": "DA Issue Case",
     "Description": "Issue the case and generate prefix for the case name",
     "DisplayOrder": 203,
     "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;CASE_ISSUED;JUDICIAL_REVIEW;ALL_FINAL_ORDERS_ISSUED;PREPARE_FOR_HEARING_CONDUCT_HEARING;DECISION_OUTCOME;AWAITING_INFORMATION",
@@ -923,7 +923,7 @@
     "EndButtonLabel": "Save and continue",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-add-case-numberWithPrefix",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
-    "EventEnablingCondition": "isIssuedAfterCaseNameRelease=\"\" AND caseTypeOfApplication=\"FL401\"",
+    "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "Publish": "True"
   },
   {
