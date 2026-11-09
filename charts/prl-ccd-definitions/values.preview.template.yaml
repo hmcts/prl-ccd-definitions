@@ -511,7 +511,7 @@ aac-manage-case-assignment:
 
 prl-cos:
   java:
-    image: hmctsprod.azurecr.io/prl/cos:pr-4129-e85f627-20261109103857
+    image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
     ingressHost: ${SERVICE_FQDN}
     imagePullPolicy: Always
     #Below settings are copied from prl-cos preview values, needs review.
