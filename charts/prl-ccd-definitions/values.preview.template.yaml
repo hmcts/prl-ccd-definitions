@@ -544,7 +544,10 @@ prl-cron-acro:
   job:
     kind: CronJob
     image: hmctsprod.azurecr.io/prl/cos:${COS_IMAGE}
-    schedule: "*/10 * * 5 *" # revert before merge
+    schedule: "*/10 * * * *" # revert before merge
+    startingDeadlineSeconds: 5
+    successfulJobsHistoryLimit: 3
+    suspend: true
     imagePullPolicy: Always
     devcpuRequests: 50m
     devcpuLimits: 200m
