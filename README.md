@@ -99,6 +99,9 @@ yarn generate-excel-preview
 
 The file can then be manually uploaded using CCD Admin Web for the preview environment.
 
+If you then subsequently want the PR CCD definitions to be used, you can rerun the Jenkins pipeline for the PR to
+re-import them.
+
 ## Testing with prl-cos
 
 ### If your ticket doesn’t require changes in the prl-cos API
