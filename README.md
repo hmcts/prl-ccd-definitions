@@ -99,8 +99,6 @@ yarn generate-excel-preview
 
 The file can then be manually uploaded using CCD Admin Web for the preview environment.
 
-
-
 ## Testing with prl-cos
 
 ### If your ticket doesn’t require changes in the prl-cos API
