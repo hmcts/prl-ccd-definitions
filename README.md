@@ -68,7 +68,7 @@ try to reset definition processor submodule with `yarn reset-ccd-submodule`. Pre
 ## Changes after yarn upgrade
 
 After the yarn upgrade you need to follow the below steps to ensure that yarn commands are working fine in local:
-1. Ensure that branch is synched with master
+1. Ensure that branch is synced with master
 2. Run _yarn install_ in local
 3. Run _yarn reset-ccd-submodule_ in local
 4. Now you can run the yarn commands locally.
@@ -80,6 +80,26 @@ After the yarn upgrade you need to follow the below steps to ensure that yarn co
 ```
 yarn generate-excel-(local/demo/aat/ithc/perftest/prod)
 ```
+### Generate Excel Configs for Preview environment
+When a preview environment is created, the CCD definitions are generated and automatically imported as part of the
+Jenkins pipeline execution.
+
+In some circumstances, it may be desirable to manually generate the Excel file for a preview environment.
+
+This can be useful for testing when a master version of the CCD definitions is required to create test data prior to
+testing a change.
+
+To manually generate the Excel file for a preview environment, run the following commands using the PR number of the preview 
+environment you want to test against e.g. 1234
+```
+./bin/variables/load-preview-environment-variables.sh <pr-number>
+
+yarn generate-excel-preview
+```
+
+The file can then be manually uploaded using CCD Admin Web for the preview environment.
+
+
 
 ## Testing with prl-cos
 
