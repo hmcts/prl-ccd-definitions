@@ -343,6 +343,17 @@
     "EventElementLabel": "Select all that apply",
     "FieldDisplayOrder": "43",
     "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "manageOrdersOptions=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "manageOrders",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bRespondentNotToSelectLabel",
+    "FieldDisplayOrder": "43",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"nonMolestation\""
   },
   {
@@ -364,7 +375,6 @@
     "CaseEventID": "manageOrders",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToContactApplicantLabel",
-    "EventElementLabel": "[The respondent must not] contact or try to contact or communicate with the applicant in any way or by any means except that (i) you can contact the applicant through solicitors and/or through an agreed third party to make child contact arrangements (ii) you can contact the applicant directly by [means of communication] to make arrangements about the child/ren. (delete whichever of (i) and (ii) do not apply)",
     "FieldDisplayOrder": "45",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToContactApplicant=\"\" AND manageOrdersOptions=\"createAnOrder\" AND  createSelectOrderOptions=\"nonMolestation\""
