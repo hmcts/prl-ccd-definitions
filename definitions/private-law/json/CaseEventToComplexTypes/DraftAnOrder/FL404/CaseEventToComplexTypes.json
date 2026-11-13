@@ -425,6 +425,17 @@
     "EventElementLabel": "Select all that apply",
     "FieldDisplayOrder": "38",
     "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "createSelectOrderOptions=\"DO_NOT_SHOW\""
+  },
+  {
+    "LiveFrom": "20/08/2021",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "FL400",
+    "CaseEventID": "draftAnOrder",
+    "CaseFieldID": "fl404CustomFields",
+    "ListElementCode": "fl404bRespondentNotToSelectLabel",
+    "FieldDisplayOrder": "38",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "createSelectOrderOptions=\"nonMolestation\""
   },
   {
@@ -446,7 +457,6 @@
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToContactApplicantLabel",
-    "EventElementLabel": "[The respondent must not] contact or try to contact or communicate with the applicant in any way or by any means except that (i) you can contact the applicant through solicitors and/or through an agreed third party to make child contact arrangements (ii) you can contact the applicant directly by [means of communication] to make arrangements about the child/ren. (delete whichever of (i) and (ii) do not apply)",
     "FieldDisplayOrder": "40",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToContactApplicant=\"\" AND createSelectOrderOptions=\"nonMolestation\""
@@ -494,7 +504,6 @@
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToStreetAddressLabel",
-    "EventElementLabel": "Go to or travel on [road name] but (i) you can enter [road name] to facilitate contact arrangements for the child/ren which must be agreed in writing or ordered by the court (ii) but otherwise you cannot park your vehicle or leave your bicycle/motorbike or scooter in [road name]. (delete as appropriate)",
     "FieldDisplayOrder": "44",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToStreetAddress=\"\" AND createSelectOrderOptions=\"nonMolestation\""
@@ -590,7 +599,6 @@
     "CaseEventID": "draftAnOrder",
     "CaseFieldID": "fl404CustomFields",
     "ListElementCode": "fl404bRespondentNotToSendDocumentsLabel",
-    "EventElementLabel": "If the applicant does not have solicitors, this order does not prevent you from sending documents in respect of these or any other proceedings directly to them. If the applicant has solicitors, you should send any documents to the solicitors. This order shall remain in force until 16:00 on [date].",
     "FieldDisplayOrder": "52",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "fl404CustomFields.fl404bRespondentNotToSendDocuments=\"\" AND createSelectOrderOptions=\"nonMolestation\""
