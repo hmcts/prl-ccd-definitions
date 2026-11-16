@@ -89,6 +89,14 @@ function assertPageColumnNumber(row) {
 describe('CaseEventToFields ', () => {
   let caseEventNonProd = [];
 
+  const editedDraftOrderFields = [
+    'furtherDirectionsIfRequired',
+    'furtherInformationIfRequired',
+    'uploadAmendedOrderLabel',
+    'editedUploadOrderDoc'
+  ];
+  const editedDraftOrderPage = 5;
+
   before(() => {
     caseEventNonProd = ccdData.CaseEvent;
   });
@@ -111,6 +119,20 @@ describe('CaseEventToFields ', () => {
       assertPageFieldDisplayOrder(row);
       assertPageDisplayOrder(row);
       assertPageColumnNumber(row);
+    });
+  });
+
+  it('should keep edited draft order fields on page 5 of editAndApproveAnOrder', () => {
+    const mappings = CaseEventToFieldData.filter((row) => {
+      return row.CaseEventID === 'editAndApproveAnOrder' && editedDraftOrderFields.includes(row.CaseFieldID);
+    });
+
+    expect(mappings.map((row) => {
+      return row.CaseFieldID;
+    }).sort()).to.eql([...editedDraftOrderFields].sort());
+    mappings.forEach((row) => {
+      expect(row.PageID).to.equal(editedDraftOrderPage, `${row.CaseFieldID} should have PageID 5`);
+      expect(row.PageDisplayOrder).to.equal(editedDraftOrderPage, `${row.CaseFieldID} should have PageDisplayOrder 5`);
     });
   });
 
