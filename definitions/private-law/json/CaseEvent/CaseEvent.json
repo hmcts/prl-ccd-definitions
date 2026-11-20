@@ -887,7 +887,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "EventEnablingCondition": "caseTypeOfApplication=\"C100\"",
+    "EventEnablingCondition": "isIssuedAfterCaseNameRelease=\"DO_NOT_SHOW\" AND caseTypeOfApplication=\"C100\"",
     "Publish": "True"
   },
   {
@@ -904,6 +904,24 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
+    "EventEnablingCondition": "isIssuedAfterCaseNameRelease=\"DO_NOT_SHOW\" AND caseTypeOfApplication=\"FL401\"",
+    "Publish": "True"
+  },
+  {
+    "LiveFrom": "13/01/2022",
+    "CaseTypeID": "PRLAPPS",
+    "ID": "fl401IssueCase",
+    "Name": "DA Issue Case",
+    "Description": "Issue the case and generate prefix for the case name",
+    "DisplayOrder": 203,
+    "PreConditionState(s)": "SUBMITTED_PAID;AWAITING_RESUBMISSION_TO_HMCTS;AWAITING_INFORMATION;",
+    "PostConditionState": "CASE_ISSUED([STATE]=\"AWAITING_INFORMATION\" OR [STATE]=\"SUBMITTED_PAID\"):1;*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save and continue",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_COS_URL}/fl401-add-case-numberWithPrefix",
     "CallBackURLSubmittedEvent": "${CCD_DEF_COS_URL}/update-application",
     "EventEnablingCondition": "caseTypeOfApplication=\"FL401\"",
     "Publish": "True"
