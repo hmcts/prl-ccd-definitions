@@ -5,7 +5,7 @@ module.exports = {
     'data': {
       caseTypeOfApplication: 'C100',
       applicantOrganisationPolicy: {
-        OrgPolicyCaseAssignedRole: '[APPLICANTSOLICITOR]',
+        OrgPolicyCaseAssignedRole: '[C100APPLICANTSOLICITOR1]',
         OrgPolicyReference: null,
         PrepopulateToUsersOrganisation: null,
         LastNoCRequestedBy: null,
